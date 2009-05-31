@@ -1,3 +1,4 @@
+#coding=utf-8
 # Django settings for mysite project.
 
 DEBUG = True
@@ -80,3 +81,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'mysite.books',
 )
+
+
+
+#邮件服务器设置
+EMAIL_HOST="localhost"
+EMAIL_HOST_PASSWORD='15263748'
+EMAIL_HOST_USER='crackpot'
+EMAIL_PORT='25'
+EMAIL_SUBJECT_PREFIX='[Django]'

@@ -1,6 +1,7 @@
 # Create your views here.
 from django.db.models import Q
 from django.shortcuts import render_to_response
+from django.core.mail import send_mail
 from models import Book
 from forms import ContactForm 
 
@@ -21,5 +22,18 @@ def search(request):
     })
 
 def contact(request):
-    form=ContactForm()
+    if request.method=='POST':
+        form=ContactForm(request.POST)
+        if form.is_valid():
+            topic=form.cleaned_data['topic']
+            message=form.cleaned_data.get('message')
+            sender=form.cleaned_data.get('sender','noreply@example.com')
+            send_mail(
+                'Feedback from your site, topic: %s' % topic,
+                message, sender,
+                ['gaofeitop@gmail.com']
+            )
+            return HttpResponseRedirect('/contact/thanks/')
+    else:
+        form=ContactForm()
     return render_to_response('contact.html',{'form':form})
