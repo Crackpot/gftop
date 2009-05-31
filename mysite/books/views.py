@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.core.mail import send_mail
 from models import Book
 from forms import ContactForm 
+from forms import PublisherForm
 
 def search(request):
     query=request.GET.get('q','')
@@ -37,3 +38,13 @@ def contact(request):
     else:
         form=ContactForm()
     return render_to_response('contact.html',{'form':form})
+
+def add_publisher(request):
+    if request.method=='POST':
+        form=PublisherForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/add_publisher/thanks/')
+        else:
+            form=PublisherForm()
+        return render_to_response('books/add_publisher.html',{'form':form})
