@@ -17,7 +17,7 @@ def printContents(contents):
 
 # call getPage, which returns immediately with a Deferred, promising to
 # pass the page contents onto our callbacks when the contents are available
-deferred = getPage('http://baidu.com')
+deferred = getPage('http://www.g.cn')
 
 # add a callback to the deferred -- request that it run printContents when
 # the page content has been downloaded
