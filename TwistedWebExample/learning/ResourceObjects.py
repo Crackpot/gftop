@@ -7,7 +7,7 @@
     一个资源可以通过查看request.postpath知道哪些路径段将被处理。
     如果URL用斜线结尾，例如http://example.com/foo/bar/ ，最后的网址段将是一个空字符串。 资源从而知道他们的请求有或没有最后的斜线。 
 """
-from twistd.web.resource import Resource
+from twisted.web.resource import Resource
 class Hello(Resource):
     isLeaf=True
     def getChild(self,name,request):
@@ -16,4 +16,4 @@ class Hello(Resource):
         return Resource.getChild(self,name,request)
     def render_GET(self,request):
         return "Hello,world!I am located at %r."%(request.prepath,)
-resource=Hello()
+
