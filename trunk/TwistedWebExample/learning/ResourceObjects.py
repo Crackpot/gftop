@@ -16,4 +16,4 @@ class Hello(Resource):
         return Resource.getChild(self,name,request)
     def render_GET(self,request):
         return "Hello,world!I am located at %r."%(request.prepath,)
-Resource=Hello()
+resource=Hello()
