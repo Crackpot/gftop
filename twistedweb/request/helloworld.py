@@ -32,20 +32,5 @@ class Display(resource.Resource):
         )
         return content
     
-class Request(resource.Resource):
-    isLeaf=True
-    def render_POST(self,Request):
-        phone=request.args.get('phone',['nophone'])[0]
-        rargs={
-            'phone':phone,
-        }
-        requrl='http://127.0.0.1:8090/hellorequest?phone=%s'
-        sendurl=requrl%(
-            phone,
-        )
-        d=getPage(sendurl,timeout=5)
-        d.addCallback(self.req_ok,request,sendurl,rargs)
-        d.addErrback(self.req_failure,request,sendurl,rargs)
-        return server.NOT_DONE_YET
 
-        pass
+        
