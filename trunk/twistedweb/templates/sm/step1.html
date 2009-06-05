@@ -1,0 +1,39 @@
+#coding=utf-8
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>第一步</title>
+	</head>
+	<script type="text/javascript">
+		function toSm(music_id){
+			location.href='/p/sm/request?username=${username}&birthday=${birthday}';
+		}
+	</script>
+	
+	<body>
+		<div align="center" id="div1">
+			<p>请输入如下参数</p>
+			<form name="info" action="/p/sm/request" method="POST">
+				<table align="center" border="1" >
+					<tr>
+						<td>用户名：</td>
+						<td><input type="text" name="username" value="username" maxlength="10" size="10"></td>
+					</tr>
+					<tr>
+						<td>生日：</td>
+						<td><input type="text" name="birthday" value="19000101" maxlength="8" size="8"></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="javascript:toSm()">请求</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="提交"></td>
+						<td><input type="reset" value="重置"></td>
+					</tr>
+				</table>
+			</form>
+		</div>		
+	</body>
+</html>

@@ -1,4 +1,6 @@
+#coding=utf-8
 # Create your views here.
+from django.http import HttpResponse
 from django.db.models import Q
 from django.shortcuts import render_to_response
 from django.core.mail import send_mail
@@ -6,6 +8,20 @@ from models import Book
 from forms import ContactForm 
 from forms import PublisherForm
 
+def search_form(request):
+    error=False
+    if 'q' in request.GET:
+        q=request.GET['q']
+        if not q:
+            error=True
+        else:
+            books=Book.objects.filter(title__icontains=q)
+            return render_to_response('books/search_results.html',
+                {'books':books,'query':q}
+            )
+    return render_to_response('books/search_form.html',
+        {'error':error}
+    )
 def search(request):
     query=request.GET.get('q','')
     if query:

@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from mysite.views import current_datetime, hours_ahead
+from mysite.views import hello,current_datetime, hours_ahead,index,checkbrowser,display_meta
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -8,9 +8,14 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Example:
     # (r'^mysite/', include('mysite.foo.urls')),
+    (r'^$',index),
+    (r'^hello/$',hello),
     (r'^time/$',current_datetime),
     (r'^time/plus/(\d{1,2})/$', hours_ahead),
+    (r'^checkbrowser/$',checkbrowser),
+    (r'^displaymeta/$',display_meta),
     (r'^search/$','mysite.books.views.search'),
+    (r'^search_form/$','mysite.books.views.search_form'),
     (r'^contact/$','mysite.books.views.contact'),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:

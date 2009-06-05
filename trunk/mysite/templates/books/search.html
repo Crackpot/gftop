@@ -1,17 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
 <head>
-	<title>Search{% if query %} Results{% endif %}</title>
+	<title>搜索{% if query %}结果{% endif %}</title>
 </head>
 <body>
-	<h1>Search</h1>
+	<h1>搜索</h1>
 	<form action="." method="GET">
-		<label for="q">Search:</label>
+		<label for="q">搜索:</label>
 		<input type="text" name="q" value="{{ query|escape }}">
-		<input type="submit" value="Search">
+		<input type="submit" value="搜索">
 	</form>
 	{% if query %}
-		<h2>Results for "{{ query|escape }}":</h2>
+		<h2>"{{ query|escape }}"的搜索结果:</h2>
 		{% if results %}
 			<ul>
 				{% for book in results %}
@@ -19,7 +18,7 @@
 				{% endfor %}
 			</ul>
 		{% else %}
-			<p>No books found</p>
+			<p>没有找到符合您搜索要求的书籍</p>
 		{% endif %}
 	{% endif %}
 </body>
