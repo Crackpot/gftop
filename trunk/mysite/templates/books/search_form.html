@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>搜索</title>
+</head>
+<body>
+	{% if error %}
+		<p style="color:red:">请提交一个搜索表单</p>
+	{% endif %}
+    <form action="/search_form/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="搜索">
+    </form>
+</body>
+</html>
