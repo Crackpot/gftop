@@ -62,5 +62,5 @@ def add_publisher(request):
             form.save()
             return HttpResponseRedirect('/add_publisher/thanks/')
         else:
-            form=PublisherForm()
+            form=PublisherForm()            
         return render_to_response('books/add_publisher.html',{'form':form})
