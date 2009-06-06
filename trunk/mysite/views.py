@@ -24,3 +24,7 @@ def hours_ahead(request,offset):
     hour_offset=int(offset)
     next_time=datetime.datetime.now()+datetime.timedelta(hours=hour_offset)
     return render_to_response('hours_ahead.html',locals())
+def foo_view(request):
+    return HttpResponse('<h1>foo</h1>')
+def bar_view(request):
+    return HttpResponse('<h1>bar</h1>')
