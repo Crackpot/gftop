@@ -19,8 +19,3 @@ class ContactForm(forms.Form):
         if num_words<4:
             raise forms.ValidationError("Not enough words!")
         return message
-
-class PublisherForm(ModelForm):
-    class Meta:
-        model=Publisher
-Publisherform=PublisherForm()
