@@ -20,7 +20,7 @@ class Request(resource.Resource):
                 'username':username,
                 'birthday':birthday
             }
-            requrl='http://hello.crackpot.com/p/helloworld/display?username=%s&birthday=%s'
+            requrl='http://interface.crackpot.com/sm?username=%s&birthday=%s'
             sendurl=requrl%(
                 username,
                 birthday,
@@ -47,7 +47,7 @@ class Request(resource.Resource):
     
         if msg != 'false':
             rargs.update({'msg': msg, 'ln':ln, })
-            returl = '/p/sm/step2?phone=%(phone)s&mid=%(mid)s&channel=%(channel)s&extra=%(extra)s&msg=%(msg)s&ln=%(ln)s&stn=%(stn)s&sm_key_hexicode=%(sm_key_hexicode)s' % rargs
+            returl = 'http://localhost:8090/hello/display?username=%s&birthday=%s' % rargs
             request.redirect(returl)
         else:
             request.write(ret)

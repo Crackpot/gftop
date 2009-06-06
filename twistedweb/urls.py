@@ -42,5 +42,5 @@ class Toplevel(resource.Resource):
     
 root=Toplevel()
 root.putChild('monitor',Monitor())
-root.putChild('helloworld',hw_url)
+root.putChild('hello',hw_url)
 root.putChild('sm',sm_url)
