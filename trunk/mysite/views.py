@@ -38,3 +38,16 @@ def say_hello(request,person_name):
     return HttpResponse('Hello, %s'%person_name)
 def say_goodbye(request,person_name):
     return HttpResponse('Goodbye,%s'%person_name)
+from django.template import loader,RequestContext
+def custom_proc(request):
+    return {
+        'app':'My app',
+        'user':request.user,
+        'ip_address':request.META['REMOTE_ADDR']
+    }
+def view_1(request):
+    t = loader.get_template('template1.html')
+    c = RequestContext(request, {'message': 'I am view 1.'},
+            processors=[custom_proc])
+    return t.render(c)
+
