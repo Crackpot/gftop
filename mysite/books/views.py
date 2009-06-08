@@ -92,3 +92,68 @@ def add_publisher(request):
         else:
             form=PublisherForm()            
         return render_to_response('books/add_publisher.html',{'form':form})
+    
+from django.http import Http404
+from django.template import TemplateDoesNotExist
+from django.views.generic.simple import direct_to_template
+
+def about_pages(request, page):
+    try:
+        return direct_to_template(request, template="about/%s.html" % page)
+    except TemplateDoesNotExist:
+        raise Http404()
+    
+    
+    
+from django.http import Http404
+from django.views.generic import list_detail
+from mysite.books.models import Book, Publisher
+
+def books_by_publisher(request, name):
+    # Look up the publisher (and raise a 404 if it can't be found).
+    try:
+        publisher = Publisher.objects.get(name__iexact=name)
+    except Publisher.DoesNotExist:
+        raise Http404
+
+    # Use the object_list view for the heavy lifting.
+    return list_detail.object_list(
+        request,
+        queryset = Book.objects.filter(publisher=publisher),
+        template_name = "books/books_by_publisher.html",
+        #template_object_name = "books",#有这句将得不到结果
+        extra_context = {"publisher" : publisher}
+    )
+
+import datetime
+from mysite.books.models import Author
+from django.views.generic import list_detail
+from django.shortcuts import get_object_or_404
+
+def author_detail(request, author_id):
+    # Look up the Author (and raise a 404 if she's not found)
+    author = get_object_or_404(Author, pk=author_id)
+
+    # Record the last accessed date
+    author.last_name = datetime.datetime.now()
+    author.save()
+
+    # Show the detail page
+    return list_detail.object_detail(
+        request,
+        queryset = Author.objects.all(),
+        object_id = author_id,
+        template_name='books/author_detail.html',
+        extra_context={'author':author}
+    )
+
+
+def author_list_plaintext(request):
+    response = list_detail.object_list(
+        request,
+        queryset = Author.objects.all(),
+        mimetype = "text/plain",
+        template_name = "books/author_list.txt"
+    )
+    response["Content-Disposition"] = "attachment; filename=authors.txt"
+    return response

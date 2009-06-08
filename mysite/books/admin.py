@@ -12,7 +12,7 @@ class BookAdmin(admin.ModelAdmin):
     raw_id_fields=('publisher',)
     
 class AuthorAdmin(admin.ModelAdmin):
-    list_display=('first_name','last_name','email')
+    list_display=('first_name','last_name','email','last_accessed')
     search_fields=('first_name','last_name')
 
 admin.site.register(Author,AuthorAdmin)

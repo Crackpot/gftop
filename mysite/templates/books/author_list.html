@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>作者列表</h2>
+		<ul>
+			{% for author in author_list %}
+				<li>{{ author.salutation }}</li>
+			{% endfor %}
+		</ul>
+{% endblock %}

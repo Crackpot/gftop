@@ -19,6 +19,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     email = models.EmailField('e-mail',blank=True)
+    last_accessed=models.DateField()
     headshot = models.ImageField(upload_to='/home/workspace/gftop/mysite/books/headshots')
     def __unicode__(self):
         return u'%s %s'%(self.first_name,self.last_name)
@@ -30,3 +31,5 @@ class Book(models.Model):
     publication_date = models.DateField(blank=True,null=True)
     def __unicode__(self):
         return self.title
+    class Meta:
+        ordering=['title']
