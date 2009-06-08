@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 import datetime
 
 def index(request):
-    return HttpResponse("主页  您所在的位置为：%s"%(request.path).encode('utf-8'))
+    return render_to_response('index.html')
 def hello(request):
     return HttpResponse("您好！ 您所在的位置为：%s"%(request.path).encode('utf-8'))
 def checkbrowser(request):
@@ -24,7 +24,17 @@ def hours_ahead(request,offset):
     hour_offset=int(offset)
     next_time=datetime.datetime.now()+datetime.timedelta(hours=hour_offset)
     return render_to_response('hours_ahead.html',locals())
+def now_in_london(request):
+    #伦敦在0时区
+    city='伦敦'
+    hour_offset=-7
+    time_london=datetime.datetime.now()+datetime.timedelta(hours=hour_offset)
+    return HttpResponse('<head><title>伦敦时间</title></head><body><h1>伦敦当前时间为：%s</h1></body>'%time_london)
 def foo_view(request):
     return HttpResponse('<h1>foo</h1>')
 def bar_view(request):
     return HttpResponse('<h1>bar</h1>')
+def say_hello(request,person_name):
+    return HttpResponse('Hello, %s'%person_name)
+def say_goodbye(request,person_name):
+    return HttpResponse('Goodbye,%s'%person_name)

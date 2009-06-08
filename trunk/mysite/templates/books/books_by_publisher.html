@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>{{ publisher }}所出版的图书：</h2>
+	<h3></h3>
+	<ul>
+		{% for book in object_list %}
+			<li>{{ book.title }}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
