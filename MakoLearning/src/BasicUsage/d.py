@@ -15,7 +15,7 @@ mytemplate=Template(
 )
 
 print mytemplate.render(
-    name='高飞',
-    sex='男',
+    name=u'高飞',
+    sex=u'男',
     age=23,
 )
