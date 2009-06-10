@@ -1,15 +1,45 @@
 #coding=utf-8
 from twisted.web import resource,server
 from twisted.web.client import getPage
-import sys
+import sys,datetime
 sys.path.append('/home/workspace/gftop/twistedweb')
 import settings
 from utils import render_to_response
 from twisted.python import logfile
+import codecs
 
 log=logfile.LogFile('sm.req.success.log',settings.LOGPATH,defaultMode=0777)
 faillog=logfile.LogFile('sm.req.failure.log',settings.LOGPATH,defaultMode=0777)
 
+class resultDisplay(resource.Resource):
+    def render(self,request):
+        import cPickle as pickle 
+        import base64
+        stn=request.args.get('stn',['1001'])[0]
+        sm_key_hexicode=request.args.get('sm_key_hexicode',['None'])[0]
+        sm_key_type='pickle'
+        url = 'http://211.160.78.112:9200/sm?stn=%s&sm_key_hexicode=%s&sm_key_type=%s'       
+        resulturl=url%(
+            stn,
+            sm_key_hexicode,
+            sm_key_type,
+        )
+        c=getPage(resulturl,timeout=5)
+        c.addCallback(self.reg_ok,request,resulturl)
+        c.addErrabck(self.reg_failure,request,resulturl)
+        return server.NOT_DONE_YET
+    def reg_ok(self,result,request,resulturl):
+        ret=result.strip()
+        content=render_to_response('./sm/result.html',content=ret)
+        request.write(content)
+        request.finish()
+    def reg_failure(self,failure,request,resulturl):
+        print failure
+        msg='%s::%s,%s\n'%(
+            datetime.datetime.today(),
+            requrl,
+            str(failure),
+        )
 class Request(resource.Resource):
     def render_POST(self,request):
         username=request.args.get('username',['username'])[0]

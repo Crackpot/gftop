@@ -7,8 +7,9 @@
 '''
 from twisted.web.client import downloadPage
 from twisted.internet import reactor
-def stopReactor(contents):
+def printContents(contents):
+    print contents
     reactor.stop()
 deferred=downloadPage('http://www.baidu.com','tmp.html')
-deferred.addCallback(stopReactor)
+deferred.addCallback(printContents)
 reactor.run()

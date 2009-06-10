@@ -3,9 +3,9 @@ from twisted.web.google import checkGoogle
 from twisted.internet import reactor
 string='python twisted'
 
-def reactorStop(contents):
+def printContents(contents):
     print contents
     reactor.stop()
 deferred=checkGoogle(string)
-deferred.addCallback(reactorStop)
+deferred.addCallback(printContents)
 reactor.run()
