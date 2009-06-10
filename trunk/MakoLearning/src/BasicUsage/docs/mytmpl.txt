@@ -1,0 +1,7 @@
+##coding=utf-8
+您好,${name}！
+性别：${sex}
+年龄：${age}
+% if sex=='男':
+	先生
+% endif
