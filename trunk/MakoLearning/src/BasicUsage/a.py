@@ -6,5 +6,5 @@
     当 mytemplate.render() 被调用时，Mako 会为此模板创建起一个运行时环境，并调用 render_body() 函数，然后捕获其输出到缓冲区，然后返回其字符串内容。
 '''
 from mako.template import Template
-mytemplate=Template("hello world!")
+mytemplate=Template((unicode("哈哈")).encode('utf-8'))
 print mytemplate.render()

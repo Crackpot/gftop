@@ -23,4 +23,4 @@ mylookup=TemplateLookup(
 def server_template(templatename,**kwargs):
     mytemplate=mylookup.get_template(templatename)
     print mytemplate.render(**kwargs)
-server_template('mytmpl.txt',name='高飞',sex='男',age=23,)
+server_template('mytmpl.txt',name=u'高飞',sex=u'男',age=23,)

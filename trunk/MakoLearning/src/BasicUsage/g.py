@@ -13,19 +13,19 @@ mylookup=TemplateLookup(
 )
 mytemplate=mylookup.get_template('mytmpl.txt')
 print mytemplate.render(
-    name='高飞',
-    sex='男',
+    name=u'高飞',
+    sex=u'男',
     age=23,
 )
 '''另外，render_unicode() 方法可以将模板的输出转换为一个 Python 的 Unicode 对象返回： '''
 print mytemplate.render_unicode(
-    name='高飞',
-    sex='男',
+    name=u'高飞',
+    sex=u'男',
     age=23,
 )
 '''上面的方法调用未提供编码参数，可以通过下面的语法进行编码'''
 print mytemplate.render_unicode(
-    name='高飞',
-    sex='男',
+    name=u'高飞',
+    sex=u'男',
     age=23,
 ).encode('utf-8','replace')

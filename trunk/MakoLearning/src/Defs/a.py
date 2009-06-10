@@ -17,4 +17,4 @@ def server_template(templatename,**kwargs):
     print mytemplate.render_unicode(**kwargs)
 #server_template('mytmpl1.txt',x=4,y=6)
 #server_template('mytmpl2.txt',name='高飞',sex='男'.encode('utf-8'))
-server_template('mytmpl3.txt',username='crackpot')
+server_template('mytmpl3.txt',username=u'高飞')
