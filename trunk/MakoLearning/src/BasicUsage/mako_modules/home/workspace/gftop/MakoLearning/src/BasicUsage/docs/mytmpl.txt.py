@@ -3,7 +3,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 5
-_modified_time = 1244620768.430388
+_modified_time = 1244628690.1684811
 _template_filename='/home/workspace/gftop/MakoLearning/src/BasicUsage/docs/mytmpl.txt'
 _template_uri='/home/workspace/gftop/MakoLearning/src/BasicUsage/docs/mytmpl.txt'
 _template_cache=cache.Cache(__name__, _modified_time)
@@ -30,9 +30,17 @@ def render_body(context,**pageargs):
         __M_writer(unicode(age))
         __M_writer(u'\n')
         # SOURCE LINE 5
-        if sex=='\u7537':
+        if sex==u'\u7537':
             # SOURCE LINE 6
             __M_writer(u'\t\u5148\u751f\n')
+            # SOURCE LINE 7
+        elif sex==u'\u5973':
+            # SOURCE LINE 8
+            __M_writer(u'\t\u5973\u58eb\n')
+            # SOURCE LINE 9
+        else:
+            # SOURCE LINE 10
+            __M_writer(u'\t\u6027\u522b\u9519\u8bef\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
