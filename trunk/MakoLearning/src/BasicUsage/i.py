@@ -7,11 +7,13 @@ from mako.exceptions import RichTraceback
 try:
     mylookup=TemplateLookup(
         directories=['/home/workspace/gftop/MakoLearning/src/BasicUsage/docs'],
+        output_encoding='utf-8',        #解决了中文问题
+        encoding_errors='replace',
     )
     mytemplate=mylookup.get_template('mytmpl.txt')
     print mytemplate.render(
-        name='高飞',
-        sex='男',
+        name=u'高飞',
+        sex=u'男',
         age=23,        
 )
 except:

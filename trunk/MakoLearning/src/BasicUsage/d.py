@@ -14,7 +14,7 @@ mytemplate=Template(
     module_directory='/home/workspace/gftop/MakoLearning/src/BasicUsage/mako_modules'
 )
 
-print mytemplate.render(
+print mytemplate.render(        #中文问题遗留
     name=u'高飞',
     sex=u'男',
     age=23,

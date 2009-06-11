@@ -1,0 +1,103 @@
+##coding=utf-8
+Defs 中的 Defs
+def 模型遵循 Python 中关于闭包的一些规则。在一个 <％def> 中定义另一个 <％def>，会将它定义在父 def 的外围环境（enclosing scope) 中：
+<%def name="mydef()">
+	<%def name="subdef()">
+		a sub def
+	</%def>
+	im the def,and the subcomopnent is ${subdef()}
+</%def>
+${mydef()}
+就象 Python 中一样，定义在内嵌 <％def> 之外的名称，在其内部一样存在：
+<%
+	x=12
+%>
+<%def name="outer()">
+	<%
+		y=15
+	%>
+	<%def name="inner()">
+		ineer,x is ${x},y is ${y}
+	</%def>
+	outer, x is ${x},y is ${y}
+	${inner()}
+</%def>
+${outer()}
+
+调用方自带内容或内嵌函数的方式调用 def
+
+def 的另一个方面是它可以带内容的进行调用。也就是，当你调用 def 时，同时定义一个块的内容（或多个块），这些块将提供给你要调用的 def. 这种调用方式的主要目的是为了创建自定义的，可嵌套的标签，就象其他模板语言的自定义标签生成系统 —— 外部的标签控制内嵌标签的执行，并且可以和它们沟通状态信息。只有在 Mako 中，你才不需要使用任何外部的 Python 模块，你可以直接在你的模板中定义可任意内嵌的标签。
+
+为了达到这个目标，需要通过 <％call> 标签而不是常规的 ${} 语法来调用目标 def. 这样，目标 def 就会在其上下文中获得一个 caller 变量，其中包含一个名称空间，在此名称空间中包含了调用者的内容部分(body)， 以及 <％call> 标签中定义的其他 defs. 而调用者的内容(body) 可通过 body() 方法来取得：
+<%def name="buildtable()">
+    <table>
+        <tr><td>
+            ${caller.body()}
+        </td></tr>
+    </table>
+</%def>
+<%call expr="buildtable()">
+    I am the table body.
+</%call>
+body() 可以被执行多次，或根本不执行。这意味着你可以使用带内容的 def 调用（def-call-with-content）来创建迭代器(iterators)，条件语句等：
+<%def name="lister(count)">
+	% for x in range(1,count):
+		${caller.body()}\
+	% endfor
+</%def>
+<%call expr="lister(3)">
+	哈哈
+</%call>
+一个自定义的“条件”标签：
+<%def name="conditional(expr)">
+	% if expr:
+		${caller.body()}\
+	% endif
+</%def>
+<%call expr="conditional(4==4)">
+	im the result
+</%call>
+但还有更精彩的。body() 函数还可以传递参数：
+<%def name="layoutdata(somedata)">
+	<table>
+		% for item in somedata:
+			<tr>
+				% for col in item:
+					<td>${caller.body(col=col)}</td>
+				% endfor
+			</tr>
+		% endfor
+	</table>
+</%def>
+<%call expr="layoutdata([[1,2,3],[4,5,6],[7,8,9]])" args="col">
+	Body data:${col}
+</%call>
+你不用仅盯着调用 body() 函数，在调用方可以定义任意多个 callables，使得 <％call> 标签可定制所有布局：
+<%def name="layout()">
+	# a layout def 
+	<div class="mainlayout">
+		<div class="herder">
+			${caller.header()}
+		</div>
+		<div class="sidebar">
+			${caller.sidebar()}
+		</div>
+		<div class="content">
+			${caller.body()}
+		</div>
+	</div>
+</%def>
+# calls the layout def
+<%call expr="layout()">
+	<%def name="header()">
+		I am the header
+	</%def>
+	<%def name="sidebar()">
+		<ul>
+			<li>sidebar 1</li>
+			<li>sidebar 2</li>
+		</ul>
+	</%def>
+	this is the body
+</%call>
+利用 <％call> 你可以做很多事情。可以创建表单控件库(form widget libraries)，比如一个自包含的 <form> 标签，以及一组内嵌的 HTML input 元素，或者用 <div> 或其他元素创建可移植的包装控件，你可以创建标签来解释数据行，比如从数据库中得到的数据，然后将行的每一列传递给 body() 的一个可调用函数，这样就可以对数据行进行任何你想要的排版。基本上，你在其他系统中通过“自定义标签”或标签库想做的事情，Mako 中都可以通过 <％def> 或通过用 <％call> 调用 Python 函数的方式来实现。

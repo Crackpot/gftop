@@ -4,4 +4,4 @@
 '''
 from mako.template import Template
 mytemplate=Template("hello,${name}!")
-print mytemplate.render(name="crackpot")
+print mytemplate.render(name="Crackpot")        #中文问题遗留

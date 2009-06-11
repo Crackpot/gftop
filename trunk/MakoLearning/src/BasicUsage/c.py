@@ -6,8 +6,8 @@ from mako.template import Template
 from mako.runtime import Context
 from StringIO import StringIO
 
-mytemplate=Template('hello,${name}!')
+mytemplate=Template(u'你好,${name}!')
 buf=StringIO()
-ctx=Context(buf,name='crackpot')
+ctx=Context(buf,name=u'高飞')     #解决了中文问题
 mytemplate.render_context(ctx)
 print buf.getvalue()
