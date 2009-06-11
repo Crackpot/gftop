@@ -1,0 +1,4 @@
+##coding=utf-8
+
+<%namespace name="hw" module="some.module"/>
+${hw.my_tag()}
