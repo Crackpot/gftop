@@ -25,10 +25,10 @@ class Display(resource.Resource):
         self.birthday=request.args.get('birthday',['19000909'])[0]
         ISOTIMEFORMAT='%Y-%m-%d %X'
         self.now=time.strftime(ISOTIMEFORMAT,time.localtime())
-        content=render_to_response('./helloworld/display.html',\
-            now=self.now,\
-            username=self.username,\
-            birthday=self.birthday,\
+        content=render_to_response('./helloworld/display.html',
+            now=self.now,
+            username=self.username,
+            birthday=self.birthday,
         )
         return content
     
