@@ -11,6 +11,8 @@ from mako import exceptions
 try:
     mylookup=TemplateLookup(
         directories=['/home/workspace/gftop/MakoLearning/src/BasicUsage/docs'],
+        output_encoding='utf-8',
+        encoding_errors='replace',
     )
     mytemplate=mylookup.get_template('mytmpl.txt')
     '''HTML 输出函数也内建到了 Template 中。通过 format_exceptions 这个标志位参数。这样，任何在 template 的 render 阶段引发的异常，都会使得 template 的输出内容被 html_error_template 方法的输出所替代。 '''
@@ -19,8 +21,8 @@ try:
 #        format_exceptions=True,
 #    )
     print mytemplate.render(
-        name='高飞',
-        sex='男',
+        name=u'高飞',
+        sex=u'男',
         age=23,
     )
 except:

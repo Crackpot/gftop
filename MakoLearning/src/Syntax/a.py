@@ -15,6 +15,5 @@ mylookup=TemplateLookup(
 def server_template(templatename,**kwargs):
     mytemplate=mylookup.get_template(templatename)
     print mytemplate.render_unicode(**kwargs)
-#server_template('mytmpl1.txt',x=4,y=6)
-#server_template('mytmpl2.txt',name='高飞',sex='男'.encode('utf-8'))
-server_template('mytmpl3.txt',username='高飞')
+server_template('mytmpl1.txt',x=4,y=6)
+server_template('mytmpl2.txt',name=u'高飞',sex=u'男')

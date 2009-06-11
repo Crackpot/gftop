@@ -1,0 +1,22 @@
+##coding=utf-8
+上下文方法和访问器（Context Methods and Accessors）
+Context 的主要成员包括：
+      context[key] / context.get(key, default=None) - 类似字典方式的访问器。通常你在模板中使用的变量，如果在局部没有定义，则会去上下文中获取。当你要使用一个在别处已经定义的（比如传递给 %def 调用的局部参数）变量时，可以用字典访问语法或 get 方法。如果没有提供 key, 则和字典类似，会引发 KeyError.
+      keys() - 上下文中已定义的所有名称。
+      kwargs - 这会返回一个上下文变量字典的副本。当你想把当前上下文中的变量传递到函数的关键字参数时，这样做很有用。例如：
+##${next.body(**context.kwargs)}
+      write(text) - 向当前输出流中写一些文本。
+      lookup - 返回当前执行中用于所有文件查找请求的 TemplateLookup 对象（尽管每个独立的 Template 实例可以有其不同的 TemplateLookup 实例，但只有最初调用到的那个 Template 的 TemplateLookup 会被使用）。
+      
+All the built-in names
+
+现在来看看 Mako 定义了的所有名称。下面的大多数名称是 Namespace 的实例（下一节中有详细介绍：Namespaces），并且，下面除了 context 和 UNDEFINED 之外的大多数变量名称都定义在 Context 中。
+
+    * local - 当前模板的名称空间, described in Built-in Namespaces
+    * self - 继承链顶层模板的名称空间 (如果有的话，没有则和 local 一样), mostly described in Inheritance
+    * parent - 继承链中父模板的名称空间（或者未定义）; see Inheritance
+    * next - 继承链中下一个模板的名称空间（或未定义）; see Inheritance
+    * caller - 当使用 <％call> 标签定义一个“带内容的调用”时创建的一个“迷你”名称空间。 described in Calling a def with embedded content and/or other defs
+    * capture - 一个函数，用于调用指定的 def 并捕获其输出内容，返回为字符串。 Usage is described in Buffering
+    * UNDEFINED - 一个全局的单件对象，用于在 Context 中找不到的变量的返回值。是 mako.runtime.Undefined 类的实例，调用其 __str__() 方法会引发异常。
+    * pageargs - 在没有在 <％page> 标签中定义任何关键字参数的模板中有效，是一个字典。所有传递给模板 body() 函数（当通过名称空间使用时）的关键字参数，都会被收集到这个字典中，其他则被定义为页面参数。（如果已经预先声明）。[原文：All keyword arguments sent to the body() function of a template (when used via namespaces) go here by default unless otherwise defined as a page argument.] If this makes no sense, it shouldn't; read the section The "body()" method.  

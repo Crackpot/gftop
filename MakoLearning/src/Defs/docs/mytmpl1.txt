@@ -31,6 +31,6 @@ ${account1(accountname='crackpot')}\
 
 远程的 <％def> 调用也有点类似于 Python 中调用另一个模块中的函数的情形。需要有一个“导入”的步骤，以便从其他模板中萃取出名称，添加到你自己的模板中；然后这些名称的函数才可以被调用。
 
-要导入另一个模板，使用 <％namespace> 标签:
-<%namespace name="mystuff" file="mystuff.html"/>
+要导入另一个模板，使用 <％namespace> 标签:\
+<%namespace name="mystuff" file="mystuff.html"/>\
 ${mystuff.func()}

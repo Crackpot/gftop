@@ -13,6 +13,8 @@ mylookup=TemplateLookup(
     directories=['/home/workspace/gftop/MakoLearning/src/BasicUsage/docs'],
     module_directory='/home/workspace/gftop/MakoLearning/src/BasicUsage/mako_modules',
     collection_size=500,
+    output_encoding='utf-8',        #加上词句解决了中文问题
+    encoding_errors='replace',
     #filesystem_checks=True,
 )
 '''
