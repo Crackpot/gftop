@@ -1,0 +1,33 @@
+##coding=utf-8
+## index.html
+\
+<h1>Namespaces</h1>
+
+<p>Namespaces are used to organize groups of components into categories, and also to "import" components from other files.
+If the file components.html defines these two components: 
+You can make another file, for example index.html, that pulls those two components into a namespace called comp:</p>
+ 
+<%namespace name="comp" file="components.html"/>
+Heres comp1: ${comp.comp1()}
+Heres comp2: ${comp.comp2(x=5)}
+
+<p>The comp variable above is an instance of mako.runtime.Namespace, a proxy object which delivers method calls to the underlying template callable using the current context.<br> 
+<％namespace> also provides an import attribute which can be used to pull the names into the local namespace, removing the need to call it via the ".". When import is used, the name attribute is optional.</p>
+
+<%namespace file="components.html" import="comp1,comp2"/>
+Heres comp1: ${comp1()}
+Heres comp2: ${comp2(x=5)} 
+
+<p>import also supports the "*" operator:</p>
+
+<%namespace file="components.html" import="*"/>
+Heres comp1: ${comp1()}
+Heres comp2: ${comp2(x=5)} 
+
+<p>The names imported by the import attribute take precedence over any names that exist within the current context.<br>
+Note - in current versions of Mako, usage of "import='*'" is known to decrease performance of the template. This will be fixed in a future release.</p>
+
+<h2>Ways to Call Namespaces</h2> 
+<p>There are essentially four ways to call a function from a namespace.<br>
+The "expression" format, as described previously. Namespaces are just Python objects with functions on them, and can be used in expressions like any other function: </p>
+
