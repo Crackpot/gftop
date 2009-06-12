@@ -5,8 +5,8 @@
 from mako.template import Template
 from mako.lookup import TemplateLookup
 mylookup=TemplateLookup(
-    directories=['/home/workspace/gftop/MakoLearning/src/Namespaces/docs'],
-    module_directory='/home/workspace/gftop/MakoLearning/src/Namespaces/mako_modules',
+    directories=['/home/workspace/gftop/MakoLearning/src/Action/docs'],
+    module_directory='/home/workspace/gftop/MakoLearning/src/Action/mako_modules',
     output_encoding='utf-8',
     encoding_errors='replace',
     collection_size=500,
@@ -15,8 +15,5 @@ mylookup=TemplateLookup(
 def server_template(templatename,**kwargs):
     mytemplate=mylookup.get_template(templatename)
     print mytemplate.render_unicode(**kwargs)
-#server_template('components.html')
-#server_template('index.html')
-server_template('mytmpl1.txt')
 
-
+server_template('index.html')
