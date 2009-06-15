@@ -22,11 +22,11 @@ def connect(db,dbName):
     dbDir='%s_%s'%(db,dbName)
     if db=='pyPgSQL':
         try:
-            import pyPgSQL.PgSQL as PgSQL
+            import psycopg2
         except ImportError,e:
             print e
         try:
-            cxn=PgSQL.connect(host='localhost',
+            cxn=psycopg2.connect(host='localhost',
                 database='test',
                 user='crackpot',
                 password='15263748',
