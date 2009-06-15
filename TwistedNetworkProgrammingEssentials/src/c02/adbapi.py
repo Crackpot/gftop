@@ -6,8 +6,8 @@
 '''
 from twisted.internet import reactor
 from twisted.enterprise import adbapi
-import pyPgSQL.PgSQL as PgSQL
-dbpool=adbapi.ConnectionPool("pyPgSQL.PgSQL",
+import psycopg2
+dbpool=adbapi.ConnectionPool("psycopg2",
     host="127.0.0.1",
     user="postgres",
     password="15263748",
@@ -25,9 +25,9 @@ def _getData(txn,user):
         return None
 def getData(user):
     return dbpool.runInteraction(_getData,user)
-def printResult(age):
-    if age!=None:
-        print "数据：", age
+def printResult(data):
+    if data!=None:
+        print "数据：", data
     else:
         print "没有符合条件的数据"
 getData("crackpot").addCallback(printResult)
