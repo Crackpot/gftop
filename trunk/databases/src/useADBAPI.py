@@ -8,8 +8,8 @@ from twisted.internet import reactor
 from twisted.enterprise import adbapi
 import psycopg2
 dbpool=adbapi.ConnectionPool("psycopg2",
-    host="127.0.0.1",
-    user="postgres",
+    host="localhost",
+    user="crackpot",
     password="15263748",
     database="test",
 )
@@ -27,7 +27,7 @@ def getData(user):
     return dbpool.runInteraction(_getData,user)
 def printResult(data):
     if data!=None:
-        print "数据：", data
+        print "数据：\n", data
     else:
         print "没有符合条件的数据"
 getData("crackpot").addCallback(printResult)
