@@ -1,5 +1,5 @@
 [default]
-projectname = mako,python,
+projectname = python,
 
 [acp]
 .mko = html.acp,makohtml.acp,
