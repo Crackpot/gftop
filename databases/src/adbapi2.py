@@ -2,15 +2,16 @@
 #coding=utf-8
 from twisted.internet import reactor
 from twisted.enterprise import adbapi
-import pyPgSQL.PgSQL as PgSQL
-dbpool=adbapi.ConnectionPool("pyPgSQL.PgSQL",
+import psycopg2
+dbpool=adbapi.ConnectionPool("psycopg2",
+    host="localhost",
     user="crackpot",
     password="15263748",
-    host="127.0.0.1",
-    database="test"
+    database="test",
 )
+
 def getData():
-    return dbpool.runQuery("select user_id,name,age from users")
+    return dbpool.runQuery("select * from users")
 def printResult(l):
     for item in l:
         print item
