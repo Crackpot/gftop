@@ -5,5 +5,5 @@ from urls import root
 site=server.Site(root)
 from twisted.application import service,strports
 application=service.Application('zmsms')
-s=strports.service('tcp:8012',site)
+s=strports.service('tcp:8000',site)
 s.setServiceParent(application)
