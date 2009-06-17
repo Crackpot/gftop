@@ -28,14 +28,14 @@ class Qingqiu(resource.Resource):
 #            try:
 #                stepsInstance=steps()
 #                time=int(db[self.phone])
-#                if time<6:                    
+#                if time<6:
 #                    processTip=getattr(stepsInstance,'step_%s'%(time+1))
-#                
+#
 #                    result=processTip()
 #                    db[self.phone]=str(time+1)
 #                else:
 #                    result='您已经完成了六项操作，请勿重新提交！'
-#                    
+#
 #            except Exception,e:
 #                result=''
 #                db[self.phone]='1'
@@ -56,7 +56,6 @@ class Toplevel(resource.Resource):
         return resource.Resource.getChild(self,name,request)
     def render(self,ctx):
         return 'ok@root<br>\
-http://localhost:8000/request_path?phone=13767001234&linkid=1231231231&spnumber=13\
-            '
+http://localhost:8000/request_path?phone=13767001234&linkid=1231231231&spnumber=13'
 root=Toplevel()
 root.putChild('request_path',url_qingqiu)
