@@ -4,7 +4,7 @@ class steps(object):
     def step_0(self):
         return 'o\n开始'
     def step_1(self):
-        return '1\n直接回复%(msg)s确认下载《%(name)s》的艺术签名\n(不回复将作废)。'
+        return '1\n直接回复%(msg)s确认下载您点播的艺术签名\n(不回复将作废)。'
     def step_2(self):
         return '2\n姓名已开始设计,请回复数字选择签名字体\n%(msg)s1,明星艺术签\n%(msg)s2,商务公文签'
     def step_3(self):
