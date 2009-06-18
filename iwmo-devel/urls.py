@@ -9,10 +9,10 @@ from process import steps
 class Qingqiu(resource.Resource):
     isLeaf=True
     def render(self,request):
-        self.phone=request.args.get('phone',[''])[0]
-        self.linkid=request.args.get('linkid',[''])[0]
-        self.spnumber=request.args.get('spnumber',[''])[0]
-        self.order = '1'
+        self.phone=request.args.get('phone',['111111'])[0]
+        self.linkid=request.args.get('linkid',['222222'])[0]
+        self.spnumber=request.args.get('spnumber',['333333'])[0]
+        self.order = request.args.get('order',[''])[0]
         if self.phone and self.linkid:
             mocount = db.get(self.phone, 0)
             mocount = int(mocount)  + 1
