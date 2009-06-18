@@ -4,7 +4,7 @@ import string
     http://www.pythonchallenge.com/pc/def/map.html
 '''
 codedmessage='''g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj. '''
-def decode1():
+def decoder1():
     str=''
     for c in codedmessage:
         if c in string.letters:
@@ -13,7 +13,7 @@ def decode1():
             str+=c
     print codedmessage
     print str
-def decode2():
+def decoder2():
     o=""
     for x in codedmessage:
         if ord(x)>=ord('a') and ord(x)<=ord('z'):
@@ -21,14 +21,14 @@ def decode2():
         else:
             o+=x
     print o
-def decode3():
+def decoder3():
     table=string.maketrans(
         'abcdefghijklmnopqrstuvwxyz',
         'cdefghijklmnopqrstuvwxyzab'
     )
     print string.translate(codedmessage, table)
     print string.translate('map', table)
-def decode4():
+def decoder4():
     table=string.maketrans(
         string.ascii_lowercase,
         string.ascii_lowercase[2:]+string.ascii_lowercase[:2]
@@ -36,18 +36,18 @@ def decode4():
     print string.translate(codedmessage, table)
     print codedmessage.translate(table)
     print string.translate('map', table)
-def decode5():
+def decoder5():
     import os
     os.system('curl http://www.pythonchallenge.com/pc/def/map.html | tr a-z c-za-b')
-def decode6():
+def decoder6():
     print ''.join([chr(ord(x)+2)for x in 'map'])
-def decode7():
+def decoder7():
     cypher=dict(zip(string.lowercase,string.lowercase[2:]+string.lowercase[:2]))
     print ''.join(cypher.get(c,c) for c in codedmessage)
-decode1()
-decode2()
-decode3()
-decode4()
-decode5()
-decode6()
-decode7()
+decoder1()
+decoder2()
+decoder3()
+decoder4()
+decoder5()
+decoder6()
+decoder7()
