@@ -18,6 +18,8 @@ class decoder(object):
         print self.result
     def decoder_2(self):
         pass
+
 instance=decoder()
 #instance.printContent()
 instance.decoder_1()
+instance.decoder_2()
