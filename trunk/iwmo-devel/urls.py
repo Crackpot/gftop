@@ -14,6 +14,7 @@ class Recvmo(resource.Resource):
     def render(self,request):
         return 'ok@recvmo'
 url_recvmo=Recvmo()
+#url_recvmo.putChild('suanming',base_suanming.Receive)
 
 #~~~~~~~ring~~~~~~~~
 from recvmo.ring import urls
