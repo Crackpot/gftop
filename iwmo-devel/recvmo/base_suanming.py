@@ -81,7 +81,7 @@ class Receive(resource.Resource):
         if not re_step.match(mtstep):
             mtstep = 0
         mtstep = int(mtstep)+1
-        mtt = MT9Mixin(
+        mtt = MT(
             phone=self.phone,
             step=mtstep,
             cmd=self.cmd,
