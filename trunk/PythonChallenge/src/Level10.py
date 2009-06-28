@@ -16,5 +16,7 @@ def func(listOri):
             count=1
             tmp=item[i]
             print tmp,
+            if item[i]==tmp:
+                count+=1
         print 
 func(a)
