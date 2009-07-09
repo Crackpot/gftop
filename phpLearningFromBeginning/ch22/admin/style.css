@@ -1,0 +1,35 @@
+p{
+font-size: 10pt;
+}
+
+#item {
+	width: 400px;
+	/*background: #abcdef;*/
+	font-size: 10pt;
+	flota: left;
+}
+#title {
+	float: left;
+	width: 70px;
+	/*background: #0000ff;*/
+	text-align: right;
+	line-height: 30px;
+}
+#input {
+	float: left;
+	width: 200px;
+	text-align:left;
+	padding: 5px 5px 0px 5px;
+	/*background: #abcdef;*/
+}
+
+a:link,a:visited  {
+	font-size: 12px;
+	color: #0000ff;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #0000FF;
+	text-decoration: underline;
+}

@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>ajax应用实例</title>
+
+<script language="javascript">
+var xmlHttp = null;
+
+function GetXmlHttpRequest()
+{
+    var xmlHttp=null;
+    try
+    {
+        xmlHttp = new XMLHttpRequest();
+    }
+    catch(e)
+    {
+        try
+        {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch (e)
+        {
+            try
+            {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch(e)
+            {
+                xmlHttp = false;
+            }            
+        }
+    }
+
+return xmlHttp;
+}
+
+function sendRequest()
+{
+    var prov_name = document.getElementById("province").value;
+
+    if((prov_name == null) || (prov_name == ""))
+        return;
+    
+    xmlHttp = GetXmlHttpRequest();
+    if(xmlHttp == null)
+    {
+        alert("浏览器不支持XmlHttpRequest！");
+        return;
+    } 
+
+    var url = "18-5.php";
+    url = url + "?prov=" + prov_name;
+
+    xmlHttp.open("GET", url, true);
+    xmlHttp.onreadystatechange = updatePage;
+    xmlHttp.send(null);
+}
+
+function updatePage()
+{
+    if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+    {
+        var response = xmlHttp.responseText;
+        document.getElementById("city").innerHTML = response;
+    }
+}
+</script>
+
+<head>
+
+<body>
+<h3>请选择一个省（自治区）：</h3>
+
+<form action="18-5.php">
+    <div>
+    <select id="province" onchange="sendRequest()">
+        <option value="">请选择一个省（自治区）</option>
+        <option value="ah">安徽</option>
+        <option value="fj">福建</option>
+        <option value="gs">甘肃</option>
+        <option value="gd">广东</option>
+        <option value="gx">广西</option>
+        <option value="gz">贵州</option>
+        <option value="hn">海南</option>
+        <option value="hb">河北</option>
+        <option value="hh">河南</option>
+        <option value="hl">黑龙江</option>
+    </select>
+    </div>
+</form>
+
+<div id="city">
+</div>
+
+</body>
+</html>

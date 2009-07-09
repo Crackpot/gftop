@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>1-33</title>
+<script language="JavaScript">
+function setCookie(name,value)    //该函数有两个参数，一个是cookie的名字，一个是cookie的值
+{
+    var days = 30;                //cookie的有效期为30天
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + days);
+    document.cookie = name + "="+ escape(value) + ";expires=" + exdate.toGMTString();
+}
+function getCookie(name)
+{
+    //判断cookie属性的长度是否大于0，大于0说明设置了cookie
+    if(document.cookie.length>0)
+    {
+        start = document.cookie.indexOf(name + "=");    //找到设置cookie名称的位置
+        if(start!=-1)
+        {
+            start = start + name.length+1;
+            end=document.cookie.indexOf(";",start);
+            if(end==-1)
+                end=document.cookie.length;
+            return unescape(document.cookie.substring(start,end));
+        }
+    }
+return "";
+}
+function checkCookie()
+{
+    user_name=getCookie('user_name');
+    if(user_name!=null && user_name!="")
+    {
+        alert('欢迎您，'+user_name+'！');
+    }
+    else 
+    {
+        user_name=prompt('请输入您的名字:',"");
+        if(user_name!=null && user_name!="")
+        {
+            setCookie('user_name',user_name);
+        }
+    }
+}
+
+</script>
+</head>
+
+<body onLoad="checkCookie()">
+</body>
+</html>
