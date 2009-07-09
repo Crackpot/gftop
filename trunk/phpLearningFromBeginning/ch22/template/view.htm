@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title><?=$html_title;?></title>
+<link href="template/bbs.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id="header">
+    <div id="headLink">
+        <strong><?=$FUNC['header_link'];?></strong>
+    </div>
+</div>
+
+<div id="container">
+    <div id="left_col">
+        <div id="board_name">
+            <?=$board_name;?>
+        </div>
+        <?=$topic_list;?>
+        
+        <div id="func_show">
+            发表回复
+        </div>
+        
+        <div>
+            <form name="newpost" action="post.php" method="POST">
+            <div style="margin:4px;"><?=$str_notlogin;?></div>
+            <div style="margin:4px;"><?=$str_login;?></div>
+            <div style="margin:4px;">回复内容：</div>
+            <textarea name="content" cols="50" rows="10"></textarea><br/>
+            <input type="hidden" name="bid" value="<?=$bid;?>">
+            <input type="hidden" name="tid" value="<?=$tid;?>">
+            <input type="hidden" name="actions" value="rpl">
+            <input type="submit" name="sbt" value="提交">
+            </form>
+        </div>
+        
+    </div>
+
+    <div id="right_col">
+        <?=$board_name_list;?>
+        <?=$user_rank_list;?>
+    </div>
+</div>
+
+<br clear="all"/>
+<div id="footer">
+    <?=$FUNC['footer_link'];?>
+</div>
+
+</body>
+</html>

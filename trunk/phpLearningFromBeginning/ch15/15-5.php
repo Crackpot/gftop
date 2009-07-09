@@ -1,0 +1,11 @@
+<?php
+$str = "aaa~bbb~ccc~ddd";
+echo "×Ö·û´®½ØÈ¡Ç°£º$str";
+echo "<br/>";
+echo "<br/>";
+
+$sep_arr = split("~",$str);
+echo "<b>×Ö·û´®½ØÈ¡ºó£º</b><br/>";
+echo "<pre>";
+print_r($sep_arr);
+?>

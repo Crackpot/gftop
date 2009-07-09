@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title><?=$html_title;?></title>
+<link href="template/bbs.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<div id="header">
+    <div id="headLink">
+        <strong><?=$FUNC['header_link'];?></strong>
+    </div>
+</div>
+
+<div id="container">
+
+    <div id="left_col" style="width: 400px;">
+        <div style="text-align:center;background:#f5f5f5">
+            <?=$user_info;?>
+        </div>
+    </div>
+    <div id="right_col">
+        <?=$board_name_list;?>
+    </div>
+</div>
+<br clear="all"/>
+<div id="footer">
+    <?=$FUNC['footer_link'];?>
+</div>
+
+</body>
+</html>
