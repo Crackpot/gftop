@@ -1,3 +1,7 @@
+/*
+ * P 5
+ * 求两个数中较大者
+ * */
 #include <stdio.h>
 void main(){
     int max(int x,int y);
