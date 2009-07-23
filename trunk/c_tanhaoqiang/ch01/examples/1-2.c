@@ -1,3 +1,7 @@
+/*
+ * P 4
+ * 求两数之和
+ * */
 #include <stdio.h>
 void main(){
 	int a,b,sum;
