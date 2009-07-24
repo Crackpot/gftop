@@ -1,5 +1,10 @@
 编辑好两个文件TestJavadoc.java和Test.java后，执行下面这条命令
 vadoc -d apidoc -windowtitle 测试 -doctitle 学习javadoc工具的测试API文档 -header 自定义类 Test*.java
+详细说明：
+    javadoc命令可以对源文件、包来声称API文档，常用选项如下：
+        －d <directory>:指定一个路径，用来将生成的API文档放到指定目录下
+        －windowtitile <text>:指定一个字符串，用于设置API文档的浏览器窗口标题
+        doctitle <html-code>:指定一个HTML格式的文本，用来指定概述页面的标题
 将出现以下信息：
 -----------------------------------------------------------
 正在装入源文件 Test.java...
