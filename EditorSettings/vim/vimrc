@@ -689,7 +689,7 @@ map <leader>s? z=
      endfunction
      setl foldtext=FoldText()
    endfunction
-   au FileType java call JavaFold()
+   "au FileType java call JavaFold()
    au FileType java setl fen
 
    au BufEnter *.sablecc,*.scc set ft=sablecc
