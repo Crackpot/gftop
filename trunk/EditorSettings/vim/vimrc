@@ -80,7 +80,7 @@ filetype indent on
 set autoread
 
 "Have the mouse enabled all the time:
-set mouse=a
+"set mouse=a
 
 "Set mapleader
 let mapleader = ","
@@ -125,7 +125,8 @@ if has("gui_running")
   colorscheme torte
 else
   set background=dark
-  colorscheme ron
+  colorscheme torte
+  "colorscheme ron
 endif
 
 "Some nice mapping to switch syntax (useful if one mixes different languages in one file)
@@ -265,11 +266,11 @@ map <C-l> <C-W>l
 
 "Actually, the tab does not switch buffers, but my arrows
 "Bclose function ca be found in "Buffer related" section
-map <leader>bd :Bclose<cr>
-map <down> <leader>bd
+"map <leader>bd :Bclose<cr>
+"map <down> <leader>bd
 "Use the arrows to something usefull
-map <right> :bn<cr>
-map <left> :bp<cr>
+"map <right> :bn<cr>
+"map <left> :bp<cr>
 
 "Tab configuration
 map <leader>tn :tabnew %<cr>
@@ -618,9 +619,9 @@ map <leader>s? z=
    " Python section
    """"""""""""""""""""""""""""""
    "Run the current buffer in python - ie. on leader+space
-   au FileType python so ~/vim_local/syntax/python.vim
+   "au FileType python so ~/vim_local/syntax/python.vim
    autocmd FileType python map <buffer> <leader><space> :w!<cr>:!python %<cr>
-   autocmd FileType python so ~/vim_local/plugin/python_fold.vim
+   "autocmd FileType python so ~/vim_local/plugin/python_fold.vim
 
    "Set some bindings up for 'compile' of python
    autocmd FileType python set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
