@@ -1,4 +1,3 @@
-
 /**
  * Description:
  * <br/>Copyright (C), 2005-2008, Yeeku.H.Lee
@@ -10,8 +9,8 @@
  */
 class Test
 {
-	public static void Main(String[] args) 
-	{
-		System.out.println("Hello World!");
-	}
+     public static void main(String[] args) 
+    {
+        System.out.println("Hello World!");
+    }
 }
