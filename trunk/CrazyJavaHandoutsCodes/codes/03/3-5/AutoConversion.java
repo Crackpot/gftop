@@ -13,7 +13,7 @@ public class AutoConversion
 {
 	public static void main(String[] args) 
 	{
-		int a  = 6;
+		int a = 6;
 		//int可以自动转换为float类型
 		float f = a;
 		//下面将输出6.0

@@ -1,9 +1,16 @@
 /**
- * P 62
- * 位操作
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestBitOperator.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class TestBitOperator{
-    public static void main(String[] args){
+public class TestBitOperator
+{
+    public static void main(String[] args)
+    {
         //将输出1
         System.out.println(5 & 9);
         //将输出13

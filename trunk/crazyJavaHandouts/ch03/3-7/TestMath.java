@@ -1,9 +1,16 @@
 /**
- * P 60
- * 借助java.lang.Math类的工具方法完成复杂的数学运算
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestMath.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class TestMath{
-    public static void main(String[] args){
+public class TestMath
+{
+    public static void main(String[] args)
+    {
         //定义变量a为3.2
         double a = 3.2;
         System.out.println(a);

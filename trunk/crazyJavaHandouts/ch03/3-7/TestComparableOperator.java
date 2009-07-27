@@ -1,9 +1,16 @@
 /**
- * P 65
- * 比较运算符
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestComparableOperator.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class TestComparableOperator{
-    public static void main(String[] args){
+public class TestComparableOperator
+{
+    public static void main(String[] args)
+    {
         System.out.println("5是否大于4.0：" + (5 > 4.0));//输出true
         System.out.println("5和5.0是否相等：" + (5 == 5.0));//输出true
         System.out.println("97和'a'是否相等：" + (97 == 'a'));//输出true

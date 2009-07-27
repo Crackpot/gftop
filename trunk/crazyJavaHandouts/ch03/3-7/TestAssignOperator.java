@@ -1,9 +1,16 @@
 /**
- * P 61
- * 赋值运算符
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestAssignOperator.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class TestAssignOperator{
-    public static void main(String[] args){
+public class TestAssignOperator
+{
+    public static void main(String[] args)
+    {
         //为变量str赋值为Java
         String str = "Java";
         System.out.println(str);

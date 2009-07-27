@@ -21,7 +21,7 @@ public class NarrowConversion
 		double dValue = 3.98;
 		//强制把一个double类型的值转换为int
 		int toI = (int)dValue;
-		// 将输出3
+		//将输出3
 		System.out.println(toI);
 	}
 }
