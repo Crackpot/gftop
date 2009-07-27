@@ -1,9 +1,16 @@
 /**
- * P 59
- * 求模运算
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestMod.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class TestMod{
-    public static void main(String[] args){
+public class TestMod
+{
+    public static void main(String[] args)
+    {
         double a = 5.2;
         System.out.println(a);
         double b = 3.1;

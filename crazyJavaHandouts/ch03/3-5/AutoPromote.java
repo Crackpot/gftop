@@ -1,9 +1,16 @@
 /**
- * P 56
- * 表达式类型的自动提升
+ * Description:
+ * <br/>Copyright (C), 2005-2008, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:AutoPromote.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class AutoPromote{
-    public static void main(String[] args){
+public class AutoPromote
+{
+    public static void main(String[] args)
+    {
         //定义一个short类型变量
         short sValue = 5;
         System.out.println(sValue);

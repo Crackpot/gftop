@@ -20,9 +20,9 @@ public class PrimitiveAndString
 		//下面输出3.5
 		System.out.println(str2);
 		//下面语句输出7Hello!
-		System.out.println(3 + 4 + "Hello！");
+		System.out.println(3 + 4 + "Hello!");
 		//下面语句输出Hello!34，因为Hello! + 3会把3当成字符串处理，而后再把4当成字符串处理
-		System.out.println("Hello！" + 3 + 4);
+		System.out.println("Hello!" + 3 + 4);
 
 	}
 }

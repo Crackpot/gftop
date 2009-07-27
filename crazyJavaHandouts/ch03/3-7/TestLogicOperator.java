@@ -1,9 +1,16 @@
 /**
- * P 67
- * 逻辑运算符
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestLogicOperator.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
-public class TestLogicOperator{
-    public static void main(String[] args){
+public class TestLogicOperator
+{
+    public static void main(String[] args)
+    {
         //直接对false求非运算，将返回true
         System.out.println(!false);
         System.out.println(5 > 3 && '6' > 10);
@@ -17,13 +24,15 @@ public class TestLogicOperator{
          */
         int a = 5;
         int b = 10;
-        if (a > 4 | b++ > 10){
+        if (a > 4 | b++ > 10)
+        {
             //输出a的值为5，b的值为11
             System.out.println("a的值为：" + a + "\t" + "b的值为：" + b);
         }
         int c = 5;
         int d = 10;
-        if (c > 4 || d++ > 10){
+        if (c > 4 || d++ > 10)
+        {
             //输出c的值为5，d的值为10
             System.out.println("c的值为：" + c + "\t" + "d的值为：" + d);
         }
