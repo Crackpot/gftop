@@ -1,6 +1,11 @@
 /**
- * P 73
- * if条件语句
+ * Description:
+ * <br/>Copyright (C), 2008-2009, FeiGao
+ * <br/>This program is protected by copyright laws.
+ * <br/>Program Name:TestIf.java
+ * <br/>Date:2009-07-27
+ * @author  FeiGao gaofeitop@gmail.com
+ * @version  1.0
  */
 public class TestIf
 {
