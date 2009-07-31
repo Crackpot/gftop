@@ -5,24 +5,24 @@ try
 {
     if(is_dir($file))
     {
-        echo '¼ì²âµ½Ä¿Â¼';
+        echo 'æ£€æµ‹åˆ°ç›®å½•';
     }
     else
     {
-        //´´½¨Òì³£¶ÔÏó£¬´íÎóÐÅÏ¢½«ÓÐExceptionÀàµÄ³ÉÔ±º¯ÊýgetMessage()·µ»Ø
-        throw new Exception('Î´ÕÒµ½¸ÃÄ¿Â¼»òÎÄ¼þ');
+        //åˆ›å»ºå¼‚å¸¸å¯¹è±¡ï¼Œé”™è¯¯ä¿¡æ¯å°†æœ‰Exceptionç±»çš„æˆå‘˜å‡½æ•°getMessage()è¿”å›ž
+        throw new Exception('æœªæ‰¾åˆ°è¯¥ç›®å½•æˆ–æ–‡ä»¶');
     }
 }
 catch(Exception $e)
 {
-    echo '²¶»ñÒì³£: ' . $e->getMessage();
+    echo 'æ•èŽ·å¼‚å¸¸: ' . $e->getMessage();
     echo '<br/><br/>';
-    echo '´íÎóËùÔÚÎÄ¼þ£º'. $e->getFile();
+    echo 'é”™è¯¯æ‰€åœ¨æ–‡ä»¶ï¼š'. $e->getFile();
     echo '<br/><br/>';
-    echo '´íÎóËùÔÚÐÐºÅ£º'. $e->getLine();
+    echo 'é”™è¯¯æ‰€åœ¨è¡Œå·ï¼š'. $e->getLine();
     echo '<br/>===============================';
     echo '<br/>';
 }
 
-echo '³ÌÐòÖ´ÐÐÍê±Ï';
+echo 'ç¨‹åºæ‰§è¡Œå®Œæ¯•';
 ?>

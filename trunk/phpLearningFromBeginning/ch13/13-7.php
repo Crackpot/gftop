@@ -6,13 +6,13 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
+    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
 }
 mysql_select_db('test');
 
 $sql = 'select id,name,city,created_time from users';
 
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>²úÉúÎÊÌâµÄSQL£º".$sql);
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>äº§ç”Ÿé—®é¢˜çš„SQLï¼š".$sql);
 ?>
 <html>
 <head>
@@ -23,10 +23,10 @@ $result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>²úÉ
 <body>
 <table width="75%" border="0" cellpadding="0" cellspacing="1" bgcolor="#7B7B84">
     <tr bgcolor="#8BBCC7"> 
-        <td height="33"><div align="center"><strong>ÓÃ»§ID</strong></div></td>
-        <td><div align="center"><strong>ÓÃ»§Ãû³Æ</strong></div></td>
-        <td><div align="center"><strong>À´×Ô³ÇÊĞ</strong></div></td>
-        <td><div align="center"><strong>×¢²áÊ±¼ä</strong></div></td>
+        <td height="33"><div align="center"><strong>ç”¨æˆ·ID</strong></div></td>
+        <td><div align="center"><strong>ç”¨æˆ·åç§°</strong></div></td>
+        <td><div align="center"><strong>æ¥è‡ªåŸå¸‚</strong></div></td>
+        <td><div align="center"><strong>æ³¨å†Œæ—¶é—´</strong></div></td>
     </tr>
 
 <?php

@@ -11,16 +11,16 @@ $patt_url = "/^(http:\/\/)?[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*.+$/";
 
 foreach ($str_arr as $str)
 {
-    echo "×Ö·û´®'$str'£ºÊÇ";
+    echo "å­—ç¬¦ä¸²'$str'ï¼šæ˜¯";
     if (preg_match($patt_url, $str))
     {
-        echo "<b>ºÏ·¨µÄURL¸ñÊ½</b>";
+        echo "<b>åˆæ³•çš„URLæ ¼å¼</b>";
         echo "<br>";
         echo "<br>";
     }
     else
     {
-        echo "²»ºÏ·¨µÄURL¸ñÊ½";
+        echo "ä¸åˆæ³•çš„URLæ ¼å¼";
         echo "<br>";
         echo "<br>";
     }

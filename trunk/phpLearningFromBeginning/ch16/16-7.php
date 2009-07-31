@@ -1,12 +1,12 @@
 <?php
-set_error_handler('myHandler');     //×Ô¶¨Òå´íÎó´¦Àíº¯Êý
+set_error_handler('myHandler');     //è‡ªå®šä¹‰é”™è¯¯å¤„ç†å‡½æ•°
 
 function myHandler($code, $msg, $file, $line)
 {
     echo "<br/>";
-    echo "³ÌÐò <b>$file</b> Ö´ÐÐ¹ý³ÌÖÐ£¬ÔÚµÚ <b>$line</b> ÐÐ£¬²úÉúÒ»¸ö´íÎó¡£";
+    echo "ç¨‹åº <b>$file</b> æ‰§è¡Œè¿‡ç¨‹ä¸­ï¼Œåœ¨ç¬¬ <b>$line</b> è¡Œï¼Œäº§ç”Ÿä¸€ä¸ªé”™è¯¯ã€‚";
     echo "<br/>";
-    echo "´íÎó´úÂëÎª£º<b>$code</b>, ´íÎóµÄÔ­ÒòÊÇ: <b>$msg</b>";
+    echo "é”™è¯¯ä»£ç ä¸ºï¼š<b>$code</b>, é”™è¯¯çš„åŽŸå› æ˜¯: <b>$msg</b>";
 }
 
 echo $uvar;

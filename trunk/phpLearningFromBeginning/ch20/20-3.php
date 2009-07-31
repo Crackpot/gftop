@@ -1,15 +1,15 @@
 <?php
-include("./Smarty/libs/Smarty.class.php");  //°üº¬smartyÀàÎÄ¼ş 
+include("./Smarty/libs/Smarty.class.php");  //åŒ…å«smartyç±»æ–‡ä»¶ 
 
-$smarty = new Smarty();                          //½¨Á¢smartyÊµÀı¶ÔÏó$smarty 
-$smarty->template_dir = "./templates";           //ÉèÖÃÄ£°åÄ¿Â¼ 
-$smarty->compile_dir = "./templates_c";          //ÉèÖÃ±àÒëÄ¿Â¼ 
+$smarty = new Smarty();                          //å»ºç«‹smartyå®ä¾‹å¯¹è±¡$smarty 
+$smarty->template_dir = "./templates";           //è®¾ç½®æ¨¡æ¿ç›®å½• 
+$smarty->compile_dir = "./templates_c";          //è®¾ç½®ç¼–è¯‘ç›®å½• 
 
-$smarty->left_delimiter = "{";                   //Éè¶¨×óÓÒ±ß½ç·ûÎª{}£¬SmartyÍÆ¼öÊ¹ÓÃµÄÊÇ<{}>
+$smarty->left_delimiter = "{";                   //è®¾å®šå·¦å³è¾¹ç•Œç¬¦ä¸º{}ï¼ŒSmartyæ¨èä½¿ç”¨çš„æ˜¯<{}>
 $smarty->right_delimiter = "}"; 
 
-$smarty->assign("name", "Smarty");                //½øĞĞÄ£°å±äÁ¿Ìæ»»
-$smarty->assign("page_title", "SmartyµÄÊ¹ÓÃ");    //½øĞĞÄ£°å±äÁ¿Ìæ»» 
+$smarty->assign("name", "Smarty");                //è¿›è¡Œæ¨¡æ¿å˜é‡æ›¿æ¢
+$smarty->assign("page_title", "Smartyçš„ä½¿ç”¨");    //è¿›è¡Œæ¨¡æ¿å˜é‡æ›¿æ¢ 
 
-$smarty->display("20-2.tpl");                     //±àÒë²¢ÏÔÊ¾Î»ÓÚ./templatesÏÂµÄ20-2.tplÄ£°å 
+$smarty->display("20-2.tpl");                     //ç¼–è¯‘å¹¶æ˜¾ç¤ºä½äº./templatesä¸‹çš„20-2.tplæ¨¡æ¿ 
 ?>

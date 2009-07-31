@@ -1,6 +1,6 @@
 <?php
 $pop = "";
-if(!empty($_POST['bname']) && !empty($_POST['bdesc']))    //Ìí¼ÓÒ»¸öÐÂÂÛÌ³
+if(!empty($_POST['bname']) && !empty($_POST['bdesc']))    //æ·»åŠ ä¸€ä¸ªæ–°è®ºå›
 {
     $bname = $_POST['bname'];
     $bdesc = $_POST['bdesc'];
@@ -9,26 +9,26 @@ if(!empty($_POST['bname']) && !empty($_POST['bdesc']))    //Ìí¼ÓÒ»¸öÐÂÂÛÌ³
     mysql_select_db("mybbs") or die("Can't select database");
     $sql = "insert into boards (board_name,board_desc,build_time) values('".$bname."','".$bdesc."',NOW())";
     mysql_query($sql) or die ('ERROR: '.mysql_error());
-    $pop = "Ìí¼Ó³É¹¦";
+    $pop = "æ·»åŠ æˆåŠŸ";
 }
 ?>
 <html>
-<head><title>ÂÛÌ³¹ÜÀí</title>
+<head><title>è®ºå›ç®¡ç†</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<div>====Ìí¼ÓÐÂÂÛÌ³====</div>
+<div>====æ·»åŠ æ–°è®ºå›====</div>
 <form name="addnew" action="" method="POST">
 <div id="item">
-    <div id="title">ÂÛÌ³Ãû³Æ£º</div>
+    <div id="title">è®ºå›åç§°ï¼š</div>
     <div id="input"><input type="text" name="bname" size="20" /></div>
 </div>
 <div id="item">
-    <div id="title">ÂÛÌ³ÃèÊö£º</div>
+    <div id="title">è®ºå›æè¿°ï¼š</div>
     <div id="input"><input type="text" name="bdesc" size="30" /></div>
 </div>
-<div><input type="submit" name="smt" value="Ìí¼Ó" /></div>
+<div><input type="submit" name="smt" value="æ·»åŠ " /></div>
 </form>
 <div><?=$pop;?></div>
 

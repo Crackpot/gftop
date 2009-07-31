@@ -13,7 +13,7 @@ class Person
     }
 }
 
-class Worker extends Person    //Worker类继承自Person，使用关键字extends
+class Worker extends Person    //Worker绫荤户鎵胯嚜Person锛屼娇鐢ㄥ叧閿瓧extends
 {
     private $salary;
     
@@ -33,5 +33,5 @@ $a_work->set_salary(3500);
 
 $name = $a_work->get_name();
 $salary = $a_work->get_salary();
-echo $name."的月薪为".$salary;
+echo $name."鐨勬湀钖负".$salary;
 ?>

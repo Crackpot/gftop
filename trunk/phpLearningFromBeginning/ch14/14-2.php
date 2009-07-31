@@ -4,11 +4,11 @@ class Cat
     private $name;
     function __construct()
     {
-        echo "<b>¹¹Ôìº¯Êı±»µ÷ÓÃ....</b><br/><br/>";
+        echo "<b>æ„é€ å‡½æ•°è¢«è°ƒç”¨....</b><br/><br/>";
     }
     function __destruct()
     {
-        echo "<b>Îö¹¹º¯Êı±»µ÷ÓÃ....</b><br/><br/>";
+        echo "<b>ææ„å‡½æ•°è¢«è°ƒç”¨....</b><br/><br/>";
     }
     function set_name($name)
     {
@@ -16,13 +16,13 @@ class Cat
     }
     function get_name()
     {
-        echo "ÕâÖ»Ã¨µÄÃû×Ö½Ğ£º".$this->name."<br/><br/>";
+        echo "è¿™åªçŒ«çš„åå­—å«ï¼š".$this->name."<br/><br/>";
     }
 }
 
 $mypet = new Cat;
-echo "__construct()µ÷ÓÃÖ®ºó<br/><br/>";
-$mypet->set_name("Ğ¡°×");
+echo "__construct()è°ƒç”¨ä¹‹å<br/><br/>";
+$mypet->set_name("å°ç™½");
 $mypet->get_name();
-echo"Àà·½·¨get_name()µ÷ÓÃÖ®ºó<br/><br/>";
+echo"ç±»æ–¹æ³•get_name()è°ƒç”¨ä¹‹å<br/><br/>";
 ?>

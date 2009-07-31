@@ -2,12 +2,12 @@
 session_start();
 if(empty($_SESSION['ad']))
 {
-    echo '<p><font color="red">���¼��ִ�д˲���</font></p>';
+    echo '<p><font color="red">请登录后执行此操作</font></p>';
     exit;
 }
 ?>
 <html>
-<title> ��̨�������� </title>
+<title> 后台管理界面 </title>
 </head>
 <frameset cols="100,*">
 

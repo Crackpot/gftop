@@ -2,7 +2,7 @@
 $width = 200;
 $height =200;
 
-$img =  imagecreatetruecolor($width,$height) or die("不支持GD图像处理");
+$img =  imagecreatetruecolor($width,$height) or die("涓嶆敮鎸丟D鍥惧儚澶勭悊");
 imagepng($img);
 imagedestroy($img);
 ?>

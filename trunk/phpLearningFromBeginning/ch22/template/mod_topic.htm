@@ -18,17 +18,17 @@
             <?=$board_name;?>
         </div>
         <div id="func_show">
-            �༭��������
+            编辑帖子内容
         </div>
         <div>
             <form name="newpost" action="post.php" method="POST">
-            <div>����ʱ�䣺<?=$post_time;?></div>
-            �޸����ݣ�<br/>
+            <div>发表时间：<?=$post_time;?></div>
+            修改内容：<br/>
             <textarea name="content" cols="50" rows="10"><?=$content;?></textarea><br/>
             <input type="hidden" name="bid" value="<?=$bid;?>">
             <input type="hidden" name="tid" value="<?=$tid;?>">
             <input type="hidden" name="actions" value="mod">
-            <input type="submit" name="sbt" value="�޸�">
+            <input type="submit" name="sbt" value="修改">
             </form>
         </div>
     </div>

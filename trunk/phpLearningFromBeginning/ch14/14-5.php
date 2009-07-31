@@ -4,11 +4,11 @@ class Counter
     private static $count = 0;
     function __construct()
     {
-        echo '<b>¼ÆÊı¿ªÊ¼!</b><br/><br/>';
+        echo '<b>è®¡æ•°å¼€å§‹!</b><br/><br/>';
     }
     function __destruct()
     {
-        echo '<b>¼ÆÊı½áÊø!</b><br/><br/>';
+        echo '<b>è®¡æ•°ç»“æŸ!</b><br/><br/>';
     }
     static function get_count()
     {

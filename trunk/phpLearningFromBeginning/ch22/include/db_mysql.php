@@ -1,15 +1,15 @@
 <?php
-$h="localhost";  //Êý¾Ý¿â·þÎñÆ÷Ãû³Æ
-$u="root";       //Êý¾Ý¿âÓÃ»§Ãû
-$p="admin";      //Êý¾Ý¿âÃÜÂë
-$db = "mybbs";   //Êý¾Ý¿âÃû³Æ
+$h="localhost";  //æ•°æ®åº“æœåŠ¡å™¨åç§°
+$u="root";       //æ•°æ®åº“ç”¨æˆ·å
+$p="admin";      //æ•°æ®åº“å¯†ç 
+$db = "mybbs";   //æ•°æ®åº“åç§°
 
-function db_connect($h,$p,$u,$db)   //Á¬½ÓÊý¾Ý¿â
+function db_connect($h,$p,$u,$db)   //è¿žæŽ¥æ•°æ®åº“
 {
     if(!($conn = mysql_connect($h, $u, $p))) 
         return false;
     
-    //Èç¹ûÃ»ÓÐ¸ÃÊý¾Ý¿â£¬Ôò·µ»ØÊ§°Ü¡£
+    //å¦‚æžœæ²¡æœ‰è¯¥æ•°æ®åº“ï¼Œåˆ™è¿”å›žå¤±è´¥ã€‚
     if(!mysql_select_db($db))
     {
         mysql_close($conn);
@@ -19,7 +19,7 @@ function db_connect($h,$p,$u,$db)   //Á¬½ÓÊý¾Ý¿â
         return $conn;
 }
 
-function close_db($conn)            //¶Ï¿ªÓëÊý¾Ý¿âµÄÁ¬½Ó
+function close_db($conn)            //æ–­å¼€ä¸Žæ•°æ®åº“çš„è¿žæŽ¥
 {
     mysql_close($conn);
 }

@@ -1,50 +1,50 @@
 <?php
-$parser=xml_parser_create();                        //³õÊ¼»¯XML·ÖÎöÆ÷
+$parser=xml_parser_create();                        //åˆå§‹åŒ–XMLåˆ†æå™¨
 
-function start($parser,$elem_name,$elem_attrs)      //ÔÚÒ»¸öÔªËØ¿ªÊ¼Ê±µ÷ÓÃµÄº¯Êı
+function start($parser,$elem_name,$elem_attrs)      //åœ¨ä¸€ä¸ªå…ƒç´ å¼€å§‹æ—¶è°ƒç”¨çš„å‡½æ•°
 {
     switch($elem_name)
     {
         case "BOOKS":
-            echo "<b>-- Í¼ÊéĞÅÏ¢ --</b><br/><br/>";
+            echo "<b>-- å›¾ä¹¦ä¿¡æ¯ --</b><br/><br/>";
             break;
         case "TITLE":
-            echo "<b>ÊéÃû: </b>";
+            echo "<b>ä¹¦å: </b>";
             break;
         case "AUTHOR":
-            echo "<b>×÷Õß: </b>";
+            echo "<b>ä½œè€…: </b>";
             break;
         case "PUBLISHER":
-            echo "<b>³ö°æÉç: </b>";
+            echo "<b>å‡ºç‰ˆç¤¾: </b>";
             break;
         case "PRICE":
-            echo "<b>¼Û¸ñ: </b>";
+            echo "<b>ä»·æ ¼: </b>";
             break;
     }
 }
 
-function stop($parser,$elem_name)                   //ÔÚÒ»¸öÔªËØ½áÊøÊ±µ÷ÓÃµÄº¯Êı
+function stop($parser,$elem_name)                   //åœ¨ä¸€ä¸ªå…ƒç´ ç»“æŸæ—¶è°ƒç”¨çš„å‡½æ•°
 {
     echo "<br />";
 }
 
-function char($parser,$data)                        //µ±ÕÒµ½Ò»¸ö×Ö·ûÊı¾İÊ±µ÷ÓÃ¸Ãº¯Êı
+function char($parser,$data)                        //å½“æ‰¾åˆ°ä¸€ä¸ªå­—ç¬¦æ•°æ®æ—¶è°ƒç”¨è¯¥å‡½æ•°
 {
     echo $data;
 }
 
 
-xml_set_element_handler($parser,"start","stop");    //Ö¸¶¨ÔªËØ´¦ÀíÆ÷
-xml_set_character_data_handler($parser,"char");     //Ö¸¶¨×Ö·ûÊı¾İ´¦ÀíÆ÷
+xml_set_element_handler($parser,"start","stop");    //æŒ‡å®šå…ƒç´ å¤„ç†å™¨
+xml_set_character_data_handler($parser,"char");     //æŒ‡å®šå­—ç¬¦æ•°æ®å¤„ç†å™¨
 
-$fp=fopen("17-1.xml","r");                          //´ò¿ªXMLÎÄ¼ş
-while($data=fread($fp,1024))                        //Ñ­»·¶ÁÈëXMLÎÄ¼şÖĞµÄÄÚÈİ
+$fp=fopen("17-1.xml","r");                          //æ‰“å¼€XMLæ–‡ä»¶
+while($data=fread($fp,1024))                        //å¾ªç¯è¯»å…¥XMLæ–‡ä»¶ä¸­çš„å†…å®¹
 {
     xml_parse($parser,$data,feof($fp)) or 
-    die(sprintf("XML´íÎó: %s at line %d", 
+    die(sprintf("XMLé”™è¯¯: %s at line %d", 
     xml_error_string(xml_get_error_code($parser)),
     xml_get_current_line_number($parser)));
 }
 
-xml_parser_free($parser);                           //ÊÍ·ÅXML·ÖÎöÆ÷×ÊÔ´
+xml_parser_free($parser);                           //é‡Šæ”¾XMLåˆ†æå™¨èµ„æº
 ?>

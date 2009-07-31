@@ -30,7 +30,7 @@ class doClone
 }
 
 $cle = new doClone(99,'King','Island');
-echo '<b>cloneÖ®Ç°£¬¶ÔÏó $cle µÄÊôĞÔ£º</b>';
+echo '<b>cloneä¹‹å‰ï¼Œå¯¹è±¡ $cle çš„å±æ€§ï¼š</b>';
 echo '<br/>';
 echo 'id = '.$cle->get_id() . "<br/>";
 echo 'name = '.$cle->get_name() . "<br/>";
@@ -39,7 +39,7 @@ echo '<br/>';
 echo '<br/>';
 
 $cle_cloned = clone $cle;
-echo '<b>cloneÖ®ºó£¬¶ÔÏó $cle µÄÊôĞÔ£º</b>';
+echo '<b>cloneä¹‹åï¼Œå¯¹è±¡ $cle çš„å±æ€§ï¼š</b>';
 echo '<br/>';
 echo 'id = '.$cle->get_id() . "<br/>";
 echo 'name = '.$cle->get_name() . "<br/>";
@@ -47,7 +47,7 @@ echo 'address = '.$cle->get_address();
 echo '<br/>';
 echo '<br/>';
 
-echo '<b>cloneÖ®ºó£¬¶ÔÏó $cle_cloned µÄÊôĞÔ£º</b>';
+echo '<b>cloneä¹‹åï¼Œå¯¹è±¡ $cle_cloned çš„å±æ€§ï¼š</b>';
 echo '<br/>';
 echo 'id = '.$cle_cloned->get_id() . "<br/>";
 echo 'name = '.$cle_cloned->get_name() . "<br/>";

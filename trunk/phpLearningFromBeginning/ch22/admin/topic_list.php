@@ -1,6 +1,6 @@
 <?php
-$info = "====ÂÛÌ³ÁĞ±í====<br/>";
-$info .= "<li><a href=\"topic_list.php\">ËùÓĞÌû×Ó</a></li><br>";
+$info = "====è®ºå›åˆ—è¡¨====<br/>";
+$info .= "<li><a href=\"topic_list.php\">æ‰€æœ‰å¸–å­</a></li><br>";
 
 mysql_connect("localhost","root","admin");
 mysql_select_db("mybbs") or die("Can't select database");
@@ -17,13 +17,13 @@ if(mysql_num_rows($result))
 }
 else
 {
-    echo "ÔİÎŞÂÛÌ³";
+    echo "æš‚æ— è®ºå›";
     exit;
 }
 
-$info .= "<br><table border=1 style=\"font-size: 13px;\"><tr bgcolor=\"#abcdef\" align=\"center\"><td><b>ID</b></td><td><b>ÓÃ»§Ãû</b></td><td><b>Ìû×ÓÄÚÈİ</b></td><td><b>²Ù×÷</b></td></tr>";
+$info .= "<br><table border=1 style=\"font-size: 13px;\"><tr bgcolor=\"#abcdef\" align=\"center\"><td><b>ID</b></td><td><b>ç”¨æˆ·å</b></td><td><b>å¸–å­å†…å®¹</b></td><td><b>æ“ä½œ</b></td></tr>";
 
-//É¾³ıÌû×Ó¼°Æä»Ø¸´
+//åˆ é™¤å¸–å­åŠå…¶å›å¤
 if(isset($_GET['del']))
 {
     $tid = $_GET['del'];
@@ -47,20 +47,20 @@ if(mysql_num_rows($result))
 {
     while($row = mysql_fetch_array($result))
     {
-        $info .="<tr><td>".$row['id']."</td><td>".$row['user_name']."</td><td>".$row['content']."</td><td> <a href=\"?del=".$row['id']."\">É¾³ı</a></td></tr>";
+        $info .="<tr><td>".$row['id']."</td><td>".$row['user_name']."</td><td>".$row['content']."</td><td> <a href=\"?del=".$row['id']."\">åˆ é™¤</a></td></tr>";
     }
     $info .= "</table>";
 }
 else
 {
-    $info = "ÔİÎŞÌû×ÓĞÅÏ¢";
+    $info = "æš‚æ— å¸–å­ä¿¡æ¯";
 }
 
 mysql_close();
 ?>
 
 <html>
-<head><title>ÂÛÌ³¹ÜÀí</title>
+<head><title>è®ºå›ç®¡ç†</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>

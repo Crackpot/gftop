@@ -1,11 +1,11 @@
 <?php
 $str = "AAAaaaA~BbbbC~DcccE~FdddZZZ";
-echo "<b>×Ö·û´®½ØÈ¡Ç°£º</b><br/>$str";
+echo "<b>å­—ç¬¦ä¸²æˆªå–å‰ï¼š</b><br/>$str";
 echo "<br/>";
 echo "<br/>";
 
 $sep_arr = split("[a-z]{3}",$str);
-echo "<b>Ê¹ÓÃaaa£¬bbb£¬ccc£¬ddd×ö·Ö¸î×Ö·û´®ºó£º</b>";
+echo "<b>ä½¿ç”¨aaaï¼Œbbbï¼Œcccï¼Œdddåšåˆ†å‰²å­—ç¬¦ä¸²åï¼š</b>";
 echo "<pre>";
 
 print_r($sep_arr);

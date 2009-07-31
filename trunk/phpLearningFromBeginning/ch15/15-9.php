@@ -1,21 +1,21 @@
 <?php
 $str_arr = array(
-"PHP ÊÇÓÅÐãµÄWeb½Å±¾ÓïÑÔ",
-"PerlµÄÎÄ±¾´¦Àí¹¦ÄÜºÜÇ¿´ó"
+"PHP æ˜¯ä¼˜ç§€çš„Webè„šæœ¬è¯­è¨€",
+"Perlçš„æ–‡æœ¬å¤„ç†åŠŸèƒ½å¾ˆå¼ºå¤§"
 );
 
 foreach($str_arr as $str)
 {
-    //Ä£Ê½¶¨½ç·ûºóÃæµÄÐÞÕý·û"i" ±íÊ¾Æ¥ÅäÊ±²»Çø·Ö´óÐ¡Ð´×ÖÄ¸
+    //æ¨¡å¼å®šç•Œç¬¦åŽé¢çš„ä¿®æ­£ç¬¦"i" è¡¨ç¤ºåŒ¹é…æ—¶ä¸åŒºåˆ†å¤§å°å†™å­—æ¯
     if(preg_match("/php/i", $str))
     {
-        echo "ÔÚ×Ö·û´®' $str 'ÖÐÕÒµ½¶Ô'php'µÄÆ¥Åä";
+        echo "åœ¨å­—ç¬¦ä¸²' $str 'ä¸­æ‰¾åˆ°å¯¹'php'çš„åŒ¹é…";
         echo "<br/>";
         echo "<br/>";
     }
     else
     {
-        echo "ÔÚ×Ö·û´®' $str 'ÖÐ<b>Î´</b>ÕÒµ½¶Ô'php'µÄÆ¥Åä";
+        echo "åœ¨å­—ç¬¦ä¸²' $str 'ä¸­<b>æœª</b>æ‰¾åˆ°å¯¹'php'çš„åŒ¹é…";
         echo "<br/>";
         echo "<br/>";
     }

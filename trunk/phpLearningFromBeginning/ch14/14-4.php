@@ -1,7 +1,7 @@
 <?php
-class Animal    //¶¨Òå¶¯ÎïÀà
+class Animal    //å®šä¹‰åŠ¨ç‰©ç±»
 {
-    public $blood;    //¶¯ÎïµÄÈÈÑªºÍÀäÑªÊôÐÔ 
+    public $blood;    //åŠ¨ç‰©çš„çƒ­è¡€å’Œå†·è¡€å±žæ€§ 
     public $name;
     public function __construct($blood,$name=NULL)
     {
@@ -13,9 +13,9 @@ class Animal    //¶¨Òå¶¯ÎïÀà
     }
 }
 
-class Mammal extends Animal    //²¸Èé¶¯Îï£¬ÓÉAmimalÀàÅÉÉú
+class Mammal extends Animal    //å“ºä¹³åŠ¨ç‰©ï¼Œç”±Amimalç±»æ´¾ç”Ÿ
 {
-    public $fur_color;     //Æ¤Ã«ÑÕÉ«
+    public $fur_color;     //çš®æ¯›é¢œè‰²
     public $legs;
     function __construct($fur_color,$legs,$name=NULL)
     {
@@ -25,7 +25,7 @@ class Mammal extends Animal    //²¸Èé¶¯Îï£¬ÓÉAmimalÀàÅÉÉú
     }
 }
 
-class Cat extends Mammal    //DogÀà£¬ÓÉMannalÅÉÉú
+class Cat extends Mammal    //Dogç±»ï¼Œç”±Mannalæ´¾ç”Ÿ
 {
     function __construct($fur_color,$name)
     {
@@ -35,7 +35,7 @@ class Cat extends Mammal    //DogÀà£¬ÓÉMannalÅÉÉú
 
     function bark()
     {
-        print("$this->name says, ' mew¡« mew¡« '");
+        print("$this->name says, ' mewï½ž mewï½ž '");
     }
 }
 
