@@ -17,7 +17,7 @@ public class Person
 
 	public Person(String name , int age)
 	{
-		System.out.println("有参数的构造器");
+		System.out.println("鏈夊弬鏁扮殑鏋勯�犲櫒");
 		this.name = name;
 		this.age = age;
 	}

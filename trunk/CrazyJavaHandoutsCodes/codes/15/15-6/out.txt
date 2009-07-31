@@ -1,2 +1,1 @@
-键盘输入的内容是：普通字符串
-键盘输入的内容是：WriteToProcess@1b67f74
+閿洏杈撳叆鐨勫唴瀹规槸锛氭櫘閫氬瓧绗︿覆閿洏杈撳叆鐨勫唴瀹规槸锛歐riteToProcess@1b67f74

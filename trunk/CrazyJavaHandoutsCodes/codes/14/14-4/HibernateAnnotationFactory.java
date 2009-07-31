@@ -18,17 +18,17 @@ import java.util.*;
  */
 public class HibernateAnnotationFactory implements AnnotationProcessorFactory 
 {
-	//ËùÓĞÖ§³ÖµÄ×¢ÊÍÀàĞÍ
+	//æ‰€æœ‰æ”¯æŒçš„æ³¨é‡Šç±»å‹
 	public Collection<String> supportedAnnotationTypes() 
 	{
 		return Arrays.asList("Property" , "IdProperty" , "Persistent");
 	}
-	//·µ»ØËùÓĞÖ§³ÖµÄÑ¡Ïî
+	//è¿”å›æ‰€æœ‰æ”¯æŒçš„é€‰é¡¹
 	public Collection<String> supportedOptions() 
 	{
 		return Arrays.asList(new String[0]);
 	}
-	//·µ»ØAnnotation´¦ÀíÆ÷
+	//è¿”å›Annotationå¤„ç†å™¨
 	public AnnotationProcessor getProcessorFor(Set<AnnotationTypeDeclaration> atds,
 		AnnotationProcessorEnvironment env) 
 	{

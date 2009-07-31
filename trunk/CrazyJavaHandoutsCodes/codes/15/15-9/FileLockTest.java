@@ -20,14 +20,14 @@ public class FileLockTest
 		FileChannel channel = null;
 		try
 		{
-			//Ê¹ÓÃFileOutputStream»ñÈ¡FileChannel
+			//ä½¿ç”¨FileOutputStreamè·å–FileChannel
 			channel = new FileOutputStream("a.txt")
 				.getChannel();
-			//Ê¹ÓÃ·Ç×èÈûÊ½·½Ê½¶ÔÖ¸¶¨ÎÄ¼ş¼ÓËø
+			//ä½¿ç”¨éé˜»å¡å¼æ–¹å¼å¯¹æŒ‡å®šæ–‡ä»¶åŠ é”
 			FileLock lock = channel.tryLock();
-			//³ÌĞòÔİÍ£5s
+			//ç¨‹åºæš‚åœ5s
 			Thread.sleep(5000);
-			//ÊÍ·ÅËø
+			//é‡Šæ”¾é”
 			lock.release();
 		}
 		catch (Exception ex)

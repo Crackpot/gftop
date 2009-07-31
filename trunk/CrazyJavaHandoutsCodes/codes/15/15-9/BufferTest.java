@@ -12,7 +12,7 @@ public class BufferTest
 {
 	public static void main(String[] args)
 	{
-		//´´½¨Buffer
+		//åˆ›å»ºBuffer
 		CharBuffer buff = CharBuffer.allocate(8);	//1
 		System.out.println("capacity: "
 			+ buff.capacity());
@@ -20,33 +20,33 @@ public class BufferTest
 			+ buff.limit());
 	  	System.out.println("position: "
 			+ buff.position());
-		//·ÅÈëÔªËØ
+		//æ”¾å…¥å…ƒç´ 
 	  	buff.put('a');	//2
 	  	buff.put('b');	//3
 	  	buff.put('c');	//4
 	  	
-	  	System.out.println("¼ÓÈëÈı¸öÔªËØºó£¬position = "
+	  	System.out.println("åŠ å…¥ä¸‰ä¸ªå…ƒç´ åï¼Œposition = "
 			+ buff.position());
-	  	//µ÷ÓÃflip()·½·¨
+	  	//è°ƒç”¨flip()æ–¹æ³•
 	  	buff.flip();	//5
-	  	System.out.println("Ö´ĞĞflip()ºó£¬limit = "
+	  	System.out.println("æ‰§è¡Œflip()åï¼Œlimit = "
 			+ buff.limit());
 	  	System.out.println("position = "
 			+ buff.position());
-	  	//È¡³öµÚÒ»¸öÔªËØ
-	  	System.out.println("µÚÒ»¸öÔªËØ£¨position=0£©£º"
+	  	//å–å‡ºç¬¬ä¸€ä¸ªå…ƒç´ 
+	  	System.out.println("ç¬¬ä¸€ä¸ªå…ƒç´ ï¼ˆposition=0ï¼‰ï¼š"
 			+ buff.get());	//6	  	
-	  	System.out.println("È¡³öÒ»¸öÔªËØºó£¬position = "
+	  	System.out.println("å–å‡ºä¸€ä¸ªå…ƒç´ åï¼Œposition = "
 			+ buff.position());
-	  	//µ÷ÓÃclear·½·¨
+	  	//è°ƒç”¨clearæ–¹æ³•
 	  	buff.clear();	//7
-	  	System.out.println("Ö´ĞĞclear()ºó£¬limit = "
+	  	System.out.println("æ‰§è¡Œclear()åï¼Œlimit = "
 			+ buff.limit());	
-	  	System.out.println("Ö´ĞĞclear()ºó£¬position = "
+	  	System.out.println("æ‰§è¡Œclear()åï¼Œposition = "
 			+ buff.position());
-	  	System.out.println("Ö´ĞĞclear()ºó£¬»º³åÇøÄÚÈİ²¢Ã»ÓĞ±»Çå³ı£º"
+	  	System.out.println("æ‰§è¡Œclear()åï¼Œç¼“å†²åŒºå†…å®¹å¹¶æ²¡æœ‰è¢«æ¸…é™¤ï¼š"
 			+ buff.get(2));	//8
-		System.out.println("Ö´ĞĞ¾ø¶Ô¶ÁÈ¡ºó£¬position = "
+		System.out.println("æ‰§è¡Œç»å¯¹è¯»å–åï¼Œposition = "
 			+ buff.position());
 	} 
 }

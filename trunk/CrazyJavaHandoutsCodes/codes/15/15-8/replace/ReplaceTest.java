@@ -18,13 +18,13 @@ public class ReplaceTest
 		ObjectInputStream ois = null;
 		try
 		{
-			//´´½¨Ò»¸öObjectOutputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å…¥æµ
 			oos = new ObjectOutputStream(
 				new FileOutputStream("replace.txt"));
-			Person per = new Person("ËïÎò¿Õ", 500);
-			//ÏµÍ³»á½«per¶ÔÏó×ª»»×Ö½ÚĞòÁĞ²¢Êä³ö
+			Person per = new Person("å­™æ‚Ÿç©º", 500);
+			//ç³»ç»Ÿä¼šå°†perå¯¹è±¡è½¬æ¢å­—èŠ‚åºåˆ—å¹¶è¾“å‡º
 			oos.writeObject(per);
-			//´´½¨Ò»¸öObjectInputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å…¥æµ
 			ois = new ObjectInputStream(
 				new FileInputStream("replace.txt"));
 			ArrayList list = (ArrayList)ois.readObject();

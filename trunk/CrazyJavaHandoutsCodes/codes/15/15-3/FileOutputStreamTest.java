@@ -16,16 +16,16 @@ public class FileOutputStreamTest
 		FileOutputStream fos = null;
 		try
 		{
-			//´´½¨×Ö½ÚÊäÈëÁ÷
+			//åˆ›å»ºå­—èŠ‚è¾“å…¥æµ
 			fis = new FileInputStream("FileOutputStreamTest.java");
-			//´´½¨×Ö½ÚÊäÈëÁ÷
+			//åˆ›å»ºå­—èŠ‚è¾“å…¥æµ
 			fos = new FileOutputStream("newFile.txt");
 			byte[] bbuf = new byte[32];
 			int hasRead = 0;
-			//Ñ­»·´ÓÊäÈëÁ÷ÖÐÈ¡³öÊý¾Ý
+			//å¾ªçŽ¯ä»Žè¾“å…¥æµä¸­å–å‡ºæ•°æ®
 			while ((hasRead = fis.read(bbuf)) > 0 )
 			{
-				//Ã¿¶ÁÈ¡Ò»´Î£¬¼´Ð´ÈëÎÄ¼þÊä³öÁ÷£¬¶ÁÁË¶àÉÙ£¬¾ÍÐ´¶àÉÙ¡£
+				//æ¯è¯»å–ä¸€æ¬¡ï¼Œå³å†™å…¥æ–‡ä»¶è¾“å‡ºæµï¼Œè¯»äº†å¤šå°‘ï¼Œå°±å†™å¤šå°‘ã€‚
 				fos.write(bbuf , 0 , hasRead);
 			}
 		}
@@ -35,12 +35,12 @@ public class FileOutputStreamTest
 		}
 		finally
 		{
-			//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÎÄ¼þÊäÈëÁ÷
+			//ä½¿ç”¨finallyå—æ¥å…³é—­æ–‡ä»¶è¾“å…¥æµ
 			if (fis != null)
 			{
 				fis.close();
 			}
-			//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÎÄ¼þÊä³öÁ÷
+			//ä½¿ç”¨finallyå—æ¥å…³é—­æ–‡ä»¶è¾“å‡ºæµ
 			if (fos != null)
 			{
 				fos.close();

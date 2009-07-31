@@ -9,18 +9,18 @@
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//Ê¹ÓÃ@InheritableĞŞÊÎµÄBaseÀà
+//ä½¿ç”¨@Inheritableä¿®é¥°çš„Baseç±»
 @Inheritable
 class Base
 {
 }
-//TestInheritableÀàÖ»ÊÇ¼Ì³ĞÁËBaseÀà£¬
-//²¢Î´Ö±½ÓÊ¹ÓÃ@Inheritable AnnotiationĞŞÊÎ
+//TestInheritableç±»åªæ˜¯ç»§æ‰¿äº†Baseç±»ï¼Œ
+//å¹¶æœªç›´æ¥ä½¿ç”¨@Inheritable Annotiationä¿®é¥°
 public class TestInheritable extends Base
 {
 	public static void main(String[] args)
 	{
-		//´òÓ¡TestInheritableÀàÊÇ·ñ¾ßÓĞInheritable Annotation
+		//æ‰“å°TestInheritableç±»æ˜¯å¦å…·æœ‰Inheritable Annotation
 		System.out.println(TestInheritable.class 
 			.isAnnotationPresent(Inheritable.class));
 	}

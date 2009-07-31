@@ -11,7 +11,7 @@
  */
 public class MyTest
 {
-	//使用@Testable标记注释指定该方法是可测试的
+	//浣跨敤@Testable鏍囪娉ㄩ噴鎸囧畾璇ユ柟娉曟槸鍙祴璇曠殑
 	@Testable
 	public static void m1() 
 	{
@@ -19,7 +19,7 @@ public class MyTest
 	public static void m2() 
 	{
 	}   
-	//使用@Testable标记注释指定该方法是可测试的
+	//浣跨敤@Testable鏍囪娉ㄩ噴鎸囧畾璇ユ柟娉曟槸鍙祴璇曠殑
 	@Testable
 	public static void m3() 
 	{        
@@ -28,7 +28,7 @@ public class MyTest
 	public static void m4()
 	{
 	}       
-	//使用@Testable标记注释指定该方法是可测试的
+	//浣跨敤@Testable鏍囪娉ㄩ噴鎸囧畾璇ユ柟娉曟槸鍙祴璇曠殑
 	@Testable
 	public static void m5()
 	{
@@ -36,7 +36,7 @@ public class MyTest
     public static void m6()
 	{
 	}
-	//使用@Testable标记注释指定该方法是可测试的
+	//浣跨敤@Testable鏍囪娉ㄩ噴鎸囧畾璇ユ柟娉曟槸鍙祴璇曠殑
 	@Testable
 	public static void m7()
 	{            

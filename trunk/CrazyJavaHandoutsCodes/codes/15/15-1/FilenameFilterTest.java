@@ -21,12 +21,12 @@ public class FilenameFilterTest
 		}
 	}
 }
-//ÊµÏÖ×Ô¼ºµÄFilenameFilterÊµÏÖÀà
+//å®ç°è‡ªå·±çš„FilenameFilterå®ç°ç±»
 class MyFilenameFilter implements FilenameFilter
 {
 	public boolean accept(File dir, String name)
 	{
-		//Èç¹ûÎÄ¼şÃûÒÔ.java½áÎ²£¬»òÕßÎÄ¼ş¶ÔÓ¦Ò»¸öÂ·¾¶£¬·µ»Øtrue
+		//å¦‚æœæ–‡ä»¶åä»¥.javaç»“å°¾ï¼Œæˆ–è€…æ–‡ä»¶å¯¹åº”ä¸€ä¸ªè·¯å¾„ï¼Œè¿”å›true
 		return name.endsWith(".java")
 			|| new File(name).isDirectory();
 	}
