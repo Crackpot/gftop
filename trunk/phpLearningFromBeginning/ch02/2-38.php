@@ -4,10 +4,10 @@ $var = "some text";
 function test()
 {
     $var = "some text in function";
-    echo 'ÕâÊÇ¾Ö²¿±äÁ¿$var£º'.$var;
+    echo 'è¿™æ˜¯å±€éƒ¨å˜é‡$varï¼š'.$var;
 }
 
-echo 'ÕâÊÇÈ«¾Ö±äÁ¿$var£º'.$var;
+echo 'è¿™æ˜¯å…¨å±€å˜é‡$varï¼š'.$var;
 echo '<br/>';
 echo '<br/>';
 test();

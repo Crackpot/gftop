@@ -7,19 +7,19 @@ $planet = array(
 'Saturn'
 );
 
-echo 'µ±Ç°ÔªËØÊÇ£º'.current($planet);
+echo 'å½“å‰å…ƒç´ æ˜¯ï¼š'.current($planet);
 echo '<br/>';
 
 next($planet);
 next($planet);
 
 echo '<br/>';
-echo 'µ÷ÓÃÁ½´Înextº¯ÊıÖ®ºó£¬µ±Ç°ÔªËØÊÇ£º'.current($planet);
+echo 'è°ƒç”¨ä¸¤æ¬¡nextå‡½æ•°ä¹‹åï¼Œå½“å‰å…ƒç´ æ˜¯ï¼š'.current($planet);
 echo '<br/>';
 
 reset($planet);
 
 echo '<br/>';
-echo 'resetÊı×é$planetºó£¬µ±Ç°ÔªËØÊÇ£º'.current($planet);
+echo 'resetæ•°ç»„$planetåï¼Œå½“å‰å…ƒç´ æ˜¯ï¼š'.current($planet);
 echo '<br/>';
 ?>

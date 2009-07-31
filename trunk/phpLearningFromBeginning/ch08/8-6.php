@@ -1,13 +1,13 @@
 <?php
-//¸æËßä¯ÀÀÆ÷´ËÒ³ÃæµÄ¹ýÆÚÊ±¼ä(ÓÃ¹ú¼Ê±ê×¼Ê±¼ä±íÊ¾)£¬Ö»ÒªÊÇÒÑ¾­¹ýÈ¥µÄÈÕÆÚ¼´¿É¡£
+//å‘Šè¯‰æµè§ˆå™¨æ­¤é¡µé¢çš„è¿‡æœŸæ—¶é—´(ç”¨å›½é™…æ ‡å‡†æ—¶é—´è¡¨ç¤º)ï¼Œåªè¦æ˜¯å·²ç»è¿‡åŽ»çš„æ—¥æœŸå³å¯ã€‚
 header("Expires: Mon, 26 Jul 1970 05:00:00 GMT");
-//¸æËßä¯ÀÀÆ÷´ËÒ³ÃæµÄ×îºó¸üÐÂÈÕÆÚ(ÓÃ¹ú¼Ê±ê×¼Ê±¼ä±íÊ¾)Ò²¾ÍÊÇµ±Ìì£¬Ä¿µÄ¾ÍÊÇÇ¿ÆÈä¯ÀÀÆ÷»ñÈ¡×îÐÂÄÚÈÝ
+//å‘Šè¯‰æµè§ˆå™¨æ­¤é¡µé¢çš„æœ€åŽæ›´æ–°æ—¥æœŸ(ç”¨å›½é™…æ ‡å‡†æ—¶é—´è¡¨ç¤º)ä¹Ÿå°±æ˜¯å½“å¤©ï¼Œç›®çš„å°±æ˜¯å¼ºè¿«æµè§ˆå™¨èŽ·å–æœ€æ–°å†…å®¹
 header("Last-Modified: ".gmdate("D,d M Y  H:i:s")."GMT"); 
-header("Cache-Control: no-cache,must-revalidate");               //¸æËßä¯ÀÀÆ÷²»Ê¹ÓÃ»º´æ
-//ÓëÒÔÇ°µÄ·þÎñÆ÷¼æÈÝ,¼´¼æÈÝHTTP1.0Ð­Òé
+header("Cache-Control: no-cache,must-revalidate");               //å‘Šè¯‰æµè§ˆå™¨ä¸ä½¿ç”¨ç¼“å­˜
+//ä¸Žä»¥å‰çš„æœåŠ¡å™¨å…¼å®¹,å³å…¼å®¹HTTP1.0åè®®
 header("Pragma: no-cache"); 
-header("Content-type: application/file");                        //Êä³öMIMEÀàÐÍ
-header("Content-Length: 2850");                                  //ÎÄ¼þ³¤¶È
-header("Accept-Ranges: bytes");                                  //½ÓÊÜµÄ·¶Î§µ¥Î»
-header("Content-Disposition: attachment;filename=afilename");    //È±Ê¡Ê±ÎÄ¼þ±£´æ¶Ô»°¿òÖÐµÄÎÄ¼þÃû³Æ
+header("Content-type: application/file");                        //è¾“å‡ºMIMEç±»åž‹
+header("Content-Length: 2850");                                  //æ–‡ä»¶é•¿åº¦
+header("Accept-Ranges: bytes");                                  //æŽ¥å—çš„èŒƒå›´å•ä½
+header("Content-Disposition: attachment;filename=afilename");    //ç¼ºçœæ—¶æ–‡ä»¶ä¿å­˜å¯¹è¯æ¡†ä¸­çš„æ–‡ä»¶åç§°
 ?>

@@ -4,14 +4,14 @@ $str2 = "PHP String";
 
 if(strcmp($str1,$str2)==0)
 {
-    echo "$str1 ºÍ $str2 ÏàµÈ";
+    echo "$str1 å’Œ $str2 ç›¸ç­‰";
     echo "<br/";
 }
 else
 {
-    echo "$str1 ºÍ $str2 ²»ÏàµÈ";
+    echo "$str1 å’Œ $str2 ä¸ç›¸ç­‰";
     echo "<br/>";
     echo "<br/>";
-    echo "º¯ÊýstrcmpµÄ±È½Ï½á¹ûÎª£º".strcmp($str1,$str2);
+    echo "å‡½æ•°strcmpçš„æ¯”è¾ƒç»“æžœä¸ºï¼š".strcmp($str1,$str2);
 }
 ?>

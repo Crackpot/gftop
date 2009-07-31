@@ -4,25 +4,25 @@ $bi = 1011001;
 $oi = 721;
 $hi = A2;
 
-echo "$i µÄ¶þ½øÖÆÊýÊÇ£º".decbin($i);
+echo "$i çš„äºŒè¿›åˆ¶æ•°æ˜¯ï¼š".decbin($i);
 echo "<br/>";
 echo "<br/>";
-echo "$i µÄ°Ë½øÖÆÊýÊÇ£º".decoct($i);
+echo "$i çš„å…«è¿›åˆ¶æ•°æ˜¯ï¼š".decoct($i);
 echo "<br/>";
 echo "<br/>";
-echo "$i µÄÊ®Áù½øÖÆÊýÊÇ£º".dechex($i);
+echo "$i çš„åå…­è¿›åˆ¶æ•°æ˜¯ï¼š".dechex($i);
 echo "<hr>";
 
-echo "¶þ½øÖÆÊý $bi µÄÊ®½øÖÆÊýÊÇ£º".bindec($bi);
+echo "äºŒè¿›åˆ¶æ•° $bi çš„åè¿›åˆ¶æ•°æ˜¯ï¼š".bindec($bi);
 echo "<br/>";
 echo "<br/>";
-echo "°Ë½øÖÆÊý $oi µÄÊ®½øÖÆÊýÊÇ£º".octdec($oi);
+echo "å…«è¿›åˆ¶æ•° $oi çš„åè¿›åˆ¶æ•°æ˜¯ï¼š".octdec($oi);
 echo "<br/>";
 echo "<br/>";
-echo "Ê®Áù½øÖÆÊý $hi µÄÊ®½øÖÆÊýÊÇ£º".hexdec($hi);
+echo "åå…­è¿›åˆ¶æ•° $hi çš„åè¿›åˆ¶æ•°æ˜¯ï¼š".hexdec($hi);
 echo "<hr>";
 
 $hex_num = 'A515';
-echo "Ê¹ÓÃº¯Êýbase_convert()£¬×ª»»Ê®Áù½øÖÆÊýB515µ½¶þ½øÖÆÊý£º<br/>";
+echo "ä½¿ç”¨å‡½æ•°base_convert()ï¼Œè½¬æ¢åå…­è¿›åˆ¶æ•°B515åˆ°äºŒè¿›åˆ¶æ•°ï¼š<br/>";
 echo base_convert($hex_num,16,2);
 ?>

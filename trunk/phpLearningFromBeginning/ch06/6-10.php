@@ -1,34 +1,34 @@
 <?php
 $dir_name = "tmp_data";
 
-if(mkdir($dir_name))    //�ڵ�ǰĿ¼�´���Ŀ¼tmp_data
+if(mkdir($dir_name))    //在当前目录下创建目录tmp_data
 {
-    echo "Ŀ¼".$dir_name."�����ɹ���";
+    echo "目录".$dir_name."创建成功！";
     
-    //��Ŀ¼tmp_data�д���һ���ļ�tmp.txt����������д��һЩ����
+    //在目录tmp_data中创建一个文件tmp.txt，并向其中写入一些内容
     if($fp = fopen($dir_name."/tmp.txt",'a'))
     {
         if(fwrite($fp,"Put Some Contenets into File."))
         {
             echo "<hr>";
-            echo "��Ŀ¼".$dir_name."�´����ļ�tmp.txt";
+            echo "在目录".$dir_name."下创建文件tmp.txt";
         }
     }
 }
 else
 {
-    echo "����Ŀ¼ʧ�ܣ�";
+    echo "创建目录失败！";
     exit;
 }
 echo "<hr>";
 
-if(rmdir($dir_name))    //����ɾ��Ŀ¼tmp_data
+if(rmdir($dir_name))    //尝试删除目录tmp_data
 {
-    echo "ɾ��Ŀ¼".$dir_name."�ɹ���";
+    echo "删除目录".$dir_name."成功！";
 }
 else
 {
-    echo "ɾ��Ŀ¼ʧ�ܣ�";
+    echo "删除目录失败！";
     exit;
 }
 ?>

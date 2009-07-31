@@ -7,7 +7,7 @@
 
 <div id="containor">
 	<div id="header">
-		<h1>BLOG����</h1>
+		<h1>BLOG标题</h1>
 	</div>
 	<div id="title">
 		
@@ -15,10 +15,10 @@
 	<hr>
 	<div id="left">
 		<div id="blog_entry">
-		<div id="blog_title"><b>���⣺</b>ѧϰphp����</div><hr>
+		<div id="blog_title"><b>标题：</b>学习php语言</div><hr>
 		<div id="blog_body">
-		<div id="blog_date"><b>�����ڣ�</b>2007-12-01</div><hr>
-		���죬�ҿ�ʼѧϰPHP���
+		<div id="blog_date"><b>发表于：</b>2007-12-01</div><hr>
+		今天，我开始学习PHP编程
 		</div>
 		</div>
 	</div>

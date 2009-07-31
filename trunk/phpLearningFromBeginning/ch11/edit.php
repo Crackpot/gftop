@@ -4,21 +4,21 @@ $ok = false;
 
 if(!isset($_GET['entry']))
 {
-    echo 'ÇëÇó²ÎÊı´íÎó£¡';
+    echo 'è¯·æ±‚å‚æ•°é”™è¯¯ï¼';
     exit;
 }
 
 if(empty($_SESSION['user']) || $_SESSION['user']!='admin')
 {
-    echo 'Çë<a href="login.php">µÇÂ¼</a>ºóÖ´ĞĞ¸Ã²Ù×÷¡£';
+    echo 'è¯·<a href="login.php">ç™»å½•</a>åæ‰§è¡Œè¯¥æ“ä½œã€‚';
     exit;
 }
 
-$path = substr($_GET['entry'],0,6);             //ÈÕÖ¾´æ´¢Ä¿Â¼
-$entry = substr($_GET['entry'],7,9);            //ÈÕÖ¾ÎÄ¼şÃû³Æ
+$path = substr($_GET['entry'],0,6);             //æ—¥å¿—å­˜å‚¨ç›®å½•
+$entry = substr($_GET['entry'],7,9);            //æ—¥å¿—æ–‡ä»¶åç§°
 $file_name = 'contents/'.$path.'/'.$entry.'.txt';
 
-if(file_exists($file_name))                     //È¡³öÔ­ÎÄ¼şÄÚÈİ
+if(file_exists($file_name))                     //å–å‡ºåŸæ–‡ä»¶å†…å®¹
 {
     $fp = @fopen($file_name, 'r');
     if($fp)
@@ -29,7 +29,7 @@ if(file_exists($file_name))                     //È¡³öÔ­ÎÄ¼şÄÚÈİ
     flock($fp, LOCK_UN);
     fclose($fp);
     
-    $content_array = explode('|', $result);      //½«ÎÄ¼şÄÚÈİ´æ·ÅÔÚÊı×éÖĞ
+    $content_array = explode('|', $result);      //å°†æ–‡ä»¶å†…å®¹å­˜æ”¾åœ¨æ•°ç»„ä¸­
 }
 
 if(isset($_POST['title']) && isset($_POST['content']))
@@ -39,7 +39,7 @@ if(isset($_POST['title']) && isset($_POST['content']))
     
     if(file_exists($file_name))
     {
-        //¸ù¾İÓÃ»§ĞŞ¸ÄÊ±Ìá½»µÄÄÚÈİ£¬Ìæ»»ÏÖÓĞÎÄ¼şµÄÄÚÈİ£¬×¢ÒâÌæ»»µÄ¶ÔÓ¦¹ØÏµ£¬¼´±êÌâ¡¢ÄÚÈİ¸÷×Ô¶ÔÓ¦×öÌæ»»
+        //æ ¹æ®ç”¨æˆ·ä¿®æ”¹æ—¶æäº¤çš„å†…å®¹ï¼Œæ›¿æ¢ç°æœ‰æ–‡ä»¶çš„å†…å®¹ï¼Œæ³¨æ„æ›¿æ¢çš„å¯¹åº”å…³ç³»ï¼Œå³æ ‡é¢˜ã€å†…å®¹å„è‡ªå¯¹åº”åšæ›¿æ¢
            $blog_temp = str_replace($content_array[0],$title,$result);
         $blog_str = str_replace($content_array[2],$content,$blog_temp);
         
@@ -56,7 +56,7 @@ if(isset($_POST['title']) && isset($_POST['content']))
     if(strlen($result)>0)
     {
         $ok = true;
-        $msg = 'ÈÕÖ¾ĞŞ¸Ä³É¹¦£¬<a href="post.php?entry='.$_GET['entry'].'">²é¿´¸ÃÈÕÖ¾ÎÄÕÂ</a>';
+        $msg = 'æ—¥å¿—ä¿®æ”¹æˆåŠŸï¼Œ<a href="post.php?entry='.$_GET['entry'].'">æŸ¥çœ‹è¯¥æ—¥å¿—æ–‡ç« </a>';
     }
 }
 ?>
@@ -64,14 +64,14 @@ if(isset($_POST['title']) && isset($_POST['content']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----I have dream....
@@ -79,7 +79,7 @@ if(isset($_POST['title']) && isset($_POST['content']))
 
     <div id="left">
         <div id="blog_entry">
-            <div id="blog_title">±à¼­ÈÕÖ¾</div>
+            <div id="blog_title">ç¼–è¾‘æ—¥å¿—</div>
             
             <div id="blog_body">
             <? if($ok == false) 
@@ -88,12 +88,12 @@ if(isset($_POST['title']) && isset($_POST['content']))
                 <div id="blog_date"></div>
                 <table border="0">
                 <form method="POST" action="edit.php?entry=<?php echo $_GET['entry'];?>">
-                    <tr><td>ÈÕÖ¾±êÌâ£º</td></tr>
+                    <tr><td>æ—¥å¿—æ ‡é¢˜ï¼š</td></tr>
                     <tr><td><input type="text" name="title" size="50" value="<?php echo $content_array[0]; ?>"></td></tr>
-                    <tr><td>ÈÕÖ¾ÄÚÈİ£º</td></tr>
+                    <tr><td>æ—¥å¿—å†…å®¹ï¼š</td></tr>
                     <tr><td><textarea name="content" cols="49" rows="10"><?php echo $content_array[2];?></textarea></td></tr>
-                    <tr><td>´´½¨ÓÚ£º<?php echo date('Y-m-d H:i:s',$content_array[1]); ?></td></tr>
-                    <tr><td><input type="submit" value="Ìá½»"></td></tr>
+                    <tr><td>åˆ›å»ºäºï¼š<?php echo date('Y-m-d H:i:s',$content_array[1]); ?></td></tr>
+                    <tr><td><input type="submit" value="æäº¤"></td></tr>
                 </form>
                 </table>
             <?php } ?>
@@ -104,8 +104,8 @@ if(isset($_POST['title']) && isset($_POST['content']))
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
-            <div id="menu_body">ÎÒÊÇ¸öPHP°®ºÃÕß</div>
+            <div id="menu_title">å…³äºæˆ‘</div>
+            <div id="menu_body">æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…</div>
         </div>
     </div>
     

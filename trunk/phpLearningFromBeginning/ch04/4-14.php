@@ -6,7 +6,7 @@ $cellphone_brand = array(
 'tcl'
 );
 
-echo 'Ô­Êı×é£º';
+echo 'åŸæ•°ç»„ï¼š';
 echo '<br/>';
 echo '<pre>';
 print_r($cellphone_brand);
@@ -15,7 +15,7 @@ echo '<br/>';
 shuffle($cellphone_brand);
 echo '<br/>';
 
-echo 'ÔªËØ±»ÖØĞÂÅÅĞòºó£º';
+echo 'å…ƒç´ è¢«é‡æ–°æ’åºåï¼š';
 echo '<br/>';
 echo '<br/>';
 
@@ -23,4 +23,5 @@ foreach ($cellphone_brand as $cpb)
 echo $cpb.'  ';
 echo '<br/>';
 ?>
+
 

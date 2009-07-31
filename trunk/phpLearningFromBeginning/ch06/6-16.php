@@ -6,5 +6,5 @@ echo "<br/>";
 echo "<br/>";
 
 $area = cal_area($rad);
-echo "ÔÚ6-15.phpÖÐ¼ÆËã°ë¾¶Îª".$rad."Ô²Ãæ»ýÊÇ£º".$area;
+echo "åœ¨6-15.phpä¸­è®¡ç®—åŠå¾„ä¸º".$rad."åœ†é¢ç§¯æ˜¯ï¼š".$area;
 ?>

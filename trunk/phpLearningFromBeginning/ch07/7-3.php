@@ -1,11 +1,11 @@
 <?php
 $time = mktime(20,0,0,8,8,2008);
 
-echo "<b>ÈÕÆÚ£º".date("Y-m-d H:i:s",$time)."</b>";
+echo "<b>æ—¥æœŸï¼š".date("Y-m-d H:i:s",$time)."</b>";
 echo "<br/>";
 
 echo "<pre>";
-echo "¸ÃÈÕÆÚÏà¹ØĞÅÏ¢ÈçÏÂ£º";
+echo "è¯¥æ—¥æœŸç›¸å…³ä¿¡æ¯å¦‚ä¸‹ï¼š";
 echo "<br/>";
 
 $date = getdate($time);

@@ -4,12 +4,12 @@ $dir = "info/newdata";
 
 if(file_exists($file))
 {
-    echo "��ǰĿ¼�У��ļ�".$file."����";
+    echo "当前目录中，文件".$file."存在";
     echo "<br/>";
 }
 else
 {
-     echo "��ǰĿ¼�У��ļ�".$file."������";
+     echo "当前目录中，文件".$file."不存在";
      echo "<br/>";
 }
 echo "<br/>";
@@ -18,12 +18,12 @@ echo "<br/>";
 
 if(file_exists($dir))
 {
-    echo "��ǰĿ¼�£�Ŀ¼".$dir."����";
+    echo "当前目录下，目录".$dir."存在";
     echo "<br/>";
 }
 else
 {
-     echo "��ǰĿ¼�£�Ŀ¼".$dir."������";
+     echo "当前目录下，目录".$dir."不存在";
      echo "<br/>";
 }
 ?>

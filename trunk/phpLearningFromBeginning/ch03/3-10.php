@@ -5,7 +5,7 @@ $user = $_POST['user_name'];
 if(!empty($user))
 {
     $_SESSION['user'] = $user;
-    $welcome = "ÄúºÃ£¬".$user."£¡ÇëÂ¼ÈëÒÔÏÂĞÅÏ¢ºóÌá½»¡£<br/>";
+    $welcome = "æ‚¨å¥½ï¼Œ".$user."ï¼è¯·å½•å…¥ä»¥ä¸‹ä¿¡æ¯åæäº¤ã€‚<br/>";
 }
 
 $gender = $_POST['gender'];
@@ -14,9 +14,9 @@ $blood = $_POST['blood_type'];
 
 if(!empty($gender) && !empty($age) && !empty($blood))
 {
-    echo "ĞÔ±ğ£º".$gender."<br/>";
-    echo "ÄêÁä£º".$age."<br/>";
-    echo "ÑªĞÍ£º".$blood."<br/>";
+    echo "æ€§åˆ«ï¼š".$gender."<br/>";
+    echo "å¹´é¾„ï¼š".$age."<br/>";
+    echo "è¡€å‹ï¼š".$blood."<br/>";
 }
 else
 {
@@ -24,7 +24,7 @@ else
 
 <html>
 <head>
-<title>3-9.php ÓÃ»§ĞÅÏ¢Â¼Èë</title>
+<title>3-9.php ç”¨æˆ·ä¿¡æ¯å½•å…¥</title>
 </head>
 
 <body>
@@ -33,21 +33,21 @@ else
 ?>
 <form name="info" action="" method="POST">
 <table border="0">
-    <tr><td>ĞÔ±ğ£º</td><td><input name="gender" type="radio" value="ÄĞ">ÄĞ <input name="gender" type="radio" value="Å®">Å®</td></tr>
-    <tr><td>ÄêÁä£º</td><td><input name="age" type="input" size="3"></td></tr>
+    <tr><td>æ€§åˆ«ï¼š</td><td><input name="gender" type="radio" value="ç”·">ç”· <input name="gender" type="radio" value="å¥³">å¥³</td></tr>
+    <tr><td>å¹´é¾„ï¼š</td><td><input name="age" type="input" size="3"></td></tr>
     <tr>
-        <td>ÑªĞÍ£º</td>
+        <td>è¡€å‹ï¼š</td>
         <td>
             <select name="blood_type">
-            <option value="A">AĞÍ</option>
-            <option value="B">BĞÍ</option>
-            <option value="O">OĞÍ</option>
-            <option value="AB">ABĞÍ</option>
-            <option value="ÆäËû">ÆäËûÑªĞÍ</option>
+            <option value="A">Aå‹</option>
+            <option value="B">Bå‹</option>
+            <option value="O">Oå‹</option>
+            <option value="AB">ABå‹</option>
+            <option value="å…¶ä»–">å…¶ä»–è¡€å‹</option>
             </select>
         </td>
     </tr>
-    <tr><td><input type="submit" value="Ìá½»"></td></tr>
+    <tr><td><input type="submit" value="æäº¤"></td></tr>
 </table>
 </form>
 

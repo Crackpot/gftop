@@ -2,7 +2,7 @@
 session_start();
 
 $_SESSION['user'] = 'KingKong';
-$_SESSION['explain']='ÕâÊÇ3-4.phpµÄsession±äÁ¿';
-echo 'Õâ¸öÒ³ÃæÒÑ¾­Í¨¹ısession±£´æÁËÒ»Ğ©±äÁ¿';
-echo '<br/><a href="3-5.php">½øÈë3-5.php</a>²é¿´ÕâĞ©±äÁ¿Öµ';
+$_SESSION['explain']='è¿™æ˜¯3-4.phpçš„sessionå˜é‡';
+echo 'è¿™ä¸ªé¡µé¢å·²ç»é€šè¿‡sessionä¿å­˜äº†ä¸€äº›å˜é‡';
+echo '<br/><a href="3-5.php">è¿›å…¥3-5.php</a>æŸ¥çœ‹è¿™äº›å˜é‡å€¼';
 ?>

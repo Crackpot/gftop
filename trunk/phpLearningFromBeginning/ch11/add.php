@@ -23,7 +23,7 @@ if(isset($_POST['title']) && isset($_POST['content']))
         if(!mkdir($folder))
         {
             //$ok = false;
-            //$msg = '<font color=red>´´½¨Ä¿Â¼Òì³££¬Ìí¼ÓÈÕÖ¾Ê§°Ü</font>';
+            //$msg = '<font color=red>åˆ›å»ºç›®å½•å¼‚å¸¸ï¼Œæ·»åŠ æ—¥å¿—å¤±è´¥</font>';
         }
     }
     
@@ -38,7 +38,7 @@ if(isset($_POST['title']) && isset($_POST['content']))
     if(strlen($result)>0)
     {
         //$ok = false;
-        $msg = 'ÈÕÖ¾Ìí¼Ó³É¹¦£¬<a href="post.php?entry='.$entry.'">²é¿´¸ÃÈÕÖ¾ÎÄÕÂ</a>';
+        $msg = 'æ—¥å¿—æ·»åŠ æˆåŠŸï¼Œ<a href="post.php?entry='.$entry.'">æŸ¥çœ‹è¯¥æ—¥å¿—æ–‡ç« </a>';
         echo $msg;
     }
 }
@@ -47,14 +47,14 @@ if(isset($_POST['title']) && isset($_POST['content']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----I have dream....
@@ -62,17 +62,17 @@ if(isset($_POST['title']) && isset($_POST['content']))
 
     <div id="left">
         <div id="blog_entry">
-            <div id="blog_title">Ìí¼ÓÒ»ÆªĞÂÈÕÖ¾</div>
+            <div id="blog_title">æ·»åŠ ä¸€ç¯‡æ–°æ—¥å¿—</div>
             
             <div id="blog_body">
                 <div id="blog_date"></div>
                 <table border="0">
                 <form method="POST" action="add.php">
-                    <tr><td>ÈÕÖ¾±êÌâ£º</td></tr>
+                    <tr><td>æ—¥å¿—æ ‡é¢˜ï¼š</td></tr>
                     <tr><td><input type="text" name="title" size="50"></td></tr>
-                    <tr><td>ÈÕÖ¾ÄÚÈİ£º</td></tr>
+                    <tr><td>æ—¥å¿—å†…å®¹ï¼š</td></tr>
                     <tr><td><textarea name="content" cols="49" rows="10"></textarea></td></tr>
-                    <tr><td><input type="submit" value="Ìá½»"></td></tr>
+                    <tr><td><input type="submit" value="æäº¤"></td></tr>
                 </form>
                 </table>
             </div><!-- blog_body-->
@@ -81,8 +81,8 @@ if(isset($_POST['title']) && isset($_POST['content']))
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
-            <div id="menu_body">ÎÒÊÇ¸öPHP°®ºÃÕß</div>
+            <div id="menu_title">å…³äºæˆ‘</div>
+            <div id="menu_body">æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…</div>
         </div>
     </div>
     

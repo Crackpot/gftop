@@ -3,7 +3,7 @@ $login = false;
 
 session_start();
 
-if(!empty($_SESSION['user']) && $_SESSION['user']=='admin')            //ÅĞ¶ÏÓÃ»§ÊÇ·ñµÇÂ¼
+if(!empty($_SESSION['user']) && $_SESSION['user']=='admin')            //åˆ¤æ–­ç”¨æˆ·æ˜¯å¦ç™»å½•
     $login = true;
 
 $file_array = array();
@@ -16,7 +16,7 @@ if($dh)
 {
     $filename = readdir($dh);
 
-    while($filename)                                                   //Ñ­»·´¦Àí°´ÄêÔÂ¹éµµµÄÈÕÖ¾ÎÄÕÂ
+    while($filename)                                                   //å¾ªç¯å¤„ç†æŒ‰å¹´æœˆå½’æ¡£çš„æ—¥å¿—æ–‡ç« 
     {
         if($filename != '.' && $filename != '..')
         {
@@ -32,7 +32,7 @@ rsort($folder_array);
 $post_data = array();
 foreach($folder_array as $folder)
 {
-    $dh = opendir($dir.'/'.$folder);                                   //´¦ÀíÃ¿¸öÄ¿Â¼ÏÂµÄÈÕÖ¾ÎÄ¼ş
+    $dh = opendir($dir.'/'.$folder);                                   //å¤„ç†æ¯ä¸ªç›®å½•ä¸‹çš„æ—¥å¿—æ–‡ä»¶
     while(($filename = readdir($dh)) !== FALSE)
     {
         if(is_file($dir.'/'.$folder.'/'.$filename))
@@ -54,10 +54,10 @@ foreach($folder_array as $folder)
             $temp_data = array();
             $content_array = explode('|', $result);
             
-            $temp_data['SUBJECT'] = $content_array[0];                  //ÎÄÕÂ±êÌâ
-            $temp_data['DATE'] = date('Y-m-d H:i:s',$content_array[1]); //·¢±íÊ±¼ä
-            $temp_data['CONTENT'] = $content_array[2];                  //ÎÄÕÂÄÚÈİ
-            $file = substr($file,0,9);                                  //ÈÕÖ¾ÎÄÕÂËùÔÚÎÄ¼şÃû
+            $temp_data['SUBJECT'] = $content_array[0];                  //æ–‡ç« æ ‡é¢˜
+            $temp_data['DATE'] = date('Y-m-d H:i:s',$content_array[1]); //å‘è¡¨æ—¶é—´
+            $temp_data['CONTENT'] = $content_array[2];                  //æ–‡ç« å†…å®¹
+            $file = substr($file,0,9);                                  //æ—¥å¿—æ–‡ç« æ‰€åœ¨æ–‡ä»¶å
             $temp_data['FILENAME'] = $folder.'-'.$file;          
             array_push($post_data,$temp_data);
         }
@@ -69,14 +69,14 @@ foreach($folder_array as $folder)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----I have dream....
@@ -94,7 +94,7 @@ foreach($folder_array as $folder)
                     <?php
                         if($login)
                         {
-                            echo '<a href="edit.php?entry='.$post['FILENAME'].'">±à¼­</a> &nbsp; <a href="delete.php?entry='.$post['FILENAME'].'">É¾³ı</a>';    
+                            echo '<a href="edit.php?entry='.$post['FILENAME'].'">ç¼–è¾‘</a> &nbsp; <a href="delete.php?entry='.$post['FILENAME'].'">åˆ é™¤</a>';    
                         }
                      ?>
                 </div>
@@ -105,16 +105,16 @@ foreach($folder_array as $folder)
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
+            <div id="menu_title">å…³äºæˆ‘</div>
             <div id="menu_body">
-            ÎÒÊÇ¸öPHP°®ºÃÕß
+            æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…
             <br/><br/>
-            <?php if($login) {echo '<a href="logout.php">ÍË³ö</a>';} else{ echo '<a href="login.php">µÇÂ¼</a>';} ?>
+            <?php if($login) {echo '<a href="logout.php">é€€å‡º</a>';} else{ echo '<a href="login.php">ç™»å½•</a>';} ?>
             </div>
         </div>
         <br/>
         <div id="sidebar">
-            <div id="menu_title">ÈÕÖ¾¹éµµ</div>
+            <div id="menu_title">æ—¥å¿—å½’æ¡£</div>
             <? foreach($folder_array as $ym)
             {
                 $entry = $ym;

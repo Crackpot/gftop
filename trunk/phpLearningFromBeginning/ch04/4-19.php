@@ -5,7 +5,7 @@ $arr = array(
 'Rome'
 );
 
-echo 'Ô­Êı×é£º';
+echo 'åŸæ•°ç»„ï¼š';
 echo '<pre>';
 print_r($arr);
 
@@ -13,7 +13,7 @@ array_push($arr,'Oslo','Seoul');
 echo '<br/>';
 echo '<br/>';
 
-echo 'µ÷ÓÃº¯Êıarray_push()Ö®ºó£º';
+echo 'è°ƒç”¨å‡½æ•°array_push()ä¹‹åï¼š';
 echo '<br/>';
 print_r($arr);
 ?>

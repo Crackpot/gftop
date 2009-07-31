@@ -1,5 +1,5 @@
 <?php
-unset($var);                 //删除单个变量
-unset($arr['elem']);         //删除单个数组元素
-unset($var1, $var2, $var3);  //删除一个以上的变量
+unset($var);                 //鍒犻櫎鍗曚釜鍙橀噺
+unset($arr['elem']);         //鍒犻櫎鍗曚釜鏁扮粍鍏冪礌
+unset($var1, $var2, $var3);  //鍒犻櫎涓�涓互涓婄殑鍙橀噺
 ?>

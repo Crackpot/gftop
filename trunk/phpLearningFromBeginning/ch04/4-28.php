@@ -13,10 +13,10 @@ $arr2 = array(
 );
 
 echo '<pre>';
-echo 'Êı×éarr1µÄÈ«²¿Ë÷ÒıÊÇ£º';
+echo 'æ•°ç»„arr1çš„å…¨éƒ¨ç´¢å¼•æ˜¯ï¼š';
 print_r(array_keys($arr1));
 
-echo 'Êı×éarr2ÖĞÔªËØ¡±Sunday¡°È«²¿Ë÷ÒıÊÇ£º';
+echo 'æ•°ç»„arr2ä¸­å…ƒç´ â€Sundayâ€œå…¨éƒ¨ç´¢å¼•æ˜¯ï¼š';
 echo '<br/>';
 print_r(array_keys($arr2,'Sunday'));
 ?>

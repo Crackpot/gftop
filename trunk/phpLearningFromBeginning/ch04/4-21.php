@@ -7,7 +7,7 @@ $olympic = array(
 'BEIJING'=>2008
 );
 
-echo 'Ô­Êı×é£º';
+echo 'åŸæ•°ç»„ï¼š';
 echo '<pre>';
 print_r($olympic);
 echo '</pre>';
@@ -15,7 +15,7 @@ echo '</pre>';
 $nol = array_change_key_case($olympic, CASE_UPPER);
 echo '<br/>';
 
-echo 'µ÷ÓÃarray_change_key_case()Ö®ºó£º';
+echo 'è°ƒç”¨array_change_key_case()ä¹‹åï¼š';
 echo '<pre>';
 print_r($nol);
 ?>

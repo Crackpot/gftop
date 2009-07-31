@@ -1,7 +1,7 @@
 <?php
 echo "test string1";
 
-echo "<br/>";                       //ÕâÀïÌí¼Ó"<br/>"ÊÇÎªÁËÔÚWebÒ³ÃæÉÏÉú³ÉÐÂµÄÒ»ÐÐ£¬¼´»»ÐÐ
+echo "<br/>";                       //è¿™é‡Œæ·»åŠ "<br/>"æ˜¯ä¸ºäº†åœ¨Webé¡µé¢ä¸Šç”Ÿæˆæ–°çš„ä¸€è¡Œï¼Œå³æ¢è¡Œ
 echo "<br/>";
 
 //echo "test string2<br/>";

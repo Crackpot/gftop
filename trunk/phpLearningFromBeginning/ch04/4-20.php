@@ -7,7 +7,7 @@ $arr = array(
 'Singapore'
 );
 
-echo 'Ô­Êý×é£º';
+echo 'åŽŸæ•°ç»„ï¼š';
 echo '<pre>';
 print_r($arr);
 echo '</pre>';
@@ -16,9 +16,9 @@ $arr_tmp = array_pop($arr);
 echo '<br/>';
 
 echo '<pre>';
-echo 'pop³öÊý×éµÄÔªËØÊÇ£º<b>'.$arr_tmp .'</b>';
+echo 'popå‡ºæ•°ç»„çš„å…ƒç´ æ˜¯ï¼š<b>'.$arr_tmp .'</b>';
 echo '<br/>';
 
-echo 'µ÷ÓÃº¯Êýarray_pop()Ö®ºó£º';
+echo 'è°ƒç”¨å‡½æ•°array_pop()ä¹‹åŽï¼š';
 print_r($arr);
 ?>

@@ -2,10 +2,10 @@
 $url = "http://www.somesite.com:8000/php/code?id=100&cid=900";
 $ret_arr = parse_url($url);
 
-echo "Òª·ÖÎöµÄµØÖ·£º<br/>".$url;
+echo "è¦åˆ†æçš„åœ°å€ï¼š<br/>".$url;
 echo "<hr>";
 
 echo "<pre>";
-echo "·ÖÎö½á¹ûÈçÏÂ£º<br/>";
+echo "åˆ†æç»“æœå¦‚ä¸‹ï¼š<br/>";
 print_r($ret_arr);
 ?>

@@ -1,14 +1,14 @@
 <?php
-//½«ÎÄ¼þÒÆÖÁ·þÎñÆ÷µÄ¸ùÄ¿Â¼µÄuploadÄ¿Â¼ÏÂ£¬uploadÊÂÏÈµÃ½¨Á¢ºÃ
+//å°†æ–‡ä»¶ç§»è‡³æœåŠ¡å™¨çš„æ ¹ç›®å½•çš„uploadç›®å½•ä¸‹ï¼Œuploadäº‹å…ˆå¾—å»ºç«‹å¥½
 $upload_path = $_SERVER['DOCUMENT_ROOT']."/upload/";
 $dest_file = $upload_path.basename($_FILES['myfile']['name']);
 
 if(move_uploaded_file($_FILES['myfile']['tmp_name'],$dest_file))
 {
-	echo "ÎÄ¼þÒÑÉÏ´«ÖÁ·þÎñÆ÷¸ùÄ¿Â¼µÄuploadÄ¿Â¼ÏÂ";
+	echo "æ–‡ä»¶å·²ä¸Šä¼ è‡³æœåŠ¡å™¨æ ¹ç›®å½•çš„uploadç›®å½•ä¸‹";
 }
 else
 {
-	echo "ÎÄ¼þÉÏ´«Ê±·¢ÉúÁËÒ»¸ö´íÎó".$_FILES['myfile']['error'];	
+	echo "æ–‡ä»¶ä¸Šä¼ æ—¶å‘ç”Ÿäº†ä¸€ä¸ªé”™è¯¯".$_FILES['myfile']['error'];	
 }
 ?>

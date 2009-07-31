@@ -1,16 +1,16 @@
 <?php
-echo "文件的所有者（用户ID）：";
+echo "鏂囦欢鐨勬墍鏈夎�咃紙鐢ㄦ埛ID锛夛細";
 echo fileowner("data.txt");
 echo "<br>";
 echo "<br>";
 
-echo "文件的大小：";
+echo "鏂囦欢鐨勫ぇ灏忥細";
 echo filesize("data.txt");
 echo "<br>";
 echo "<br>";
 
 
-echo "文件的类型：";
+echo "鏂囦欢鐨勭被鍨嬶細";
 echo filetype("data.txt");
 echo "<br>";
 ?>

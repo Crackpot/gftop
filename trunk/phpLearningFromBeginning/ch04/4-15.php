@@ -6,7 +6,7 @@ $cellphone_brand = array(
 'tcl'
 );
 
-echo 'Ô­Êı×é£º';
+echo 'åŸæ•°ç»„ï¼š';
 echo '<br/>';
 
 echo '<pre>';
@@ -16,7 +16,7 @@ echo '</pre>';
 $cpb = array_reverse($cellphone_brand);
 
 echo '<br/>';
-echo '°´Ô­Ë³Ğò·´Ïò£º';
+echo 'æŒ‰åŸé¡ºåºåå‘ï¼š';
 echo '<pre>';
 print_r($cpb);
 echo '</pre>';

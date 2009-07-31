@@ -9,5 +9,5 @@ echo '<br/>';
 echo '<br/>';
 
 if($a<$b)
-    echo "$a Ð¡ÓÚ $b";
+    echo "$a å°äºŽ $b";
 ?>

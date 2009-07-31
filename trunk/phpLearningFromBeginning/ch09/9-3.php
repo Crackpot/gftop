@@ -4,7 +4,7 @@ echo "<br/>";
 echo mt_rand(100,999);
 echo "<hr/>";
 
-echo "以下通过循环生成1-100之间的多个随机数<br/>";
+echo "浠ヤ笅閫氳繃寰幆鐢熸垚1-100涔嬮棿鐨勫涓殢鏈烘暟<br/>";
 for($i = 0; $i < 10; ++$i)
 {
     $number = (mt_rand()%100)+1;

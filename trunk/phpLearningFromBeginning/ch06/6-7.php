@@ -3,40 +3,40 @@ $file = "data.txt";
 
 if(is_dir($file))
 {
-    echo "нд╪Ч $file йг╦Жд©б╪";
+    echo "Ф√┤Д╩╤ $file Ф≤╞Д╦╙Г⌡╝Е╫∙";
     echo "<br/>";
 }
 else
 {
-    echo "нд╪Ч $file ╡╩йгд©б╪";
+    echo "Ф√┤Д╩╤ $file Д╦█Ф≤╞Г⌡╝Е╫∙";
     echo "<br/>";
 }
 
 if(is_file($file))
 {
-    echo "нд╪Ч $file йгр╩╦Жфум╗нд╪Ч";
+    echo "Ф√┤Д╩╤ $file Ф≤╞Д╦─Д╦╙Ф≥╝И─ Ф√┤Д╩╤";
     echo "<br/>";
 }
 
 if(is_readable($file))
 {
-    echo "нд╪Ч $file йг©и╤а╣д";
+    echo "Ф√┤Д╩╤ $file Ф≤╞Е▐╞Х╞╩Г └";
     echo "<br/>";
 }
 else
 {
-    echo "нд╪Ч $file йг╡╩©и╤а╣д";
+    echo "Ф√┤Д╩╤ $file Ф≤╞Д╦█Е▐╞Х╞╩Г └";
     echo "<br/>";
 }
 
 if(is_writeable($file))
 {
-   echo "нд╪Ч $file йг©ип╢╣д";
+   echo "Ф√┤Д╩╤ $file Ф≤╞Е▐╞Е├≥Г └";
    echo "<br/>";
 }
 else
 {
-   echo "нд╪Ч $file йг╡╩©ип╢╣д";
+   echo "Ф√┤Д╩╤ $file Ф≤╞Д╦█Е▐╞Е├≥Г └";
    echo "<br/>";
 }
 ?>

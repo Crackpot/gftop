@@ -6,8 +6,8 @@ function say_hello($some_name = "Jack")
     echo "<br/>";
 }
 
-say_hello();           //²»Ê¹ÓÃÈÎºÎ²ÎÊýµ÷ÓÃº¯Êýsay_helloÊ±£¬º¯Êý½«Ê¹ÓÃº¯Êý¶¨ÒåµÄÄ¬ÈÏ²ÎÊý¡°Jack¡±
-say_hello("Jenny");    //Ê¹ÓÃ²ÎÊý¡°Jenny¡±µ÷ÓÃº¯Êýsay_hello
+say_hello();           //ä¸ä½¿ç”¨ä»»ä½•å‚æ•°è°ƒç”¨å‡½æ•°say_helloæ—¶ï¼Œå‡½æ•°å°†ä½¿ç”¨å‡½æ•°å®šä¹‰çš„é»˜è®¤å‚æ•°â€œJackâ€
+say_hello("Jenny");    //ä½¿ç”¨å‚æ•°â€œJennyâ€è°ƒç”¨å‡½æ•°say_hello
 say_hello("Harry");
 say_hello("Ema");
 ?>

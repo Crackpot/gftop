@@ -12,10 +12,10 @@ if($a<$b)
     echo "<br/>";
     echo "<br/>";
     
-    echo '$a Ð¡ÓÚ $b';
+    echo '$a å°äºŽ $b';
 }
 else
 {
-    echo "$a ºÍ $b ±È½Ï";
-    echo '$a ´óÓÚµÈÓÚ $b';
+    echo "$a å’Œ $b æ¯”è¾ƒ";
+    echo '$a å¤§äºŽç­‰äºŽ $b';
 }

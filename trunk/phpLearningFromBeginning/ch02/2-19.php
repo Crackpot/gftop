@@ -6,6 +6,6 @@ echo $s1.$s2;
 echo "<br/>";
 echo "<br/>";
 
-$s1 .= "friend!";    //µÈ¼ÛÓÚ$s1 = $1."friend"
+$s1 .= "friend!";    //ç­‰ä»·äºŽ$s1 = $1."friend"
 echo $s1;
 ?>

@@ -9,13 +9,13 @@ if(isset($_POST['user']) && isset($_POST['passwd']))
     
     $passwd = md5($passwd);
     
-    if($user != $AUTH['user'] || $passwd != $AUTH['passwd'])    //ÑéÖ¤Ê§°Ü
+    if($user != $AUTH['user'] || $passwd != $AUTH['passwd'])    //éªŒè¯å¤±è´¥
     {
-        echo '<strong><font color="red">ÓÃ»§Ãû»òÃÜÂë´íÎó£¡</font></strong>';
+        echo '<strong><font color="red">ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼</font></strong>';
     }
     else
     {
-        $_SESSION['user'] = $user;                              //ÑéÖ¤³É¹¦£¬ÉèÖÃsession
+        $_SESSION['user'] = $user;                              //éªŒè¯æˆåŠŸï¼Œè®¾ç½®session
         header("location: index.php");
     }
 }
@@ -24,14 +24,14 @@ if(isset($_POST['user']) && isset($_POST['passwd']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----I have dream....
@@ -39,15 +39,15 @@ if(isset($_POST['user']) && isset($_POST['passwd']))
 
     <div id="left">
         <div id="blog_entry">
-            <div id="blog_title">ÓÃ»§µÇÂ¼</div>
+            <div id="blog_title">ç”¨æˆ·ç™»å½•</div>
             
             <div id="blog_body">
                 <div id="blog_date"></div>
                 <table border="0">
                 <form method="POST" action="login.php">
-                    <tr><td>ÓÃ»§Ãû³Æ£º</td><td><input type="text" name="user" size="15"></td></tr>
-                    <tr><td>ÓÃ»§ÃÜÂë£º</td><td><input type="password" name="passwd" size="15"></td></tr>
-                    <tr><td><input type="submit" value="µÇÂ¼"></td></tr>
+                    <tr><td>ç”¨æˆ·åç§°ï¼š</td><td><input type="text" name="user" size="15"></td></tr>
+                    <tr><td>ç”¨æˆ·å¯†ç ï¼š</td><td><input type="password" name="passwd" size="15"></td></tr>
+                    <tr><td><input type="submit" value="ç™»å½•"></td></tr>
                 </form>
                 </table>
             </div><!-- blog_body-->
@@ -56,8 +56,8 @@ if(isset($_POST['user']) && isset($_POST['passwd']))
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
-            <div id="menu_body">ÎÒÊÇ¸öPHP°®ºÃÕß</div>
+            <div id="menu_title">å…³äºæˆ‘</div>
+            <div id="menu_body">æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…</div>
         </div>
     </div>
     

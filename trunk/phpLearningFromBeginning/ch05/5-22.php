@@ -2,14 +2,14 @@
 $str1 = 'This is a secret';
 $str2 = 'root';
 
-echo 'Ô­×Ö·û´®£º';
+echo 'åŽŸå­—ç¬¦ä¸²ï¼š';
 echo '<br/>';
 echo 'str1='.$str1;
 echo 'str2='.$str2;
 echo '<br/>';
 echo '<br/>';
 
-echo 'Ê¹ÓÃmd5¼ÓÃÜ£º';
+echo 'ä½¿ç”¨md5åŠ å¯†ï¼š';
 echo '<br/>';
 echo "md5($str1)=".md5($str1);
 echo '<br/>';
@@ -18,7 +18,7 @@ echo "md5($str2)=".md5($str2);
 echo '<br/>';
 echo '<br/>';
 
-echo 'Ê¹ÓÃsha1¼ÓÃÜ£º';
+echo 'ä½¿ç”¨sha1åŠ å¯†ï¼š';
 echo '<br/>';
 echo "sha1($str1)=".sha1($str1);
 echo '<br/>';

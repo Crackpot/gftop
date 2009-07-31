@@ -2,5 +2,5 @@
 $str = "I love PHP!";
 
 $str_len = strlen($str);
-echo "×Ö·û´® '$str' µÄ³¤¶ÈÎª£º".$str_len;
+echo "å­—ç¬¦ä¸² '$str' çš„é•¿åº¦ä¸ºï¼š".$str_len;
 ?>

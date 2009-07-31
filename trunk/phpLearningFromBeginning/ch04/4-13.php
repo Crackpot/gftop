@@ -18,7 +18,7 @@ $planet2 = array(
 asort($planet1);
 ksort($planet2);
 
-echo '使用函数asort对数组元素排序：';
+echo '浣跨敤鍑芥暟asort瀵规暟缁勫厓绱犳帓搴忥細';
 echo '<br/>';
 
 foreach($planet1 as $key => $value)
@@ -29,7 +29,7 @@ foreach($planet1 as $key => $value)
 }
 
 echo '<br/>';  
-echo '使用函数ksort对数组元素排序：';
+echo '浣跨敤鍑芥暟ksort瀵规暟缁勫厓绱犳帓搴忥細';
 echo '<br/>';
 
 foreach($planet2 as $key => $value)

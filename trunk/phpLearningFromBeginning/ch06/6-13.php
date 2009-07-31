@@ -1,18 +1,18 @@
 <?php
 $last_access = fileatime("data.txt");
-echo "ÎÄ¼ş×îºóµÄ·ÃÎÊÊ±¼äÊÇ£º";
+echo "æ–‡ä»¶æœ€åçš„è®¿é—®æ—¶é—´æ˜¯ï¼š";
 echo date("l F d, Y", $last_access);
 echo "<br>";
 echo "<br>";
 
 $last_modify = filemtime("data.txt");
-echo "ÎÄ¼ş×îºóµÄĞŞ¸ÄÊ±¼ä£º";
+echo "æ–‡ä»¶æœ€åçš„ä¿®æ”¹æ—¶é—´ï¼š";
 echo date("l F d, Y", $last_modify);
 echo "<br>";
 echo "<br>";
 
 $last_modify_inode = filectime("data.txt");
-echo "ÎÄ¼ş×îºóµÄ¸Ä±äÊ±¼ä£º";
+echo "æ–‡ä»¶æœ€åçš„æ”¹å˜æ—¶é—´ï¼š";
 echo date("l F d, Y", $last_modify_inode);
 echo "<br>";
 echo "<br>";
