@@ -1,14 +1,14 @@
 <?php
 require_once("xajax/xajax.inc.php");
 
-$xajax = new xajax();       //实例化xajax对象
+$xajax = new xajax();       //ʵ����xajax����
 
-//$xajax->debugOn();        //打开ajax调试功能
+//$xajax->debugOn();        //��ajax���Թ���
 
-//注册一个xajax调用的php函数名（与javascript中的函数名xajax_showOutput相对应）
+//ע��һ��xajax���õ�php����������javascript�еĺ�����xajax_showOutput���Ӧ��
 $xajax->registerFunction("showOutput");
 
-//编写上面已经注册的php函数，在此函数中用xajaxResponse对象来返回XML指令集
+//��д�����Ѿ�ע���php�������ڴ˺�������xajaxResponse����������XMLָ�
 function showOutput()
 {
     $testResponse = new xajaxResponse();
@@ -21,13 +21,13 @@ function showOutput()
     
     $objResponse = new xajaxResponse();
     
-    //使用xajaxResponse对象的addAssign方法添加XML指令，
-    //该指令将id为submittedDiv的元素的innerHTML属性更新为$testResponseOutput
+    //ʹ��xajaxResponse�����addAssign��������XMLָ�
+    //��ָ�idΪsubmittedDiv��Ԫ�ص�innerHTML���Ը���Ϊ$testResponseOutput
     $objResponse->addAssign("submittedDiv", "innerHTML", $testResponseOutput);
     return $objResponse;
 }
 
-$xajax->processRequests();  //在脚本传送出任何东西前，xajax都要处理所有请求
+$xajax->processRequests();  //�ڽű����ͳ��κζ���ǰ��xajax��Ҫ������������
 ?>
 
 <html>
@@ -36,15 +36,15 @@ $xajax->processRequests();  //在脚本传送出任何东西前，xajax都要处
 <title>18-6.php - xajaxResponse Test</title>
 <?php
 
-//这代码使xajax对象可以生成所必需的JavaScript
+//�����ʹxajax������������������JavaScript
 $xajax->printJavascript("xajax/")
 ?>
 </head>
 <body>
 
-<!-- 在这里调用 -->
-<p><div onclick="xajax_showOutput();"> 点击这里显示响应XML </div></p>
-<div id="submittedDiv">这里将被响应的XML指令所替换</div>
+<!-- ��������� -->
+<p><div onclick="xajax_showOutput();"> ���������ʾ��ӦXML </div></p>
+<div id="submittedDiv">���ｫ����Ӧ��XMLָ�����滻</div>
 
 </body>
 </html>

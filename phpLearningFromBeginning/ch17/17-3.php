@@ -6,6 +6,6 @@ if(file_exists('17-1.xml'))
 }
 else
 {
-    exit('è½½å…¥æ–‡ä»¶test.xmlå¤±è´¥');
+    exit('ÔØÈëÎÄ¼þtest.xmlÊ§°Ü');
 }
 ?>

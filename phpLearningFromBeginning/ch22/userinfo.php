@@ -21,10 +21,10 @@ $result = mysql_query($sql) or die("ERROR: ".mysql_error()." <br/>SQL=".$sql);
 if($row = mysql_fetch_array($result))
 {
     $user_info .= "<table align=\"center\" border=\"0\">";
-    $user_info .= "<tr><td colspan=\"2\">====ç”¨æˆ·ä¿¡æ¯=====</td></tr>";
-    $user_info .= "<tr><td align=\"right\">ç”¨æˆ·åï¼š </td><td align=\"left\">".$row['user_name']."</td></tr>";
-    $user_info .= "<tr><td align=\"right\">æ¥è‡ªï¼š </td><td align=\"left\">".$row['come_from']."</td></tr>";
-    $user_info .= "<tr><td align=\"right\">æ³¨å†Œæ—¶é—´ï¼š </td><td align=\"left\">".$row['reg_time']."</td></tr>";
+    $user_info .= "<tr><td colspan=\"2\">====ÓÃ»§ĞÅÏ¢=====</td></tr>";
+    $user_info .= "<tr><td align=\"right\">ÓÃ»§Ãû£º </td><td align=\"left\">".$row['user_name']."</td></tr>";
+    $user_info .= "<tr><td align=\"right\">À´×Ô£º </td><td align=\"left\">".$row['come_from']."</td></tr>";
+    $user_info .= "<tr><td align=\"right\">×¢²áÊ±¼ä£º </td><td align=\"left\">".$row['reg_time']."</td></tr>";
     $user_info .= "</table>";
 }
 

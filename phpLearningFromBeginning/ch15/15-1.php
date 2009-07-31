@@ -12,12 +12,12 @@ for ($i=0; $i<5; ++$i)
 	$date = $arr_date[$i];
 	if(ereg("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", $date, $regs))
 	{
-	    echo "æ—¥æœŸå­—ç¬¦ä¸²$date ç¬¦åˆ'YYYY-MM-DD'æ ¼å¼ï¼š";
+	    echo "ÈÕÆÚ×Ö·û´®$date ·ûºÏ'YYYY-MM-DD'¸ñÊ½£º";
 	    echo "$regs[1].$regs[2].$regs[3]<br/><br/>";
 	}
 	else
 	{
-	    echo "<b>æ—¥æœŸå­—ç¬¦ä¸²$date ä¸ç¬¦åˆ'YYYY-MM-DD'æ ¼å¼çš„æ—¥æœŸå­—ç¬¦ä¸²</b><br/><br/>";
+	    echo "<b>ÈÕÆÚ×Ö·û´®$date ²»·ûºÏ'YYYY-MM-DD'¸ñÊ½µÄÈÕÆÚ×Ö·û´®</b><br/><br/>";
 	}
 }
 ?>

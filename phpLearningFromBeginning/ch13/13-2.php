@@ -6,13 +6,13 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
+    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
 }
-echo 'æ•°æ®åº“è¿æ¥æˆåŠŸï¼';
+echo 'Êı¾İ¿âÁ¬½Ó³É¹¦£¡';
 
 if(mysql_close($conn))
 {
     echo '<br/>........<br/>';
-    echo 'åˆ°æ•°æ®åº“çš„è¿æ¥å·²ç»æˆåŠŸå…³é—­';
+    echo 'µ½Êı¾İ¿âµÄÁ¬½ÓÒÑ¾­³É¹¦¹Ø±Õ';
 }
 ?>

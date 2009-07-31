@@ -7,7 +7,7 @@ if(isset($_POST['aduser']) && isset($_POST['passwd']))
     
     if(empty($user) && empty($passwod))
     {
-        echo '<p><font color="red">ç™»å½•ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</font></p>';
+        echo '<p><font color="red">µÇÂ¼ÓÃ»§Ãû»òÃÜÂë´íÎó</font></p>';
         exit;
     }
     mysql_connect("localhost","root","admin");
@@ -19,11 +19,11 @@ if(isset($_POST['aduser']) && isset($_POST['passwd']))
     if($num = mysql_num_rows($result))
     {
         $_SESSION['ad']=$user;
-        header("location: main.php");     //å¦‚æœç™»å½•æˆåŠŸï¼Œè·³è½¬è¿›å…¥åå°ç®¡ç†ç•Œé¢é¦–é¡µmain.htm
+        header("location: main.php");     //Èç¹ûµÇÂ¼³É¹¦£¬Ìø×ª½øÈëºóÌ¨¹ÜÀí½çÃæÊ×Ò³main.htm
     }
     else
     {
-        echo '<p><font color="red">ç™»å½•ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯</font></p>';
+        echo '<p><font color="red">µÇÂ¼ÓÃ»§Ãû»òÃÜÂë´íÎó</font></p>';
         exit;
     }
 }
@@ -32,7 +32,7 @@ if(isset($_POST['aduser']) && isset($_POST['passwd']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>è®ºå›ç®¡ç†ç³»ç»Ÿ</title>
+<title>ÂÛÌ³¹ÜÀíÏµÍ³</title>
 <style type="text/css">
 <!--
 .STYLE1 {font-size: 12px}
@@ -50,23 +50,23 @@ if(isset($_POST['aduser']) && isset($_POST['passwd']))
 
 <div align="center">
 <form id="form1" name="form1" method="post" action="">
-    <p class="STYLE2">è®ºå›åå°ç®¡ç†ç³»ç»Ÿ</p>
+    <p class="STYLE2">ÂÛÌ³ºóÌ¨¹ÜÀíÏµÍ³</p>
     <table width="291" height="80" border="0" cellpadding="0" cellspacing="1" bgcolor="#1D26E4">
         <tr>
-        <td width="83" height="23" bgcolor="#D4D4D4"><div align="right" class="STYLE1">ç”¨æˆ·åï¼š</div></td>
+        <td width="83" height="23" bgcolor="#D4D4D4"><div align="right" class="STYLE1">ÓÃ»§Ãû£º</div></td>
         <td width="192" bgcolor="#FFFFFF">
             <label><input name="aduser" type="text" id="aduser" /></label>
         </td>
         </tr>
         <tr>
-        <td height="22" bgcolor="#D4D4D4"><div align="right" class="STYLE1">å¯†ç  ï¼š </div></td>
+        <td height="22" bgcolor="#D4D4D4"><div align="right" class="STYLE1">ÃÜÂë £º </div></td>
         <td bgcolor="#FFFFFF">
             <label><input name="passwd" type="password" id="passwd" /></label>
         </td>
         </tr>
         <tr>
         <td colspan="2" bgcolor="#FFFFFF">
-            <label><input type="submit" name="Submit" value="æäº¤" /></label>
+            <label><input type="submit" name="Submit" value="Ìá½»" /></label>
         </td>
         </tr>
     </table>

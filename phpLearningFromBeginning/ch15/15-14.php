@@ -13,12 +13,12 @@ foreach ($arr_ip as $ip)
 {
     if(validateIp($ip))
     {
-        echo "<b>$ip 鏄纭殑IP鍦板潃</b>";
+        echo "<b>$ip 是正确的IP地址</b>";
         echo "<br/><br/>";
     }
     else
     {
-        echo "$ip 涓嶆槸姝ｇ‘鐨処P鍦板潃";
+        echo "$ip 不是正确的IP地址";
         echo "<br/><br/>";
     }
 }

@@ -6,13 +6,13 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
+    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
 }
 mysql_select_db('test');
 
 $sql = 'select id,name,city,created_time from users';
 
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>äº§ç”Ÿé—®é¢˜çš„SQLï¼š".$sql);
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>²úÉúÎÊÌâµÄSQL£º".$sql);
 ?>
 <html>
 <head>
@@ -26,11 +26,11 @@ $result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>äº§
 <body>
 <table width="75%" border="0" cellpadding="0" cellspacing="1" bgcolor="#7B7B84">
     <tr bgcolor="#8BBCC7"> 
-        <td height="33"><div align="center"><strong>ç”¨æˆ·ID</strong></div></td>
-        <td><div align="center"><strong>ç”¨æˆ·åç§°</strong></div></td>
-        <td><div align="center"><strong>æ¥è‡ªåŸå¸‚</strong></div></td>
-        <td><div align="center"><strong>æ³¨å†Œæ—¶é—´</strong></div></td>
-        <td><div align="center"><strong>æ“ä½œ</strong></div></td>
+        <td height="33"><div align="center"><strong>ÓÃ»§ID</strong></div></td>
+        <td><div align="center"><strong>ÓÃ»§Ãû³Æ</strong></div></td>
+        <td><div align="center"><strong>À´×Ô³ÇÊĞ</strong></div></td>
+        <td><div align="center"><strong>×¢²áÊ±¼ä</strong></div></td>
+        <td><div align="center"><strong>²Ù×÷</strong></div></td>
     </tr>
 
 <?php
@@ -44,7 +44,7 @@ if($num = mysql_num_rows($result))
         <td height="22">&nbsp;<?php echo $row['name']; ?>&nbsp;</td>
         <td height="22">&nbsp;<?php echo $row['city']; ?>&nbsp;</td>
         <td height="22">&nbsp;<?php echo $row['created_time']; ?>&nbsp;</td>
-        <td height="22">&nbsp;<a onclick="javascript:if(confirm('ç¡®å®šè¦åˆ é™¤ç”¨æˆ·ä¿¡æ¯å—?')) return true; else return false;" href="13-13.php?id=<?php echo $row['id']; ?>">åˆ é™¤</a>&nbsp;</td>
+        <td height="22">&nbsp;<a onclick="javascript:if(confirm('È·¶¨ÒªÉ¾³ıÓÃ»§ĞÅÏ¢Âğ?')) return true; else return false;" href="13-13.php?id=<?php echo $row['id']; ?>">É¾³ı</a>&nbsp;</td>
     </tr>
 <?php
     }

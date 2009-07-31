@@ -1,12 +1,12 @@
 <?php
 try
 {
-    $error = '抛出异常信息，并且跳出try块<br/>';
+    $error = '�׳��쳣��Ϣ����������try��<br/>';
     if(is_dir('./test'))
     {
-        echo '检测到../ch16是一个目录';
+        echo '��⵽../ch16��һ��Ŀ¼';
         echo '<br/>';
-        echo '可能继续做其他一些操作';
+        echo '���ܼ���������һЩ����';
         echo '<br/>';
         echo '....';
         echo '<br/>';
@@ -15,13 +15,13 @@ try
     {
         throw new Exception($error,12345);
     }
-    echo '上面throw异常的话，这行代码不会执行，转而执行catch块<br/>';
+    echo '����throw�쳣�Ļ������д��벻��ִ�У�ת��ִ��catch��<br/>';
 }
 catch(Exception $e)
 {
-    echo '捕获异常: ' . $e->getMessage() . "<br/>错误代码：" . $e->getCode().'<br/>';    //显示$error和123456
+    echo '�����쳣: ' . $e->getMessage() . "<br/>������룺" . $e->getCode().'<br/>';    //��ʾ$error��123456
     echo '<br/>';
 }
 
-echo '继续执行';
+echo '����ִ��';
 ?>

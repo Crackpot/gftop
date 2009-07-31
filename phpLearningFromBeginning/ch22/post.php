@@ -46,8 +46,8 @@ if(empty($user_id))
 
 $bid = $_POST['bid'];
 $content = $_POST['content'];
-$fid = $_POST['tid'];         //ä¸»é¢˜å¸–id
-$action = $_POST['actions'];  //å›å¤å¸–æ“ä½œé€‰é¡¹ï¼Œå¦‚å›å¤ã€ä¿®æ”¹ç­‰ã€‚
+$fid = $_POST['tid'];         //Ö÷ÌâÌûid
+$action = $_POST['actions'];  //»Ø¸´Ìû²Ù×÷Ñ¡Ïî£¬Èç»Ø¸´¡¢ĞŞ¸ÄµÈ¡£
 
 if(empty($content))
 {
@@ -59,7 +59,7 @@ if(empty($content))
 $content = delete_htm($content);
 $content = str_replace("\r\n","<br>&nbsp;&nbsp;&nbsp;&nbsp;",$content);
 
-if($action == "rpl")          //å›å¤å¸–å­çš„æ“ä½œé€‰é¡¹
+if($action == "rpl")          //»Ø¸´Ìû×ÓµÄ²Ù×÷Ñ¡Ïî
 {
     if(empty($bid) || empty($fid) || !is_numeric($bid) || !is_numeric($fid))
     {
@@ -71,7 +71,7 @@ if($action == "rpl")          //å›å¤å¸–å­çš„æ“ä½œé€‰é¡¹
     $sql = "insert into topics (bid,fid,user_id,content,post_time) values($bid,$fid,$user_id,'$content',NOW())";
     $return_url = "view.php?bid=$bid&tid=$fid";
 }
-elseif($action == "mod")      //ä¿®æ”¹å¸–å­çš„æ“ä½œé€‰é¡¹
+elseif($action == "mod")      //ĞŞ¸ÄÌû×ÓµÄ²Ù×÷Ñ¡Ïî
 {
     if(empty($bid) || empty($fid) || !is_numeric($bid) || !is_numeric($fid))
     {
@@ -83,7 +83,7 @@ elseif($action == "mod")      //ä¿®æ”¹å¸–å­çš„æ“ä½œé€‰é¡¹
     $sql = "update topics set content='".$content."',edit_time=NOW() where bid=$bid and id=$fid";
     $return_url = "view.php?bid=$bid&tid=$fid";
 }
-else                          //æ–°å‘å¸–å­
+else                          //ĞÂ·¢Ìû×Ó
 {
     if(empty($bid) || !is_numeric($bid))
     {

@@ -2,13 +2,13 @@
 $img_name="tower.jpg";
 $src_img=imagecreatefromjpeg($img_name);
 
-$ow=imagesx($src_img);            //å–å¾—åŸå›¾çš„å®½
-$oh=imagesy($src_img);            //å–å¾—åŸå›¾çš„é«˜
+$ow=imagesx($src_img);            //È¡µÃÔ­Í¼µÄ¿í
+$oh=imagesy($src_img);            //È¡µÃÔ­Í¼µÄ¸ß
 
-$nw=round($ow*200.0/$ow);         //è®¡ç®—æ–°å›¾çš„å®½åº¦
-$nh=round($oh*200.0/$oh);         //è®¡ç®—æ–°å›¾çš„é«˜åº¦
+$nw=round($ow*200.0/$ow);         //¼ÆËãĞÂÍ¼µÄ¿í¶È
+$nh=round($oh*200.0/$oh);         //¼ÆËãĞÂÍ¼µÄ¸ß¶È
 
-$desc_img=imagecreate($nw, $nh);  //å»ºç«‹æ–°å›¾
+$desc_img=imagecreate($nw, $nh);  //½¨Á¢ĞÂÍ¼
 
 imagecopyresized($desc_img, $src_img, 0, 0, 0, 0, $nw, $nh, $ow, $oh);
 imagejpeg($desc_img);
