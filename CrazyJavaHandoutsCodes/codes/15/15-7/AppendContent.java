@@ -16,11 +16,11 @@ public class AppendContent
 		RandomAccessFile raf = null;
 		try
 		{
-			//ÒÔ¶Á¡¢Ğ´·½Ê½´ò¿ªÒ»¸öRandomAccessFile¶ÔÏó
+			//ä»¥è¯»ã€å†™æ–¹å¼æ‰“å¼€ä¸€ä¸ªRandomAccessFileå¯¹è±¡
 			raf = new RandomAccessFile("out.txt" , "rw");
-			//½«¼ÇÂ¼Ö¸ÕëÒÆ¶¯µÄout.txtÎÄ¼şµÄ×îºó
+			//å°†è®°å½•æŒ‡é’ˆç§»åŠ¨çš„out.txtæ–‡ä»¶çš„æœ€å
 			raf.seek(raf.length());
-			raf.write("×·¼ÓµÄÄÚÈİ£¡\r\n".getBytes());
+			raf.write("è¿½åŠ çš„å†…å®¹ï¼\r\n".getBytes());
 		}
 		catch (IOException ex)
 		{
