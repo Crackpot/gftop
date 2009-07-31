@@ -21,7 +21,7 @@ public class DatabaseMetaDataTest
 	ResultSet rs;
 	public void initParam(String paramFile)throws Exception
 	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -33,42 +33,42 @@ public class DatabaseMetaDataTest
 	{
 		try
 		{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//»ñÈ¡µÄDatabaseMetaData¶ÔÏó
+			//è·å–çš„DatabaseMetaDataå¯¹è±¡
 			DatabaseMetaData dbmd = conn.getMetaData();
 			System.out.println(dbmd.getDatabaseProductName()
 				+ dbmd.getDatabaseProductVersion() );
 			
 			System.out.println(dbmd.getDriverName());
-			//»ñÈ¡MySQLÖ§³ÖµÄËùÓĞ±íÀàĞÍ
+			//è·å–MySQLæ”¯æŒçš„æ‰€æœ‰è¡¨ç±»å‹
 			ResultSet rs = dbmd.getTableTypes();
-			System.out.println("----MySQLÖ§³ÖµÄ±íÀàĞÍĞÅÏ¢------");
+			System.out.println("----MySQLæ”¯æŒçš„è¡¨ç±»å‹ä¿¡æ¯------");
 			printResultSet(rs);
-			//»ñÈ¡µ±Ç°Êı¾İ¿âµÄÈ«²¿Êı¾İ±í
+			//è·å–å½“å‰æ•°æ®åº“çš„å…¨éƒ¨æ•°æ®è¡¨
 			rs = dbmd.getTables(null,null, "%" , new String[]{"TABLE"});
-			System.out.println("----µ±Ç°Êı¾İ¿âÀïµÄÊı¾İ±íĞÅÏ¢-----");
+			System.out.println("----å½“å‰æ•°æ®åº“é‡Œçš„æ•°æ®è¡¨ä¿¡æ¯-----");
 			printResultSet(rs);
-			//»ñÈ¡student_table±íµÄÖ÷¼ü			
+			//è·å–student_tableè¡¨çš„ä¸»é”®			
 			rs = dbmd.getPrimaryKeys(null , null, "student_table");  
-			System.out.println("----student_table±íµÄÖ÷¼üĞÅÏ¢-----");
+			System.out.println("----student_tableè¡¨çš„ä¸»é”®ä¿¡æ¯-----");
 			printResultSet(rs);
-			//»ñÈ¡µ±Ç°Êı¾İ¿âµÄÈ«²¿´æ´¢¹ı³Ì
+			//è·å–å½“å‰æ•°æ®åº“çš„å…¨éƒ¨å­˜å‚¨è¿‡ç¨‹
 			rs = dbmd.getProcedures(null , null, "%");
-			System.out.println("----µ±Ç°Êı¾İ¿âÀïµÄ´æ´¢¹ı³ÌĞÅÏ¢-----");
+			System.out.println("----å½“å‰æ•°æ®åº“é‡Œçš„å­˜å‚¨è¿‡ç¨‹ä¿¡æ¯-----");
 			printResultSet(rs);
-			//»ñÈ¡teacher_table±íºÍstudent_tableÖ®¼äµÄÍâ¼üÔ¼Êø
+			//è·å–teacher_tableè¡¨å’Œstudent_tableä¹‹é—´çš„å¤–é”®çº¦æŸ
 			rs = dbmd.getCrossReference(null,null, "teacher_table", null, null, "student_table");
-			System.out.println("----teacher_table±íºÍstudent_tableÖ®¼äµÄÍâ¼üÔ¼Êø-----");
+			System.out.println("----teacher_tableè¡¨å’Œstudent_tableä¹‹é—´çš„å¤–é”®çº¦æŸ-----");
 			printResultSet(rs);
-			//»ñÈ¡student_table±íµÄÈ«²¿Êı¾İÁĞ
+			//è·å–student_tableè¡¨çš„å…¨éƒ¨æ•°æ®åˆ—
 			rs = dbmd.getColumns(null, null, "student_table", "%"); 
-			System.out.println("----student_table±íµÄÈ«²¿Êı¾İÁĞ-----");
+			System.out.println("----student_tableè¡¨çš„å…¨éƒ¨æ•°æ®åˆ—-----");
 			printResultSet(rs);
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally
 		{
 			if (rs != null)
@@ -85,13 +85,13 @@ public class DatabaseMetaDataTest
 	public void printResultSet(ResultSet rs)throws SQLException
 	{
 		ResultSetMetaData rsmd = rs.getMetaData();
-		//´òÓ¡ResultSetµÄËùÓĞÁĞ±êÌâ
+		//æ‰“å°ResultSetçš„æ‰€æœ‰åˆ—æ ‡é¢˜
 		for (int i = 0 ; i < rsmd.getColumnCount() ; i++ )
 		{
 			System.out.print(rsmd.getColumnName(i + 1) + "\t");
 		}
 		System.out.print("\n");
-		//´òÓ¡ResultSetÀïµÄÈ«²¿Êı¾İ
+		//æ‰“å°ResultSeté‡Œçš„å…¨éƒ¨æ•°æ®
 		while (rs.next())
 		{
 			for (int i = 0; i < rsmd.getColumnCount() ; i++ )

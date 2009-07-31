@@ -19,22 +19,22 @@ import javax.swing.filechooser.FileFilter;
  */
 public class BlobTest
 {
-	JFrame jf = new JFrame("Í¼Æ¬¹ÜÀí³ÌĞò");
+	JFrame jf = new JFrame("å›¾ç‰‡ç®¡ç†ç¨‹åº");
 	private static Connection conn;
 	private static PreparedStatement insert;
 	private static PreparedStatement query;
 	private static PreparedStatement queryAll;
 
-	//¶¨ÒåÒ»¸öDefaultListModel¶ÔÏó
+	//å®šä¹‰ä¸€ä¸ªDefaultListModelå¯¹è±¡
 	private DefaultListModel imageModel = new DefaultListModel();
 	private JList imageList = new JList(imageModel);
 	private JTextField filePath = new JTextField(26);
 	private JButton browserBn = new JButton("...");
-	private JButton uploadBn = new JButton("ÉÏ´«");
+	private JButton uploadBn = new JButton("ä¸Šä¼ ");
 	private JLabel imageLabel = new JLabel();
-	//ÒÔµ±Ç°Â·¾¶´´½¨ÎÄ¼şÑ¡ÔñÆ÷
+	//ä»¥å½“å‰è·¯å¾„åˆ›å»ºæ–‡ä»¶é€‰æ‹©å™¨
 	JFileChooser chooser = new JFileChooser(".");
-	//´´½¨ÎÄ¼ş¹ıÂËÆ÷
+	//åˆ›å»ºæ–‡ä»¶è¿‡æ»¤å™¨
 	ExtensionFileFilter filter = new ExtensionFileFilter();
 	static
 	{
@@ -47,12 +47,12 @@ public class BlobTest
 			String user = props.getProperty("user");
 			String pass = props.getProperty("pass");
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//´´½¨Ö´ĞĞ²åÈëµÄPreparedStatement¶ÔÏó£¬¸Ã¶ÔÏóÖ´ĞĞ²åÈëºó¿ÉÒÔ·µ»Ø×Ô¶¯Éú³ÉµÄÖ÷¼ü
+			//åˆ›å»ºæ‰§è¡Œæ’å…¥çš„PreparedStatementå¯¹è±¡ï¼Œè¯¥å¯¹è±¡æ‰§è¡Œæ’å…¥åå¯ä»¥è¿”å›è‡ªåŠ¨ç”Ÿæˆçš„ä¸»é”®
 			insert = conn.prepareStatement("insert into img_table values(null,?,?)"
 				, Statement.RETURN_GENERATED_KEYS);
-			//´´½¨Á½¸öPreparedStatement¶ÔÏó£¬ÓÃÓÚ²éÑ¯Ö¸¶¨Í¼Æ¬£¬²éÑ¯ËùÓĞÍ¼Æ¬
+			//åˆ›å»ºä¸¤ä¸ªPreparedStatementå¯¹è±¡ï¼Œç”¨äºæŸ¥è¯¢æŒ‡å®šå›¾ç‰‡ï¼ŒæŸ¥è¯¢æ‰€æœ‰å›¾ç‰‡
 			query = conn.prepareStatement("select img_data from img_table where img_id=?");
 			queryAll = conn.prepareStatement("select img_id,img_name from img_table");
 		}
@@ -64,19 +64,19 @@ public class BlobTest
 
 	public void init()throws SQLException
 	{
-		//-------³õÊ¼»¯ÎÄ¼şÑ¡ÔñÆ÷--------
+		//-------åˆå§‹åŒ–æ–‡ä»¶é€‰æ‹©å™¨--------
 		filter.addExtension("jpg");
 		filter.addExtension("jpeg");
 		filter.addExtension("gif");
 		filter.addExtension("png");
-		filter.setDescription("Í¼Æ¬ÎÄ¼ş(*.jpg,*.jpeg,*.gif,*.png)");
+		filter.setDescription("å›¾ç‰‡æ–‡ä»¶(*.jpg,*.jpeg,*.gif,*.png)");
 		chooser.addChoosableFileFilter(filter);
-		//½ûÖ¹¡°ÎÄ¼şÀàĞÍ¡±ÏÂÀ­ÁĞ±íÖĞÏÔÊ¾¡°ËùÓĞÎÄ¼ş¡±Ñ¡Ïî¡£
+		//ç¦æ­¢â€œæ–‡ä»¶ç±»å‹â€ä¸‹æ‹‰åˆ—è¡¨ä¸­æ˜¾ç¤ºâ€œæ‰€æœ‰æ–‡ä»¶â€é€‰é¡¹ã€‚
 		chooser.setAcceptAllFileFilterUsed(false); 
-		//---------³õÊ¼»¯³ÌĞò½çÃæ---------
+		//---------åˆå§‹åŒ–ç¨‹åºç•Œé¢---------
 		fillListModel();
 		filePath.setEditable(false);
-		//Ö»ÄÜµ¥Ñ¡
+		//åªèƒ½å•é€‰
 		imageList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		JPanel jp = new JPanel();
 		jp.add(filePath);
@@ -85,9 +85,9 @@ public class BlobTest
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//ÏÔÊ¾ÎÄ¼ş¶Ô»°¿ò
-				int result = chooser.showDialog(jf , "ä¯ÀÀÍ¼Æ¬ÎÄ¼şÉÏ´«");
-				//Èç¹ûÓÃ»§Ñ¡ÔñÁËAPPROVE£¨ÔŞÍ¬£©°´Å¥£¬¼´´ò¿ª£¬±£´æ¼°ÆäµÈĞ§°´Å¥
+				//æ˜¾ç¤ºæ–‡ä»¶å¯¹è¯æ¡†
+				int result = chooser.showDialog(jf , "æµè§ˆå›¾ç‰‡æ–‡ä»¶ä¸Šä¼ ");
+				//å¦‚æœç”¨æˆ·é€‰æ‹©äº†APPROVEï¼ˆèµåŒï¼‰æŒ‰é’®ï¼Œå³æ‰“å¼€ï¼Œä¿å­˜åŠå…¶ç­‰æ•ˆæŒ‰é’®
 				if(result == JFileChooser.APPROVE_OPTION)
 				{
 					filePath.setText(chooser.getSelectedFile().getPath());
@@ -99,12 +99,12 @@ public class BlobTest
 		{
 			public void actionPerformed(ActionEvent avt)
 			{
-				//Èç¹ûÉÏ´«ÎÄ¼şµÄÎÄ±¾¿òÓĞÄÚÈİ
+				//å¦‚æœä¸Šä¼ æ–‡ä»¶çš„æ–‡æœ¬æ¡†æœ‰å†…å®¹
 				if (filePath.getText().trim().length() > 0)
 				{
-					//½«Ö¸¶¨ÎÄ¼ş±£´æµ½Êı¾İ¿â
+					//å°†æŒ‡å®šæ–‡ä»¶ä¿å­˜åˆ°æ•°æ®åº“
 					upload(filePath.getText());
-					//Çå¿ÕÎÄ±¾¿òÄÚÈİ
+					//æ¸…ç©ºæ–‡æœ¬æ¡†å†…å®¹
 					filePath.setText("");
 				}
 			}
@@ -120,14 +120,14 @@ public class BlobTest
 		{
 			public void mouseClicked(MouseEvent e)
 			{
-				//Èç¹ûÊó±êË«»÷
+				//å¦‚æœé¼ æ ‡åŒå‡»
 				if (e.getClickCount() >= 2)
 				{
-					//È¡³öÑ¡ÖĞµÄListÏî
+					//å–å‡ºé€‰ä¸­çš„Listé¡¹
 					ImageHolder cur = (ImageHolder)imageList.getSelectedValue();
 					try
 					{
-						//ÏÔÊ¾Ñ¡ÖĞÏî¶ÔÓ¦µÄImage
+						//æ˜¾ç¤ºé€‰ä¸­é¡¹å¯¹åº”çš„Image
 						showImage(cur.getId());
 					}
 					catch (SQLException sqle)
@@ -141,17 +141,17 @@ public class BlobTest
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);	
 	}
-	//----------²éÕÒimg_tableÌî³äListModel----------
+	//----------æŸ¥æ‰¾img_tableå¡«å……ListModel----------
 	public void fillListModel()throws SQLException
 	{
 		ResultSet rs = null;
 		try
 		{
-			//ÏÈÇå³ıËùÓĞÔªËØ
+			//å…ˆæ¸…é™¤æ‰€æœ‰å…ƒç´ 
 			imageModel.clear();
-			//Ö´ĞĞ²éÑ¯
+			//æ‰§è¡ŒæŸ¥è¯¢
 			rs = queryAll.executeQuery();
-			//°Ñ²éÑ¯µÄÈ«²¿¼ÇÂ¼Ìí¼Óµ½ListModelÖĞ
+			//æŠŠæŸ¥è¯¢çš„å…¨éƒ¨è®°å½•æ·»åŠ åˆ°ListModelä¸­
 			while (rs.next())
 			{
 				imageModel.addElement(new ImageHolder(rs.getInt(1),
@@ -166,25 +166,25 @@ public class BlobTest
 			}
 		}
 	}
-	//---------½«Ö¸¶¨Í¼Æ¬·ÅÈëÊı¾İ¿â---------
+	//---------å°†æŒ‡å®šå›¾ç‰‡æ”¾å…¥æ•°æ®åº“---------
 	public void upload(String fileName)
 	{
 		InputStream is = null;
 		try
 		{
-			//½ØÈ¡ÎÄ¼şÃû
+			//æˆªå–æ–‡ä»¶å
 			String imageName = fileName.substring(
 				fileName.lastIndexOf('\\') + 1 , fileName.lastIndexOf('.'));
-			//ÉèÖÃÍ¼Æ¬Ãû²ÎÊı
+			//è®¾ç½®å›¾ç‰‡åå‚æ•°
 			insert.setString(1, imageName);
 			File f = new File(fileName);
 			is = new FileInputStream(f);
-			//ÉèÖÃ¶ş½øÖÆÁ÷²ÎÊı
+			//è®¾ç½®äºŒè¿›åˆ¶æµå‚æ•°
 			insert.setBinaryStream(2, is , (int)f.length());
 			int affect = insert.executeUpdate();
 			if (affect == 1)
 			{
-				//ÖØĞÂ¸üĞÂListModel£¬½«»áÈÃJListÏÔÊ¾×îĞÂµÄÍ¼Æ¬ÁĞ±í
+				//é‡æ–°æ›´æ–°ListModelï¼Œå°†ä¼šè®©JListæ˜¾ç¤ºæœ€æ–°çš„å›¾ç‰‡åˆ—è¡¨
 				fillListModel();
 			}
 		}
@@ -206,21 +206,21 @@ public class BlobTest
 			}
 		}
 	}
-	//---------¸ù¾İÍ¼Æ¬IDÀ´ÏÔÊ¾Í¼Æ¬----------
+	//---------æ ¹æ®å›¾ç‰‡IDæ¥æ˜¾ç¤ºå›¾ç‰‡----------
 	public void showImage(int id)throws SQLException
 	{
 		ResultSet rs = null;
 		try
 		{
-			//ÉèÖÃ²ÎÊı
+			//è®¾ç½®å‚æ•°
 			query.setInt(1, id);
-			//Ö´ĞĞ²éÑ¯
+			//æ‰§è¡ŒæŸ¥è¯¢
 			rs = query.executeQuery();
 			if (rs.next())
 			{
-				//È¡³öBlobÁĞ
+				//å–å‡ºBlobåˆ—
 				Blob imgBlob = rs.getBlob(1);
-				//È¡³öBlobÁĞÀïµÄÊı¾İ
+				//å–å‡ºBlobåˆ—é‡Œçš„æ•°æ®
 				ImageIcon icon = new ImageIcon(imgBlob.getBytes(1L , (int)imgBlob.length()));
 				imageLabel.setIcon(icon);
 			}
@@ -239,13 +239,13 @@ public class BlobTest
 		new BlobTest().init();
 	}
 }
-//´´½¨FileFilterµÄ×ÓÀà£¬ÓÃÒÔÊµÏÖÎÄ¼ş¹ıÂË¹¦ÄÜ
+//åˆ›å»ºFileFilterçš„å­ç±»ï¼Œç”¨ä»¥å®ç°æ–‡ä»¶è¿‡æ»¤åŠŸèƒ½
 class ExtensionFileFilter extends FileFilter
 {
 
 	private String description = "";
 	private ArrayList<String> extensions = new ArrayList<String>();
-	//×Ô¶¨Òå·½·¨£¬ÓÃÓÚÌí¼ÓÎÄ¼şÀ©Õ¹Ãû
+	//è‡ªå®šä¹‰æ–¹æ³•ï¼Œç”¨äºæ·»åŠ æ–‡ä»¶æ‰©å±•å
 	public void addExtension(String extension)
 	{
 		if (!extension.startsWith("."))
@@ -254,24 +254,24 @@ class ExtensionFileFilter extends FileFilter
 			extensions.add(extension.toLowerCase());
 		}
 	}
-	//ÓÃÓÚÉèÖÃ¸ÃÎÄ¼ş¹ıÂËÆ÷µÄÃèÊöÎÄ±¾
+	//ç”¨äºè®¾ç½®è¯¥æ–‡ä»¶è¿‡æ»¤å™¨çš„æè¿°æ–‡æœ¬
 	public void setDescription(String aDescription)
 	{
 		description = aDescription;
 	}
-	//¼Ì³ĞFileFilterÀà±ØĞëÊµÏÖµÄ³éÏó·½·¨£¬·µ»Ø¸ÃÎÄ¼ş¹ıÂËÆ÷µÄÃèÊöÎÄ±¾
+	//ç»§æ‰¿FileFilterç±»å¿…é¡»å®ç°çš„æŠ½è±¡æ–¹æ³•ï¼Œè¿”å›è¯¥æ–‡ä»¶è¿‡æ»¤å™¨çš„æè¿°æ–‡æœ¬
 	public String getDescription()
 	{
 		return description; 
 	}
-	//¼Ì³ĞFileFilterÀà±ØĞëÊµÏÖµÄ³éÏó·½·¨£¬ÅĞ¶Ï¸ÃÎÄ¼ş¹ıÂËÆ÷ÊÇ·ñ½ÓÊÜ¸ÃÎÄ¼ş
+	//ç»§æ‰¿FileFilterç±»å¿…é¡»å®ç°çš„æŠ½è±¡æ–¹æ³•ï¼Œåˆ¤æ–­è¯¥æ–‡ä»¶è¿‡æ»¤å™¨æ˜¯å¦æ¥å—è¯¥æ–‡ä»¶
 	public boolean accept(File f)
 	{
-		//Èç¹û¸ÃÎÄ¼şÊÇÂ·¾¶£¬½ÓÊÜ¸ÃÎÄ¼ş
+		//å¦‚æœè¯¥æ–‡ä»¶æ˜¯è·¯å¾„ï¼Œæ¥å—è¯¥æ–‡ä»¶
 		if (f.isDirectory()) return true;
-		//½«ÎÄ¼şÃû×ªÎªĞ¡Ğ´£¨È«²¿×ªÎªĞ¡Ğ´ºó±È½Ï£¬ÓÃÓÚºöÂÔÎÄ¼şÃû´óĞ¡Ğ´£©
+		//å°†æ–‡ä»¶åè½¬ä¸ºå°å†™ï¼ˆå…¨éƒ¨è½¬ä¸ºå°å†™åæ¯”è¾ƒï¼Œç”¨äºå¿½ç•¥æ–‡ä»¶åå¤§å°å†™ï¼‰
 		String name = f.getName().toLowerCase();
-		//±éÀúËùÓĞ¿É½ÓÊÜµÄÀ©Õ¹Ãû£¬Èç¹ûÀ©Õ¹ÃûÏàÍ¬£¬¸ÃÎÄ¼ş¾Í¿É½ÓÊÜ¡£
+		//éå†æ‰€æœ‰å¯æ¥å—çš„æ‰©å±•åï¼Œå¦‚æœæ‰©å±•åç›¸åŒï¼Œè¯¥æ–‡ä»¶å°±å¯æ¥å—ã€‚
 		for (String extension : extensions)
 		{
 			if (name.endsWith(extension)) 
@@ -282,12 +282,12 @@ class ExtensionFileFilter extends FileFilter
 		return false;
 	}
 }
-//´´½¨Ò»¸öImageHolderÀà£¬ÓÃÓÚ·â×°Í¼Æ¬Ãû¡¢Í¼Æ¬ID
+//åˆ›å»ºä¸€ä¸ªImageHolderç±»ï¼Œç”¨äºå°è£…å›¾ç‰‡åã€å›¾ç‰‡ID
 class ImageHolder
 {
-	//·â×°Í¼Æ¬µÄID
+	//å°è£…å›¾ç‰‡çš„ID
 	private int id;
-	//·â×°Í¼Æ¬µÄÍ¼Æ¬Ãû×Ö
+	//å°è£…å›¾ç‰‡çš„å›¾ç‰‡åå­—
 	private String name;
 
 	public ImageHolder()
@@ -317,7 +317,7 @@ class ImageHolder
 	{
 		 return this.name;
 	}
-	//ÖØĞ´toString·½·¨£¬·µ»ØÍ¼Æ¬Ãû
+	//é‡å†™toStringæ–¹æ³•ï¼Œè¿”å›å›¾ç‰‡å
 	public String toString()
 	{
 		return name;

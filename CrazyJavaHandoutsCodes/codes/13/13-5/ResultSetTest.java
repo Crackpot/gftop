@@ -24,7 +24,7 @@ public class ResultSetTest
 	ResultSet rs;
 	public void initParam(String paramFile)throws Exception
 	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -38,12 +38,12 @@ public class ResultSetTest
 	{
 		try
 		{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öPreparedStatement¶ÔÏó
-			//´«Èë¿ØÖÆ½á¹û¼¯¿É¹ö¶¯£¬¿É¸üĞÂµÄ²ÎÊı¡£
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªPreparedStatementå¯¹è±¡
+			//ä¼ å…¥æ§åˆ¶ç»“æœé›†å¯æ»šåŠ¨ï¼Œå¯æ›´æ–°çš„å‚æ•°ã€‚
 			pstmt = conn.prepareStatement(sql , ResultSet.TYPE_SCROLL_INSENSITIVE
 				, ResultSet.CONCUR_UPDATABLE);
 			rs = pstmt.executeQuery();
@@ -54,13 +54,13 @@ public class ResultSetTest
 				rs.absolute(i);
 				System.out.println(rs.getString(1) + "\t"
 					+ rs.getString(2) + "\t" + rs.getString(3));
-				//ĞŞ¸Äµ¥Ôª¸ñ¶à¶ÔÓ¦µÄÖµ
-				rs.updateString(2 , "Ñ§ÉúÃû" + i);
-				//Ìá½»ĞŞ¸Ä
+				//ä¿®æ”¹å•å…ƒæ ¼å¤šå¯¹åº”çš„å€¼
+				rs.updateString(2 , "å­¦ç”Ÿå" + i);
+				//æäº¤ä¿®æ”¹
 				rs.updateRow();
 			}
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally
 		{
 			if (rs != null)

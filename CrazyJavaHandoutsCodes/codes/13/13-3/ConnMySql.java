@@ -12,29 +12,29 @@ public class ConnMySql
 {
 	public static void main(String[] args) throws Exception
 	{
-		//1.¼ÓÔØÇı¶¯£¬Ê¹ÓÃ·´ÉäµÄÖªÊ¶£¬ÏÖÔÚ¼Ç×¡ÕâÃ´Ğ´¡£
+		//1.åŠ è½½é©±åŠ¨ï¼Œä½¿ç”¨åå°„çš„çŸ¥è¯†ï¼Œç°åœ¨è®°ä½è¿™ä¹ˆå†™ã€‚
 		Class.forName("com.mysql.jdbc.Driver");
-		//2.Ê¹ÓÃDriverManager»ñÈ¡Êı¾İ¿âÁ¬½Ó,
-		//ÆäÖĞ·µ»ØµÄConnection¾Í´ú±íÁËJava³ÌĞòºÍÊı¾İ¿âµÄÁ¬½Ó
-		//²»Í¬Êı¾İ¿âµÄURLĞ´·¨ĞèÒª²éÇı¶¯ÎÄµµÖªµÀ£¬ÓÃ»§Ãû¡¢ÃÜÂëÓÉDBA·ÖÅä
+		//2.ä½¿ç”¨DriverManagerè·å–æ•°æ®åº“è¿æ¥,
+		//å…¶ä¸­è¿”å›çš„Connectionå°±ä»£è¡¨äº†Javaç¨‹åºå’Œæ•°æ®åº“çš„è¿æ¥
+		//ä¸åŒæ•°æ®åº“çš„URLå†™æ³•éœ€è¦æŸ¥é©±åŠ¨æ–‡æ¡£çŸ¥é“ï¼Œç”¨æˆ·åã€å¯†ç ç”±DBAåˆ†é…
 		Connection conn = DriverManager.getConnection(
 			"jdbc:mysql://127.0.0.1:3306/select_test" ,
 			"root" , "32147");
 
-		//3.Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öStatment¶ÔÏó
+		//3.ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
 		Statement stmt = conn.createStatement();
-		//4.Ö´ĞĞSQLÓï¾ä¡£
+		//4.æ‰§è¡ŒSQLè¯­å¥ã€‚
 		/*
-			StatementÓĞÈıÖÖÖ´ĞĞsqlÓï¾äµÄ·½·¨£º
-			1 execute ¿ÉÖ´ĞĞÈÎºÎSQLÓï¾ä¡£- ·µ»ØÒ»¸öbooleanÖµ£¬
-			  Èç¹ûÖ´ĞĞºóµÚÒ»¸ö½á¹ûÊÇResultSet£¬Ôò·µ»Øtrue£¬·ñÔò·µ»Øfalse
-			2 executeQuery Ö´ĞĞSelectÓï¾ä £­ ·µ»Ø²éÑ¯µ½µÄ½á¹û¼¯
-			3 executeUpdate ÓÃÓÚÖ´ĞĞDMLÓï¾ä¡££­ ·µ»ØÒ»¸öÕûÊı£¬´ú±í±»SQLÓï¾äÓ°ÏìµÄ¼ÇÂ¼ÌõÊı
+			Statementæœ‰ä¸‰ç§æ‰§è¡Œsqlè¯­å¥çš„æ–¹æ³•ï¼š
+			1 execute å¯æ‰§è¡Œä»»ä½•SQLè¯­å¥ã€‚- è¿”å›ä¸€ä¸ªbooleanå€¼ï¼Œ
+			  å¦‚æœæ‰§è¡Œåç¬¬ä¸€ä¸ªç»“æœæ˜¯ResultSetï¼Œåˆ™è¿”å›trueï¼Œå¦åˆ™è¿”å›false
+			2 executeQuery æ‰§è¡ŒSelectè¯­å¥ ï¼ è¿”å›æŸ¥è¯¢åˆ°çš„ç»“æœé›†
+			3 executeUpdate ç”¨äºæ‰§è¡ŒDMLè¯­å¥ã€‚ï¼ è¿”å›ä¸€ä¸ªæ•´æ•°ï¼Œä»£è¡¨è¢«SQLè¯­å¥å½±å“çš„è®°å½•æ¡æ•°
 		*/
 		ResultSet rs = stmt.executeQuery("select s.* , teacher_name from student_table s , "
 			+ "teacher_table t where t.teacher_id = s.java_teacher");
-		//ResultSetÓĞÏµÁĞµÄgetXxx(ÁĞË÷Òı | ÁĞÃû)£¬ÓÃÓÚ»ñÈ¡¼ÇÂ¼Ö¸ÕëÖ¸ÏòĞĞ¡¢ÌØ¶¨ÁĞµÄÖµ
-		//²»¶ÏµØÊ¹ÓÃnext½«¼ÇÂ¼Ö¸ÕëÏÂÒÆÒ»ĞĞ£¬Èç¹ûÒÀÈ»Ö¸ÏòÓĞĞ§ĞĞ£¬ÔòÖ¸ÕëÖ¸ÏòĞĞµÄ¼ÇÂ¼
+		//ResultSetæœ‰ç³»åˆ—çš„getXxx(åˆ—ç´¢å¼• | åˆ—å)ï¼Œç”¨äºè·å–è®°å½•æŒ‡é’ˆæŒ‡å‘è¡Œã€ç‰¹å®šåˆ—çš„å€¼
+		//ä¸æ–­åœ°ä½¿ç”¨nextå°†è®°å½•æŒ‡é’ˆä¸‹ç§»ä¸€è¡Œï¼Œå¦‚æœä¾ç„¶æŒ‡å‘æœ‰æ•ˆè¡Œï¼Œåˆ™æŒ‡é’ˆæŒ‡å‘è¡Œçš„è®°å½•
 		while(rs.next())
 		{
 			System.out.println(rs.getInt(1) + "\t"

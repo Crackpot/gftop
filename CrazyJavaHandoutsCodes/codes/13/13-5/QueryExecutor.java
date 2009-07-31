@@ -21,11 +21,11 @@ import com.sun.rowset.*;
  */
 public class QueryExecutor
 {
-	JFrame jf = new JFrame("²éÑ¯Ö´ĞĞÆ÷");
+	JFrame jf = new JFrame("æŸ¥è¯¢æ‰§è¡Œå™¨");
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
-	private JButton execBn = new JButton("²éÑ¯");
-	//ÓÃÓÚ×°ÔØÊı¾İ±íµÄJComboBox
+	private JButton execBn = new JButton("æŸ¥è¯¢");
+	//ç”¨äºè£…è½½æ•°æ®è¡¨çš„JComboBox
 	private JTextField sqlField = new JTextField(45);
 	private static Connection conn;
 	private static Statement stmt;
@@ -43,9 +43,9 @@ public class QueryExecutor
 			String url = props.getProperty("url");
 			String username = props.getProperty("user");
 			String password = props.getProperty("pass");
-			//¼ÓÔØÊı¾İ¿âÇı¶¯
+			//åŠ è½½æ•°æ®åº“é©±åŠ¨
 			Class.forName(drivers);
-			//È¡µÃÊı¾İ¿âÁ¬½Ó
+			//å–å¾—æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url, username, password);
 			stmt = conn.createStatement();
 		}
@@ -75,7 +75,7 @@ public class QueryExecutor
 			{
 				if (scrollPane != null)
 				{
-					//´ÓÖ÷´°¿ÚÖĞÉ¾³ı±í¸ñ
+					//ä»ä¸»çª—å£ä¸­åˆ é™¤è¡¨æ ¼
 					jf.remove(scrollPane);
 				}
 				rs = stmt.executeQuery(sqlField.getText());

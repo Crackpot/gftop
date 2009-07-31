@@ -23,7 +23,7 @@ public class PreparedStatementTest
 
 	public void initParam(String paramFile)throws Exception
 	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -37,17 +37,17 @@ public class PreparedStatementTest
 		long start = System.currentTimeMillis();
 		try
 		{
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öStatment¶ÔÏó
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
 			stmt = conn.createStatement();
-			//ĞèÒªÊ¹ÓÃ100ÌõSQLÓï¾äÀ´²åÈë100Ìõ¼ÇÂ¼
+			//éœ€è¦ä½¿ç”¨100æ¡SQLè¯­å¥æ¥æ’å…¥100æ¡è®°å½•
 			for (int i = 0; i < 100 ; i++ )
 			{
-				stmt.executeUpdate("insert into student_table values(null,'ĞÕÃû"
+				stmt.executeUpdate("insert into student_table values(null,'å§“å"
 					+ i + "',1)");
 			}
-			System.out.println("Ê¹ÓÃStatement·ÑÊ±:" + (System.currentTimeMillis() - start));
+			System.out.println("ä½¿ç”¨Statementè´¹æ—¶:" + (System.currentTimeMillis() - start));
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally
 		{
 			if (stmt != null)
@@ -62,17 +62,17 @@ public class PreparedStatementTest
 		long start = System.currentTimeMillis();
 		try
 		{
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öPreparedStatment¶ÔÏó
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªPreparedStatmentå¯¹è±¡
 			pstmt = conn.prepareStatement("insert into student_table values(null,?,1)");
-			//100´ÎÎªPreparedStatementµÄ²ÎÊıÉèÖÃ£¬¾Í¿ÉÒÔ²åÈë100Ìõ¼ÇÂ¼
+			//100æ¬¡ä¸ºPreparedStatementçš„å‚æ•°è®¾ç½®ï¼Œå°±å¯ä»¥æ’å…¥100æ¡è®°å½•
 			for (int i = 0; i < 100 ; i++ )
 			{
-				pstmt.setString(1 , "ĞÕÃû" + i);
+				pstmt.setString(1 , "å§“å" + i);
 				pstmt.executeUpdate();
 			}
-			System.out.println("Ê¹ÓÃPreparedStatement·ÑÊ±:" + (System.currentTimeMillis() - start));
+			System.out.println("ä½¿ç”¨PreparedStatementè´¹æ—¶:" + (System.currentTimeMillis() - start));
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally
 		{
 			if (pstmt != null)
@@ -82,18 +82,18 @@ public class PreparedStatementTest
 		}
 
 	}
-	//¶¨Òå´ò¿ªÁ¬½ÓµÄ·½·¨
+	//å®šä¹‰æ‰“å¼€è¿æ¥çš„æ–¹æ³•
 	public void getConn()throws Exception
 	{
 		if (conn == null)
 		{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
 		}
 	}
-	//¶¨Òå¹Ø±ÕÁ¬½ÓµÄ·½·¨
+	//å®šä¹‰å…³é—­è¿æ¥çš„æ–¹æ³•
 	public void closeConn()throws Exception
 	{
 		if (conn != null)
