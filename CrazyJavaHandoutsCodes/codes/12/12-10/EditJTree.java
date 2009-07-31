@@ -16,25 +16,25 @@ public class EditJTree
 	JFrame jf;
 
 	JTree tree;
-	//ÉÏÃæJTree¶ÔÏó¶ÔÓ¦µÄmodel
+	//ä¸Šé¢JTreeå¯¹è±¡å¯¹åº”çš„model
 	DefaultTreeModel model;
 	
-	//¶¨Òå¼¸¸ö³õÊ¼½Úµã
-	DefaultMutableTreeNode root = new DefaultMutableTreeNode("ÖĞ¹ú"); 
-	DefaultMutableTreeNode guangdong = new DefaultMutableTreeNode("¹ã¶«");
-	DefaultMutableTreeNode guangxi = new DefaultMutableTreeNode("¹ãÎ÷");
-	DefaultMutableTreeNode foshan = new DefaultMutableTreeNode("·ğÉ½");
-	DefaultMutableTreeNode shantou = new DefaultMutableTreeNode("ÉÇÍ·");
-	DefaultMutableTreeNode guilin = new DefaultMutableTreeNode("¹ğÁÖ");
-	DefaultMutableTreeNode nanning = new DefaultMutableTreeNode("ÄÏÄş");
+	//å®šä¹‰å‡ ä¸ªåˆå§‹èŠ‚ç‚¹
+	DefaultMutableTreeNode root = new DefaultMutableTreeNode("ä¸­å›½"); 
+	DefaultMutableTreeNode guangdong = new DefaultMutableTreeNode("å¹¿ä¸œ");
+	DefaultMutableTreeNode guangxi = new DefaultMutableTreeNode("å¹¿è¥¿");
+	DefaultMutableTreeNode foshan = new DefaultMutableTreeNode("ä½›å±±");
+	DefaultMutableTreeNode shantou = new DefaultMutableTreeNode("æ±•å¤´");
+	DefaultMutableTreeNode guilin = new DefaultMutableTreeNode("æ¡‚æ—");
+	DefaultMutableTreeNode nanning = new DefaultMutableTreeNode("å—å®");
 
-	//¶¨ÒåĞèÒª±»ÍÏ¶¯µÄTreePath
+	//å®šä¹‰éœ€è¦è¢«æ‹–åŠ¨çš„TreePath
 	TreePath movePath;
 
-    JButton addSiblingButton = new JButton("Ìí¼ÓĞÖµÜ½Úµã");
-    JButton addChildButton = new JButton("Ìí¼Ó×Ó½Úµã");
-    JButton deleteButton = new JButton("É¾³ı½Úµã");
-    JButton editButton = new JButton("±à¼­µ±Ç°½Úµã");
+    JButton addSiblingButton = new JButton("æ·»åŠ å…„å¼ŸèŠ‚ç‚¹");
+    JButton addChildButton = new JButton("æ·»åŠ å­èŠ‚ç‚¹");
+    JButton deleteButton = new JButton("åˆ é™¤èŠ‚ç‚¹");
+    JButton editButton = new JButton("ç¼–è¾‘å½“å‰èŠ‚ç‚¹");
 
 	public void init()
 	{
@@ -45,44 +45,44 @@ public class EditJTree
 		root.add(guangdong);
 		root.add(guangxi);
 		
-		jf = new JFrame("Ê÷");
+		jf = new JFrame("æ ‘");
 		tree = new JTree(root);
-		//»ñÈ¡JTree¶ÔÓ¦µÄTreeModel¶ÔÏó
+		//è·å–JTreeå¯¹åº”çš„TreeModelå¯¹è±¡
 		model = (DefaultTreeModel)tree.getModel();
-		//ÉèÖÃJTree¿É±à¼­
+		//è®¾ç½®JTreeå¯ç¼–è¾‘
 		tree.setEditable(true);
 		MouseListener ml = new MouseAdapter() 
 		{
-			//°´ÏÂÊó±êÊ±ºò»ñµÃ±»ÍÏ¶¯µÄ½Úµã
+			//æŒ‰ä¸‹é¼ æ ‡æ—¶å€™è·å¾—è¢«æ‹–åŠ¨çš„èŠ‚ç‚¹
 			public void mousePressed(MouseEvent e)
 			{
-				//Èç¹ûĞèÒªÎ¨Ò»È·¶¨Ä³¸ö½Úµã£¬±ØĞëÍ¨¹ıTreePathÀ´»ñÈ¡¡£
+				//å¦‚æœéœ€è¦å”¯ä¸€ç¡®å®šæŸä¸ªèŠ‚ç‚¹ï¼Œå¿…é¡»é€šè¿‡TreePathæ¥è·å–ã€‚
 				TreePath tp = tree.getPathForLocation(e.getX(), e.getY());
 				if (tp != null)
 				{
 					movePath = tp;
 				}
 			}
-			//Êó±êËÉ¿ªÊ±»ñµÃĞèÒªÍÏµ½ÄÄ¸ö¸¸½Úµã
+			//é¼ æ ‡æ¾å¼€æ—¶è·å¾—éœ€è¦æ‹–åˆ°å“ªä¸ªçˆ¶èŠ‚ç‚¹
 			public void mouseReleased(MouseEvent e)
 			{
-				//¸ù¾İÊó±êËÉ¿ªÊ±µÄTreePathÀ´»ñÈ¡TreePath
+				//æ ¹æ®é¼ æ ‡æ¾å¼€æ—¶çš„TreePathæ¥è·å–TreePath
 				TreePath tp = tree.getPathForLocation(e.getX(), e.getY());
 
 				if (tp != null && movePath != null)
 				{
-					//×èÖ¹Ïò×Ó½ÚµãÍÏ¶¯
+					//é˜»æ­¢å‘å­èŠ‚ç‚¹æ‹–åŠ¨
 					if (movePath.isDescendant(tp) && movePath != tp)
 					{
-						JOptionPane.showMessageDialog(jf, "Ä¿±ê½ÚµãÊÇ±»ÒÆ¶¯½ÚµãµÄ×Ó½Úµã£¬ÎŞ·¨ÒÆ¶¯£¡", 
-							"·Ç·¨²Ù×÷", JOptionPane.ERROR_MESSAGE );
+						JOptionPane.showMessageDialog(jf, "ç›®æ ‡èŠ‚ç‚¹æ˜¯è¢«ç§»åŠ¨èŠ‚ç‚¹çš„å­èŠ‚ç‚¹ï¼Œæ— æ³•ç§»åŠ¨ï¼", 
+							"éæ³•æ“ä½œ", JOptionPane.ERROR_MESSAGE );
 						return;
 					}
-					//¼È²»ÊÇÏò×Ó½ÚµãÒÆ¶¯£¬¶øÇÒÊó±ê°´ÏÂ¡¢ËÉ¿ªµÄ²»ÊÇÍ¬Ò»¸ö½Úµã
+					//æ—¢ä¸æ˜¯å‘å­èŠ‚ç‚¹ç§»åŠ¨ï¼Œè€Œä¸”é¼ æ ‡æŒ‰ä¸‹ã€æ¾å¼€çš„ä¸æ˜¯åŒä¸€ä¸ªèŠ‚ç‚¹
 					else if (movePath != tp)
 					{
 						System.out.println(tp.getLastPathComponent());
-						//add·½·¨¿ÉÒÔÏÈ½«Ô­½Úµã´ÓÔ­¸¸½ÚµãÉ¾³ı£¬ÔÙÌí¼Óµ½ĞÂ¸¸½ÚµãÖĞ
+						//addæ–¹æ³•å¯ä»¥å…ˆå°†åŸèŠ‚ç‚¹ä»åŸçˆ¶èŠ‚ç‚¹åˆ é™¤ï¼Œå†æ·»åŠ åˆ°æ–°çˆ¶èŠ‚ç‚¹ä¸­
 						((DefaultMutableTreeNode)tp.getLastPathComponent()).add(
 							(DefaultMutableTreeNode)movePath.getLastPathComponent());
 						movePath = null;
@@ -99,28 +99,28 @@ public class EditJTree
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//»ñÈ¡Ñ¡ÖĞ½Úµã
+				//è·å–é€‰ä¸­èŠ‚ç‚¹
 				DefaultMutableTreeNode selectedNode
 					= (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
-				//Èç¹û½ÚµãÎª¿Õ£¬Ö±½Ó·µ»Ø
+				//å¦‚æœèŠ‚ç‚¹ä¸ºç©ºï¼Œç›´æ¥è¿”å›
 				if (selectedNode == null) return;
-				//»ñÈ¡¸ÃÑ¡ÖĞ½ÚµãµÄ¸¸½Úµã
+				//è·å–è¯¥é€‰ä¸­èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹
 				DefaultMutableTreeNode parent
 					= (DefaultMutableTreeNode)selectedNode.getParent();
-				//Èç¹û¸¸½ÚµãÎª¿Õ£¬Ö±½Ó·µ»Ø
+				//å¦‚æœçˆ¶èŠ‚ç‚¹ä¸ºç©ºï¼Œç›´æ¥è¿”å›
 				if (parent == null) return;
-				//´´½¨Ò»¸öĞÂ½Úµã
-				DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("ĞÂ½Úµã");
-				//»ñÈ¡Ñ¡ÖĞ½ÚµãµÄÑ¡ÖĞË÷Òı
+				//åˆ›å»ºä¸€ä¸ªæ–°èŠ‚ç‚¹
+				DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("æ–°èŠ‚ç‚¹");
+				//è·å–é€‰ä¸­èŠ‚ç‚¹çš„é€‰ä¸­ç´¢å¼•
 				int selectedIndex = parent.getIndex(selectedNode);
-				//ÔÚÑ¡ÖĞÎ»ÖÃ²åÈëĞÂ½Úµã
+				//åœ¨é€‰ä¸­ä½ç½®æ’å…¥æ–°èŠ‚ç‚¹
 				model.insertNodeInto(newNode, parent, selectedIndex + 1);
-				//--------ÏÂÃæ´úÂëÊµÏÖÏÔÊ¾ĞÂ½Úµã£¨×Ô¶¯Õ¹¿ª¸¸½Úµã£©-------
-				//»ñÈ¡´Ó¸ù½Úµãµ½ĞÂ½ÚµãµÄËùÓĞ½Úµã
+				//--------ä¸‹é¢ä»£ç å®ç°æ˜¾ç¤ºæ–°èŠ‚ç‚¹ï¼ˆè‡ªåŠ¨å±•å¼€çˆ¶èŠ‚ç‚¹ï¼‰-------
+				//è·å–ä»æ ¹èŠ‚ç‚¹åˆ°æ–°èŠ‚ç‚¹çš„æ‰€æœ‰èŠ‚ç‚¹
 				TreeNode[] nodes = model.getPathToRoot(newNode);
-				//Ê¹ÓÃÖ¸¶¨µÄ½ÚµãÊı×éÀ´´´½¨TreePath
+				//ä½¿ç”¨æŒ‡å®šçš„èŠ‚ç‚¹æ•°ç»„æ¥åˆ›å»ºTreePath
 				TreePath path = new TreePath(nodes);
-				//ÏÔÊ¾Ö¸¶¨TreePath
+				//æ˜¾ç¤ºæŒ‡å®šTreePath
 				tree.scrollPathToVisible(path);
 			}
 		});
@@ -130,18 +130,18 @@ public class EditJTree
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//»ñÈ¡Ñ¡ÖĞ½Úµã
+				//è·å–é€‰ä¸­èŠ‚ç‚¹
 				DefaultMutableTreeNode selectedNode
 					= (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
-				//Èç¹û½ÚµãÎª¿Õ£¬Ö±½Ó·µ»Ø
+				//å¦‚æœèŠ‚ç‚¹ä¸ºç©ºï¼Œç›´æ¥è¿”å›
 				if (selectedNode == null) return;
-				//´´½¨Ò»¸öĞÂ½Úµã
-				DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("ĞÂ½Úµã");
-				//Ö±½ÓÍ¨¹ımodelÀ´Ìí¼ÓĞÂ½Úµã£¬ÔòÎŞĞèÍ¨¹ıµ÷ÓÃJTreeµÄupdateUI·½·¨
+				//åˆ›å»ºä¸€ä¸ªæ–°èŠ‚ç‚¹
+				DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("æ–°èŠ‚ç‚¹");
+				//ç›´æ¥é€šè¿‡modelæ¥æ·»åŠ æ–°èŠ‚ç‚¹ï¼Œåˆ™æ— éœ€é€šè¿‡è°ƒç”¨JTreeçš„updateUIæ–¹æ³•
 				//model.insertNodeInto(newNode, selectedNode, selectedNode.getChildCount());
-				//Ö±½ÓÍ¨¹ı½ÚµãÌí¼ÓĞÂ½Úµã£¬ÔòĞèÒªµ÷ÓÃtreeµÄupdateUI·½·¨
+				//ç›´æ¥é€šè¿‡èŠ‚ç‚¹æ·»åŠ æ–°èŠ‚ç‚¹ï¼Œåˆ™éœ€è¦è°ƒç”¨treeçš„updateUIæ–¹æ³•
 				selectedNode.add(newNode);
-				//--------ÏÂÃæ´úÂëÊµÏÖÏÔÊ¾ĞÂ½Úµã£¨×Ô¶¯Õ¹¿ª¸¸½Úµã£©-------
+				//--------ä¸‹é¢ä»£ç å®ç°æ˜¾ç¤ºæ–°èŠ‚ç‚¹ï¼ˆè‡ªåŠ¨å±•å¼€çˆ¶èŠ‚ç‚¹ï¼‰-------
 				TreeNode[] nodes = model.getPathToRoot(newNode);
 				TreePath path = new TreePath(nodes);
 				tree.scrollPathToVisible(path);
@@ -158,7 +158,7 @@ public class EditJTree
 					= (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 				if (selectedNode != null && selectedNode.getParent() != null)
 				{
-					//É¾³ıÖ¸¶¨½Úµã
+					//åˆ é™¤æŒ‡å®šèŠ‚ç‚¹
 					model.removeNodeFromParent(selectedNode);
 				}
 			}
@@ -172,7 +172,7 @@ public class EditJTree
 				TreePath selectedPath = tree.getSelectionPath();
 				if (selectedPath != null)
 				{
-					//±à¼­Ñ¡ÖĞ½Úµã
+					//ç¼–è¾‘é€‰ä¸­èŠ‚ç‚¹
 					tree.startEditingAtPath(selectedPath);
 				}
 			}

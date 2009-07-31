@@ -17,16 +17,16 @@ import javax.swing.event.*;
  */
 public class TestJEditorPane
 {
-	JFrame mainWin = new JFrame("²âÊÔJEditorPane");
+	JFrame mainWin = new JFrame("æµ‹è¯•JEditorPane");
 	LinkedList<String> urls = new LinkedList<String>();
 	JEditorPane editorPane = new JEditorPane();
 	JTextField url = new JTextField(30);
 	JCheckBox editable = new JCheckBox();
-	JButton backButton = new JButton("ºóÍË");
+	JButton backButton = new JButton("åé€€");
 
 	public void init()
 	{ 
-		//Ä¬ÈÏÉèÖÃ²»ÔÊĞí±à¼­
+		//é»˜è®¤è®¾ç½®ä¸å…è®¸ç¼–è¾‘
 		editorPane.setEditable(false);
 		editorPane.addHyperlinkListener(new HyperlinkListener()
 		{  
@@ -36,71 +36,71 @@ public class TestJEditorPane
 				{  
 					try
 					{  
-						//½«ÓÃ»§ä¯ÀÀ¹ıµÄURL
+						//å°†ç”¨æˆ·æµè§ˆè¿‡çš„URL
 						urls.push(event.getURL().toString());
-						//ÔÚÎÄ±¾¿òÄÚÊäÈëURL×Ö·û´®
+						//åœ¨æ–‡æœ¬æ¡†å†…è¾“å…¥URLå­—ç¬¦ä¸²
 						url.setText(event.getURL().toString());
-						//ÈÃJEditorPane×°ÔØĞÂµÄÒ³Ãæ
+						//è®©JEditorPaneè£…è½½æ–°çš„é¡µé¢
 						editorPane.setPage(event.getURL());
 					}
 					catch (IOException e)
 					{  
-						editorPane.setText("³öÏÖÒì³£: " + e);
+						editorPane.setText("å‡ºç°å¼‚å¸¸: " + e);
 					}
 				}
 			}
 		});
 
-		//Îª¿É±à¼­µÄ¸´Ñ¡¿òÌí¼ÓÊÂ¼ş¼àÌıÆ÷¡£
+		//ä¸ºå¯ç¼–è¾‘çš„å¤é€‰æ¡†æ·»åŠ äº‹ä»¶ç›‘å¬å™¨ã€‚
 		editable.addActionListener(new ActionListener()
 		{  
 			public void actionPerformed(ActionEvent event)
 			{
-				//Èç¹û¸Ã¸´Ñ¡¿ò´¦ÓÚÑ¡ÖĞ×´Ì¬£¬Ôò¸Ã±à¼­Æ÷¿É±à¼­
+				//å¦‚æœè¯¥å¤é€‰æ¡†å¤„äºé€‰ä¸­çŠ¶æ€ï¼Œåˆ™è¯¥ç¼–è¾‘å™¨å¯ç¼–è¾‘
 				editorPane.setEditable(editable.isSelected());
 			}
 		});
 
-		//¼ÓÔØURLÖ¸¶¨Ò³ÃæµÄ¼àÌıÆ÷
+		//åŠ è½½URLæŒ‡å®šé¡µé¢çš„ç›‘å¬å™¨
 		ActionListener listener = new ActionListener()
 		{  
 			public void actionPerformed(ActionEvent event)
 			{  
 				try
 				{  
-					//½«ÓÃ»§ä¯ÀÀºóµÄURLÌí¼Óµ½URLÕ»ÖĞ
+					//å°†ç”¨æˆ·æµè§ˆåçš„URLæ·»åŠ åˆ°URLæ ˆä¸­
 					urls.push(url.getText());
 					editorPane.setPage(url.getText());
 				}
 				catch (IOException e)
 				{  
-					editorPane.setText("Ò³Ãæ: " + e);
+					editorPane.setText("é¡µé¢: " + e);
 				}
 			}
 		};
 
-		JButton loadButton = new JButton("ÔØÈë");
+		JButton loadButton = new JButton("è½½å…¥");
 		loadButton.addActionListener(listener);
 		url.addActionListener(listener);
 
-		//ÎªºóÍË°´Å¥Ìí¼Ó¼àÌıÆ÷
+		//ä¸ºåé€€æŒ‰é’®æ·»åŠ ç›‘å¬å™¨
 		backButton.addActionListener(new ActionListener()
 		{  
 			public void actionPerformed(ActionEvent event)
 			{
-				//Èç¹û»¹Ã»ÓĞÒÑ¾­ä¯ÀÀ¹ıµÄURL
+				//å¦‚æœè¿˜æ²¡æœ‰å·²ç»æµè§ˆè¿‡çš„URL
 				if (urls.size() <= 1) return;
 				try
 				{  
-					//È¡³ö¡¢²¢»ñÈ¡×îºóÒ»¸öURL
+					//å–å‡ºã€å¹¶è·å–æœ€åä¸€ä¸ªURL
 					String urlString = urls.pop();
 					url.setText(urlString);
-					//ÖØĞÂ¼ÓÔØĞÂµÄURL
+					//é‡æ–°åŠ è½½æ–°çš„URL
 					editorPane.setPage(urlString);
 				}
 				catch (IOException e)
 				{  
-					editorPane.setText("³öÏÖÒì³£: " + e);
+					editorPane.setText("å‡ºç°å¼‚å¸¸: " + e);
 				}
 			}
 		});

@@ -16,52 +16,52 @@ import javax.swing.border.*;
  */
 public class TestDefaultListModel
 {
-	private JFrame mainWin = new JFrame("²âÊÔDefaultListModel");
-	//¶¨ÒåÒ»¸öJList¶ÔÏó
+	private JFrame mainWin = new JFrame("æµ‹è¯•DefaultListModel");
+	//å®šä¹‰ä¸€ä¸ªJListå¯¹è±¡
 	private JList bookList;
-	//¶¨ÒåÒ»¸öDefaultListModel¶ÔÏó
+	//å®šä¹‰ä¸€ä¸ªDefaultListModelå¯¹è±¡
 	private DefaultListModel bookModel = new DefaultListModel();
 	private JTextField bookName = new JTextField(20);
-	private JButton removeBn = new JButton("É¾³ıÑ¡ÖĞÍ¼Êé") ;
-	private JButton addBn = new JButton("Ìí¼ÓÖ¸¶¨Í¼Êé");
+	private JButton removeBn = new JButton("åˆ é™¤é€‰ä¸­å›¾ä¹¦") ;
+	private JButton addBn = new JButton("æ·»åŠ æŒ‡å®šå›¾ä¹¦");
 
 	public void init()
 	{
-		//ÏòbookModelÖĞÌí¼ÓÔªËØ
-		bookModel.addElement("Spring2.0±¦µä");
-		bookModel.addElement("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		bookModel.addElement("»ùÓÚJ2EEµÄAjax±¦µä");
-		bookModel.addElement("Struts2È¨ÍşÖ¸ÄÏ");
-		bookModel.addElement("RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
-		//¸ù¾İDefaultListModel¶ÔÏó´´½¨Ò»¸öJList¶ÔÏó
+		//å‘bookModelä¸­æ·»åŠ å…ƒç´ 
+		bookModel.addElement("Spring2.0å®å…¸");
+		bookModel.addElement("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		bookModel.addElement("åŸºäºJ2EEçš„Ajaxå®å…¸");
+		bookModel.addElement("Struts2æƒå¨æŒ‡å—");
+		bookModel.addElement("RORæ•æ·å¼€å‘æœ€ä½³å®è·µ");
+		//æ ¹æ®DefaultListModelå¯¹è±¡åˆ›å»ºä¸€ä¸ªJListå¯¹è±¡
 		bookList = new JList(bookModel);
-		//ÉèÖÃ×î´ó¿ÉÊÓ¸ß¶È
+		//è®¾ç½®æœ€å¤§å¯è§†é«˜åº¦
 		bookList.setVisibleRowCount(4); 
-		//Ö»ÄÜµ¥Ñ¡
+		//åªèƒ½å•é€‰
 		bookList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
-		//ÎªÌí¼Ó°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºæ·»åŠ æŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		addBn.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				//µ±bookNameÎÄ±¾¿òµÄÄÚÈİ²»Îª¿Õ¡£
+				//å½“bookNameæ–‡æœ¬æ¡†çš„å†…å®¹ä¸ä¸ºç©ºã€‚
 				if (!bookName.getText().trim().equals(""))
 				{
-					//ÏòbookModelÖĞÌí¼ÓÒ»¸öÔªËØ£¬ÏµÍ³×Ô¶¯»áÏòJListÖĞÌí¼Ó¶ÔÓ¦µÄÁĞ±íÏî
+					//å‘bookModelä¸­æ·»åŠ ä¸€ä¸ªå…ƒç´ ï¼Œç³»ç»Ÿè‡ªåŠ¨ä¼šå‘JListä¸­æ·»åŠ å¯¹åº”çš„åˆ—è¡¨é¡¹
 					bookModel.addElement(bookName.getText());
 				}
 			}
 		});
-		//ÎªÉ¾³ı°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºåˆ é™¤æŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		removeBn.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				//Èç¹ûÓÃ»§ÒÑ¾­Ñ¡ÖĞµÄÒ»Ïî
+				//å¦‚æœç”¨æˆ·å·²ç»é€‰ä¸­çš„ä¸€é¡¹
 				if (bookList.getSelectedIndex() >= 0)
 				{
-					//´ÓbookModelÖĞÉ¾³ıÖ¸¶¨Ë÷Òı´¦µÄÔªËØ£¬ÏµÍ³×Ô¶¯»áÉ¾³ıJList¶ÔÓ¦µÄÁĞ±íÏî
+					//ä»bookModelä¸­åˆ é™¤æŒ‡å®šç´¢å¼•å¤„çš„å…ƒç´ ï¼Œç³»ç»Ÿè‡ªåŠ¨ä¼šåˆ é™¤JListå¯¹åº”çš„åˆ—è¡¨é¡¹
 					bookModel.removeElementAt(bookList.getSelectedIndex());
 				}
 
@@ -72,9 +72,9 @@ public class TestDefaultListModel
 		p.add(bookName);
 		p.add(addBn);
 		p.add(removeBn);
-		//Ìí¼ÓbookList×é¼ş
+		//æ·»åŠ bookListç»„ä»¶
 		mainWin.add(new JScrollPane(bookList));
-		//½«pÃæ°åÌí¼Óµ½´°¿ÚÖĞ
+		//å°†pé¢æ¿æ·»åŠ åˆ°çª—å£ä¸­
 		mainWin.add(p , BorderLayout.SOUTH);
 
 		mainWin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

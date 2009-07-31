@@ -12,65 +12,65 @@ import java.awt.event.*;
  */
 public class SwingComponent
 {
-	JFrame f = new JFrame("²âÊÔ");
-	//¶¨ÒåÒ»¸ö°´Å¥,²¢ÎªÖ®Ö¸¶¨Í¼±ê
+	JFrame f = new JFrame("æµ‹è¯•");
+	//å®šä¹‰ä¸€ä¸ªæŒ‰é’®,å¹¶ä¸ºä¹‹æŒ‡å®šå›¾æ ‡
 	Icon okIcon = new ImageIcon("ico/ok.png");
-	JButton ok = new JButton("È·ÈÏ" , okIcon);
-	//¶¨ÒåÒ»¸öµ¥Ñ¡°´Å¥£¬³õÊ¼´¦ÓÚÑ¡ÖĞ×´Ì¬
-	JRadioButton male = new JRadioButton("ÄĞ" , true);
-	//¶¨ÒåÒ»¸öµ¥°´Å¥£¬³õÊ¼´¦ÓÚÃ»ÓĞÑ¡ÖĞ×´Ì¬
-	JRadioButton female = new JRadioButton("Å®" , false);
-	//¶¨ÒåÒ»¸öButtonGroup£¬ÓÃÓÚ½«ÉÏÃæÁ½¸öJRadioButton×éºÏÔÚÒ»Æğ
+	JButton ok = new JButton("ç¡®è®¤" , okIcon);
+	//å®šä¹‰ä¸€ä¸ªå•é€‰æŒ‰é’®ï¼Œåˆå§‹å¤„äºé€‰ä¸­çŠ¶æ€
+	JRadioButton male = new JRadioButton("ç”·" , true);
+	//å®šä¹‰ä¸€ä¸ªå•æŒ‰é’®ï¼Œåˆå§‹å¤„äºæ²¡æœ‰é€‰ä¸­çŠ¶æ€
+	JRadioButton female = new JRadioButton("å¥³" , false);
+	//å®šä¹‰ä¸€ä¸ªButtonGroupï¼Œç”¨äºå°†ä¸Šé¢ä¸¤ä¸ªJRadioButtonç»„åˆåœ¨ä¸€èµ·
 	ButtonGroup bg = new ButtonGroup();
-	//¶¨ÒåÒ»¸ö¸´Ñ¡¿ò£¬³õÊ¼´¦ÓÚÃ»ÓĞÑ¡ÖĞ×´Ì¬¡£
-	JCheckBox married = new JCheckBox("ÊÇ·ñÒÑ»é£¿" , false);
-	String[] colors = new String[]{"ºìÉ«" , "ÂÌÉ«"  , "À¶É«"};
-	//¶¨ÒåÒ»¸öÏÂÀ­Ñ¡Ôñ¿ò
+	//å®šä¹‰ä¸€ä¸ªå¤é€‰æ¡†ï¼Œåˆå§‹å¤„äºæ²¡æœ‰é€‰ä¸­çŠ¶æ€ã€‚
+	JCheckBox married = new JCheckBox("æ˜¯å¦å·²å©šï¼Ÿ" , false);
+	String[] colors = new String[]{"çº¢è‰²" , "ç»¿è‰²"  , "è“è‰²"};
+	//å®šä¹‰ä¸€ä¸ªä¸‹æ‹‰é€‰æ‹©æ¡†
 	JComboBox colorChooser = new JComboBox(colors);
-	//¶¨ÒåÒ»¸öÁĞ±íÑ¡Ôñ¿ò
+	//å®šä¹‰ä¸€ä¸ªåˆ—è¡¨é€‰æ‹©æ¡†
 	JList colorList = new JList(colors);
-	//¶¨ÒåÒ»¸ö8ĞĞ¡¢20ÁĞµÄ¶àĞĞÎÄ±¾Óò
+	//å®šä¹‰ä¸€ä¸ª8è¡Œã€20åˆ—çš„å¤šè¡Œæ–‡æœ¬åŸŸ
 	JTextArea ta = new JTextArea(8, 20);
-	//¶¨ÒåÒ»¸ö40ÁĞµÄµ¥ĞĞÎÄ±¾Óò
+	//å®šä¹‰ä¸€ä¸ª40åˆ—çš„å•è¡Œæ–‡æœ¬åŸŸ
 	JTextField name = new JTextField(40);
 	JMenuBar mb = new JMenuBar();
-	JMenu file = new JMenu("ÎÄ¼ş");
-	JMenu edit = new JMenu("±à¼­");
-	//´´½¨¡°ĞÂ½¨¡±²Ëµ¥Ïî£¬²¢ÎªÖ®Ö¸¶¨Í¼±ê
+	JMenu file = new JMenu("æ–‡ä»¶");
+	JMenu edit = new JMenu("ç¼–è¾‘");
+	//åˆ›å»ºâ€œæ–°å»ºâ€èœå•é¡¹ï¼Œå¹¶ä¸ºä¹‹æŒ‡å®šå›¾æ ‡
 	Icon newIcon = new ImageIcon("ico/new.png");
-	JMenuItem newItem = new JMenuItem("ĞÂ½¨" , newIcon);
-	//´´½¨¡°±£´æ¡±²Ëµ¥Ïî£¬²¢ÎªÖ®Ö¸¶¨Í¼±ê
+	JMenuItem newItem = new JMenuItem("æ–°å»º" , newIcon);
+	//åˆ›å»ºâ€œä¿å­˜â€èœå•é¡¹ï¼Œå¹¶ä¸ºä¹‹æŒ‡å®šå›¾æ ‡
 	Icon saveIcon = new ImageIcon("ico/save.png");
-	JMenuItem saveItem = new JMenuItem("±£´æ" , saveIcon);
-	//´´½¨¡°ÍË³ö¡±²Ëµ¥Ïî£¬²¢ÎªÖ®Ö¸¶¨Í¼±ê
+	JMenuItem saveItem = new JMenuItem("ä¿å­˜" , saveIcon);
+	//åˆ›å»ºâ€œé€€å‡ºâ€èœå•é¡¹ï¼Œå¹¶ä¸ºä¹‹æŒ‡å®šå›¾æ ‡
 	Icon exitIcon = new ImageIcon("ico/exit.png");
-	JMenuItem exitItem = new JMenuItem("ÍË³ö" , exitIcon);	
-	JCheckBoxMenuItem autoWrap = new JCheckBoxMenuItem("×Ô¶¯»»ĞĞ");
-	//´´½¨¡°¸´ÖÆ¡±²Ëµ¥Ïî£¬²¢ÎªÖ®Ö¸¶¨Í¼±ê
-	JMenuItem copyItem = new JMenuItem("¸´ÖÆ" , new ImageIcon("ico/copy.png"));
-	//´´½¨¡°Õ³Ìù¡±²Ëµ¥Ïî£¬²¢ÎªÖ®Ö¸¶¨Í¼±ê
-	JMenuItem pasteItem = new JMenuItem("Õ³Ìù" , new ImageIcon("ico/paste.png"));
-	JMenu format = new JMenu("¸ñÊ½");
-	JMenuItem commentItem = new JMenuItem("×¢ÊÍ");
-	JMenuItem cancelItem = new JMenuItem("È¡Ïû×¢ÊÍ");
+	JMenuItem exitItem = new JMenuItem("é€€å‡º" , exitIcon);	
+	JCheckBoxMenuItem autoWrap = new JCheckBoxMenuItem("è‡ªåŠ¨æ¢è¡Œ");
+	//åˆ›å»ºâ€œå¤åˆ¶â€èœå•é¡¹ï¼Œå¹¶ä¸ºä¹‹æŒ‡å®šå›¾æ ‡
+	JMenuItem copyItem = new JMenuItem("å¤åˆ¶" , new ImageIcon("ico/copy.png"));
+	//åˆ›å»ºâ€œç²˜è´´â€èœå•é¡¹ï¼Œå¹¶ä¸ºä¹‹æŒ‡å®šå›¾æ ‡
+	JMenuItem pasteItem = new JMenuItem("ç²˜è´´" , new ImageIcon("ico/paste.png"));
+	JMenu format = new JMenu("æ ¼å¼");
+	JMenuItem commentItem = new JMenuItem("æ³¨é‡Š");
+	JMenuItem cancelItem = new JMenuItem("å–æ¶ˆæ³¨é‡Š");
 	
-	//¶¨ÒåÒ»¸öÓÒ¼ü²Ëµ¥ÓÃÓÚÉèÖÃ³ÌĞò·ç¸ñ
+	//å®šä¹‰ä¸€ä¸ªå³é”®èœå•ç”¨äºè®¾ç½®ç¨‹åºé£æ ¼
 	JPopupMenu pop = new JPopupMenu();
-	//ÓÃÓÚ×éºÏÈı¸ö·ç¸ñ²Ëµ¥ÏîµÄButtonGroup
+	//ç”¨äºç»„åˆä¸‰ä¸ªé£æ ¼èœå•é¡¹çš„ButtonGroup
 	ButtonGroup flavorGroup = new ButtonGroup();
-	//´´½¨Èı¸öµ¥Ñ¡¿ò°´Å¥£¬ÓÃÓÚÉè¶¨³ÌĞòµÄÍâ¹Û·ç¸ñ
-	JRadioButtonMenuItem metalItem = new JRadioButtonMenuItem("Metal·ç¸ñ" , true);
-	JRadioButtonMenuItem windowsItem = new JRadioButtonMenuItem("Windows·ç¸ñ");
-	JRadioButtonMenuItem motifItem = new JRadioButtonMenuItem("Motif·ç¸ñ");
+	//åˆ›å»ºä¸‰ä¸ªå•é€‰æ¡†æŒ‰é’®ï¼Œç”¨äºè®¾å®šç¨‹åºçš„å¤–è§‚é£æ ¼
+	JRadioButtonMenuItem metalItem = new JRadioButtonMenuItem("Metalé£æ ¼" , true);
+	JRadioButtonMenuItem windowsItem = new JRadioButtonMenuItem("Windowsé£æ ¼");
+	JRadioButtonMenuItem motifItem = new JRadioButtonMenuItem("Motifé£æ ¼");
 
 	public void init()
 	{
-		//´´½¨Ò»¸ö×°ÔØÁËÎÄ±¾¿ò¡¢°´Å¥µÄJPanel
+		//åˆ›å»ºä¸€ä¸ªè£…è½½äº†æ–‡æœ¬æ¡†ã€æŒ‰é’®çš„JPanel
 		JPanel bottom = new JPanel();
 		bottom.add(name);
 		bottom.add(ok);
 		f.add(bottom , BorderLayout.SOUTH);
-		//´´½¨Ò»¸ö×°ÔØÁËÏÂÀ­Ñ¡Ôñ¿ò¡¢Èı¸öJCheckBoxµÄJPanel
+		//åˆ›å»ºä¸€ä¸ªè£…è½½äº†ä¸‹æ‹‰é€‰æ‹©æ¡†ã€ä¸‰ä¸ªJCheckBoxçš„JPanel
 		JPanel checkPanel = new JPanel();
 		checkPanel.add(colorChooser);
 		bg.add(male);
@@ -78,74 +78,74 @@ public class SwingComponent
 		checkPanel.add(male);
 		checkPanel.add(female);
 		checkPanel.add(married);
-		//´´½¨Ò»¸ö´¹Ö±ÅÅÁĞ×é¼şµÄBox£¬Ê¢×°¶àĞĞÎÄ±¾ÓòJPanel
+		//åˆ›å»ºä¸€ä¸ªå‚ç›´æ’åˆ—ç»„ä»¶çš„Boxï¼Œç››è£…å¤šè¡Œæ–‡æœ¬åŸŸJPanel
 		Box topLeft = Box.createVerticalBox();
-		//Ê¹ÓÃJScrollPane×÷ÎªÆÕÍ¨×é¼şµÄJViewPort
+		//ä½¿ç”¨JScrollPaneä½œä¸ºæ™®é€šç»„ä»¶çš„JViewPort
 		JScrollPane taJsp = new JScrollPane(ta);
 		topLeft.add(taJsp);
 		topLeft.add(checkPanel);
-		//´´½¨Ò»¸ö´¹Ö±ÅÅÁĞ×é¼şµÄBox£¬Ê¢×°topLeft¡¢colorList
+		//åˆ›å»ºä¸€ä¸ªå‚ç›´æ’åˆ—ç»„ä»¶çš„Boxï¼Œç››è£…topLeftã€colorList
 		Box top = Box.createHorizontalBox();
 		top.add(topLeft);
 		top.add(colorList);
-		//½«top BoxÈİÆ÷Ìí¼Óµ½´°¿ÚµÄÖĞ¼ä
+		//å°†top Boxå®¹å™¨æ·»åŠ åˆ°çª—å£çš„ä¸­é—´
 		f.add(top);	
-		//-----------ÏÂÃæ¿ªÊ¼×éºÏ²Ëµ¥¡¢²¢Îª²Ëµ¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷----------
-		//ÎªnewItemÉèÖÃ¿ì½İ¼ü£¬ÉèÖÃ¿ì½İ¼üÊ±ÒªÊ¹ÓÃ´óĞ´×ÖÄ¸
+		//-----------ä¸‹é¢å¼€å§‹ç»„åˆèœå•ã€å¹¶ä¸ºèœå•æ·»åŠ äº‹ä»¶ç›‘å¬å™¨----------
+		//ä¸ºnewItemè®¾ç½®å¿«æ·é”®ï¼Œè®¾ç½®å¿«æ·é”®æ—¶è¦ä½¿ç”¨å¤§å†™å­—æ¯
 		newItem.setAccelerator(KeyStroke.getKeyStroke('N' , InputEvent.CTRL_MASK)); 
 		newItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				ta.append("ÓÃ»§µ¥»÷ÁË¡°ĞÂ½¨¡±²Ëµ¥\n");
+				ta.append("ç”¨æˆ·å•å‡»äº†â€œæ–°å»ºâ€èœå•\n");
 			}
 		});
-		//Îªfile²Ëµ¥Ìí¼Ó²Ëµ¥Ïî
+		//ä¸ºfileèœå•æ·»åŠ èœå•é¡¹
 		file.add(newItem);
 		file.add(saveItem);
 		file.add(exitItem);
-		//Îªedit²Ëµ¥Ìí¼Ó²Ëµ¥Ïî
+		//ä¸ºeditèœå•æ·»åŠ èœå•é¡¹
 		edit.add(autoWrap);
-		//Ê¹ÓÃaddSeparator·½·¨À´Ìí¼Ó²Ëµ¥·Ö¸ôÏß
+		//ä½¿ç”¨addSeparatoræ–¹æ³•æ¥æ·»åŠ èœå•åˆ†éš”çº¿
 		edit.addSeparator();
 		edit.add(copyItem);
 		edit.add(pasteItem);
-		commentItem.setToolTipText("½«³ÌĞò´úÂë×¢ÊÍÆğÀ´£¡");
-		//Îªformat²Ëµ¥Ìí¼Ó²Ëµ¥Ïî
+		commentItem.setToolTipText("å°†ç¨‹åºä»£ç æ³¨é‡Šèµ·æ¥ï¼");
+		//ä¸ºformatèœå•æ·»åŠ èœå•é¡¹
 		format.add(commentItem);
 		format.add(cancelItem);
-		//Ê¹ÓÃÌí¼Ónew JMenuItem("-")µÄ·½Ê½²»ÄÜÌí¼Ó²Ëµ¥·Ö¸ô·û
+		//ä½¿ç”¨æ·»åŠ new JMenuItem("-")çš„æ–¹å¼ä¸èƒ½æ·»åŠ èœå•åˆ†éš”ç¬¦
 		edit.add(new JMenuItem("-"));
-		//½«format²Ëµ¥×éºÏµ½edit²Ëµ¥ÖĞ£¬´Ó¶øĞÎ³É¶ş¼¶²Ëµ¥
+		//å°†formatèœå•ç»„åˆåˆ°editèœå•ä¸­ï¼Œä»è€Œå½¢æˆäºŒçº§èœå•
 		edit.add(format);
-		//½«file¡¢edit²Ëµ¥Ìí¼Óµ½mb²Ëµ¥ÌõÖĞ
+		//å°†fileã€editèœå•æ·»åŠ åˆ°mbèœå•æ¡ä¸­
 		mb.add(file);
 		mb.add(edit);
-		//Îªf´°¿ÚÉèÖÃ²Ëµ¥Ìõ
+		//ä¸ºfçª—å£è®¾ç½®èœå•æ¡
 		f.setJMenuBar(mb);
-		//-----------ÏÂÃæ¿ªÊ¼×éºÏÓÒ¼ü²Ëµ¥¡¢²¢°²×°ÓÒ¼ü²Ëµ¥----------
+		//-----------ä¸‹é¢å¼€å§‹ç»„åˆå³é”®èœå•ã€å¹¶å®‰è£…å³é”®èœå•----------
 		flavorGroup.add(metalItem);
 		flavorGroup.add(windowsItem);
 		flavorGroup.add(motifItem);
 		pop.add(metalItem);
 		pop.add(windowsItem);
 		pop.add(motifItem);
-		//ÎªÈı¸ö²Ëµ¥´´½¨ÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºä¸‰ä¸ªèœå•åˆ›å»ºäº‹ä»¶ç›‘å¬å™¨
 		ActionListener flavorListener = new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
 				try
 				{
-					if (e.getActionCommand().equals("Metal·ç¸ñ"))
+					if (e.getActionCommand().equals("Metalé£æ ¼"))
 					{
 						changeFlavor(1);
 					}
-					else if (e.getActionCommand().equals("Windows·ç¸ñ"))
+					else if (e.getActionCommand().equals("Windowsé£æ ¼"))
 					{
 						changeFlavor(2);
 					}
-					else if (e.getActionCommand().equals("Motif·ç¸ñ"))
+					else if (e.getActionCommand().equals("Motifé£æ ¼"))
 					{
 						changeFlavor(3);
 					}
@@ -156,47 +156,47 @@ public class SwingComponent
 				}
 			}
 		};
-		//ÎªÈı¸ö²Ëµ¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºä¸‰ä¸ªèœå•æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		metalItem.addActionListener(flavorListener);
 		windowsItem.addActionListener(flavorListener);
 		motifItem.addActionListener(flavorListener);
-		//µ÷ÓÃ¸Ã·½·¨¼´¿ÉÉèÖÃÓÒ¼ü²Ëµ¥£¬ÎŞĞèÊ¹ÓÃÊÂ¼ş»úÖÆ
+		//è°ƒç”¨è¯¥æ–¹æ³•å³å¯è®¾ç½®å³é”®èœå•ï¼Œæ— éœ€ä½¿ç”¨äº‹ä»¶æœºåˆ¶
 		ta.setComponentPopupMenu(pop); 
-		//ÉèÖÃ¹Ø±Õ´°¿ÚÊ±£¬ÍË³ö³ÌĞò
+		//è®¾ç½®å…³é—­çª—å£æ—¶ï¼Œé€€å‡ºç¨‹åº
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.pack();
 		f.setVisible(true);
 	}
 
-	//¶¨ÒåÒ»¸ö·½·¨£¬ÓÃÓÚ¸Ä±ä½çÃæ·ç¸ñ
+	//å®šä¹‰ä¸€ä¸ªæ–¹æ³•ï¼Œç”¨äºæ”¹å˜ç•Œé¢é£æ ¼
 	private void changeFlavor(int flavor)throws Exception
 	{
 		switch (flavor)
 		{
-			//ÉèÖÃMetal·ç¸ñ
+			//è®¾ç½®Metalé£æ ¼
 			case 1:
 				UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 				break;
-			//ÉèÖÃWindows·ç¸ñ
+			//è®¾ç½®Windowsé£æ ¼
 			case 2:
 				UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 				break;
-			//ÉèÖÃMotif·ç¸ñ
+			//è®¾ç½®Motifé£æ ¼
 			case 3:
 				UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
 				break;			
 		}
-		//¸üĞÂf´°¿ÚÄÚ¶¥¼¶ÈİÆ÷ÒÔ¼°ÄÚ²¿ËùÓĞ×é¼şµÄUI
+		//æ›´æ–°fçª—å£å†…é¡¶çº§å®¹å™¨ä»¥åŠå†…éƒ¨æ‰€æœ‰ç»„ä»¶çš„UI
 		SwingUtilities.updateComponentTreeUI(f.getContentPane());
-		//¸üĞÂmb²Ëµ¥ÌõÒÔ¼°ÄÚ²¿ËùÓĞ×é¼şµÄUI
+		//æ›´æ–°mbèœå•æ¡ä»¥åŠå†…éƒ¨æ‰€æœ‰ç»„ä»¶çš„UI
 		SwingUtilities.updateComponentTreeUI(mb);
-		//¸üĞÂpopÓÒ¼ü²Ëµ¥ÒÔ¼°ÄÚ²¿ËùÓĞ×é¼şµÄUI
+		//æ›´æ–°popå³é”®èœå•ä»¥åŠå†…éƒ¨æ‰€æœ‰ç»„ä»¶çš„UI
 		SwingUtilities.updateComponentTreeUI(pop);
 
 	}
 	public static void main(String[] args) 
 	{
-		//ÉèÖÃSwing´°¿ÚÊ¹ÓÃJava·ç¸ñ
+		//è®¾ç½®Swingçª—å£ä½¿ç”¨Javaé£æ ¼
 		JFrame.setDefaultLookAndFeelDecorated(true); 
 		new SwingComponent().init();
 	}

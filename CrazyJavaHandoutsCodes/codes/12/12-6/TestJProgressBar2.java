@@ -13,11 +13,11 @@ import java.awt.event.*;
  */
 public class TestJProgressBar2
 {
-	JFrame frame = new JFrame("²âÊÔ½ø¶ÈÌõ");
-	//´´½¨Ò»Ìõ´¹Ö±½ø¶ÈÌõ
+	JFrame frame = new JFrame("æµ‹è¯•è¿›åº¦æ¡");
+	//åˆ›å»ºä¸€æ¡å‚ç›´è¿›åº¦æ¡
 	JProgressBar bar = new JProgressBar(JProgressBar.VERTICAL );
-	JCheckBox indeterminate = new JCheckBox("²»È·¶¨½ø¶È");
-	JCheckBox noBorder = new JCheckBox("²»»æÖÆ±ß¿ò");
+	JCheckBox indeterminate = new JCheckBox("ä¸ç¡®å®šè¿›åº¦");
+	JCheckBox noBorder = new JCheckBox("ä¸ç»˜åˆ¶è¾¹æ¡†");
 	public void init()
 	{
 		Box box = new Box(BoxLayout.Y_AXIS);
@@ -25,31 +25,31 @@ public class TestJProgressBar2
 		box.add(noBorder);
 		frame.setLayout(new FlowLayout());
 		frame.add(box);
-		//°Ñ½ø¶ÈÌõÌí¼Óµ½JFrame´°¿ÚÖĞ
+		//æŠŠè¿›åº¦æ¡æ·»åŠ åˆ°JFrameçª—å£ä¸­
 		frame.add(bar);
 
-		//ÉèÖÃÔÚ½ø¶ÈÌõÖĞ»æÖÆÍê³É°Ù·Ö±È
+		//è®¾ç½®åœ¨è¿›åº¦æ¡ä¸­ç»˜åˆ¶å®Œæˆç™¾åˆ†æ¯”
 		bar.setStringPainted(true);
 		noBorder.addActionListener(new ActionListener()
 		{  
 			public void actionPerformed(ActionEvent event)
 			{
-				//¸ù¾İ¸ÃÑ¡Ôñ¿ò¾ö¶¨ÊÇ·ñ»æÖÆ½ø¶ÈÌõµÄ±ß¿ò
+				//æ ¹æ®è¯¥é€‰æ‹©æ¡†å†³å®šæ˜¯å¦ç»˜åˆ¶è¿›åº¦æ¡çš„è¾¹æ¡†
 				bar.setBorderPainted(!noBorder.isSelected());
 			}
 		});
 		final SimulatedTarget target = new SimulatedTarget(1000);
-		//ÒÔÆô¶¯Ò»ÌõÏß³ÌµÄ·½Ê½À´Ö´ĞĞÒ»¸öºÄÊ±µÄÈÎÎñ
+		//ä»¥å¯åŠ¨ä¸€æ¡çº¿ç¨‹çš„æ–¹å¼æ¥æ‰§è¡Œä¸€ä¸ªè€—æ—¶çš„ä»»åŠ¡
 		new Thread(target).start();
-		//ÉèÖÃ½ø¶ÈÌõµÄ×î´óÖµºÍ×îĞ¡Öµ,
+		//è®¾ç½®è¿›åº¦æ¡çš„æœ€å¤§å€¼å’Œæœ€å°å€¼,
 		bar.setMinimum(0); 
-		//ÒÔ×ÜÈÎÎñÁ¿×÷Îª½ø¶ÈÌõµÄ×î´óÖµ
+		//ä»¥æ€»ä»»åŠ¡é‡ä½œä¸ºè¿›åº¦æ¡çš„æœ€å¤§å€¼
 		bar.setMaximum(target.getAmount());
 		Timer timer = new Timer(300 , new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				//ÒÔÈÎÎñµÄµ±Ç°Íê³ÉÁ¿ÉèÖÃ½ø¶ÈÌõµÄvalue
+				//ä»¥ä»»åŠ¡çš„å½“å‰å®Œæˆé‡è®¾ç½®è¿›åº¦æ¡çš„value
 				bar.setValue(target.getCurrent());
 			}
 		});
@@ -58,7 +58,7 @@ public class TestJProgressBar2
 		{  
 			public void actionPerformed(ActionEvent event)
 			{
-				//ÉèÖÃ¸Ã½ø¶ÈÌõµÄ½ø¶ÈÊÇ·ñÈ·¶¨
+				//è®¾ç½®è¯¥è¿›åº¦æ¡çš„è¿›åº¦æ˜¯å¦ç¡®å®š
 				bar.setIndeterminate(indeterminate.isSelected());
 				bar.setStringPainted(!indeterminate.isSelected());
 			}
@@ -72,12 +72,12 @@ public class TestJProgressBar2
 		new TestJProgressBar2().init();
 	}
 }
-//Ä£ÄâÒ»¸öºÄÊ±µÄÈÎÎñ
+//æ¨¡æ‹Ÿä¸€ä¸ªè€—æ—¶çš„ä»»åŠ¡
 class SimulatedTarget implements Runnable
 { 
-	//ÈÎÎñµÄµ±Ç°Íê³ÉÁ¿
+	//ä»»åŠ¡çš„å½“å‰å®Œæˆé‡
 	private volatile int current;
-	//×ÜÈÎÎñÁ¿
+	//æ€»ä»»åŠ¡é‡
 	private int amount;
 	public SimulatedTarget(int amount)
 	{  
@@ -94,7 +94,7 @@ class SimulatedTarget implements Runnable
 	{  
 		return current;
 	}
-	//run·½·¨´ú±í²»¶ÏÍê³ÉÈÎÎñµÄ¹ı³Ì
+	//runæ–¹æ³•ä»£è¡¨ä¸æ–­å®Œæˆä»»åŠ¡çš„è¿‡ç¨‹
 	public void run()
 	{  
 

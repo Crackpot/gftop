@@ -13,10 +13,10 @@ import javax.swing.*;
  */
 public class MonitorJOptionPane
 {
-	JFrame jf = new JFrame("²âÊÔJOptionPane");
+	JFrame jf = new JFrame("æµ‹è¯•JOptionPane");
 	JTextArea jta = new JTextArea(5 , 40);
-	JButton bn = new JButton("´ò¿ª¶Ô»°¿ò");
-	JOptionPane jop = new JOptionPane("²âÊÔ¶Ô»°¿ò", JOptionPane.WARNING_MESSAGE
+	JButton bn = new JButton("æ‰“å¼€å¯¹è¯æ¡†");
+	JOptionPane jop = new JOptionPane("æµ‹è¯•å¯¹è¯æ¡†", JOptionPane.WARNING_MESSAGE
 		,JOptionPane.YES_NO_CANCEL_OPTION );
 	public void init()
 	{
@@ -24,15 +24,15 @@ public class MonitorJOptionPane
 		{
 			public void propertyChange(PropertyChangeEvent evt)
 			{
-				jta.append("ÓÃ»§¸Ä±äÁËÑ¡Ôñ£¬ÀÏÑ¡ÏîÎª£º" + evt.getOldValue()
-					+ "\nĞÂÑ¡ÏîÎª£º" + evt.getNewValue() + "!\n");
+				jta.append("ç”¨æˆ·æ”¹å˜äº†é€‰æ‹©ï¼Œè€é€‰é¡¹ä¸ºï¼š" + evt.getOldValue()
+					+ "\næ–°é€‰é¡¹ä¸ºï¼š" + evt.getNewValue() + "!\n");
 			}
 		});
 		bn.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				jop.createDialog(jf, "²âÊÔ¶Ô»°¿ò").setVisible(true);
+				jop.createDialog(jf, "æµ‹è¯•å¯¹è¯æ¡†").setVisible(true);
 				jta.append(jop.getValue() + "\n");
 			}
 		});

@@ -17,60 +17,60 @@ import javax.swing.border.*;
 
 public class TestJOptionPane
 {
-	JFrame jf = new JFrame("²âÊÔJOptionPane");
-	//·Ö±ğ¶¨Òå6¸öÃæ°åÓÃÓÚ¶¨Òå¶Ô»°¿òµÄ¼¸ÖÖÑ¡Ïî
+	JFrame jf = new JFrame("æµ‹è¯•JOptionPane");
+	//åˆ†åˆ«å®šä¹‰6ä¸ªé¢æ¿ç”¨äºå®šä¹‰å¯¹è¯æ¡†çš„å‡ ç§é€‰é¡¹
 	private ButtonPanel messagePanel;
 	private ButtonPanel messageTypePanel;
 	private ButtonPanel msgPanel;
 	private ButtonPanel confirmPanel;
 	private ButtonPanel optionsPanel;
 	private ButtonPanel inputPanel;
-	private String messageString = "ÏûÏ¢ÇøÄÚÈİ";
+	private String messageString = "æ¶ˆæ¯åŒºå†…å®¹";
 	private Icon messageIcon = new ImageIcon("ico/heart.png");
 	private Object messageObject = new Date();
-	private Component messageComponent = new JButton("×é¼şÏûÏ¢");
-	private JButton msgBn = new JButton("ÏûÏ¢¶Ô»°¿ò");
-	private JButton confrimBn = new JButton("È·ÈÏ¶Ô»°¿ò");
-	private JButton inputBn = new JButton("ÊäÈë¶Ô»°¿ò");
-	private JButton optionBn = new JButton("Ñ¡Ïî¶Ô»°¿ò");
+	private Component messageComponent = new JButton("ç»„ä»¶æ¶ˆæ¯");
+	private JButton msgBn = new JButton("æ¶ˆæ¯å¯¹è¯æ¡†");
+	private JButton confrimBn = new JButton("ç¡®è®¤å¯¹è¯æ¡†");
+	private JButton inputBn = new JButton("è¾“å…¥å¯¹è¯æ¡†");
+	private JButton optionBn = new JButton("é€‰é¡¹å¯¹è¯æ¡†");
 
 	public void init()
 	{
 		JPanel top = new JPanel();
-		top.setBorder(new TitledBorder(new EtchedBorder(), "¶Ô»°¿òµÄÍ¨ÓÃÑ¡Ïî" , 
+		top.setBorder(new TitledBorder(new EtchedBorder(), "å¯¹è¯æ¡†çš„é€šç”¨é€‰é¡¹" , 
 			TitledBorder.CENTER ,TitledBorder.TOP ));
 		top.setLayout(new GridLayout(1 , 2));
-		//ÏûÏ¢ÀàĞÍPanel£¬¸ÃPanelÖĞµÄÑ¡Ïî¾ö¶¨¶Ô»°¿òµÄÍ¼±ê
-		messageTypePanel = new ButtonPanel("Ñ¡ÔñÏûÏ¢µÄÀàĞÍ", 
+		//æ¶ˆæ¯ç±»å‹Panelï¼Œè¯¥Panelä¸­çš„é€‰é¡¹å†³å®šå¯¹è¯æ¡†çš„å›¾æ ‡
+		messageTypePanel = new ButtonPanel("é€‰æ‹©æ¶ˆæ¯çš„ç±»å‹", 
 			new String[]{"ERROR_MESSAGE", "INFORMATION_MESSAGE", "WARNING_MESSAGE", 
 			"QUESTION_MESSAGE",	"PLAIN_MESSAGE" });
-		//ÏûÏ¢ÄÚÈİÀàĞÍµÄPanel£¬¸ÃPanelÖĞµÄÑ¡Ïî¾ö¶¨¶Ô»°¿òµÄÏûÏ¢ÇøµÄÄÚÈİ
-		messagePanel = new ButtonPanel("Ñ¡ÔñÏûÏ¢ÄÚÈİµÄÀàĞÍ", 
-			new String[]{"×Ö·û´®ÏûÏ¢", "Í¼±êÏûÏ¢", "×é¼şÏûÏ¢",	"ÆÕÍ¨¶ÔÏóÏûÏ¢" , "Object[]ÏûÏ¢"});
+		//æ¶ˆæ¯å†…å®¹ç±»å‹çš„Panelï¼Œè¯¥Panelä¸­çš„é€‰é¡¹å†³å®šå¯¹è¯æ¡†çš„æ¶ˆæ¯åŒºçš„å†…å®¹
+		messagePanel = new ButtonPanel("é€‰æ‹©æ¶ˆæ¯å†…å®¹çš„ç±»å‹", 
+			new String[]{"å­—ç¬¦ä¸²æ¶ˆæ¯", "å›¾æ ‡æ¶ˆæ¯", "ç»„ä»¶æ¶ˆæ¯",	"æ™®é€šå¯¹è±¡æ¶ˆæ¯" , "Object[]æ¶ˆæ¯"});
 		top.add(messageTypePanel);
 		top.add(messagePanel);
 		JPanel bottom = new JPanel();
-		bottom.setBorder(new TitledBorder(new EtchedBorder(), "µ¯³ö²»Í¬µÄ¶Ô»°¿ò" , 
+		bottom.setBorder(new TitledBorder(new EtchedBorder(), "å¼¹å‡ºä¸åŒçš„å¯¹è¯æ¡†" , 
 			TitledBorder.CENTER ,TitledBorder.TOP));
 		bottom.setLayout(new GridLayout(1 , 4));
-		//´´½¨ÓÃÓÚµ¯³öÏûÏ¢¶Ô»°¿òµÄPanel
-		msgPanel = new ButtonPanel("ÏûÏ¢¶Ô»°¿ò", null);
+		//åˆ›å»ºç”¨äºå¼¹å‡ºæ¶ˆæ¯å¯¹è¯æ¡†çš„Panel
+		msgPanel = new ButtonPanel("æ¶ˆæ¯å¯¹è¯æ¡†", null);
 		msgBn.addActionListener(new ShowAction());
 		msgPanel.add(msgBn);
-		//´´½¨ÓÃÓÚµ¯³öÈ·ÈÏ¶Ô»°¿òµÄPanel
-		confirmPanel = new ButtonPanel("È·ÈÏ¶Ô»°¿ò", 
+		//åˆ›å»ºç”¨äºå¼¹å‡ºç¡®è®¤å¯¹è¯æ¡†çš„Panel
+		confirmPanel = new ButtonPanel("ç¡®è®¤å¯¹è¯æ¡†", 
 			new String[]{"DEFAULT_OPTION", "YES_NO_OPTION", "YES_NO_CANCEL_OPTION",
 			"OK_CANCEL_OPTION"});
 		confrimBn.addActionListener(new ShowAction());
 		confirmPanel.add(confrimBn);
-		//´´½¨ÓÃÓÚµ¯³öÊäÈë¶Ô»°¿òµÄPanel
-		inputPanel = new ButtonPanel("ÊäÈë¶Ô»°¿ò",
-			new String[]{"µ¥ĞĞÎÄ±¾¿ò","ÏÂÀ­ÁĞ±íÑ¡Ôñ¿ò"});
+		//åˆ›å»ºç”¨äºå¼¹å‡ºè¾“å…¥å¯¹è¯æ¡†çš„Panel
+		inputPanel = new ButtonPanel("è¾“å…¥å¯¹è¯æ¡†",
+			new String[]{"å•è¡Œæ–‡æœ¬æ¡†","ä¸‹æ‹‰åˆ—è¡¨é€‰æ‹©æ¡†"});
 		inputBn.addActionListener(new ShowAction());
 		inputPanel.add(inputBn);
-		//´´½¨ÓÃÓÚµ¯³öÑ¡Ïî¶Ô»°¿òµÄPanel
-		optionsPanel = new ButtonPanel("Ñ¡Ïî¶Ô»°¿ò", 
-			new String[]{"×Ö·û´®Ñ¡Ïî", "Í¼±êÑ¡Ïî", "¶ÔÏóÑ¡Ïî"});
+		//åˆ›å»ºç”¨äºå¼¹å‡ºé€‰é¡¹å¯¹è¯æ¡†çš„Panel
+		optionsPanel = new ButtonPanel("é€‰é¡¹å¯¹è¯æ¡†", 
+			new String[]{"å­—ç¬¦ä¸²é€‰é¡¹", "å›¾æ ‡é€‰é¡¹", "å¯¹è±¡é€‰é¡¹"});
 		optionBn.addActionListener(new ShowAction());
 		optionsPanel.add(optionBn);
 		bottom.add(msgPanel);
@@ -85,7 +85,7 @@ public class TestJOptionPane
 		jf.pack();
 		jf.setVisible(true);
 	}
-	//¸ù¾İÓÃ»§Ñ¡Ôñ·µ»ØÑ¡ÏîÀàĞÍ
+	//æ ¹æ®ç”¨æˆ·é€‰æ‹©è¿”å›é€‰é¡¹ç±»å‹
 	private int getOptionType()
 	{
 		if (confirmPanel.getSelection().equals("DEFAULT_OPTION"))
@@ -97,22 +97,22 @@ public class TestJOptionPane
 		else
 			return JOptionPane.OK_CANCEL_OPTION;
 	}
-	//¸ù¾İÓÃ»§Ñ¡Ôñ·µ»ØÏûÏ¢
+	//æ ¹æ®ç”¨æˆ·é€‰æ‹©è¿”å›æ¶ˆæ¯
 	private Object getMessage()
 	{
-		if (messagePanel.getSelection().equals("×Ö·û´®ÏûÏ¢"))
+		if (messagePanel.getSelection().equals("å­—ç¬¦ä¸²æ¶ˆæ¯"))
 			return messageString;
-		else if (messagePanel.getSelection().equals("Í¼±êÏûÏ¢"))
+		else if (messagePanel.getSelection().equals("å›¾æ ‡æ¶ˆæ¯"))
 			return messageIcon;
-		else if (messagePanel.getSelection().equals("×é¼şÏûÏ¢"))
+		else if (messagePanel.getSelection().equals("ç»„ä»¶æ¶ˆæ¯"))
 			return messageComponent;
-		else if(messagePanel.getSelection().equals("ÆÕÍ¨¶ÔÏóÏûÏ¢"))
+		else if(messagePanel.getSelection().equals("æ™®é€šå¯¹è±¡æ¶ˆæ¯"))
 			return messageObject;
 		else
 			return  new Object[]{messageString , messageIcon , 
 				messageObject , messageComponent};
 	}
-	//¸ù¾İÓÃ»§Ñ¡Ôñ·µ»ØÏûÏ¢ÀàĞÍ£¨¾ö¶¨Í¼±êÇøµÄÍ¼±ê£©
+	//æ ¹æ®ç”¨æˆ·é€‰æ‹©è¿”å›æ¶ˆæ¯ç±»å‹ï¼ˆå†³å®šå›¾æ ‡åŒºçš„å›¾æ ‡ï¼‰
 	private int getDialogType()
 	{
 		if (messageTypePanel.getSelection().equals("ERROR_MESSAGE"))
@@ -128,45 +128,45 @@ public class TestJOptionPane
 	}
 	private Object[] getOptions()
 	{
-		if (optionsPanel.getSelection().equals("×Ö·û´®Ñ¡Ïî"))
+		if (optionsPanel.getSelection().equals("å­—ç¬¦ä¸²é€‰é¡¹"))
 			return new String[]{"a" , "b" , "c" , "d"};
-		else if (optionsPanel.getSelection().equals("Í¼±êÑ¡Ïî"))
+		else if (optionsPanel.getSelection().equals("å›¾æ ‡é€‰é¡¹"))
 			return new Icon[]{new ImageIcon("ico/1.gif") , new ImageIcon("ico/2.gif"),
 			new ImageIcon("ico/3.gif"),new ImageIcon("ico/4.gif")};
 		else
 			return new Object[]{new Date() ,new Date() , new Date()};
 	}
 
-	//Îª¸÷°´Å¥¶¨ÒåÊÂ¼ş¼àÌıÆ÷
+	//ä¸ºå„æŒ‰é’®å®šä¹‰äº‹ä»¶ç›‘å¬å™¨
 	private class ShowAction implements ActionListener
 	{
 		public void actionPerformed(ActionEvent event)
 		{  
-			if (event.getActionCommand().equals("È·ÈÏ¶Ô»°¿ò"))
+			if (event.getActionCommand().equals("ç¡®è®¤å¯¹è¯æ¡†"))
 			{
-				JOptionPane.showConfirmDialog(jf , getMessage(),"È·ÈÏ¶Ô»°¿ò", 
+				JOptionPane.showConfirmDialog(jf , getMessage(),"ç¡®è®¤å¯¹è¯æ¡†", 
 					getOptionType(), getDialogType());
 			}
-			else if (event.getActionCommand().equals("ÊäÈë¶Ô»°¿ò"))
+			else if (event.getActionCommand().equals("è¾“å…¥å¯¹è¯æ¡†"))
 			{  
-				if (inputPanel.getSelection().equals("µ¥ĞĞÎÄ±¾¿ò"))
+				if (inputPanel.getSelection().equals("å•è¡Œæ–‡æœ¬æ¡†"))
 				{
-					JOptionPane.showInputDialog(jf,	getMessage(), "ÊäÈë¶Ô»°¿ò", getDialogType());
+					JOptionPane.showInputDialog(jf,	getMessage(), "è¾“å…¥å¯¹è¯æ¡†", getDialogType());
 				}
 				else
 				{
-					JOptionPane.showInputDialog(jf,	getMessage(), "ÊäÈë¶Ô»°¿ò", getDialogType(),
-					null,	new String[] {"ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½", "Struts2È¨ÍşÖ¸ÄÏ"}, 
-					"Struts2È¨ÍşÖ¸ÄÏ");
+					JOptionPane.showInputDialog(jf,	getMessage(), "è¾“å…¥å¯¹è¯æ¡†", getDialogType(),
+					null,	new String[] {"è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜", "Struts2æƒå¨æŒ‡å—"}, 
+					"Struts2æƒå¨æŒ‡å—");
 				}
 			}
-			else if (event.getActionCommand().equals("ÏûÏ¢¶Ô»°¿ò"))
+			else if (event.getActionCommand().equals("æ¶ˆæ¯å¯¹è¯æ¡†"))
 			{
-				JOptionPane.showMessageDialog(jf,getMessage(),"ÏûÏ¢¶Ô»°¿ò",getDialogType());
+				JOptionPane.showMessageDialog(jf,getMessage(),"æ¶ˆæ¯å¯¹è¯æ¡†",getDialogType());
 			}
-			else if (event.getActionCommand().equals("Ñ¡Ïî¶Ô»°¿ò"))
+			else if (event.getActionCommand().equals("é€‰é¡¹å¯¹è¯æ¡†"))
 			{
-				JOptionPane.showOptionDialog(jf , getMessage() , "Ñ¡Ïî¶Ô»°¿ò", getOptionType(),
+				JOptionPane.showOptionDialog(jf , getMessage() , "é€‰é¡¹å¯¹è¯æ¡†", getOptionType(),
 					getDialogType(), null,	getOptions(), "a");
 			}
 		}
@@ -178,8 +178,8 @@ public class TestJOptionPane
 	}
 }
 
-//¶¨ÒåÒ»¸öJPanelÀàÀ©Õ¹Àà£¬¸ÃÀàµÄ¶ÔÏó°üº¬¶à¸ö×İÏòÅÅÁĞµÄJRadioButton¿Ø¼ş
-//ÇÒPanelÀ©Õ¹Àà¿ÉÒÔÖ¸¶¨Ò»¸ö×Ö·û´®×÷ÎªTitledBorder
+//å®šä¹‰ä¸€ä¸ªJPanelç±»æ‰©å±•ç±»ï¼Œè¯¥ç±»çš„å¯¹è±¡åŒ…å«å¤šä¸ªçºµå‘æ’åˆ—çš„JRadioButtonæ§ä»¶
+//ä¸”Panelæ‰©å±•ç±»å¯ä»¥æŒ‡å®šä¸€ä¸ªå­—ç¬¦ä¸²ä½œä¸ºTitledBorder
 class ButtonPanel extends JPanel
 {  
 	private ButtonGroup group;
@@ -197,7 +197,7 @@ class ButtonPanel extends JPanel
 			b.setSelected(i == 0);
 		}
 	}
-	//¶¨ÒåÒ»¸ö·½·¨£¬ÓÃÓÚ·µ»ØÓÃ»§Ñ¡ÔñµÄÑ¡Ïî
+	//å®šä¹‰ä¸€ä¸ªæ–¹æ³•ï¼Œç”¨äºè¿”å›ç”¨æˆ·é€‰æ‹©çš„é€‰é¡¹
 	public String getSelection()
 	{  
 		return group.getSelection().getActionCommand();

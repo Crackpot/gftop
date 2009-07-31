@@ -16,41 +16,41 @@ public class HelloApplet extends JApplet
 {
 
 
-	//³õÊ¼»¯AppletµÄ·½·¨
+	//åˆå§‹åŒ–Appletçš„æ–¹æ³•
 	public void init()
 	{
 		setLayout(new FlowLayout());
 		add(new JButton("XXX"));
 		add(new JButton("YYY"));
 	}
-	//Æô¶¯AppletµÄ·½·¨
+	//å¯åŠ¨Appletçš„æ–¹æ³•
 	public void start()
 	{
-		System.out.println("start·½·¨");
+		System.out.println("startæ–¹æ³•");
 	}
-	//»æÖÆApplet½çÃæµÄ·½·¨
+	//ç»˜åˆ¶Appletç•Œé¢çš„æ–¹æ³•
 	public void paint(Graphics g)
 	{
 		super.paint(g);
-		System.out.println("paint·½·¨");
+		System.out.println("paintæ–¹æ³•");
 		g.drawLine(3 , 3 , 200 , 300);
 	}
-	//Í£Ö¹AppletµÄ·½·¨
+	//åœæ­¢Appletçš„æ–¹æ³•
 	public void stop()
 	{
-		System.out.println("stop·½·¨");
+		System.out.println("stopæ–¹æ³•");
 	}
-	//Ïú»ÙAppletµÄ·½·¨
+	//é”€æ¯Appletçš„æ–¹æ³•
 	public void destroy()
 	{
-		System.out.println("destroy·½·¨");
+		System.out.println("destroyæ–¹æ³•");
 	}
 	public static void main(String[] args)
 	{
 		JFrame jf = new JFrame();
 		JApplet panel = new HelloApplet();
 		panel.setPreferredSize(new Dimension(300, 400));
-		//ÏÔÊ½µ÷ÓÃHelloApplet¶ÔÏóµÄinit¡¢start·½·¨
+		//æ˜¾å¼è°ƒç”¨HelloAppletå¯¹è±¡çš„initã€startæ–¹æ³•
 		panel.init();
 		panel.start();
 		jf.add(panel);

@@ -17,27 +17,27 @@ public class TestProgressMonitor
 	public void init()
 	{
 		final SimulatedTarget target = new SimulatedTarget(1000);
-		//ÒÔÆô¶¯Ò»ÌõÏß³ÌµÄ·½Ê½À´Ö´ĞĞÒ»¸öºÄÊ±µÄÈÎÎñ
+		//ä»¥å¯åŠ¨ä¸€æ¡çº¿ç¨‹çš„æ–¹å¼æ¥æ‰§è¡Œä¸€ä¸ªè€—æ—¶çš„ä»»åŠ¡
 		final Thread targetThread = new Thread(target);
 		targetThread.start();
-		//´´½¨½ø¶È¶Ô»°¿ò
+		//åˆ›å»ºè¿›åº¦å¯¹è¯æ¡†
 		final ProgressMonitor dialog = new ProgressMonitor(null ,
-			"µÈ´ıÈÎÎñÍê³É" , "ÒÑÍê³É£º" , 0 , target.getAmount());
-		//´´½¨Ò»¸ö¼ÆÊ±Æ÷
+			"ç­‰å¾…ä»»åŠ¡å®Œæˆ" , "å·²å®Œæˆï¼š" , 0 , target.getAmount());
+		//åˆ›å»ºä¸€ä¸ªè®¡æ—¶å™¨
 		timer = new Timer(300 , new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				//ÒÔÈÎÎñµÄµ±Ç°Íê³ÉÁ¿ÉèÖÃ½ø¶È¶Ô»°¿òµÄÍê³É±ÈÀı
+				//ä»¥ä»»åŠ¡çš„å½“å‰å®Œæˆé‡è®¾ç½®è¿›åº¦å¯¹è¯æ¡†çš„å®Œæˆæ¯”ä¾‹
 				dialog.setProgress(target.getCurrent());
-				//Èç¹ûÓÃ»§µ¥»÷ÁË½ø¶È¶Ô»°¿òµÄ¡±È¡Ïû¡°°´Å¥
+				//å¦‚æœç”¨æˆ·å•å‡»äº†è¿›åº¦å¯¹è¯æ¡†çš„â€å–æ¶ˆâ€œæŒ‰é’®
 				if (dialog.isCanceled())
 				{
-					//Í£Ö¹¼ÆÊ±Æ÷
+					//åœæ­¢è®¡æ—¶å™¨
 					timer.stop();
-					//ÖĞ¶ÏÈÎÎñµÄÖ´ĞĞÏß³Ì
+					//ä¸­æ–­ä»»åŠ¡çš„æ‰§è¡Œçº¿ç¨‹
 					targetThread.interrupt();
-					//ÏµÍ³ÍË³ö
+					//ç³»ç»Ÿé€€å‡º
 					System.exit(0);
 				}
 			}

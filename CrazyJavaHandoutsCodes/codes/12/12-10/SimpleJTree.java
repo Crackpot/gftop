@@ -12,41 +12,41 @@ import java.awt.*;
  */
 public class SimpleJTree  
 {
-	JFrame jf = new JFrame("¼òµ¥Ê÷");
+	JFrame jf = new JFrame("ç®€å•æ ‘");
 
 	JTree tree;
-	//¶¨Òå¼¸¸ö³õÊ¼½Úµã
-	DefaultMutableTreeNode root = new DefaultMutableTreeNode("ÖĞ¹ú"); 
-	DefaultMutableTreeNode guangdong = new DefaultMutableTreeNode("¹ã¶«");
-	DefaultMutableTreeNode guangxi = new DefaultMutableTreeNode("¹ãÎ÷");
-	DefaultMutableTreeNode foshan = new DefaultMutableTreeNode("·ğÉ½");
-	DefaultMutableTreeNode shantou = new DefaultMutableTreeNode("ÉÇÍ·");
-	DefaultMutableTreeNode guilin = new DefaultMutableTreeNode("¹ğÁÖ");
-	DefaultMutableTreeNode nanning = new DefaultMutableTreeNode("ÄÏÄş");
+	//å®šä¹‰å‡ ä¸ªåˆå§‹èŠ‚ç‚¹
+	DefaultMutableTreeNode root = new DefaultMutableTreeNode("ä¸­å›½"); 
+	DefaultMutableTreeNode guangdong = new DefaultMutableTreeNode("å¹¿ä¸œ");
+	DefaultMutableTreeNode guangxi = new DefaultMutableTreeNode("å¹¿è¥¿");
+	DefaultMutableTreeNode foshan = new DefaultMutableTreeNode("ä½›å±±");
+	DefaultMutableTreeNode shantou = new DefaultMutableTreeNode("æ±•å¤´");
+	DefaultMutableTreeNode guilin = new DefaultMutableTreeNode("æ¡‚æ—");
+	DefaultMutableTreeNode nanning = new DefaultMutableTreeNode("å—å®");
 
 	public void init()
 	{
-		//Í¨¹ıadd·½·¨½¨Á¢Ê÷½ÚµãÖ®¼äµÄ¸¸×Ó¹ØÏµ
+		//é€šè¿‡addæ–¹æ³•å»ºç«‹æ ‘èŠ‚ç‚¹ä¹‹é—´çš„çˆ¶å­å…³ç³»
 		guangdong.add(foshan);
 		guangdong.add(shantou);
 		guangxi.add(guilin);
 		guangxi.add(nanning);
 		root.add(guangdong);
 		root.add(guangxi);
-		//ÒÔ¸ù½Úµã´´½¨Ê÷
+		//ä»¥æ ¹èŠ‚ç‚¹åˆ›å»ºæ ‘
 		tree = new JTree(root);
 
-		//Ä¬ÈÏÁ¬Ïß
+		//é»˜è®¤è¿çº¿
 		//tree.putClientProperty("JTree.lineStyle" , "Angeled");
-		//Ã»ÓĞÁ¬Ïß
+		//æ²¡æœ‰è¿çº¿
 		tree.putClientProperty("JTree.lineStyle" , "None");
-		//Ë®Æ½·Ö¸ôÏß
+		//æ°´å¹³åˆ†éš”çº¿
 		//tree.putClientProperty("JTree.lineStyle" , "Horizontal"); 
 
 
-		//ÉèÖÃÊÇ·ñÏÔÊ¾¸ù½ÚµãµÄ¡°Õ¹¿ª/ÕÛµş¡±Í¼±ê,Ä¬ÈÏÊÇfalse
+		//è®¾ç½®æ˜¯å¦æ˜¾ç¤ºæ ¹èŠ‚ç‚¹çš„â€œå±•å¼€/æŠ˜å â€å›¾æ ‡,é»˜è®¤æ˜¯false
 		tree.setShowsRootHandles(true);
-		//ÉèÖÃ½ÚµãÊÇ·ñ¿É¼û,Ä¬ÈÏÊÇtrue
+		//è®¾ç½®èŠ‚ç‚¹æ˜¯å¦å¯è§,é»˜è®¤æ˜¯true
 		tree.setRootVisible(true);
 
 		jf.add(new JScrollPane(tree));

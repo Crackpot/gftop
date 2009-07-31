@@ -14,25 +14,25 @@ import java.awt.datatransfer.*;
  */
 public class TestJToolBar
 {
-	JFrame jf = new JFrame("²âÊÔ¹¤¾ßÌõ");
+	JFrame jf = new JFrame("æµ‹è¯•å·¥å…·æ¡");
 	JTextArea jta = new JTextArea(6, 35);
 	JToolBar jtb = new JToolBar();
 	JMenuBar jmb = new JMenuBar();
-	JMenu edit = new JMenu("±à¼­");
+	JMenu edit = new JMenu("ç¼–è¾‘");
 	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-	//´´½¨"Õ³Ìù"Action£¬¸ÃActionÓÃÓÚ´´½¨²Ëµ¥Ïî¡¢¹¤¾ß°´Å¥ºÍÆÕÍ¨°´Å¥
-	Action pasteAction = new AbstractAction("Õ³Ìù", new ImageIcon("ico/paste.png"))
+	//åˆ›å»º"ç²˜è´´"Actionï¼Œè¯¥Actionç”¨äºåˆ›å»ºèœå•é¡¹ã€å·¥å…·æŒ‰é’®å’Œæ™®é€šæŒ‰é’®
+	Action pasteAction = new AbstractAction("ç²˜è´´", new ImageIcon("ico/paste.png"))
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			//Èç¹û¼ôÌù°åÖĞ°üº¬stringFlavorÄÚÈİ
+			//å¦‚æœå‰ªè´´æ¿ä¸­åŒ…å«stringFlavorå†…å®¹
 			if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor))
 			{
 				try
 				{
-					//È¡³ö¼ôÌù°åÖĞstringFlavorÄÚÈİ
+					//å–å‡ºå‰ªè´´æ¿ä¸­stringFlavorå†…å®¹
 					String content = (String)clipboard.getData(DataFlavor.stringFlavor);
-					//½«Ñ¡ÖĞÄÚÈİÌæ»»³É¼ôÌù°åÖĞµÄÄÚÈİ
+					//å°†é€‰ä¸­å†…å®¹æ›¿æ¢æˆå‰ªè´´æ¿ä¸­çš„å†…å®¹
 					jta.replaceRange(content , jta.getSelectionStart() , jta.getSelectionEnd());
 				}
 				catch (Exception ee)
@@ -42,47 +42,47 @@ public class TestJToolBar
 			}
 		}
 	};
-	//´´½¨"¸´ÖÆ"Action
-	Action copyAction = new AbstractAction("¸´ÖÆ", new ImageIcon("ico/copy.png"))
+	//åˆ›å»º"å¤åˆ¶"Action
+	Action copyAction = new AbstractAction("å¤åˆ¶", new ImageIcon("ico/copy.png"))
 	{
 		public void actionPerformed(ActionEvent e)
 		{
 			StringSelection contents = new StringSelection(jta.getSelectedText());
-			//½«StringSelection¶ÔÏó·ÅÈë¼ôÌù°å
+			//å°†StringSelectionå¯¹è±¡æ”¾å…¥å‰ªè´´æ¿
 			clipboard.setContents(contents, null);
-			//Èç¹û¼ôÌù°åÖĞ°üº¬stringFlavorÄÚÈİ
+			//å¦‚æœå‰ªè´´æ¿ä¸­åŒ…å«stringFlavorå†…å®¹
 			if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor))
 			{
-				//½«pasteAction¼¤»î
+				//å°†pasteActionæ¿€æ´»
 				pasteAction.setEnabled(true);
 			}
 		}
 	};
 	public void init()
 	{
-		//pasteActionÄ¬ÈÏ´¦ÓÚ²»¼¤»î×´Ì¬
+		//pasteActioné»˜è®¤å¤„äºä¸æ¿€æ´»çŠ¶æ€
 		pasteAction.setEnabled(false);
 		jf.add(new JScrollPane(jta));
-		//ÒÔAction´´½¨°´Å¥£¬²¢½«¸Ã°´Å¥Ìí¼Óµ½PanelÖĞ
+		//ä»¥Actionåˆ›å»ºæŒ‰é’®ï¼Œå¹¶å°†è¯¥æŒ‰é’®æ·»åŠ åˆ°Panelä¸­
 		JButton copyBn = new JButton(copyAction);
 		JButton pasteBn = new JButton(pasteAction);
 		JPanel jp = new JPanel();
 		jp.add(copyBn);
 		jp.add(pasteBn);
 		jf.add(jp , BorderLayout.SOUTH);
-		//Ïò¹¤¾ßÌõÖĞÌí¼ÓAction¶ÔÏó£¬¸Ã¶ÔÏó½«»á×ª»»³É¹¤¾ß°´Å¥
+		//å‘å·¥å…·æ¡ä¸­æ·»åŠ Actionå¯¹è±¡ï¼Œè¯¥å¯¹è±¡å°†ä¼šè½¬æ¢æˆå·¥å…·æŒ‰é’®
 		jtb.add(copyAction);
 		jtb.addSeparator();
 		jtb.add(pasteAction);
-		//Ïò²Ëµ¥ÖĞÌí¼ÓAction¶ÔÏó£¬¸Ã¶ÔÏó½«»á×ª»»³É²Ëµ¥Ïî
+		//å‘èœå•ä¸­æ·»åŠ Actionå¯¹è±¡ï¼Œè¯¥å¯¹è±¡å°†ä¼šè½¬æ¢æˆèœå•é¡¹
 		edit.add(copyAction);
 		edit.add(pasteAction);
-		//½«edit²Ëµ¥Ìí¼Óµ½²Ëµ¥ÌõÖĞ
+		//å°†editèœå•æ·»åŠ åˆ°èœå•æ¡ä¸­
 		jmb.add(edit);
 		jf.setJMenuBar(jmb);
-		//ÉèÖÃ¹¤¾ßÌõºÍ¹¤¾ß°´Å¥Ö®¼äµÄ¾àÀë
+		//è®¾ç½®å·¥å…·æ¡å’Œå·¥å…·æŒ‰é’®ä¹‹é—´çš„è·ç¦»
 		jtb.setMargin(new Insets(20 ,10 , 5 , 30));
-		//Ïò´°¿ÚÖĞÌí¼Ó¹¤¾ßÌõ
+		//å‘çª—å£ä¸­æ·»åŠ å·¥å…·æ¡
 		jf.add(jtb , BorderLayout.NORTH);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.pack();

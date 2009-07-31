@@ -12,16 +12,16 @@ import java.awt.*;
  */
 public class TestJLayeredPane
 {
-	JFrame jf = new JFrame("²âÊÔJLayeredPane");
+	JFrame jf = new JFrame("æµ‹è¯•JLayeredPane");
 	JLayeredPane layeredPane = new JLayeredPane();
 	public void init()
 	{
-		//ÏòlayeredPaneÖĞÌí¼Ó3¸ö×é¼ş
-		layeredPane.add(new ContentPanel(10 , 20 , "Struts2È¨ÍşÖ¸ÄÏ" , 
+		//å‘layeredPaneä¸­æ·»åŠ 3ä¸ªç»„ä»¶
+		layeredPane.add(new ContentPanel(10 , 20 , "Struts2æƒå¨æŒ‡å—" , 
 			"ico/struts2.jpg"), JLayeredPane.MODAL_LAYER);
-		layeredPane.add(new ContentPanel(100 , 60 , "RoRÃô½İ¿ª·¢×î¼ÑÊµ¼ù", 
+		layeredPane.add(new ContentPanel(100 , 60 , "RoRæ•æ·å¼€å‘æœ€ä½³å®è·µ", 
 			"ico/ror.jpg"), JLayeredPane.DEFAULT_LAYER);
-		layeredPane.add(new ContentPanel(190 , 100 , "ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½", 
+		layeredPane.add(new ContentPanel(190 , 100 , "è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜", 
 			"ico/j2ee.jpg"), 4);
 		layeredPane.setPreferredSize(new Dimension(400, 300));
 		layeredPane.setVisible(true);
@@ -35,8 +35,8 @@ public class TestJLayeredPane
 		new TestJLayeredPane().init();
 	}
 }
-//À©Õ¹ÁËJPanelÀà£¬¿ÉÒÔÖ±½Ó´´½¨Ò»¸ö·ÅÔÚÖ¸¶¨Î»ÖÃ£¬
-//ÇÒÓĞÖ¸¶¨±êÌâ¡¢·ÅÖÃÖ¸¶¨Í¼±êµÄJPanel¶ÔÏó
+//æ‰©å±•äº†JPanelç±»ï¼Œå¯ä»¥ç›´æ¥åˆ›å»ºä¸€ä¸ªæ”¾åœ¨æŒ‡å®šä½ç½®ï¼Œ
+//ä¸”æœ‰æŒ‡å®šæ ‡é¢˜ã€æ”¾ç½®æŒ‡å®šå›¾æ ‡çš„JPanelå¯¹è±¡
 class ContentPanel extends JPanel
 {
 	public ContentPanel(int xPos , int yPos , String title , String ico)

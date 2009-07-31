@@ -13,23 +13,23 @@ import java.awt.event.*;
  */
 public class TestInternalDialog
 {
-	private JFrame jf = new JFrame("²âÊÔÄÚ²¿¶Ô»°¿ò");
+	private JFrame jf = new JFrame("æµ‹è¯•å†…éƒ¨å¯¹è¯æ¡†");
 	private JDesktopPane desktop = new JDesktopPane();
-	private JButton internalBn = new JButton("ÄÚ²¿´°¿ÚµÄ¶Ô»°¿ò");
-	private JButton deskBn = new JButton("ĞéÄâ×ÀÃæµÄ¶Ô»°¿ò");
-	//¶¨ÒåÒ»¸öÄÚ²¿´°¿Ú£¬¸Ã´°¿Ú¿ÉÍÏ¶¯£¬µ«²»¿É×î´ó»¯¡¢×îĞ¡»¯¡¢¹Ø±Õ
-	private JInternalFrame iframe = new JInternalFrame("ÄÚ²¿´°¿Ú");
+	private JButton internalBn = new JButton("å†…éƒ¨çª—å£çš„å¯¹è¯æ¡†");
+	private JButton deskBn = new JButton("è™šæ‹Ÿæ¡Œé¢çš„å¯¹è¯æ¡†");
+	//å®šä¹‰ä¸€ä¸ªå†…éƒ¨çª—å£ï¼Œè¯¥çª—å£å¯æ‹–åŠ¨ï¼Œä½†ä¸å¯æœ€å¤§åŒ–ã€æœ€å°åŒ–ã€å…³é—­
+	private JInternalFrame iframe = new JInternalFrame("å†…éƒ¨çª—å£");
 	
 	public void init()
 	{
-		//ÏòÄÚ²¿´°¿ÚÖĞÌí¼Ó×é¼ş
+		//å‘å†…éƒ¨çª—å£ä¸­æ·»åŠ ç»„ä»¶
 		iframe.add(new JScrollPane(new JTextArea(8, 40)));
 		desktop.setPreferredSize(new Dimension(400, 300));
-		//°ÑĞéÄâ×ÀÃæÌí¼Óµ½JFrame´°¿ÚÖĞ
+		//æŠŠè™šæ‹Ÿæ¡Œé¢æ·»åŠ åˆ°JFrameçª—å£ä¸­
 		jf.add(desktop);
-		//ÉèÖÃÄÚ²¿´°¿ÚµÄ´óĞ¡¡¢Î»ÖÃ
+		//è®¾ç½®å†…éƒ¨çª—å£çš„å¤§å°ã€ä½ç½®
 		iframe.reshape(0 , 0 , 300 , 200);
-		//ÏÔÊ¾²¢Ñ¡ÖĞÄÚ²¿´°¿Ú
+		//æ˜¾ç¤ºå¹¶é€‰ä¸­å†…éƒ¨çª—å£
 		iframe.show();
 		desktop.add(iframe);
 		JPanel jp = new JPanel();
@@ -37,18 +37,18 @@ public class TestInternalDialog
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//µ¯³öÄÚ²¿¶Ô»°¿ò£¬ÒÔĞéÄâ×ÀÃæ×÷Îª¸¸×é¼ş
+				//å¼¹å‡ºå†…éƒ¨å¯¹è¯æ¡†ï¼Œä»¥è™šæ‹Ÿæ¡Œé¢ä½œä¸ºçˆ¶ç»„ä»¶
 				JOptionPane.showInternalMessageDialog(desktop,
-					"ÊôÓÚĞéÄâ×ÀÃæµÄ¶Ô»°¿ò");
+					"å±äºè™šæ‹Ÿæ¡Œé¢çš„å¯¹è¯æ¡†");
 			}
 		});
 		internalBn.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//µ¯³öÄÚ²¿¶Ô»°¿ò£¬ÒÔÄÚ²¿´°¿Ú×÷Îª¸¸×é¼ş
+				//å¼¹å‡ºå†…éƒ¨å¯¹è¯æ¡†ï¼Œä»¥å†…éƒ¨çª—å£ä½œä¸ºçˆ¶ç»„ä»¶
 				JOptionPane.showInternalMessageDialog(iframe,
-					"ÊôÓÚÄÚ²¿´°¿ÚµÄ¶Ô»°¿ò");
+					"å±äºå†…éƒ¨çª—å£çš„å¯¹è¯æ¡†");
 			}
 		});
 		jp.add(deskBn);

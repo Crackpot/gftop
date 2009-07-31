@@ -15,81 +15,81 @@ import javax.swing.event.*;
 public class TestJSpinner
 {
 	final int SPINNER_NUM = 6;
-	JFrame mainWin = new JFrame("Î¢µ÷¿ØÖÆÆ÷Ê¾·¶");
+	JFrame mainWin = new JFrame("å¾®è°ƒæ§åˆ¶å™¨ç¤ºèŒƒ");
 	Box spinnerBox = new Box(BoxLayout.Y_AXIS);
 	JSpinner[] spinners = new JSpinner[SPINNER_NUM];
 	JLabel[] valLabels = new JLabel[SPINNER_NUM];
-	JButton okBn = new JButton("È·¶¨");
+	JButton okBn = new JButton("ç¡®å®š");
 	public void init() 
 	{
 		for (int i = 0 ; i < SPINNER_NUM ; i++ )
 		{
 			valLabels[i] = new JLabel();
 		}
-		//-----------ÆÕÍ¨Spinner-----------
+		//-----------æ™®é€šSpinner-----------
 		spinners[0] = new JSpinner();
-		addSpinner(spinners[0], "ÆÕÍ¨" , valLabels[0]);
+		addSpinner(spinners[0], "æ™®é€š" , valLabels[0]);
 
-		//-----------Ö¸¶¨×îĞ¡Öµ¡¢×î´óÖµ¡¢²½³¤µÄSpinner-----------
-		//´´½¨Ò»¸öSpinnerNumberModel¶ÔÏó£¬Ö¸¶¨×îĞ¡Öµ¡¢×î´óÖµºÍ²½³¤
+		//-----------æŒ‡å®šæœ€å°å€¼ã€æœ€å¤§å€¼ã€æ­¥é•¿çš„Spinner-----------
+		//åˆ›å»ºä¸€ä¸ªSpinnerNumberModelå¯¹è±¡ï¼ŒæŒ‡å®šæœ€å°å€¼ã€æœ€å¤§å€¼å’Œæ­¥é•¿
 		SpinnerNumberModel numModel = new SpinnerNumberModel(3.4, 
 			-1.1, 4.3, 0.1); 
 		spinners[1] = new JSpinner(numModel);
-		addSpinner(spinners[1], "Êı Öµ ·¶ Î§" , valLabels[1]);
+		addSpinner(spinners[1], "æ•° å€¼ èŒƒ å›´" , valLabels[1]);
 
-		//-----------Ê¹ÓÃSpinnerListModelµÄSpinner------------
+		//-----------ä½¿ç”¨SpinnerListModelçš„Spinner------------
 		String[] books = new String[]
 		{
-			"ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½",
-			"Struts2È¨ÍşÖ¸ÄÏ",
-			"»ùÓÚJ2EEµÄAjax±¦µä"
+			"è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜",
+			"Struts2æƒå¨æŒ‡å—",
+			"åŸºäºJ2EEçš„Ajaxå®å…¸"
 		};
-		//Ê¹ÓÃ×Ö·û´®Êı×é´´½¨SpinnerListModel¶ÔÏó
+		//ä½¿ç”¨å­—ç¬¦ä¸²æ•°ç»„åˆ›å»ºSpinnerListModelå¯¹è±¡
 		SpinnerListModel bookModel = new SpinnerListModel(books);
-		//Ê¹ÓÃSpinnerListModel¶ÔÏó´´½¨JSpinner¶ÔÏó
+		//ä½¿ç”¨SpinnerListModelå¯¹è±¡åˆ›å»ºJSpinnerå¯¹è±¡
 		spinners[2] = new JSpinner(bookModel);
-		addSpinner(spinners[2], "×Ö·û´®ĞòÁĞÖµ" , valLabels[2]);
+		addSpinner(spinners[2], "å­—ç¬¦ä¸²åºåˆ—å€¼" , valLabels[2]);
 
-		//-----------Ê¹ÓÃĞòÁĞÖµÊÇImageIconµÄSpinner------------
+		//-----------ä½¿ç”¨åºåˆ—å€¼æ˜¯ImageIconçš„Spinner------------
 		ArrayList<ImageIcon> icons = new ArrayList<ImageIcon>();
 		icons.add(new ImageIcon("a.gif"));
 		icons.add(new ImageIcon("b.gif"));
-		//Ê¹ÓÃImageIconÊı×é´´½¨SpinnerListModel¶ÔÏó
+		//ä½¿ç”¨ImageIconæ•°ç»„åˆ›å»ºSpinnerListModelå¯¹è±¡
 		SpinnerListModel iconModel = new SpinnerListModel(icons);
-		//Ê¹ÓÃSpinnerListModel¶ÔÏó´´½¨JSpinner¶ÔÏó
+		//ä½¿ç”¨SpinnerListModelå¯¹è±¡åˆ›å»ºJSpinnerå¯¹è±¡
 		spinners[3] = new JSpinner(iconModel);
-		addSpinner(spinners[3], "Í¼±êĞòÁĞÖµ" , valLabels[3]);
+		addSpinner(spinners[3], "å›¾æ ‡åºåˆ—å€¼" , valLabels[3]);
 
-		//-----------Ê¹ÓÃSpinnerDateModelµÄSpinner------------
-		//·Ö±ğ»ñÈ¡ÆğÊ¼Ê±¼ä¡¢½áÊøÊ±¼ä¡¢³õÊ±Ê±¼ä
+		//-----------ä½¿ç”¨SpinnerDateModelçš„Spinner------------
+		//åˆ†åˆ«è·å–èµ·å§‹æ—¶é—´ã€ç»“æŸæ—¶é—´ã€åˆæ—¶æ—¶é—´
 		Calendar cal = Calendar.getInstance();
 		Date init = cal.getTime();
 		cal.add(Calendar.DAY_OF_MONTH , -3);
 		Date start = cal.getTime();
 		cal.add(Calendar.DAY_OF_MONTH , 8);
 		Date end = cal.getTime();
-		//´´½¨Ò»¸öSpinnerDateModel¶ÔÏó£¬Ö¸¶¨×îĞ¡Ê±¼ä¡¢×î´óÊ±¼äºÍ³õÊ¼Ê±¼ä
+		//åˆ›å»ºä¸€ä¸ªSpinnerDateModelå¯¹è±¡ï¼ŒæŒ‡å®šæœ€å°æ—¶é—´ã€æœ€å¤§æ—¶é—´å’Œåˆå§‹æ—¶é—´
 		SpinnerDateModel dateModel = new SpinnerDateModel(init , 
 			start , end , Calendar.HOUR_OF_DAY);
-		//ÒÔSpinnerDateModel¶ÔÏó´´½¨JSpinner
+		//ä»¥SpinnerDateModelå¯¹è±¡åˆ›å»ºJSpinner
 		spinners[4] = new JSpinner(dateModel);
-		addSpinner(spinners[4], "Ê± ¼ä ·¶ Î§" , valLabels[4]);
+		addSpinner(spinners[4], "æ—¶ é—´ èŒƒ å›´" , valLabels[4]);
 
-		//-----------Ê¹ÓÃDateEditorÀ´¸ñÊ½»¯Spinner------------
+		//-----------ä½¿ç”¨DateEditoræ¥æ ¼å¼åŒ–Spinner------------
 		dateModel = new SpinnerDateModel();
 		spinners[5] = new JSpinner(dateModel);
-		//´´½¨Ò»¸öJSpinner.DateEditor¶ÔÏó£¬ÓÃÓÚ¶ÔÖ¸¶¨Spinner½øĞĞ¸ñÊ½»¯
+		//åˆ›å»ºä¸€ä¸ªJSpinner.DateEditorå¯¹è±¡ï¼Œç”¨äºå¯¹æŒ‡å®šSpinnerè¿›è¡Œæ ¼å¼åŒ–
 		JSpinner.DateEditor editor = new JSpinner.DateEditor(spinners[5],
-			"¹«ÔªyyyyÄêMMÔÂddÈÕ HHÊ±");
-		//ÉèÖÃÊ¹ÓÃJSpinner.DateEditor¶ÔÏó½øĞĞ¸ñÊ½»¯
+			"å…¬å…ƒyyyyå¹´MMæœˆddæ—¥ HHæ—¶");
+		//è®¾ç½®ä½¿ç”¨JSpinner.DateEditorå¯¹è±¡è¿›è¡Œæ ¼å¼åŒ–
 		spinners[5].setEditor(editor);
-		addSpinner(spinners[5], "Ê¹ÓÃDateEditor" , valLabels[5]);
-		//Îª¡°È·¶¨¡±°´Å¥Ìí¼ÓÒ»¸öÊÂ¼ş¼àÌıÆ÷
+		addSpinner(spinners[5], "ä½¿ç”¨DateEditor" , valLabels[5]);
+		//ä¸ºâ€œç¡®å®šâ€æŒ‰é’®æ·»åŠ ä¸€ä¸ªäº‹ä»¶ç›‘å¬å™¨
 		okBn.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent evt)
 			{
-				//È¡³öÃ¿¸öÎ¢µ÷¿ØÖÆÆ÷µÄÖµ£¬²¢½«¸ÃÖµÓÃºóÃæµÄLabel±êÇ©ÏÔÊ¾³öÀ´¡£
+				//å–å‡ºæ¯ä¸ªå¾®è°ƒæ§åˆ¶å™¨çš„å€¼ï¼Œå¹¶å°†è¯¥å€¼ç”¨åé¢çš„Labelæ ‡ç­¾æ˜¾ç¤ºå‡ºæ¥ã€‚
 				for (int i = 0 ; i < SPINNER_NUM ; i++)
 				{
 					valLabels[i].setText(spinners[i].getValue().toString());
@@ -106,12 +106,12 @@ public class TestJSpinner
 		mainWin.setVisible(true);
 	
 	}
-	//¶¨ÒåÒ»¸ö·½·¨£¬ÓÃÓÚ½«»¬¶¯ÌõÌí¼Óµ½ÈİÆ÷ÖĞ
+	//å®šä¹‰ä¸€ä¸ªæ–¹æ³•ï¼Œç”¨äºå°†æ»‘åŠ¨æ¡æ·»åŠ åˆ°å®¹å™¨ä¸­
 	public void addSpinner(JSpinner spinner, String description
 		,JLabel valLabel)
 	{
 		Box box = new Box(BoxLayout.X_AXIS);
-		JLabel desc = new JLabel(description + "£º");
+		JLabel desc = new JLabel(description + "ï¼š");
 		desc.setPreferredSize(new Dimension(100 , 30));
 		box.add(desc);
 		box.add(spinner);

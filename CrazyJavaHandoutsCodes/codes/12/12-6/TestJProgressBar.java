@@ -13,11 +13,11 @@ import java.awt.event.*;
  */
 public class TestJProgressBar
 {
-	JFrame frame = new JFrame("²âÊÔ½ø¶ÈÌõ");
-	//´´½¨Ò»Ìõ´¹Ö±½ø¶ÈÌõ
+	JFrame frame = new JFrame("æµ‹è¯•è¿›åº¦æ¡");
+	//åˆ›å»ºä¸€æ¡å‚ç›´è¿›åº¦æ¡
 	JProgressBar bar = new JProgressBar(JProgressBar.VERTICAL );
-	JCheckBox indeterminate = new JCheckBox("²»È·¶¨½ø¶È");
-	JCheckBox noBorder = new JCheckBox("²»»æÖÆ±ß¿ò");
+	JCheckBox indeterminate = new JCheckBox("ä¸ç¡®å®šè¿›åº¦");
+	JCheckBox noBorder = new JCheckBox("ä¸ç»˜åˆ¶è¾¹æ¡†");
 	public void init()
 	{
 		Box box = new Box(BoxLayout.Y_AXIS);
@@ -25,18 +25,18 @@ public class TestJProgressBar
 		box.add(noBorder);
 		frame.setLayout(new FlowLayout());
 		frame.add(box);
-		//°Ñ½ø¶ÈÌõÌí¼Óµ½JFrame´°¿ÚÖĞ
+		//æŠŠè¿›åº¦æ¡æ·»åŠ åˆ°JFrameçª—å£ä¸­
 		frame.add(bar);
-		//ÉèÖÃ½ø¶ÈÌõµÄ×î´óÖµºÍ×îĞ¡Öµ
+		//è®¾ç½®è¿›åº¦æ¡çš„æœ€å¤§å€¼å’Œæœ€å°å€¼
 		bar.setMinimum(0); 
 		bar.setMaximum(100);
-		//ÉèÖÃÔÚ½ø¶ÈÌõÖĞ»æÖÆÍê³É°Ù·Ö±È
+		//è®¾ç½®åœ¨è¿›åº¦æ¡ä¸­ç»˜åˆ¶å®Œæˆç™¾åˆ†æ¯”
 		bar.setStringPainted(true);
 		noBorder.addActionListener(new ActionListener()
 		{  
 			public void actionPerformed(ActionEvent event)
 			{
-				//¸ù¾İ¸ÃÑ¡Ôñ¿ò¾ö¶¨ÊÇ·ñ»æÖÆ½ø¶ÈÌõµÄ±ß¿ò
+				//æ ¹æ®è¯¥é€‰æ‹©æ¡†å†³å®šæ˜¯å¦ç»˜åˆ¶è¿›åº¦æ¡çš„è¾¹æ¡†
 				bar.setBorderPainted(!noBorder.isSelected());
 			}
 		});
@@ -44,7 +44,7 @@ public class TestJProgressBar
 		{  
 			public void actionPerformed(ActionEvent event)
 			{
-				//ÉèÖÃ¸Ã½ø¶ÈÌõµÄ½ø¶ÈÊÇ·ñÈ·¶¨
+				//è®¾ç½®è¯¥è¿›åº¦æ¡çš„è¿›åº¦æ˜¯å¦ç¡®å®š
 				bar.setIndeterminate(indeterminate.isSelected());
 				bar.setStringPainted(!indeterminate.isSelected());
 			}
@@ -52,10 +52,10 @@ public class TestJProgressBar
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
-		//²ÉÓÃÑ­»··½Ê½À´²»¶Ï¸Ä±ä½ø¶ÈÌõµÄÍê³É½ø¶È
+		//é‡‡ç”¨å¾ªç¯æ–¹å¼æ¥ä¸æ–­æ”¹å˜è¿›åº¦æ¡çš„å®Œæˆè¿›åº¦
 		for (int i = 0 ; i <= 100 ; i++)
 		{
-			//¸Ä±ä½ø¶ÈÌõµÄÍê³É½ø¶È
+			//æ”¹å˜è¿›åº¦æ¡çš„å®Œæˆè¿›åº¦
 			bar.setValue(i);
 			try
 			{

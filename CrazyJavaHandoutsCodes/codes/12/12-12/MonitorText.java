@@ -17,55 +17,55 @@ import java.awt.event.*;
  */
 public class MonitorText
 {
-	JFrame mainWin = new JFrame("¼àÌıDocument¶ÔÏó");
+	JFrame mainWin = new JFrame("ç›‘å¬Documentå¯¹è±¡");
 	JTextArea target = new JTextArea(4, 35);
 	JTextArea msg = new JTextArea(5, 35);
-	JLabel label = new JLabel("ÎÄ±¾ÓòµÄĞŞ¸ÄĞÅÏ¢");
+	JLabel label = new JLabel("æ–‡æœ¬åŸŸçš„ä¿®æ”¹ä¿¡æ¯");
 	Document doc = target.getDocument();
-	//±£´æ³·Ïú²Ù×÷µÄList¶ÔÏó
+	//ä¿å­˜æ’¤é”€æ“ä½œçš„Listå¯¹è±¡
 	LinkedList<UndoableEdit> undoList = new LinkedList<UndoableEdit>();
-	//×î¶àÔÊĞí³·Ïú¶àÉÙ´Î
+	//æœ€å¤šå…è®¸æ’¤é”€å¤šå°‘æ¬¡
 	final int UNDO_TIME = 20;
 
 	public void init()
 	{
 		msg.setEditable(false);
-		//Ìí¼ÓDocumentListener
+		//æ·»åŠ DocumentListener
 		doc.addDocumentListener(new DocumentListener()
 		{
-			//µ±DocumentµÄÊôĞÔ»òÊôĞÔ¼¯·¢ÉúÁË¸Ä±äÊ±´¥·¢¸Ã·½·¨
+			//å½“Documentçš„å±æ€§æˆ–å±æ€§é›†å‘ç”Ÿäº†æ”¹å˜æ—¶è§¦å‘è¯¥æ–¹æ³•
 			public void changedUpdate(DocumentEvent e)
 			{
 			}
-			//µ±ÏòDocumentÖĞ²åÈëÎÄ±¾Ê±´¥·¢¸Ã·½·¨
+			//å½“å‘Documentä¸­æ’å…¥æ–‡æœ¬æ—¶è§¦å‘è¯¥æ–¹æ³•
 			public void insertUpdate(DocumentEvent e)
 			{
 				int offset = e.getOffset();
 				int len = e.getLength();
-				//È¡µÃ²åÈëÊÂ¼şµÄÎ»ÖÃ
-				msg.append("²åÈëÎÄ±¾µÄ³¤¶È£º" + len + "\n");
-				msg.append("²åÈëÎÄ±¾µÄÆğÊ¼Î»ÖÃ£º" + offset + "\n");
+				//å–å¾—æ’å…¥äº‹ä»¶çš„ä½ç½®
+				msg.append("æ’å…¥æ–‡æœ¬çš„é•¿åº¦ï¼š" + len + "\n");
+				msg.append("æ’å…¥æ–‡æœ¬çš„èµ·å§‹ä½ç½®ï¼š" + offset + "\n");
 				try 
 				{
-					msg.append("²åÈëÎÄ±¾ÄÚÈİ£º" + doc.getText(offset, len) + "\n");
+					msg.append("æ’å…¥æ–‡æœ¬å†…å®¹ï¼š" + doc.getText(offset, len) + "\n");
 				}
 				catch (BadLocationException evt)
 				{
 					evt.printStackTrace();
 				}
 			}
-			//µ±´ÓDocumentÖĞÉ¾³ıÎÄ±¾Ê±´¥·¢¸Ã·½·¨
+			//å½“ä»Documentä¸­åˆ é™¤æ–‡æœ¬æ—¶è§¦å‘è¯¥æ–¹æ³•
 			public void removeUpdate(DocumentEvent e)  
 			{
 				int offset = e.getOffset();
 				int len = e.getLength();
-				//È¡µÃ²åÈëÊÂ¼şµÄÎ»ÖÃ
-				msg.append("É¾³ıÎÄ±¾µÄ³¤¶È£º" + len + "\n");
-				msg.append("É¾³ıÎÄ±¾µÄÆğÊ¼Î»ÖÃ£º" + offset + "\n");
+				//å–å¾—æ’å…¥äº‹ä»¶çš„ä½ç½®
+				msg.append("åˆ é™¤æ–‡æœ¬çš„é•¿åº¦ï¼š" + len + "\n");
+				msg.append("åˆ é™¤æ–‡æœ¬çš„èµ·å§‹ä½ç½®ï¼š" + offset + "\n");
 			}
 
 		});
-		//Ìí¼Ó¿É³·Ïú²Ù×÷µÄ¼àÌıÆ÷
+		//æ·»åŠ å¯æ’¤é”€æ“ä½œçš„ç›‘å¬å™¨
 		doc.addUndoableEditListener(new UndoableEditListener()
 		{
 			public void undoableEditHappened(UndoableEditEvent e) 
@@ -73,30 +73,30 @@ public class MonitorText
 				UndoableEdit edit = e.getEdit();
 				if (edit.canUndo() && undoList.size() < UNDO_TIME)
 				{
-					//½«³·Ïú²Ù×÷×°ÈëListÄÚ
+					//å°†æ’¤é”€æ“ä½œè£…å…¥Listå†…
 					undoList.add(edit);
 				}
-				//ÒÑ¾­´ïµ½ÁË×î´ó³·Ïú´ÎÊı
+				//å·²ç»è¾¾åˆ°äº†æœ€å¤§æ’¤é”€æ¬¡æ•°
 				else if (edit.canUndo() && undoList.size() >= UNDO_TIME)
 				{
-					//µ¯³öµÚÒ»¸ö³·Ïú²Ù×÷
+					//å¼¹å‡ºç¬¬ä¸€ä¸ªæ’¤é”€æ“ä½œ
 					undoList.pop();
-					//½«³·Ïú²Ù×÷×°ÈëListÄÚ
+					//å°†æ’¤é”€æ“ä½œè£…å…¥Listå†…
 					undoList.add(edit);
 				}
 			}
 		});
-		//ÎªCtrl+ZÌí¼Ó¼àÌıÆ÷
+		//ä¸ºCtrl+Zæ·»åŠ ç›‘å¬å™¨
 		target.addKeyListener(new KeyAdapter()
 		{
 			public void keyTyped(KeyEvent e) 
 			{
-				//Èç¹û°´¼üÊÇCtrl + Z
+				//å¦‚æœæŒ‰é”®æ˜¯Ctrl + Z
 				if (e.getKeyChar() == '') 
 				{
 					if (undoList.size() > 0)
 					{
-						//ÒÆ³ö×îºóÒ»¸ö¿É³·Ïú²Ù×÷£¬²¢È¡Ïû¸Ã²Ù×÷
+						//ç§»å‡ºæœ€åä¸€ä¸ªå¯æ’¤é”€æ“ä½œï¼Œå¹¶å–æ¶ˆè¯¥æ“ä½œ
 						undoList.removeLast().undo();
 					}
 				}
