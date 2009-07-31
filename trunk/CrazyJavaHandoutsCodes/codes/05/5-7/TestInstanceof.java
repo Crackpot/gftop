@@ -13,19 +13,19 @@ public class TestInstanceof
 {
 	public static void main(String[] args) 
 	{
-		//ÉùÃ÷helloÊ±Ê¹ÓÃObjectÀà£¬ÔòhelloµÄ±àÒëÀàĞÍÊÇObject£¬ObjectÊÇËùÓĞÀàµÄ¸¸Àà
-		//µ«hello±äÁ¿µÄÊµ¼ÊÀàĞÍÊÇString
+		//å£°æ˜helloæ—¶ä½¿ç”¨Objectç±»ï¼Œåˆ™helloçš„ç¼–è¯‘ç±»å‹æ˜¯Objectï¼ŒObjectæ˜¯æ‰€æœ‰ç±»çš„çˆ¶ç±»
+		//ä½†helloå˜é‡çš„å®é™…ç±»å‹æ˜¯String
 		Object hello = "Hello";
-		//StringÊÇObjectÀàµÄ×ÓÀà£¬ËùÒÔ·µ»Øtrue¡£
-		System.out.println("×Ö·û´®ÊÇ·ñÊÇObjectÀàµÄÊµÀı£º" + (hello instanceof Object));
-		//·µ»Øtrue¡£
-		System.out.println("×Ö·û´®ÊÇ·ñÊÇStringÀàµÄÊµÀı£º" + (hello instanceof String));
-		//·µ»Øfalse¡£
-		System.out.println("×Ö·û´®ÊÇ·ñÊÇMathÀàµÄÊµÀı£º" + (hello instanceof Math));
-		//StringÊµÏÖÁËComparable½Ó¿Ú£¬ËùÒÔ·µ»Øtrue¡£
-		System.out.println("×Ö·û´®ÊÇ·ñÊÇComparable½Ó¿ÚµÄÊµÀı£º" + (hello instanceof Comparable));
+		//Stringæ˜¯Objectç±»çš„å­ç±»ï¼Œæ‰€ä»¥è¿”å›trueã€‚
+		System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Objectç±»çš„å®ä¾‹ï¼š" + (hello instanceof Object));
+		//è¿”å›trueã€‚
+		System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Stringç±»çš„å®ä¾‹ï¼š" + (hello instanceof String));
+		//è¿”å›falseã€‚
+		System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Mathç±»çš„å®ä¾‹ï¼š" + (hello instanceof Math));
+		//Stringå®ç°äº†Comparableæ¥å£ï¼Œæ‰€ä»¥è¿”å›trueã€‚
+		System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Comparableæ¥å£çš„å®ä¾‹ï¼š" + (hello instanceof Comparable));
 		String a = "Hello";
-		//StringÀà¼È²»ÊÇMathÀà£¬Ò²²»ÊÇMathÀàµÄ¸¸Àà£¬ËùÒÔÏÂÃæ´úÂë±àÒëÎŞ·¨Í¨¹ı
-		System.out.println("×Ö·û´®ÊÇ·ñÊÇMathÀàµÄÊµÀı£º" + (a instanceof Math));
+		//Stringç±»æ—¢ä¸æ˜¯Mathç±»ï¼Œä¹Ÿä¸æ˜¯Mathç±»çš„çˆ¶ç±»ï¼Œæ‰€ä»¥ä¸‹é¢ä»£ç ç¼–è¯‘æ— æ³•é€šè¿‡
+		System.out.println("å­—ç¬¦ä¸²æ˜¯å¦æ˜¯Mathç±»çš„å®ä¾‹ï¼š" + (a instanceof Math));
 	}
 }

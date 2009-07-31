@@ -14,8 +14,8 @@ public class InnerNoStatic
 	private class InnerClass
 	{
 		/*
-		ÏÂÃæÈý¸ö¾²Ì¬ÉùÃ÷¶¼½«Òý·¢ÈçÏÂ±àÒë´íÎó:
-		·Ç¾²Ì¬ÄÚ²¿Àà²»ÄÜÓÐ¾²Ì¬ÉùÃ÷
+		ä¸‹é¢ä¸‰ä¸ªé™æ€å£°æ˜Žéƒ½å°†å¼•å‘å¦‚ä¸‹ç¼–è¯‘é”™è¯¯:
+		éžé™æ€å†…éƒ¨ç±»ä¸èƒ½æœ‰é™æ€å£°æ˜Ž
 		*/
 		static
 		{

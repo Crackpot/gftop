@@ -13,18 +13,18 @@ public class TestForeach
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸ö¼¯ºÏ
+		//åˆ›å»ºä¸€ä¸ªé›†åˆ
 		Collection books = new HashSet();
-		books.add(new String("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½"));
-		books.add(new String("Struts2È¨ÍşÖ¸ÄÏ"));
-		books.add(new String("»ùÓÚJ2EEµÄAjax±¦µä"));
+		books.add(new String("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+		books.add(new String("Struts2æƒå¨æŒ‡å—"));
+		books.add(new String("åŸºäºJ2EEçš„Ajaxå®å…¸"));
 		for (Object obj : books)
 		{
 			String book = (String)obj;
 			System.out.println(book);
-			if (book.equals("Struts2È¨ÍşÖ¸ÄÏ"))
+			if (book.equals("Struts2æƒå¨æŒ‡å—"))
 			{
-				//ÏÂÃæ´úÂë»áÒı·¢ConcurrentModificationExceptionÒì³£
+				//ä¸‹é¢ä»£ç ä¼šå¼•å‘ConcurrentModificationExceptionå¼‚å¸¸
 				books.remove(book);
 			}
 		}

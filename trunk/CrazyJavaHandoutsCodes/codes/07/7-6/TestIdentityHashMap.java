@@ -14,9 +14,9 @@ public class TestIdentityHashMap
 	public static void main(String[] args) 
 	{
 		IdentityHashMap ihm = new IdentityHashMap();
-		//ÏÂÃæÁ½ĞĞ´úÂë½«»áÏòIdentityHashMap¶ÔÏóÖĞÌí¼Ó2¸ökey-value¶Ô
-		ihm.put(new String("ÓïÎÄ") , 89);
-		ihm.put(new String("ÓïÎÄ") , 78);
+		//ä¸‹é¢ä¸¤è¡Œä»£ç å°†ä¼šå‘IdentityHashMapå¯¹è±¡ä¸­æ·»åŠ 2ä¸ªkey-valueå¯¹
+		ihm.put(new String("è¯­æ–‡") , 89);
+		ihm.put(new String("è¯­æ–‡") , 78);
 		ihm.put("java" , 93);
 		ihm.put("java" , 98);
 		System.out.println(ihm);

@@ -11,9 +11,9 @@
  */
 public class AuctionException extends Exception
 {
-	//异常类无参数的构造器
+	//寮傚父绫绘棤鍙傛暟鐨勬瀯閫犲櫒
 	public AuctionException(){}
-	//带一个字符串参数的构造器
+	//甯︿竴涓瓧绗︿覆鍙傛暟鐨勬瀯閫犲櫒
 	public AuctionException(String msg)
 	{
 		super(msg);

@@ -16,13 +16,13 @@ public class TestSet
 	public static void main(String[] args) 
 	{
 		Set books = new HashSet();
-		//Ìí¼ÓÒ»¸ö×Ö·û´®¶ÔÏó
-		books.add(new String("Struts2È¨ÍşÖ¸ÄÏ"));
-		//ÔÙ´ÎÌí¼ÓÒ»¸ö×Ö·û´®¶ÔÏó£¬
-		//ÒòÎªÁ½¸ö×Ö·û´®¶ÔÏóÍ¨¹ıequals·½·¨±È½ÏÏàµÈ£¬ËùÒÔÌí¼ÓÊ§°Ü£¬·µ»Øfalse
-		boolean result = books.add(new String("Struts2È¨ÍşÖ¸ÄÏ"));
+		//æ·»åŠ ä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡
+		books.add(new String("Struts2æƒå¨æŒ‡å—"));
+		//å†æ¬¡æ·»åŠ ä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡ï¼Œ
+		//å› ä¸ºä¸¤ä¸ªå­—ç¬¦ä¸²å¯¹è±¡é€šè¿‡equalsæ–¹æ³•æ¯”è¾ƒç›¸ç­‰ï¼Œæ‰€ä»¥æ·»åŠ å¤±è´¥ï¼Œè¿”å›false
+		boolean result = books.add(new String("Struts2æƒå¨æŒ‡å—"));
 		System.out.println(result);
-		//ÏÂÃæÊä³ö¿´µ½¼¯ºÏÖ»ÓĞÒ»¸öÔªËØ
+		//ä¸‹é¢è¾“å‡ºçœ‹åˆ°é›†åˆåªæœ‰ä¸€ä¸ªå…ƒç´ 
 		System.out.println(books);	
 	}
 }

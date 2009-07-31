@@ -13,8 +13,8 @@ public class StatusTranfer
 {
 	public static void test()
 	{
-		String a = new String("轻量级J2EE企业应用实战");
-		a = new String("Struts2权威指南");
+		String a = new String("杞婚噺绾2EE浼佷笟搴旂敤瀹炴垬");
+		a = new String("Struts2鏉冨▉鎸囧崡");
 	}
 	public static void main(String[] args) 
 	{

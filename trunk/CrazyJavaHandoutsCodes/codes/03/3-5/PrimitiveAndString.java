@@ -13,15 +13,15 @@ public class PrimitiveAndString
 {
 	public static void main(String[] args) 
 	{
-		//ÏÂÃæ´úÂëÊÇ´íµÄ£¬ÒòÎª5ÊÇÒ»¸öÕûÊý£¬²»ÄÜÖ±½Ó¸³¸øÒ»¸ö×Ö·û´®
+		//ä¸‹é¢ä»£ç æ˜¯é”™çš„ï¼Œå› ä¸º5æ˜¯ä¸€ä¸ªæ•´æ•°ï¼Œä¸èƒ½ç›´æŽ¥èµ‹ç»™ä¸€ä¸ªå­—ç¬¦ä¸²
 		//String str1 = 5;
-		//Ò»¸ö»ù±¾ÀàÐÍÖµºÍ×Ö·û´®½øÐÐÁ¬½ÓÔËËãÊ±£¬»ù±¾ÀàÐÍÖµ×Ô¶¯×ª»»Îª×Ö·û´®
+		//ä¸€ä¸ªåŸºæœ¬ç±»åž‹å€¼å’Œå­—ç¬¦ä¸²è¿›è¡Œè¿žæŽ¥è¿ç®—æ—¶ï¼ŒåŸºæœ¬ç±»åž‹å€¼è‡ªåŠ¨è½¬æ¢ä¸ºå­—ç¬¦ä¸²
 		String str2 = 3.5f + "";
-		//ÏÂÃæÊä³ö3.5
+		//ä¸‹é¢è¾“å‡º3.5
 		System.out.println(str2);
-		//ÏÂÃæÓï¾äÊä³ö7Hello!
+		//ä¸‹é¢è¯­å¥è¾“å‡º7Hello!
 		System.out.println(3 + 4 + "Hello!");
-		//ÏÂÃæÓï¾äÊä³öHello!34£¬ÒòÎªHello! + 3»á°Ñ3µ±³É×Ö·û´®´¦Àí£¬¶øºóÔÙ°Ñ4µ±³É×Ö·û´®´¦Àí
+		//ä¸‹é¢è¯­å¥è¾“å‡ºHello!34ï¼Œå› ä¸ºHello! + 3ä¼šæŠŠ3å½“æˆå­—ç¬¦ä¸²å¤„ç†ï¼Œè€ŒåŽå†æŠŠ4å½“æˆå­—ç¬¦ä¸²å¤„ç†
 		System.out.println("Hello!" + 3 + 4);
 
 	}

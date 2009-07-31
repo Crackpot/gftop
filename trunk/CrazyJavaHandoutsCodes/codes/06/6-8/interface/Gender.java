@@ -10,23 +10,23 @@
  */
 public enum Gender implements GenderDesc
 {
-	//´Ë´¦µÄÃ¶¾ÙÖµ±ØĞëµ÷ÓÃ¶ÔÓ¦¹¹ÔìÆ÷À´´´½¨
-	MALE("ÄĞ")
+	//æ­¤å¤„çš„æšä¸¾å€¼å¿…é¡»è°ƒç”¨å¯¹åº”æ„é€ å™¨æ¥åˆ›å»º
+	MALE("ç”·")
 	{
 		public void info()
 		{
-			System.out.println("Õâ¸öÃ¶¾ÙÖµ´ú±íÄĞĞÔ");
+			System.out.println("è¿™ä¸ªæšä¸¾å€¼ä»£è¡¨ç”·æ€§");
 		}
 	},
-	FEMALE("Å®")
+	FEMALE("å¥³")
 	{	
 		public void info()
 		{
-			System.out.println("Õâ¸öÃ¶¾ÙÖµ´ú±íÅ®ĞÔ");
+			System.out.println("è¿™ä¸ªæšä¸¾å€¼ä»£è¡¨å¥³æ€§");
 		}
 	};
 	private String name;
-	//Ã¶¾ÙÀàµÄ¹¹ÔìÆ÷Ö»ÄÜÊ¹ÓÃprivateĞŞÊÎ
+	//æšä¸¾ç±»çš„æ„é€ å™¨åªèƒ½ä½¿ç”¨privateä¿®é¥°
 	private Gender(String name)
 	{
 		this.name = name;
@@ -38,7 +38,7 @@ public enum Gender implements GenderDesc
 	/*
 	public void info()
 	{
-		System.out.println("ÕâÊÇÒ»¸öÓÃÓÚÓÃÓÚ¶¨ÒåĞÔ±ğÊôĞÔµÄÃ¶¾ÙÀà");
+		System.out.println("è¿™æ˜¯ä¸€ä¸ªç”¨äºç”¨äºå®šä¹‰æ€§åˆ«å±æ€§çš„æšä¸¾ç±»");
 	}
 	*/
 }

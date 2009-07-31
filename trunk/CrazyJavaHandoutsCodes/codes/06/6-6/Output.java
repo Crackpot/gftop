@@ -11,9 +11,9 @@ package lee;
  */
 public interface Output
 {
-	//½Ó¿ÚÀï¶¨ÒåµÄÊôĞÔÖ»ÄÜÊÇ³£Á¿
+	//æ¥å£é‡Œå®šä¹‰çš„å±æ€§åªèƒ½æ˜¯å¸¸é‡
 	int MAX_CACHE_LINE = 50;
-	//½Ó¿ÚÀï¶¨ÒåµÄÖ»ÄÜÊÇpublicµÄ³éÏóÊµÀı·½·¨
+	//æ¥å£é‡Œå®šä¹‰çš„åªèƒ½æ˜¯publicçš„æŠ½è±¡å®ä¾‹æ–¹æ³•
 	void out();
 	void getData(String msg);
 }

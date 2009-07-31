@@ -17,7 +17,7 @@ public class TestTreeSetError
 	public static void main(String[] args) 
 	{
 		TreeSet ts = new TreeSet();
-		//向TreeSet集合中添加两个Err对象
+		//鍚慣reeSet闆嗗悎涓坊鍔犱袱涓狤rr瀵硅薄
 		ts.add(new Err());
 		ts.add(new Err());
 	}

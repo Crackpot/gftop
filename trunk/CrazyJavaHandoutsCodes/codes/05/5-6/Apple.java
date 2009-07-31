@@ -13,12 +13,12 @@ public class Apple extends Fruit
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨AppleµÄ¶ÔÏó
+		//åˆ›å»ºAppleçš„å¯¹è±¡
 		Apple a = new Apple();
-		//Apple¶ÔÏó±¾ÉíÃ»ÓĞweightÊôĞÔ¡£
-		//ÒòÎªAppleµÄ¸¸ÀàÓĞweightÊôĞÔ£¬Ò²¿ÉÒÔ·ÃÎÊApple¶ÔÏóµÄÊôĞÔ¡£
+		//Appleå¯¹è±¡æœ¬èº«æ²¡æœ‰weightå±æ€§ã€‚
+		//å› ä¸ºAppleçš„çˆ¶ç±»æœ‰weightå±æ€§ï¼Œä¹Ÿå¯ä»¥è®¿é—®Appleå¯¹è±¡çš„å±æ€§ã€‚
 		a.weight = 56;
-		//µ÷ÓÃApple¶ÔÏóµÄinfo·½·¨
+		//è°ƒç”¨Appleå¯¹è±¡çš„infoæ–¹æ³•
 		a.info();
 	}
 }

@@ -14,7 +14,7 @@ public class TestGreed
 	public static void main(String[] args) 
 	{
 		String str = "hello , java!";
-		System.out.println(str.replaceFirst("\\w*" , "¡ö"));
-		System.out.println(str.replaceFirst("\\w*?" , "¡ö"));
+		System.out.println(str.replaceFirst("\\w*" , "â– "));
+		System.out.println(str.replaceFirst("\\w*?" , "â– "));
 	}
 }

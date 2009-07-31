@@ -11,12 +11,12 @@ package lee;
 public class TestJavadoc
 {
 	/**
-	 * ¼òµ¥²âÊÔÊôĞÔ
+	 * ç®€å•æµ‹è¯•å±æ€§
 	 */
 	protected String name;
 
 	/**
-	 * Ö÷·½·¨£¬³ÌĞòµÄÈë¿Ú
+	 * ä¸»æ–¹æ³•ï¼Œç¨‹åºçš„å…¥å£
 	 */
 	public static void main(String[] args) 
 	{

@@ -14,10 +14,10 @@ public class TestLinkedHashMap
 	public static void main(String[] args) 
 	{
 		LinkedHashMap scores = new LinkedHashMap();
-		scores.put("ÓïÎÄ" , 80);
-		scores.put("ÊýÑ§" , 76);
-		scores.put("Ó¢ÎÄ" , 76);
-		//±éÀúscoresÀïµÄËùÓÐµÄkey-value¶Ô
+		scores.put("è¯­æ–‡" , 80);
+		scores.put("æ•°å­¦" , 76);
+		scores.put("è‹±æ–‡" , 76);
+		//éåŽ†scoresé‡Œçš„æ‰€æœ‰çš„key-valueå¯¹
 		for (Object key : scores.keySet())
 		{
 			System.out.print(key + "------>");

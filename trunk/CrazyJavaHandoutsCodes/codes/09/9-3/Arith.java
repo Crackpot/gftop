@@ -12,15 +12,15 @@ import java.math.BigDecimal;
 
 public class Arith
 {
-	//Ä¬ÈÏ³ı·¨ÔËËã¾«¶È
+	//é»˜è®¤é™¤æ³•è¿ç®—ç²¾åº¦
 	private static final int DEF_DIV_SCALE = 10;
-	//¹¹ÔìÆ÷Ë½ÓĞ£¬ÈÃÕâ¸öÀà²»ÄÜÊµÀı»¯
+	//æ„é€ å™¨ç§æœ‰ï¼Œè®©è¿™ä¸ªç±»ä¸èƒ½å®ä¾‹åŒ–
 	private Arith()	{} 
 	/**
-	 * Ìá¹©¾«È·µÄ¼Ó·¨ÔËËã¡£
-	 * @param v1 ±»¼ÓÊı
-	 * @param v2 ¼ÓÊı
-	 * @return Á½¸ö²ÎÊıµÄºÍ
+	 * æä¾›ç²¾ç¡®çš„åŠ æ³•è¿ç®—ã€‚
+	 * @param v1 è¢«åŠ æ•°
+	 * @param v2 åŠ æ•°
+	 * @return ä¸¤ä¸ªå‚æ•°çš„å’Œ
 	 */
 	public static double add(double v1,double v2)
 	{
@@ -29,10 +29,10 @@ public class Arith
 		return b1.add(b2).doubleValue();
 	}
 	/**
-	 * Ìá¹©¾«È·µÄ¼õ·¨ÔËËã¡£
-	 * @param v1 ±»¼õÊı
-	 * @param v2 ¼õÊı
-	 * @return Á½¸ö²ÎÊıµÄ²î
+	 * æä¾›ç²¾ç¡®çš„å‡æ³•è¿ç®—ã€‚
+	 * @param v1 è¢«å‡æ•°
+	 * @param v2 å‡æ•°
+	 * @return ä¸¤ä¸ªå‚æ•°çš„å·®
 	 */
 	public static double sub(double v1,double v2)
 	{
@@ -41,10 +41,10 @@ public class Arith
 		return b1.subtract(b2).doubleValue();
 	} 
 	/**
-	 * Ìá¹©¾«È·µÄ³Ë·¨ÔËËã¡£
-	 * @param v1 ±»³ËÊı
-	 * @param v2 ³ËÊı
-	 * @return Á½¸ö²ÎÊıµÄ»ı
+	 * æä¾›ç²¾ç¡®çš„ä¹˜æ³•è¿ç®—ã€‚
+	 * @param v1 è¢«ä¹˜æ•°
+	 * @param v2 ä¹˜æ•°
+	 * @return ä¸¤ä¸ªå‚æ•°çš„ç§¯
 	 */
 	public static double mul(double v1,double v2)
 	{
@@ -53,11 +53,11 @@ public class Arith
 		return b1.multiply(b2).doubleValue();
 	} 
 	/**
-	 * Ìá¹©£¨Ïà¶Ô£©¾«È·µÄ³ı·¨ÔËËã£¬µ±·¢Éú³ı²»¾¡µÄÇé¿öÊ±£¬¾«È·µ½
-	 * Ğ¡ÊıµãÒÔºó10Î»µÄÊı×ÖËÄÉáÎåÈë¡£
-	 * @param v1 ±»³ıÊı
-	 * @param v2 ³ıÊı
-	 * @return Á½¸ö²ÎÊıµÄÉÌ
+	 * æä¾›ï¼ˆç›¸å¯¹ï¼‰ç²¾ç¡®çš„é™¤æ³•è¿ç®—ï¼Œå½“å‘ç”Ÿé™¤ä¸å°½çš„æƒ…å†µæ—¶ï¼Œç²¾ç¡®åˆ°
+	 * å°æ•°ç‚¹ä»¥å10ä½çš„æ•°å­—å››èˆäº”å…¥ã€‚
+	 * @param v1 è¢«é™¤æ•°
+	 * @param v2 é™¤æ•°
+	 * @return ä¸¤ä¸ªå‚æ•°çš„å•†
 	 */
 	public static double div(double v1,double v2)
 	{

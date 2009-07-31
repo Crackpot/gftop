@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class Canvas
 {
-	//同时在画布上绘制多个形状
+	//鍚屾椂鍦ㄧ敾甯冧笂缁樺埗澶氫釜褰㈢姸
 	public void drawAll(List<? extends Shape> shapes)
 	{
 		for (Shape s : shapes)

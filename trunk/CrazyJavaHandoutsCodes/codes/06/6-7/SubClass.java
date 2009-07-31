@@ -11,10 +11,10 @@
  */
 public class SubClass extends Out.In
 {
-	//显示定义SubClass的构造器
+	//鏄剧ず瀹氫箟SubClass鐨勬瀯閫犲櫒
 	public SubClass(Out out)
 	{
-		//通过传入的Out对象显式调用In的构造器
+		//閫氳繃浼犲叆鐨凮ut瀵硅薄鏄惧紡璋冪敤In鐨勬瀯閫犲櫒
 		out.super("hello");
 	}
 }

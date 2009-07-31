@@ -17,10 +17,10 @@ public class TestEnumMap
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸öEnumMap¶ÔÏó£¬¸ÃEnumMapµÄËùÓĞkey±ØĞëÊÇSeasonÃ¶¾ÙÀàµÄÃ¶¾ÙÖµ
+		//åˆ›å»ºä¸€ä¸ªEnumMapå¯¹è±¡ï¼Œè¯¥EnumMapçš„æ‰€æœ‰keyå¿…é¡»æ˜¯Seasonæšä¸¾ç±»çš„æšä¸¾å€¼
 		EnumMap enumMap = new EnumMap(Season.class);
-		enumMap.put(Season.SUMMER , "ÏÄÈÕÑ×Ñ×");
-		enumMap.put(Season.SPRING , "´ºÅ¯»¨¿ª");
+		enumMap.put(Season.SUMMER , "å¤æ—¥ç‚ç‚");
+		enumMap.put(Season.SPRING , "æ˜¥æš–èŠ±å¼€");
 
 		System.out.println(enumMap);
 	}

@@ -14,13 +14,13 @@ public class TestFinalize
 	private static TestFinalize tf = null;
 	public void info()
 	{
-		System.out.println("²âÊÔ×ÊÔ´ÇåÀíµÄfinalize·½·¨");
+		System.out.println("æµ‹è¯•èµ„æºæ¸…ç†çš„finalizeæ–¹æ³•");
 	}
 	public static void main(String[] args) throws Exception
 	{
-		//´´½¨TestFinalize¶ÔÏóÁ¢¼´½øÈëÈ¥»î×´Ì¬
+		//åˆ›å»ºTestFinalizeå¯¹è±¡ç«‹å³è¿›å…¥å»æ´»çŠ¶æ€
 		new TestFinalize();
-		//Í¨ÖªÏµÍ³½øĞĞ×ÊÔ´»ØÊÕ
+		//é€šçŸ¥ç³»ç»Ÿè¿›è¡Œèµ„æºå›æ”¶
 		System.gc();
 		System.runFinalization();
 		//Thread.sleep(2000);
@@ -28,7 +28,7 @@ public class TestFinalize
 	}
 	public void finalize()
 	{
-		//ÈÃtfÒıÓÃµ½ÊÔÍ¼»ØÊÕµÄÈ¥»î¶ÔÏó£¬¼´È¥»î¶ÔÏóÖØĞÂ±ä³É¼¤»î
+		//è®©tfå¼•ç”¨åˆ°è¯•å›¾å›æ”¶çš„å»æ´»å¯¹è±¡ï¼Œå³å»æ´»å¯¹è±¡é‡æ–°å˜æˆæ¿€æ´»
 		tf = this;
 	}
 }

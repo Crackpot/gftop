@@ -10,5 +10,5 @@
  * @version  1.0
  */
 public final class FinalClass{}
-//下面类定义将出现编译错误
+//涓嬮潰绫诲畾涔夊皢鍑虹幇缂栬瘧閿欒
 class Sub extends FinalClass {}

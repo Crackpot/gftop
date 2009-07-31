@@ -14,7 +14,7 @@ public class Address
 	private final String detail;
 	private final String postCode;
 
-	//ÔÚ¹¹ÔìÆ÷Àï³õÊ¼»¯Á½¸öÊµÀıÊôĞÔ
+	//åœ¨æ„é€ å™¨é‡Œåˆå§‹åŒ–ä¸¤ä¸ªå®ä¾‹å±æ€§
 	public Address()
 	{
 		this.detail = "";
@@ -26,7 +26,7 @@ public class Address
 		this.detail = detail;
 		this.postCode = postCode;
 	}
-	//½öÎªÁ½¸öÊµÀıÊôĞÔÌá¹©getter·½·¨
+	//ä»…ä¸ºä¸¤ä¸ªå®ä¾‹å±æ€§æä¾›getteræ–¹æ³•
 	public String getDetail()
 	{
 		 return this.detail;
@@ -36,7 +36,7 @@ public class Address
 	{
 		 return this.postCode;
 	}
-	//ÖØĞ´equals·½·¨£¬ÅĞ¶ÏÁ½¸ö¶ÔÏóÊÇ·ñÏàµÈ¡£
+	//é‡å†™equalsæ–¹æ³•ï¼Œåˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡æ˜¯å¦ç›¸ç­‰ã€‚
 	public boolean equals(Object obj)
 	{
 		if (obj instanceof Address)

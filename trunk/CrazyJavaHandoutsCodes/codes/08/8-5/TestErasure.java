@@ -38,13 +38,13 @@ public class TestErasure
 	public static void main(String[] args)
 	{
 		Apple<Integer> a = new Apple<Integer>(6);
-		//aµÄgetSize·½·¨·µ»ØInteger¶ÔÏó
+		//açš„getSizeæ–¹æ³•è¿”å›Integerå¯¹è±¡
 		Integer as = a.getSize();
-		//°Ña¶ÔÏó¸³¸øApple±äÁ¿£¬»á¶ªÊ§¼âÀ¨ºÅÀïµÄÀàĞÍĞÅÏ¢
+		//æŠŠaå¯¹è±¡èµ‹ç»™Appleå˜é‡ï¼Œä¼šä¸¢å¤±å°–æ‹¬å·é‡Œçš„ç±»å‹ä¿¡æ¯
 		Apple b = a;
-		//bÖ»ÖªµÀsizeµÄÀàĞÍÊÇNumber
+		//båªçŸ¥é“sizeçš„ç±»å‹æ˜¯Number
 		Number size1 = b.getSize();
-		//ÏÂÃæ´úÂëÒıÆğ±àÒë´íÎó
+		//ä¸‹é¢ä»£ç å¼•èµ·ç¼–è¯‘é”™è¯¯
 		//Integer size2 = b.getSize();
 	}
 }

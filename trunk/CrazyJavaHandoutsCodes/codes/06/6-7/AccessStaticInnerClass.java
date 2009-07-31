@@ -19,10 +19,10 @@ public class AccessStaticInnerClass
 	public void accessInnerProp()
 	{
 		//System.out.println(prop1);
-		//ÉÏÃæ´úÂë³öÏÖ´íÎó£¬Ó¦¸ÄÎªÈçÏÂĞÎÊ½£ºÍ¨¹ıÀàÃû·ÃÎÊ¾²Ì¬ÄÚ²¿ÀàµÄÀà³ÉÔ±
+		//ä¸Šé¢ä»£ç å‡ºç°é”™è¯¯ï¼Œåº”æ”¹ä¸ºå¦‚ä¸‹å½¢å¼ï¼šé€šè¿‡ç±»åè®¿é—®é™æ€å†…éƒ¨ç±»çš„ç±»æˆå‘˜
 		System.out.println(StaticInnerClass.prop1);
 		//System.out.println(prop2);
-		//ÉÏÃæ´úÂë³öÏÖ´íÎó£¬Ó¦¸ÄÎªÈçÏÂĞÎÊ½£ºÍ¨¹ıÊµÀı·ÃÎÊ¾²Ì¬ÄÚ²¿ÀàµÄÊµÀı³ÉÔ±
+		//ä¸Šé¢ä»£ç å‡ºç°é”™è¯¯ï¼Œåº”æ”¹ä¸ºå¦‚ä¸‹å½¢å¼ï¼šé€šè¿‡å®ä¾‹è®¿é—®é™æ€å†…éƒ¨ç±»çš„å®ä¾‹æˆå‘˜
 		System.out.println(new StaticInnerClass().prop2);
 	}
 }

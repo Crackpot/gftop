@@ -11,9 +11,9 @@
  */
 public class Bird
 {
-	//Bird类的fly方法
+	//Bird绫荤殑fly鏂规硶
 	public void fly()
 	{
-		System.out.println("我在天空里自由自在地飞翔...");
+		System.out.println("鎴戝湪澶╃┖閲岃嚜鐢辫嚜鍦ㄥ湴椋炵繑...");
 	}
 }

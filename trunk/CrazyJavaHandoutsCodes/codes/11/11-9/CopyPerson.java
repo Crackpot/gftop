@@ -13,25 +13,25 @@ import java.awt.datatransfer.*;
  */
 public class CopyPerson
 {
-	Frame f = new Frame("¸´ÖÆ¶ÔÏó");
-	Button copy = new Button("¸´ÖÆ");
-	Button paste = new Button("Õ³Ìù");
+	Frame f = new Frame("å¤åˆ¶å¯¹è±¡");
+	Button copy = new Button("å¤åˆ¶");
+	Button paste = new Button("ç²˜è´´");
 	TextField name = new TextField(15);
 	TextField age = new TextField(15);
 	TextArea ta = new TextArea(3 , 30);
-	//´´½¨±¾µØµÄ¼ôÌù°å
+	//åˆ›å»ºæœ¬åœ°çš„å‰ªè´´æ¿
 	Clipboard clipboard = new Clipboard("cp");
 	public void init()
 	{
 		Panel p = new Panel();
-		p.add(new Label("ĞÕÃû"));
+		p.add(new Label("å§“å"));
 		p.add(name);
-		p.add(new Label("ÄêÁä"));
+		p.add(new Label("å¹´é¾„"));
 		p.add(age);
 		f.add(p , BorderLayout.NORTH);
 		f.add(ta);
 		Panel bp = new Panel();
-		//Îª¡°¸´ÖÆ¡±°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºâ€œå¤åˆ¶â€æŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		copy.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -39,7 +39,7 @@ public class CopyPerson
 				copyPerson();
 			}
 		});
-		//Îª¡°Õ³Ìù¡±°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºâ€œç²˜è´´â€æŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		paste.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -62,18 +62,18 @@ public class CopyPerson
 	}
 	public void copyPerson()
 	{
-		//ÒÔname,ageÎÄ±¾¿òµÄÄÚÈİ´´½¨Person¶ÔÏó
+		//ä»¥name,ageæ–‡æœ¬æ¡†çš„å†…å®¹åˆ›å»ºPersonå¯¹è±¡
 		Person p = new Person(name.getText() , Integer.parseInt(age.getText()));
-		//½«Person¶ÔÏó·â×°³ÉLocalSelection¶ÔÏó
+		//å°†Personå¯¹è±¡å°è£…æˆLocalSelectionå¯¹è±¡
 		LocalSelection ls = new LocalSelection(p);
-		//½«LocalSelection¶ÔÏó·ÅÈë±¾µØ¼ôÌù°å
+		//å°†LocalSelectionå¯¹è±¡æ”¾å…¥æœ¬åœ°å‰ªè´´æ¿
 		clipboard.setContents(ls , null);
 	}
 	public void readPerson()throws Exception
 	{
-		//´´½¨±£´æPerson¶ÔÏóÒıÓÃµÄDataFlavor¶ÔÏó
+		//åˆ›å»ºä¿å­˜Personå¯¹è±¡å¼•ç”¨çš„DataFlavorå¯¹è±¡
 		DataFlavor peronFlavor = new DataFlavor("application/x-java-jvm-local-objectref;class=Person");
-		//È¡³ö±¾µØ¼ôÌù°åÄÚµÄÄÚÈİ
+		//å–å‡ºæœ¬åœ°å‰ªè´´æ¿å†…çš„å†…å®¹
 		if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor))
 		{
 			Person p = (Person)clipboard.getData(peronFlavor);
@@ -117,6 +117,6 @@ class Person
 	}
 	public String toString()
 	{
-		return "Person¶ÔÏó[ name=" + name + " , age=" + age + " ]";
+		return "Personå¯¹è±¡[ name=" + name + " , age=" + age + " ]";
 	}
 }

@@ -13,16 +13,16 @@ public class TestPanel
 {
 	public static void main(String[] args) 
 	{
-		Frame f = new Frame("²âÊÔ´°¿Ú");
-		//´´½¨Ò»¸öPanel¶ÔÏó
+		Frame f = new Frame("æµ‹è¯•çª—å£");
+		//åˆ›å»ºä¸€ä¸ªPanelå¯¹è±¡
 		Panel p = new Panel();
-		//ÏàPanel¶ÔÏóÖĞÌí¼ÓÁ½¸ö×é¼ş
+		//ç›¸Panelå¯¹è±¡ä¸­æ·»åŠ ä¸¤ä¸ªç»„ä»¶
 		p.add(new TextField(20));
-		p.add(new Button("µ¥»÷ÎÒ"));
+		p.add(new Button("å•å‡»æˆ‘"));
 		f.add(p);
-		//ÉèÖÃ´°¿ÚµÄ´óĞ¡¡¢Î»ÖÃ
+		//è®¾ç½®çª—å£çš„å¤§å°ã€ä½ç½®
 		f.setBounds(30, 30 , 250, 120);
-		//½«´°¿ÚÏÔÊ¾³öÀ´£¨Frame¶ÔÏóÄ¬ÈÏ´¦ÓÚÒş²Ø×´Ì¬£©
+		//å°†çª—å£æ˜¾ç¤ºå‡ºæ¥ï¼ˆFrameå¯¹è±¡é»˜è®¤å¤„äºéšè—çŠ¶æ€ï¼‰
 		f.setVisible(true);
 	}
 }

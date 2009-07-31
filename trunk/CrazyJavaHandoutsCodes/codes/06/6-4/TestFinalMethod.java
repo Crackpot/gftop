@@ -16,6 +16,6 @@ public class TestFinalMethod
 
 class Sub extends TestFinalMethod
 {
-	//下面方法定义将出现编译错误，不能重写final方法
+	//涓嬮潰鏂规硶瀹氫箟灏嗗嚭鐜扮紪璇戦敊璇紝涓嶈兘閲嶅啓final鏂规硶
 	public void test(){}
 }

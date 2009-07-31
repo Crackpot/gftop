@@ -9,14 +9,14 @@ import java.util.*;
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//¶¨ÒåAppleÀàÊ±Ê¹ÓÃÁË·ºĞÍÉùÃ÷
+//å®šä¹‰Appleç±»æ—¶ä½¿ç”¨äº†æ³›å‹å£°æ˜
 public class Apple<T>
 {
-	//Ê¹ÓÃTÀàĞÍĞÎ²Î¶¨ÒåÊôĞÔ
+	//ä½¿ç”¨Tç±»å‹å½¢å‚å®šä¹‰å±æ€§
 	private T info;
 
 	public Apple(){}
-	//ÏÂÃæ·½·¨ÖĞÊ¹ÓÃTÀàĞÍĞÎ²ÎÀ´¶¨Òå·½·¨
+	//ä¸‹é¢æ–¹æ³•ä¸­ä½¿ç”¨Tç±»å‹å½¢å‚æ¥å®šä¹‰æ–¹æ³•
 	public Apple(T info)
 	{
 		this.info = info;
@@ -31,10 +31,10 @@ public class Apple<T>
 	}
 	public static void main(String[] args)
 	{
-		//ÒòÎª´«¸øTĞÎ²ÎµÄÊÇStringÊµ¼ÊÀàĞÍ£¬ËùÒÔ¹¹ÔìÆ÷µÄ²ÎÊıÖ»ÄÜÊÇString
-		Apple<String> a1 = new Apple<String>("Æ»¹û");
+		//å› ä¸ºä¼ ç»™Tå½¢å‚çš„æ˜¯Stringå®é™…ç±»å‹ï¼Œæ‰€ä»¥æ„é€ å™¨çš„å‚æ•°åªèƒ½æ˜¯String
+		Apple<String> a1 = new Apple<String>("è‹¹æœ");
 		System.out.println(a1.getInfo());
-		//ÒòÎª´«¸øTĞÎ²ÎµÄÊÇDoubleÊµ¼ÊÀàĞÍ£¬ËùÒÔ¹¹ÔìÆ÷µÄ²ÎÊıÖ»ÄÜÊÇDouble»òÕßdouble
+		//å› ä¸ºä¼ ç»™Tå½¢å‚çš„æ˜¯Doubleå®é™…ç±»å‹ï¼Œæ‰€ä»¥æ„é€ å™¨çš„å‚æ•°åªèƒ½æ˜¯Doubleæˆ–è€…double
 		Apple<Double> a2 = new Apple<Double>(5.67);
 		System.out.println(a2.getInfo());
 	}

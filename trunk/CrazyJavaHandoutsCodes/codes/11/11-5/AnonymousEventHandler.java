@@ -12,16 +12,16 @@ import java.awt.event.*;
  */
 public class AnonymousEventHandler
 {
-	private Frame f = new Frame("²âÊÔ");
+	private Frame f = new Frame("æµ‹è¯•");
 	private TextArea ta = new TextArea(6 , 40);
 	public void init()
 	{
-		//ÒÔÄäÃûÄÚ²¿ÀàµÄĞÎÊ½À´´´½¨ÊÂ¼ş¼àÌıÆ÷¶ÔÏó
+		//ä»¥åŒ¿åå†…éƒ¨ç±»çš„å½¢å¼æ¥åˆ›å»ºäº‹ä»¶ç›‘å¬å™¨å¯¹è±¡
 		f.addWindowListener(new WindowAdapter()
 		{
 			public void windowClosing(WindowEvent e) 
 			{
-				ta.append("ÓÃ»§ÊÔÍ¼¹Ø±Õ´°¿Ú£¡\n");
+				ta.append("ç”¨æˆ·è¯•å›¾å…³é—­çª—å£ï¼\n");
 				System.exit(0);
 			}
 		});

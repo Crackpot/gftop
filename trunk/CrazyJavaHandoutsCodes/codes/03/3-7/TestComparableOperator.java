@@ -13,56 +13,56 @@ public class TestComparableOperator
 {
 	public static void main(String[] args) 
 	{
-		//Êä³ötrue
-		System.out.println("5ÊÇ·ñ´óÓÚ4.0£º" + (5 > 4.0));
-		//Êä³ötrue
-		System.out.println("5ºÍ5.0ÊÇ·ñÏàµÈ£º" + (5 == 5.0));
-		//Êä³ötrue
-		System.out.println("97ºÍ'a'ÊÇ·ñÏàµÈ£º" + (97 == 'a'));
-		//Êä³öfalse
-		System.out.println("trueºÍfalseÊÇ·ñÏàµÈ£º" + (true == false));
-		//´´½¨2¸öTestComparableOperator¶ÔÏó£¬·Ö±ğ¸³¸øt1ºÍt2Á½¸öÒıÓÃ
+		//è¾“å‡ºtrue
+		System.out.println("5æ˜¯å¦å¤§äº4.0ï¼š" + (5 > 4.0));
+		//è¾“å‡ºtrue
+		System.out.println("5å’Œ5.0æ˜¯å¦ç›¸ç­‰ï¼š" + (5 == 5.0));
+		//è¾“å‡ºtrue
+		System.out.println("97å’Œ'a'æ˜¯å¦ç›¸ç­‰ï¼š" + (97 == 'a'));
+		//è¾“å‡ºfalse
+		System.out.println("trueå’Œfalseæ˜¯å¦ç›¸ç­‰ï¼š" + (true == false));
+		//åˆ›å»º2ä¸ªTestComparableOperatorå¯¹è±¡ï¼Œåˆ†åˆ«èµ‹ç»™t1å’Œt2ä¸¤ä¸ªå¼•ç”¨
 		TestComparableOperator t1 = new TestComparableOperator();
 		TestComparableOperator t2 = new TestComparableOperator();
-		//t1ºÍt2ÊÇÍ¬Ò»¸öÀàµÄÁ½¸öÊµÀıµÄÒıÓÃ£¬ËùÒÔ¿ÉÒÔ±È½Ï£¬µ«t1ºÍt2ÒıÓÃ²»Í¬µÄ¶ÔÏó£¬
-		//ËùÒÔ·µ»Øfalse
-		System.out.println("t1ÊÇ·ñµÈÓÚt2£º" + (t1 == t2));
-		//Ö±½Ó½«t1µÄÖµ¸³¸øt3£¬¼´ÈÃt3Ö¸Ïòt1Ö¸ÏòµÄ¶ÔÏó
+		//t1å’Œt2æ˜¯åŒä¸€ä¸ªç±»çš„ä¸¤ä¸ªå®ä¾‹çš„å¼•ç”¨ï¼Œæ‰€ä»¥å¯ä»¥æ¯”è¾ƒï¼Œä½†t1å’Œt2å¼•ç”¨ä¸åŒçš„å¯¹è±¡ï¼Œ
+		//æ‰€ä»¥è¿”å›false
+		System.out.println("t1æ˜¯å¦ç­‰äºt2ï¼š" + (t1 == t2));
+		//ç›´æ¥å°†t1çš„å€¼èµ‹ç»™t3ï¼Œå³è®©t3æŒ‡å‘t1æŒ‡å‘çš„å¯¹è±¡
 		TestComparableOperator t3 = t1;
-		//t1ºÍt3Ö¸ÏòÍ¬Ò»¸ö¶ÔÏó£¬ËùÒÔ·µ»Øtrue¡£
-		System.out.println("t1ÊÇ·ñµÈÓÚt3£º" + (t1 == t3));
+		//t1å’Œt3æŒ‡å‘åŒä¸€ä¸ªå¯¹è±¡ï¼Œæ‰€ä»¥è¿”å›trueã€‚
+		System.out.println("t1æ˜¯å¦ç­‰äºt3ï¼š" + (t1 == t3));
 
 
 
 		Integer a = new Integer(6);
-		//Êä³ötrue
-		System.out.println("6µÄ°ü×°ÀàÊµÀıÊÇ·ñ´óÓÚ5.0" + (a > 5.0));
+		//è¾“å‡ºtrue
+		System.out.println("6çš„åŒ…è£…ç±»å®ä¾‹æ˜¯å¦å¤§äº5.0" + (a > 5.0));
 		
-		//Êä³öfalse
-		System.out.println("±È½Ï2¸ö°ü×°ÀàµÄÊµÀıÊÇ·ñÏàµÈ£º" 
+		//è¾“å‡ºfalse
+		System.out.println("æ¯”è¾ƒ2ä¸ªåŒ…è£…ç±»çš„å®ä¾‹æ˜¯å¦ç›¸ç­‰ï¼š" 
 			+ (new Integer(2) == new Integer(2)));
-		//Í¨¹ı×Ô¶¯×°Ïä£¬ÔÊĞí°Ñ»ù±¾ÀàĞÍÖµ¸³Öµ¸ø°ü×°ÀàµÄÊµÀı
+		//é€šè¿‡è‡ªåŠ¨è£…ç®±ï¼Œå…è®¸æŠŠåŸºæœ¬ç±»å‹å€¼èµ‹å€¼ç»™åŒ…è£…ç±»çš„å®ä¾‹
 		Integer ina = 2;
 		Integer inb = 2;
-		//Êä³ötrue
-		System.out.println("Á½¸ö2×Ô¶¯×°ÏäºóÊÇ·ñÏàµÈ£º" + (ina == inb));
+		//è¾“å‡ºtrue
+		System.out.println("ä¸¤ä¸ª2è‡ªåŠ¨è£…ç®±åæ˜¯å¦ç›¸ç­‰ï¼š" + (ina == inb));
 		Integer biga = 128;
 		Integer bigb = 128;
-		//Êä³öfalse
-		System.out.println("Á½¸ö128×Ô¶¯×°ÏäºóÊÇ·ñÏàµÈ£º" + (biga == bigb));
+		//è¾“å‡ºfalse
+		System.out.println("ä¸¤ä¸ª128è‡ªåŠ¨è£…ç®±åæ˜¯å¦ç›¸ç­‰ï¼š" + (biga == bigb));
 
 
-		//Í¨¹ınewµ÷ÓÃ¹¹ÔìÆ÷´´½¨µÄÁ½¸öStringÊµÀı
+		//é€šè¿‡newè°ƒç”¨æ„é€ å™¨åˆ›å»ºçš„ä¸¤ä¸ªStringå®ä¾‹
 		String aStr = new String("Hello");
 		String bStr = new String("Hello");
-		//Êä³öfalse
-		System.out.println("Í¨¹ıÁ½¸öÄÚÈİÏàÍ¬µÄ×Ö·û´®new³öÀ´µÄStringÊµÀıÊÇ·ñÏàµÈ£º" 
+		//è¾“å‡ºfalse
+		System.out.println("é€šè¿‡ä¸¤ä¸ªå†…å®¹ç›¸åŒçš„å­—ç¬¦ä¸²newå‡ºæ¥çš„Stringå®ä¾‹æ˜¯å¦ç›¸ç­‰ï¼š" 
 			+ (aStr == bStr));
-		//Í¨¹ıÖ±½ÓÁ¿¸³Öµ´´½¨µÄÁ½¸öStringÊµÀı
+		//é€šè¿‡ç›´æ¥é‡èµ‹å€¼åˆ›å»ºçš„ä¸¤ä¸ªStringå®ä¾‹
 		String cStr = "Hello";
 		String dStr = "Hello";
-		//Êä³ötrue
-		System.out.println("Ö±½Ó°ÑÁ½¸öÄÚÈİÏàÍ¬µÄ×Ö·û´®¸³¸øString±äÁ¿ÊÇ·ñÏàµÈ£º" 
+		//è¾“å‡ºtrue
+		System.out.println("ç›´æ¥æŠŠä¸¤ä¸ªå†…å®¹ç›¸åŒçš„å­—ç¬¦ä¸²èµ‹ç»™Stringå˜é‡æ˜¯å¦ç›¸ç­‰ï¼š" 
 			+ (cStr == dStr));
 
 	}

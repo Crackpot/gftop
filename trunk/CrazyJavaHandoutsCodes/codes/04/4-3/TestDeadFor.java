@@ -13,7 +13,7 @@ public class TestDeadFor
 {
 	public static void main(String[] args) 
 	{
-		//省略了for循环三个部分，循环条件将一直为true
+		//鐪佺暐浜唂or寰幆涓変釜閮ㄥ垎锛屽惊鐜潯浠跺皢涓�鐩翠负true
 		for (; ; )
 		{
 			System.out.println("=============");

@@ -17,30 +17,30 @@ public class EnumSetDemo
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸öEnumSet¼¯ºÏ£¬¼¯ºÏÔªËØ¾ÍÊÇSeasonÃ¶¾ÙÀàµÄÈ«²¿Ã¶¾ÙÖµ
+		//åˆ›å»ºä¸€ä¸ªEnumSeté›†åˆï¼Œé›†åˆå…ƒç´ å°±æ˜¯Seasonæšä¸¾ç±»çš„å…¨éƒ¨æšä¸¾å€¼
 		EnumSet es1 = EnumSet.allOf(Season.class);
-		//Êä³ö[SPRING,SUMMER,FALL,WINTER]
+		//è¾“å‡º[SPRING,SUMMER,FALL,WINTER]
 		System.out.println(es1);
-		//´´½¨Ò»¸öEnumSet¿Õ¼¯ºÏ£¬Ö¸¶¨Æä¼¯ºÏÔªËØÊÇSeasonÀàµÄÃ¶¾ÙÖµ¡£
+		//åˆ›å»ºä¸€ä¸ªEnumSetç©ºé›†åˆï¼ŒæŒ‡å®šå…¶é›†åˆå…ƒç´ æ˜¯Seasonç±»çš„æšä¸¾å€¼ã€‚
 		EnumSet es2 = EnumSet.noneOf(Season.class); 
-		//Êä³ö[]
+		//è¾“å‡º[]
 		System.out.println(es2);
-		//ÊÖ¶¯Ìí¼ÓÁ½¸öÔªËØ
+		//æ‰‹åŠ¨æ·»åŠ ä¸¤ä¸ªå…ƒç´ 
 		es2.add(Season.WINTER);
 		es2.add(Season.SPRING);
-		//Êä³ö[SPRING,WINTER]
+		//è¾“å‡º[SPRING,WINTER]
 		System.out.println(es2);
-		//ÒÔÖ¸¶¨Ã¶¾ÙÖµ´´½¨EnumSet¼¯ºÏ
+		//ä»¥æŒ‡å®šæšä¸¾å€¼åˆ›å»ºEnumSeté›†åˆ
 		EnumSet es3 = EnumSet.of(Season.SUMMER  , Season.WINTER); 
-		//Êä³ö[SUMMER,WINTER]
+		//è¾“å‡º[SUMMER,WINTER]
 		System.out.println(es3);
 		EnumSet es4 = EnumSet.range(Season.SUMMER  , Season.WINTER); 
-		//Êä³ö[SUMMER,FALL,WINTER]
+		//è¾“å‡º[SUMMER,FALL,WINTER]
 		System.out.println(es4);
-		//ĞÂ´´½¨µÄEnumSet¼¯ºÏµÄÔªËØºÍes4¼¯ºÏµÄÔªËØÓĞÏàÍ¬ÀàĞÍ£¬
-		//es5µÄ¼¯ºÏÔªËØ + es4¼¯ºÏÔªËØ = SeasonÃ¶¾ÙÀàµÄÈ«²¿Ã¶¾ÙÖµ
+		//æ–°åˆ›å»ºçš„EnumSeté›†åˆçš„å…ƒç´ å’Œes4é›†åˆçš„å…ƒç´ æœ‰ç›¸åŒç±»å‹ï¼Œ
+		//es5çš„é›†åˆå…ƒç´  + es4é›†åˆå…ƒç´  = Seasonæšä¸¾ç±»çš„å…¨éƒ¨æšä¸¾å€¼
 		EnumSet es5 = EnumSet.complementOf(es4); 
-		//Êä³ö[SPRING]
+		//è¾“å‡º[SPRING]
 		System.out.println(es5);
 	}
 }

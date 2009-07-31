@@ -14,20 +14,20 @@ class Creature
 {
 	public Creature()
 	{
-		System.out.println("CreatureÎŞ²ÎÊıµÄ¹¹ÔìÆ÷");		
+		System.out.println("Creatureæ— å‚æ•°çš„æ„é€ å™¨");		
 	}
 }
 class Animal extends Creature
 {
 	public Animal(String name)
 	{
-		System.out.println("Animal´øÒ»¸ö²ÎÊıµÄ¹¹ÔìÆ÷£¬¸Ã¶¯ÎïµÄnameÎª" + name);
+		System.out.println("Animalå¸¦ä¸€ä¸ªå‚æ•°çš„æ„é€ å™¨ï¼Œè¯¥åŠ¨ç‰©çš„nameä¸º" + name);
 	}
 	public Animal(String name , int age)
 	{
-		//Ê¹ÓÃthisµ÷ÓÃÍ¬Ò»¸öÖØÔØµÄ¹¹ÔìÆ÷
+		//ä½¿ç”¨thisè°ƒç”¨åŒä¸€ä¸ªé‡è½½çš„æ„é€ å™¨
 		this(name);
-		System.out.println("Animal´ø2¸ö²ÎÊıµÄ¹¹ÔìÆ÷£¬ÆäageÎª" + age);
+		System.out.println("Animalå¸¦2ä¸ªå‚æ•°çš„æ„é€ å™¨ï¼Œå…¶ageä¸º" + age);
 	}
 
 }
@@ -35,9 +35,9 @@ public class Wolf extends Animal
 {
 	public Wolf()
 	{
-		//ÏÔÊ½µ÷ÓÃ¸¸ÀàÓĞ2¸ö²ÎÊıµÄ¹¹ÔìÆ÷
-		super("ÍÁÀÇ", 3);
-		System.out.println("WolfÎŞ²ÎÊıµÄ¹¹ÔìÆ÷");
+		//æ˜¾å¼è°ƒç”¨çˆ¶ç±»æœ‰2ä¸ªå‚æ•°çš„æ„é€ å™¨
+		super("åœŸç‹¼", 3);
+		System.out.println("Wolfæ— å‚æ•°çš„æ„é€ å™¨");
 	}
 	public static void main(String[] args)
 	{

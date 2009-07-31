@@ -13,10 +13,10 @@ public class TestForEach
 {
 	public static void main(String[] args) 
 	{
-		String[] books = {"轻量级J2EE企业应用实战" , 
-			"Struts2权威指南",
-			"基于J2EE的Ajax宝典"};
-		//使用foreach循环来遍历数组元素，其中book将会自动迭代每个数组元素
+		String[] books = {"杞婚噺绾2EE浼佷笟搴旂敤瀹炴垬" , 
+			"Struts2鏉冨▉鎸囧崡",
+			"鍩轰簬J2EE鐨凙jax瀹濆吀"};
+		//浣跨敤foreach寰幆鏉ラ亶鍘嗘暟缁勫厓绱狅紝鍏朵腑book灏嗕細鑷姩杩唬姣忎釜鏁扮粍鍏冪礌
 		for (String book : books)
 		{
 			System.out.println(book);

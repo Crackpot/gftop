@@ -15,30 +15,30 @@ public class TestCollection
 	public static void main(String[] args) 
 	{
 		Collection c = new ArrayList();
-		//Ìí¼ÓÔªËØ
-		c.add("ËïÎò¿Õ");
-		//ËäÈ»¼¯ºÏÀï²»ÄÜ·Å»ù±¾ÀàĞÍµÄÖµ£¬µ«JavaÖ§³Ö×Ô¶¯×°Ïä
+		//æ·»åŠ å…ƒç´ 
+		c.add("å­™æ‚Ÿç©º");
+		//è™½ç„¶é›†åˆé‡Œä¸èƒ½æ”¾åŸºæœ¬ç±»å‹çš„å€¼ï¼Œä½†Javaæ”¯æŒè‡ªåŠ¨è£…ç®±
 		c.add(6);
-		System.out.println("c¼¯ºÏµÄÔªËØ¸öÊıÎª:" + c.size());
-		//É¾³ıÖ¸¶¨ÔªËØ
+		System.out.println("cé›†åˆçš„å…ƒç´ ä¸ªæ•°ä¸º:" + c.size());
+		//åˆ é™¤æŒ‡å®šå…ƒç´ 
 		c.remove(6);
-		System.out.println("c¼¯ºÏµÄÔªËØ¸öÊıÎª:" + c.size());
-		//ÅĞ¶ÏÊÇ·ñ°üº¬Ö¸¶¨×Ö·û´®
-		System.out.println("c¼¯ºÏµÄÊÇ·ñ°üº¬ËïÎò¿Õ×Ö·û´®:" + c.contains("ËïÎò¿Õ"));
-		c.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		System.out.println("c¼¯ºÏµÄÔªËØ£º" + c);
+		System.out.println("cé›†åˆçš„å…ƒç´ ä¸ªæ•°ä¸º:" + c.size());
+		//åˆ¤æ–­æ˜¯å¦åŒ…å«æŒ‡å®šå­—ç¬¦ä¸²
+		System.out.println("cé›†åˆçš„æ˜¯å¦åŒ…å«å­™æ‚Ÿç©ºå­—ç¬¦ä¸²:" + c.contains("å­™æ‚Ÿç©º"));
+		c.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		System.out.println("cé›†åˆçš„å…ƒç´ ï¼š" + c);
 		Collection books = new HashSet();
-		books.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		books.add("Struts2È¨ÍşÖ¸ÄÏ");
-		System.out.println("c¼¯ºÏÊÇ·ñÍêÈ«°üº¬books¼¯ºÏ£¿" + c.containsAll(books));
-		//ÓÃc¼¯ºÏ¼õÈ¥books¼¯ºÏÀïµÄÔªËØ
+		books.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		books.add("Struts2æƒå¨æŒ‡å—");
+		System.out.println("cé›†åˆæ˜¯å¦å®Œå…¨åŒ…å«booksé›†åˆï¼Ÿ" + c.containsAll(books));
+		//ç”¨cé›†åˆå‡å»booksé›†åˆé‡Œçš„å…ƒç´ 
 		c.removeAll(books);
-		System.out.println("c¼¯ºÏµÄÔªËØ£º" + c);
-		//É¾³ıc¼¯ºÏÀïËùÓĞÔªËØ
+		System.out.println("cé›†åˆçš„å…ƒç´ ï¼š" + c);
+		//åˆ é™¤cé›†åˆé‡Œæ‰€æœ‰å…ƒç´ 
 		c.clear();
-		System.out.println("c¼¯ºÏµÄÔªËØ£º" + c);
-		//books¼¯ºÏÀïÖ»Ê£ÏÂc¼¯ºÏÀïÒ²Í¬Ê±°üº¬µÄÔªËØ
+		System.out.println("cé›†åˆçš„å…ƒç´ ï¼š" + c);
+		//booksé›†åˆé‡Œåªå‰©ä¸‹cé›†åˆé‡Œä¹ŸåŒæ—¶åŒ…å«çš„å…ƒç´ 
 		books.retainAll(c);
-		System.out.println("books¼¯ºÏµÄÔªËØ:" + books);
+		System.out.println("booksé›†åˆçš„å…ƒç´ :" + books);
 	}
 }

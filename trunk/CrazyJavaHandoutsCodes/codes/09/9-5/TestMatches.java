@@ -35,11 +35,11 @@ public class TestMatches
 			}
 			if (matcher.matches())
 			{
-				System.out.println(mail + "ÊÇÒ»¸öÓĞĞ§µÄÓÊ¼şµØÖ·£¡");
+				System.out.println(mail + "æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„é‚®ä»¶åœ°å€ï¼");
 			}
 			else
 			{
-				System.out.println(mail + "²»ÊÇÒ»¸öÓĞĞ§µÄÓÊ¼şµØÖ·£¡");
+				System.out.println(mail + "ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„é‚®ä»¶åœ°å€ï¼");
 			}
 		}
 	}

@@ -14,13 +14,13 @@ public class TestScannerFile
 {
 	public static void main(String[] args) throws Exception
 	{
-		//½«Ò»¸öFile¶ÔÏó×÷ÎªScannerµÄ¹¹ÔìÆ÷²ÎÊı£¬ÔòScanner¶ÁÈ¡ÎÄ¼şÄÚÈİ
+		//å°†ä¸€ä¸ªFileå¯¹è±¡ä½œä¸ºScannerçš„æ„é€ å™¨å‚æ•°ï¼Œåˆ™Scannerè¯»å–æ–‡ä»¶å†…å®¹
 		Scanner sc = new Scanner(new File("a.txt"));
-		System.out.println("a.txtÎÄ¼şÄÚÈİÈçÏÂ£º");
-		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»ĞĞ
+		System.out.println("a.txtæ–‡ä»¶å†…å®¹å¦‚ä¸‹ï¼š");
+		//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€è¡Œ
 		while(sc.hasNextLine())
 		{
-			//Êä³öÎÄ¼şÖĞµÄÒ»ĞĞ
+			//è¾“å‡ºæ–‡ä»¶ä¸­çš„ä¸€è¡Œ
 			System.out.println(sc.nextLine());
 		}
 	}

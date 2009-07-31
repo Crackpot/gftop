@@ -13,15 +13,15 @@ public class TestForInsteadWhile
 {
 	public static void main(String[] args) 
 	{
-		//°ÑforÑ­»·µÄ³õÊ¼»¯Ìõ¼şÌá³öÀ´¶ÀÁ¢¶¨Òå
+		//æŠŠforå¾ªç¯çš„åˆå§‹åŒ–æ¡ä»¶æå‡ºæ¥ç‹¬ç«‹å®šä¹‰
 		int count = 0;
-		//forÑ­»·ÀïÖ»·ÅÑ­»·Ìõ¼ş
+		//forå¾ªç¯é‡Œåªæ”¾å¾ªç¯æ¡ä»¶
 		for( ; count < 10 ; )
 		{
 			System.out.println(count);
-			//°ÑÑ­»·µü´ú²¿·Ö·ÅÔÚÑ­»·ÌåÖ®ºó¶¨Òå
+			//æŠŠå¾ªç¯è¿­ä»£éƒ¨åˆ†æ”¾åœ¨å¾ªç¯ä½“ä¹‹åå®šä¹‰
 			count++;
 		}
-		System.out.println("Ñ­»·½áÊø!");
+		System.out.println("å¾ªç¯ç»“æŸ!");
 	}
 }

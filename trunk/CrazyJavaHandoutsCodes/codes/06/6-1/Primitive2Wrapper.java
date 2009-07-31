@@ -14,25 +14,25 @@ public class Primitive2Wrapper
 	public static void main(String[] args) 
 	{
 		boolean bl = true;
-		//通过构造器把b1基本类型变量包装成包装类对象
+		//閫氳繃鏋勯�犲櫒鎶奲1鍩烘湰绫诲瀷鍙橀噺鍖呰鎴愬寘瑁呯被瀵硅薄
 		Boolean blObj = new Boolean(bl);
 	
 		int it = 5;
-		//通过构造器把it基本类型变量包装成包装类对象
+		//閫氳繃鏋勯�犲櫒鎶奿t鍩烘湰绫诲瀷鍙橀噺鍖呰鎴愬寘瑁呯被瀵硅薄
 		Integer itObj = new Integer(it);
-		//把一个字符串转换成Float对象
+		//鎶婁竴涓瓧绗︿覆杞崲鎴怓loat瀵硅薄
 		Float fl = new Float("4.56");
-		//把一个字符串转换成Boolean对象
+		//鎶婁竴涓瓧绗︿覆杞崲鎴怋oolean瀵硅薄
 		Boolean bObj = new Boolean("trUe");
 		System.out.print("---------" + bObj);
-		//下面程序运行时将出现java.lang.NumberFormatException异常
+		//涓嬮潰绋嬪簭杩愯鏃跺皢鍑虹幇java.lang.NumberFormatException寮傚父
 		//Long lObj = new Long("ddd");
 
-		//取出Boolean对象里的boolean变量
+		//鍙栧嚭Boolean瀵硅薄閲岀殑boolean鍙橀噺
 		boolean bb = bObj.booleanValue();
-		//取出Integer对象里的int变量
+		//鍙栧嚭Integer瀵硅薄閲岀殑int鍙橀噺
 		int i = itObj.intValue();
-		//取出Float对象里的float变量
+		//鍙栧嚭Float瀵硅薄閲岀殑float鍙橀噺
 		float f = fl.floatValue();
 	}
 }

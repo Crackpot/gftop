@@ -11,12 +11,12 @@ package yeeku;
 public class Test
 {
 	/**
-	 * ¼òµ¥²âÊÔÊôĞÔ
+	 * ç®€å•æµ‹è¯•å±æ€§
 	 */
 	public int age;
 
 	/**
-	 * TestÀàµÄ²âÊÔ¹¹ÔìÆ÷
+	 * Testç±»çš„æµ‹è¯•æ„é€ å™¨
 	 */
 	public Test()
 	{

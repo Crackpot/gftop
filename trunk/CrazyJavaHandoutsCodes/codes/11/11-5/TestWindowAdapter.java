@@ -12,7 +12,7 @@ import java.awt.event.*;
  */
 public class TestWindowAdapter
 {
-	private Frame f = new Frame("²âÊÔ");
+	private Frame f = new Frame("æµ‹è¯•");
 	private TextArea ta = new TextArea(6 , 40);
 	public void init()
 	{
@@ -25,7 +25,7 @@ public class TestWindowAdapter
 	{
 		public void windowClosing(WindowEvent e) 
 		{
-			ta.append("ÓÃ»§ÊÔÍ¼¹Ø±Õ´°¿Ú£¡\n");
+			ta.append("ç”¨æˆ·è¯•å›¾å…³é—­çª—å£ï¼\n");
 			System.exit(0);
 		}
 	}

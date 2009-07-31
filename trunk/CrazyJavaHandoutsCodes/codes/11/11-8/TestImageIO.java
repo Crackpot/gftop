@@ -14,13 +14,13 @@ public class TestImageIO
 	public static void main(String[] args) 
 	{
 		String[] readFormat = ImageIO.getReaderFormatNames();
-		System.out.println("-----ImageÄÜ¶ÁµÄËùÓĞÍ¼ĞÎÎÄ¼ş¸ñÊ½-----");
+		System.out.println("-----Imageèƒ½è¯»çš„æ‰€æœ‰å›¾å½¢æ–‡ä»¶æ ¼å¼-----");
 		for (String tmp : readFormat)
 		{
 			System.out.println(tmp);
 		}
 		String[] writeFormat = ImageIO.getWriterFormatNames();
-		System.out.println("-----ImageÄÜĞ´µÄËùÓĞÍ¼ĞÎÎÄ¼ş¸ñÊ½-----");
+		System.out.println("-----Imageèƒ½å†™çš„æ‰€æœ‰å›¾å½¢æ–‡ä»¶æ ¼å¼-----");
 		for (String tmp : writeFormat)
 		{
 			System.out.println(tmp);

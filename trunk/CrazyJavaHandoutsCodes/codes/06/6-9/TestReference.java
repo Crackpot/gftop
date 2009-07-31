@@ -13,18 +13,18 @@ public class TestReference
 {
 	public static void main(String[] args) throws Exception
 	{
-		//´´½¨Ò»¸ö×Ö·û´®¶ÔÏó
-		String str = new String("Struts2È¨ÍşÖ¸ÄÏ");
-		//´´½¨Ò»¸öÈõÒıÓÃ£¬ÈÃ´ËÈõÒıÓÃÒıÓÃµ½"Struts2È¨ÍşÖ¸ÄÏ"×Ö·û´®
+		//åˆ›å»ºä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡
+		String str = new String("Struts2æƒå¨æŒ‡å—");
+		//åˆ›å»ºä¸€ä¸ªå¼±å¼•ç”¨ï¼Œè®©æ­¤å¼±å¼•ç”¨å¼•ç”¨åˆ°"Struts2æƒå¨æŒ‡å—"å­—ç¬¦ä¸²
 		WeakReference wr = new WeakReference(str);
-		//ÇĞ¶ÏstrÒıÓÃºÍ"Struts2È¨ÍşÖ¸ÄÏ"×Ö·û´®Ö®¼äµÄÒıÓÃ
+		//åˆ‡æ–­strå¼•ç”¨å’Œ"Struts2æƒå¨æŒ‡å—"å­—ç¬¦ä¸²ä¹‹é—´çš„å¼•ç”¨
 		str = null;
-		//È¡³öÈõÒıÓÃËùÒıÓÃµÄ¶ÔÏó
+		//å–å‡ºå¼±å¼•ç”¨æ‰€å¼•ç”¨çš„å¯¹è±¡
 		System.out.println(wr.get());
-		//Ç¿ÖÆÀ¬»ø»ØÊÕ
+		//å¼ºåˆ¶åƒåœ¾å›æ”¶
 		System.gc();
 		System.runFinalization();
-		//ÔÙ´ÎÈ¡³öÈõÒıÓÃËùÒıÓÃµÄ¶ÔÏó
+		//å†æ¬¡å–å‡ºå¼±å¼•ç”¨æ‰€å¼•ç”¨çš„å¯¹è±¡
 		System.out.println(wr.get());
 	}
 }

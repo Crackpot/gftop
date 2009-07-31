@@ -12,11 +12,11 @@ import java.awt.event.*;
  */
 public class TestFileDialog
 {
-	Frame f = new Frame("²âÊÔ");	
-	FileDialog d1 = new FileDialog(f, "Ñ¡ÔñĞèÒª´ò¿ªÎÄ¼ş" , FileDialog.LOAD);
-	FileDialog d2 = new FileDialog(f, "Ñ¡Ôñ±£´æÎÄ¼şµÄÂ·¾¶" , FileDialog.SAVE);
-	Button b1 = new Button("´ò¿ªÎÄ¼ş");
-	Button b2 = new Button("±£´æÎÄ¼ş");
+	Frame f = new Frame("æµ‹è¯•");	
+	FileDialog d1 = new FileDialog(f, "é€‰æ‹©éœ€è¦æ‰“å¼€æ–‡ä»¶" , FileDialog.LOAD);
+	FileDialog d2 = new FileDialog(f, "é€‰æ‹©ä¿å­˜æ–‡ä»¶çš„è·¯å¾„" , FileDialog.SAVE);
+	Button b1 = new Button("æ‰“å¼€æ–‡ä»¶");
+	Button b2 = new Button("ä¿å­˜æ–‡ä»¶");
 
 	public void init()
 	{

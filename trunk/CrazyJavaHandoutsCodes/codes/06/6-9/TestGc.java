@@ -23,6 +23,6 @@ public class TestGc
 	}
 	public void finalize()
 	{
-		System.out.println("ÏµÍ³ÕıÔÚÇåÀíTestGc¶ÔÏóµÄ×ÊÔ´...");
+		System.out.println("ç³»ç»Ÿæ­£åœ¨æ¸…ç†TestGcå¯¹è±¡çš„èµ„æº...");
 	}
 }

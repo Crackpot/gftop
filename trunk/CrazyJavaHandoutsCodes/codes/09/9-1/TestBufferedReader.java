@@ -13,13 +13,13 @@ public class TestBufferedReader
 {
 	public static void main(String[] args) throws Exception
 	{
-		//ÒÔSystem.in½ÚµãÁ÷£¬´´½¨Ò»¸öBufferedReader¶ÔÏó
+		//ä»¥System.inèŠ‚ç‚¹æµï¼Œåˆ›å»ºä¸€ä¸ªBufferedReaderå¯¹è±¡
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String buffer = null;
-		//ÖğĞĞ¶ÁÈ¡¼üÅÌÊäÈë
+		//é€è¡Œè¯»å–é”®ç›˜è¾“å…¥
 		while ((buffer = br.readLine()) != null)
 		{
-			System.out.println("ÓÃ»§¼üÅÌÊäÈëÊÇ:" + buffer);
+			System.out.println("ç”¨æˆ·é”®ç›˜è¾“å…¥æ˜¯:" + buffer);
 		}
 	}
 }

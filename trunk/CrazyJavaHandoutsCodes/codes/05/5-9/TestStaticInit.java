@@ -11,16 +11,16 @@
  */
 public class TestStaticInit
 {
-	//ÏÈÖ´ĞĞ¾²Ì¬³õÊ¼»¯¿é½«aÊôĞÔ¸³ÖµÎª6
+	//å…ˆæ‰§è¡Œé™æ€åˆå§‹åŒ–å—å°†aå±æ€§èµ‹å€¼ä¸º6
 	static
 	{
 		a = 6;
 	}
-	//ÔÙÖ´ĞĞ½«¾²Ì¬ÊôĞÔa¸³ÖµÎª9
+	//å†æ‰§è¡Œå°†é™æ€å±æ€§aèµ‹å€¼ä¸º9
 	static int a = 9;
 	public static void main(String[] args) 
 	{
-		//ÏÂÃæ´úÂë½«Êä³ö9¡£
+		//ä¸‹é¢ä»£ç å°†è¾“å‡º9ã€‚
 		System.out.println(TestStaticInit.a);
 	}
 }

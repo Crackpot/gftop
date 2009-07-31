@@ -13,17 +13,17 @@ public class TestBreak2
 {
 	public static void main(String[] args) 
 	{
-		//Íâ²ãÑ­»·
+		//å¤–å±‚å¾ªç¯
 		outer:
 		for (int i = 0 ; i < 5 ; i++ )
 		{
-			//ÄÚ²ãÑ­»·
+			//å†…å±‚å¾ªç¯
 			for (int j = 0; j < 3 ; j++ )
 			{
-				System.out.println("iµÄÖµÎª:" + i + "  jµÄÖµÎª:" + j);
+				System.out.println("içš„å€¼ä¸º:" + i + "  jçš„å€¼ä¸º:" + j);
 				if (j == 1)
 				{
-					//Ìø³öouter±êÇ©ËùÖ¸¶¨µÄÑ­»·¡£
+					//è·³å‡ºouteræ ‡ç­¾æ‰€æŒ‡å®šçš„å¾ªç¯ã€‚
 					break outer;
 				}
 			}

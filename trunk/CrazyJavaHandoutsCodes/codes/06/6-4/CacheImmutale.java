@@ -13,7 +13,7 @@ public class CacheImmutale
 {
 	private final String name;
 	private static CacheImmutale[] cache = new CacheImmutale[10];
-	//¼ÇÂ¼»º´æÊµÀıÔÚ»º´æÖĞµÄÎ»ÖÃ,cache[pos-1]ÊÇ×îĞÂ»º´æµÄÊµÀı
+	//è®°å½•ç¼“å­˜å®ä¾‹åœ¨ç¼“å­˜ä¸­çš„ä½ç½®,cache[pos-1]æ˜¯æœ€æ–°ç¼“å­˜çš„å®ä¾‹
 	private static int pos = 0;
 
 	public CacheImmutale(String name)
@@ -26,27 +26,27 @@ public class CacheImmutale
 	}
 	public static CacheImmutale valueOf(String name)
 	{
-		//±éÀúÒÑ»º´æµÄ¶ÔÏó£¬
+		//éå†å·²ç¼“å­˜çš„å¯¹è±¡ï¼Œ
 		for (int i = 0 ; i < pos; i++)
 		{
-			//Èç¹ûÒÑÓĞÏàÍ¬ÊµÀı£¬Ö±½Ó·µ»Ø¸Ã»º´æµÄÊµÀı
+			//å¦‚æœå·²æœ‰ç›¸åŒå®ä¾‹ï¼Œç›´æ¥è¿”å›è¯¥ç¼“å­˜çš„å®ä¾‹
 			if (cache[i] != null && cache[i].getName().equals(name))
 			{
 				return cache[i];
 			}
 		}
-		//Èç¹û»º´æ³ØÒÑÂú
+		//å¦‚æœç¼“å­˜æ± å·²æ»¡
 		if (pos == 10)
 		{
-			//°Ñ»º´æµÄµÚÒ»¸ö¶ÔÏó¸²¸Ç
+			//æŠŠç¼“å­˜çš„ç¬¬ä¸€ä¸ªå¯¹è±¡è¦†ç›–
 			cache[0] = new CacheImmutale(name);
-			//°ÑposÉèÎª1
+			//æŠŠposè®¾ä¸º1
 			pos = 1;
 			return cache[0];
 		}
 		else
 		{
-			//°ÑĞÂ´´½¨µÄ¶ÔÏó»º´æÆğÀ´£¬pos¼Ó1
+			//æŠŠæ–°åˆ›å»ºçš„å¯¹è±¡ç¼“å­˜èµ·æ¥ï¼ŒposåŠ 1
 			cache[pos++] = new CacheImmutale(name);
 			return cache[pos - 1];		
 		}
@@ -72,7 +72,7 @@ public class CacheImmutale
 	{
 		CacheImmutale c1 = CacheImmutale.valueOf("hello");
 		CacheImmutale c2 = CacheImmutale.valueOf("hello");
-		//ÏÂÃæ´úÂë½«Êä³ötrue
+		//ä¸‹é¢ä»£ç å°†è¾“å‡ºtrue
 		System.out.println(c1 == c2);
 	}
 }

@@ -13,17 +13,17 @@ public class TestThree
 {
 	public static void main(String[] args) 
 	{
-		String str = 5 > 3 ? "5іу”Џ3" : "5≤їіу”Џ3";
+		String str = 5 > 3 ? "5е§ІдЇО3" : "5дЄНе§ІдЇО3";
 		System.out.println(str);
 
 		String str2 = null;
 		if (5 > 3)
 		{
-			str2 = "5іу”Џ3";
+			str2 = "5е§ІдЇО3";
 		}
 		else
 		{
-			str2 = "5≤їіу”Џ3";
+			str2 = "5дЄНе§ІдЇО3";
 		}
 	}
 }

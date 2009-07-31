@@ -23,14 +23,14 @@ public class TestAuction
 		}
 		catch (Exception e)
 		{
-			//´Ë´¦Íê³É±¾·½·¨ÖĞ¿ÉÒÔ¶ÔÒì³£Ö´ĞĞµÄĞŞ¸´´¦Àí£¬´Ë´¦½ö½öÊÇÔÚ¿ØÖÆÌ¨´òÓ¡Òì³£¸ú×ÙĞÅÏ¢¡£
+			//æ­¤å¤„å®Œæˆæœ¬æ–¹æ³•ä¸­å¯ä»¥å¯¹å¼‚å¸¸æ‰§è¡Œçš„ä¿®å¤å¤„ç†ï¼Œæ­¤å¤„ä»…ä»…æ˜¯åœ¨æ§åˆ¶å°æ‰“å°å¼‚å¸¸è·Ÿè¸ªä¿¡æ¯ã€‚
 			e.printStackTrace();
-			//ÔÙ´ÎÅ×³ö×Ô¶¨ÒåÒì³£
-			throw new AuctionException("¾ºÅÄ¼Û±ØĞëÊÇÊıÖµ£¬²»ÄÜ°üº¬ÆäËû×Ö·û£¡");
+			//å†æ¬¡æŠ›å‡ºè‡ªå®šä¹‰å¼‚å¸¸
+			throw new AuctionException("ç«æ‹ä»·å¿…é¡»æ˜¯æ•°å€¼ï¼Œä¸èƒ½åŒ…å«å…¶ä»–å­—ç¬¦ï¼");
 		}
 		if (initPrice > d)
 		{
-			throw new AuctionException("¾ºÅÄ¼Û±ÈÆğÅÄ¼ÛµÍ£¬²»ÔÊĞí¾ºÅÄ£¡");
+			throw new AuctionException("ç«æ‹ä»·æ¯”èµ·æ‹ä»·ä½ï¼Œä¸å…è®¸ç«æ‹ï¼");
 		}
 		initPrice = d;
 	}
@@ -44,7 +44,7 @@ public class TestAuction
 		}
 		catch (AuctionException ae)
 		{
-			//main·½·¨ÔÙ´Î²¶×½µ½bid·½·¨ÖĞµÄÒì³£¡£²¢¶Ô¸ÃÒì³£½øĞĞ´¦Àí
+			//mainæ–¹æ³•å†æ¬¡æ•æ‰åˆ°bidæ–¹æ³•ä¸­çš„å¼‚å¸¸ã€‚å¹¶å¯¹è¯¥å¼‚å¸¸è¿›è¡Œå¤„ç†
 			System.err.println(ae.getMessage());
 		}
 	}

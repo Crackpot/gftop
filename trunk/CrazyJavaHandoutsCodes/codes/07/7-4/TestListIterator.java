@@ -14,8 +14,8 @@ public class TestListIterator
 	public static void main(String[] args) 
 	{
 		String[] books = {
-			"Struts2È¨ÍşÖ¸ÄÏ",
-			"ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½"
+			"Struts2æƒå¨æŒ‡å—",
+			"è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜"
 		};
 		List bookList = new ArrayList();
 		for (int i = 0; i < books.length ; i++ )
@@ -26,9 +26,9 @@ public class TestListIterator
 		while (lit.hasNext())
 		{
 			System.out.println(lit.next());
-			lit.add("-------·Ö¸ô·û-------");
+			lit.add("-------åˆ†éš”ç¬¦-------");
 		}
-		System.out.println("==========ÏÂÃæ¿ªÊ¼·´Ïòµü´ú===========");
+		System.out.println("==========ä¸‹é¢å¼€å§‹åå‘è¿­ä»£===========");
 		while(lit.hasPrevious())
 		{
 			System.out.println(lit.previous());

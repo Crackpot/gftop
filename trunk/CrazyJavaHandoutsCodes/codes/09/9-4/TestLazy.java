@@ -16,10 +16,10 @@ public class TestLazy
 	{
 		Calendar cal = Calendar.getInstance();
 		cal.set(2003 , 7 , 31);
-		cal.set(MONTH , 8); //ÀíÂÛÉÏÓ¦¸ÃÊÇÊÇ10ÔÂ1ÈÕ£¬µ«Êµ¼ÊÉÏÊÇ9ÔÂ31ÈÕ£¨²»ºÏ·¨µÄÈÕÆÚ£©
-		//ÏÂÃæ´úÂëÊä³ö10ÔÂ1ÈÕ
+		cal.set(MONTH , 8); //ç†è®ºä¸Šåº”è¯¥æ˜¯æ˜¯10æœˆ1æ—¥ï¼Œä½†å®é™…ä¸Šæ˜¯9æœˆ31æ—¥ï¼ˆä¸åˆæ³•çš„æ—¥æœŸï¼‰
+		//ä¸‹é¢ä»£ç è¾“å‡º10æœˆ1æ—¥
 		//System.out.println(cal.getTime());
-		//ÉèÖÃDATE×Ö¶ÎÎª5
+		//è®¾ç½®DATEå­—æ®µä¸º5
 		cal.set(DATE , 5);
 		System.out.println(cal.getTime());
 	}

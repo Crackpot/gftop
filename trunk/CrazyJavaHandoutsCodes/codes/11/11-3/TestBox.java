@@ -12,17 +12,17 @@ import javax.swing.*;
  */
 public class TestBox
 {
-	private Frame f = new Frame("²âÊÔ");
-	//¶¨ÒåË®Æ½°Ú·Å×é¼þµÄBox¶ÔÏó
+	private Frame f = new Frame("æµ‹è¯•");
+	//å®šä¹‰æ°´å¹³æ‘†æ”¾ç»„ä»¶çš„Boxå¯¹è±¡
 	private Box horizontal = Box.createHorizontalBox();
-	//¶¨Òå´¹Ö±°Ú·Å×é¼þµÄBox¶ÔÏó
+	//å®šä¹‰åž‚ç›´æ‘†æ”¾ç»„ä»¶çš„Boxå¯¹è±¡
 	private Box vertical = Box.createVerticalBox();
 	public void init()
 	{
-		horizontal.add(new Button("Ë®Æ½°´Å¥Ò»"));
-		horizontal.add(new Button("Ë®Æ½°´Å¥¶þ"));
-		vertical.add(new Button("´¹Ö±°´Å¥Ò»"));
-		vertical.add(new Button("´¹Ö±°´Å¥¶þ"));
+		horizontal.add(new Button("æ°´å¹³æŒ‰é’®ä¸€"));
+		horizontal.add(new Button("æ°´å¹³æŒ‰é’®äºŒ"));
+		vertical.add(new Button("åž‚ç›´æŒ‰é’®ä¸€"));
+		vertical.add(new Button("åž‚ç›´æŒ‰é’®äºŒ"));
 		f.add(horizontal , BorderLayout.NORTH);
 		f.add(vertical);
 		f.pack();

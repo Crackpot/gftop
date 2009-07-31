@@ -11,38 +11,38 @@
  */
 public class TestFinalVariable
 {
-	//�����Ա����ʱָ��Ĭ��ֵ���Ϸ���
+	//定义成员变量时指定默认值，合法。
 	final int a = 6;
 	final String str;
 	final int c;
 	final static double d;
-	//��û��ָ��Ĭ��ֵ����û���ڳ�ʼ���顢��������ָ����ʼֵ�����涨��char�����ǲ��Ϸ��ġ�
+	//既没有指定默认值，又没有在初始化块、构造器中指定初始值，下面定义char属性是不合法的。
 	//final char ch;
-	//��ʼ���飬�ɶ�û��ָ��Ĭ��ֵ��ʵ������ָ����ʼֵ
+	//初始化块，可对没有指定默认值的实例属性指定初始值
 	{
-		//�ڳ�ʼ������Ϊʵ������ָ����ʼֵ���Ϸ�
+		//在初始化块中为实例属性指定初始值，合法
 		str = "Hello";
-		//����a����ʱ�Ѿ�ָ����Ĭ��ֵ������Ϊa���¸�ֵ�����渳ֵ���Ƿ�
+		//定义a属性时已经指定了默认值，不能为a重新赋值，下面赋值语句非法
 		//a = 9;
 	}
-	//��̬��ʼ���飬�ɶ�û��ָ��Ĭ��ֵ��������ָ����ʼֵ
+	//静态初始化块，可对没有指定默认值的类属性指定初始值
 	static
 	{
-		//�ھ�̬��ʼ������Ϊ������ָ����ʼֵ���Ϸ�
+		//在静态初始化块中为类属性指定初始值，合法
 		d = 5.6;
 	}
-	//���������ɶ�û��ָ��Ĭ��ֵ����û���ڳ�ʼ������ָ����ʼֵ��ʵ������ָ����ʼֵ
+	//构造器，可对没有指定默认值、且没有在初始化块中指定初始值的实例属性指定初始值
 	public TestFinalVariable()
 	{
-		//�����ʼ�������Ѿ���strָ���˳�ʼ��ֵ���������в����ٶ�final������ֵ�����渳ֵ���Ƿ�
+		//如果初始化块中已经对str指定了初始化值，构造器中不能再对final变量赋值，下面赋值语句非法
 		//str = "java";
 		c = 5;
 	}
 	public void changeFinal()
 	{
-		//��ͨ��������Ϊfinal���εĳ�Ա������ֵ
+		//普通方法不能为final修饰的成员变量赋值
 		//d = 1.2;
-		//��������ͨ������Ϊfinal��Ա����ָ����ʼֵ
+		//不能在普通方法中为final成员变量指定初始值
 		//ch = 'a';
 	}
 	public static void main(String[] args) 

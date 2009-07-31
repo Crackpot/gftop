@@ -18,9 +18,9 @@ public class TestStaticInnerClass
 		private static int age;
 		public void accessOuterProp()
 		{
-			//下面代码出现错误：静态内部类无法访问外部类的实例成员
+			//涓嬮潰浠ｇ爜鍑虹幇閿欒锛氶潤鎬佸唴閮ㄧ被鏃犳硶璁块棶澶栭儴绫荤殑瀹炰緥鎴愬憳
 			System.out.println(prop1);
-			//下面代码正常
+			//涓嬮潰浠ｇ爜姝ｅ父
 			System.out.println(prop2);
 		}
 	}

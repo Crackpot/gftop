@@ -22,7 +22,7 @@ public class TestA
 		{
 			public void test()
 			{
-				//下面语句将提示错误：匿名内部类内访问局部变量必须使用final修饰
+				//涓嬮潰璇彞灏嗘彁绀洪敊璇細鍖垮悕鍐呴儴绫诲唴璁块棶灞�閮ㄥ彉閲忓繀椤讳娇鐢╢inal淇グ
 				System.out.println(age);
 			}
 		};

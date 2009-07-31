@@ -13,10 +13,10 @@ public class TestFrame
 {
 	public static void main(String[] args) 
 	{
-		Frame f = new Frame("²âÊÔ´°¿Ú");
-		//ÉèÖÃ´°¿ÚµÄ´óĞ¡¡¢Î»ÖÃ
+		Frame f = new Frame("æµ‹è¯•çª—å£");
+		//è®¾ç½®çª—å£çš„å¤§å°ã€ä½ç½®
 		f.setBounds(30, 30 , 250, 200);
-		//½«´°¿ÚÏÔÊ¾³öÀ´£¨Frame¶ÔÏóÄ¬ÈÏ´¦ÓÚÒş²Ø×´Ì¬£©
+		//å°†çª—å£æ˜¾ç¤ºå‡ºæ¥ï¼ˆFrameå¯¹è±¡é»˜è®¤å¤„äºéšè—çŠ¶æ€ï¼‰
 		f.setVisible(true);
 	}
 }

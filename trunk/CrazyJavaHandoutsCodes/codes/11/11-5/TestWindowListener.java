@@ -12,7 +12,7 @@ import java.awt.event.*;
  */
 public class TestWindowListener
 {
-	private Frame f = new Frame("测试");
+	private Frame f = new Frame("娴嬭瘯");
 	private TextArea ta = new TextArea(6 , 40);
 	public void init()
 	{
@@ -25,32 +25,32 @@ public class TestWindowListener
 	{
 		public void windowActivated(WindowEvent e)
 		{
-			ta.append("窗口被激活！\n");
+			ta.append("绐楀彛琚縺娲伙紒\n");
 		}
 		public void windowClosed(WindowEvent e) 
 		{
-			ta.append("窗口被成功关闭！\n");
+			ta.append("绐楀彛琚垚鍔熷叧闂紒\n");
 		}
 		public void windowClosing(WindowEvent e) 
 		{
-			ta.append("用户试图关闭窗口！\n");
+			ta.append("鐢ㄦ埛璇曞浘鍏抽棴绐楀彛锛乗n");
 			System.exit(0);
 		}
 		public void windowDeactivated(WindowEvent e) 
 		{
-			ta.append("窗口失去焦点！\n");
+			ta.append("绐楀彛澶卞幓鐒︾偣锛乗n");
 		}
 		public void windowDeiconified(WindowEvent e) 
 		{
-			ta.append("窗口被恢复！\n");
+			ta.append("绐楀彛琚仮澶嶏紒\n");
 		}
 		public void windowIconified(WindowEvent e)
 		{
-			ta.append("窗口被最小化！\n");
+			ta.append("绐楀彛琚渶灏忓寲锛乗n");
 		}
 		public void windowOpened(WindowEvent e) 
 		{
-			ta.append("窗口初次被打开！\n");
+			ta.append("绐楀彛鍒濇琚墦寮�锛乗n");
 		}
 	}
 	public static void main(String[] args) 

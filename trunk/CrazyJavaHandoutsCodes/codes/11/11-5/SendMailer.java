@@ -12,9 +12,9 @@ import java.awt.*;
  */
 public class SendMailer
 {
-	private Frame f = new Frame("²âÊÔ");
+	private Frame f = new Frame("æµ‹è¯•");
 	private TextField tf = new TextField(40);
-	private Button send = new Button("·¢ËÍ");
+	private Button send = new Button("å‘é€");
 	public void init()
 	{
 		send.addActionListener(new MailerListener(tf));

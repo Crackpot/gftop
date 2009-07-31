@@ -15,21 +15,21 @@ public class TestDataFormat
 	public static void main(String[] args) throws Exception
 	{
 		/*
-			DateFormatµÄ¹¹ÔìÆ÷ÊÇprotectedµÄ µ«ËüÌá¹©ÁËÒ»Ğ©¾²Ì¬·½·¨À´»ñÈ¡DateFormatÊµÀı¡£
+			DateFormatçš„æ„é€ å™¨æ˜¯protectedçš„ ä½†å®ƒæä¾›äº†ä¸€äº›é™æ€æ–¹æ³•æ¥è·å–DateFormatå®ä¾‹ã€‚
 			df = new DateFormat();
-			getDateInstance £­ ¸ñÊ½»¯ºóµÄ×Ö·û´®Ö»ÓĞÈÕÆÚ¡£
-			getTimeInstance £­ ¸ñÊ½»¯µÄ×Ö·û´®Ö»ÓĞÊ±¼ä
-			getDateTimeInstance £­ ¸ñÊ½»¯µÄµÄ×Ö·û´®ÓĞÈÕÆÚ¡¢Ê±¼ä
+			getDateInstance ï¼ æ ¼å¼åŒ–åçš„å­—ç¬¦ä¸²åªæœ‰æ—¥æœŸã€‚
+			getTimeInstance ï¼ æ ¼å¼åŒ–çš„å­—ç¬¦ä¸²åªæœ‰æ—¶é—´
+			getDateTimeInstance ï¼ æ ¼å¼åŒ–çš„çš„å­—ç¬¦ä¸²æœ‰æ—¥æœŸã€æ—¶é—´
 
 		*/
 		Date d = new Date();
 		System.out.println(d);
-		//ÎªÁË³ÌĞò¸ü¼ÓÓÑºÃµÄ½çÃæ£¬ÒªÇó°ÑDate×ª»»³ÉÒ»¸ö·ûºÏLocaleµÄ×Ö·û´®¡£
+		//ä¸ºäº†ç¨‹åºæ›´åŠ å‹å¥½çš„ç•Œé¢ï¼Œè¦æ±‚æŠŠDateè½¬æ¢æˆä¸€ä¸ªç¬¦åˆLocaleçš„å­—ç¬¦ä¸²ã€‚
 
 		DateFormat df = DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL, Locale.getDefault()); 
 		System.out.println(df.format(d));
 
-		String dateStr = "2007ÄêaaÔÂ20ÈÕ ĞÇÆÚ¶ş ÉÏÎç11Ê±54·Ö15Ãë CST";
+		String dateStr = "2007å¹´aaæœˆ20æ—¥ æ˜ŸæœŸäºŒ ä¸Šåˆ11æ—¶54åˆ†15ç§’ CST";
 		System.out.println(df.parse(dateStr));
 
 	}

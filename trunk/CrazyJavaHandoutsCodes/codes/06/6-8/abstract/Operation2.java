@@ -39,7 +39,7 @@ public enum Operation2
 			return x / y;
 		}
 	};
-	//为枚举类定义一个抽象方法，这个抽象方法由不同枚举值提供不同的实现
+	//涓烘灇涓剧被瀹氫箟涓�涓娊璞℃柟娉曪紝杩欎釜鎶借薄鏂规硶鐢变笉鍚屾灇涓惧�兼彁渚涗笉鍚岀殑瀹炵幇
 	public abstract double eval(double x, double y);
 	public static void main(String[] args)
 	{

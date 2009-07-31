@@ -14,63 +14,63 @@ class Animal
 {
 	private void beat()
 	{
-		System.out.println("ĞÄÔàÌø¶¯...");
+		System.out.println("å¿ƒè„è·³åŠ¨...");
 	}
 	public void breath()
 	{
 		beat();
-		System.out.println("ÎüÒ»¿ÚÆø£¬ÍÂÒ»¿ÚÆø£¬ºôÎüÖĞ...");
+		System.out.println("å¸ä¸€å£æ°”ï¼Œåä¸€å£æ°”ï¼Œå‘¼å¸ä¸­...");
 	}
 }
 class Bird
 {
-	//½«Ô­À´µÄ¸¸ÀàÇ¶ÈëÔ­À´µÄ×ÓÀà£¬×÷Îª×ÓÀàµÄÒ»¸ö×éºÏ³É·Ö
+	//å°†åŸæ¥çš„çˆ¶ç±»åµŒå…¥åŸæ¥çš„å­ç±»ï¼Œä½œä¸ºå­ç±»çš„ä¸€ä¸ªç»„åˆæˆåˆ†
 	private Animal a;
 	public Bird(Animal a)
 	{
 		this.a = a;
 	}
-	//ÖØĞÂ¶¨ÒåÒ»¸ö×Ô¼ºµÄbreath·½·¨
+	//é‡æ–°å®šä¹‰ä¸€ä¸ªè‡ªå·±çš„breathæ–¹æ³•
 	public void breath()
 	{
-		//Ö±½Ó¸´ÓÃAnimalÌá¹©µÄbreath·½·¨À´ÊµÏÖBirdµÄbreath·½·¨¡£
+		//ç›´æ¥å¤ç”¨Animalæä¾›çš„breathæ–¹æ³•æ¥å®ç°Birdçš„breathæ–¹æ³•ã€‚
 		a.breath();
 	}
 
 	public void fly()
 	{
-		System.out.println("ÎÒÔÚÌì¿Õ×ÔÔÚµÄ·ÉÏè...");
+		System.out.println("æˆ‘åœ¨å¤©ç©ºè‡ªåœ¨çš„é£ç¿”...");
 	}
 }
 class Wolf
 {
-	//½«Ô­À´µÄ¸¸ÀàÇ¶ÈëÔ­À´µÄ×ÓÀà£¬×÷Îª×ÓÀàµÄÒ»¸ö×éºÏ³É·Ö
+	//å°†åŸæ¥çš„çˆ¶ç±»åµŒå…¥åŸæ¥çš„å­ç±»ï¼Œä½œä¸ºå­ç±»çš„ä¸€ä¸ªç»„åˆæˆåˆ†
 	private Animal a;
 	public Wolf(Animal a)
 	{
 		this.a = a;
 	}
-	//ÖØĞÂ¶¨ÒåÒ»¸ö×Ô¼ºµÄbreath·½·¨
+	//é‡æ–°å®šä¹‰ä¸€ä¸ªè‡ªå·±çš„breathæ–¹æ³•
 	public void breath()
 	{
-		//Ö±½Ó¸´ÓÃAnimalÌá¹©µÄbreath·½·¨À´ÊµÏÖBirdµÄbreath·½·¨¡£
+		//ç›´æ¥å¤ç”¨Animalæä¾›çš„breathæ–¹æ³•æ¥å®ç°Birdçš„breathæ–¹æ³•ã€‚
 		a.breath();
 	}
 	public void run()
 	{
-		System.out.println("ÎÒÔÚÂ½µØÉÏµÄ¿ìËÙ±¼ÅÜ...");
+		System.out.println("æˆ‘åœ¨é™†åœ°ä¸Šçš„å¿«é€Ÿå¥”è·‘...");
 	}
 }
 public class TestComposite
 {
 	public static void main(String[] args)
 	{
-		//´ËÊ±ĞèÒªÏÔÊ½´´½¨±»Ç¶ÈëµÄ¶ÔÏó
+		//æ­¤æ—¶éœ€è¦æ˜¾å¼åˆ›å»ºè¢«åµŒå…¥çš„å¯¹è±¡
 		Animal a1 = new Animal();
 		Bird b = new Bird(a1);
 		b.breath();
 		b.fly();
-		//´ËÊ±ĞèÒªÏÔÊ½´´½¨±»Ç¶ÈëµÄ¶ÔÏó
+		//æ­¤æ—¶éœ€è¦æ˜¾å¼åˆ›å»ºè¢«åµŒå…¥çš„å¯¹è±¡
 		Animal a2 = new Animal();
 		Wolf w = new Wolf(a2);
 		w.breath();

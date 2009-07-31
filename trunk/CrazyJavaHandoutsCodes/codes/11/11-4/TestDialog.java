@@ -12,11 +12,11 @@ import java.awt.event.*;
  */
 public class TestDialog
 {
-	Frame f = new Frame("²âÊÔ");	
-	Dialog d1 = new Dialog(f, "Ä£Ê½¶Ô»°¿ò" , true);
-	Dialog d2 = new Dialog(f, "·ÇÄ£Ê½¶Ô»°¿ò" , false);
-	Button b1 = new Button("´ò¿ªÄ£Ê½¶Ô»°¿ò");
-	Button b2 = new Button("´ò¿ª·ÇÄ£Ê½¶Ô»°¿ò");
+	Frame f = new Frame("æµ‹è¯•");	
+	Dialog d1 = new Dialog(f, "æ¨¡å¼å¯¹è¯æ¡†" , true);
+	Dialog d2 = new Dialog(f, "éæ¨¡å¼å¯¹è¯æ¡†" , false);
+	Button b1 = new Button("æ‰“å¼€æ¨¡å¼å¯¹è¯æ¡†");
+	Button b2 = new Button("æ‰“å¼€éæ¨¡å¼å¯¹è¯æ¡†");
 	public void init()
 	{
 		d1.setBounds(20 , 30 , 300, 400);

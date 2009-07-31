@@ -15,18 +15,18 @@ public class TestBorderLayout
 {
 	public static void main(String[] args) 
 	{
-		Frame f = new Frame("²âÊÔ´°¿Ú");
-		//ÉèÖÃFrameÈİÆ÷Ê¹ÓÃBorderLayout²¼¾Ö¹ÜÀíÆ÷
+		Frame f = new Frame("æµ‹è¯•çª—å£");
+		//è®¾ç½®Frameå®¹å™¨ä½¿ç”¨BorderLayoutå¸ƒå±€ç®¡ç†å™¨
 		f.setLayout(new BorderLayout(30, 5));
-		f.add(new Button("ÄÏ") , SOUTH);
-		f.add(new Button("±±") , NORTH);
-		//Ä¬ÈÏÌí¼Óµ½ÖĞ¼ä
-		f.add(new Button("ÖĞ"));
-		f.add(new Button("¶«") , EAST);
-		f.add(new Button("Î÷") , WEST);
-		//ÉèÖÃ´°¿ÚÎª×î¼Ñ´óĞ¡
+		f.add(new Button("å—") , SOUTH);
+		f.add(new Button("åŒ—") , NORTH);
+		//é»˜è®¤æ·»åŠ åˆ°ä¸­é—´
+		f.add(new Button("ä¸­"));
+		f.add(new Button("ä¸œ") , EAST);
+		f.add(new Button("è¥¿") , WEST);
+		//è®¾ç½®çª—å£ä¸ºæœ€ä½³å¤§å°
 		f.pack();
-		//½«´°¿ÚÏÔÊ¾³öÀ´£¨Frame¶ÔÏóÄ¬ÈÏ´¦ÓÚÒş²Ø×´Ì¬£©
+		//å°†çª—å£æ˜¾ç¤ºå‡ºæ¥ï¼ˆFrameå¯¹è±¡é»˜è®¤å¤„äºéšè—çŠ¶æ€ï¼‰
 		f.setVisible(true);
 	}
 }

@@ -14,15 +14,15 @@ public class TestHashtableError
 	public static void main(String[] args) 
 	{
 		Hashtable ht = new Hashtable();
-		ht.put(new A(60000) , "Struts2È¨ÍşÖ¸ÄÏ");
-		ht.put(new A(87563) , "ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
+		ht.put(new A(60000) , "Struts2æƒå¨æŒ‡å—");
+		ht.put(new A(87563) , "è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
 		Iterator it = ht.keySet().iterator();
 		A first = (A)it.next();
 		first.count = 87563;
 		System.out.println(ht);
 		ht.remove(new A(87563));
 		System.out.println(ht);
-		//ÎŞ·¨»ñÈ¡Ê£ÏÂµÄvalue£¬ÏÂÃæÁ½ĞĞ´úÂë¶¼½«Êä³önull¡£
+		//æ— æ³•è·å–å‰©ä¸‹çš„valueï¼Œä¸‹é¢ä¸¤è¡Œä»£ç éƒ½å°†è¾“å‡ºnullã€‚
 		System.out.println(ht.get(new A(87563)));
 		System.out.println(ht.get(new A(60000)));
 	}

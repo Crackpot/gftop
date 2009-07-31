@@ -14,22 +14,22 @@ public class TestTreeSetCommon
 	public static void main(String[] args) 
 	{
 		TreeSet nums = new TreeSet();
-		//ÏòTreeSetÖĞÌí¼ÓËÄ¸öInteger¶ÔÏó
+		//å‘TreeSetä¸­æ·»åŠ å››ä¸ªIntegerå¯¹è±¡
 		nums.add(5);
 		nums.add(2);
 		nums.add(10);
 		nums.add(-9);
-		//Êä³ö¼¯ºÏÔªËØ£¬¿´µ½¼¯ºÏÔªËØÒÑ¾­´¦ÓÚÅÅĞò×´Ì¬
+		//è¾“å‡ºé›†åˆå…ƒç´ ï¼Œçœ‹åˆ°é›†åˆå…ƒç´ å·²ç»å¤„äºæ’åºçŠ¶æ€
 		System.out.println(nums);
-		//Êä³ö¼¯ºÏÀïµÄµÚÒ»¸öÔªËØ
+		//è¾“å‡ºé›†åˆé‡Œçš„ç¬¬ä¸€ä¸ªå…ƒç´ 
 		System.out.println(nums.first());
-		//Êä³ö¼¯ºÏÀïµÄ×îºóÒ»¸öÔªËØ
+		//è¾“å‡ºé›†åˆé‡Œçš„æœ€åä¸€ä¸ªå…ƒç´ 
 		System.out.println(nums.last());
-		//·µ»ØĞ¡ÓÚ4µÄ×Ó¼¯£¬²»°üº¬4
+		//è¿”å›å°äº4çš„å­é›†ï¼Œä¸åŒ…å«4
 		System.out.println(nums.headSet(4));
-		//·µ»Ø´óÓÚ5µÄ×Ó¼¯£¬Èç¹ûSetÖĞ°üº¬5£¬×Ó¼¯ÖĞ»¹°üº¬5
+		//è¿”å›å¤§äº5çš„å­é›†ï¼Œå¦‚æœSetä¸­åŒ…å«5ï¼Œå­é›†ä¸­è¿˜åŒ…å«5
 		System.out.println(nums.tailSet(5));
-		//·µ»Ø´óÓÚµÈÓÚ-3£¬Ğ¡ÓÚ4µÄ×Ó¼¯¡£
+		//è¿”å›å¤§äºç­‰äº-3ï¼Œå°äº4çš„å­é›†ã€‚
 		System.out.println(nums.subSet(-3 , 4));
 	}
 }

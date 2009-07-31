@@ -13,15 +13,15 @@ public class TestReferenceTransfer
 {
 	public static void swap(DataWrap dw)
 	{
-		//ÏÂÃæÈıĞĞ´úÂëÊµÏÖdwµÄa¡¢bÊôĞÔÖµ½»»»¡£
-		//¶¨ÒåÒ»¸öÁÙÊ±±äÁ¿À´±£´ædw¶ÔÏóµÄaÊôĞÔµÄÖµ
+		//ä¸‹é¢ä¸‰è¡Œä»£ç å®ç°dwçš„aã€bå±æ€§å€¼äº¤æ¢ã€‚
+		//å®šä¹‰ä¸€ä¸ªä¸´æ—¶å˜é‡æ¥ä¿å­˜dwå¯¹è±¡çš„aå±æ€§çš„å€¼
 		int tmp = dw.a;
-		//°Ñdw¶ÔÏóµÄbÊôĞÔÖµ¸³¸øaÊôĞÔ
+		//æŠŠdwå¯¹è±¡çš„bå±æ€§å€¼èµ‹ç»™aå±æ€§
 		dw.a = dw.b;
-		//°ÑÁÙÊ±±äÁ¿tmpµÄÖµ¸³¸ødw¶ÔÏóµÄaÊôĞÔ
+		//æŠŠä¸´æ—¶å˜é‡tmpçš„å€¼èµ‹ç»™dwå¯¹è±¡çš„aå±æ€§
 		dw.b = tmp;
-		System.out.println("swap·½·¨Àï£¬aÊôĞÔµÄÖµÊÇ" + dw.a + "£»bµÄÖµÊÇ" + dw.b);
-		//°ÑdwÖ±½Ó¸³Îªnull£¬ÈÃËü²»ÔÙÖ¸ÏòÈÎºÎÓĞĞ§µØÖ·¡£
+		System.out.println("swapæ–¹æ³•é‡Œï¼Œaå±æ€§çš„å€¼æ˜¯" + dw.a + "ï¼›bçš„å€¼æ˜¯" + dw.b);
+		//æŠŠdwç›´æ¥èµ‹ä¸ºnullï¼Œè®©å®ƒä¸å†æŒ‡å‘ä»»ä½•æœ‰æ•ˆåœ°å€ã€‚
 		dw = null;
 	}
 	public static void main(String[] args) 
@@ -30,7 +30,7 @@ public class TestReferenceTransfer
 		dw.a = 6;
 		dw.b = 9;
 		swap(dw);
-		System.out.println("½»»»½áÊøºó£¬aÊôĞÔµÄÖµÊÇ" + dw.a + "£»bÊôĞÔµÄÖµÊÇ" + dw.b);
+		System.out.println("äº¤æ¢ç»“æŸåï¼Œaå±æ€§çš„å€¼æ˜¯" + dw.a + "ï¼›bå±æ€§çš„å€¼æ˜¯" + dw.b);
 
 	}
 }

@@ -15,7 +15,7 @@ public class PrintCommand implements Command
 	{
 		for (int tmp : target )
 		{
-			System.out.println("µü´úÊä³öÄ¿±êÊı×éµÄÔªËØ:" + tmp);
+			System.out.println("è¿­ä»£è¾“å‡ºç›®æ ‡æ•°ç»„çš„å…ƒç´ :" + tmp);
 		}
 	}
 }

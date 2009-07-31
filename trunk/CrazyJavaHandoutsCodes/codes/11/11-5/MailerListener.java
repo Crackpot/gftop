@@ -27,7 +27,7 @@ public class MailerListener implements ActionListener
 
 	public void actionPerformed(ActionEvent e)
 	{
-		System.out.println("³ÌĞòÏò¡°" + mailAddress.getText() + "¡±·¢ËÍÓÊ¼ş...");
-		//·¢ËÍÓÊ¼şµÄÕæÊµÊµÏÖ
+		System.out.println("ç¨‹åºå‘â€œ" + mailAddress.getText() + "â€å‘é€é‚®ä»¶...");
+		//å‘é€é‚®ä»¶çš„çœŸå®å®ç°
 	}
 }

@@ -11,11 +11,11 @@
  */
 public class Person
 {
-	//ÏÂÃæ¶¨ÒåÁËPersonÀàµÄÁ½¸öÊôĞÔ
+	//ä¸‹é¢å®šä¹‰äº†Personç±»çš„ä¸¤ä¸ªå±æ€§
 	public String name;
 	public int age;
 
-	//ÏÂÃæ¶¨ÒåÁËÒ»¸ösay·½·¨
+	//ä¸‹é¢å®šä¹‰äº†ä¸€ä¸ªsayæ–¹æ³•
 	public void say(String content)
 	{
 		System.out.println(content);

@@ -12,9 +12,9 @@ import java.awt.*;
  */
 public class TestNullLayout
 {
-	Frame f = new Frame("²âÊÔ´°¿Ú");
-	Button b1 = new Button("µÚÒ»¸ö°´Å¥");
-	Button b2 = new Button("µÚ¶ş¸ö°´Å¥");
+	Frame f = new Frame("æµ‹è¯•çª—å£");
+	Button b1 = new Button("ç¬¬ä¸€ä¸ªæŒ‰é’®");
+	Button b2 = new Button("ç¬¬äºŒä¸ªæŒ‰é’®");
 	public void init()
 	{
 		f.setLayout(null);

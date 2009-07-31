@@ -13,20 +13,20 @@ public class TestPhantomReference
 {
 	public static void main(String[] args) throws Exception
 	{
-		//´´½¨Ò»¸ö×Ö·û´®¶ÔÏó
-		String str = new String("Struts2È¨ÍşÖ¸ÄÏ");
-		//´´½¨Ò»¸öÒıÓÃ¶ÓÁĞ
+		//åˆ›å»ºä¸€ä¸ªå­—ç¬¦ä¸²å¯¹è±¡
+		String str = new String("Struts2æƒå¨æŒ‡å—");
+		//åˆ›å»ºä¸€ä¸ªå¼•ç”¨é˜Ÿåˆ—
 		ReferenceQueue rq = new ReferenceQueue();
-		//´´½¨Ò»¸öĞéÒıÓÃ£¬ÈÃ´ËĞéÒıÓÃÒıÓÃµ½"Struts2È¨ÍşÖ¸ÄÏ"×Ö·û´®
+		//åˆ›å»ºä¸€ä¸ªè™šå¼•ç”¨ï¼Œè®©æ­¤è™šå¼•ç”¨å¼•ç”¨åˆ°"Struts2æƒå¨æŒ‡å—"å­—ç¬¦ä¸²
 		PhantomReference  pr = new PhantomReference (str , rq);
-		//ÇĞ¶ÏstrÒıÓÃºÍ"Struts2È¨ÍşÖ¸ÄÏ"×Ö·û´®Ö®¼äµÄÒıÓÃ
+		//åˆ‡æ–­strå¼•ç”¨å’Œ"Struts2æƒå¨æŒ‡å—"å­—ç¬¦ä¸²ä¹‹é—´çš„å¼•ç”¨
 		str = null;
-		//È¡³öĞéÒıÓÃËùÒıÓÃµÄ¶ÔÏó£¬²¢²»ÄÜÍ¨¹ıĞéÒıÓÃ·ÃÎÊ±»ÒıÓÃµÄ¶ÔÏó£¬ËùÒÔ´Ë´¦Êä³önull
+		//å–å‡ºè™šå¼•ç”¨æ‰€å¼•ç”¨çš„å¯¹è±¡ï¼Œå¹¶ä¸èƒ½é€šè¿‡è™šå¼•ç”¨è®¿é—®è¢«å¼•ç”¨çš„å¯¹è±¡ï¼Œæ‰€ä»¥æ­¤å¤„è¾“å‡ºnull
 		System.out.println(pr.get());
-		//Ç¿ÖÆÀ¬»ø»ØÊÕ
+		//å¼ºåˆ¶åƒåœ¾å›æ”¶
 		System.gc();
 		System.runFinalization();
-		//È¡³öÒıÓÃ¶ÓÁĞÖĞ×îÏÈ½øÈë¶ÓÁĞÖĞÒıÓÃÓëpr½øĞĞ±È½Ï
+		//å–å‡ºå¼•ç”¨é˜Ÿåˆ—ä¸­æœ€å…ˆè¿›å…¥é˜Ÿåˆ—ä¸­å¼•ç”¨ä¸prè¿›è¡Œæ¯”è¾ƒ
 		System.out.println(rq.poll() == pr);
 	}
 }

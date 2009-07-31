@@ -13,38 +13,38 @@ public class TestPerformance
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸ö×Ö·û´®Êı×é
+		//åˆ›å»ºä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„
 		String[] tst1 = new String[900000];
-		//¶¯Ì¬³õÊ¼»¯Êı×éÔªËØ
+		//åŠ¨æ€åˆå§‹åŒ–æ•°ç»„å…ƒç´ 
 		for (int i = 0; i < 900000; i++)
 		{
 			tst1[i] = String.valueOf(i);
 		}
 		ArrayList al = new ArrayList();
-		//½«ËùÓĞÊı×éÔªËØ¼ÓÈëArrayList¼¯ºÏÖĞ
+		//å°†æ‰€æœ‰æ•°ç»„å…ƒç´ åŠ å…¥ArrayListé›†åˆä¸­
 		for (int i = 0; i < 900000 ; i++)
 		{
 			al.add(tst1[i]);
 		}
 		LinkedList ll = new LinkedList();
-		//½«ËùÓĞÊı×éÔªËØ¼ÓÈëLinkedList¼¯ºÏÖĞ
+		//å°†æ‰€æœ‰æ•°ç»„å…ƒç´ åŠ å…¥LinkedListé›†åˆä¸­
 		for (int i = 0; i < 900000 ; i++)
 		{
 			ll.add(tst1[i]);
 		}
-		//µü´ú·ÃÎÊArrayList¼¯ºÏµÄËùÓĞÔªËØ£¬²¢Êä³öµü´úÊ±¼ä
+		//è¿­ä»£è®¿é—®ArrayListé›†åˆçš„æ‰€æœ‰å…ƒç´ ï¼Œå¹¶è¾“å‡ºè¿­ä»£æ—¶é—´
 		long start = System.currentTimeMillis();
 		for (Iterator it = al.iterator();it.hasNext() ; )
 		{
 			it.next();
 		}
-		System.out.println("µü´úArrayList¼¯ºÏÔªËØµÄÊ±¼ä:" + (System.currentTimeMillis() - start));
-		//µü´ú·ÃÎÊLinkedList¼¯ºÏµÄËùÓĞÔªËØ£¬²¢Êä³öµü´úÊ±¼ä
+		System.out.println("è¿­ä»£ArrayListé›†åˆå…ƒç´ çš„æ—¶é—´:" + (System.currentTimeMillis() - start));
+		//è¿­ä»£è®¿é—®LinkedListé›†åˆçš„æ‰€æœ‰å…ƒç´ ï¼Œå¹¶è¾“å‡ºè¿­ä»£æ—¶é—´
 		start = System.currentTimeMillis();
 		for (Iterator it = ll.iterator();it.hasNext() ; )
 		{
 			it.next();
 		}
-		System.out.println("µü´úLinkedList¼¯ºÏÔªËØµÄÊ±¼ä:" + (System.currentTimeMillis() - start));
+		System.out.println("è¿­ä»£LinkedListé›†åˆå…ƒç´ çš„æ—¶é—´:" + (System.currentTimeMillis() - start));
 	}
 }

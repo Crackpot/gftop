@@ -16,7 +16,7 @@ public class DateFormatParse
 	public static void main(String[] args) throws Exception
 	{
 		String str1 = "2007-12-12";
-		String str2 = "2007Äê12ÔÂ10ÈÕ";
+		String str2 = "2007å¹´12æœˆ10æ—¥";
 		System.out.println(DateFormat.getDateInstance().parse(str1));
 		System.out.println(DateFormat.getDateInstance(LONG).parse(str2));
 		System.out.println(DateFormat.getDateInstance().parse(str2));

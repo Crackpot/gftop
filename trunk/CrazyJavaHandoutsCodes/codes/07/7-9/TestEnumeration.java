@@ -14,11 +14,11 @@ public class TestEnumeration
 	public static void main(String[] args) 
 	{
 		Vector v = new Vector();
-		v.add("Struts2权威指南");
-		v.add("轻量级J2EE企业应用实战");
+		v.add("Struts2鏉冨▉鎸囧崡");
+		v.add("杞婚噺绾2EE浼佷笟搴旂敤瀹炴垬");
 		Hashtable scores = new Hashtable();
-		scores.put("语文" , 78);
-		scores.put("数学" , 88);
+		scores.put("璇枃" , 78);
+		scores.put("鏁板" , 88);
 		Enumeration em = v.elements();
 		while (em.hasMoreElements())
 		{

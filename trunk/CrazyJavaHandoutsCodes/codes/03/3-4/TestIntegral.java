@@ -13,20 +13,20 @@ public class TestIntegral
 {
 	public static void main(String[] args) 
 	{
-		//ÏÂÃæ´úÂëÊÇÕýÈ·µÄ£¬ÏµÍ³»á×Ô¶¯°Ñ56µ±³ÉbyteÀàÐÍ´¦Àí
+		//ä¸‹é¢ä»£ç æ˜¯æ­£ç¡®çš„ï¼Œç³»ç»Ÿä¼šè‡ªåŠ¨æŠŠ56å½“æˆbyteç±»åž‹å¤„ç†
 		byte a = 56;
 		/*
-		ÏÂÃæ´úÂëÊÇ´íµÄ£¬ÏµÍ³²»»á°Ñ9223372036854775807µ±³ÉlongÀàÐÍ´¦Àí£¬
-		ËùÒÔ³¬³öintµÄ±íÊý·¶Î§£¬´Ó¶øÒýÆð´íÎó
+		ä¸‹é¢ä»£ç æ˜¯é”™çš„ï¼Œç³»ç»Ÿä¸ä¼šæŠŠ9223372036854775807å½“æˆlongç±»åž‹å¤„ç†ï¼Œ
+		æ‰€ä»¥è¶…å‡ºintçš„è¡¨æ•°èŒƒå›´ï¼Œä»Žè€Œå¼•èµ·é”™è¯¯
 		*/
 		//long bigValue = 9999999999999;
-		//ÏÂÃæ´úÂëÊÇÕýÈ·µÄ£¬ÔÚ¾Þ´óµÄÕûÊý³£Á¿ºóÊ¹ÓÃLºó×º£¬Ç¿ÖÆÊ¹ÓÃlongÀàÐÍ
+		//ä¸‹é¢ä»£ç æ˜¯æ­£ç¡®çš„ï¼Œåœ¨å·¨å¤§çš„æ•´æ•°å¸¸é‡åŽä½¿ç”¨LåŽç¼€ï¼Œå¼ºåˆ¶ä½¿ç”¨longç±»åž‹
 		long bigValue2 = 9223372036854775807L;
 	
-		//ÒÔ0¿ªÍ·µÄÕûÊý³£Á¿ÊÇ8½øÖÆµÄÕûÊý
+		//ä»¥0å¼€å¤´çš„æ•´æ•°å¸¸é‡æ˜¯8è¿›åˆ¶çš„æ•´æ•°
 		int octalValue = 013;
 		System.out.println(octalValue);
-		//ÒÔ0x»ò0X¿ªÍ·µÄÕûÊý³£Á¿ÊÇ16½øÖÆµÄÕûÊý
+		//ä»¥0xæˆ–0Xå¼€å¤´çš„æ•´æ•°å¸¸é‡æ˜¯16è¿›åˆ¶çš„æ•´æ•°
 		int hexValue1 = 0x13;
 		int hexValue2 = 0XaF;
 

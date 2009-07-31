@@ -14,17 +14,17 @@ import java.awt.datatransfer.*;
  */
 public class SimpleClipboard
 {
-	private Frame f = new Frame("¼òµ¥µÄ¼ôÌù°å³ÌĞò");
-	//»ñÈ¡ÏµÍ³¼ôÌù°å
+	private Frame f = new Frame("ç®€å•çš„å‰ªè´´æ¿ç¨‹åº");
+	//è·å–ç³»ç»Ÿå‰ªè´´æ¿
 	private Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard(); 
-	//ÏÂÃæÊÇ´´½¨±¾µØ¼ôÌù°åµÄ´úÂë
+	//ä¸‹é¢æ˜¯åˆ›å»ºæœ¬åœ°å‰ªè´´æ¿çš„ä»£ç 
 	//Clipboard clipboard = new Clipboard("cb"); 
-	//ÓÃÓÚ¸´ÖÆÎÄ±¾µÄÎÄ±¾¿ò
+	//ç”¨äºå¤åˆ¶æ–‡æœ¬çš„æ–‡æœ¬æ¡†
 	private TextArea jtaCopyTo = new TextArea(5,20); 
-	//ÓÃÓÚÕ³ÌùÎÄ±¾µÄÎÄ±¾¿ò
+	//ç”¨äºç²˜è´´æ–‡æœ¬çš„æ–‡æœ¬æ¡†
 	private TextArea jtaPaste = new TextArea(5,20);
-	private Button btCopy = new Button("¸´ÖÆ"); //¿½±´°´Å¥
-	private Button btPaste = new Button("Õ³Ìù"); //Õ³Ìù°´Å¥ 
+	private Button btCopy = new Button("å¤åˆ¶"); //æ‹·è´æŒ‰é’®
+	private Button btPaste = new Button("ç²˜è´´"); //ç²˜è´´æŒ‰é’® 
 	public void init()
 	{
 		Panel p = new Panel();
@@ -34,9 +34,9 @@ public class SimpleClipboard
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//½«Ò»¸ö¶àĞĞÎÄ±¾ÓòÀïµÄ×Ö·û´®·â×°³ÉStringSelection¶ÔÏó
+				//å°†ä¸€ä¸ªå¤šè¡Œæ–‡æœ¬åŸŸé‡Œçš„å­—ç¬¦ä¸²å°è£…æˆStringSelectionå¯¹è±¡
 				StringSelection contents=new StringSelection(jtaCopyTo.getText());
-				//½«StringSelection¶ÔÏó·ÅÈë¼ôÌù°å
+				//å°†StringSelectionå¯¹è±¡æ”¾å…¥å‰ªè´´æ¿
 				clipboard.setContents(contents, null); 
 			}
 		});
@@ -44,12 +44,12 @@ public class SimpleClipboard
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//Èç¹û¼ôÌù°åÖĞ°üº¬stringFlavorÄÚÈİ
+				//å¦‚æœå‰ªè´´æ¿ä¸­åŒ…å«stringFlavorå†…å®¹
 				if (clipboard.isDataFlavorAvailable(DataFlavor.stringFlavor))
 				{
 					try
 					{
-						//È¡³ö¼ôÌù°åÖĞstringFlavorÄÚÈİ
+						//å–å‡ºå‰ªè´´æ¿ä¸­stringFlavorå†…å®¹
 						String content = (String)clipboard.getData(DataFlavor.stringFlavor);
 						jtaPaste.append(content);
 					}
@@ -61,12 +61,12 @@ public class SimpleClipboard
 				}
 			}
 		}); 
-		//´´½¨Ò»¸öË®Æ½ÅÅÁĞµÄBoxÈİÆ÷
+		//åˆ›å»ºä¸€ä¸ªæ°´å¹³æ’åˆ—çš„Boxå®¹å™¨
 		Box box = new Box(BoxLayout.X_AXIS);
-		//½«Á½¸ö¶àĞĞÎÄ±¾Óò·ÅÔÚBoxÈİÆ÷ÖĞ
+		//å°†ä¸¤ä¸ªå¤šè¡Œæ–‡æœ¬åŸŸæ”¾åœ¨Boxå®¹å™¨ä¸­
 		box.add(jtaCopyTo);
 		box.add(jtaPaste);
-		//½«°´Å¥ËùÔÚPanel¡¢BoxÈİÆ÷Ìí¼Óµ½Frame´°¿ÚÖĞ
+		//å°†æŒ‰é’®æ‰€åœ¨Panelã€Boxå®¹å™¨æ·»åŠ åˆ°Frameçª—å£ä¸­
 		f.add(p,BorderLayout.SOUTH); 
 		f.add(box,BorderLayout.CENTER);
 		f.pack();

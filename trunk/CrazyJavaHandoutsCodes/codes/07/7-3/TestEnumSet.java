@@ -17,13 +17,13 @@ public class TestEnumSet
 		c.clear();
 		c.add(Season.FALL);
 		c.add(Season.SPRING);
-		//¸´ÖÆCollection¼¯ºÏÖĞËùÓĞÔªËØÀ´´´½¨EnumSet¼¯ºÏ
+		//å¤åˆ¶Collectioné›†åˆä¸­æ‰€æœ‰å…ƒç´ æ¥åˆ›å»ºEnumSeté›†åˆ
 		EnumSet enumSet = EnumSet.copyOf(c);
-		//Êä³ö[SPRING,FALL]
+		//è¾“å‡º[SPRING,FALL]
 		System.out.println(enumSet);
-		c.add("Struts2È¨ÍşÖ¸ÄÏ");
-		c.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		//ÏÂÃæ´úÂë³öÏÖÒì³££ºÒòÎªc¼¯ºÏÀïµÄÔªËØ²»ÊÇÈ«²¿¶¼ÎªÃ¶¾ÙÖµ
+		c.add("Struts2æƒå¨æŒ‡å—");
+		c.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		//ä¸‹é¢ä»£ç å‡ºç°å¼‚å¸¸ï¼šå› ä¸ºcé›†åˆé‡Œçš„å…ƒç´ ä¸æ˜¯å…¨éƒ¨éƒ½ä¸ºæšä¸¾å€¼
 		enumSet = EnumSet.copyOf(c); 
 	}
 } 

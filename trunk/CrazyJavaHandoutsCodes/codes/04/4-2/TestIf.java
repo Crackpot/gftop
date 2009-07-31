@@ -15,44 +15,44 @@ public class TestIf
 	{
 		int age = 30;
 		if (age > 20)
-		//Ö»ÓÐµ±age > 20Ê±£¬ÏÂÃæ»¨À¨ºÅÀ¨ÆðÀ´µÄÓï¾ä¿é²Å»áÖ´ÐÐ
-		//»¨À¨ºÅÀ¨ÆðÀ´µÄÓï¾äÊÇÒ»¸öÕûÌå£¬ÒªÃ´Ò»ÆðÖ´ÐÐ£¬ÒªÃ´Ò»Æð²»»áÖ´ÐÐ
+		//åªæœ‰å½“age > 20æ—¶ï¼Œä¸‹é¢èŠ±æ‹¬å·æ‹¬èµ·æ¥çš„è¯­å¥å—æ‰ä¼šæ‰§è¡Œ
+		//èŠ±æ‹¬å·æ‹¬èµ·æ¥çš„è¯­å¥æ˜¯ä¸€ä¸ªæ•´ä½“ï¼Œè¦ä¹ˆä¸€èµ·æ‰§è¡Œï¼Œè¦ä¹ˆä¸€èµ·ä¸ä¼šæ‰§è¡Œ
 		{
-			System.out.println("ÄêÁäÒÑ¾­´óÓÚ20ËêÁË");
-			System.out.println("20ËêÒÔÉÏµÄÈËÓ¦¸ÃÑ§»á³Ðµ£ÔðÈÎ...");
+			System.out.println("å¹´é¾„å·²ç»å¤§äºŽ20å²äº†");
+			System.out.println("20å²ä»¥ä¸Šçš„äººåº”è¯¥å­¦ä¼šæ‰¿æ‹…è´£ä»»...");
 		}
 
-		//¶¨Òå±äÁ¿a £¬²¢ÎªÆä¸³Öµ
+		//å®šä¹‰å˜é‡a ï¼Œå¹¶ä¸ºå…¶èµ‹å€¼
 		int a = 5;
 		if (a > 4)
-		//Èç¹ûa>4£¬Ö´ÐÐÏÂÃæµÄÖ´ÐÐÌå£¬Ö»ÓÐÒ»ÐÐ´úÂë×÷Îª´úÂë¿é
-			System.out.println("a´óÓÚ4");
+		//å¦‚æžœa>4ï¼Œæ‰§è¡Œä¸‹é¢çš„æ‰§è¡Œä½“ï¼Œåªæœ‰ä¸€è¡Œä»£ç ä½œä¸ºä»£ç å—
+			System.out.println("aå¤§äºŽ4");
 		else
-		//·ñÔò£¬Ö´ÐÐÏÂÃæµÄÖ´ÐÐÌå£¬Ö»ÓÐÒ»ÐÐ´úÂë×÷Îª´úÂë¿é
-			System.out.println("a²»´óÓÚ4");
+		//å¦åˆ™ï¼Œæ‰§è¡Œä¸‹é¢çš„æ‰§è¡Œä½“ï¼Œåªæœ‰ä¸€è¡Œä»£ç ä½œä¸ºä»£ç å—
+			System.out.println("aä¸å¤§äºŽ4");
 
-		//¶¨Òå±äÁ¿b £¬²¢ÎªÆä¸³Öµ
+		//å®šä¹‰å˜é‡b ï¼Œå¹¶ä¸ºå…¶èµ‹å€¼
 		int b = 5;
 		if (b > 4)
-		//Èç¹ûb>4£¬Ö´ÐÐÏÂÃæµÄÖ´ÐÐÌå£¬Ö»ÓÐÒ»ÐÐ´úÂë×÷Îª´úÂë¿é
-			System.out.println("b´óÓÚ4");
+		//å¦‚æžœb>4ï¼Œæ‰§è¡Œä¸‹é¢çš„æ‰§è¡Œä½“ï¼Œåªæœ‰ä¸€è¡Œä»£ç ä½œä¸ºä»£ç å—
+			System.out.println("bå¤§äºŽ4");
 		else
-		//·ñÔò£¬Ö´ÐÐÏÂÃæµÄÖ´ÐÐÌå£¬Ö»ÓÐÒ»ÐÐ´úÂë×÷Îª´úÂë¿é
+		//å¦åˆ™ï¼Œæ‰§è¡Œä¸‹é¢çš„æ‰§è¡Œä½“ï¼Œåªæœ‰ä¸€è¡Œä»£ç ä½œä¸ºä»£ç å—
 			b--;
-			//¶ÔÓÚÏÂÃæ´úÂë¶øÑÔ£¬ËüÒÑ¾­²»ÔÙÊÇÌõ¼þÖ´ÐÐÌåµÄÒ»²¿·Ö£¬Òò´Ë×Ü»áÖ´ÐÐ¡£
-			System.out.println("b²»´óÓÚ4");
+			//å¯¹äºŽä¸‹é¢ä»£ç è€Œè¨€ï¼Œå®ƒå·²ç»ä¸å†æ˜¯æ¡ä»¶æ‰§è¡Œä½“çš„ä¸€éƒ¨åˆ†ï¼Œå› æ­¤æ€»ä¼šæ‰§è¡Œã€‚
+			System.out.println("bä¸å¤§äºŽ4");
 
-		//¶¨Òå±äÁ¿c £¬²¢ÎªÆä¸³Öµ
+		//å®šä¹‰å˜é‡c ï¼Œå¹¶ä¸ºå…¶èµ‹å€¼
 		int c = 5;
 		if (c > 4)
-		//Èç¹ûb>4£¬Ö´ÐÐÏÂÃæµÄÖ´ÐÐÌå£¬½«Ö»ÓÐc--;Ò»ÐÐ´úÂëÎªÌõ¼þÌå
+		//å¦‚æžœb>4ï¼Œæ‰§è¡Œä¸‹é¢çš„æ‰§è¡Œä½“ï¼Œå°†åªæœ‰c--;ä¸€è¡Œä»£ç ä¸ºæ¡ä»¶ä½“
 			c--;
-			//ÏÂÃæÊÇÒ»ÐÐÆÕÍ¨´úÂë£¬²»ÊôÓÚÌõ¼þÌå
-			System.out.println("c´óÓÚ4");
-		//´Ë´¦µÄelse½«Ã»ÓÐifÓï¾ä£¬Òò´Ë±àÒë³ö´í¡£
+			//ä¸‹é¢æ˜¯ä¸€è¡Œæ™®é€šä»£ç ï¼Œä¸å±žäºŽæ¡ä»¶ä½“
+			System.out.println("cå¤§äºŽ4");
+		//æ­¤å¤„çš„elseå°†æ²¡æœ‰ifè¯­å¥ï¼Œå› æ­¤ç¼–è¯‘å‡ºé”™ã€‚
 		else
-		//·ñÔò£¬Ö´ÐÐÏÂÃæµÄÖ´ÐÐÌå£¬Ö»ÓÐÒ»ÐÐ´úÂë×÷Îª´úÂë¿é
-			System.out.println("c²»´óÓÚ4");
+		//å¦åˆ™ï¼Œæ‰§è¡Œä¸‹é¢çš„æ‰§è¡Œä½“ï¼Œåªæœ‰ä¸€è¡Œä»£ç ä½œä¸ºä»£ç å—
+			System.out.println("cä¸å¤§äºŽ4");
 
 	}
 }

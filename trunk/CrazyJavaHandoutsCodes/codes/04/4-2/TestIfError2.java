@@ -16,15 +16,15 @@ public class TestIfError2
 		int age = 45;
 		if (age > 20)
 		{
-			System.out.println("ÇàÄêÈË");
+			System.out.println("é’å¹´äºº");
 		}
 		else if (age > 40 && !(age > 20))
 		{
-			System.out.println("ÖĞÄêÈË");
+			System.out.println("ä¸­å¹´äºº");
 		}
 		else if (age > 60 && !(age > 20) && !(age > 40 && !(age > 20)))
 		{
-			System.out.println("ÀÏÄêÈË");
+			System.out.println("è€å¹´äºº");
 		}			
 	}
 }

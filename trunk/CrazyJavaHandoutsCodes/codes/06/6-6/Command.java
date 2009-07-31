@@ -11,6 +11,6 @@
  */
 public interface Command
 {
-	//½Ó¿ÚÀï¶¨ÒåµÄprocess·½·¨ÓÃÓÚ·â×°¡°´¦ÀíĞĞÎª¡±
+	//æ¥å£é‡Œå®šä¹‰çš„processæ–¹æ³•ç”¨äºå°è£…â€œå¤„ç†è¡Œä¸ºâ€
 	void process(int[] target);
 }

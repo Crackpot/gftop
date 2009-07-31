@@ -17,12 +17,12 @@ public class Computer
 	{
 		this.out = out;
 	}
-	//¶¨ÒåÒ»¸öÄ£Äâ»ñÈ¡×Ö·û´®ÊäÈëµÄ·½·¨
+	//å®šä¹‰ä¸€ä¸ªæ¨¡æ‹Ÿè·å–å­—ç¬¦ä¸²è¾“å…¥çš„æ–¹æ³•
 	public void keyIn(String msg)
 	{
 		out.getData(msg);
 	}
-	//¶¨ÒåÒ»¸öÄ£Äâ´òÓ¡µÄ·½·¨
+	//å®šä¹‰ä¸€ä¸ªæ¨¡æ‹Ÿæ‰“å°çš„æ–¹æ³•
 	public void print()
 	{
 		out.out();

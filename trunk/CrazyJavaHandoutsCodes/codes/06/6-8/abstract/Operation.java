@@ -12,7 +12,7 @@
 public enum Operation
 {
 	PLUS, MINUS, TIMES, DIVIDE;
-	//ÎªÃ¶¾ÙÀà¶¨ÒåÒ»¸ö·½·¨£¬ÓÃÓÚÊµÏÖ²»Í¬µÄÔËËã
+	//ä¸ºæšä¸¾ç±»å®šä¹‰ä¸€ä¸ªæ–¹æ³•ï¼Œç”¨äºå®ç°ä¸åŒçš„è¿ç®—
 	public double eval(double x, double y)
 	{
 		switch(this) 

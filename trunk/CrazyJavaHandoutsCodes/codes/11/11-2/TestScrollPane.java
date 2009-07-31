@@ -13,17 +13,17 @@ public class TestScrollPane
 {
 	public static void main(String[] args) 
 	{
-		Frame f = new Frame("²âÊÔ´°¿Ú");
-		//´´½¨Ò»¸öScrollPaneÈİÆ÷£¬Ö¸¶¨×ÜÊÇ¾ßÓĞ¹ö¶¯Ìõ
+		Frame f = new Frame("æµ‹è¯•çª—å£");
+		//åˆ›å»ºä¸€ä¸ªScrollPaneå®¹å™¨ï¼ŒæŒ‡å®šæ€»æ˜¯å…·æœ‰æ»šåŠ¨æ¡
 		ScrollPane sp = new ScrollPane(ScrollPane.SCROLLBARS_ALWAYS);
-		//ÏàScrollPaneÈİÆ÷ÖĞÌí¼ÓÁ½¸ö×é¼ş
+		//ç›¸ScrollPaneå®¹å™¨ä¸­æ·»åŠ ä¸¤ä¸ªç»„ä»¶
 		sp.add(new TextField(20));
-		sp.add(new Button("µ¥»÷ÎÒ"));
-		//½«ScrollPaneÈİÆ÷Ìí¼Óµ½Frame¶ÔÏóÖĞ
+		sp.add(new Button("å•å‡»æˆ‘"));
+		//å°†ScrollPaneå®¹å™¨æ·»åŠ åˆ°Frameå¯¹è±¡ä¸­
 		f.add(sp);
-		//ÉèÖÃ´°¿ÚµÄ´óĞ¡¡¢Î»ÖÃ
+		//è®¾ç½®çª—å£çš„å¤§å°ã€ä½ç½®
 		f.setBounds(30, 30 , 250, 120);
-		//½«´°¿ÚÏÔÊ¾³öÀ´£¨Frame¶ÔÏóÄ¬ÈÏ´¦ÓÚÒş²Ø×´Ì¬£©
+		//å°†çª—å£æ˜¾ç¤ºå‡ºæ¥ï¼ˆFrameå¯¹è±¡é»˜è®¤å¤„äºéšè—çŠ¶æ€ï¼‰
 		f.setVisible(true);
 	}
 }

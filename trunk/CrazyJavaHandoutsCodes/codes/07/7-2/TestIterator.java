@@ -13,23 +13,23 @@ public class TestIterator
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸ö¼¯ºÏ
+		//åˆ›å»ºä¸€ä¸ªé›†åˆ
 		Collection books = new HashSet();
-		books.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		books.add("Struts2È¨ÍşÖ¸ÄÏ");
-		books.add("»ùÓÚJ2EEµÄAjax±¦µä");
-		//»ñÈ¡books¼¯ºÏ¶ÔÓ¦µÄµü´úÆ÷
+		books.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		books.add("Struts2æƒå¨æŒ‡å—");
+		books.add("åŸºäºJ2EEçš„Ajaxå®å…¸");
+		//è·å–booksé›†åˆå¯¹åº”çš„è¿­ä»£å™¨
 		Iterator it = books.iterator();
 		while(it.hasNext())
 		{
 			String book = (String)it.next();
 			System.out.println(book);
-			if (book.equals("Struts2È¨ÍşÖ¸ÄÏ"))
+			if (book.equals("Struts2æƒå¨æŒ‡å—"))
 			{
 				it.remove();
 			}
-			//¶Ôbook±äÁ¿¸³Öµ£¬²»»á¸Ä±ä¼¯ºÏÔªËØ±¾Éí
-			book = "²âÊÔ×Ö·û´®";
+			//å¯¹bookå˜é‡èµ‹å€¼ï¼Œä¸ä¼šæ”¹å˜é›†åˆå…ƒç´ æœ¬èº«
+			book = "æµ‹è¯•å­—ç¬¦ä¸²";
 		}
 		System.out.println(books);
 	}

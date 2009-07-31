@@ -10,7 +10,7 @@
  * @version  1.0
  */
  
-//¶¨ÒåÒ»¸öPersonÀà
+//å®šä¹‰ä¸€ä¸ªPersonç±»
 class Person
 {
 	private String name;
@@ -21,7 +21,7 @@ class Person
 		this.name = name;
 		this.idStr = idStr;
 	}
-	//ÏÂÃæÊÇnameºÍidStrµÄsetterºÍgetter·½·¨¡£
+	//ä¸‹é¢æ˜¯nameå’ŒidStrçš„setterå’Œgetteræ–¹æ³•ã€‚
 	public void setName(String name)
 	{
 		this.name = name;
@@ -39,14 +39,14 @@ class Person
 	{
 		 return this.idStr;
 	}
-//	//ÖØĞ´equals·½·¨£¬Ìá¹©×Ô¶¨ÒåµÄÏàµÈ±ê×¼
+//	//é‡å†™equalsæ–¹æ³•ï¼Œæä¾›è‡ªå®šä¹‰çš„ç›¸ç­‰æ ‡å‡†
 //	public boolean equals(Object obj)
 //	{
-//		//Ö»ÓĞµ±objÊÇPerson¶ÔÏó
+//		//åªæœ‰å½“objæ˜¯Personå¯¹è±¡
 //		if (obj != null && obj instanceof Person)
 //		{
 //			Person personObj = (Person)obj;
-//			//²¢ÇÒµ±Ç°¶ÔÏóµÄidStrÓëobj¶ÔÏóµÄidStrÏàµÈ²Å¿ÉÅĞ¶ÏÁ½¸ö¶ÔÏóÏàµÈ
+//			//å¹¶ä¸”å½“å‰å¯¹è±¡çš„idSträ¸objå¯¹è±¡çš„idStrç›¸ç­‰æ‰å¯åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡ç›¸ç­‰
 //			if (this.getIdStr().equals(personObj.getIdStr()))
 //			{
 //				return true;
@@ -55,19 +55,19 @@ class Person
 //		return false;
 //	}
 
-	//ÖØĞ´equals·½·¨£¬Ìá¹©×Ô¶¨ÒåµÄÏàµÈ±ê×¼
+	//é‡å†™equalsæ–¹æ³•ï¼Œæä¾›è‡ªå®šä¹‰çš„ç›¸ç­‰æ ‡å‡†
 	public boolean equals(Object obj)
 	{
-		//´ı±È½ÏµÄÁ½¸ö¶ÔÏóÊÇÍ¬Ò»¸ö¶ÔÏó£¬Ö±½Ó·µ»Øtrue
+		//å¾…æ¯”è¾ƒçš„ä¸¤ä¸ªå¯¹è±¡æ˜¯åŒä¸€ä¸ªå¯¹è±¡ï¼Œç›´æ¥è¿”å›true
 		if(this == obj)
 		{
 			return true;
 		}
-		//Ö»ÓĞµ±objÊÇPerson¶ÔÏó
+		//åªæœ‰å½“objæ˜¯Personå¯¹è±¡
 		if (obj != null && obj.getClass() == Person.class)
 		{
 			Person personObj = (Person)obj;
-			//²¢ÇÒµ±Ç°¶ÔÏóµÄidStrÓëobj¶ÔÏóµÄidStrÏàµÈ²Å¿ÉÅĞ¶ÏÁ½¸ö¶ÔÏóÏàµÈ
+			//å¹¶ä¸”å½“å‰å¯¹è±¡çš„idSträ¸objå¯¹è±¡çš„idStrç›¸ç­‰æ‰å¯åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡ç›¸ç­‰
 			if (this.getIdStr().equals(personObj.getIdStr()))
 			{
 				return true;
@@ -81,12 +81,12 @@ public class OverrideEqualsRight
 {
 	public static void main(String[] args) 
 	{
-		Person p1 = new Person("ËïÎò¿Õ" , "12343433433");
-		Person p2 = new Person("ËïĞĞÕß" , "12343433433");
-		Person p3 = new Person("ËïÎò·¹" , "99933433");
-		//p1ºÍp2µÄidStrÏàµÈ£¬ËùÒÔÊä³ötrue
-		System.out.println("p1ºÍp2ÊÇ·ñÏàµÈ£¿" + p1.equals(p2));
-		//p2ºÍp3µÄidStr²»ÏàµÈ£¬ËùÒÔÊä³öfalse
-		System.out.println("p2ºÍp3ÊÇ·ñÏàµÈ£¿" + p2.equals(p3));
+		Person p1 = new Person("å­™æ‚Ÿç©º" , "12343433433");
+		Person p2 = new Person("å­™è¡Œè€…" , "12343433433");
+		Person p3 = new Person("å­™æ‚Ÿé¥­" , "99933433");
+		//p1å’Œp2çš„idStrç›¸ç­‰ï¼Œæ‰€ä»¥è¾“å‡ºtrue
+		System.out.println("p1å’Œp2æ˜¯å¦ç›¸ç­‰ï¼Ÿ" + p1.equals(p2));
+		//p2å’Œp3çš„idSträ¸ç›¸ç­‰ï¼Œæ‰€ä»¥è¾“å‡ºfalse
+		System.out.println("p2å’Œp3æ˜¯å¦ç›¸ç­‰ï¼Ÿ" + p2.equals(p3));
 	}
 }

@@ -10,24 +10,24 @@ import lee.Output;
  * @version  1.0
  */
 
-//ÔÙ´Î¶¨ÒåÒ»¸öProduct½Ó¿Ú
+//å†æ¬¡å®šä¹‰ä¸€ä¸ªProductæ¥å£
 interface Product
 {
 	int getProduceTime();
 }
-//ÈÃPrinterÀàÊµÏÖOutputºÍProduct½Ó¿Ú
+//è®©Printerç±»å®ç°Outputå’ŒProductæ¥å£
 public class Printer implements Output , Product
 {
 	private String[] printData = new String[MAX_CACHE_LINE];
-	//ÓÃÒÔ¼ÇÂ¼µ±Ç°Ğè´òÓ¡µÄ×÷ÒµÊı
+	//ç”¨ä»¥è®°å½•å½“å‰éœ€æ‰“å°çš„ä½œä¸šæ•°
 	private int dataNum = 0;
 	public void out()
 	{
-		//Ö»Òª»¹ÓĞ×÷Òµ£¬¼ÌĞø´òÓ¡
+		//åªè¦è¿˜æœ‰ä½œä¸šï¼Œç»§ç»­æ‰“å°
 		while(dataNum > 0)
 		{
-			System.out.println("´òÓ¡»ú´òÓ¡£º" + printData[0]);
-			//°Ñ×÷Òµ¶ÓÁĞÕûÌåÇ°ÒÆÒ»Î»£¬²¢½«Ê£ÏÂµÄ×÷ÒµÊı¼õ1
+			System.out.println("æ‰“å°æœºæ‰“å°ï¼š" + printData[0]);
+			//æŠŠä½œä¸šé˜Ÿåˆ—æ•´ä½“å‰ç§»ä¸€ä½ï¼Œå¹¶å°†å‰©ä¸‹çš„ä½œä¸šæ•°å‡1
 			System.arraycopy(printData , 1, printData, 0, --dataNum);
 		}
 	}
@@ -35,11 +35,11 @@ public class Printer implements Output , Product
 	{
 		if (dataNum >= MAX_CACHE_LINE)
 		{
-			System.out.println("Êä³ö¶ÓÁĞÒÑÂú£¬Ìí¼ÓÊ§°Ü");
+			System.out.println("è¾“å‡ºé˜Ÿåˆ—å·²æ»¡ï¼Œæ·»åŠ å¤±è´¥");
 		}
 		else
 		{
-			//°Ñ´òÓ¡Êı¾İÌí¼Óµ½¶ÓÁĞÀï£¬ÒÑ±£´æÊı¾İµÄÊıÁ¿¼Ó1¡£
+			//æŠŠæ‰“å°æ•°æ®æ·»åŠ åˆ°é˜Ÿåˆ—é‡Œï¼Œå·²ä¿å­˜æ•°æ®çš„æ•°é‡åŠ 1ã€‚
 			printData[dataNum++] = msg;
 		}
 	}
@@ -50,18 +50,18 @@ public class Printer implements Output , Product
 
 	public static void main(String[] args)
 	{
-		//´´½¨Ò»¸öPrinter¶ÔÏó£¬µ±³ÉOutputÊ¹ÓÃ
+		//åˆ›å»ºä¸€ä¸ªPrinterå¯¹è±¡ï¼Œå½“æˆOutputä½¿ç”¨
 		Output o = new Printer();
-		o.getData("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		o.getData("Struts2È¨ÍşÖ¸ÄÏ");
+		o.getData("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		o.getData("Struts2æƒå¨æŒ‡å—");
 		o.out();
-		o.getData("»ùÓÚJ2EEµÄAjax±¦µä");
-		o.getData("Ruby On RailsÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
+		o.getData("åŸºäºJ2EEçš„Ajaxå®å…¸");
+		o.getData("Ruby On Railsæ•æ·å¼€å‘æœ€ä½³å®è·µ");
 		o.out();
-		//´´½¨Ò»¸öPrinter¶ÔÏó£¬µ±³ÉProductÊ¹ÓÃ
+		//åˆ›å»ºä¸€ä¸ªPrinterå¯¹è±¡ï¼Œå½“æˆProductä½¿ç”¨
 		Product p = new Printer();
 		System.out.println(p.getProduceTime());
-		//ËùÓĞ½Ó¿ÚÀàĞÍµÄÒıÓÃ±äÁ¿¶¼¿ÉÖ±½Ó¸³¸øjava.lang.ObjectÀàĞÍµÄ±äÁ¿
+		//æ‰€æœ‰æ¥å£ç±»å‹çš„å¼•ç”¨å˜é‡éƒ½å¯ç›´æ¥èµ‹ç»™java.lang.Objectç±»å‹çš„å˜é‡
 		Object obj = p;
 	}
 }

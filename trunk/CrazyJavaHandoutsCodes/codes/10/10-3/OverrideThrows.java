@@ -19,7 +19,7 @@ public class OverrideThrows
 }
 class Sub extends OverrideThrows
 {
-	//ÏÂÃæ´úÂëÎŞ·¨Í¨¹ı±àÒë:×ÓÀà·½·¨ÉùÃ÷Å×³öÁË±È¸¸Àà·½·¨¸ü´óµÄÒì³£
+	//ä¸‹é¢ä»£ç æ— æ³•é€šè¿‡ç¼–è¯‘:å­ç±»æ–¹æ³•å£°æ˜æŠ›å‡ºäº†æ¯”çˆ¶ç±»æ–¹æ³•æ›´å¤§çš„å¼‚å¸¸
 	public void test()throws Exception
 	{
 		//...

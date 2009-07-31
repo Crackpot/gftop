@@ -13,10 +13,10 @@ public class TestBreak
 {
 	public static void main(String[] args) 
 	{
-		//一个简单的for循环
+		//涓�涓畝鍗曠殑for寰幆
 		for (int i = 0; i < 10 ; i++ )
 		{
-			System.out.println("i的值是" + i);
+			System.out.println("i鐨勫�兼槸" + i);
 			if (i == 2)
 			{
 				break;

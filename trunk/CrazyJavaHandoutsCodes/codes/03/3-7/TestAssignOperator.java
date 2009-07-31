@@ -13,26 +13,26 @@ public class TestAssignOperator
 {
 	public static void main(String[] args) 
 	{
-		//Îª±äÁ¿str¸³ÖµÎªJava
+		//ä¸ºå˜é‡strèµ‹å€¼ä¸ºJava
 		String str = "Java";
-		//Îª±äÁ¿pi¸³ÖµÎª3.14
+		//ä¸ºå˜é‡pièµ‹å€¼ä¸º3.14
 		double pi = 3.14;
-		//Îª±äÁ¿visited¸³ÖµÎªtrue
+		//ä¸ºå˜é‡visitedèµ‹å€¼ä¸ºtrue
 		boolean visited = true;
-		//½«±äÁ¿strµÄÖµ¸³¸østr2
+		//å°†å˜é‡strçš„å€¼èµ‹ç»™str2
 		String str2 = str;
 		int a;
 		int b;
 		int c;
-		//Í¨¹ıÎªa, b , c¸³Öµ£¬ËÄ¸ö±äÁ¿µÄÖµ¶¼ÊÇ7
+		//é€šè¿‡ä¸ºa, b , cèµ‹å€¼ï¼Œå››ä¸ªå˜é‡çš„å€¼éƒ½æ˜¯7
 		a = b = c = 7;
-		//Êä³öËÄ¸ö±äÁ¿µÄÖµ¡£
+		//è¾“å‡ºå››ä¸ªå˜é‡çš„å€¼ã€‚
 		System.out.println(a + "\n" + b + "\n" + c);
 
 		double d1 = 12.34;
-		//½«±í´ïÊ½µÄÖµ¸³¸ød2
+		//å°†è¡¨è¾¾å¼çš„å€¼èµ‹ç»™d2
 		double d2 = d1 + 5;
-		//Êä³öd2µÄÖµ
+		//è¾“å‡ºd2çš„å€¼
 		System.out.println(d2);
 
 	}

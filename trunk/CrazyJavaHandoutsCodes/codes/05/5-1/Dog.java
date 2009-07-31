@@ -11,18 +11,18 @@
  */
 public class Dog
 {
-	//¶¨ÒåÒ»¸öjump·½·¨
+	//å®šä¹‰ä¸€ä¸ªjumpæ–¹æ³•
 	public void jump()
 	{
-		System.out.println("ÕýÔÚÖ´ÐÐjump·½·¨");
+		System.out.println("æ­£åœ¨æ‰§è¡Œjumpæ–¹æ³•");
 	}
-	//¶¨ÒåÒ»¸örun·½·¨£¬run·½·¨ÐèÒª½èÖújump·½·¨
+	//å®šä¹‰ä¸€ä¸ªrunæ–¹æ³•ï¼Œrunæ–¹æ³•éœ€è¦å€ŸåŠ©jumpæ–¹æ³•
 	public void run()
 	{
 		Dog d = new Dog();
 		d.jump();
 		this.jump();
-		System.out.println("ÕýÔÚÖ´ÐÐrun·½·¨");
+		System.out.println("æ­£åœ¨æ‰§è¡Œrunæ–¹æ³•");
 	}
 }
 

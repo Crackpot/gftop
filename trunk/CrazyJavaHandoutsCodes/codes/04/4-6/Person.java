@@ -11,13 +11,13 @@
  */
 public class Person
 {
-	//ÄêÁä
+	//å¹´é¾„
 	public int age;
-	//Éí¸ß
+	//èº«é«˜
 	public double height;
-	//¶¨ÒåÒ»¸öinfo·½·¨
+	//å®šä¹‰ä¸€ä¸ªinfoæ–¹æ³•
 	public void info()
 	{
-		System.out.println("ÎÒµÄÄêÁäÊÇ£º" + age + "£¬ÎÒµÄÉí¸ßÊÇ£º" + height);
+		System.out.println("æˆ‘çš„å¹´é¾„æ˜¯ï¼š" + age + "ï¼Œæˆ‘çš„èº«é«˜æ˜¯ï¼š" + height);
 	}
 }

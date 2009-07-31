@@ -23,20 +23,20 @@ public class Circle extends Shape
 	{
 		this.radius = radius;
 	}
-	//重写Shape类的的计算周长的抽象方法
+	//閲嶅啓Shape绫荤殑鐨勮绠楀懆闀跨殑鎶借薄鏂规硶
 	public double calPerimeter()
 	{
 		return 2 * Math.PI * radius;
 	}
-	//重写Shape类的的返回形状的抽象方法
+	//閲嶅啓Shape绫荤殑鐨勮繑鍥炲舰鐘剁殑鎶借薄鏂规硶
 	public String getType()
 	{
-		return getColor() + "圆形";
+		return getColor() + "鍦嗗舰";
 	}
 	public static void main(String[] args)
 	{
-		Shape s1 = new Triangle("黑色" , 3 , 4, 5);
-		Shape s2 = new Circle("黄色" , 3);
+		Shape s1 = new Triangle("榛戣壊" , 3 , 4, 5);
+		Shape s2 = new Circle("榛勮壊" , 3);
 		System.out.println(s1.getType());
 		System.out.println(s1.calPerimeter());
 		System.out.println(s2.getType());

@@ -18,7 +18,7 @@ class R
 	}
 	public String toString()
 	{
-		return "R(countÊôĞÔ:" + count + ")";
+		return "R(countå±æ€§:" + count + ")";
 	}
 	public boolean equals(Object obj)
 	{
@@ -46,21 +46,21 @@ public class TestHashSet2
 		hs.add(new R(-3));
 		hs.add(new R(9));
 		hs.add(new R(-2));
-		//´òÓ¡TreeSet¼¯ºÏ£¬¼¯ºÏÔªËØÊÇÓĞĞòÅÅÁĞµÄ
+		//æ‰“å°TreeSeté›†åˆï¼Œé›†åˆå…ƒç´ æ˜¯æœ‰åºæ’åˆ—çš„
 		System.out.println(hs);
-		//È¡³öµÚÒ»¸öÔªËØ
+		//å–å‡ºç¬¬ä¸€ä¸ªå…ƒç´ 
 		Iterator it = hs.iterator();
 		R first = (R)it.next();
-		//ÎªµÚÒ»¸öÔªËØµÄcountÊôĞÔ¸³Öµ
+		//ä¸ºç¬¬ä¸€ä¸ªå…ƒç´ çš„countå±æ€§èµ‹å€¼
 		first.count = -3;
-		//ÔÙ´ÎÊä³öcount½«¿´µ½TreeSetÀïµÄÔªËØ´¦ÓÚÎŞĞò×´Ì¬
+		//å†æ¬¡è¾“å‡ºcountå°†çœ‹åˆ°TreeSeté‡Œçš„å…ƒç´ å¤„äºæ— åºçŠ¶æ€
 		System.out.println(hs);
 		hs.remove(new R(-3));
 		System.out.println(hs);
-		//Êä³öfalse
-		System.out.println("hsÊÇ·ñ°üº¬countÎª-3µÄR¶ÔÏó£¿" + hs.contains(new R(-3)));
-		//Êä³öfalse
-		System.out.println("hsÊÇ·ñ°üº¬countÎª5µÄR¶ÔÏó£¿" + hs.contains(new R(5)));
+		//è¾“å‡ºfalse
+		System.out.println("hsæ˜¯å¦åŒ…å«countä¸º-3çš„Rå¯¹è±¡ï¼Ÿ" + hs.contains(new R(-3)));
+		//è¾“å‡ºfalse
+		System.out.println("hsæ˜¯å¦åŒ…å«countä¸º5çš„Rå¯¹è±¡ï¼Ÿ" + hs.contains(new R(5)));
 
 	}
 }

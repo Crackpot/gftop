@@ -15,10 +15,10 @@ public class TestCommand
 	{
 		ProcessArray pa = new ProcessArray();
 		int[] target = {3, -4, 6, 4};
-		//第一次处理数组，具体处理行为取决于PrintCommand
+		//绗竴娆″鐞嗘暟缁勶紝鍏蜂綋澶勭悊琛屼负鍙栧喅浜嶱rintCommand
 		pa.process(target , new PrintCommand());
 		System.out.println("------------------");
-		//第二次处理数组，具体处理行为取决于AddCommand
+		//绗簩娆″鐞嗘暟缁勶紝鍏蜂綋澶勭悊琛屼负鍙栧喅浜嶢ddCommand
 		pa.process(target , new AddCommand());
 	}
 }

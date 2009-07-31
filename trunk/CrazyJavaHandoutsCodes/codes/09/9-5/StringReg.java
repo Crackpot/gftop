@@ -24,7 +24,7 @@ public class StringReg
 		};
 		for (String msg : msgs)
 		{
-			System.out.println(msg.replaceFirst("re\\w*" , "¹þ¹þ\1"));
+			System.out.println(msg.replaceFirst("re\\w*" , "å“ˆå“ˆ\1"));
 			System.out.println(Arrays.toString(msg.split(" ")));
 		}		
 	} 

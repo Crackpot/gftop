@@ -22,17 +22,17 @@ class SubClass extends BaseClass
 	}
 	public void accessBase()
 	{
-		//Í¨¹ısuperÀ´·ÃÎÊ·½·¨µ÷ÓÃÕß¶ÔÓ¦µÄ¸¸Àà¶ÔÏó
+		//é€šè¿‡superæ¥è®¿é—®æ–¹æ³•è°ƒç”¨è€…å¯¹åº”çš„çˆ¶ç±»å¯¹è±¡
 		System.out.println(super.a);
 	}
 	public static void main(String[] args)
 	{
 		SubClass sc = new SubClass();
-		//Ö±½Ó·ÃÎÊSubClass¶ÔÏóµÄaÊôĞÔ½«»áÊä³ö7
+		//ç›´æ¥è®¿é—®SubClasså¯¹è±¡çš„aå±æ€§å°†ä¼šè¾“å‡º7
 		System.out.println(sc.a);
-		//Êä³ö7
+		//è¾“å‡º7
 		sc.accessOwner();
-		//Êä³ö5
+		//è¾“å‡º5
 		sc.accessBase();
 	}
 }

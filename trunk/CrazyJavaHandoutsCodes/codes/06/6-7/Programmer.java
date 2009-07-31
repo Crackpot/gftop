@@ -17,7 +17,7 @@ interface Teachable
 public class Programmer
 {
 	private String name;
-	//Programmer类的两个构造器
+	//Programmer绫荤殑涓や釜鏋勯�犲櫒
 	public Programmer(){}
 	public Programmer(String name)
 	{
@@ -33,6 +33,6 @@ public class Programmer
 	}
 	public void work()
 	{
-		System.out.println(name + "在灯下认真敲键盘...");
+		System.out.println(name + "鍦ㄧ伅涓嬭鐪熸暡閿洏...");
 	}
 }
