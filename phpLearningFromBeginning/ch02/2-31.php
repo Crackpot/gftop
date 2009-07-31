@@ -5,5 +5,5 @@ function say_hello()
     echo "Hello,".$name;
 }
 
-say_hello();    //这里调用上面定义的函数say_hello
+say_hello();    //杩欓噷璋冪敤涓婇潰瀹氫箟鐨勫嚱鏁皊ay_hello
 ?>

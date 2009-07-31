@@ -11,19 +11,19 @@ $temp = 'mars';
 
 if(in_array('Mars',$planet))
 {
-    echo 'Mars ´æÔÚÓÚÊı×é$planetÖĞ';
+    echo 'Mars å­˜åœ¨äºæ•°ç»„$planetä¸­';
     echo '<br/>';
     echo '<br/>';
 }
 if(in_array($temp,$planet))
 {
-    echo $temp.'´æÔÚÓÚÊı×é$planetÖĞ';
+    echo $temp.'å­˜åœ¨äºæ•°ç»„$planetä¸­';
     echo '<br/>';
     echo '<br/>';
 }
 else
 {
-    echo $temp.'²»´æÔÚÓÚÊı×é$planetÖĞ';
+    echo $temp.'ä¸å­˜åœ¨äºæ•°ç»„$planetä¸­';
     echo '<br/>';
     echo '<br/>';
 }

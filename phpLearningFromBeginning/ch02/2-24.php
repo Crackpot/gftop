@@ -9,11 +9,11 @@ echo '<br/>';
 echo '<br/>';
 
 if($a<$b)
-    echo '$a小于$b';
+    echo '$a灏忎簬$b';
 elseif($a>$b)
-    echo '$a大于$b';
+    echo '$a澶т簬$b';
 elseif($a==$b)
-    echo '$a等于$b';
+    echo '$a绛変簬$b';
 else
     'error!';
 ?>

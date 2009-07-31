@@ -1,10 +1,10 @@
 <?php
-//ÉèÖÃ¶à¸öcookie£¬´æ·ÅÔÚÊý×émycookieÖÐ
+//è®¾ç½®å¤šä¸ªcookieï¼Œå­˜æ”¾åœ¨æ•°ç»„mycookieä¸­
 setcookie("mycookie['three']", "cookiethree");
 setcookie("mycookie['two']", "cookietwo");
 setcookie("mycookie['one']", "cookieone");
 
-//Ë¢ÐÂÒ³Ãæºó£¬½«ËùÓÐcookieÏÔÊ¾³öÀ´
+//åˆ·æ–°é¡µé¢åŽï¼Œå°†æ‰€æœ‰cookieæ˜¾ç¤ºå‡ºæ¥
 if(isset($_COOKIE['mycookie']))
 {
     foreach ($_COOKIE['mycookie'] as $name => $value)

@@ -3,7 +3,7 @@ $fp = fopen($_SERVER['DOCUMENT_ROOT']."/../data/info.dat",'r');
 
 if(!$fp)
 {
-    echo "<b>Error: 打开文件错误，请检查目录是否正确，或稍后再试！</b>";
+    echo "<b>Error: 鎵撳紑鏂囦欢閿欒锛岃妫�鏌ョ洰褰曟槸鍚︽纭紝鎴栫◢鍚庡啀璇曪紒</b>";
     exit;
 }
 

@@ -1,19 +1,19 @@
 <?
-echo "<H3>Í¨¹ıhttpĞ­Òé´ò¿ªÎÄ¼ş</H3>";
+echo "<H3>é€šè¿‡httpåè®®æ‰“å¼€æ–‡ä»¶</H3>";
 echo "<br/>";
 
-//Í¨¹ı http Ğ­Òé´ò¿ªÎÄ¼ş
+//é€šè¿‡ http åè®®æ‰“å¼€æ–‡ä»¶
 if(!($file = fopen("http://localhost/ch06/server_data.txt", "r")))
 {
-    echo "ÎÄ¼ş²»ÄÜ´ò¿ª";
+    echo "æ–‡ä»¶ä¸èƒ½æ‰“å¼€";
     exit;
 }
 while(!feof($file))
 {
-    $line = fgetss($file, 255);    //°´ĞĞ¶ÁÈ¡ÎÄ¼şÖĞµÄÄÚÈİ
+    $line = fgetss($file, 255);    //æŒ‰è¡Œè¯»å–æ–‡ä»¶ä¸­çš„å†…å®¹
     echo $line;
     echo "<br/>";
 }
 
-fclose($file);                     //¹Ø±ÕÎÄ¼şµÄ¾ä±ú
+fclose($file);                     //å…³é—­æ–‡ä»¶çš„å¥æŸ„
 ?>

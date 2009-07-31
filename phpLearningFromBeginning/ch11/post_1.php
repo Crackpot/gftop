@@ -1,25 +1,25 @@
 <?php
-$file_name = 'contents/200712/2-215307.txt';    //´æ´¢ÈÕÖ¾ÄÚÈİµÄÎÄ¼ş
+$file_name = 'contents/200712/2-215307.txt';    //å­˜å‚¨æ—¥å¿—å†…å®¹çš„æ–‡ä»¶
 
-if(file_exists($file_name))                     //´ò¿ªÎÄ¼şÇ°ĞèÒªÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
+if(file_exists($file_name))                     //æ‰“å¼€æ–‡ä»¶å‰éœ€è¦åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 {
-    $fp = @fopen($file_name, 'r');              //ÒÔÖ»¶Á·½Ê½´ò¿ªÎÄ¼ş
+    $fp = @fopen($file_name, 'r');              //ä»¥åªè¯»æ–¹å¼æ‰“å¼€æ–‡ä»¶
     if($fp)
     {
-        flock($fp, LOCK_SH);                    //ÎÄ¼ş¼ÓËø
-        $result = fread($fp, 1024);             //¶Á³öÎÄ¼şÖĞµÄÄÚÈİ
+        flock($fp, LOCK_SH);                    //æ–‡ä»¶åŠ é”
+        $result = fread($fp, 1024);             //è¯»å‡ºæ–‡ä»¶ä¸­çš„å†…å®¹
     }
-    flock($fp, LOCK_UN);                        //½âËøÎÄ¼ş
+    flock($fp, LOCK_UN);                        //è§£é”æ–‡ä»¶
     fclose($fp);
 }
 
-//½«×Ö·û´®$resultµÄÄÚÈİ°´¡°|¡±·Ö¸îºó´æÈëÊı×é$content_array
+//å°†å­—ç¬¦ä¸²$resultçš„å†…å®¹æŒ‰â€œ|â€åˆ†å‰²åå­˜å…¥æ•°ç»„$content_array
 $content_array = explode('|', $result);
 
-//ÒÔÏÂ´úÂë½«ÈÕÖ¾ÄÚÈİÊä³ö
-echo '<h1>ÎÒµÄBLOG</h1>';
-echo '<b>ÈÕÖ¾±êÌâ£º</b>'.$content_array[0];
-echo '<br/><b>·¢²¼Ê±¼ä£º</b>'.date('Y-m-d H:i:s',$content_array[1]);
+//ä»¥ä¸‹ä»£ç å°†æ—¥å¿—å†…å®¹è¾“å‡º
+echo '<h1>æˆ‘çš„BLOG</h1>';
+echo '<b>æ—¥å¿—æ ‡é¢˜ï¼š</b>'.$content_array[0];
+echo '<br/><b>å‘å¸ƒæ—¶é—´ï¼š</b>'.date('Y-m-d H:i:s',$content_array[1]);
 echo '<hr>';
 echo $content_array[2];
 ?>

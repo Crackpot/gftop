@@ -1,5 +1,5 @@
 <?php
-echo "<b>µ±Ç°ËùÓĞ±»ÔØÈëµÄÄ£¿é»úÆ÷º¯Êı</b>";
+echo "<b>å½“å‰æ‰€æœ‰è¢«è½½å…¥çš„æ¨¡å—æœºå™¨å‡½æ•°</b>";
 echo "<hr>";
 
 $exten_list = get_loaded_extensions();

@@ -3,13 +3,13 @@ $str = "this is a string";
 $int = 9;
 $bool = FALSE;
 
-echo "\$strµÄÀàĞÍÊÇ£º".gettype($str);
+echo "\$strçš„ç±»å‹æ˜¯ï¼š".gettype($str);
 echo "<br/>";
 echo "<br/>";
 
-echo "\$intµÄÀàĞÍÊÇ£º".gettype($int);
+echo "\$intçš„ç±»å‹æ˜¯ï¼š".gettype($int);
 echo "<br/>";
 echo "<br/>";
 
-echo "\$boolµÄÀàĞÍÊÇ£º".gettype($bool);
+echo "\$boolçš„ç±»å‹æ˜¯ï¼š".gettype($bool);
 ?>

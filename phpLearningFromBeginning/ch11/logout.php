@@ -5,31 +5,31 @@ $info = '';
 if(isset($_SESSION['user']))
 {
     $_SESSION['user'] = '';
-    $msg = 'ÄúÒÑ¾­³É¹¦ÍË³ö£¬<a href="index.php">·µ»ØÊ×Ò³</a>';
+    $msg = 'æ‚¨å·²ç»æˆåŠŸé€€å‡ºï¼Œ<a href="index.php">è¿”å›žé¦–é¡µ</a>';
 }
 else
 {
-    $msg = 'ÄúÎ´ÔøµÇÂ¼»òÒÑ¾­³¬Ê±ÍË³ö£¬<a href="index.php">·µ»ØÊ×Ò³</a>';
+    $msg = 'æ‚¨æœªæ›¾ç™»å½•æˆ–å·²ç»è¶…æ—¶é€€å‡ºï¼Œ<a href="index.php">è¿”å›žé¦–é¡µ</a>';
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºŽæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----i have dream....
     </div>
     <div id="left">
         <div id="blog_entry">
-            <div id="blog_title">ÍË³öµÇÂ¼</div>
+            <div id="blog_title">é€€å‡ºç™»å½•</div>
             <div id="blog_body">
             <?php echo $msg; ?>
             </div><!--blog_body-->
@@ -38,8 +38,8 @@ else
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
-            <div id="menu_body">ÎÒÊÇ¸öPHP°®ºÃÕß</div>
+            <div id="menu_title">å…³äºŽæˆ‘</div>
+            <div id="menu_body">æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…</div>
         </div>
     </div>
     

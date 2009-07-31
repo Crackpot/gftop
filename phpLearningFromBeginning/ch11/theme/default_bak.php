@@ -15,7 +15,7 @@
 	</div>
 	<div id="left">
 		<div id="blog_entry">
-		<div id="blog_title">±êÌâ</div>
+		<div id="blog_title">æ ‡é¢˜</div>
 		<div id="blog_body">
 		<div id="blog_date">2007-12-02 23:10:23</div>
 		asdfasdfasdfasdf
@@ -25,7 +25,7 @@
 	
 	<div id="right">
 		<div id="sidebar">
-		<div id="menu_title">¹ØÓÚÎÒ</div>
+		<div id="menu_title">å…³äºæˆ‘</div>
 		<div id="menu_body">hello!</div>
 		</div>
 	</div>

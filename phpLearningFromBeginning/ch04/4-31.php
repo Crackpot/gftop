@@ -8,8 +8,8 @@ $planet = array(
 );
 
 end($planet);
-echo 'µ±Ç°ÔªËØµÄË÷ÒıÎª£º'.key($planet);
+echo 'å½“å‰å…ƒç´ çš„ç´¢å¼•ä¸ºï¼š'.key($planet);
 echo '<br/>';
 echo '<br/>';
-echo 'µ±Ç°ÔªËØµÄÖµÎª£º'.end($planet);
+echo 'å½“å‰å…ƒç´ çš„å€¼ä¸ºï¼š'.end($planet);
 ?>

@@ -10,8 +10,8 @@ $national_time = $now_unix - $national_unix;
 $national_day_year = floor($national_time/(365*24*60*60));
 $national_day_day = floor($national_time/(24*60*60));
 
-echo "½ñÌì¾àĞÂÖĞ¹ú³ÉÁ¢ÈÕ1949-10-1ÒÑ¾­<b> ".$national_day_year." </b>Äê";
+echo "ä»Šå¤©è·æ–°ä¸­å›½æˆç«‹æ—¥1949-10-1å·²ç»<b> ".$national_day_year." </b>å¹´";
 echo "<hr>";
 
-echo "½ñÌì¾àĞÂÖĞ¹ú³ÉÁ¢ÈÕ1949-10-1ÒÑ¾­<b> ".$national_day_day." </b>Ìì"
+echo "ä»Šå¤©è·æ–°ä¸­å›½æˆç«‹æ—¥1949-10-1å·²ç»<b> ".$national_day_day." </b>å¤©"
 ?>

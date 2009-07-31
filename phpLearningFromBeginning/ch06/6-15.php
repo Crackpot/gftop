@@ -2,7 +2,7 @@
 define(PI,3.14);
 
 $rad = 100;
-$str = "includeµÄÓÃ·¨";
+$str = "includeçš„ç”¨æ³•";
 
 function cal_area($radius)
 {

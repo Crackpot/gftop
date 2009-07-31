@@ -9,7 +9,7 @@ $say = array(
 'together'
 );
 
-echo 'Ô­Êý×é£º';
+echo 'åŽŸæ•°ç»„ï¼š';
 echo '<pre>';
 print_r($say);
 echo '</pre>';
@@ -17,7 +17,7 @@ echo '</pre>';
 $say_tmp = array_count_values($say);
 echo '<br/>';
 
-echo 'Í³¼Æ½á¹ûÈçÏÂ£º';
+echo 'ç»Ÿè®¡ç»“æžœå¦‚ä¸‹ï¼š';
 echo '<pre>';
 print_r($say_tmp);
 ?>

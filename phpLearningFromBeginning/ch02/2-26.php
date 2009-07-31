@@ -1,5 +1,5 @@
 <?php
-echo "输出10以内的偶数：";
+echo "杈撳嚭10浠ュ唴鐨勫伓鏁帮細";
 echo "<br/>";
 echo "<br/>";
 

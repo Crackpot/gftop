@@ -1,6 +1,6 @@
 <?php
 $str = "first=php&second[]=string+functions&second[]=useing";
-echo 'Ô­×Ö·û´®£º';
+echo 'åŸå­—ç¬¦ä¸²ï¼š';
 echo '<br/>';
 echo $str;
 
@@ -8,7 +8,7 @@ parse_str($str);
 echo '<br/>';
 echo '<br/>';
 
-echo '·ÖÎö½á¹û£º';
+echo 'åˆ†æç»“æœï¼š';
 echo '<br/>';
 echo 'first = '.$first;
 echo '<br/>';
@@ -20,7 +20,7 @@ parse_str($str,$input);
 echo '<br/>';
 echo '<br/>';
 
-echo 'Ö¸¶¨Êä³öÊı×é²ÎÊıµÄ½á¹û£º';
+echo 'æŒ‡å®šè¾“å‡ºæ•°ç»„å‚æ•°çš„ç»“æœï¼š';
 echo '<br/>';
 echo "input['first'] = ".$input['first'];
 echo '<br/>';

@@ -13,9 +13,22 @@ public class TestArray{
         int[] intArr;
         //使用静态初始化，初始化数组时只指定数组元素的初始值，不指定数组长度。
         intArr = new int[]{5, 6, 8, 20};
-        //定义一个Object数组类型的变量，变量名为Object.
+        for(int a = 0; a < intArr.length; a ++){
+            System.out.print(intArr[a] + "\t");
+        }
+        System.out.println();
+        //定义一个Object数组类型的变量，变量名为objArr.
         Object[] objArr;
         //使用静态初始化，初始化数组时数组元素的类型是定义数组时数组元素类型的子类
         objArr = new String[]{"Java","高飞"}; 
+        for(int b = 0; b < objArr.length; b ++){
+            System.out.print(objArr[b] + "\t");
+        }
+        System.out.println();
+        Object[] objArr2;
+        //使用静态初始化
+        objArr2 = new Object[]{"Java","高飞"};
+        //数组的定义和初始化同时完成，使用动态初始化语法
+        int[] prices = new int[5];
     }
 }

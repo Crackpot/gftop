@@ -2,9 +2,9 @@
 $str = "<b>I love PHP!</b>";
 $str_entity = htmlentities($str);
 
-echo "转换前：$str";
+echo "杞崲鍓嶏細$str";
 echo "<br/>";
 echo "<br/>";
 
-echo "转换后：$str_entity";
+echo "杞崲鍚庯細$str_entity";
 ?>

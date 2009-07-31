@@ -4,7 +4,7 @@ $ok = false;
 
 if(empty($_SESSION['user']) || $_SESSION['user']!='admin')
 {
-    echo 'Çë<a href="login.php">µÇÂ¼</a>ºóÖ´ĞĞ¸Ã²Ù×÷¡£';
+    echo 'è¯·<a href="login.php">ç™»å½•</a>åæ‰§è¡Œè¯¥æ“ä½œã€‚';
     exit;
 }
 
@@ -13,31 +13,31 @@ if(!isset($_GET['entry']))
     if(!isset($_POST['id']))
     {
         $ok = true;
-        $msg = 'ÇëÇó²ÎÊı´íÎó£¡<a href="index.php">·µ»ØÊ×Ò³</a>';
+        $msg = 'è¯·æ±‚å‚æ•°é”™è¯¯ï¼<a href="index.php">è¿”å›é¦–é¡µ</a>';
     }
     else
     {
-        //×öÉ¾³ı²Ù×÷
-        $path = substr($_POST['id'],0,6);             //ÈÕÖ¾´æ´¢Ä¿Â¼
-        $entry = substr($_POST['id'],7,9);            //ÈÕÖ¾ÎÄ¼şÃû³Æ
+        //åšåˆ é™¤æ“ä½œ
+        $path = substr($_POST['id'],0,6);             //æ—¥å¿—å­˜å‚¨ç›®å½•
+        $entry = substr($_POST['id'],7,9);            //æ—¥å¿—æ–‡ä»¶åç§°
         $file_name = 'contents/'.$path.'/'.$entry.'.txt';
         if(unlink($file_name))
         {
             $ok = true;
-            $msg = '¸ÃÈÕÖ¾³É¹¦É¾³ı£¡<a href="index.php">·µ»ØÊ×Ò³</a>';
+            $msg = 'è¯¥æ—¥å¿—æˆåŠŸåˆ é™¤ï¼<a href="index.php">è¿”å›é¦–é¡µ</a>';
         }
         else
         {
             $ok = true;
-            $msg = '¸ÃÈÕÖ¾É¾³ıÊ§°Ü£¡<a href="index.php">·µ»ØÊ×Ò³</a>';
+            $msg = 'è¯¥æ—¥å¿—åˆ é™¤å¤±è´¥ï¼<a href="index.php">è¿”å›é¦–é¡µ</a>';
         }
     }
 }
 else
 {
     $form_data = '';
-    $path = substr($_GET['entry'],0,6);             //ÈÕÖ¾´æ´¢Ä¿Â¼
-    $entry = substr($_GET['entry'],7,9);            //ÈÕÖ¾ÎÄ¼şÃû³Æ
+    $path = substr($_GET['entry'],0,6);             //æ—¥å¿—å­˜å‚¨ç›®å½•
+    $entry = substr($_GET['entry'],7,9);            //æ—¥å¿—æ–‡ä»¶åç§°
     $file_name = 'contents/'.$path.'/'.$entry.'.txt';
     if(file_exists($file_name))
     {
@@ -46,7 +46,7 @@ else
     else
     {
         $ok = true;
-        $msg = 'ËùÒªÉ¾³ıµÄÈÕÖ¾²»´æÔÚ£¡<a href="index.php">·µ»ØÊ×Ò³</a>';
+        $msg = 'æ‰€è¦åˆ é™¤çš„æ—¥å¿—ä¸å­˜åœ¨ï¼<a href="index.php">è¿”å›é¦–é¡µ</a>';
     }
 }
 ?>
@@ -54,28 +54,28 @@ else
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----i have dream....
     </div>
     <div id="left">
         <div id="blog_entry">
-            <div id="blog_title">É¾³ıÈÕÖ¾</div>
+            <div id="blog_title">åˆ é™¤æ—¥å¿—</div>
             <div id="blog_body">
             <?php if($ok == false) 
             {
             ?>
                 <form method="POST" action="delete.php">
-                <font color="red">É¾³ıµÄÈÕÖ¾½«ÎŞ·¨»Ö¸´£¬È·¶¨ÒªÉ¾³ıÂğ£¿</font><br/>
-                <input type=submit value="È·¶¨">
+                <font color="red">åˆ é™¤çš„æ—¥å¿—å°†æ— æ³•æ¢å¤ï¼Œç¡®å®šè¦åˆ é™¤å—ï¼Ÿ</font><br/>
+                <input type=submit value="ç¡®å®š">
                 <?php echo $form_data; ?>
                 </form>
             <?php } ?>
@@ -86,8 +86,8 @@ else
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
-            <div id="menu_body">ÎÒÊÇ¸öPHP°®ºÃÕß</div>
+            <div id="menu_title">å…³äºæˆ‘</div>
+            <div id="menu_body">æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…</div>
         </div>
     </div>
     

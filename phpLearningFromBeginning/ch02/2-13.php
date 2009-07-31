@@ -2,9 +2,9 @@
 define(TESTSTRING,"Learning PHP");
 define(SIZE,100);
 
-echo "³£Á¿TESTSTRINGµÄÖµÎª£º".TESTSTRING;
+echo "å¸¸é‡TESTSTRINGçš„å€¼ä¸ºï¼š".TESTSTRING;
 echo "<br/>";
 echo "<br/>";
 
-echo "³£Á¿SIZEµÄÖµÎª£º".SIZE;
+echo "å¸¸é‡SIZEçš„å€¼ä¸ºï¼š".SIZE;
 ?>

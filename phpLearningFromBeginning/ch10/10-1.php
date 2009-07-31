@@ -6,26 +6,26 @@ $ua = getenv('HTTP_USER_AGENT');
 $method = getenv('REQUEST_METHOD');
 $protocol = getenv('SERVER_PROTOCOL');
 
-echo "<b>Í¨¹ýº¯Êýgetenv()»ñÈ¡»·¾³±äÁ¿</b><hr>";
-echo "<b>·þÎñÆ÷ÎÄµµ¸ùÄ¿Â¼£º</b>".$root;
+echo "<b>é€šè¿‡å‡½æ•°getenv()èŽ·å–çŽ¯å¢ƒå˜é‡</b><hr>";
+echo "<b>æœåŠ¡å™¨æ–‡æ¡£æ ¹ç›®å½•ï¼š</b>".$root;
 echo "<br/>";
 echo "<br/>";
 
-echo "<b>·þÎñÆ÷¶Ë¿Ú£º</b>".$port;
+echo "<b>æœåŠ¡å™¨ç«¯å£ï¼š</b>".$port;
 echo "<br/>";
 echo "<br/>";
 
-echo "<b>µ±Ç°Ö´ÐÐÎÄ¼þ£º</b>".$file;
+echo "<b>å½“å‰æ‰§è¡Œæ–‡ä»¶ï¼š</b>".$file;
 echo "<br/>";
 echo "<br/>";
 
-echo "<b>ÓÃ»§UA£º</b>".$ua;
+echo "<b>ç”¨æˆ·UAï¼š</b>".$ua;
 echo "<br/>";
 echo "<br/>";
 
-echo "<b>ÇëÇó·½·¨£º</b>".$method;
+echo "<b>è¯·æ±‚æ–¹æ³•ï¼š</b>".$method;
 echo "<br/>";
 echo "<br/>";
 
-echo "<b>´«ÊäÐ­Òé£º</b>".$protocol;
+echo "<b>ä¼ è¾“åè®®ï¼š</b>".$protocol;
 ?>

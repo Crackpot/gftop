@@ -6,5 +6,5 @@ $ms_office = array(
 'access'
 );
 $item_num = count($ms_office);
-echo 'Êý×é$ms_officeµÄÔªËØ¸öÊýÎª£º'.$item_num;
+echo 'æ•°ç»„$ms_officeçš„å…ƒç´ ä¸ªæ•°ä¸ºï¼š'.$item_num;
 ?>

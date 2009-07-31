@@ -1,16 +1,16 @@
 <?php
-echo "===PHP³£¼ûµÄÔ¤¶¨Òå³£Á¿===";
+echo "===PHPå¸¸è§çš„é¢„å®šä¹‰å¸¸é‡===";
 echo "<br/>";
 echo "<br/>";
 
-echo "ÎÄ¼þÃû£º".__FILE__;
+echo "æ–‡ä»¶åï¼š".__FILE__;
 echo "<br/>";
 echo "<br/>";
-echo "µ±Ç°´úÂëÐÐÊý£º".__LINE__;
+echo "å½“å‰ä»£ç è¡Œæ•°ï¼š".__LINE__;
 echo "<br/>";
 echo "<br/>";
-echo "PHPµÄ°æ±¾£º".PHP_VERSION;
+echo "PHPçš„ç‰ˆæœ¬ï¼š".PHP_VERSION;
 echo "<br/>";
 echo "<br/>";
-echo "PHPËùÔËÐÐµÄ²Ù×÷ÏµÍ³£º".PHP_OS;
+echo "PHPæ‰€è¿è¡Œçš„æ“ä½œç³»ç»Ÿï¼š".PHP_OS;
 ?>

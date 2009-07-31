@@ -14,9 +14,9 @@ $base_lan = array(
 );
 
 $new_str = str_replace($page_lan,$base_lan,$str);
-echo "Ìæ»»Ç°£º".$str;
+echo "æ›¿æ¢å‰ï¼š".$str;
 
 echo "<br/>";
 echo "<br/>";
-echo "Ìæ»»ºó£º".$new_str;
+echo "æ›¿æ¢åï¼š".$new_str;
 ?>

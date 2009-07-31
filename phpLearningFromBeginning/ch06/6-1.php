@@ -1,10 +1,10 @@
 <?php
 $dir = "D:\files";
 
-//´ò¿ªÄ¿Â¼$dir£¬²¢½«Ä¿Â¼¾ä±ú¸³¸ø±äÁ¿$dh
+//æ‰“å¼€ç›®å½•$dirï¼Œå¹¶å°†ç›®å½•å¥æŸ„èµ‹ç»™å˜é‡$dh
 if($dh = opendir($dir))
 {
-    //Í¨¹ýwhileÑ­»·£¬Ê¹ÓÃº¯Êýreaddir»ñÈ¡ÎÄ¼þÃû
+    //é€šè¿‡whileå¾ªçŽ¯ï¼Œä½¿ç”¨å‡½æ•°readdirèŽ·å–æ–‡ä»¶å
     while(($file_name = readdir($dh)) !== FALSE)
     {
         echo "file name: ".$file_name;
@@ -12,7 +12,7 @@ if($dh = opendir($dir))
         echo "<br/>";
     }
     
-    //´¦ÀíÍê³Éºó£¬¹Ø±ÕÄ¿Â¼¾ä±ú$dh
+    //å¤„ç†å®ŒæˆåŽï¼Œå…³é—­ç›®å½•å¥æŸ„$dh
     closedir($dh);
 }
 ?>

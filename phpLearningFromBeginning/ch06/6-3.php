@@ -1,14 +1,14 @@
 <?php
-echo "PHP��ǰ�Ĺ���Ŀ¼��";
+echo "PHP当前的工作目录：";
 
 echo "<br/>";
 echo getcwd();
 echo "<br/>";
 
-chdir("dir_test");  //�ı乤��Ŀ¼����ǰĿ¼��dir_testĿ¼��
+chdir("dir_test");  //改变工作目录至当前目录的dir_test目录下
 
 echo "<br/>";
-echo "�ı乤��Ŀ¼�󣬹���Ŀ¼��Ϊ��";
+echo "改变工作目录后，工作目录变为：";
 echo "<br/>";
 
 echo getcwd();

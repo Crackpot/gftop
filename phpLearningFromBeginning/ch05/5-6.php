@@ -1,13 +1,13 @@
 <?php
-$str = "×Ö·û´®Êä³ö£ºprintºÍecho";
+$str = "å­—ç¬¦ä¸²è¾“å‡ºï¼šprintå’Œecho";
 
 echo "===".$str."===";
 echo "<br/>";
 echo "<br/>";
 
-echo "ÕâÊÇÊ¹ÓÃechoÊä³öµÄ×Ö·û´®¡£";
+echo "è¿™æ˜¯ä½¿ç”¨echoè¾“å‡ºçš„å­—ç¬¦ä¸²ã€‚";
 echo "<br/>";
 echo "<br/>";
 
-print "ÕâÊÇÊ¹ÓÃprintÊä³öµÄ×Ö·û´®¡£";
+print "è¿™æ˜¯ä½¿ç”¨printè¾“å‡ºçš„å­—ç¬¦ä¸²ã€‚";
 ?>

@@ -6,7 +6,7 @@ function say_hello($some_name)
     echo "<br/>";
 }
 
-say_hello("Jenny");    //这里使用参数“Jenny”调用函数say_hello
+say_hello("Jenny");    //杩欓噷浣跨敤鍙傛暟鈥淛enny鈥濊皟鐢ㄥ嚱鏁皊ay_hello
 say_hello("Harry");
 say_hello("Ema");
 ?>

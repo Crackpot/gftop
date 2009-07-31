@@ -4,7 +4,7 @@ $ok = false;
 if(!isset($_GET['ym']) || empty($_GET['ym']))
 {
     $ok = true;
-    $msg = 'ÇëÇó²ÎÊı´íÎó£¡<a href="index.php">·µ»ØÊ×Ò³</a>';
+    $msg = 'è¯·æ±‚å‚æ•°é”™è¯¯ï¼<a href="index.php">è¿”å›é¦–é¡µ</a>';
 }
 
 $folder_array = array();
@@ -13,7 +13,7 @@ $folder = $_GET['ym'];
 if(!is_dir($dir.'/'.$folder))
 {
     $ok = true;
-    $msg = 'ÇëÇó²ÎÊı´íÎó£¡<a href="index.php">·µ»ØÊ×Ò³</a>';
+    $msg = 'è¯·æ±‚å‚æ•°é”™è¯¯ï¼<a href="index.php">è¿”å›é¦–é¡µ</a>';
 }
 
 $dh = opendir($dir);
@@ -67,14 +67,14 @@ while(($filename = readdir($dh)) !== FALSE)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title>»ùÓÚÎÄ±¾µÄ¼òÒ×BLOG</title>
+<title>åŸºäºæ–‡æœ¬çš„ç®€æ˜“BLOG</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="container">
     <div id="header">
-        <h1>ÎÒµÄBLOG</h1>
+        <h1>æˆ‘çš„BLOG</h1>
     </div>
     <div id="title">
         ----I have dream....
@@ -103,16 +103,16 @@ while(($filename = readdir($dh)) !== FALSE)
     
     <div id="right">
         <div id="sidebar">
-            <div id="menu_title">¹ØÓÚÎÒ</div>
+            <div id="menu_title">å…³äºæˆ‘</div>
             <div id="menu_body">
-            ÎÒÊÇ¸öPHP°®ºÃÕß
+            æˆ‘æ˜¯ä¸ªPHPçˆ±å¥½è€…
             <br/><br/>
-            <a href="login.php">µÇÂ¼</a>
+            <a href="login.php">ç™»å½•</a>
             </div>
         </div>
         <br/>
         <div id="sidebar">
-            <div id="menu_title">ÈÕÖ¾¹éµµ</div>
+            <div id="menu_title">æ—¥å¿—å½’æ¡£</div>
             <? foreach($folder_array as $ym)
             {
                 $entry = $ym;

@@ -1,13 +1,13 @@
 <?php
 $str = 'jingle bells~, ';
 
-echo 'ÖØ¸´Êä³öÁ½´Î£º';
+echo 'é‡å¤è¾“å‡ºä¸¤æ¬¡ï¼š';
 echo '<br/>';
 echo str_repeat($str,2);
 
 echo '<br/>';
 echo '<br/>';
-echo 'µ±º¯Êıstr_repeat()µÚ2¸ö²ÎÊıÎª0Ê±£º';
+echo 'å½“å‡½æ•°str_repeat()ç¬¬2ä¸ªå‚æ•°ä¸º0æ—¶ï¼š';
 echo '<br/>';
 echo 's='.str_repeat($str,0);
 ?>

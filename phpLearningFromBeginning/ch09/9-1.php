@@ -3,7 +3,7 @@ $num1 = -12;
 $num2 = 147.258;
 $num3 = 9.8059;
 
-echo $num1."µÄ¾ø¶ÔÖµÊÇ£º".abs($num1);
+echo $num1."çš„ç»å¯¹å€¼æ˜¯ï¼š".abs($num1);
 echo "<hr>";
 
 echo "ceil($num2) = ".ceil($num2);

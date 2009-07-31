@@ -7,7 +7,7 @@ $olympic = array(
 'Beijing'=>2008
 );
 
-echo '原数组：';
+echo '鍘熸暟缁勶細';
 echo '<pre>';
 print_r($olympic);
 echo '</pre>';
@@ -15,7 +15,7 @@ echo '</pre>';
 $nol = array_flip($olympic);
 echo '<br/>';
 
-echo '数组元素和索引对调之后：';
+echo '鏁扮粍鍏冪礌鍜岀储寮曞璋冧箣鍚庯細';
 echo '<pre>';
 print_r($nol);
 ?>

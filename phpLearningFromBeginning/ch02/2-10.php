@@ -1,10 +1,10 @@
 <?php
 $a = 100;
 
-echo "ÉèÖÃÇ°£¬±äÁ¿\$aµÄÀàÐÍÊÇ£º".gettype($a);
+echo "è®¾ç½®å‰ï¼Œå˜é‡\$açš„ç±»åž‹æ˜¯ï¼š".gettype($a);
 echo "<br/>";
 echo "<br/>";
 
 settype($a,"string");
-echo "ÉèÖÃºó£¬±äÁ¿\$aµÄÀàÐÍÊÇ£º".gettype($a);
+echo "è®¾ç½®åŽï¼Œå˜é‡\$açš„ç±»åž‹æ˜¯ï¼š".gettype($a);
 ?>

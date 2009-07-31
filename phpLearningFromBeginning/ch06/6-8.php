@@ -4,12 +4,12 @@ $path = "/home/prog/php/sayHello.php";
 $file_name = basename($path);
 $dir_name = dirname($path);
 
-echo "ÍêÕûÂ·¾¶£º".$path;
+echo "å®Œæ•´è·¯å¾„ï¼š".$path;
 echo "<hr>";
 echo "<br/>";
 
-echo "ÆäÖĞÄ¿Â¼ÃûÎª£º".$dir_name;
+echo "å…¶ä¸­ç›®å½•åä¸ºï¼š".$dir_name;
 echo "<br/>";
-echo "ÆäÖĞÎÄ¼şÃûÎª£º".$file_name;
+echo "å…¶ä¸­æ–‡ä»¶åä¸ºï¼š".$file_name;
 echo "<br/>";
 ?>

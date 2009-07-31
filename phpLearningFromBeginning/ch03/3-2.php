@@ -1,20 +1,20 @@
 <?php
-$user_name = $_POST['user_name'];    //Í¨¹ý$_POSTÈ«¾Ö±äÁ¿£¬»ñÈ¡±íµ¥ÔªËØ´«ÈëµÄÊý¾Ý£¬²¢¸³¸ø±äÁ¿
+$user_name = $_POST['user_name'];    //é€šè¿‡$_POSTå…¨å±€å˜é‡ï¼ŒèŽ·å–è¡¨å•å…ƒç´ ä¼ å…¥çš„æ•°æ®ï¼Œå¹¶èµ‹ç»™å˜é‡
 $gender = $_POST['gender'];
-$hobby = $_POST['hobby'][0]."¡¢".$_POST['hobby'][1]."¡¢ ".$_POST['hobby'][2]."¡¢ ".$_POST['hobby'][3];
+$hobby = $_POST['hobby'][0]."ã€".$_POST['hobby'][1]."ã€ ".$_POST['hobby'][2]."ã€ ".$_POST['hobby'][3];
 $prof = $_POST['occup'];
 
-echo "ÓÃ»§Ãû£º".$user_name;
+echo "ç”¨æˆ·åï¼š".$user_name;
 echo "<br/>";
 echo "<br/>";
 
-echo "ÐÔ±ð£º".$gender;
+echo "æ€§åˆ«ï¼š".$gender;
 echo "<br/>";
 echo "<br/>";
 
-echo "°®ºÃ£º".$hobby;
+echo "çˆ±å¥½ï¼š".$hobby;
 echo "<br/>";
 echo "<br/>";
 
-echo "Ö°Òµ£º".$prof;
+echo "èŒä¸šï¼š".$prof;
 ?>

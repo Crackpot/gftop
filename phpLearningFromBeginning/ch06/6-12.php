@@ -1,9 +1,9 @@
 <?php
 $fp = fopen($_SERVER['DOCUMENT_ROOT']."/../data/lock_test.txt",'w');
 
-flock($fp,LOCK_EX);    //Ð´Ëø¶¨£¬¶ÀÏíËµ¶¨ÎÄ¼þlock_test.txt
+flock($fp,LOCK_EX);    //å†™é”å®šï¼Œç‹¬äº«è¯´å®šæ–‡ä»¶lock_test.txt
 fwrite($fp,"Write Some Words....");
-flock($fp,LOCK_UN);    //ÊÍ·Å¶ÔÎÄ¼þlock_test.txtµÄËø¶¨
+flock($fp,LOCK_UN);    //é‡Šæ”¾å¯¹æ–‡ä»¶lock_test.txtçš„é”å®š
 
 fclose($fp);
 ?>

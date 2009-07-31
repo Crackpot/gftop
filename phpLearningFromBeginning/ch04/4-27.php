@@ -17,13 +17,13 @@ foreach($city as $c)
 {
     if(array_key_exists($c, $olympic))
     {
-        echo $c.'ÊÇÊı×éolympicµÄË÷Òı';
+        echo $c.'æ˜¯æ•°ç»„olympicçš„ç´¢å¼•';
         echo '<br/>';
         echo '<br/>';
     }
     else
     {
-        echo $c.'²»ÊÇÊı×éolympicµÄË÷Òı';
+        echo $c.'ä¸æ˜¯æ•°ç»„olympicçš„ç´¢å¼•';
         echo '<br/>';
         echo '<br/>';
     }

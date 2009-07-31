@@ -8,7 +8,7 @@ $ms_office = array(
 
 for($i=0; $i<4; $i++)
 {
-    echo "Êý×éµÚ ".($i+1)." ¸öÔªËØÊÇ£º";
+    echo "æ•°ç»„ç¬¬ ".($i+1)." ä¸ªå…ƒç´ æ˜¯ï¼š";
     echo $ms_office[$i];
     echo "<br/>";
     echo "<br/>";

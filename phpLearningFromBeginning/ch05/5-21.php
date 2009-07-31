@@ -1,6 +1,6 @@
 <?php
 $str = 'How are you?';
-echo 'Ô­×Ö·û´®£º';
+echo 'åŽŸå­—ç¬¦ä¸²ï¼š';
 echo '<br/>';
 
 echo $str;
