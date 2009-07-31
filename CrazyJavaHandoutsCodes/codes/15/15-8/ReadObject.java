@@ -16,13 +16,13 @@ public class ReadObject
 		ObjectInputStream ois = null;
 		try
 		{
-			//´´½¨Ò»¸öObjectInputStreamÊä³öÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å‡ºæµ
 			ois = new ObjectInputStream(
 				new FileInputStream("object.txt"));
-			//´ÓÊäÈëÁ÷ÖĞ¶ÁÈ¡Ò»¸öJava¶ÔÏó£¬²¢½«ÆäÇ¿ÖÆÀàĞÍ×ª»»ÎªPersonÀà
+			//ä»è¾“å…¥æµä¸­è¯»å–ä¸€ä¸ªJavaå¯¹è±¡ï¼Œå¹¶å°†å…¶å¼ºåˆ¶ç±»å‹è½¬æ¢ä¸ºPersonç±»
 			Person p = (Person)ois.readObject();
-			System.out.println("Ãû×ÖÎª£º" + p.getName()
-				+ "\nÄêÁäÎª£º" + p.getAge());
+			System.out.println("åå­—ä¸ºï¼š" + p.getName()
+				+ "\nå¹´é¾„ä¸ºï¼š" + p.getAge());
 		}
 		catch (Exception ex)
 		{

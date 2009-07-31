@@ -14,11 +14,11 @@ public class CharsetTest
 {
 	public static void main(String[] args) 
 	{
-		//»ñÈ¡È«²¿×Ö·û¼¯
+		//è·å–å…¨éƒ¨å­—ç¬¦é›†
 		SortedMap<String,Charset>  map = Charset.availableCharsets();
 		for (String alias : map.keySet())
 		{
-			//Êä³ö×Ö·û¼¯µÄ±ğÃûºÍ¶ÔÓ¦µÄCharset¶ÔÏó
+			//è¾“å‡ºå­—ç¬¦é›†çš„åˆ«åå’Œå¯¹åº”çš„Charsetå¯¹è±¡
 			System.out.println(alias + "----->" 
 				+ map.get(alias));
 		}

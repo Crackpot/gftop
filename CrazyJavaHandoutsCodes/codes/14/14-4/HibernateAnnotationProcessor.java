@@ -19,50 +19,50 @@ import java.lang.reflect.*;
  */
 public class HibernateAnnotationProcessor implements AnnotationProcessor 
 {
-	//Annotation´¦ÀíÆ÷»·¾³£¬ÊÇ¸Ã´¦ÀíÆ÷ÓëAPT½»»¥µÄÖØÒªÍ¾¾¶
+	//Annotationå¤„ç†å™¨ç¯å¢ƒï¼Œæ˜¯è¯¥å¤„ç†å™¨ä¸APTäº¤äº’çš„é‡è¦é€”å¾„
 	private AnnotationProcessorEnvironment env;
-	//¹¹ÔìHibernateAnnotationProcessor¶ÔÏóÊ±£¬»ñµÃ´¦ÀíÆ÷»·¾³
+	//æ„é€ HibernateAnnotationProcessorå¯¹è±¡æ—¶ï¼Œè·å¾—å¤„ç†å™¨ç¯å¢ƒ
 	public HibernateAnnotationProcessor(AnnotationProcessorEnvironment env) 
 	{
 		this.env = env;
 	}
-	//Ñ­»·´¦ÀíÃ¿¸ö¶ÔÏó
+	//å¾ªç¯å¤„ç†æ¯ä¸ªå¯¹è±¡
 	public void process()
 	{
-		//±éÀúÃ¿¸öclassÎÄ¼ş
+		//éå†æ¯ä¸ªclassæ–‡ä»¶
 		for (TypeDeclaration t : env.getSpecifiedTypeDeclarations())
 		{
-			//¶¨ÒåÒ»¸öÎÄ¼şÊä³öÁ÷£¬ÓÃÓÚÉú³É¶îÍâµÄÎÄ¼ş
+			//å®šä¹‰ä¸€ä¸ªæ–‡ä»¶è¾“å‡ºæµï¼Œç”¨äºç”Ÿæˆé¢å¤–çš„æ–‡ä»¶
 			FileOutputStream fos = null;
-			//»ñÈ¡ÕıÔÚ´¦ÀíµÄÀàÃû
+			//è·å–æ­£åœ¨å¤„ç†çš„ç±»å
 			String clazzName = t.getSimpleName();
-			//»ñÈ¡Àà¶¨ÒåÇ°µÄPersistent Annotation
+			//è·å–ç±»å®šä¹‰å‰çš„Persistent Annotation
 			Persistent per = t.getAnnotation(Persistent.class);
-			//µ±per Annotation²»Îª¿ÕÊ±²Å¼ÌĞø´¦Àí
+			//å½“per Annotationä¸ä¸ºç©ºæ—¶æ‰ç»§ç»­å¤„ç†
 			if(per != null)
 			{
 				try
 				{
-					//´´½¨ÎÄ¼şÊä³öÁ÷
+					//åˆ›å»ºæ–‡ä»¶è¾“å‡ºæµ
 					fos = new FileOutputStream(clazzName + ".hbm.xml");
 					PrintStream ps = new PrintStream(fos);
-					//Ö´ĞĞÊä³ö
+					//æ‰§è¡Œè¾“å‡º
 					ps.println("<?xml version=\"1.0\"?>");
 					ps.println("<!DOCTYPE hibernate-mapping");
 					ps.println("	PUBLIC \"-//Hibernate/Hibernate Mapping DTD 3.0//EN\"");
 					ps.println("    \"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd\">");
 					ps.println("<hibernate-mapping>");
 					ps.print("	<class name=\"" + t);
-					//Êä³öperµÄtable()µÄÖµ
+					//è¾“å‡ºperçš„table()çš„å€¼
 					ps.println("\" table=\"" + per.table() + "\">");
 					for (FieldDeclaration f : t.getFields())
 					{
-						//»ñÈ¡Ö¸¶¨FieldDeclarationÇ°ÃæµÄIdProperty Annotation
+						//è·å–æŒ‡å®šFieldDeclarationå‰é¢çš„IdProperty Annotation
 						IdProperty id = f.getAnnotation(IdProperty.class);
-						//Èç¹ûid Annotation²»Îª¿Õ
+						//å¦‚æœid Annotationä¸ä¸ºç©º
 						if (id != null)
 						{
-							//Ö´ĞĞÊä³ö
+							//æ‰§è¡Œè¾“å‡º
 							ps.println("		<id name=\""
 								+ f.getSimpleName() 
 								+ "\" column=\"" + id.column()
@@ -72,12 +72,12 @@ public class HibernateAnnotationProcessor implements AnnotationProcessor
 								+ id.generator() + "\"/>");
 							ps.println("		</id>");
 						}
-						//»ñÈ¡Ö¸¶¨FieldDeclarationÇ°ÃæµÄProperty Annotation
+						//è·å–æŒ‡å®šFieldDeclarationå‰é¢çš„Property Annotation
 						Property p = f.getAnnotation(Property.class);
-						//Èç¹ûp Annotation²»Îª¿Õ
+						//å¦‚æœp Annotationä¸ä¸ºç©º
 						if (p != null)
 						{
-							//Ö´ĞĞÊä³ö
+							//æ‰§è¡Œè¾“å‡º
 							ps.println("		<property name=\"" 
 								+ f.getSimpleName() 
 								+ "\" column=\"" + p.column() 
@@ -94,7 +94,7 @@ public class HibernateAnnotationProcessor implements AnnotationProcessor
 				}
 				finally
 				{
-					//¹Ø±ÕÊä³öÁ÷
+					//å…³é—­è¾“å‡ºæµ
 					try
 					{
 						if (fos != null)

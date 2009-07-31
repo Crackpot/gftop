@@ -16,12 +16,12 @@ public class PrintStreamTest
 		PrintStream ps = null;
 		try
 		{
-			//´´½¨Ò»¸ö½ÚµãÊä³öÁ÷£ºFileOutputStream
+			//åˆ›å»ºä¸€ä¸ªèŠ‚ç‚¹è¾“å‡ºæµï¼šFileOutputStream
 			FileOutputStream fos = new FileOutputStream("test.txt");
-			//ÒÔPrintStreamÀ´°ü×°FileOutputStreamÊä³öÁ÷
+			//ä»¥PrintStreamæ¥åŒ…è£…FileOutputStreamè¾“å‡ºæµ
 			ps = new PrintStream(fos);
-			//Ê¹ÓÃPrintStreamÖ´ĞĞÊä³ö
-			ps.println("ÆÕÍ¨×Ö·û´®");
+			//ä½¿ç”¨PrintStreamæ‰§è¡Œè¾“å‡º
+			ps.println("æ™®é€šå­—ç¬¦ä¸²");
 			ps.println(new PrintStreamTest());
 		}
 		catch (IOException ioe)

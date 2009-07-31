@@ -16,29 +16,29 @@ public class TestProcessor
 	{
 		int passed = 0;
 		int failed = 0;
-		//±éÀúobj¶ÔÏóµÄËùÓĞ·½·¨
+		//éå†objå¯¹è±¡çš„æ‰€æœ‰æ–¹æ³•
 		for (Method m : Class.forName(clazz).getMethods()) 
 		{
-			//Èç¹û°üº¬@Testable±ê¼Ç×¢ÊÍ
+			//å¦‚æœåŒ…å«@Testableæ ‡è®°æ³¨é‡Š
 			if (m.isAnnotationPresent(Testable.class))
 			{
 				try 
 				{
-					//µ÷ÓÃm·½·¨
+					//è°ƒç”¨mæ–¹æ³•
 					m.invoke(null);
-					//passed¼Ó1
+					//passedåŠ 1
 					passed++;
 				}
 				catch (Exception ex)
 				{
-					System.out.printf("·½·¨" + m + "ÔËĞĞÊ§°Ü£¬Òì³££º" + ex.getCause() + "\n");
+					System.out.printf("æ–¹æ³•" + m + "è¿è¡Œå¤±è´¥ï¼Œå¼‚å¸¸ï¼š" + ex.getCause() + "\n");
 					failed++; 
 				}
 			}
 		}
-		//Í³¼Æ²âÊÔ½á¹û
-		System.out.printf("¹²ÔËĞĞÁË:" + (passed + failed)+ "¸ö·½·¨£¬ÆäÖĞ£º\n" + 
-			"Ê§°ÜÁË:" + failed + "¸ö£¬\n" +  
-			"³É¹¦ÁË:" + passed + "¸ö£¡\n"); 
+		//ç»Ÿè®¡æµ‹è¯•ç»“æœ
+		System.out.printf("å…±è¿è¡Œäº†:" + (passed + failed)+ "ä¸ªæ–¹æ³•ï¼Œå…¶ä¸­ï¼š\n" + 
+			"å¤±è´¥äº†:" + failed + "ä¸ªï¼Œ\n" +  
+			"æˆåŠŸäº†:" + passed + "ä¸ªï¼\n"); 
 	}
 }

@@ -17,13 +17,13 @@ public class TransientTest
 		ObjectInputStream ois = null;
 		try
 		{
-			//´´½¨Ò»¸öObjectOutputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å…¥æµ
 			oos = new ObjectOutputStream(
 				new FileOutputStream("transient.txt"));
-			Person per = new Person("ËïÎò¿Õ", 500);
-			//ÏµÍ³»áper¶ÔÏó×ª»»×Ö½ÚĞòÁĞ²¢Êä³ö
+			Person per = new Person("å­™æ‚Ÿç©º", 500);
+			//ç³»ç»Ÿä¼šperå¯¹è±¡è½¬æ¢å­—èŠ‚åºåˆ—å¹¶è¾“å‡º
 			oos.writeObject(per);
-			//´´½¨Ò»¸öObjectInputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å…¥æµ
 			ois = new ObjectInputStream(
 				new FileInputStream("transient.txt"));
 			Person p = (Person)ois.readObject();

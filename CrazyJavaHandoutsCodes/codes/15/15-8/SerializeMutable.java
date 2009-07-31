@@ -17,24 +17,24 @@ public class SerializeMutable
 		ObjectInputStream ois = null;
 		try
 		{
-			//´´½¨Ò»¸öObjectOutputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å…¥æµ
 			oos = new ObjectOutputStream(
 				new FileOutputStream("mutable.txt"));
-			Person per = new Person("ËïÎò¿Õ", 500);
-			//ÏµÍ³»áper¶ÔÏó×ª»»×Ö½ÚĞòÁĞ²¢Êä³ö
+			Person per = new Person("å­™æ‚Ÿç©º", 500);
+			//ç³»ç»Ÿä¼šperå¯¹è±¡è½¬æ¢å­—èŠ‚åºåˆ—å¹¶è¾“å‡º
 			oos.writeObject(per);
-			//¸Ä±äper¶ÔÏóµÄnameÊôĞÔ
-			per.setName("Öí°Ë½ä");
-			//ÏµÍ³Ö»ÊÇÊä³öĞòÁĞ»¯±àºÅ£¬ËùÒÔ¸Ä±äºóµÄname²»»á±»ĞòÁĞ»¯
+			//æ”¹å˜perå¯¹è±¡çš„nameå±æ€§
+			per.setName("çŒªå…«æˆ’");
+			//ç³»ç»Ÿåªæ˜¯è¾“å‡ºåºåˆ—åŒ–ç¼–å·ï¼Œæ‰€ä»¥æ”¹å˜åçš„nameä¸ä¼šè¢«åºåˆ—åŒ–
 			oos.writeObject(per);
-			//´´½¨Ò»¸öObjectInputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å…¥æµ
 			ois = new ObjectInputStream(
 				new FileInputStream("mutable.txt"));
 			Person p1 = (Person)ois.readObject();
 			Person p2 = (Person)ois.readObject();
-			//ÏÂÃæÊä³ötrue£¬¼´·´ĞòÁĞ»¯ºóp1µÈÓÚp2
+			//ä¸‹é¢è¾“å‡ºtrueï¼Œå³ååºåˆ—åŒ–åp1ç­‰äºp2
 			System.out.println(p1 == p2);
-			//ÏÂÃæÒÀÈ»¿´µ½Êä³ö¡±ËïÎò¿Õ¡°£¬¼´¸Ä±äºóµÄÊôĞÔÃ»ÓĞ±»ĞòÁĞ»¯
+			//ä¸‹é¢ä¾ç„¶çœ‹åˆ°è¾“å‡ºâ€å­™æ‚Ÿç©ºâ€œï¼Œå³æ”¹å˜åçš„å±æ€§æ²¡æœ‰è¢«åºåˆ—åŒ–
 			System.out.println(p2.getName());
 		}
 		catch (Exception ex)

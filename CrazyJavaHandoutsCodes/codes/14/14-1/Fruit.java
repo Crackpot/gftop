@@ -13,17 +13,17 @@ public class Fruit
 {
 	public void info()
 	{ 
-		System.out.println("Ë®¹ûµÄinfo·½·¨¡£¡£¡£"); 
+		System.out.println("æ°´æœçš„infoæ–¹æ³•ã€‚ã€‚ã€‚"); 
 	}
 } 
 
 class Apple extends Fruit
 {
-	//Ê¹ÓÃ@OverrideÖ¸¶¨ÏÂÃæ·½·¨±ØĞëÖØĞ´¸¸Àà·½·¨
+	//ä½¿ç”¨@OverrideæŒ‡å®šä¸‹é¢æ–¹æ³•å¿…é¡»é‡å†™çˆ¶ç±»æ–¹æ³•
 	@Override 
 //	public void info()
 	public void inf0()
 	{ 
-		System.out.println("Æ»¹ûÖØĞ´Ë®¹ûµÄinfo·½·¨¡£¡£¡£"); 
+		System.out.println("è‹¹æœé‡å†™æ°´æœçš„infoæ–¹æ³•ã€‚ã€‚ã€‚"); 
 	}
 }

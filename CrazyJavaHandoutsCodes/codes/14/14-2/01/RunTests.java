@@ -13,7 +13,7 @@ public class RunTests
 {
 	public static void main(String[] args) throws Exception 
 	{
-		//´¦ÀíMyTestÀà
+		//å¤„ç†MyTestç±»
 		TestProcessor.process("MyTest");
 	}
 }

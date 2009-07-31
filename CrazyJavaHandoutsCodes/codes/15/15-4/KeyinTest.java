@@ -16,28 +16,28 @@ public class KeyinTest
 		BufferedReader br = null;
 		try
 		{
-			//½«Sytem.in¶ÔÏó×ª»»³ÉReader¶ÔÏó
+			//å°†Sytem.inå¯¹è±¡è½¬æ¢æˆReaderå¯¹è±¡
 			InputStreamReader reader = new InputStreamReader(System.in);
-			//½«ÆÕÍ¨Reader°ü×°³ÉBufferedReader
+			//å°†æ™®é€šReaderåŒ…è£…æˆBufferedReader
 			br = new BufferedReader(reader);
 			String buffer = null;
-			//²ÉÓÃÑ­»··½Ê½À´Ò»ĞĞÒ»ĞĞµÄ¶ÁÈ¡
+			//é‡‡ç”¨å¾ªç¯æ–¹å¼æ¥ä¸€è¡Œä¸€è¡Œçš„è¯»å–
 			while ((buffer = br.readLine()) != null)
 			{
-				//Èç¹û¶ÁÈ¡µÄ×Ö·û´®Îª"exit"£¬³ÌĞòÍË³ö
+				//å¦‚æœè¯»å–çš„å­—ç¬¦ä¸²ä¸º"exit"ï¼Œç¨‹åºé€€å‡º
 				if (buffer.equals("exit"))
 				{
 					System.exit(1);
 				}
-				//´òÓ¡¶ÁÈ¡µÄÄÚÈİ
-				System.out.println("ÊäÈëÄÚÈİÎª:" + buffer);
+				//æ‰“å°è¯»å–çš„å†…å®¹
+				System.out.println("è¾“å…¥å†…å®¹ä¸º:" + buffer);
 			}
 		}
 		catch (IOException ioe)
 		{
 			ioe.printStackTrace();
 		}
-		//¹Ø±ÕÊäÈëÁ÷
+		//å…³é—­è¾“å…¥æµ
 		finally
 		{
 			try

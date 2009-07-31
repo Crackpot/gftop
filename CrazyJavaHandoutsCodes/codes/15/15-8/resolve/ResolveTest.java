@@ -17,11 +17,11 @@ public class ResolveTest
 		ObjectInputStream ois = null;
 		try
 		{
-			//´´½¨Ò»¸öObjectOutputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectOutputStreamè¾“å…¥æµ
 			oos = new ObjectOutputStream(
 				new FileOutputStream("transient.txt"));
 			oos.writeObject(Orientation.HORIZONTAL);
-			//´´½¨Ò»¸öObjectInputStreamÊäÈëÁ÷
+			//åˆ›å»ºä¸€ä¸ªObjectInputStreamè¾“å…¥æµ
 			ois = new ObjectInputStream(
 				new FileInputStream("transient.txt"));
 			Orientation ori = (Orientation)ois.readObject();

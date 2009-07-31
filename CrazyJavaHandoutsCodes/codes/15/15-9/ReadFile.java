@@ -20,25 +20,25 @@ public class ReadFile
 		FileChannel fcin = null;
 		try
 		{
-			//´´½¨ÎÄ¼şÊäÈëÁ÷
+			//åˆ›å»ºæ–‡ä»¶è¾“å…¥æµ
 			FileInputStream fis = new FileInputStream("ReadFile.java");
-			//´´½¨Ò»¸öFileChannel
+			//åˆ›å»ºä¸€ä¸ªFileChannel
 			fcin = fis.getChannel();
-			//¶¨ÒåÒ»¸öByteBuffer¶ÔÏó£¬ÓÃÓÚÖØ¸´È¡Ë®
+			//å®šä¹‰ä¸€ä¸ªByteBufferå¯¹è±¡ï¼Œç”¨äºé‡å¤å–æ°´
 			ByteBuffer bbuff = ByteBuffer.allocate(1024);
-			//½«FileChannelÖĞÊı¾İ·ÅÈëByteBufferÖĞ
+			//å°†FileChannelä¸­æ•°æ®æ”¾å…¥ByteBufferä¸­
 			while( fcin.read(bbuff) != -1 )
 			{
-				//Ëø¶¨BufferµÄ¿Õ°×Çø
+				//é”å®šBufferçš„ç©ºç™½åŒº
 				bbuff.flip();         
-				//´´½¨Charset¶ÔÏó
+				//åˆ›å»ºCharsetå¯¹è±¡
 				Charset charset = Charset.forName("gb2312");
-				//´´½¨½âÂëÆ÷(CharsetDecoder)¶ÔÏó
+				//åˆ›å»ºè§£ç å™¨(CharsetDecoder)å¯¹è±¡
 				CharsetDecoder decoder = charset.newDecoder();
-				//½«ByteBufferµÄÄÚÈİ×ªÂë
+				//å°†ByteBufferçš„å†…å®¹è½¬ç 
 				CharBuffer cbuff = decoder.decode(bbuff);
 				System.out.println(cbuff);
-				//½«Buffer³õÊ¼»¯£¬ÎªÏÂÒ»´ÎÈ¡Êı¾İ×ö×¼±¸
+				//å°†Bufferåˆå§‹åŒ–ï¼Œä¸ºä¸‹ä¸€æ¬¡å–æ•°æ®åšå‡†å¤‡
 				bbuff.clear();
 			}
 		}

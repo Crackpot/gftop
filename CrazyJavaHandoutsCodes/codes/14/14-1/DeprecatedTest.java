@@ -11,18 +11,18 @@
  */
 class Apple
 {
-	//¶¨Òåinfo·½·¨ÒÑ¹ıÊ±
+	//å®šä¹‰infoæ–¹æ³•å·²è¿‡æ—¶
 	@Deprecated
 	public void info()
 	{
-		System.out.println("AppleµÄinfo·½·¨");
+		System.out.println("Appleçš„infoæ–¹æ³•");
 	}
 }
 public class DeprecatedTest
 {
 	public static void main(String[] args) 
 	{
-		//ÏÂÃæÊ¹ÓÃinfo·½·¨Ê±½«»á±»±àÒëÆ÷¾¯¸æ
+		//ä¸‹é¢ä½¿ç”¨infoæ–¹æ³•æ—¶å°†ä¼šè¢«ç¼–è¯‘å™¨è­¦å‘Š
 		new Apple().info();
 	}	
 }

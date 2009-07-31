@@ -12,17 +12,17 @@ import java.awt.event.*;
  */
 public class AnnotationTest
 {
-	private JFrame mainWin = new JFrame("Ê¹ÓÃ×¢ÊÍ°ó¶¨ÊÂ¼ş¼àÌıÆ÷");
-	//Ê¹ÓÃ×¢ÊÍÎªok°´Å¥°ó¶¨ÊÂ¼ş¼àÌıÆ÷
+	private JFrame mainWin = new JFrame("ä½¿ç”¨æ³¨é‡Šç»‘å®šäº‹ä»¶ç›‘å¬å™¨");
+	//ä½¿ç”¨æ³¨é‡Šä¸ºokæŒ‰é’®ç»‘å®šäº‹ä»¶ç›‘å¬å™¨
 	@ActionListenerFor(listener="OkListener")
-	private JButton ok = new JButton("È·¶¨");
-	//Ê¹ÓÃ×¢ÊÍÎªcancel°´Å¥°ó¶¨ÊÂ¼ş¼àÌıÆ÷
+	private JButton ok = new JButton("ç¡®å®š");
+	//ä½¿ç”¨æ³¨é‡Šä¸ºcancelæŒ‰é’®ç»‘å®šäº‹ä»¶ç›‘å¬å™¨
 	@ActionListenerFor(listener="CancelListener")
-	private JButton cancel = new JButton("È¡Ïû");
+	private JButton cancel = new JButton("å–æ¶ˆ");
 	
 	public void init()
 	{
-		//³õÊ¼»¯½çÃæµÄ·½·¨
+		//åˆå§‹åŒ–ç•Œé¢çš„æ–¹æ³•
 		JPanel jp = new JPanel();
 		jp.add(ok);
 		jp.add(cancel);
@@ -42,13 +42,13 @@ class OkListener implements ActionListener
 {
 	public void actionPerformed(ActionEvent evt)
 	{
-		JOptionPane.showMessageDialog(null , "µ¥»÷ÁËÈ·ÈÏ°´Å¥");
+		JOptionPane.showMessageDialog(null , "å•å‡»äº†ç¡®è®¤æŒ‰é’®");
 	}
 }
 class CancelListener implements ActionListener
 {
 	public void actionPerformed(ActionEvent evt)
 	{
-		JOptionPane.showMessageDialog(null , "µ¥»÷ÁËÈ¡Ïû°´Å¥");
+		JOptionPane.showMessageDialog(null , "å•å‡»äº†å–æ¶ˆæŒ‰é’®");
 	}
 }

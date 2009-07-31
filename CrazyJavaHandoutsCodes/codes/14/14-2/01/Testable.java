@@ -11,7 +11,7 @@ import java.lang.annotation.*;
  
 @Retention(RetentionPolicy.RUNTIME)    
 @Target(ElementType.METHOD)
-//定义一个标记注释，不包含任何成员变量，即不可传入元数据
+//瀹氫箟涓�涓爣璁版敞閲婏紝涓嶅寘鍚换浣曟垚鍛樺彉閲忥紝鍗充笉鍙紶鍏ュ厓鏁版嵁
 public @interface Testable 
 {
 }

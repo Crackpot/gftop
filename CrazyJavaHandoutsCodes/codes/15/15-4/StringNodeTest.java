@@ -14,18 +14,18 @@ public class StringNodeTest
 {
 	public static void main(String[] args) 
 	{
-		String src = "´ÓÃ÷ÌìÆğ£¬×öÒ»¸öĞÒ¸£µÄÈË\n"
-			+ "Î¹Âí£¬Åü²ñ£¬ÖÜÓÎÊÀ½ç\n"
-			+ "´ÓÃ÷ÌìÆğ£¬¹ØĞÄÁ¸Ê³ºÍÊß²Ë\n"
-			+ "ÎÒÓĞÒ»Ëù·¿×Ó£¬Ãæ³¯´óº££¬´ºÅ¯»¨¿ª\n"
-			+ "´ÓÃ÷ÌìÆğ£¬ºÍÃ¿Ò»¸öÇ×ÈËÍ¨ĞÅ\n"
-			+ "¸æËßËûÃÇÎÒµÄĞÒ¸£\n";
+		String src = "ä»æ˜å¤©èµ·ï¼Œåšä¸€ä¸ªå¹¸ç¦çš„äºº\n"
+			+ "å–‚é©¬ï¼ŒåŠˆæŸ´ï¼Œå‘¨æ¸¸ä¸–ç•Œ\n"
+			+ "ä»æ˜å¤©èµ·ï¼Œå…³å¿ƒç²®é£Ÿå’Œè”¬èœ\n"
+			+ "æˆ‘æœ‰ä¸€æ‰€æˆ¿å­ï¼Œé¢æœå¤§æµ·ï¼Œæ˜¥æš–èŠ±å¼€\n"
+			+ "ä»æ˜å¤©èµ·ï¼Œå’Œæ¯ä¸€ä¸ªäº²äººé€šä¿¡\n"
+			+ "å‘Šè¯‰ä»–ä»¬æˆ‘çš„å¹¸ç¦\n";
 		StringReader sr = new StringReader(src);
 		char[] buffer = new char[32];
 		int hasRead = 0;
 		try
 		{
-			//²ÉÓÃÑ­»·¶ÁÈ¡µÄ·ÃÎÊ¶ÁÈ¡×Ö·û´®
+			//é‡‡ç”¨å¾ªç¯è¯»å–çš„è®¿é—®è¯»å–å­—ç¬¦ä¸²
 			while((hasRead = sr.read(buffer)) > 0)
 			{
 				System.out.print(new String(buffer ,0 , hasRead));
@@ -39,16 +39,16 @@ public class StringNodeTest
 		{
 			sr.close();
 		}
-		//´´½¨StringWriterÊ±£¬Êµ¼ÊÉÏÒÔÒ»¸öStringBuffer×÷ÎªÊä³ö½Úµã
-		//ÏÂÃæÖ¸¶¨µÄ20¾ÍÊÇStringBufferµÄ³õÊ¼³¤¶È
+		//åˆ›å»ºStringWriteræ—¶ï¼Œå®é™…ä¸Šä»¥ä¸€ä¸ªStringBufferä½œä¸ºè¾“å‡ºèŠ‚ç‚¹
+		//ä¸‹é¢æŒ‡å®šçš„20å°±æ˜¯StringBufferçš„åˆå§‹é•¿åº¦
 		StringWriter sw = new StringWriter(20); 
-		//µ÷ÓÃStringWriterµÄ·½·¨Ö´ĞĞÊä³ö
-		sw.write("ÎÒÔ¶ÀëÁË´óº££¬\n");
-		sw.write("¿´²»µ½´ºÅ¯»¨¿ª,\n");
-		sw.write("ÎÒÖ»ÓĞÒ»Ö»Ğ¡¹ê£¬\n");
-		sw.write("Ò»Ñù¿ÉÒÔÎÅµ½ğ¥Óô»¨Ïã\n");
-		System.out.println("------ÏÂÃæÊÇswµÄ×Ö·û´®½ÚµãÀïµÄÄÚÈİ------:");
-		//Ê¹ÓÃtoString·½·¨·µ»ØStringWriterµÄ×Ö·û´®½ÚµãµÄÄÚÈİ
+		//è°ƒç”¨StringWriterçš„æ–¹æ³•æ‰§è¡Œè¾“å‡º
+		sw.write("æˆ‘è¿œç¦»äº†å¤§æµ·ï¼Œ\n");
+		sw.write("çœ‹ä¸åˆ°æ˜¥æš–èŠ±å¼€,\n");
+		sw.write("æˆ‘åªæœ‰ä¸€åªå°é¾Ÿï¼Œ\n");
+		sw.write("ä¸€æ ·å¯ä»¥é—»åˆ°é¦¥éƒèŠ±é¦™\n");
+		System.out.println("------ä¸‹é¢æ˜¯swçš„å­—ç¬¦ä¸²èŠ‚ç‚¹é‡Œçš„å†…å®¹------:");
+		//ä½¿ç”¨toStringæ–¹æ³•è¿”å›StringWriterçš„å­—ç¬¦ä¸²èŠ‚ç‚¹çš„å†…å®¹
 		System.out.println(sw.toString());
 	}
 }
