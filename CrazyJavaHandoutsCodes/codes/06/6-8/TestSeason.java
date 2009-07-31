@@ -13,11 +13,11 @@ public class TestSeason
 {
 	public TestSeason(Season s)
 	{
-		System.out.println(s.getName() + "£¬ÕâÕæÊÇÒ»¸ö"+ s.getDesc() + "µÄ¼¾½Ú");
+		System.out.println(s.getName() + "ï¼Œè¿™çœŸæ˜¯ä¸€ä¸ª"+ s.getDesc() + "çš„å­£èŠ‚");
 	}
 	public static void main(String[] args) 
 	{
-		//Ö±½ÓÊ¹ÓÃSeasonµÄFALL³£Á¿´ú±íÒ»¸öSeason¶ÔÏó
+		//ç›´æ¥ä½¿ç”¨Seasonçš„FALLå¸¸é‡ä»£è¡¨ä¸€ä¸ªSeasonå¯¹è±¡
 		new TestSeason(Season.FALL);
 	}
 }

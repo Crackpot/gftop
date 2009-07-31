@@ -20,7 +20,7 @@ public class SerialSelection implements Transferable
 	public DataFlavor[] getTransferDataFlavors()
 	{ 
 		DataFlavor[] flavors = new DataFlavor[2];
-		//获取被封装对象的类型
+		//鑾峰彇琚皝瑁呭璞＄殑绫诲瀷
 		Class clazz = obj.getClass();
 		String mimeType = "application/x-java-serialized-object;class=" + clazz.getName();
 		try

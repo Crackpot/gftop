@@ -11,8 +11,8 @@
  */
 public class Person
 {
-	//¶¨ÒåÒ»¸öÊµÀıÊôĞÔ
+	//å®šä¹‰ä¸€ä¸ªå®ä¾‹å±æ€§
 	public String name;
-	//¶¨ÒåÒ»¸öÀàÊôĞÔ
+	//å®šä¹‰ä¸€ä¸ªç±»å±æ€§
 	public static int eyeNum;
 }

@@ -13,16 +13,16 @@ public class GenericList
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸öÖ»Ïë±£´æ×Ö·û´®µÄList¼¯ºÏ
+		//åˆ›å»ºä¸€ä¸ªåªæƒ³ä¿å­˜å­—ç¬¦ä¸²çš„Listé›†åˆ
 		List<String> strList = new ArrayList<String>();
-		strList.add("Struts2È¨ÍşÖ¸ÄÏ");
-		strList.add("»ùÓÚJ2EEµÄAjax±¦µä");
-		strList.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		//ÏÂÃæ´úÂë½«ÒıÆğ±àÒë´íÎó
+		strList.add("Struts2æƒå¨æŒ‡å—");
+		strList.add("åŸºäºJ2EEçš„Ajaxå®å…¸");
+		strList.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		//ä¸‹é¢ä»£ç å°†å¼•èµ·ç¼–è¯‘é”™è¯¯
 		strList.add(5);
 		for (int i = 0; i < strList.size() ; i++ )
 		{
-			//ÏÂÃæ´úÂëÎŞĞèÇ¿ÖÆÀàĞÍ×ª»»
+			//ä¸‹é¢ä»£ç æ— éœ€å¼ºåˆ¶ç±»å‹è½¬æ¢
 			String str = strList.get(i);
 		}
 	}

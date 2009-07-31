@@ -11,19 +11,19 @@
  */
 class Singleton
 {
-	//Ê¹ÓÃÒ»¸ö±äÁ¿À´»º´æÔø¾­´´½¨µÄÊµÀı
+	//ä½¿ç”¨ä¸€ä¸ªå˜é‡æ¥ç¼“å­˜æ›¾ç»åˆ›å»ºçš„å®ä¾‹
 	private static Singleton instance;
-	//½«¹¹ÔìÆ÷Ê¹ÓÃprivateĞŞÊÎ£¬Òş²Ø¸Ã¹¹ÔìÆ÷
+	//å°†æ„é€ å™¨ä½¿ç”¨privateä¿®é¥°ï¼Œéšè—è¯¥æ„é€ å™¨
 	private Singleton(){}
-	//Ìá¹©Ò»¸ö¾²Ì¬·½·¨£¬ÓÃÓÚ·µ»ØSingletonÊµÀı
-	//¸Ã·½·¨¿ÉÒÔ¼ÓÈë×Ô¶¨ÒåµÄ¿ØÖÆ£¬±£Ö¤Ö»²úÉúÒ»¸öSingleton¶ÔÏó
+	//æä¾›ä¸€ä¸ªé™æ€æ–¹æ³•ï¼Œç”¨äºè¿”å›Singletonå®ä¾‹
+	//è¯¥æ–¹æ³•å¯ä»¥åŠ å…¥è‡ªå®šä¹‰çš„æ§åˆ¶ï¼Œä¿è¯åªäº§ç”Ÿä¸€ä¸ªSingletonå¯¹è±¡
 	public static Singleton getInstance()
 	{
-		//Èç¹ûinstanceÎªnull£¬±íÃ÷»¹²»Ôø´´½¨Singleton¶ÔÏó
-		//Èç¹ûinstance²»Îªnull£¬Ôò±íÃ÷ÒÑ¾­´´½¨ÁËSingleton¶ÔÏó£¬½«²»»áÖ´ĞĞ¸Ã·½·¨
+		//å¦‚æœinstanceä¸ºnullï¼Œè¡¨æ˜è¿˜ä¸æ›¾åˆ›å»ºSingletonå¯¹è±¡
+		//å¦‚æœinstanceä¸ä¸ºnullï¼Œåˆ™è¡¨æ˜å·²ç»åˆ›å»ºäº†Singletonå¯¹è±¡ï¼Œå°†ä¸ä¼šæ‰§è¡Œè¯¥æ–¹æ³•
 		if (instance == null)
 		{
-			//´´½¨Ò»¸öSingleton¶ÔÏó£¬²¢½«Æä»º´æÆğÀ´
+			//åˆ›å»ºä¸€ä¸ªSingletonå¯¹è±¡ï¼Œå¹¶å°†å…¶ç¼“å­˜èµ·æ¥
 			instance = new Singleton();
 		}
 		return instance;
@@ -33,10 +33,10 @@ public class TestSingleton
 {
 	public static void main(String[] args)
 	{
-		//´´½¨Singleton¶ÔÏó²»ÄÜÍ¨¹ı¹¹ÔìÆ÷£¬Ö»ÄÜÍ¨¹ıgetInstance·½·¨
+		//åˆ›å»ºSingletonå¯¹è±¡ä¸èƒ½é€šè¿‡æ„é€ å™¨ï¼Œåªèƒ½é€šè¿‡getInstanceæ–¹æ³•
 		Singleton s1 = Singleton.getInstance();
 		Singleton s2 = Singleton.getInstance();
-		//½«Êä³ötrue
+		//å°†è¾“å‡ºtrue
 		System.out.println(s1 == s2);
 	}
 }

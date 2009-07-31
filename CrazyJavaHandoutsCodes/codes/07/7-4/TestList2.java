@@ -21,14 +21,14 @@ public class TestList2
 	public static void main(String[] args) 
 	{
 		List books = new ArrayList();
-		books.add(new String("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½"));
-		books.add(new String("Struts2È¨ÍşÖ¸ÄÏ"));
-		books.add(new String("»ùÓÚJ2EEµÄAjax±¦µä"));
+		books.add(new String("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+		books.add(new String("Struts2æƒå¨æŒ‡å—"));
+		books.add(new String("åŸºäºJ2EEçš„Ajaxå®å…¸"));
 		System.out.println(books);
-		//É¾³ı¼¯ºÏÖĞA¶ÔÏó£¬½«µ¼ÖÂµÚÒ»¸öÔªËØ±»É¾³ı
+		//åˆ é™¤é›†åˆä¸­Aå¯¹è±¡ï¼Œå°†å¯¼è‡´ç¬¬ä¸€ä¸ªå…ƒç´ è¢«åˆ é™¤
 		books.remove(new A());
 		System.out.println(books);
-		//É¾³ı¼¯ºÏÖĞA¶ÔÏó£¬ÔÙ´ÎÉ¾³ı¼¯ºÏÖĞµÚÒ»¸öÔªËØ
+		//åˆ é™¤é›†åˆä¸­Aå¯¹è±¡ï¼Œå†æ¬¡åˆ é™¤é›†åˆä¸­ç¬¬ä¸€ä¸ªå…ƒç´ 
 		books.remove(new A());
 		System.out.println(books);
 	}

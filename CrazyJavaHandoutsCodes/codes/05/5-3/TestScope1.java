@@ -11,7 +11,7 @@
  */
 public class TestScope1
 {
-	//¶¨ÒåÒ»¸ö³ÉÔ±±äÁ¿×÷ÎªÑ­»·±äÁ¿
+	//å®šä¹‰ä¸€ä¸ªæˆå‘˜å˜é‡ä½œä¸ºå¾ªç¯å˜é‡
 	static int i;
 	public static void main(String[] args) 
 	{

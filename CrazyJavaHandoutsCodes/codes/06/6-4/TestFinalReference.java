@@ -31,23 +31,23 @@ public class TestFinalReference
 {
 	public static void main(String[] args) 
 	{
-		//finalĞŞÊÎÊı×é±äÁ¿£¬iArrÊÇÒ»¸öÒıÓÃ±äÁ¿
+		//finalä¿®é¥°æ•°ç»„å˜é‡ï¼ŒiArræ˜¯ä¸€ä¸ªå¼•ç”¨å˜é‡
 		final int[] iArr = {5, 6, 12, 9};
 		System.out.println(Arrays.toString(iArr));
-		//¶ÔÊı×éÔªËØ½øĞĞÅÅĞò£¬ºÏ·¨
+		//å¯¹æ•°ç»„å…ƒç´ è¿›è¡Œæ’åºï¼Œåˆæ³•
 		Arrays.sort(iArr);
 		System.out.println(Arrays.toString(iArr));
-		//¶ÔÊı×éÔªËØ¸³Öµ£¬ºÏ·¨
+		//å¯¹æ•°ç»„å…ƒç´ èµ‹å€¼ï¼Œåˆæ³•
 		iArr[2] = -8;
 		System.out.println(Arrays.toString(iArr));
-		//ÏÂÃæÓï¾ä¶ÔiArrÖØĞÂ¸³Öµ£¬·Ç·¨
+		//ä¸‹é¢è¯­å¥å¯¹iArré‡æ–°èµ‹å€¼ï¼Œéæ³•
 		iArr = null;
-		//finalĞŞÊÎPerson±äÁ¿£¬pÊÇÒ»¸öÒıÓÃ±äÁ¿
+		//finalä¿®é¥°Personå˜é‡ï¼Œpæ˜¯ä¸€ä¸ªå¼•ç”¨å˜é‡
 		final Person p = new Person(45);
-		//¸Ä±äPerson¶ÔÏóµÄageÊôĞÔ£¬ºÏ·¨
+		//æ”¹å˜Personå¯¹è±¡çš„ageå±æ€§ï¼Œåˆæ³•
 		p.setAge(23);
 		System.out.println(p.getAge());
-		//ÏÂÃæÓï¾ä¶ÔpÖØĞÂ¸³Öµ£¬·Ç·¨
+		//ä¸‹é¢è¯­å¥å¯¹pé‡æ–°èµ‹å€¼ï¼Œéæ³•
 		//p = null;
 	}
 }

@@ -16,12 +16,12 @@ public class TestLinkedHashSet
 	public static void main(String[] args) 
 	{
 		LinkedHashSet books = new LinkedHashSet();
-		books.add("Struts2权威指南");
-		books.add("轻量级J2EE企业应用实战");
-		//删除 Struts2权威指南
-		books.remove("Struts2权威指南");
-		//重新添加 Struts2权威指南
-		books.add("Struts2权威指南");
+		books.add("Struts2鏉冨▉鎸囧崡");
+		books.add("杞婚噺绾2EE浼佷笟搴旂敤瀹炴垬");
+		//鍒犻櫎 Struts2鏉冨▉鎸囧崡
+		books.remove("Struts2鏉冨▉鎸囧崡");
+		//閲嶆柊娣诲姞 Struts2鏉冨▉鎸囧崡
+		books.add("Struts2鏉冨▉鎸囧崡");
 		System.out.println(books);
 	}
 }

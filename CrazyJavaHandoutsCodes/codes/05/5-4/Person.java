@@ -26,10 +26,10 @@ public class Person
 
 	public void setName(String name)
 	{
-		//Ö´ÐÐºÏÀíÐÔÐ£Ñé£¬ÒªÇóÓÃ»§Ãû±ØÐëÔÚ2¡«6Î»Ö®¼ä
+		//æ‰§è¡Œåˆç†æ€§æ ¡éªŒï¼Œè¦æ±‚ç”¨æˆ·åå¿…é¡»åœ¨2ï½ž6ä½ä¹‹é—´
 		if (name.length() > 6 || name.length() < 2)
 		{
-			System.out.println("ÄúÉèÖÃµÄÈËÃû²»·ûºÏÒªÇó");
+			System.out.println("æ‚¨è®¾ç½®çš„äººåä¸ç¬¦åˆè¦æ±‚");
 			return;
 		}
 		else
@@ -44,10 +44,10 @@ public class Person
 
 	public void setAge(int age)
 	{
-		//Ö´ÐÐºÏÀíÐÔÐ£Ñé£¬ÒªÇóÓÃ»§ÄêÁä±ØÐëÔÚ0¡«100Ö®¼ä
+		//æ‰§è¡Œåˆç†æ€§æ ¡éªŒï¼Œè¦æ±‚ç”¨æˆ·å¹´é¾„å¿…é¡»åœ¨0ï½ž100ä¹‹é—´
 		if (age > 100 || age < 0)
 		{
-			System.out.println("ÄúÉèÖÃµÄÄêÁä²»ºÏ·¨");
+			System.out.println("æ‚¨è®¾ç½®çš„å¹´é¾„ä¸åˆæ³•");
 			return;
 		}
 		else

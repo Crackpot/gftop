@@ -18,19 +18,19 @@ public class TestSort
 		nums.add(-5);
 		nums.add(3);
 		nums.add(0);
-		//Êä³ö:[2, -5, 3, 0]
+		//è¾“å‡º:[2, -5, 3, 0]
 		System.out.println(nums);
-		//½«List¼¯ºÏÔªËØµÄ´ÎĞò·´×ª
+		//å°†Listé›†åˆå…ƒç´ çš„æ¬¡åºåè½¬
 		Collections.reverse(nums);
-		//Êä³ö:[0, 3, -5, 2]
+		//è¾“å‡º:[0, 3, -5, 2]
 		System.out.println(nums);
-		//½«List¼¯ºÏÔªËØµÄ°´×ÔÈ»Ë³ĞòÅÅĞò
+		//å°†Listé›†åˆå…ƒç´ çš„æŒ‰è‡ªç„¶é¡ºåºæ’åº
 		Collections.sort(nums);
-		//Êä³ö:[-5, 0, 2, 3]
+		//è¾“å‡º:[-5, 0, 2, 3]
 		System.out.println(nums);
-		//½«List¼¯ºÏÔªËØµÄ°´Ëæ»úË³ĞòÅÅĞò
+		//å°†Listé›†åˆå…ƒç´ çš„æŒ‰éšæœºé¡ºåºæ’åº
 		Collections.shuffle(nums);
-		//Ã¿´ÎÊä³öµÄ´ÎĞò²»¹Ì¶¨
+		//æ¯æ¬¡è¾“å‡ºçš„æ¬¡åºä¸å›ºå®š
 		System.out.println(nums);
 	}
 }

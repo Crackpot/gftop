@@ -12,15 +12,15 @@ import lee.Output;
 public class BetterPrinter implements Output
 {
 	private String[] printData = new String[MAX_CACHE_LINE * 2];
-	//ÓÃÒÔ¼ÇÂ¼µ±Ç°Ðè´òÓ¡µÄ×÷ÒµÊý
+	//ç”¨ä»¥è®°å½•å½“å‰éœ€æ‰“å°çš„ä½œä¸šæ•°
 	private int dataNum = 0;
 	public void out()
 	{
-		//Ö»Òª»¹ÓÐ×÷Òµ£¬¼ÌÐø´òÓ¡
+		//åªè¦è¿˜æœ‰ä½œä¸šï¼Œç»§ç»­æ‰“å°
 		while(dataNum > 0)
 		{
-			System.out.println("¸ßËÙ´òÓ¡»úÕýÔÚ´òÓ¡£º" + printData[0]);
-			//°Ñ×÷Òµ¶ÓÁÐÕûÌåÇ°ÒÆÒ»Î»£¬²¢½«Ê£ÏÂµÄ×÷ÒµÊý¼õ1
+			System.out.println("é«˜é€Ÿæ‰“å°æœºæ­£åœ¨æ‰“å°ï¼š" + printData[0]);
+			//æŠŠä½œä¸šé˜Ÿåˆ—æ•´ä½“å‰ç§»ä¸€ä½ï¼Œå¹¶å°†å‰©ä¸‹çš„ä½œä¸šæ•°å‡1
 			System.arraycopy(printData , 1, printData, 0, --dataNum);
 		}
 	}
@@ -28,11 +28,11 @@ public class BetterPrinter implements Output
 	{
 		if (dataNum >= MAX_CACHE_LINE * 2)
 		{
-			System.out.println("Êä³ö¶ÓÁÐÒÑÂú£¬Ìí¼ÓÊ§°Ü");
+			System.out.println("è¾“å‡ºé˜Ÿåˆ—å·²æ»¡ï¼Œæ·»åŠ å¤±è´¥");
 		}
 		else
 		{
-			//°Ñ´òÓ¡Êý¾ÝÌí¼Óµ½¶ÓÁÐÀï£¬ÒÑ±£´æÊý¾ÝµÄÊýÁ¿¼Ó1¡£
+			//æŠŠæ‰“å°æ•°æ®æ·»åŠ åˆ°é˜Ÿåˆ—é‡Œï¼Œå·²ä¿å­˜æ•°æ®çš„æ•°é‡åŠ 1ã€‚
 			printData[dataNum++] = msg;
 		}
 	}

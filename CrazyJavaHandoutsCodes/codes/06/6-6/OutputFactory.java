@@ -13,7 +13,7 @@ public class OutputFactory
 {
 	public Output getOutput()
 	{
-		//ÏÂÃæÁ½ĞĞ´úÂëÓÃÓÚ¿ØÖÆÏµÍ³µ½µ×Ê¹ÓÃOutputµÄÄÄ¸öÊµÏÖÀà¡£
+		//ä¸‹é¢ä¸¤è¡Œä»£ç ç”¨äºæ§åˆ¶ç³»ç»Ÿåˆ°åº•ä½¿ç”¨Outputçš„å“ªä¸ªå®ç°ç±»ã€‚
 		//return new Printer();
 		return new BetterPrinter();
 	}
@@ -21,8 +21,8 @@ public class OutputFactory
 	{
 		OutputFactory of = new OutputFactory();
 		Computer c = new Computer(of.getOutput());
-		c.keyIn("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		c.keyIn("Struts2È¨ÍşÖ¸ÄÏ");
+		c.keyIn("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		c.keyIn("Struts2æƒå¨æŒ‡å—");
 		c.print();
 	}
 }

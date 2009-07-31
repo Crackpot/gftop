@@ -9,12 +9,12 @@
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//¶¨ÒåShapeµÄ×ÓÀàCircle
+//å®šä¹‰Shapeçš„å­ç±»Circle
 public class Circle extends Shape
 {
-	//ÊµÏÖ»­Í¼·½·¨£¬ÒÔ´òÓ¡×Ö·û´®À´Ä£Äâ»­Í¼·½·¨ÊµÏÖ
+	//å®ç°ç”»å›¾æ–¹æ³•ï¼Œä»¥æ‰“å°å­—ç¬¦ä¸²æ¥æ¨¡æ‹Ÿç”»å›¾æ–¹æ³•å®ç°
 	public void draw(Canvas c)
 	{
-		System.out.println("ÔÚ»­²¼" + c + "»­Ò»¸öÔ²");
+		System.out.println("åœ¨ç”»å¸ƒ" + c + "ç”»ä¸€ä¸ªåœ†");
 	}
 }

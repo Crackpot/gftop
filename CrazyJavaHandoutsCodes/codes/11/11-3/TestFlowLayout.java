@@ -15,17 +15,17 @@ public class TestFlowLayout
 {
 	public static void main(String[] args) 
 	{
-		Frame f = new Frame("²âÊÔ´°¿Ú");
-		//ÉèÖÃFrameÈİÆ÷Ê¹ÓÃFlowLayout²¼¾Ö¹ÜÀíÆ÷
+		Frame f = new Frame("æµ‹è¯•çª—å£");
+		//è®¾ç½®Frameå®¹å™¨ä½¿ç”¨FlowLayoutå¸ƒå±€ç®¡ç†å™¨
 		f.setLayout(new FlowLayout(LEFT , 20, 5));
-		//Ïò´°¿ÚÖĞÌí¼Ó10¸ö°´Å¥
+		//å‘çª—å£ä¸­æ·»åŠ 10ä¸ªæŒ‰é’®
 		for (int i = 0; i < 10 ; i++ )
 		{
-			f.add(new Button("°´Å¥" + i));
+			f.add(new Button("æŒ‰é’®" + i));
 		}
-		//ÉèÖÃ´°¿ÚÎª×î¼Ñ´óĞ¡
+		//è®¾ç½®çª—å£ä¸ºæœ€ä½³å¤§å°
 		f.pack();
-		//½«´°¿ÚÏÔÊ¾³öÀ´£¨Frame¶ÔÏóÄ¬ÈÏ´¦ÓÚÒş²Ø×´Ì¬£©
+		//å°†çª—å£æ˜¾ç¤ºå‡ºæ¥ï¼ˆFrameå¯¹è±¡é»˜è®¤å¤„äºéšè—çŠ¶æ€ï¼‰
 		f.setVisible(true);
 	}
 }

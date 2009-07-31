@@ -35,7 +35,7 @@ public class TestReplace
 			{
 				matcher.reset(msgs[i]);
 			}
-			System.out.println(matcher.replaceAll("¹þ¹þ\2"));
+			System.out.println(matcher.replaceAll("å“ˆå“ˆ\2"));
 		}
 	} 
 }

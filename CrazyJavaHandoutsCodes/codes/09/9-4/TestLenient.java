@@ -15,11 +15,11 @@ public class TestLenient
 	public static void main(String[] args) 
 	{
 		Calendar cal = Calendar.getInstance();
-		cal.set(MONTH , 13); //½á¹ûÊÇYEAR×Ö¶Î¼Ó1£¬MONTH×Ö¶ÎÎª1£¨¶şÔÂ£©
+		cal.set(MONTH , 13); //ç»“æœæ˜¯YEARå­—æ®µåŠ 1ï¼ŒMONTHå­—æ®µä¸º1ï¼ˆäºŒæœˆï¼‰
 		System.out.println(cal.getTime());
-		//¹Ø±ÕÈİ´íĞÔ
+		//å…³é—­å®¹é”™æ€§
 		cal.setLenient(false);
-		cal.set(MONTH , 13); //µ¼ÖÂÔËĞĞÊ±Òì³£
+		cal.set(MONTH , 13); //å¯¼è‡´è¿è¡Œæ—¶å¼‚å¸¸
 		System.out.println(cal.getTime());
 	}
 }

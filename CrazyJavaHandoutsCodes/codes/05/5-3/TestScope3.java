@@ -13,7 +13,7 @@ public class TestScope3
 {
 	public static void main(String[] args) 
 	{
-		//¶¨ÒåÒ»¸ö´úÂë¿é¾Ö²¿±äÁ¿×÷ÎªÑ­»·±äÁ¿
+		//å®šä¹‰ä¸€ä¸ªä»£ç å—å±€éƒ¨å˜é‡ä½œä¸ºå¾ªç¯å˜é‡
 		for (int i = 0 ; i < 10 ; i++)
 		{
 			System.out.println("Hello");

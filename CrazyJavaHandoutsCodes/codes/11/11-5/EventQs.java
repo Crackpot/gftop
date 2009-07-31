@@ -12,25 +12,25 @@ import java.awt.event.*;
  */
 public class EventQs
 {
-	private Frame f = new Frame("²âÊÔÊÂ¼ş");
-	private Button ok = new Button("È·¶¨"); 
+	private Frame f = new Frame("æµ‹è¯•äº‹ä»¶");
+	private Button ok = new Button("ç¡®å®š"); 
 	private TextField tf = new TextField(30);
 	public void init()
 	{
-		//×¢²áÊÂ¼ş¼àÌıÆ÷
+		//æ³¨å†Œäº‹ä»¶ç›‘å¬å™¨
 		ok.addActionListener(new OkListener());
 		f.add(tf);
 		f.add(ok , BorderLayout.SOUTH);
 		f.pack();
 		f.setVisible(true);
 	}
-	//¶¨ÒåÊÂ¼ş¼àÌıÆ÷Àà
+	//å®šä¹‰äº‹ä»¶ç›‘å¬å™¨ç±»
 	class OkListener implements ActionListener
 	{
-		//ÏÂÃæ¶¨ÒåµÄ·½·¨¾ÍÊÇÊÂ¼ş´¦ÀíÆ÷£¬ÓÃÓÚÏìÓ¦ÌØ¶¨µÄÊÂ¼ş
+		//ä¸‹é¢å®šä¹‰çš„æ–¹æ³•å°±æ˜¯äº‹ä»¶å¤„ç†å™¨ï¼Œç”¨äºå“åº”ç‰¹å®šçš„äº‹ä»¶
 		public void actionPerformed(ActionEvent e)
 		{
-			System.out.println("ÓÃ»§µ¥»÷ÁËok°´Å¥");
+			System.out.println("ç”¨æˆ·å•å‡»äº†okæŒ‰é’®");
 			tf.setText("Hello World");
 		}
 	}

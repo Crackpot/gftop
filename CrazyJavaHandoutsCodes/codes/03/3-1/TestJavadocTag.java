@@ -12,12 +12,12 @@ package yeeku;
 public class TestJavadocTag
 {
 	/**
-	 * Ò»¸öµÃµ½´òÕĞºô×Ö·û´®µÄ·½·¨¡£
-	 * @param name ¸Ã²ÎÊıÖ¸¶¨ÏòË­´òÕĞºô¡£
-	 * @return ·µ»Ø´òÕĞºôµÄ×Ö·û´®¡£
+	 * ä¸€ä¸ªå¾—åˆ°æ‰“æ‹›å‘¼å­—ç¬¦ä¸²çš„æ–¹æ³•ã€‚
+	 * @param name è¯¥å‚æ•°æŒ‡å®šå‘è°æ‰“æ‹›å‘¼ã€‚
+	 * @return è¿”å›æ‰“æ‹›å‘¼çš„å­—ç¬¦ä¸²ã€‚
 	 */
 	public String hello(String name)
 	{
-		return name + "£¬ÄãºÃ£¡";
+		return name + "ï¼Œä½ å¥½ï¼";
 	}
 }

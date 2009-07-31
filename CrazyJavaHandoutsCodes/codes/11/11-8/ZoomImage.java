@@ -15,20 +15,20 @@ import java.io.*;
  */
 public class ZoomImage
 {
-	//ÏÂÃæÁ½¸ö³£Á¿ÉèÖÃËõĞ¡ºóÍ¼Æ¬µÄ´óĞ¡
+	//ä¸‹é¢ä¸¤ä¸ªå¸¸é‡è®¾ç½®ç¼©å°åå›¾ç‰‡çš„å¤§å°
 	private final int WIDTH = 80;
 	private final int HEIGHT = 60;
-	//¶¨Òå¸öBuffedImage¶ÔÏó£¬ÓÃÓÚ±£´æËõĞ¡ºóµÄÎ»Í¼
+	//å®šä¹‰ä¸ªBuffedImageå¯¹è±¡ï¼Œç”¨äºä¿å­˜ç¼©å°åçš„ä½å›¾
 	BufferedImage image = new BufferedImage(WIDTH , HEIGHT , 
 		BufferedImage.TYPE_INT_RGB);
 	Graphics g = image.getGraphics();
 	public void zoom()throws Exception
 	{
-		//¶ÁÈ¡Ô­Ê¼Î»Í¼
+		//è¯»å–åŸå§‹ä½å›¾
 		Image srcImage = ImageIO.read(new File("image/board.jpg"));
-		//½«Ô­Ê¼Î»Í¼ËõĞ¡ºó»æÖÆµ½imageÍ¼ÏóÖĞ
+		//å°†åŸå§‹ä½å›¾ç¼©å°åç»˜åˆ¶åˆ°imageå›¾è±¡ä¸­
 		g.drawImage(srcImage , 0 , 0 , WIDTH , HEIGHT , null);
-		//½«imageÍ¼ÏóÎÄ¼şÊä³öµ½´ÅÅÌÎÄ¼şÖĞ¡£
+		//å°†imageå›¾è±¡æ–‡ä»¶è¾“å‡ºåˆ°ç£ç›˜æ–‡ä»¶ä¸­ã€‚
 		ImageIO.write(image , "jpeg" , 
 			new File(System.currentTimeMillis() + ".jpg"));
 	}

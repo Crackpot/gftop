@@ -16,7 +16,7 @@ public class TestAdd
 		double a = 5.2;
 		double b = 3.1;
 		double sum = a + b;
-		//sum的值为8.3
+		//sum鐨勫�间负8.3
 		System.out.println(sum);
 	}
 }

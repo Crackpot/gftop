@@ -14,7 +14,7 @@ class Apple
 	private String color;
 	private double weight;
 	public Apple(){	}
-	//Ìá¹©ÓĞ²ÎÊıµÄ¹¹ÔìÆ÷
+	//æä¾›æœ‰å‚æ•°çš„æ„é€ å™¨
 	public Apple(String color , double weight)
 	{
 		this.color = color;
@@ -40,7 +40,7 @@ class Apple
 	}
 	public String toString()
 	{		
-		//return "Ò»¸öÆ»¹û£¬ÑÕÉ«ÊÇ£º" + color + "£¬ÖØÁ¿ÊÇ£º" + weight;
+		//return "ä¸€ä¸ªè‹¹æœï¼Œé¢œè‰²æ˜¯ï¼š" + color + "ï¼Œé‡é‡æ˜¯ï¼š" + weight;
 		return "Apple[color=" + color + ",weight=" + weight + "]";
 	}
 }
@@ -48,7 +48,7 @@ public class TestToString
 {
 	public static void main(String[] args) 
 	{
-		Apple a = new Apple("ºìÉ«" , 5.68);
+		Apple a = new Apple("çº¢è‰²" , 5.68);
 		System.out.println(a);
 	}
 }

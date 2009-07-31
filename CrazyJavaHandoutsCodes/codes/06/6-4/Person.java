@@ -57,13 +57,13 @@ public class Person
 	}
 	public static void main(String[] args)
 	{
-		Name n = new Name("Îò¿Õ", "Ëï");
+		Name n = new Name("æ‚Ÿç©º", "å­™");
 		Person p = new Person(n);
-		//Èç¹ûÃ»ÓĞ±£»¤£ºPerson¶ÔÏóµÄNameÊôĞÔµÄfirstNameÊôĞÔÖµÎª"Îò¿Õ"
+		//å¦‚æœæ²¡æœ‰ä¿æŠ¤ï¼šPersonå¯¹è±¡çš„Nameå±æ€§çš„firstNameå±æ€§å€¼ä¸º"æ‚Ÿç©º"
 		System.out.println(p.getName().getFirstName());
-		//¸Ä±äPerson¶ÔÏóNameÊôĞÔµÄfirstNameÊôĞÔÖµ
-		n.setFirstName("°Ë½ä");
-		//Èç¹ûÃ»ÓĞ±£»¤£ºPerson¶ÔÏóµÄNameÊôĞÔµÄfirstNameÊôĞÔÖµÎª"°Ë½ä"
+		//æ”¹å˜Personå¯¹è±¡Nameå±æ€§çš„firstNameå±æ€§å€¼
+		n.setFirstName("å…«æˆ’");
+		//å¦‚æœæ²¡æœ‰ä¿æŠ¤ï¼šPersonå¯¹è±¡çš„Nameå±æ€§çš„firstNameå±æ€§å€¼ä¸º"å…«æˆ’"
 		System.out.println(p.getName().getFirstName());
 	}
 }

@@ -13,25 +13,25 @@ public class TestPerson
 {
 	public static void main(String[] args) 
 	{
-		//PersonÀàÒÑ¾­¼ÓÔØ£¬ÔòeyeNum±äÁ¿Æğ×÷ÓÃÁË£¬Êä³ö0
-		System.out.println("PersonµÄeyeNumÀàÊôĞÔÖµ:" + Person.eyeNum);
-		//´´½¨Person¶ÔÏó
+		//Personç±»å·²ç»åŠ è½½ï¼Œåˆ™eyeNumå˜é‡èµ·ä½œç”¨äº†ï¼Œè¾“å‡º0
+		System.out.println("Personçš„eyeNumç±»å±æ€§å€¼:" + Person.eyeNum);
+		//åˆ›å»ºPersonå¯¹è±¡
 		Person p = new Person();
-		//Í¨¹ıPerson¶ÔÏóµÄÒıÓÃpÀ´·ÃÎÊPerson¶ÔÏónameÊµÀıÊôĞÔ
-		//²¢Í¨¹ıÊµÀı·ÃÎÊeyeNumÀàÊôĞÔ
-		System.out.println("p±äÁ¿µÄnameÊôĞÔÖµÊÇ£º" + p.name 
-			+ " p¶ÔÏóµÄeyeNumÊôĞÔÖµÊÇ£º" + p.eyeNum);
-		//Ö±½ÓÎªnameÊµÀıÊôĞÔ¸³Öµ
-		p.name = "ËïÎò¿Õ";
-		//Í¨¹ıp·ÃÎÊeyeNumÀàÊôĞÔ£¬ÒÀÈ»ÊÇ·ÃÎÊPersonµÄeyeNumÊôĞÔ
+		//é€šè¿‡Personå¯¹è±¡çš„å¼•ç”¨pæ¥è®¿é—®Personå¯¹è±¡nameå®ä¾‹å±æ€§
+		//å¹¶é€šè¿‡å®ä¾‹è®¿é—®eyeNumç±»å±æ€§
+		System.out.println("på˜é‡çš„nameå±æ€§å€¼æ˜¯ï¼š" + p.name 
+			+ " på¯¹è±¡çš„eyeNumå±æ€§å€¼æ˜¯ï¼š" + p.eyeNum);
+		//ç›´æ¥ä¸ºnameå®ä¾‹å±æ€§èµ‹å€¼
+		p.name = "å­™æ‚Ÿç©º";
+		//é€šè¿‡pè®¿é—®eyeNumç±»å±æ€§ï¼Œä¾ç„¶æ˜¯è®¿é—®Personçš„eyeNumå±æ€§
 		p.eyeNum = 2;
-		//ÔÙ´ÎÍ¨¹ıPerson¶ÔÏóÀ´·ÃÎÊnameÊµÀıÊôĞÔºÍeyeNumÀàÊôĞÔ
-		System.out.println("p±äÁ¿µÄnameÊôĞÔÖµÊÇ£º" + p.name 
-			+ " p¶ÔÏóµÄeyeNumÊôĞÔÖµÊÇ£º" + p.eyeNum);
-		//Ç°ÃæÍ¨¹ıpĞŞ¸ÄÁËPersonµÄeyeNumÊôĞÔ£¬´Ë´¦µÄPerson.eyeNum½«Êä³ö2
-		System.out.println("PersonµÄeyeNumÀàÊôĞÔÖµ:" + Person.eyeNum);
+		//å†æ¬¡é€šè¿‡Personå¯¹è±¡æ¥è®¿é—®nameå®ä¾‹å±æ€§å’ŒeyeNumç±»å±æ€§
+		System.out.println("på˜é‡çš„nameå±æ€§å€¼æ˜¯ï¼š" + p.name 
+			+ " på¯¹è±¡çš„eyeNumå±æ€§å€¼æ˜¯ï¼š" + p.eyeNum);
+		//å‰é¢é€šè¿‡pä¿®æ”¹äº†Personçš„eyeNumå±æ€§ï¼Œæ­¤å¤„çš„Person.eyeNumå°†è¾“å‡º2
+		System.out.println("Personçš„eyeNumç±»å±æ€§å€¼:" + Person.eyeNum);
 		Person p2 = new Person();
-		//p2·ÃÎÊµÄeyeNumÀàÊôĞÔÒÀÈ»ÒıÓÃPersonÀàµÄ£¬Òò´ËÒÀÈ»Êä³ö2
-		System.out.println("p2¶ÔÏóµÄeyeNumÀàÊôĞÔÖµ:" + p2.eyeNum);
+		//p2è®¿é—®çš„eyeNumç±»å±æ€§ä¾ç„¶å¼•ç”¨Personç±»çš„ï¼Œå› æ­¤ä¾ç„¶è¾“å‡º2
+		System.out.println("p2å¯¹è±¡çš„eyeNumç±»å±æ€§å€¼:" + p2.eyeNum);
 	}
 }

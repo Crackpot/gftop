@@ -13,13 +13,13 @@ public class NullAccessStatic
 {
 	private static void test()
 	{
-		System.out.println("¾²Ì¬·½·¨");
+		System.out.println("é™æ€æ–¹æ³•");
 	}
 	public static void main(String[] args) 
 	{
-		//¶¨ÒåÒ»¸öNullAccessStatic±äÁ¿£¬ÆäÖµÎªnull
+		//å®šä¹‰ä¸€ä¸ªNullAccessStaticå˜é‡ï¼Œå…¶å€¼ä¸ºnull
 		NullAccessStatic nas = null;
-		//null¶ÔÏóµ÷ÓÃËùÊôÀàµÄ¾²Ì¬·½·¨
+		//nullå¯¹è±¡è°ƒç”¨æ‰€å±ç±»çš„é™æ€æ–¹æ³•
 		nas.test();
 	}
 }

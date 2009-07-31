@@ -13,20 +13,20 @@ public class TestConstructor
 {
 	public String name;
 	public int count;
-	//Ìá¹©×Ô¶¨ÒåµÄ¹¹ÔìÆ÷£¬¸Ã¹¹ÔìÆ÷°üº¬Á½¸ö²ÎÊı
+	//æä¾›è‡ªå®šä¹‰çš„æ„é€ å™¨ï¼Œè¯¥æ„é€ å™¨åŒ…å«ä¸¤ä¸ªå‚æ•°
 	public TestConstructor(String name , int count)
 	{
-		//¹¹ÔìÆ÷ÀïµÄthis´ú±íËü½øĞĞ³õÊ¼»¯µÄ¶ÔÏó
-		//ÏÂÃæÁ½ĞĞ´úÂë½«´«ÈëµÄ2¸ö²ÎÊı¸³¸øthis´ú±í¶ÔÏóµÄnameºÍcountÊôĞÔ
+		//æ„é€ å™¨é‡Œçš„thisä»£è¡¨å®ƒè¿›è¡Œåˆå§‹åŒ–çš„å¯¹è±¡
+		//ä¸‹é¢ä¸¤è¡Œä»£ç å°†ä¼ å…¥çš„2ä¸ªå‚æ•°èµ‹ç»™thisä»£è¡¨å¯¹è±¡çš„nameå’Œcountå±æ€§
 		this.name = name;
 		this.count = count;
 	}
 	public static void main(String[] args)
 	{
-		//Ê¹ÓÃ×Ô¶¨ÒåµÄ¹¹ÔìÆ÷À´´´½¨TestConstructor¶ÔÏó
-		//ÏµÍ³½«»á¶Ô¸Ã¶ÔÏóÖ´ĞĞ×Ô¶¨ÒåµÄ³õÊ¼»¯
-		TestConstructor tc = new TestConstructor("Struts2È¨ÍşÖ¸ÄÏ" , 20000);
-		//Êä³öTestConstructor¶ÔÏóµÄnameºÍcountÊôĞÔ
+		//ä½¿ç”¨è‡ªå®šä¹‰çš„æ„é€ å™¨æ¥åˆ›å»ºTestConstructorå¯¹è±¡
+		//ç³»ç»Ÿå°†ä¼šå¯¹è¯¥å¯¹è±¡æ‰§è¡Œè‡ªå®šä¹‰çš„åˆå§‹åŒ–
+		TestConstructor tc = new TestConstructor("Struts2æƒå¨æŒ‡å—" , 20000);
+		//è¾“å‡ºTestConstructorå¯¹è±¡çš„nameå’Œcountå±æ€§
 		System.out.println(tc.name);
 		System.out.println(tc.count);
 	}

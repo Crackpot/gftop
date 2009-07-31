@@ -11,8 +11,8 @@ import java.util.*;
  * @version  1.0
  */
 
-//ZÀà£¬ÖØĞ´ÁËequals·½·¨£¬×ÜÊÇ·µ»Øfalse£¬
-//ÖØĞ´ÁËcompareTo(Object obj)·½·¨£¬×ÜÊÇ·µ»ØÕıÕûÊı
+//Zç±»ï¼Œé‡å†™äº†equalsæ–¹æ³•ï¼Œæ€»æ˜¯è¿”å›falseï¼Œ
+//é‡å†™äº†compareTo(Object obj)æ–¹æ³•ï¼Œæ€»æ˜¯è¿”å›æ­£æ•´æ•°
 class Z implements Comparable
 {
 	int age;
@@ -37,11 +37,11 @@ public class TestTreeSet
 		Z z1 = new Z(6);
 		set.add(z1);
 		System.out.println(set.add(z1));
-		//ÏÂÃæÊä³öset¼¯ºÏ£¬½«¿´µ½ÓĞ2¸öÔªËØ
+		//ä¸‹é¢è¾“å‡ºseté›†åˆï¼Œå°†çœ‹åˆ°æœ‰2ä¸ªå…ƒç´ 
 		System.out.println(set);
-		//ĞŞ¸Äset¼¯ºÏµÄµÚÒ»¸öÔªËØµÄageÊôĞÔ
+		//ä¿®æ”¹seté›†åˆçš„ç¬¬ä¸€ä¸ªå…ƒç´ çš„ageå±æ€§
 		((Z)(set.first())).age = 9;
-		//Êä³öset¼¯ºÏµÄ×îºóÒ»¸öÔªËØµÄageÊôĞÔ£¬½«¿´µ½Ò²±ä³ÉÁË9
+		//è¾“å‡ºseté›†åˆçš„æœ€åä¸€ä¸ªå…ƒç´ çš„ageå±æ€§ï¼Œå°†çœ‹åˆ°ä¹Ÿå˜æˆäº†9
 		System.out.println(((Z)(set.last())).age);
 	}
 }

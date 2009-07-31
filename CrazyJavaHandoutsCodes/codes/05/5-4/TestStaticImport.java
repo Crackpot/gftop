@@ -14,8 +14,8 @@ public class TestStaticImport
 {
 	public static void main(String[] args) 
 	{
-		//out是java.lang.System类的静态属性，代表标准输出
-		//PI是java.lang.Math类的静态属性，表示常量
+		//out鏄痡ava.lang.System绫荤殑闈欐�佸睘鎬э紝浠ｈ〃鏍囧噯杈撳嚭
+		//PI鏄痡ava.lang.Math绫荤殑闈欐�佸睘鎬э紝琛ㄧず甯搁噺
 		out.println(PI);
 	}
 }

@@ -12,10 +12,10 @@ import java.awt.event.*;
  */
 public class MultiListener
 {
-	private Frame f = new Frame("²âÊÔ");
+	private Frame f = new Frame("æµ‹è¯•");
 	private TextArea ta = new TextArea(6 , 40);
-	private Button b1 = new Button("°´Å¥Ò»");
-	private Button b2 = new Button("°´Å¥¶ş");
+	private Button b1 = new Button("æŒ‰é’®ä¸€");
+	private Button b2 = new Button("æŒ‰é’®äºŒ");
 	public void init()
 	{
 		FirstListener fl = new FirstListener();
@@ -34,14 +34,14 @@ public class MultiListener
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			ta.append("µÚÒ»¸öÊÂ¼ş¼àÌıÆ÷±»´¥·¢,ÊÂ¼şÔ´ÊÇ£º" + e.getActionCommand() + "\n");
+			ta.append("ç¬¬ä¸€ä¸ªäº‹ä»¶ç›‘å¬å™¨è¢«è§¦å‘,äº‹ä»¶æºæ˜¯ï¼š" + e.getActionCommand() + "\n");
 		}
 	}
 	class SecondListener implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			ta.append("µ¥»÷ÁË¡°" + e.getActionCommand() + "¡±°´Å¥\n");
+			ta.append("å•å‡»äº†â€œ" + e.getActionCommand() + "â€æŒ‰é’®\n");
 		}
 	}
 	public static void main(String[] args) 

@@ -18,12 +18,12 @@ public class TestAnonymous
 {
 	public void test(Product p)
 	{
-		System.out.println("¹ºÂòÁËÒ»¸ö" + p.getName() + "£¬»¨µôÁË" + p.getPrice());
+		System.out.println("è´­ä¹°äº†ä¸€ä¸ª" + p.getName() + "ï¼ŒèŠ±æ‰äº†" + p.getPrice());
 	}
 	public static void main(String[] args) 
 	{
 		TestAnonymous ta = new TestAnonymous();
-		//µ÷ÓÃtest·½·¨Ê±£¬ĞèÒª´«ÈëÒ»¸öProduct²ÎÊı£¬´Ë´¦´«ÈëÆäÄäÃûÊµÏÖÀàµÄÊµÀı
+		//è°ƒç”¨testæ–¹æ³•æ—¶ï¼Œéœ€è¦ä¼ å…¥ä¸€ä¸ªProductå‚æ•°ï¼Œæ­¤å¤„ä¼ å…¥å…¶åŒ¿åå®ç°ç±»çš„å®ä¾‹
 		ta.test(new Product()
 		{
 			public double getPrice()
@@ -32,7 +32,7 @@ public class TestAnonymous
 			}
 			public String getName()
 			{
-				return "AGPÏÔ¿¨";
+				return "AGPæ˜¾å¡";
 			}
 		});
 	}

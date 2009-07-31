@@ -12,7 +12,7 @@ import java.awt.event.*;
  */
 public class SimpleEventHandler extends WindowAdapter
 {
-	private Frame f = new Frame("测试");
+	private Frame f = new Frame("娴嬭瘯");
 	private TextArea ta = new TextArea(6 , 40);
 	public void init()
 	{
@@ -21,10 +21,10 @@ public class SimpleEventHandler extends WindowAdapter
 		f.pack();
 		f.setVisible(true);
 	}
-	//GUI界面类直接包含事件处理器方法
+	//GUI鐣岄潰绫荤洿鎺ュ寘鍚簨浠跺鐞嗗櫒鏂规硶
 	public void windowClosing(WindowEvent e) 
 	{
-		ta.append("用户试图关闭窗口！\n");
+		ta.append("鐢ㄦ埛璇曞浘鍏抽棴绐楀彛锛乗n");
 		System.exit(0);
 	}
 	public static void main(String[] args) 

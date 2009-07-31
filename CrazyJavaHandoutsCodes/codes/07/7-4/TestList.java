@@ -15,26 +15,26 @@ public class TestList
 	public static void main(String[] args) 
 	{
 		List books = new ArrayList();
-		//Ïòbooks¼¯ºÏÖĞÌí¼ÓÈı¸öÔªËØ
-		books.add(new String("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½"));
-		books.add(new String("Struts2È¨ÍşÖ¸ÄÏ"));
-		books.add(new String("»ùÓÚJ2EEµÄAjax±¦µä"));
+		//å‘booksé›†åˆä¸­æ·»åŠ ä¸‰ä¸ªå…ƒç´ 
+		books.add(new String("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜"));
+		books.add(new String("Struts2æƒå¨æŒ‡å—"));
+		books.add(new String("åŸºäºJ2EEçš„Ajaxå®å…¸"));
 		System.out.println(books);
-		//½«ĞÂ×Ö·û´®¶ÔÏó²åÈëÔÚµÚ¶ş¸öÎ»ÖÃ
-		books.add(1 , new String("RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù"));
+		//å°†æ–°å­—ç¬¦ä¸²å¯¹è±¡æ’å…¥åœ¨ç¬¬äºŒä¸ªä½ç½®
+		books.add(1 , new String("RORæ•æ·å¼€å‘æœ€ä½³å®è·µ"));
 		for (int i = 0 ; i < books.size() ; i++ )
 		{
 			System.out.println(books.get(i));
 		}
-		//É¾³ıµÚÈı¸öÔªËØ
+		//åˆ é™¤ç¬¬ä¸‰ä¸ªå…ƒç´ 
 		books.remove(2);
 		System.out.println(books);
-		//ÅĞ¶ÏÖ¸¶¨ÔªËØÔÚList¼¯ºÏÖĞÎ»ÖÃ£ºÊä³ö1£¬±íÃ÷Î»ÓÚµÚ¶şÎ»
-		System.out.println(books.indexOf(new String("RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù")));
-		//½«µÚ¶ş¸öÔªËØÌæ»»³ÉĞÂµÄ×Ö·û´®¶ÔÏó
-		books.set(1, new String("Struts2È¨ÍşÖ¸ÄÏ"));
+		//åˆ¤æ–­æŒ‡å®šå…ƒç´ åœ¨Listé›†åˆä¸­ä½ç½®ï¼šè¾“å‡º1ï¼Œè¡¨æ˜ä½äºç¬¬äºŒä½
+		System.out.println(books.indexOf(new String("RORæ•æ·å¼€å‘æœ€ä½³å®è·µ")));
+		//å°†ç¬¬äºŒä¸ªå…ƒç´ æ›¿æ¢æˆæ–°çš„å­—ç¬¦ä¸²å¯¹è±¡
+		books.set(1, new String("Struts2æƒå¨æŒ‡å—"));
 		System.out.println(books);
-		//½«books¼¯ºÏµÄµÚ¶ş¸öÔªËØ£¨°üÀ¨£©µ½µÚÈı¸öÔªËØ£¨²»°üÀ¨£©½ØÈ¡³Æ×Ó¼¯ºÏ
+		//å°†booksé›†åˆçš„ç¬¬äºŒä¸ªå…ƒç´ ï¼ˆåŒ…æ‹¬ï¼‰åˆ°ç¬¬ä¸‰ä¸ªå…ƒç´ ï¼ˆä¸åŒ…æ‹¬ï¼‰æˆªå–ç§°å­é›†åˆ
 		System.out.println(books.subList(1 , 2));
 
 	}

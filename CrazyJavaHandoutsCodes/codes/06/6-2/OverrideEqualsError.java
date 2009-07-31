@@ -10,24 +10,24 @@
  * @version  1.0
  */
  
-//¶¨ÒåÒ»¸öPersonÀà
+//å®šä¹‰ä¸€ä¸ªPersonç±»
 class Person
 {
-	//ÖØĞ´equals·½·¨£¬Ìá¹©×Ô¶¨ÒåµÄÏàµÈ±ê×¼
+	//é‡å†™equalsæ–¹æ³•ï¼Œæä¾›è‡ªå®šä¹‰çš„ç›¸ç­‰æ ‡å‡†
 	public boolean equals(Object obj)
 	{
-		//²»¼ÓÅĞ¶Ï£¬×ÜÊÇ·µ»Øtrue£¬¼´Person¶ÔÏóÓëÈÎºÎ¶ÔÏó¶¼ÏàµÈ
+		//ä¸åŠ åˆ¤æ–­ï¼Œæ€»æ˜¯è¿”å›trueï¼Œå³Personå¯¹è±¡ä¸ä»»ä½•å¯¹è±¡éƒ½ç›¸ç­‰
 		return true;
 	}
 }
-//¶¨ÒåÒ»¸öDog¿ÕÀà
+//å®šä¹‰ä¸€ä¸ªDogç©ºç±»
 class Dog{}
 public class OverrideEqualsError
 {
 	public static void main(String[] args) 
 	{
 		Person p = new Person();
-		System.out.println("Person¶ÔÏóÊÇ·ñequals Dog¶ÔÏó£¿" + p.equals(new Dog()));
-		System.out.println("Person¶ÔÏóÊÇ·ñequals String¶ÔÏó£¿" + p.equals(new String("Hello")));
+		System.out.println("Personå¯¹è±¡æ˜¯å¦equals Dogå¯¹è±¡ï¼Ÿ" + p.equals(new Dog()));
+		System.out.println("Personå¯¹è±¡æ˜¯å¦equals Stringå¯¹è±¡ï¼Ÿ" + p.equals(new String("Hello")));
 	}
 }

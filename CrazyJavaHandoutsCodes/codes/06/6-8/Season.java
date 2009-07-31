@@ -11,13 +11,13 @@
  */
 public class Season
 {
-	//把Season类定义成不可变的，将其属性也定义成final
+	//鎶奡eason绫诲畾涔夋垚涓嶅彲鍙樼殑锛屽皢鍏跺睘鎬т篃瀹氫箟鎴恌inal
 	private final String name;
 	private final String desc;
-	public static final Season SPRING = new Season("春天" , "趁春踏青");
-	public static final Season SUMMER = new Season("夏天" , "夏日炎炎");
-	public static final Season FALL = new Season("秋天" , "秋高气爽");
-	public static final Season WINTER = new Season("冬天" , "围炉赏雪");
+	public static final Season SPRING = new Season("鏄ュぉ" , "瓒佹槬韪忛潚");
+	public static final Season SUMMER = new Season("澶忓ぉ" , "澶忔棩鐐庣値");
+	public static final Season FALL = new Season("绉嬪ぉ" , "绉嬮珮姘旂埥");
+	public static final Season WINTER = new Season("鍐ぉ" , "鍥寸倝璧忛洩");
 
 	public static Season getSeaon(int seasonNum)
 	{
@@ -36,13 +36,13 @@ public class Season
 		}
 	}
 
-	//将构造器定义成private访问权限
+	//灏嗘瀯閫犲櫒瀹氫箟鎴恜rivate璁块棶鏉冮檺
 	private Season(String name , String desc)
 	{
 		this.name = name;
 		this.desc = desc;
 	}
-	//只为name和desc属性提供getter方法
+	//鍙负name鍜宒esc灞炴�ф彁渚沢etter鏂规硶
 	public String getName()
 	{
 		 return this.name;

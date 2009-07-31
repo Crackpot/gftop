@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class Test
 {
-	//ÉùÃ÷Ò»¸ö·ºĞÍ·½·¨£¬¸Ã·ºĞÍ·½·¨ÖĞ´øÒ»¸öTĞÎ²Î
+	//å£°æ˜ä¸€ä¸ªæ³›å‹æ–¹æ³•ï¼Œè¯¥æ³›å‹æ–¹æ³•ä¸­å¸¦ä¸€ä¸ªTå½¢å‚
 //	static <T> void test(Collection<T> a, Collection<T> c)
 	static <T> void test(Collection<? extends T> a, Collection<T> c)
 
@@ -25,7 +25,7 @@ public class Test
 	{
 		List<Object> ao = new ArrayList<Object>();
 		List<String> as = new ArrayList<String>();
-		//ÏÂÃæ´úÂë½«²úÉú±àÒë´íÎó
+		//ä¸‹é¢ä»£ç å°†äº§ç”Ÿç¼–è¯‘é”™è¯¯
 		test(as , ao);
 	}
 }

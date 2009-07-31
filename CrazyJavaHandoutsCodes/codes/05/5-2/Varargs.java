@@ -11,15 +11,15 @@
  */
 public class Varargs
 {
-	//¶¨ÒåÁËĞÎ²Î¸öÊı¿É±äµÄ·½·¨
+	//å®šä¹‰äº†å½¢å‚ä¸ªæ•°å¯å˜çš„æ–¹æ³•
 	public static void test(int a , String... books)
 	{
-		//books±»µ±³ÉÊı×é´¦Àí
+		//booksè¢«å½“æˆæ•°ç»„å¤„ç†
 		for (String tmp : books)
 		{
 			System.out.println(tmp);
 		}
-		//Êä³öÕûÊı±äÁ¿aµÄÖµ
+		//è¾“å‡ºæ•´æ•°å˜é‡açš„å€¼
 		System.out.println(a);
 	}
 
@@ -27,10 +27,10 @@ public class Varargs
 
 	public static void main(String[] args) 
 	{
-		//µ÷ÓÃtest·½·¨£¬Îªargs²ÎÊı¿ÉÒÔ´«Èë¶à¸öµÄ×Ö·û´®
-		test(5 , "Struts2È¨ÍşÖ¸ÄÏ" , "»ùÓÚJ2EEµÄAjax±¦µä");
-		//µ÷ÓÃtest·½·¨£¬Îªargs²ÎÊı¿ÉÒÔ´«Èë¶à¸öµÄ×Ö·û´®
-		test(23 , new String[]{"Ruby On RailsÃô½İ¿ª·¢×î¼ÑÊµ¼ù" , "ÇáÁ¿¼¶ÆóÒµÓ¦ÓÃÊµÕ½"});
+		//è°ƒç”¨testæ–¹æ³•ï¼Œä¸ºargså‚æ•°å¯ä»¥ä¼ å…¥å¤šä¸ªçš„å­—ç¬¦ä¸²
+		test(5 , "Struts2æƒå¨æŒ‡å—" , "åŸºäºJ2EEçš„Ajaxå®å…¸");
+		//è°ƒç”¨testæ–¹æ³•ï¼Œä¸ºargså‚æ•°å¯ä»¥ä¼ å…¥å¤šä¸ªçš„å­—ç¬¦ä¸²
+		test(23 , new String[]{"Ruby On Railsæ•æ·å¼€å‘æœ€ä½³å®è·µ" , "è½»é‡çº§ä¼ä¸šåº”ç”¨å®æˆ˜"});
 
 	}
 }

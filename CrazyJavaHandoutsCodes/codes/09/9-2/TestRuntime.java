@@ -14,9 +14,9 @@ public class TestRuntime
 	public static void main(String[] args) 
 	{
 		Runtime rt = Runtime.getRuntime();
-		System.out.println("´¦ÀíÆ÷ÊıÁ¿£º" + rt.availableProcessors());
-		System.out.println("¿ÕÏĞÄÚ´æÊı£º" + rt.freeMemory());
-		System.out.println("×ÜÄÚ´æÊı£º" + rt.totalMemory());
-		System.out.println("¿ÉÓÃ×î´óÄÚ´æÊı£º" + rt.maxMemory());
+		System.out.println("å¤„ç†å™¨æ•°é‡ï¼š" + rt.availableProcessors());
+		System.out.println("ç©ºé—²å†…å­˜æ•°ï¼š" + rt.freeMemory());
+		System.out.println("æ€»å†…å­˜æ•°ï¼š" + rt.totalMemory());
+		System.out.println("å¯ç”¨æœ€å¤§å†…å­˜æ•°ï¼š" + rt.maxMemory());
 	}
 }

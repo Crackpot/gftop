@@ -17,8 +17,8 @@ public class Apple<T extends Number>
 	{
 		Apple<Integer> ai = new Apple<Integer>();
 		Apple<Double> ad = new Apple<Double>();
-		//ÏÂÃæ´úÂë½«ÒıÆğ±àÒëÒì³£
-		//ÒòÎªStringÀàĞÍ´«¸øTĞÎ²Î£¬µ«String²»ÊÇNumberµÄ×ÓÀàĞÍ¡£
+		//ä¸‹é¢ä»£ç å°†å¼•èµ·ç¼–è¯‘å¼‚å¸¸
+		//å› ä¸ºStringç±»å‹ä¼ ç»™Tå½¢å‚ï¼Œä½†Stringä¸æ˜¯Numberçš„å­ç±»å‹ã€‚
 		Apple<String> as = new Apple<String>();
 		
 	}

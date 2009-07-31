@@ -14,12 +14,12 @@ public class NullInHashMap
 	public static void main(String[] args) 
 	{
 		HashMap hm = new HashMap();
-		//ÊÔÍ¼½«2¸ökeyÎªnullµÄkey-value¶Ô·ÅÈëHashMapÖĞ
+		//è¯•å›¾å°†2ä¸ªkeyä¸ºnullçš„key-valueå¯¹æ”¾å…¥HashMapä¸­
 		hm.put(null , null);
 		hm.put(null , null);
-		//½«Ò»¸övalueÎªnullµÄkey-value¶Ô·ÅÈëHashMapÖĞ
+		//å°†ä¸€ä¸ªvalueä¸ºnullçš„key-valueå¯¹æ”¾å…¥HashMapä¸­
 		hm.put("a" , null);
-		//Êä³öMap¶ÔÏó
+		//è¾“å‡ºMapå¯¹è±¡
 		System.out.println(hm);
 	}
 }

@@ -13,13 +13,13 @@ public class TestNestedLoop
 {
 	public static void main(String[] args) 
 	{
-		//外层循环
+		//澶栧眰寰幆
 		for (int i = 0 ; i < 5 ; i++ )
 		{
-			//内层循环
+			//鍐呭眰寰幆
 			for (int j = 0; j < 3 ; j++ )
 			{
-				System.out.println("i的值为:" + i + "  j的值为:" + j);
+				System.out.println("i鐨勫�间负:" + i + "  j鐨勫�间负:" + j);
 			}
 		}
 	}

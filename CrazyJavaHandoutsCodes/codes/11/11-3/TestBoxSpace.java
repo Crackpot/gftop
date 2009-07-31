@@ -12,25 +12,25 @@ import javax.swing.*;
  */
 public class TestBoxSpace
 {
-	private Frame f = new Frame("²âÊÔ");
-	//¶¨ÒåË®Æ½°Ú·Å×é¼şµÄBox¶ÔÏó
+	private Frame f = new Frame("æµ‹è¯•");
+	//å®šä¹‰æ°´å¹³æ‘†æ”¾ç»„ä»¶çš„Boxå¯¹è±¡
 	private Box horizontal = Box.createHorizontalBox();
-	//¶¨Òå´¹Ö±°Ú·Å×é¼şµÄBox¶ÔÏó
+	//å®šä¹‰å‚ç›´æ‘†æ”¾ç»„ä»¶çš„Boxå¯¹è±¡
 	private Box vertical = Box.createVerticalBox();
 	public void init()
 	{
-		horizontal.add(new Button("Ë®Æ½°´Å¥Ò»"));
+		horizontal.add(new Button("æ°´å¹³æŒ‰é’®ä¸€"));
 		horizontal.add(Box.createHorizontalGlue());
-		horizontal.add(new Button("Ë®Æ½°´Å¥¶ş"));
-		//Ë®Æ½·½Ïò²»¿ÉÀ­ÉìµÄ¼ä¾à£¬Æä¿í¶ÈÎª10px
+		horizontal.add(new Button("æ°´å¹³æŒ‰é’®äºŒ"));
+		//æ°´å¹³æ–¹å‘ä¸å¯æ‹‰ä¼¸çš„é—´è·ï¼Œå…¶å®½åº¦ä¸º10px
 		horizontal.add(Box.createHorizontalStrut(10));
-		horizontal.add(new Button("Ë®Æ½°´Å¥Èı"));
-		vertical.add(new Button("´¹Ö±°´Å¥Ò»"));
+		horizontal.add(new Button("æ°´å¹³æŒ‰é’®ä¸‰"));
+		vertical.add(new Button("å‚ç›´æŒ‰é’®ä¸€"));
 		vertical.add(Box.createVerticalGlue());
-		vertical.add(new Button("´¹Ö±°´Å¥¶ş"));
-		//´¹Ö±·½Ïò²»¿ÉÀ­ÉìµÄ¼ä¾à£¬Æä¸ß¶ÈÎª10px
+		vertical.add(new Button("å‚ç›´æŒ‰é’®äºŒ"));
+		//å‚ç›´æ–¹å‘ä¸å¯æ‹‰ä¼¸çš„é—´è·ï¼Œå…¶é«˜åº¦ä¸º10px
 		vertical.add(Box.createVerticalStrut(10));
-		vertical.add(new Button("´¹Ö±°´Å¥Èı"));
+		vertical.add(new Button("å‚ç›´æŒ‰é’®ä¸‰"));
 		f.add(horizontal , BorderLayout.NORTH);
 		f.add(vertical);
 		f.pack();

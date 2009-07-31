@@ -13,7 +13,7 @@ public class TestSynchronized
 {
 	public static void main(String[] args)
 	{
-		//下面程序创建了四个同步的集合对象
+		//涓嬮潰绋嬪簭鍒涘缓浜嗗洓涓悓姝ョ殑闆嗗悎瀵硅薄
 		Collection c = Collections.synchronizedCollection(new ArrayList());
 		List list = Collections.synchronizedList(new ArrayList()); 
 		Set s = Collections.synchronizedSet(new HashSet()); 

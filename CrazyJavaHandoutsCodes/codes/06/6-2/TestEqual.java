@@ -15,17 +15,17 @@ public class TestEqual
 	{
 		int it = 65;
 		float fl = 65.0f;
-		//½«Êä³ötrue
-		System.out.println("65ºÍ65.0fÊÇ·ñÏàµÈ£¿" + (it == fl));
+		//å°†è¾“å‡ºtrue
+		System.out.println("65å’Œ65.0fæ˜¯å¦ç›¸ç­‰ï¼Ÿ" + (it == fl));
 		char ch = 'A';
-		//½«Êä³ötrue
-		System.out.println("65ºÍ'A'ÊÇ·ñÏàµÈ£¿" + (it == ch));
+		//å°†è¾“å‡ºtrue
+		System.out.println("65å’Œ'A'æ˜¯å¦ç›¸ç­‰ï¼Ÿ" + (it == ch));
 		String str1 = new String("hello");
 		String str2 = new String("hello");
-		//½«Êä³öfalse
-		System.out.println("str1ºÍstr2ÊÇ·ñÏàµÈ£¿" + (str1 == str2));
-		//½«Êä³ötrue
-		System.out.println("str1ÊÇ·ñequals str2£¿" + (str1.equals(str2)));
+		//å°†è¾“å‡ºfalse
+		System.out.println("str1å’Œstr2æ˜¯å¦ç›¸ç­‰ï¼Ÿ" + (str1 == str2));
+		//å°†è¾“å‡ºtrue
+		System.out.println("str1æ˜¯å¦equals str2ï¼Ÿ" + (str1.equals(str2)));
 
 	}
 }

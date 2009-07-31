@@ -14,12 +14,12 @@ public class TestSimpleDateFormat
 {
 	public static void main(String[] args) throws Exception
 	{
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyyÄêMMµÄÈıËêµÄ·¢ËÍµ½ddÈÕ HHÊ±mm·ÖssÃë"); 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyå¹´MMçš„ä¸‰å²çš„å‘é€åˆ°ddæ—¥ HHæ—¶mmåˆ†ssç§’"); 
 		System.out.println(sdf.format(new Date()));
 
-		String dateStr = "ÍÌÍÌÍÂÍÂ2007%12%03";
-		//ÏÂÃæ´´½¨×ª»»ÓÃµÄSimpleDateFormatÊ±£¬ĞèÒª×ª»»×Ö·û´®Ê¹ÓÃÕ¼Î»·ûÌæ»»£¬²»ĞèÒª×ª»»µÄ¾ÍÕÕĞ´
-		SimpleDateFormat sdf2 = new SimpleDateFormat("ÍÌÍÌÍÂÍÂyyyy%MM%dd");
+		String dateStr = "åååå2007%12%03";
+		//ä¸‹é¢åˆ›å»ºè½¬æ¢ç”¨çš„SimpleDateFormatæ—¶ï¼Œéœ€è¦è½¬æ¢å­—ç¬¦ä¸²ä½¿ç”¨å ä½ç¬¦æ›¿æ¢ï¼Œä¸éœ€è¦è½¬æ¢çš„å°±ç…§å†™
+		SimpleDateFormat sdf2 = new SimpleDateFormat("ååååyyyy%MM%dd");
 		System.out.println(sdf2.parse(dateStr));
 
 	}

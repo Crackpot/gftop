@@ -11,8 +11,8 @@ import java.util.*;
  * @version  1.0
  */
 
-//RÀà£¬ÖØĞ´ÁËequals·½·¨£¬Èç¹ûcountÊôĞÔÏàµÈ·µ»Øtrue
-//ÖØĞ´ÁËcompareTo(Object obj)·½·¨£¬Èç¹ûcountÊôĞÔÏàµÈ·µ»Ø0;
+//Rç±»ï¼Œé‡å†™äº†equalsæ–¹æ³•ï¼Œå¦‚æœcountå±æ€§ç›¸ç­‰è¿”å›true
+//é‡å†™äº†compareTo(Object obj)æ–¹æ³•ï¼Œå¦‚æœcountå±æ€§ç›¸ç­‰è¿”å›0;
 class R implements Comparable
 {
 	int count;
@@ -22,7 +22,7 @@ class R implements Comparable
 	}
 	public String toString()
 	{
-		return "R(countÊôĞÔ:" + count + ")";
+		return "R(countå±æ€§:" + count + ")";
 	}
 	public boolean equals(Object obj)
 	{
@@ -63,19 +63,19 @@ public class TestTreeMap
 	public static void main(String[] args) 
 	{
 		TreeMap tm = new TreeMap();
-		tm.put(new R(3) , "ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		tm.put(new R(-5) , "Struts2È¨ÍşÖ¸ÄÏ");
-		tm.put(new R(9) , "RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
+		tm.put(new R(3) , "è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		tm.put(new R(-5) , "Struts2æƒå¨æŒ‡å—");
+		tm.put(new R(9) , "RORæ•æ·å¼€å‘æœ€ä½³å®è·µ");
 		System.out.println(tm);
-		//·µ»Ø¸ÃTreeMapµÄµÚÒ»¸öEntry¶ÔÏó
+		//è¿”å›è¯¥TreeMapçš„ç¬¬ä¸€ä¸ªEntryå¯¹è±¡
 		System.out.println(tm.firstEntry());
-		//·µ»Ø¸ÃTreeMapµÄ×îºóÒ»¸ökeyÖµ
+		//è¿”å›è¯¥TreeMapçš„æœ€åä¸€ä¸ªkeyå€¼
 		System.out.println(tm.lastKey());
-		//·µ»Ø¸ÃTreeMapµÄ±Ènew R(2)´óµÄ×îĞ¡keyÖµ¡£
+		//è¿”å›è¯¥TreeMapçš„æ¯”new R(2)å¤§çš„æœ€å°keyå€¼ã€‚
 		System.out.println(tm.higherKey(new R(2)));
-		//·µ»Ø¸ÃTreeMapµÄ±Ènew R(2)Ğ¡µÄ×î´óµÄkey£­value¶Ô¡£
+		//è¿”å›è¯¥TreeMapçš„æ¯”new R(2)å°çš„æœ€å¤§çš„keyï¼valueå¯¹ã€‚
 		System.out.println(tm.lowerEntry(new R(2)));
-		//·µ»Ø¸ÃTreeMapµÄ×ÓTreeMap
+		//è¿”å›è¯¥TreeMapçš„å­TreeMap
 		System.out.println(tm.subMap(new R(-1) , new R(4)));
 
 	}

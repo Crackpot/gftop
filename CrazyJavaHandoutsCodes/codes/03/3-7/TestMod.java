@@ -17,17 +17,17 @@ public class TestMod
 		double a = 5.2;
 		double b = 3.1;
 		double mod = a % b;
-		//modµÄÖµÎª2.1
+		//modçš„å€¼ä¸º2.1
 		System.out.println(mod);
-		//Êä³ö·ÇÊı:NaN
-		System.out.println("5¶Ô0.0ÇóÓàµÄ½á¹ûÊÇ:" + 5 % 0.0);
-		//Êä³ö·ÇÊı:NaN
-		System.out.println("-5.0¶Ô0ÇóÓàµÄ½á¹ûÊÇ:" + -5.0 % 0);
-		//Êä³ö0
-		System.out.println("0¶Ô5.0ÇóÓàµÄ½á¹ûÊÇ:" + 0 % 5.0);
-		//Êä³ö·ÇÊı:NaN
-		System.out.println("0¶Ô0.0ÇóÓàµÄ½á¹ûÊÇ:" + 0 % 0.0);
-		//ÏÂÃæ´úÂë½«³öÏÖÒì³£ java.lang.ArithmeticException: / by zero
-		System.out.println("-5¶Ô0ÇóÓàµÄ½á¹ûÊÇ:" + -5 % 0);
+		//è¾“å‡ºéæ•°:NaN
+		System.out.println("5å¯¹0.0æ±‚ä½™çš„ç»“æœæ˜¯:" + 5 % 0.0);
+		//è¾“å‡ºéæ•°:NaN
+		System.out.println("-5.0å¯¹0æ±‚ä½™çš„ç»“æœæ˜¯:" + -5.0 % 0);
+		//è¾“å‡º0
+		System.out.println("0å¯¹5.0æ±‚ä½™çš„ç»“æœæ˜¯:" + 0 % 5.0);
+		//è¾“å‡ºéæ•°:NaN
+		System.out.println("0å¯¹0.0æ±‚ä½™çš„ç»“æœæ˜¯:" + 0 % 0.0);
+		//ä¸‹é¢ä»£ç å°†å‡ºç°å¼‚å¸¸ java.lang.ArithmeticException: / by zero
+		System.out.println("-5å¯¹0æ±‚ä½™çš„ç»“æœæ˜¯:" + -5 % 0);
 	}
 }

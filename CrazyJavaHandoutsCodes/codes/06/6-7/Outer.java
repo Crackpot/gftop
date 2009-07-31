@@ -17,21 +17,21 @@ public class Outer
 		private int inProp = 5;
 		public void acessOuterProp()
 		{
-			//ÄÚ²¿Àà¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàµÄ³ÉÔ±
-			System.out.println("Íâ²¿ÀàµÄoutPropÊôĞÔÖµ:" + outProp);
+			//å†…éƒ¨ç±»å¯ä»¥ç›´æ¥è®¿é—®å¤–éƒ¨ç±»çš„æˆå‘˜
+			System.out.println("å¤–éƒ¨ç±»çš„outPropå±æ€§å€¼:" + outProp);
 		}
 	}
 	public void accessInnerProp()
 	{
-		//Íâ²¿Àà²»ÄÜÖ±½Ó·ÃÎÊÄÚ²¿ÀàÊôĞÔ,ÏÂÃæ´úÂë³öÏÖ±àÒë´íÎó
-		//System.out.println("ÄÚ²¿ÀàµÄinPropÊôĞÔÖµ:" + inProp);
-		//ÈçĞè·ÃÎÊÄÚ²¿Àà³ÉÔ±£¬±ØĞëÏÔÊ½´´½¨ÄÚ²¿Àà¶ÔÏó
-		System.out.println("ÄÚ²¿ÀàµÄinPropÊôĞÔÖµ:" + new Inner().inProp);
+		//å¤–éƒ¨ç±»ä¸èƒ½ç›´æ¥è®¿é—®å†…éƒ¨ç±»å±æ€§,ä¸‹é¢ä»£ç å‡ºç°ç¼–è¯‘é”™è¯¯
+		//System.out.println("å†…éƒ¨ç±»çš„inPropå±æ€§å€¼:" + inProp);
+		//å¦‚éœ€è®¿é—®å†…éƒ¨ç±»æˆå‘˜ï¼Œå¿…é¡»æ˜¾å¼åˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡
+		System.out.println("å†…éƒ¨ç±»çš„inPropå±æ€§å€¼:" + new Inner().inProp);
 
 	}
 	public static void main(String[] args)
 	{
-		//Ö´ĞĞÏÂÃæ´úÂë£¬Ö»´´½¨ÁËÍâ²¿Àà¶ÔÏó£¬»¹Î´´´½¨ÄÚ²¿Àà¶ÔÏó
+		//æ‰§è¡Œä¸‹é¢ä»£ç ï¼Œåªåˆ›å»ºäº†å¤–éƒ¨ç±»å¯¹è±¡ï¼Œè¿˜æœªåˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡
 		Outer out = new Outer();
 	}
 }

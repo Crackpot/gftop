@@ -15,8 +15,8 @@ public class TestTreeSetError2
 	public static void main(String[] args) 
 	{
 		TreeSet ts = new TreeSet();
-		//向TreeSet集合中添加两个Err对象
-		ts.add(new String("Struts权威指南"));
+		//鍚慣reeSet闆嗗悎涓坊鍔犱袱涓狤rr瀵硅薄
+		ts.add(new String("Struts鏉冨▉鎸囧崡"));
 		ts.add(new Date());
 	}
 }

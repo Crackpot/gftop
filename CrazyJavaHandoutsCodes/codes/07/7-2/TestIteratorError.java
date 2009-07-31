@@ -13,19 +13,19 @@ public class TestIteratorError
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸ö¼¯ºÏ
+		//åˆ›å»ºä¸€ä¸ªé›†åˆ
 		Collection books = new HashSet();
-		books.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		books.add("Struts2È¨ÍşÖ¸ÄÏ");
-		//»ñÈ¡books¼¯ºÏ¶ÔÓ¦µÄµü´úÆ÷
+		books.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		books.add("Struts2æƒå¨æŒ‡å—");
+		//è·å–booksé›†åˆå¯¹åº”çš„è¿­ä»£å™¨
 		Iterator it = books.iterator();
 		while(it.hasNext())
 		{
 			String book = (String)it.next();
 			System.out.println(book);
-			if (book.equals("Struts2È¨ÍşÖ¸ÄÏ"))
+			if (book.equals("Struts2æƒå¨æŒ‡å—"))
 			{
-				//Ê¹ÓÃIteratorµü´ú¹ı³ÌÖĞ£¬²»¿ÉĞŞ¸Ä¼¯ºÏÔªËØ,ÏÂÃæ´úÂëÒı·¢Òì³£
+				//ä½¿ç”¨Iteratorè¿­ä»£è¿‡ç¨‹ä¸­ï¼Œä¸å¯ä¿®æ”¹é›†åˆå…ƒç´ ,ä¸‹é¢ä»£ç å¼•å‘å¼‚å¸¸
 				books.remove(book);
 			}
 		}

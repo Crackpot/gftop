@@ -15,11 +15,11 @@ public class TestImmutableString
 	{
 		String str1 = new String("Hello");
 		String str2 = new String("Hello");
-		//输出false
+		//杈撳嚭false
 		System.out.println(str1 == str2);
-		//输出true
+		//杈撳嚭true
 		System.out.println(str1.equals(str2));
-		//下面两此输出的hashCode相同
+		//涓嬮潰涓ゆ杈撳嚭鐨刪ashCode鐩稿悓
 		System.out.println(str1.hashCode());
 		System.out.println(str2.hashCode());
 	}

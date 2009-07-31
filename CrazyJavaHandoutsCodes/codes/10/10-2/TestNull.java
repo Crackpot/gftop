@@ -20,11 +20,11 @@ public class TestNull
 		}
 		catch (NullPointerException ne)
 		{
-			System.out.println("��ָ���쳣");
+			System.out.println("空指针异常");
 		}
 		catch(Exception e)
 		{
-			System.out.println("δ֪�쳣");
+			System.out.println("未知异常");
 		}
 	}
 }

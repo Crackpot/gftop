@@ -13,11 +13,11 @@ public class TestFor
 {
 	public static void main(String[] args) 
 	{
-		//Ñ­»·µÄ³õÊ¼»¯Ìõ¼ş,Ñ­»·Ìõ¼ş£¬Ñ­»·µü´úÓï¾ä¶¼ÔÚÏÂÃæÒ»ĞĞ
+		//å¾ªç¯çš„åˆå§‹åŒ–æ¡ä»¶,å¾ªç¯æ¡ä»¶ï¼Œå¾ªç¯è¿­ä»£è¯­å¥éƒ½åœ¨ä¸‹é¢ä¸€è¡Œ
 		for (int count = 0 ; count < 10 ; count++)
 		{
 			System.out.println(count);		
 		}
-		System.out.println("Ñ­»·½áÊø!");
+		System.out.println("å¾ªç¯ç»“æŸ!");
 	}
 }

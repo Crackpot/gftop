@@ -18,7 +18,7 @@ class R implements Comparable
 	}
 	public String toString()
 	{
-		return "R(countÊôĞÔ:" + count + ")";
+		return "R(countå±æ€§:" + count + ")";
 	}
 	public boolean equals(Object obj)
 	{
@@ -58,22 +58,22 @@ public class TestTreeSet2
 		ts.add(new R(-3));
 		ts.add(new R(9));
 		ts.add(new R(-2));
-		//´òÓ¡TreeSet¼¯ºÏ£¬¼¯ºÏÔªËØÊÇÓĞĞòÅÅÁĞµÄ
+		//æ‰“å°TreeSeté›†åˆï¼Œé›†åˆå…ƒç´ æ˜¯æœ‰åºæ’åˆ—çš„
 		System.out.println(ts);
-		//È¡³öµÚÒ»¸öÔªËØ
+		//å–å‡ºç¬¬ä¸€ä¸ªå…ƒç´ 
 		R first = (R)ts.first();
-		//ÎªµÚÒ»¸öÔªËØµÄcountÊôĞÔ¸³Öµ
+		//ä¸ºç¬¬ä¸€ä¸ªå…ƒç´ çš„countå±æ€§èµ‹å€¼
 		first.count = 20;
-		//È¡³ö×îºóÒ»¸öÔªËØ
+		//å–å‡ºæœ€åä¸€ä¸ªå…ƒç´ 
 		R last = (R)ts.last();
-		//Îª×îºóÒ»¸öÔªËØµÄcountÊôĞÔ¸³Öµ£¬Óëµ¹ÊıµÚ¶ş¸öÔªËØcountÊôĞÔÏàÍ¬
+		//ä¸ºæœ€åä¸€ä¸ªå…ƒç´ çš„countå±æ€§èµ‹å€¼ï¼Œä¸å€’æ•°ç¬¬äºŒä¸ªå…ƒç´ countå±æ€§ç›¸åŒ
 		last.count = -2;
-		//ÔÙ´ÎÊä³öcount½«¿´µ½TreeSetÀïµÄÔªËØ´¦ÓÚÎŞĞò×´Ì¬£¬ÇÒÓĞÖØ¸´ÔªËØ
+		//å†æ¬¡è¾“å‡ºcountå°†çœ‹åˆ°TreeSeté‡Œçš„å…ƒç´ å¤„äºæ— åºçŠ¶æ€ï¼Œä¸”æœ‰é‡å¤å…ƒç´ 
 		System.out.println(ts);
-		//É¾³ıÊôĞÔ±»¸Ä±äµÄÔªËØ£¬É¾³ıÊ§°Ü
+		//åˆ é™¤å±æ€§è¢«æ”¹å˜çš„å…ƒç´ ï¼Œåˆ é™¤å¤±è´¥
 		ts.remove(new R(-2));
 		System.out.println(ts);
-		//É¾³ıÊôĞÔÃ»ÓĞ¸Ä±äµÄÔªËØ£¬É¾³ı³É¹¦
+		//åˆ é™¤å±æ€§æ²¡æœ‰æ”¹å˜çš„å…ƒç´ ï¼Œåˆ é™¤æˆåŠŸ
 		ts.remove(new R(5));
 		System.out.println(ts);
 	}

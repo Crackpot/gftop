@@ -13,17 +13,17 @@ public class ListErr
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸öÖ»Ïë±£´æ×Ö·û´®µÄList¼¯ºÏ
+		//åˆ›å»ºä¸€ä¸ªåªæƒ³ä¿å­˜å­—ç¬¦ä¸²çš„Listé›†åˆ
 		List strList = new ArrayList();
-		strList.add("Struts2È¨ÍşÖ¸ÄÏ");
-		strList.add("»ùÓÚJ2EEµÄAjax±¦µä");
-		strList.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		//¡±²»Ğ¡ĞÄ¡°°ÑÒ»¸öInteger¶ÔÏó¡±¶ª½ø"ÁË¼¯ºÏ
+		strList.add("Struts2æƒå¨æŒ‡å—");
+		strList.add("åŸºäºJ2EEçš„Ajaxå®å…¸");
+		strList.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		//â€ä¸å°å¿ƒâ€œæŠŠä¸€ä¸ªIntegerå¯¹è±¡â€ä¸¢è¿›"äº†é›†åˆ
 		strList.add(5);
 		for (int i = 0; i < strList.size() ; i++ )
 		{
-			//ÒòÎªListÀïÈ¡³öµÄÈ«²¿ÊÇObject£¬ËùÒÔ±ØĞëÇ¿ÖÆÀàĞÍ×ª»»
-			//×îºóÒ»¸öÔªËØ½«³öÏÖClassCastExceptionÒì³£
+			//å› ä¸ºListé‡Œå–å‡ºçš„å…¨éƒ¨æ˜¯Objectï¼Œæ‰€ä»¥å¿…é¡»å¼ºåˆ¶ç±»å‹è½¬æ¢
+			//æœ€åä¸€ä¸ªå…ƒç´ å°†å‡ºç°ClassCastExceptionå¼‚å¸¸
 			String str = (String)strList.get(i);
 		}
 	}

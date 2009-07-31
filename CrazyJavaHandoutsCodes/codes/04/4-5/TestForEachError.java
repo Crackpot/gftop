@@ -13,13 +13,13 @@ public class TestForEachError
 {
 	public static void main(String[] args) 
 	{
-		String[] books = {"ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½" , 
-			"Struts2È¨ÍşÖ¸ÄÏ",
-			"»ùÓÚJ2EEµÄAjax±¦µä"};
-		//Ê¹ÓÃforeachÑ­»·À´±éÀúÊı×éÔªËØ£¬ÆäÖĞbook½«»á×Ô¶¯µü´úÃ¿¸öÊı×éÔªËØ
+		String[] books = {"è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜" , 
+			"Struts2æƒå¨æŒ‡å—",
+			"åŸºäºJ2EEçš„Ajaxå®å…¸"};
+		//ä½¿ç”¨foreachå¾ªç¯æ¥éå†æ•°ç»„å…ƒç´ ï¼Œå…¶ä¸­bookå°†ä¼šè‡ªåŠ¨è¿­ä»£æ¯ä¸ªæ•°ç»„å…ƒç´ 
 		for (String book : books)
 		{
-			book = "Ruby On RailsÃô½İ¿ª·¢×î¼ÑÊµ¼ù";
+			book = "Ruby On Railsæ•æ·å¼€å‘æœ€ä½³å®è·µ";
 			System.out.println(book);
 		}
 		System.out.println(books[0]);

@@ -13,11 +13,11 @@ public class StaticAccessNonStatic
 {
 	public void info()
 	{
-		System.out.println("¼òµ¥µÄinfo·½·¨");
+		System.out.println("ç®€å•çš„infoæ–¹æ³•");
 	}
 	public static void main(String[] args) 
 	{
-		//ÒòÎªmain·½·¨ÊÇ¾²Ì¬·½·¨£¬¶øinfoÊÇ·Ç¾²Ì¬·½·¨£¬ËùÒÔÏÂÃæÓï¾ä½«³öÏÖ´íÎó¡£
+		//å› ä¸ºmainæ–¹æ³•æ˜¯é™æ€æ–¹æ³•ï¼Œè€Œinfoæ˜¯éé™æ€æ–¹æ³•ï¼Œæ‰€ä»¥ä¸‹é¢è¯­å¥å°†å‡ºç°é”™è¯¯ã€‚
 		info();
 	}
 }

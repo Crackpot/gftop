@@ -18,24 +18,24 @@ public enum Gender
 		switch (this)
 		{
 			case MALE:
-				if (name.equals("ÄĞ"))
+				if (name.equals("ç”·"))
 				{
 					this.name = name;
 				}
 				else
 				{
-					System.out.println("²ÎÊı´íÎó");
+					System.out.println("å‚æ•°é”™è¯¯");
 					return;
 				}
 				break;
 			case FEMALE:
-				if (name.equals("Å®"))
+				if (name.equals("å¥³"))
 				{
 					this.name = name;
 				}
 				else
 				{
-					System.out.println("²ÎÊı´íÎó");
+					System.out.println("å‚æ•°é”™è¯¯");
 					return;
 				}
 				break;

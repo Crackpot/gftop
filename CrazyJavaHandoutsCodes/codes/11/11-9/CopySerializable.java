@@ -14,20 +14,20 @@ import java.io.*;
  */
 public class CopySerializable
 {
-	Frame f = new Frame("¸´ÖÆ¶ÔÏó");
-	Button copy = new Button("¸´ÖÆ");
-	Button paste = new Button("Õ³Ìù");
+	Frame f = new Frame("å¤åˆ¶å¯¹è±¡");
+	Button copy = new Button("å¤åˆ¶");
+	Button paste = new Button("ç²˜è´´");
 	TextField name = new TextField(15);
 	TextField age = new TextField(15);
 	TextArea ta = new TextArea(3 , 30);
-	//´´½¨ÏµÍ³¼ôÌù°å
+	//åˆ›å»ºç³»ç»Ÿå‰ªè´´æ¿
 	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 	public void init()
 	{
 		Panel p = new Panel();
-		p.add(new Label("ĞÕÃû"));
+		p.add(new Label("å§“å"));
 		p.add(name);
-		p.add(new Label("ÄêÁä"));
+		p.add(new Label("å¹´é¾„"));
 		p.add(age);
 		f.add(p , BorderLayout.NORTH);
 		f.add(ta);
@@ -111,6 +111,6 @@ class Dog implements Serializable
 	}
 	public String toString()
 	{
-		return "Dog¶ÔÏó[ name=" + name + " , age=" + age + " ]";
+		return "Dogå¯¹è±¡[ name=" + name + " , age=" + age + " ]";
 	}
 }

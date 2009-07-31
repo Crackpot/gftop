@@ -51,17 +51,17 @@ public class TestHashtable
 	public static void main(String[] args) 
 	{
 		Hashtable ht = new Hashtable();
-		ht.put(new A(60000) , "Struts2È¨ÍşÖ¸ÄÏ");
-		ht.put(new A(87563) , "ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
+		ht.put(new A(60000) , "Struts2æƒå¨æŒ‡å—");
+		ht.put(new A(87563) , "è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
 		ht.put(new A(1232) , new B());
 		System.out.println(ht);
-		//Ö»ÒªÁ½¸ö¶ÔÏóÍ¨¹ıequals±È½Ï·µ»Øtrue£¬Hashtable¾ÍÈÏÎªËüÃÇÊÇÏàµÈµÄvalue¡£
-		//ÒòÎªHashtableÖĞÓĞÒ»¸öB¶ÔÏó£¬ËüÓëÈÎºÎ¶ÔÏóÍ¨¹ıequals±È½Ï¶¼ÏàµÈ£¬ËùÒÔÏÂÃæÊä³ötrue¡£
-		System.out.println(ht.containsValue("²âÊÔ×Ö·û´®"));
-		//Ö»ÒªÁ½¸öA¶ÔÏóµÄcountÊôĞÔÏàµÈ£¬ËüÃÇÍ¨¹ıequals±È½Ï·µ»Øtrue£¬ÇÒhashCodeÏàµÈ
-		//Hashtable¼´ÈÏÎªËüÃÇÊÇÏàÍ¬µÄkey£¬ËùÒÔÏÂÃæÊä³ötrue¡£
+		//åªè¦ä¸¤ä¸ªå¯¹è±¡é€šè¿‡equalsæ¯”è¾ƒè¿”å›trueï¼ŒHashtableå°±è®¤ä¸ºå®ƒä»¬æ˜¯ç›¸ç­‰çš„valueã€‚
+		//å› ä¸ºHashtableä¸­æœ‰ä¸€ä¸ªBå¯¹è±¡ï¼Œå®ƒä¸ä»»ä½•å¯¹è±¡é€šè¿‡equalsæ¯”è¾ƒéƒ½ç›¸ç­‰ï¼Œæ‰€ä»¥ä¸‹é¢è¾“å‡ºtrueã€‚
+		System.out.println(ht.containsValue("æµ‹è¯•å­—ç¬¦ä¸²"));
+		//åªè¦ä¸¤ä¸ªAå¯¹è±¡çš„countå±æ€§ç›¸ç­‰ï¼Œå®ƒä»¬é€šè¿‡equalsæ¯”è¾ƒè¿”å›trueï¼Œä¸”hashCodeç›¸ç­‰
+		//Hashtableå³è®¤ä¸ºå®ƒä»¬æ˜¯ç›¸åŒçš„keyï¼Œæ‰€ä»¥ä¸‹é¢è¾“å‡ºtrueã€‚
 		System.out.println(ht.containsKey(new A(87563)));
-		//ÏÂÃæÓï¾ä¿ÉÒÔÉ¾³ı×îºóÒ»¸ökey-value¶Ô
+		//ä¸‹é¢è¯­å¥å¯ä»¥åˆ é™¤æœ€åä¸€ä¸ªkey-valueå¯¹
 		ht.remove(new A(1232));
 		for (Object key : ht.keySet())
 		{

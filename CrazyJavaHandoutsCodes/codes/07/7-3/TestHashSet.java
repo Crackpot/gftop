@@ -10,7 +10,7 @@ import java.util.*;
  * @version  1.0
  */
 
-//ÀàAµÄequals·½·¨×ÜÊÇ·µ»Øtrue,µ«Ã»ÓĞÖØĞ´ÆähashCode()·½·¨
+//ç±»Açš„equalsæ–¹æ³•æ€»æ˜¯è¿”å›true,ä½†æ²¡æœ‰é‡å†™å…¶hashCode()æ–¹æ³•
 class A
 {
 	public boolean equals(Object obj)
@@ -18,7 +18,7 @@ class A
 		return true;
 	}
 }
-//ÀàBµÄhashCode()·½·¨×ÜÊÇ·µ»Ø1,µ«Ã»ÓĞÖØĞ´Æäequals()·½·¨
+//ç±»Bçš„hashCode()æ–¹æ³•æ€»æ˜¯è¿”å›1,ä½†æ²¡æœ‰é‡å†™å…¶equals()æ–¹æ³•
 class B
 {
 	public int hashCode()
@@ -26,7 +26,7 @@ class B
 		return 1;
 	}
 }
-//ÀàCµÄhashCode()·½·¨×ÜÊÇ·µ»Ø2,µ«Ã»ÓĞÖØĞ´Æäequals()·½·¨
+//ç±»Cçš„hashCode()æ–¹æ³•æ€»æ˜¯è¿”å›2,ä½†æ²¡æœ‰é‡å†™å…¶equals()æ–¹æ³•
 class C
 {
 	public int hashCode()
@@ -43,7 +43,7 @@ public class TestHashSet
 	public static void main(String[] args) 
 	{
 		HashSet books = new HashSet();
-		//·Ö±ğÏòbooks¼¯ºÏÖĞÌí¼Ó2¸öA¶ÔÏó£¬2¸öB¶ÔÏó£¬2¸öC¶ÔÏó
+		//åˆ†åˆ«å‘booksé›†åˆä¸­æ·»åŠ 2ä¸ªAå¯¹è±¡ï¼Œ2ä¸ªBå¯¹è±¡ï¼Œ2ä¸ªCå¯¹è±¡
 		books.add(new A());
 		books.add(new A());
 		books.add(new B());

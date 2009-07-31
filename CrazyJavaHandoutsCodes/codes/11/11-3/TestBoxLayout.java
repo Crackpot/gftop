@@ -12,12 +12,12 @@ import javax.swing.*;
  */
 public class TestBoxLayout
 {
-	private Frame f = new Frame("²âÊÔ");
+	private Frame f = new Frame("æµ‹è¯•");
 	public void init()
 	{
 		f.setLayout(new BoxLayout(f , BoxLayout.Y_AXIS));
-		f.add(new Button("µÚÒ»¸ö°´Å¥"));
-		f.add(new Button("°´Å¥¶þ"));
+		f.add(new Button("ç¬¬ä¸€ä¸ªæŒ‰é’®"));
+		f.add(new Button("æŒ‰é’®äºŒ"));
 		f.pack();
 		f.setVisible(true);
 	}

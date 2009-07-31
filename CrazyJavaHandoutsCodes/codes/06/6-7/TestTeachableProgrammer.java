@@ -13,10 +13,10 @@ public class TestTeachableProgrammer
 {
 	public static void main(String[] args) 
 	{
-		TeachableProgrammer tp = new TeachableProgrammer("李刚");
-		//直接调用TeachableProgrammer类从Programmer类继承到的work方法
+		TeachableProgrammer tp = new TeachableProgrammer("鏉庡垰");
+		//鐩存帴璋冪敤TeachableProgrammer绫讳粠Programmer绫荤户鎵垮埌鐨剋ork鏂规硶
 		tp.work();
-		//表面上调用的是Closure的work方法，实际上是回调TeachableProgrammer的teach方法
+		//琛ㄩ潰涓婅皟鐢ㄧ殑鏄疌losure鐨剋ork鏂规硶锛屽疄闄呬笂鏄洖璋僒eachableProgrammer鐨則each鏂规硶
 		tp.getCallbackReference().work();
 	}
 }

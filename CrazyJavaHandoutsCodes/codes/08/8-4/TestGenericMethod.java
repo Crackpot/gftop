@@ -12,7 +12,7 @@ import java.util.*;
 
 public class TestGenericMethod
 {
-	//ÉùÃ÷Ò»¸ö·ºĞÍ·½·¨£¬¸Ã·ºĞÍ·½·¨ÖĞ´øÒ»¸öTĞÎ²Î£¬
+	//å£°æ˜ä¸€ä¸ªæ³›å‹æ–¹æ³•ï¼Œè¯¥æ³›å‹æ–¹æ³•ä¸­å¸¦ä¸€ä¸ªTå½¢å‚ï¼Œ
 	static <T> void fromArrayToCollection(T[] a, Collection<T> c)
 	{
 		for (T o : a)
@@ -24,28 +24,28 @@ public class TestGenericMethod
 	{
 		Object[] oa = new Object[100];
 		Collection<Object> co = new ArrayList<Object>();
-		//ÏÂÃæ´úÂëÖĞT´ú±íObjectÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Objectç±»å‹
 		fromArrayToCollection(oa, co);
 		String[] sa = new String[100];
 		Collection<String> cs = new ArrayList<String>();
-		//ÏÂÃæ´úÂëÖĞT´ú±íStringÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Stringç±»å‹
 		fromArrayToCollection(sa, cs);
-		//ÏÂÃæ´úÂëÖĞT´ú±íObjectÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Objectç±»å‹
 		fromArrayToCollection(sa, co);
 		Integer[] ia = new Integer[100];
 		Float[] fa = new Float[100];
 		Number[] na = new Number[100];
 		Collection<Number> cn = new ArrayList<Number>(); 
-		//ÏÂÃæ´úÂëÖĞT´ú±íNumberÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Numberç±»å‹
 		fromArrayToCollection(ia, cn);
-		//ÏÂÃæ´úÂëÖĞT´ú±íNumberÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Numberç±»å‹
 		fromArrayToCollection(fa, cn); 
-		//ÏÂÃæ´úÂëÖĞT´ú±íNumberÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Numberç±»å‹
 		fromArrayToCollection(na, cn);
-		//ÏÂÃæ´úÂëÖĞT´ú±íStringÀàĞÍ
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Stringç±»å‹
 		fromArrayToCollection(na, co);
-		//ÏÂÃæ´úÂëÖĞT´ú±íStringÀàĞÍ£¬µ«naÊÇÒ»¸öNumberÊı×é£¬
-		//ÒòÎªNumber¼È²»ÊÇStringÀàĞÍ£¬Ò²²»ÊÇËüµÄ×ÓÀà£¬ËùÒÔ³öÏÖ±àÒë´íÎó
+		//ä¸‹é¢ä»£ç ä¸­Tä»£è¡¨Stringç±»å‹ï¼Œä½†naæ˜¯ä¸€ä¸ªNumberæ•°ç»„ï¼Œ
+		//å› ä¸ºNumberæ—¢ä¸æ˜¯Stringç±»å‹ï¼Œä¹Ÿä¸æ˜¯å®ƒçš„å­ç±»ï¼Œæ‰€ä»¥å‡ºç°ç¼–è¯‘é”™è¯¯
 		fromArrayToCollection(na, cs);
 	}
 }

@@ -14,28 +14,28 @@ class Animal
 {
 	private void beat()
 	{
-		System.out.println("ĞÄÔàÌø¶¯...");
+		System.out.println("å¿ƒè„è·³åŠ¨...");
 	}
 	public void breath()
 	{
 		beat();
-		System.out.println("ÎüÒ»¿ÚÆø£¬ÍÂÒ»¿ÚÆø£¬ºôÎüÖĞ...");
+		System.out.println("å¸ä¸€å£æ°”ï¼Œåä¸€å£æ°”ï¼Œå‘¼å¸ä¸­...");
 	}
 }
-//¼Ì³ĞAnimal£¬Ö±½Ó¸´ÓÃ¸¸ÀàµÄbreath·½·¨
+//ç»§æ‰¿Animalï¼Œç›´æ¥å¤ç”¨çˆ¶ç±»çš„breathæ–¹æ³•
 class Bird extends Animal
 {
 	public void fly()
 	{
-		System.out.println("ÎÒÔÚÌì¿Õ×ÔÔÚµÄ·ÉÏè...");
+		System.out.println("æˆ‘åœ¨å¤©ç©ºè‡ªåœ¨çš„é£ç¿”...");
 	}
 }
-//¼Ì³ĞAnimal£¬Ö±½Ó¸´ÓÃ¸¸ÀàµÄbreath·½·¨
+//ç»§æ‰¿Animalï¼Œç›´æ¥å¤ç”¨çˆ¶ç±»çš„breathæ–¹æ³•
 class Wolf extends Animal
 {
 	public void run()
 	{
-		System.out.println("ÎÒÔÚÂ½µØÉÏµÄ¿ìËÙ±¼ÅÜ...");
+		System.out.println("æˆ‘åœ¨é™†åœ°ä¸Šçš„å¿«é€Ÿå¥”è·‘...");
 	}
 }
 public class TestInherit

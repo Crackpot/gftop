@@ -15,29 +15,29 @@ import javax.swing.*;
  */
 public class Gobang
 {
-	//ÏÂÃæÈı¸öÎ»Í¼·Ö±ğ´ú±íÆåÅÌ¡¢ºÚ×Ó¡¢°××Ó
+	//ä¸‹é¢ä¸‰ä¸ªä½å›¾åˆ†åˆ«ä»£è¡¨æ£‹ç›˜ã€é»‘å­ã€ç™½å­
 	BufferedImage table;
 	BufferedImage black;
 	BufferedImage white;
-	//µ±Êó±êÒÆ¶¯Ê±ºòµÄÑ¡Ôñ¿ò
+	//å½“é¼ æ ‡ç§»åŠ¨æ—¶å€™çš„é€‰æ‹©æ¡†
 	BufferedImage selected;
-	//¶¨ÒåÆåÅÌµÄ´óĞ¡
+	//å®šä¹‰æ£‹ç›˜çš„å¤§å°
 	private static int BOARD_SIZE = 15;
-	//¶¨ÒåÆåÅÌ¿í¡¢¸ß¶àÉÙ¸öÏñËØ
+	//å®šä¹‰æ£‹ç›˜å®½ã€é«˜å¤šå°‘ä¸ªåƒç´ 
 	private final int TABLE_WIDTH = 535;
 	private final int TABLE_HETGHT = 536;
-	//¶¨ÒåÆåÅÌ×ù±êµÄÏñËØÖµºÍÆåÅÌÊı×éÖ®¼äµÄ±ÈÂÊ¡£
+	//å®šä¹‰æ£‹ç›˜åº§æ ‡çš„åƒç´ å€¼å’Œæ£‹ç›˜æ•°ç»„ä¹‹é—´çš„æ¯”ç‡ã€‚
 	private final int RATE = TABLE_WIDTH / BOARD_SIZE;
-	//¶¨ÒåÆåÅÌ×ù±êµÄÏñËØÖµºÍÆåÅÌÊı×éÖ®¼äµÄÆ«ÒÆ¾à¡£
+	//å®šä¹‰æ£‹ç›˜åº§æ ‡çš„åƒç´ å€¼å’Œæ£‹ç›˜æ•°ç»„ä¹‹é—´çš„åç§»è·ã€‚
 	private final int X_OFFSET = 5;
 	private final int Y_OFFSET = 6;
-	//¶¨ÒåÒ»¸ö¶şÎ¬Êı×éÀ´³äµ±ÆåÅÌ
+	//å®šä¹‰ä¸€ä¸ªäºŒç»´æ•°ç»„æ¥å……å½“æ£‹ç›˜
 	private String[][] board = new String[BOARD_SIZE][BOARD_SIZE];
-	//Îå×ÓÆåÓÎÏ·µÄ´°¿Ú
-	JFrame f = new JFrame("Îå×ÓÆåÓÎÏ·");
-	//Îå×ÓÆåÓÎÏ·ÆåÅÌ¶ÔÓ¦µÄCanvas×é¼ş
+	//äº”å­æ£‹æ¸¸æˆçš„çª—å£
+	JFrame f = new JFrame("äº”å­æ£‹æ¸¸æˆ");
+	//äº”å­æ£‹æ¸¸æˆæ£‹ç›˜å¯¹åº”çš„Canvasç»„ä»¶
 	ChessBoard chessBoard = new ChessBoard();
-	//µ±Ç°Ñ¡ÖĞµãµÄ×ù±ê
+	//å½“å‰é€‰ä¸­ç‚¹çš„åº§æ ‡
 	private int selectedX = -1;
 	private int selectedY = -1;
 	public void init()throws Exception
@@ -46,12 +46,12 @@ public class Gobang
 		black = ImageIO.read(new File("image/black.gif"));
 		white = ImageIO.read(new File("image/white.gif"));
 		selected = ImageIO.read(new File("image/selected.gif"));
-		//°ÑÃ¿¸öÔªËØ¸³Îª"©ï"£¬ÓÃÓÚÔÚ¿ØÖÆÌ¨»­³öÆåÅÌ
+		//æŠŠæ¯ä¸ªå…ƒç´ èµ‹ä¸º"â•‹"ï¼Œç”¨äºåœ¨æ§åˆ¶å°ç”»å‡ºæ£‹ç›˜
 		for (int i = 0 ; i < BOARD_SIZE ; i++)
 		{
 			for ( int j = 0 ; j < BOARD_SIZE ; j++)
 			{
-				board[i][j] = "©ï";
+				board[i][j] = "â•‹";
 			}
 		}
 		chessBoard.setPreferredSize(new Dimension(TABLE_WIDTH , TABLE_HETGHT));
@@ -59,19 +59,19 @@ public class Gobang
 		{
 			public void mouseClicked(MouseEvent e)
 			{
-				//½«ÓÃ»§Êó±êÊÂ¼şµÄ×ù±ê×ª»»³ÉÆå×ÓÊı×éµÄ×ù±ê¡£
+				//å°†ç”¨æˆ·é¼ æ ‡äº‹ä»¶çš„åº§æ ‡è½¬æ¢æˆæ£‹å­æ•°ç»„çš„åº§æ ‡ã€‚
 				int xPos = (int)((e.getX() - X_OFFSET) / RATE);
 				int yPos = (int)((e.getY() - Y_OFFSET ) / RATE);
-				board[xPos][yPos] = "¡ñ";
+				board[xPos][yPos] = "â—";
 				/*
-				 µçÄÔËæ»úÉú³É2¸öÕûÊı£¬×÷ÎªµçÄÔÏÂÆåµÄ×ù±ê£¬¸³¸øboardÊı×é¡£
-				 »¹Éæ¼°:
-					1.Èç¹ûÏÂÆåµÄµãÒÑ¾­Æå×Ó£¬²»ÄÜÖØ¸´ÏÂÆå¡£
-					2.Ã¿´ÎÏÂÆåºó£¬ĞèÒªÉ¨ÃèË­Ó®ÁË
+				 ç”µè„‘éšæœºç”Ÿæˆ2ä¸ªæ•´æ•°ï¼Œä½œä¸ºç”µè„‘ä¸‹æ£‹çš„åº§æ ‡ï¼Œèµ‹ç»™boardæ•°ç»„ã€‚
+				 è¿˜æ¶‰åŠ:
+					1.å¦‚æœä¸‹æ£‹çš„ç‚¹å·²ç»æ£‹å­ï¼Œä¸èƒ½é‡å¤ä¸‹æ£‹ã€‚
+					2.æ¯æ¬¡ä¸‹æ£‹åï¼Œéœ€è¦æ‰«æè°èµ¢äº†
 				 */
 				chessBoard.repaint();
 			}
-			//µ±Êó±êÍË³öÆåÅÌÇøºó£¬¸´Î»Ñ¡ÖĞµã×ù±ê
+			//å½“é¼ æ ‡é€€å‡ºæ£‹ç›˜åŒºåï¼Œå¤ä½é€‰ä¸­ç‚¹åº§æ ‡
 			public void mouseExited(MouseEvent e)
 			{
 				selectedX = -1;
@@ -81,7 +81,7 @@ public class Gobang
 		});
 		chessBoard.addMouseMotionListener(new MouseMotionAdapter()
 		{
-			//µ±Êó±êÒÆ¶¯Ê±£¬¸Ä±äÑ¡ÖĞµãµÄ×ù±ê
+			//å½“é¼ æ ‡ç§»åŠ¨æ—¶ï¼Œæ”¹å˜é€‰ä¸­ç‚¹çš„åº§æ ‡
 			public void mouseMoved(MouseEvent e)
 			{
 				selectedX = (e.getX() - X_OFFSET) / RATE;
@@ -101,26 +101,26 @@ public class Gobang
     }
 	class ChessBoard extends JPanel
 	{
-		//ÖØĞ´JPanelµÄpaint·½·¨£¬ÊµÏÖ»æ»­
+		//é‡å†™JPanelçš„paintæ–¹æ³•ï¼Œå®ç°ç»˜ç”»
 		public void paint(Graphics g)
 		{
-			//½«»æÖÆÎå×ÓÆåÆåÅÌ
+			//å°†ç»˜åˆ¶äº”å­æ£‹æ£‹ç›˜
 			g.drawImage(table , 0 , 0 , null);
-			//»æÖÆÑ¡ÖĞµãµÄºì¿ò
+			//ç»˜åˆ¶é€‰ä¸­ç‚¹çš„çº¢æ¡†
 			if (selectedX >= 0 && selectedY >= 0)
 				g.drawImage(selected , selectedX * RATE + X_OFFSET , selectedY * RATE + Y_OFFSET, null);
-			//±éÀúÊı×é£¬»æÖÆÆå×Ó¡£
+			//éå†æ•°ç»„ï¼Œç»˜åˆ¶æ£‹å­ã€‚
 			for (int i = 0 ; i < BOARD_SIZE ; i++)
 			{
 				for ( int j = 0 ; j < BOARD_SIZE ; j++)
 				{
-					//»æÖÆºÚÆå
-					if (board[i][j].equals("¡ñ"))
+					//ç»˜åˆ¶é»‘æ£‹
+					if (board[i][j].equals("â—"))
 					{
 						g.drawImage(black , i * RATE + X_OFFSET, j * RATE + Y_OFFSET, null);
 					}
-					//»æÖÆ°×Æå
-					if (board[i][j].equals("¡ğ"))
+					//ç»˜åˆ¶ç™½æ£‹
+					if (board[i][j].equals("â—‹"))
 					{
 						g.drawImage(black , i * RATE  + X_OFFSET, j * RATE  + Y_OFFSET, null);
 					}

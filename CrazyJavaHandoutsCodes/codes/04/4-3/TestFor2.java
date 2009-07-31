@@ -13,7 +13,7 @@ public class TestFor2
 {
 	public static void main(String[] args) 
 	{
-		//Í¬Ê±¶¨ÒåÁËÈı¸ö³õÊ¼»¯±äÁ¿£¬Ê¹ÓÃ&&À´×éºÏ¶à¸öboolean±í´ïÊ½
+		//åŒæ—¶å®šä¹‰äº†ä¸‰ä¸ªåˆå§‹åŒ–å˜é‡ï¼Œä½¿ç”¨&&æ¥ç»„åˆå¤šä¸ªbooleanè¡¨è¾¾å¼
 		for (int b = 0, s = 0 , p = 0 ; b < 10 && s < 4 && p < 10; p++)
 		{
 			System.out.println(b++);

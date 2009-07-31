@@ -17,7 +17,7 @@ public class TestMultiply
 		double a = 5.2;
 		double b = 3.1;
 		double multiply = a * b;
-		//multiply的值为16.12
+		//multiply鐨勫�间负16.12
 		System.out.println(multiply);
 	}
 }

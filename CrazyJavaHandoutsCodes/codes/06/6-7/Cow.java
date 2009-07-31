@@ -12,19 +12,19 @@
 public class Cow
 {
 	private double weight;
-	//Íâ²¿ÀàµÄÁ½¸öÖØÔØµÄ¹¹ÔìÆ÷
+	//å¤–éƒ¨ç±»çš„ä¸¤ä¸ªé‡è½½çš„æ„é€ å™¨
 	public Cow(){}
 	public Cow(double weight)
 	{
 		this.weight = weight;
 	}
-	//¶¨ÒåÒ»¸öÄÚ²¿Àà
+	//å®šä¹‰ä¸€ä¸ªå†…éƒ¨ç±»
 	private class CowLeg
 	{
-		//ÄÚ²¿ÀàµÄÁ½¸öÊôĞÔ
+		//å†…éƒ¨ç±»çš„ä¸¤ä¸ªå±æ€§
 		private double length;
 		private String color;
-		//ÄÚ²¿ÀàµÄÁ½¸öÖØÔØµÄ¹¹ÔìÆ÷
+		//å†…éƒ¨ç±»çš„ä¸¤ä¸ªé‡è½½çš„æ„é€ å™¨
 		public CowLeg(){}
 		public CowLeg(double length , String color)
 		{
@@ -47,17 +47,17 @@ public class Cow
 		{
 			 return this.color;
 		}
-		//ÄÚ²¿Àà·½·¨
+		//å†…éƒ¨ç±»æ–¹æ³•
 		public void info()
 		{
-			System.out.println("µ±Ç°Å£ÍÈÑÕÉ«ÊÇ£º" + color + ", ¸ß£º" + length);
-			//Ö±½Ó·ÃÎÊÍâ²¿ÀàµÄprivateÊôĞÔ£ºweight
-			System.out.println("±¾Å£ÍÈËùÔÚÄÌÅ£ÖØ£º" + weight);
+			System.out.println("å½“å‰ç‰›è…¿é¢œè‰²æ˜¯ï¼š" + color + ", é«˜ï¼š" + length);
+			//ç›´æ¥è®¿é—®å¤–éƒ¨ç±»çš„privateå±æ€§ï¼šweight
+			System.out.println("æœ¬ç‰›è…¿æ‰€åœ¨å¥¶ç‰›é‡ï¼š" + weight);
 		}
 	}
 	public void test()
 	{
-		CowLeg cl = new CowLeg(1.12 , "ºÚ°×Ïà¼ä");
+		CowLeg cl = new CowLeg(1.12 , "é»‘ç™½ç›¸é—´");
 		cl.info();
 	}
 	public static void main(String[] args)

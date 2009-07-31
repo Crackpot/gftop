@@ -12,8 +12,8 @@ import java.awt.event.*;
  */
 public class TestCardLayout
 {
-	Frame f = new Frame("²âÊÔ´°¿Ú");
-	String[] names = {"µÚÒ»ÕÅ" , "µÚ¶şÕÅ" , "µÚÈıÕÅ" , "µÚËÄÕÅ" , "µÚÎåÕÅ"};
+	Frame f = new Frame("æµ‹è¯•çª—å£");
+	String[] names = {"ç¬¬ä¸€å¼ " , "ç¬¬äºŒå¼ " , "ç¬¬ä¸‰å¼ " , "ç¬¬å››å¼ " , "ç¬¬äº”å¼ "};
 	Panel pl = new Panel();
 	CardLayout c = new CardLayout();
 	public void init()
@@ -24,8 +24,8 @@ public class TestCardLayout
 			pl.add(names[i] , new Button(names[i]));
 		}
 		Panel p = new Panel();
-		//¿ØÖÆÏÔÊ¾ÉÏÒ»ÕÅµÄ°´Å¥
-		Button previous = new Button("ÉÏÒ»ÕÅ");
+		//æ§åˆ¶æ˜¾ç¤ºä¸Šä¸€å¼ çš„æŒ‰é’®
+		Button previous = new Button("ä¸Šä¸€å¼ ");
 		previous.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -33,8 +33,8 @@ public class TestCardLayout
 				c.previous(pl);
 			}
 		});
-		//¿ØÖÆÏÔÊ¾ÏÂÒ»ÕÅµÄ°´Å¥
-		Button next = new Button("ÏÂÒ»ÕÅ");
+		//æ§åˆ¶æ˜¾ç¤ºä¸‹ä¸€å¼ çš„æŒ‰é’®
+		Button next = new Button("ä¸‹ä¸€å¼ ");
 		next.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -42,8 +42,8 @@ public class TestCardLayout
 				c.next(pl);
 			}
 		});
-		//¿ØÖÆÏÔÊ¾µÚÒ»ÕÅµÄ°´Å¥
-		Button first = new Button("µÚÒ»ÕÅ");
+		//æ§åˆ¶æ˜¾ç¤ºç¬¬ä¸€å¼ çš„æŒ‰é’®
+		Button first = new Button("ç¬¬ä¸€å¼ ");
 		first.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -51,8 +51,8 @@ public class TestCardLayout
 				c.first(pl);
 			}
 		});
-		//¿ØÖÆÏÔÊ¾×îºóÒ»ÕÅµÄ°´Å¥
-		Button last = new Button("×îºóÒ»ÕÅ");
+		//æ§åˆ¶æ˜¾ç¤ºæœ€åä¸€å¼ çš„æŒ‰é’®
+		Button last = new Button("æœ€åä¸€å¼ ");
 		last.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -60,13 +60,13 @@ public class TestCardLayout
 				c.last(pl);
 			}
 		});
-		//¿ØÖÆ¸ù¾İCardÃûÏÔÊ¾µÄ°´Å¥
-		Button third = new Button("µÚÈıÕÅ");
+		//æ§åˆ¶æ ¹æ®Cardåæ˜¾ç¤ºçš„æŒ‰é’®
+		Button third = new Button("ç¬¬ä¸‰å¼ ");
 		third.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				c.show(pl , "µÚÈıÕÅ");
+				c.show(pl , "ç¬¬ä¸‰å¼ ");
 			}
 		});
 		p.add(previous);

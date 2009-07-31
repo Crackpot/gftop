@@ -13,21 +13,21 @@ public class TestBitOperator
 {
 	public static void main(String[] args) 
 	{
-		//½«Êä³ö1
+		//å°†è¾“å‡º1
 		System.out.println(5 & 9);
-		//½«Êä³ö13
+		//å°†è¾“å‡º13
 		System.out.println(5 | 9);
-		//½«Êä³ö4
+		//å°†è¾“å‡º4
 		System.out.println(~-5);
-		//½«Êä³ö12
+		//å°†è¾“å‡º12
 		System.out.println(5 ^ 9);
-		//Êä³ö20
+		//è¾“å‡º20
 		System.out.println(5 << 2);
-		//Êä³ö-20
+		//è¾“å‡º-20
 		System.out.println(-5 << 2);
-		//Êä³ö-2
+		//è¾“å‡º-2
 		System.out.println(-5 >> 2);
-		//Êä³ö1073741822
+		//è¾“å‡º1073741822
 		System.out.println(-5 >>> 2);
 	}
 }

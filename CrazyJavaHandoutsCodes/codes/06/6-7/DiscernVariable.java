@@ -11,19 +11,19 @@
  */
 public class DiscernVariable
 {
-	private String prop = "Íâ²¿ÀàÊôĞÔ";
+	private String prop = "å¤–éƒ¨ç±»å±æ€§";
 	private class InClass
 	{
-		private String prop = "ÄÚ²¿ÀàÊôĞÔ";
+		private String prop = "å†…éƒ¨ç±»å±æ€§";
 		public void info()
 		{
-			String prop = "¾Ö²¿±äÁ¿";
-			//Í¨¹ı Íâ²¿ÀàÀàÃû.this.varName ·ÃÎÊÍâ²¿ÀàÊµÀıÊôĞÔ
-			System.out.println("Íâ²¿ÀàµÄÊôĞÔÖµ£º" + DiscernVariable.this.prop);
-			//Í¨¹ı this.varName ·ÃÎÊÍâÄÚ²¿ÀàÊµÀıµÄÊôĞÔ
-			System.out.println("ÄÚ²¿ÀàµÄÊôĞÔÖµ£º" + this.prop);
-			//Ö±½Ó·ÃÎÊ¾Ö²¿±äÁ¿
-			System.out.println("¾Ö²¿±äÁ¿µÄÊôĞÔÖµ£º" + prop);
+			String prop = "å±€éƒ¨å˜é‡";
+			//é€šè¿‡ å¤–éƒ¨ç±»ç±»å.this.varName è®¿é—®å¤–éƒ¨ç±»å®ä¾‹å±æ€§
+			System.out.println("å¤–éƒ¨ç±»çš„å±æ€§å€¼ï¼š" + DiscernVariable.this.prop);
+			//é€šè¿‡ this.varName è®¿é—®å¤–å†…éƒ¨ç±»å®ä¾‹çš„å±æ€§
+			System.out.println("å†…éƒ¨ç±»çš„å±æ€§å€¼ï¼š" + this.prop);
+			//ç›´æ¥è®¿é—®å±€éƒ¨å˜é‡
+			System.out.println("å±€éƒ¨å˜é‡çš„å±æ€§å€¼ï¼š" + prop);
 		}
 	}
 	public void test()

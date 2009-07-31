@@ -15,12 +15,12 @@ public class TestDateFormat
 {
 	public static void main(String[] args) 
 	{
-		//ĞèÒª±»¸ñÊ½»¯µÄÈÕÆÚ
+		//éœ€è¦è¢«æ ¼å¼åŒ–çš„æ—¥æœŸ
 		Date dt = new Date();
-		//´´½¨Á½¸öLocale£¬·Ö±ğ´ú±íÖĞ¹ú¡¢ÃÀ¹ú
+		//åˆ›å»ºä¸¤ä¸ªLocaleï¼Œåˆ†åˆ«ä»£è¡¨ä¸­å›½ã€ç¾å›½
 		Locale[] locales = {Locale.CHINA, Locale.US};
 		DateFormat[] df = new DateFormat[16];
-		//ÎªÉÏÃæÁ½¸öLocale´´½¨16¸öDateFormat¶ÔÏó
+		//ä¸ºä¸Šé¢ä¸¤ä¸ªLocaleåˆ›å»º16ä¸ªDateFormatå¯¹è±¡
 		for (int i = 0 ; i < locales.length ; i++)
 		{
 			df[i * 8] = DateFormat.getDateInstance(SHORT, locales[i]);
@@ -37,20 +37,20 @@ public class TestDateFormat
 			switch (i)
 			{
 				case 0:
-					System.out.println("-------ÖĞ¹úÈÕÆÚ¸ñÊ½--------");
+					System.out.println("-------ä¸­å›½æ—¥æœŸæ ¼å¼--------");
 					break;
 				case 1:
-					System.out.println("-------ÃÀ¹úÈÕÆÚ¸ñÊ½--------");
+					System.out.println("-------ç¾å›½æ—¥æœŸæ ¼å¼--------");
 					break;						
 			}
-			System.out.println("SHORT¸ñÊ½µÄÈÕÆÚ¸ñÊ½£º" + df[i * 8].format(dt));
-			System.out.println("MEDIUM¸ñÊ½µÄÈÕÆÚ¸ñÊ½£º" + df[i * 8 + 1].format(dt));
-			System.out.println("LONG¸ñÊ½µÄÈÕÆÚ¸ñÊ½£º" + df[i * 8 + 2].format(dt));
-			System.out.println("FULL¸ñÊ½µÄÈÕÆÚ¸ñÊ½£º" + df[i * 8 + 3].format(dt));
-			System.out.println("SHORT¸ñÊ½µÄÊ±¼ä¸ñÊ½£º" + df[i * 8 + 4].format(dt));
-			System.out.println("MEDIUM¸ñÊ½µÄÊ±¼ä¸ñÊ½£º" + df[i * 8 + 5].format(dt));
-			System.out.println("LONG¸ñÊ½µÄÊ±¼ä¸ñÊ½£º" + df[i * 8 + 6].format(dt));
-			System.out.println("FULL¸ñÊ½µÄÊ±¼ä¸ñÊ½£º" + df[i * 8 + 7].format(dt));
+			System.out.println("SHORTæ ¼å¼çš„æ—¥æœŸæ ¼å¼ï¼š" + df[i * 8].format(dt));
+			System.out.println("MEDIUMæ ¼å¼çš„æ—¥æœŸæ ¼å¼ï¼š" + df[i * 8 + 1].format(dt));
+			System.out.println("LONGæ ¼å¼çš„æ—¥æœŸæ ¼å¼ï¼š" + df[i * 8 + 2].format(dt));
+			System.out.println("FULLæ ¼å¼çš„æ—¥æœŸæ ¼å¼ï¼š" + df[i * 8 + 3].format(dt));
+			System.out.println("SHORTæ ¼å¼çš„æ—¶é—´æ ¼å¼ï¼š" + df[i * 8 + 4].format(dt));
+			System.out.println("MEDIUMæ ¼å¼çš„æ—¶é—´æ ¼å¼ï¼š" + df[i * 8 + 5].format(dt));
+			System.out.println("LONGæ ¼å¼çš„æ—¶é—´æ ¼å¼ï¼š" + df[i * 8 + 6].format(dt));
+			System.out.println("FULLæ ¼å¼çš„æ—¶é—´æ ¼å¼ï¼š" + df[i * 8 + 7].format(dt));
 		}
 	}
 }

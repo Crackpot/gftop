@@ -21,14 +21,14 @@ public class TestFinally
 		catch (IOException ioe)
 		{
 			System.out.println(ioe.getMessage());
-			//returnÓï¾äÇ¿ÖÆ·½·¨·µ»Ø
+			//returnè¯­å¥å¼ºåˆ¶æ–¹æ³•è¿”å›
 			//return ;
-			//Ê¹ÓÃexitÀ´ÍË³öĞéÄâ»ú
+			//ä½¿ç”¨exitæ¥é€€å‡ºè™šæ‹Ÿæœº
 			System.exit(1);
 		}
 		finally
 		{
-			//¹Ø±Õ´ÅÅÌÎÄ¼ş£¬»ØÊÕ×ÊÔ´
+			//å…³é—­ç£ç›˜æ–‡ä»¶ï¼Œå›æ”¶èµ„æº
 			if (fis != null)
 			{
 				try
@@ -40,7 +40,7 @@ public class TestFinally
 					ioe.printStackTrace();
 				}
 			}
-			System.out.println("³ÌĞòÒÑ¾­Ö´ĞĞÁËfinallyÀïµÄ×ÊÔ´»ØÊÕ!");
+			System.out.println("ç¨‹åºå·²ç»æ‰§è¡Œäº†finallyé‡Œçš„èµ„æºå›æ”¶!");
 		}
 	}
 }

@@ -14,6 +14,6 @@ public class TestGender
 	public static void main(String[] args) 
 	{
 		Gender g = Enum.valueOf(Gender.class , "FEMALE");
-		System.out.println(g + "´ú±í:" + g.getName());
+		System.out.println(g + "ä»£è¡¨:" + g.getName());
 	}
 }

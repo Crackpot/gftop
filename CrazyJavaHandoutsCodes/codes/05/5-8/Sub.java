@@ -17,7 +17,7 @@ class Base
 	}
 	public void test() 
 	{
-		System.out.println("½«±»×ÓÀàÖØĞ´µÄ·½·¨");
+		System.out.println("å°†è¢«å­ç±»é‡å†™çš„æ–¹æ³•");
 	}
 }
 class Sub extends Base
@@ -25,11 +25,11 @@ class Sub extends Base
 	private String name;
 	public void test()
 	{
-		System.out.println("×ÓÀàÖØĞ´¸¸ÀàµÄ·½·¨£¬Æäname×Ö·û´®³¤¶È" + name.length());
+		System.out.println("å­ç±»é‡å†™çˆ¶ç±»çš„æ–¹æ³•ï¼Œå…¶nameå­—ç¬¦ä¸²é•¿åº¦" + name.length());
 	}
 	public static void main(String[] args)
 	{
-		//ÏÂÃæ´úÂë»áÒı·¢¿ÕÖ¸ÕëÒì³£
+		//ä¸‹é¢ä»£ç ä¼šå¼•å‘ç©ºæŒ‡é’ˆå¼‚å¸¸
 		Sub s = new Sub();
 	}
 }

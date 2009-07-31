@@ -13,16 +13,16 @@ public class FixedSizeList
 {
 	public static void main(String[] args) 
 	{
-		List fixedList = Arrays.asList("Struts2È¨ÍşÖ¸ÄÏ" , "RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
-		//»ñÈ¡fixedListµÄÊµÏÖÀà£¬½«Êä³öArrays$ArrayList
+		List fixedList = Arrays.asList("Struts2æƒå¨æŒ‡å—" , "RORæ•æ·å¼€å‘æœ€ä½³å®è·µ");
+		//è·å–fixedListçš„å®ç°ç±»ï¼Œå°†è¾“å‡ºArrays$ArrayList
 		System.out.println(fixedList.getClass());
-		//±éÀúfixedListµÄ¼¯ºÏÔªËØ
+		//éå†fixedListçš„é›†åˆå…ƒç´ 
 		for (int i = 0; i < fixedList.size() ; i++)
 		{
 			System.out.println(fixedList.get(i));
 		}
-		//ÊÔÍ¼Ôö¼Ó¡¢É¾³ıÔªËØ¶¼½«Òı·¢UnsupportedOperationExceptionÒì³£
-		fixedList.add("RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
-		fixedList.remove("Struts2È¨ÍşÖ¸ÄÏ");
+		//è¯•å›¾å¢åŠ ã€åˆ é™¤å…ƒç´ éƒ½å°†å¼•å‘UnsupportedOperationExceptionå¼‚å¸¸
+		fixedList.add("RORæ•æ·å¼€å‘æœ€ä½³å®è·µ");
+		fixedList.remove("Struts2æƒå¨æŒ‡å—");
 	}
 }

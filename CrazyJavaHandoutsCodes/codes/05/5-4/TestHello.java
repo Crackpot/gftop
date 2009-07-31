@@ -18,9 +18,9 @@ public class TestHello
 	public static void main(String[] args) 
 	{
 		Hello h = new Hello();
-		//Ê¹ÓÃÕâÖÖÀàÈ«Ãû
+		//ä½¿ç”¨è¿™ç§ç±»å…¨å
 		lee.sub.Apple a = new lee.sub.Apple();
-		//Èç¹ûÊ¹ÓÃimportÓï¾äÀ´µ¼ÈëAppleÀàºó£¬¾Í¿ÉÒÔ²»ÔÙÊ¹ÓÃÀàÈ«Ãû
+		//å¦‚æœä½¿ç”¨importè¯­å¥æ¥å¯¼å…¥Appleç±»åï¼Œå°±å¯ä»¥ä¸å†ä½¿ç”¨ç±»å…¨å
 		Apple aa = new Apple();
 		Date d = new Date();
 	}

@@ -15,16 +15,16 @@ public class TestProperties
 	public static void main(String[] args) throws Exception
 	{
 		Properties props = new Properties();
-		//ÏòPropertiesÖĞÔö¼ÓÊôĞÔ
+		//å‘Propertiesä¸­å¢åŠ å±æ€§
 		props.setProperty("username" , "yeeku");
 		props.setProperty("password" , "123456");
-		//½«PropertiesÖĞµÄÊôĞÔ±£´æµ½a.iniÎÄ¼şÖĞ
+		//å°†Propertiesä¸­çš„å±æ€§ä¿å­˜åˆ°a.iniæ–‡ä»¶ä¸­
 		props.store(new FileOutputStream("a.ini") , "comment line");
-		//ĞÂ½¨Ò»¸öProperties¶ÔÏó
+		//æ–°å»ºä¸€ä¸ªPropertieså¯¹è±¡
 		Properties props2 = new Properties();
-		//ÏòPropertiesÖĞÔö¼ÓÊôĞÔ
+		//å‘Propertiesä¸­å¢åŠ å±æ€§
 		props2.setProperty("gender" , "male");
-		//½«a.iniÎÄ¼şÖĞµÄÊôĞÔÃû-ÊôĞÔÖµ×·¼Óµ½props2ÖĞ
+		//å°†a.iniæ–‡ä»¶ä¸­çš„å±æ€§å-å±æ€§å€¼è¿½åŠ åˆ°props2ä¸­
 		props2.load(new FileInputStream("a.ini") );
 		System.out.println(props2);
 	}

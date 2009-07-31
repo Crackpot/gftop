@@ -14,13 +14,13 @@ public class TestNumberFormat
 {
 	public static void main(String[] args) 
 	{
-		//��Ҫ����ʽ��������
+		//需要被格式化的数字
 		double db = 1234000.567;
-		//�����ĸ�Locale���ֱ�����й����ձ����¹�������
+		//创建四个Locale，分别代表中国、日本、德国、美国
 		Locale[] locales = {Locale.CHINA, Locale.JAPAN, Locale.GERMAN, Locale.US};
 		NumberFormat[] nf = new NumberFormat[12];
-		//Ϊ�����ĸ�Locale����12��NumberFormat����
-		//ÿ��Locale�ֱ���ͨ�ø�ʽ�����ٷֱȸ�ʽ�������Ҹ�ʽ��
+		//为上面四个Locale创建12个NumberFormat对象
+		//每个Locale分别有通用格式器、百分比格式器、货币格式器
 		for (int i = 0 ; i < locales.length ; i++)
 		{
 			nf[i * 3] = NumberFormat.getNumberInstance(locales[i]);
@@ -32,21 +32,21 @@ public class TestNumberFormat
 			switch (i)
 			{
 				case 0:
-					System.out.println("-------�й��ĸ�ʽ--------");
+					System.out.println("-------中国的格式--------");
 					break;
 				case 1:
-					System.out.println("-------�ձ��ĸ�ʽ--------");
+					System.out.println("-------日本的格式--------");
 					break;	
 				case 2:
-					System.out.println("-------�¹��ĸ�ʽ--------");
+					System.out.println("-------德国的格式--------");
 					break;
 				case 3:
-					System.out.println("-------�����ĸ�ʽ--------");
+					System.out.println("-------美国的格式--------");
 					break;					
 			}
-			System.out.println("ͨ����ֵ��ʽ��" + nf[i * 3].format(db));
-			System.out.println("�ٷֱ���ֵ��ʽ��" + nf[i * 3 + 1].format(db));
-			System.out.println("������ֵ��ʽ��" + nf[i * 3 + 2].format(db));
+			System.out.println("通用数值格式：" + nf[i * 3].format(db));
+			System.out.println("百分比数值格式：" + nf[i * 3 + 1].format(db));
+			System.out.println("货币数值格式：" + nf[i * 3 + 2].format(db));
 
 		}
 

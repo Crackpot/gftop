@@ -17,7 +17,7 @@ public class TestSub
 		double a = 5.2;
 		double b = 3.1;
 		double sub = a - b;
-		//sub的值为2.1
+		//sub鐨勫�间负2.1
 		System.out.println(sub);
 
 	}

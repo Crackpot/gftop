@@ -14,20 +14,20 @@ public class Primitive2String
 	public static void main(String[] args) 
 	{
 		String intStr = "123";
-		//ｰﾑﾒｻｸﾘｶｨﾗﾖｷ逸ｮﾗｪｻｻｳﾉintｱ菽ｿ
+		//謚贋ｸ荳ｪ迚ｹ螳壼ｭ礼ｬｦ荳ｲ霓ｬ謐｢謌進nt蜿倬㍼
 		int it = Integer.parseInt(intStr);
 		System.out.println(it);
 		String floatStr = "4.56";
-		//ｰﾑﾒｻｸﾘｶｨﾗﾖｷ逸ｮﾗｪｻｻｳﾉfloatｱ菽ｿ
+		//謚贋ｸ荳ｪ迚ｹ螳壼ｭ礼ｬｦ荳ｲ霓ｬ謐｢謌診loat蜿倬㍼
 		float ft = Float.parseFloat(floatStr);
 		System.out.println(ft);
-		//ｰﾑﾒｻｸloatｱ菽ｿﾗｪｻｻｳﾉStringｱ菽ｿ
+		//謚贋ｸ荳ｪfloat蜿倬㍼霓ｬ謐｢謌心tring蜿倬㍼
 		String ftStr = String.valueOf(2.345f);
 		System.out.println(ftStr);
-		//ｰﾑﾒｻｸoubleｱ菽ｿﾗｪｻｻｳﾉStringｱ菽ｿ
+		//謚贋ｸ荳ｪdouble蜿倬㍼霓ｬ謐｢謌心tring蜿倬㍼
 		String dbStr = String.valueOf(3.344);
 		System.out.println(dbStr);
-		//ｰﾑﾒｻｸooleanｱ菽ｿﾗｪｻｻｳﾉStringｱ菽ｿ
+		//謚贋ｸ荳ｪboolean蜿倬㍼霓ｬ謐｢謌心tring蜿倬㍼
 		String boolStr = String.valueOf(true);
 		System.out.println(boolStr.toUpperCase());
 	}

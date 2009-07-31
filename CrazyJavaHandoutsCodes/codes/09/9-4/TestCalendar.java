@@ -14,19 +14,19 @@ public class TestCalendar
 	public static void main(String[] args) 
 	{
 		Calendar c = Calendar.getInstance();
-		//È¡³öÄê
+		//å–å‡ºå¹´
 		System.out.println(c.get(YEAR));
-		//È¡³öÔÂ·İ
+		//å–å‡ºæœˆä»½
 		System.out.println(c.get(MONTH));
-		//È¡³öÈÕ
+		//å–å‡ºæ—¥
 		System.out.println(c.get(DATE));
-		//·Ö±ğÉèÖÃÄê¡¢ÔÂ¡¢ÈÕ¡¢Ğ¡Ê±¡¢·ÖÖÓ¡¢Ãë
+		//åˆ†åˆ«è®¾ç½®å¹´ã€æœˆã€æ—¥ã€å°æ—¶ã€åˆ†é’Ÿã€ç§’
 		c.set(2003 , 10 , 23 , 12, 32, 23);//2003-11-23 12:32:23
 		System.out.println(c.getTime());
-		//½«CalendarµÄÄêÇ°ÍÆ1Äê
+		//å°†Calendarçš„å¹´å‰æ¨1å¹´
 		c.add(YEAR , -1); //2002-11-23 12:32:23
 		System.out.println(c.getTime());
-		//½«CalendarµÄÔÂÇ°ÍÆ8¸öÔÂ
+		//å°†Calendarçš„æœˆå‰æ¨8ä¸ªæœˆ
 		c.roll(MONTH , -8); //2002-03-23 12:32:23
 		System.out.println(c.getTime());
 	}
