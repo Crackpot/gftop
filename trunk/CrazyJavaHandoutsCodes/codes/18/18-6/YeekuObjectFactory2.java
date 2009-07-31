@@ -26,7 +26,7 @@ public class YeekuObjectFactory2
 	}
 	public static void main(String[] args)
 	{
-		//获取实例后无需类型转换
+		//鑾峰彇瀹炰緥鍚庢棤闇�绫诲瀷杞崲
 		Date d = YeekuObjectFactory2.getInstance(Date.class);
 		JFrame f = YeekuObjectFactory2.getInstance(JFrame.class);
 	}

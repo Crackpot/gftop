@@ -14,16 +14,16 @@ public class URLDecoderTest
 	public static void main(String[] args) 
 		throws Exception
 	{
-		//½«application/x-www-form-urlencoded×Ö·û´®
-		//×ª»»³ÉÆÕÍ¨×Ö·û´®
-		//ÆäÖĞµÄ×Ö·û´®Ö±½Ó´ÓÍ¼17.3ËùÊ¾´°¿Ú¸´ÖÆ¹ıÀ´
+		//å°†application/x-www-form-urlencodedå­—ç¬¦ä¸²
+		//è½¬æ¢æˆæ™®é€šå­—ç¬¦ä¸²
+		//å…¶ä¸­çš„å­—ç¬¦ä¸²ç›´æ¥ä»å›¾17.3æ‰€ç¤ºçª—å£å¤åˆ¶è¿‡æ¥
 		String keyWord = URLDecoder.decode(
 			"%E6%9D%8E%E5%88%9A+j2ee", "UTF-8");
 		System.out.println(keyWord);
-		//½«ÆÕÍ¨×Ö·û´®×ª»»³É
-		//application/x-www-form-urlencoded×Ö·û´®
+		//å°†æ™®é€šå­—ç¬¦ä¸²è½¬æ¢æˆ
+		//application/x-www-form-urlencodedå­—ç¬¦ä¸²
 		String urlStr = URLEncoder.encode(
-			"RORÃô½İ¿ª·¢×î¼ÑÖ¸ÄÏ" , "GBK");
+			"RORæ•æ·å¼€å‘æœ€ä½³æŒ‡å—" , "GBK");
 		System.out.println(urlStr);
 	}
 }

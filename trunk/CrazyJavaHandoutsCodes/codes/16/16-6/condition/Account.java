@@ -11,15 +11,15 @@ import java.util.concurrent.locks.*;
  */
 public class Account
 {
-	//ÏÔÊ¾¶¨ÒåLock¶ÔÏó
+	//æ˜¾ç¤ºå®šä¹‰Lockå¯¹è±¡
 	private final Lock lock = new ReentrantLock();
-	//»ñµÃÖ¸¶¨Lock¶ÔÏó¶ÔÓ¦µÄÌõ¼ş±äÁ¿
+	//è·å¾—æŒ‡å®šLockå¯¹è±¡å¯¹åº”çš„æ¡ä»¶å˜é‡
 	private final Condition cond  = lock.newCondition(); 
 
 	private String accountNo;
 	private double balance;
 
-	//±êÊ¶ÕË»§ÖĞÊÇ·ñÒÑ¾­´æ¿îµÄÆì±ê
+	//æ ‡è¯†è´¦æˆ·ä¸­æ˜¯å¦å·²ç»å­˜æ¬¾çš„æ——æ ‡
 	private boolean flag = false;
 
 	public Account(){}
@@ -45,25 +45,25 @@ public class Account
 	}
 	public void draw(double drawAmount)
 	{
-		//¼ÓËø
+		//åŠ é”
 		lock.lock();
 		try
 		{
-			//Èç¹ûÕË»§ÖĞ»¹Ã»ÓĞ´æÈë´æ¿î£¬¸ÃÏß³ÌµÈ´ı
+			//å¦‚æœè´¦æˆ·ä¸­è¿˜æ²¡æœ‰å­˜å…¥å­˜æ¬¾ï¼Œè¯¥çº¿ç¨‹ç­‰å¾…
 			if (!flag)
 			{
 				cond.await();
 			}
 			else
 			{
-				//Ö´ĞĞÈ¡Ç®²Ù×÷
+				//æ‰§è¡Œå–é’±æ“ä½œ
 				System.out.println(Thread.currentThread().getName() + 
-					" È¡Ç®:" +  drawAmount);
+					" å–é’±:" +  drawAmount);
 				balance -= drawAmount;
-				System.out.println("ÕË»§Óà¶îÎª£º" + balance);
-				//½«±êÊ¶ÊÇ·ñ³É¹¦´æÈë´æ¿îµÄÆì±êÉèÎªfalse
+				System.out.println("è´¦æˆ·ä½™é¢ä¸ºï¼š" + balance);
+				//å°†æ ‡è¯†æ˜¯å¦æˆåŠŸå­˜å…¥å­˜æ¬¾çš„æ——æ ‡è®¾ä¸ºfalse
 				flag = false;
-				//»½ĞÑ¸ÃLock¶ÔÏó¶ÔÓ¦µÄÆäËûÏß³Ì
+				//å”¤é†’è¯¥Lockå¯¹è±¡å¯¹åº”çš„å…¶ä»–çº¿ç¨‹
 				cond.signalAll();
 			}
 		}
@@ -71,7 +71,7 @@ public class Account
 		{
 			ex.printStackTrace();
 		}
-		//Ê¹ÓÃfinally¿éÀ´È·±£ÊÍ·ÅËø
+		//ä½¿ç”¨finallyå—æ¥ç¡®ä¿é‡Šæ”¾é”
 		finally
 		{
 			lock.unlock();
@@ -82,21 +82,21 @@ public class Account
 		lock.lock();
 		try
 		{
-			//Èç¹ûÕË»§ÖĞÒÑ¾­´æÈëÁË´æ¿î£¬¸ÃÏß³ÌµÈ´ı
+			//å¦‚æœè´¦æˆ·ä¸­å·²ç»å­˜å…¥äº†å­˜æ¬¾ï¼Œè¯¥çº¿ç¨‹ç­‰å¾…
 			if(flag)
 			{
 				cond.await();				
 			}
 			else
 			{
-				//Ö´ĞĞ´æ¿î²Ù×÷
+				//æ‰§è¡Œå­˜æ¬¾æ“ä½œ
 				System.out.println(Thread.currentThread().getName() + 
-					" ´æ¿î:" +  depositAmount);
+					" å­˜æ¬¾:" +  depositAmount);
 				balance += depositAmount;
-				System.out.println("ÕË»§Óà¶îÎª£º" + balance);
-				//½«±êÊ¶ÊÇ·ñ³É¹¦´æÈë´æ¿îµÄÆì±êÉèÎªtrue
+				System.out.println("è´¦æˆ·ä½™é¢ä¸ºï¼š" + balance);
+				//å°†æ ‡è¯†æ˜¯å¦æˆåŠŸå­˜å…¥å­˜æ¬¾çš„æ——æ ‡è®¾ä¸ºtrue
 				flag = true;
-				//»½ĞÑ¸ÃLock¶ÔÏó¶ÔÓ¦µÄÆäËûÏß³Ì
+				//å”¤é†’è¯¥Lockå¯¹è±¡å¯¹åº”çš„å…¶ä»–çº¿ç¨‹
 				cond.signalAll();
 			}
 		}
@@ -104,7 +104,7 @@ public class Account
 		{
 			ex.printStackTrace();
 		}
-		//Ê¹ÓÃfinally¿éÀ´È·±£ÊÍ·ÅËø
+		//ä½¿ç”¨finallyå—æ¥ç¡®ä¿é‡Šæ”¾é”
 		finally
 		{
 			lock.unlock();

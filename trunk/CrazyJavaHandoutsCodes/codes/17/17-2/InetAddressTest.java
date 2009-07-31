@@ -14,17 +14,17 @@ public class InetAddressTest
 	public static void main(String[] args)
 		throws Exception
 	{
-		//¸ù¾İÖ÷»úÃûÀ´»ñÈ¡¶ÔÓ¦µÄInetAddressÊµÀı
+		//æ ¹æ®ä¸»æœºåæ¥è·å–å¯¹åº”çš„InetAddresså®ä¾‹
 		InetAddress ip = InetAddress.getByName("www.oneedu.cn");
-		//ÅĞ¶ÏÊÇ·ñ¿É´ï
-		System.out.println("oneeduÊÇ·ñ¿É´ï£º" + ip.isReachable(2000)); 
-		//»ñÈ¡¸ÃInetAddressÊµÀıµÄIP×Ö·û´®
+		//åˆ¤æ–­æ˜¯å¦å¯è¾¾
+		System.out.println("oneeduæ˜¯å¦å¯è¾¾ï¼š" + ip.isReachable(2000)); 
+		//è·å–è¯¥InetAddresså®ä¾‹çš„IPå­—ç¬¦ä¸²
 		System.out.println(ip.getHostAddress());
-		//¸ù¾İÔ­Ê¼IPµØÖ·À´»ñÈ¡¶ÔÓ¦µÄInetAddressÊµÀı
+		//æ ¹æ®åŸå§‹IPåœ°å€æ¥è·å–å¯¹åº”çš„InetAddresså®ä¾‹
 		InetAddress local = InetAddress.getByAddress(new byte[]
 		{127,0,0,1});
-		System.out.println("±¾»úÊÇ·ñ¿É´ï£º" + local.isReachable(5000)); 
-		//»ñÈ¡¸ÃInetAddressÊµÀı¶ÔÓ¦µÄÈ«ÏŞ¶¨ÓòÃû
+		System.out.println("æœ¬æœºæ˜¯å¦å¯è¾¾ï¼š" + local.isReachable(5000)); 
+		//è·å–è¯¥InetAddresså®ä¾‹å¯¹åº”çš„å…¨é™å®šåŸŸå
 		System.out.println(local.getCanonicalHostName());		
 	}
 }

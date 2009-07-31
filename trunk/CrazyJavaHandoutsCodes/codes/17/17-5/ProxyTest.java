@@ -16,14 +16,14 @@ public class ProxyTest
 	Proxy proxy;
 	URL url;
 	URLConnection conn;
-	//´ÓÍøÂçÍ¨¹ı´úÀí¶ÁÊı¾İ
+	//ä»ç½‘ç»œé€šè¿‡ä»£ç†è¯»æ•°æ®
 	Scanner scan;
 	PrintStream ps ;
-	//ÏÂÃæÊÇ´úÀí·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú£¬
-	//»»³ÉÊµ¼ÊÓĞĞ§µÄ´úÀí·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿Ú
+	//ä¸‹é¢æ˜¯ä»£ç†æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£ï¼Œ
+	//æ¢æˆå®é™…æœ‰æ•ˆçš„ä»£ç†æœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£
 	String proxyAddress = "202.128.23.32";
 	int proxyPort;
-	//ÏÂÃæÊÇÄãÊÔÍ¼´ò¿ªµÄÍøÕ¾µØÖ·
+	//ä¸‹é¢æ˜¯ä½ è¯•å›¾æ‰“å¼€çš„ç½‘ç«™åœ°å€
 	String urlStr = "http://www.oneedu.cn";
 
 	public void init()
@@ -31,34 +31,34 @@ public class ProxyTest
 		try
 		{
 			url = new URL(urlStr);
-			//´´½¨Ò»¸ö´úÀí·şÎñÆ÷¶ÔÏó
+			//åˆ›å»ºä¸€ä¸ªä»£ç†æœåŠ¡å™¨å¯¹è±¡
 			proxy = new Proxy(Proxy.Type.HTTP,
 				new InetSocketAddress(proxyAddress , proxyPort));
-			//Ê¹ÓÃÖ¸¶¨µÄ´úÀí·şÎñÆ÷´ò¿ªÁ¬½Ó
+			//ä½¿ç”¨æŒ‡å®šçš„ä»£ç†æœåŠ¡å™¨æ‰“å¼€è¿æ¥
 			conn = url.openConnection(proxy);
-			//ÉèÖÃ³¬Ê±Ê±³¤¡£
+			//è®¾ç½®è¶…æ—¶æ—¶é•¿ã€‚
 			conn.setConnectTimeout(5000);
 			scan = new Scanner(conn.getInputStream());
-			//³õÊ¼»¯Êä³öÁ÷
+			//åˆå§‹åŒ–è¾“å‡ºæµ
 			ps = new PrintStream("Index.htm");
 			while (scan.hasNextLine())
 			{
 				String line = scan.nextLine();
-				//ÔÚ¿ØÖÆÌ¨Êä³öÍøÒ³×ÊÔ´ÄÚÈİ
+				//åœ¨æ§åˆ¶å°è¾“å‡ºç½‘é¡µèµ„æºå†…å®¹
 				System.out.println(line);
-				//½«ÍøÒ³×ÊÔ´ÄÚÈİÊä³öµ½Ö¸¶¨Êä³öÁ÷
+				//å°†ç½‘é¡µèµ„æºå†…å®¹è¾“å‡ºåˆ°æŒ‡å®šè¾“å‡ºæµ
 				ps.println(line);
 			}
 		}
 		catch(MalformedURLException ex)
 		{
-			System.out.println(urlStr + "²»ÊÇÓĞĞ§µÄÍøÕ¾µØÖ·£¡");
+			System.out.println(urlStr + "ä¸æ˜¯æœ‰æ•ˆçš„ç½‘ç«™åœ°å€ï¼");
 		}
 		catch(IOException ex)
 		{
 			ex.printStackTrace();
 		}
-		//¹Ø±Õ×ÊÔ´
+		//å…³é—­èµ„æº
 		finally
 		{
 			if (ps != null)

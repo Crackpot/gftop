@@ -8,10 +8,10 @@ import java.util.*;
  * <br>Program Name:
  * <br>Date: 
  */
-//À©Õ¹HashMapÀà£¬MyMapÀàÒªÇóvalueÒ²²»¿ÉÖØ¸´
+//æ‰©å±•HashMapç±»ï¼ŒMyMapç±»è¦æ±‚valueä¹Ÿä¸å¯é‡å¤
 public class YeekuMap<K,V> extends HashMap<K,V>
 {
-	//¸ù¾İvalueÀ´É¾³ıÖ¸¶¨Ïî
+	//æ ¹æ®valueæ¥åˆ é™¤æŒ‡å®šé¡¹
 	public void removeByValue(Object value) 
 	{
 		for (Object key : keySet())
@@ -24,27 +24,27 @@ public class YeekuMap<K,V> extends HashMap<K,V>
 		}
 	}
 
-	//»ñÈ¡ËùÓĞvalue×é³ÉµÄSet¼¯ºÏ
+	//è·å–æ‰€æœ‰valueç»„æˆçš„Seté›†åˆ
 	public Set<V> valueSet() 
 	{
 		Set<V> result = new HashSet<V>();
-		//±éÀúËùÓĞkey×é³ÉµÄ¼¯ºÏ
+		//éå†æ‰€æœ‰keyç»„æˆçš„é›†åˆ
 		for (K key : keySet())
 		{
-			//½«Ã¿¸ökey¶ÔÓ¦µÄvalueÌí¼Óµ½result¼¯ºÏÖĞ
+			//å°†æ¯ä¸ªkeyå¯¹åº”çš„valueæ·»åŠ åˆ°resulté›†åˆä¸­
 			result.add(get(key));
 		}
 		return result;
 	}
 
-	//¸ù¾İvalue²éÕÒkey¡£
+	//æ ¹æ®valueæŸ¥æ‰¾keyã€‚
 	public K getKeyByValue(V val) 
 	{
-		//±éÀúËùÓĞkey×é³ÉµÄ¼¯ºÏ
+		//éå†æ‰€æœ‰keyç»„æˆçš„é›†åˆ
 		for (K key : keySet())
 		{
-			//Èç¹ûÖ¸¶¨key¶ÔÓ¦µÄvalueÓë±»ËÑË÷µÄvalueÏàÍ¬
-			//Ôò·µ»Ø¶ÔÓ¦µÄkey
+			//å¦‚æœæŒ‡å®škeyå¯¹åº”çš„valueä¸è¢«æœç´¢çš„valueç›¸åŒ
+			//åˆ™è¿”å›å¯¹åº”çš„key
 			if (get(key).equals(val) 
 				&& get(key) == val)
 			{
@@ -53,19 +53,19 @@ public class YeekuMap<K,V> extends HashMap<K,V>
 		}
 		return null;
 	}
-	//ÖØĞ´HashMapµÄput·½·¨£¬¸Ã·½·¨²»ÔÊĞívalueÖØ¸´
+	//é‡å†™HashMapçš„putæ–¹æ³•ï¼Œè¯¥æ–¹æ³•ä¸å…è®¸valueé‡å¤
 	public V put(K key,V value)
 	{
-		//±éÀúËùÓĞvalue×é³ÉµÄ¼¯ºÏ
+		//éå†æ‰€æœ‰valueç»„æˆçš„é›†åˆ
 		for (V val : valueSet() )
 		{
-			//Èç¹ûÖ¸¶¨valueÓëÊÔÍ¼·ÅÈë¼¯ºÏµÄvalueÏàÍ¬
-			//ÔòÅ×³öÒ»¸öRuntimeExceptionÒì³£
+			//å¦‚æœæŒ‡å®švalueä¸è¯•å›¾æ”¾å…¥é›†åˆçš„valueç›¸åŒ
+			//åˆ™æŠ›å‡ºä¸€ä¸ªRuntimeExceptionå¼‚å¸¸
 			if (val.equals(value) 
 				&& val.hashCode() == value.hashCode())
 			{
 				throw new RuntimeException
-					("MyMapÊµÀıÖĞ²»ÔÊĞíÓĞÖØ¸´value!"); 
+					("MyMapå®ä¾‹ä¸­ä¸å…è®¸æœ‰é‡å¤value!"); 
 			}
 		}
 		return super.put(key , value);

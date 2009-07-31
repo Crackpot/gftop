@@ -13,7 +13,7 @@ public class Account
 {
 	private String accountNo;
 	private double balance;
-	//±êÊ¶ÕË»§ÖĞÊÇ·ñÒÑÓĞ´æ¿îµÄÆì±ê
+	//æ ‡è¯†è´¦æˆ·ä¸­æ˜¯å¦å·²æœ‰å­˜æ¬¾çš„æ——æ ‡
 	private boolean flag = false;
 
 	public Account(){}
@@ -41,21 +41,21 @@ public class Account
 	{
 		try
 		{
-			//Èç¹ûflagÎª¼Ù£¬±íÃ÷ÕË»§ÖĞ»¹Ã»ÓĞÈË´æÇ®½øÈ¥£¬ÔòÈ¡Ç®·½·¨×èÈû
+			//å¦‚æœflagä¸ºå‡ï¼Œè¡¨æ˜è´¦æˆ·ä¸­è¿˜æ²¡æœ‰äººå­˜é’±è¿›å»ï¼Œåˆ™å–é’±æ–¹æ³•é˜»å¡
 			if (!flag)
 			{
 				wait();
 			}
 			else
 			{
-				//Ö´ĞĞÈ¡Ç®
+				//æ‰§è¡Œå–é’±
 				System.out.println(Thread.currentThread().getName() + 
-					" È¡Ç®:" +  drawAmount);
+					" å–é’±:" +  drawAmount);
 				balance -= drawAmount;
-				System.out.println("ÕË»§Óà¶îÎª£º" + balance);
-				//½«±êÊ¶ÕË»§ÊÇ·ñÒÑÓĞ´æ¿îµÄÆì±êÉèÎªfalse¡£
+				System.out.println("è´¦æˆ·ä½™é¢ä¸ºï¼š" + balance);
+				//å°†æ ‡è¯†è´¦æˆ·æ˜¯å¦å·²æœ‰å­˜æ¬¾çš„æ——æ ‡è®¾ä¸ºfalseã€‚
 				flag = false;
-				//»½ĞÑÆäËûÏß³Ì
+				//å”¤é†’å…¶ä»–çº¿ç¨‹
 				notifyAll();
 			}
 		}
@@ -68,21 +68,21 @@ public class Account
 	{
 		try
 		{
-			//Èç¹ûflagÎªÕæ£¬±íÃ÷ÕË»§ÖĞÒÑÓĞÈË´æÇ®½øÈ¥£¬Ôò´æÇ®·½·¨×èÈû
+			//å¦‚æœflagä¸ºçœŸï¼Œè¡¨æ˜è´¦æˆ·ä¸­å·²æœ‰äººå­˜é’±è¿›å»ï¼Œåˆ™å­˜é’±æ–¹æ³•é˜»å¡
 			if (flag)
 			{
 				wait();
 			}
 			else
 			{
-				//Ö´ĞĞ´æ¿î
+				//æ‰§è¡Œå­˜æ¬¾
 				System.out.println(Thread.currentThread().getName() + 
-					" ´æ¿î:" +  depositAmount);
+					" å­˜æ¬¾:" +  depositAmount);
 				balance += depositAmount;
-				System.out.println("ÕË»§Óà¶îÎª£º" + balance);
-				//½«±íÊ¾ÕË»§ÊÇ·ñÒÑÓĞ´æ¿îµÄÆì±êÉèÎªtrue
+				System.out.println("è´¦æˆ·ä½™é¢ä¸ºï¼š" + balance);
+				//å°†è¡¨ç¤ºè´¦æˆ·æ˜¯å¦å·²æœ‰å­˜æ¬¾çš„æ——æ ‡è®¾ä¸ºtrue
 				flag = true;
-				//»½ĞÑÆäËûÏß³Ì
+				//å”¤é†’å…¶ä»–çº¿ç¨‹
 				notifyAll();
 			}
 		}

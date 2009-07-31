@@ -9,18 +9,18 @@
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//Í¨¹ı¼Ì³ĞThreadÀàÀ´´´½¨Ïß³ÌÀà
+//é€šè¿‡ç»§æ‰¿Threadç±»æ¥åˆ›å»ºçº¿ç¨‹ç±»
 public class FirstThread extends Thread
 {
 	private int i ;
-	//ÖØĞ´run·½·¨£¬run·½·¨µÄ·½·¨Ìå¾ÍÊÇÏß³ÌÖ´ĞĞÌå
+	//é‡å†™runæ–¹æ³•ï¼Œrunæ–¹æ³•çš„æ–¹æ³•ä½“å°±æ˜¯çº¿ç¨‹æ‰§è¡Œä½“
 	public void run()
 	{
 		for ( ; i < 100 ; i++ )
 		{
-			//µ±Ïß³ÌÀà¼Ì³ĞThreadÀàÊ±£¬¿ÉÒÔÖ±½Óµ÷ÓÃgetName()·½·¨À´·µ»Øµ±Ç°Ïß³ÌµÄÃû¡£
-			//Èç¹ûÏë»ñÈ¡µ±Ç°Ïß³Ì£¬Ö±½ÓÊ¹ÓÃthis¼´¿É
-			//Thread¶ÔÏóµÄgetName·µ»Øµ±Ç°¸ÃÏß³ÌµÄÃû×Ö
+			//å½“çº¿ç¨‹ç±»ç»§æ‰¿Threadç±»æ—¶ï¼Œå¯ä»¥ç›´æ¥è°ƒç”¨getName()æ–¹æ³•æ¥è¿”å›å½“å‰çº¿ç¨‹çš„åã€‚
+			//å¦‚æœæƒ³è·å–å½“å‰çº¿ç¨‹ï¼Œç›´æ¥ä½¿ç”¨thiså³å¯
+			//Threadå¯¹è±¡çš„getNameè¿”å›å½“å‰è¯¥çº¿ç¨‹çš„åå­—
 			System.out.println(getName() +  " " + i);
 		}
 	}
@@ -29,13 +29,13 @@ public class FirstThread extends Thread
     {
         for (int i = 0; i < 100;  i++)
         {
-			//µ÷ÓÃThreadµÄcurrentThread·½·¨»ñÈ¡µ±Ç°Ïß³Ì
+			//è°ƒç”¨Threadçš„currentThreadæ–¹æ³•è·å–å½“å‰çº¿ç¨‹
 			System.out.println(Thread.currentThread().getName() +  " " + i);
 			if (i == 20)
 			{
-				//´´½¨¡¢²¢Æô¶¯µÚÒ»ÌõÏß³Ì
+				//åˆ›å»ºã€å¹¶å¯åŠ¨ç¬¬ä¸€æ¡çº¿ç¨‹
 				new FirstThread().start();
-				//´´½¨¡¢²¢Æô¶¯µÚ¶şÌõÏß³Ì
+				//åˆ›å»ºã€å¹¶å¯åŠ¨ç¬¬äºŒæ¡çº¿ç¨‹
 				new FirstThread().start();
 			}
         }

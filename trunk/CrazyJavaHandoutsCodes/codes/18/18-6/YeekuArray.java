@@ -11,7 +11,7 @@ import java.lang.reflect.*;
  */
 public class YeekuArray
 {
-	//¶ÔArrayµÄnewInstance·½·¨½øĞĞ°ü×°
+	//å¯¹Arrayçš„newInstanceæ–¹æ³•è¿›è¡ŒåŒ…è£…
 	public static <T> T[] newInstance(Class<T> componentType, int length) 
 	{
 		return (T[])Array.newInstance(componentType , length);
@@ -19,13 +19,13 @@ public class YeekuArray
 
 	public static void main(String[] args) 
 	{
-		//Ê¹ÓÃYeekuArrayµÄnewInstance()´´½¨Ò»Î¬Êı×é
+		//ä½¿ç”¨YeekuArrayçš„newInstance()åˆ›å»ºä¸€ç»´æ•°ç»„
 		String[] arr = YeekuArray.newInstance(String.class , 10);
-		//Ê¹ÓÃYeekuArrayµÄnewInstance()´´½¨¶şÎ¬Êı×é
-		//ÔÚÕâÖÖÇé¿öÏÂ£¬Ö»ÒªÉèÖÃÊı×éÔªËØµÄÀàĞÍÊÇint[]¼´¿É¡£
+		//ä½¿ç”¨YeekuArrayçš„newInstance()åˆ›å»ºäºŒç»´æ•°ç»„
+		//åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œåªè¦è®¾ç½®æ•°ç»„å…ƒç´ çš„ç±»å‹æ˜¯int[]å³å¯ã€‚
 		int[][] intArr = YeekuArray.newInstance(int[].class , 5);
-		arr[5] = "RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù";
-		//intArrÊÇ¶şÎ¬Êı×é£¬³õÊ¼»¯¸ÃÊı×éµÄµÚ¶ş¸öÊı×éÔªËØ¡ª¡ªÊı×éÔªËØ±ØĞëÊÇÒ»Î¬Êı×é
+		arr[5] = "RORæ•æ·å¼€å‘æœ€ä½³å®è·µ";
+		//intArræ˜¯äºŒç»´æ•°ç»„ï¼Œåˆå§‹åŒ–è¯¥æ•°ç»„çš„ç¬¬äºŒä¸ªæ•°ç»„å…ƒç´ â€”â€”æ•°ç»„å…ƒç´ å¿…é¡»æ˜¯ä¸€ç»´æ•°ç»„
 		intArr[1] = new int[]{ 23, 12};
 		System.out.println(arr[5]);
 		System.out.println(intArr[1][1]);

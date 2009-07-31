@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  * @version  1.0
  */
 
-//ÊµÏÖRunnable½Ó¿ÚÀ´¶¨ÒåÒ»¸ö¼òµ¥µÄ
+//å®ç°Runnableæ¥å£æ¥å®šä¹‰ä¸€ä¸ªç®€å•çš„
 class TestThread implements Runnable
 {
 	public void run()
@@ -18,7 +18,7 @@ class TestThread implements Runnable
 		for (int i = 0; i < 100 ; i++ )
 		{
 			System.out.println(Thread.currentThread().getName()
-				+ "µÄiÖµÎª:" + i);
+				+ "çš„iå€¼ä¸º:" + i);
 		}
 	}
 }
@@ -27,12 +27,12 @@ public class ThreadPoolTest
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Ò»¸ö¾ßÓĞ¹Ì¶¨Ïß³ÌÊı£¨6£©µÄÏß³Ì³Ø
+		//åˆ›å»ºä¸€ä¸ªå…·æœ‰å›ºå®šçº¿ç¨‹æ•°ï¼ˆ6ï¼‰çš„çº¿ç¨‹æ± 
 		ExecutorService pool = Executors.newFixedThreadPool(6);
-		//ÏòÏß³Ì³ØÖĞÌá½»2¸öÏß³Ì
+		//å‘çº¿ç¨‹æ± ä¸­æäº¤2ä¸ªçº¿ç¨‹
 		pool.submit(new TestThread());
 		pool.submit(new TestThread());
-		//¹Ø±ÕÏß³Ì³Ø
+		//å…³é—­çº¿ç¨‹æ± 
 		pool.shutdown();
 	}
 }

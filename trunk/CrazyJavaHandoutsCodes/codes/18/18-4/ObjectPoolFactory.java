@@ -12,22 +12,22 @@ import java.io.*;
  */
 public class ObjectPoolFactory
 {
-	//¶¨ÒåÒ»¸ö¶ÔÏó³Ø,Ç°ÃæÊÇ¶ÔÏóÃû£¬ºóÃæÊÇÊµ¼Ê¶ÔÏó
+	//å®šä¹‰ä¸€ä¸ªå¯¹è±¡æ± ,å‰é¢æ˜¯å¯¹è±¡åï¼Œåé¢æ˜¯å®é™…å¯¹è±¡
 	private Map<String ,Object> objectPool = 
 		new HashMap<String , Object>();
-	//¶¨ÒåÒ»¸ö´´½¨¶ÔÏóµÄ·½·¨£¬
-	//¸Ã·½·¨Ö»Òª´«ÈëÒ»¸ö×Ö·û´®ÀàÃû£¬³ÌĞò¿ÉÒÔ¸ù¾İ¸ÃÀàÃûÉú³ÉJava¶ÔÏó
+	//å®šä¹‰ä¸€ä¸ªåˆ›å»ºå¯¹è±¡çš„æ–¹æ³•ï¼Œ
+	//è¯¥æ–¹æ³•åªè¦ä¼ å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ç±»åï¼Œç¨‹åºå¯ä»¥æ ¹æ®è¯¥ç±»åç”ŸæˆJavaå¯¹è±¡
 	private Object createObject(String clazzName)
 		throws InstantiationException , IllegalAccessException
 		,ClassNotFoundException
 	{
-		//¸ù¾İ×Ö·û´®À´»ñÈ¡¶ÔÓ¦µÄClass¶ÔÏó
+		//æ ¹æ®å­—ç¬¦ä¸²æ¥è·å–å¯¹åº”çš„Classå¯¹è±¡
 		Class<?> clazz =Class.forName(clazzName);
-		//Ê¹ÓÃclazz¶ÔÓ¦ÀàµÄÄ¬ÈÏ¹¹ÔìÆ÷´´½¨ÊµÀı
+		//ä½¿ç”¨clazzå¯¹åº”ç±»çš„é»˜è®¤æ„é€ å™¨åˆ›å»ºå®ä¾‹
 		return clazz.newInstance();		
 	}
-	//¸Ã·½·¨¸ù¾İÖ¸¶¨ÎÄ¼şÀ´³õÊ¼»¯¶ÔÏó³Ø£¬
-	//Ëü»á¸ù¾İÅäÖÃÎÄ¼şÀ´´´½¨¶ÔÏó
+	//è¯¥æ–¹æ³•æ ¹æ®æŒ‡å®šæ–‡ä»¶æ¥åˆå§‹åŒ–å¯¹è±¡æ± ï¼Œ
+	//å®ƒä¼šæ ¹æ®é…ç½®æ–‡ä»¶æ¥åˆ›å»ºå¯¹è±¡
 	public void initPool(String fileName)
 		throws InstantiationException , IllegalAccessException
 		,ClassNotFoundException
@@ -40,8 +40,8 @@ public class ObjectPoolFactory
 			props.load(fis);
 			for (String name : props.stringPropertyNames())
 			{
-				//Ã¿È¡³öÒ»¶ÔÊôĞÔÃû£­ÊôĞÔÖµ¶Ô£¬¾Í¸ù¾İÊôĞÔÖµ´´½¨Ò»¸ö¶ÔÏó
-				//µ÷ÓÃcreateObject´´½¨¶ÔÏó£¬²¢½«¶ÔÏóÌí¼Óµ½¶ÔÏó³ØÖĞ
+				//æ¯å–å‡ºä¸€å¯¹å±æ€§åï¼å±æ€§å€¼å¯¹ï¼Œå°±æ ¹æ®å±æ€§å€¼åˆ›å»ºä¸€ä¸ªå¯¹è±¡
+				//è°ƒç”¨createObjectåˆ›å»ºå¯¹è±¡ï¼Œå¹¶å°†å¯¹è±¡æ·»åŠ åˆ°å¯¹è±¡æ± ä¸­
 				objectPool.put(name , 
 					createObject(props.getProperty(name))); 
 			}
@@ -49,7 +49,7 @@ public class ObjectPoolFactory
 		}
 		catch (IOException ex)
 		{
-			System.out.println("¶ÁÈ¡" + fileName + "Òì³£");
+			System.out.println("è¯»å–" + fileName + "å¼‚å¸¸");
 		}
 		finally
 		{
@@ -68,7 +68,7 @@ public class ObjectPoolFactory
 	}
 	public Object getObject(String name)
 	{
-		//´ÓobjectPoolÖĞÈ¡³öÖ¸¶¨name¶ÔÓ¦µÄ¶ÔÏó¡£
+		//ä»objectPoolä¸­å–å‡ºæŒ‡å®šnameå¯¹åº”çš„å¯¹è±¡ã€‚
 		return objectPool.get(name);
 	}
 	

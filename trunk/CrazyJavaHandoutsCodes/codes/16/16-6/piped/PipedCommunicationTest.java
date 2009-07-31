@@ -12,7 +12,7 @@ import java.io.*;
 class ReaderThread extends Thread
 {
 	private PipedReader pr;
-	//ÓÃÓÚ°ü×°¹ÜµÀÁ÷µÄBufferReader¶ÔÏó
+	//ç”¨äºåŒ…è£…ç®¡é“æµçš„BufferReaderå¯¹è±¡
 	private BufferedReader br;
 	public ReaderThread(){}
 	public ReaderThread(PipedReader pr)
@@ -25,7 +25,7 @@ class ReaderThread extends Thread
 		String buf = null;
 		try
 		{
-			//ÖğĞĞ¶ÁÈ¡¹ÜµÀÊäÈëÁ÷ÖĞµÄÄÚÈİ
+			//é€è¡Œè¯»å–ç®¡é“è¾“å…¥æµä¸­çš„å†…å®¹
 			while ((buf = br.readLine()) != null)
 			{
 				System.out.println(buf);
@@ -35,7 +35,7 @@ class ReaderThread extends Thread
 		{
 			ex.printStackTrace();
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊäÈëÁ÷
+		//ä½¿ç”¨finallyå—æ¥å…³é—­è¾“å…¥æµ
 		finally
 		{
 			try
@@ -56,10 +56,10 @@ class WriterThread extends Thread
 {
 	String[] books = new String[]
 	{
-		"Struts2È¨ÍşÖ¸ÄÏ",
-		"RORÃô½İ¿ª·¢Ö¸ÄÏ",
-		"»ùÓÚJ2EEµÄAjax±¦µä",
-		"ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÖ¸ÄÏ"
+		"Struts2æƒå¨æŒ‡å—",
+		"RORæ•æ·å¼€å‘æŒ‡å—",
+		"åŸºäºJ2EEçš„Ajaxå®å…¸",
+		"è½»é‡çº§J2EEä¼ä¸šåº”ç”¨æŒ‡å—"
 	};
 	private PipedWriter pw;
 	public WriterThread(){}
@@ -71,7 +71,7 @@ class WriterThread extends Thread
 	{
 		try
 		{
-			//Ñ­»·100´Î£¬Ïò¹ÜµÀÊä³öÁ÷ÖĞĞ´Èë100¸ö×Ö·û´®
+			//å¾ªç¯100æ¬¡ï¼Œå‘ç®¡é“è¾“å‡ºæµä¸­å†™å…¥100ä¸ªå­—ç¬¦ä¸²
 			for (int i = 0; i < 100 ; i++)
 			{
 				pw.write(books[i % 4] + "\n");
@@ -81,7 +81,7 @@ class WriterThread extends Thread
 		{
 			ex.printStackTrace();
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±Õ¹ÜµÀÊä³öÁ÷
+		//ä½¿ç”¨finallyå—æ¥å…³é—­ç®¡é“è¾“å‡ºæµ
 		finally
 		{
 			try
@@ -107,14 +107,14 @@ public class PipedCommunicationTest
 		PipedReader pr = null;
 		try
 		{
-			//·Ö±ğ´´½¨Á½¸ö¶ÀÁ¢µÄ¹ÜµÀÊä³öÁ÷¡¢ÊäÈëÁ÷
+			//åˆ†åˆ«åˆ›å»ºä¸¤ä¸ªç‹¬ç«‹çš„ç®¡é“è¾“å‡ºæµã€è¾“å…¥æµ
 			pw = new PipedWriter();
 			pr = new PipedReader();
-			//Á¬½Ó¹ÜµÀÊä³öÁ÷¡¢³öÈëÁ÷
+			//è¿æ¥ç®¡é“è¾“å‡ºæµã€å‡ºå…¥æµ
 			pw.connect(pr);
 
-			//½«Á¬½ÓºÃµÄ¹ÜµÀÁ÷·Ö±ğ´«Èë2¸öÏß³Ì£¬
-			//¾Í¿ÉÒÔÈÃÁ½¸öÏß³ÌÍ¨¹ı¹ÜµÀÁ÷½øĞĞÍ¨ĞÅ
+			//å°†è¿æ¥å¥½çš„ç®¡é“æµåˆ†åˆ«ä¼ å…¥2ä¸ªçº¿ç¨‹ï¼Œ
+			//å°±å¯ä»¥è®©ä¸¤ä¸ªçº¿ç¨‹é€šè¿‡ç®¡é“æµè¿›è¡Œé€šä¿¡
 			new WriterThread(pw).start();
 			new ReaderThread(pr).start();
 		}

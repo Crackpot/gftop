@@ -12,12 +12,12 @@
 
 class TestThread extends Thread
 {
-	//Ìá¹©Ö¸¶¨Ïß³ÌÃûµÄ¹¹ÔìÆ÷
+	//æä¾›æŒ‡å®šçº¿ç¨‹åçš„æ„é€ å™¨
 	public TestThread(String name)
 	{
 		super(name);
 	}
-	//Ìá¹©Ö¸¶¨Ïß³ÌÃû¡¢Ïß³Ì×éµÄ¹¹ÔìÆ÷
+	//æä¾›æŒ‡å®šçº¿ç¨‹åã€çº¿ç¨‹ç»„çš„æ„é€ å™¨
 	public TestThread(ThreadGroup group , String name)
 	{
 		super(group, name);
@@ -26,7 +26,7 @@ class TestThread extends Thread
 	{
 		for (int i = 0; i < 20 ; i++ )
 		{
-			System.out.println(getName() + " Ïß³ÌµÄi±äÁ¿" + i);
+			System.out.println(getName() + " çº¿ç¨‹çš„iå˜é‡" + i);
 		}
 	}
 }
@@ -34,20 +34,20 @@ public class ThreadGroupTest
 {
 	public static void main(String[] args) 
 	{
-		//»ñÈ¡Ö÷Ïß³ÌËùÔÚµÄÏß³Ì×é£¬ÕâÊÇËùÓĞÏß³ÌÄ¬ÈÏµÄÏß³Ì×é
+		//è·å–ä¸»çº¿ç¨‹æ‰€åœ¨çš„çº¿ç¨‹ç»„ï¼Œè¿™æ˜¯æ‰€æœ‰çº¿ç¨‹é»˜è®¤çš„çº¿ç¨‹ç»„
 		ThreadGroup mainGroup = Thread.currentThread().getThreadGroup();
-		System.out.println("Ö÷Ïß³Ì×éµÄÃû×Ö£º" 
+		System.out.println("ä¸»çº¿ç¨‹ç»„çš„åå­—ï¼š" 
 			+ mainGroup.getName());
-		System.out.println("Ö÷Ïß³Ì×éÊÇ·ñÊÇºóÌ¨Ïß³Ì×é£º" 
+		System.out.println("ä¸»çº¿ç¨‹ç»„æ˜¯å¦æ˜¯åå°çº¿ç¨‹ç»„ï¼š" 
 			+ mainGroup.isDaemon());
 
-		new TestThread("Ö÷Ïß³Ì×éµÄÏß³Ì").start();
-		ThreadGroup tg = new ThreadGroup("ĞÂÏß³Ì×é");
+		new TestThread("ä¸»çº¿ç¨‹ç»„çš„çº¿ç¨‹").start();
+		ThreadGroup tg = new ThreadGroup("æ–°çº¿ç¨‹ç»„");
 		tg.setDaemon(true);
-		System.out.println("tgÏß³Ì×éÊÇ·ñÊÇºóÌ¨Ïß³Ì×é£º" 
+		System.out.println("tgçº¿ç¨‹ç»„æ˜¯å¦æ˜¯åå°çº¿ç¨‹ç»„ï¼š" 
 			+ tg.isDaemon());
-		TestThread tt = new TestThread(tg , "tg×éµÄÏß³Ì¼×");
+		TestThread tt = new TestThread(tg , "tgç»„çš„çº¿ç¨‹ç”²");
 		tt.start();
-		new TestThread(tg , "tg×éµÄÏß³ÌÒÒ").start();
+		new TestThread(tg , "tgç»„çš„çº¿ç¨‹ä¹™").start();
 	}
 }

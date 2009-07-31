@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class MyServer
 {
-	//¶¨Òå±£´æËùÓĞSocketµÄArrayList
+	//å®šä¹‰ä¿å­˜æ‰€æœ‰Socketçš„ArrayList
 	public static ArrayList<Socket> socketList = new ArrayList<Socket>();
     public static void main(String[] args) 
 		throws IOException
@@ -20,10 +20,10 @@ public class MyServer
         ServerSocket ss = new ServerSocket(30000);
 		while(true)
 		{
-			//´ËĞĞ´úÂë»á×èÈû£¬½«Ò»Ö±µÈ´ı±ğÈËµÄÁ¬½Ó
+			//æ­¤è¡Œä»£ç ä¼šé˜»å¡ï¼Œå°†ä¸€ç›´ç­‰å¾…åˆ«äººçš„è¿æ¥
 			Socket s = ss.accept();
 			socketList.add(s);
-			//Ã¿µ±¿Í»§¶ËÁ¬½ÓºóÆô¶¯Ò»ÌõServerThreadÏß³ÌÎª¸Ã¿Í»§¶Ë·şÎñ
+			//æ¯å½“å®¢æˆ·ç«¯è¿æ¥åå¯åŠ¨ä¸€æ¡ServerThreadçº¿ç¨‹ä¸ºè¯¥å®¢æˆ·ç«¯æœåŠ¡
 			new Thread(new ServerThread(s)).start();
 		}
     }

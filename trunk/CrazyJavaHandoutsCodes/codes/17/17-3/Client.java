@@ -16,13 +16,13 @@ public class Client
 		throws IOException
 	{
 		Socket socket = new Socket("127.0.0.1" , 30000);
-		//½«Socket¶ÔÓ¦µÄÊäÈëÁ÷°ü×°³ÉBufferedReader
+		//å°†Socketå¯¹åº”çš„è¾“å…¥æµåŒ…è£…æˆBufferedReader
 		BufferedReader br = new BufferedReader(
 			new InputStreamReader(socket.getInputStream()));
-		//½øĞĞÆÕÍ¨IO²Ù×÷
+		//è¿›è¡Œæ™®é€šIOæ“ä½œ
 		String line = br.readLine();
-		System.out.println("À´×Ô·şÎñÆ÷µÄÊı¾İ£º" + line);
-		//¹Ø±ÕÊäÈëÁ÷¡¢socket
+		System.out.println("æ¥è‡ªæœåŠ¡å™¨çš„æ•°æ®ï¼š" + line);
+		//å…³é—­è¾“å…¥æµã€socket
 		br.close();
 		socket.close();
 	}

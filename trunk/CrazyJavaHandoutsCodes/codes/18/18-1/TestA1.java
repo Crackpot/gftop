@@ -13,9 +13,9 @@ public class TestA1
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨AÀàµÄÊµÀı
+		//åˆ›å»ºAç±»çš„å®ä¾‹
 		A a = new A();
-		//ÈÃaÊµÀıµÄaÊôĞÔ×Ô¼Ó
+		//è®©aå®ä¾‹çš„aå±æ€§è‡ªåŠ 
 		a.a ++;
 		System.out.println(a.a);
 	}

@@ -12,16 +12,16 @@ import java.util.concurrent.*;
 
 class RtnThread implements Callable<Integer>
 {
-	//ÊµÏÖcall·½·¨£¬×÷ÎªÏß³ÌÖ´ÐÐÌå
+	//å®žçŽ°callæ–¹æ³•ï¼Œä½œä¸ºçº¿ç¨‹æ‰§è¡Œä½“
 	public Integer call()
 	{
 		int i = 0;
 		for ( ; i < 100 ; i++ )
 		{
 			System.out.println(Thread.currentThread().getName()
-				+ " µÄÑ­»·±äÁ¿iµÄÖµ£º" + i);
+				+ " çš„å¾ªçŽ¯å˜é‡içš„å€¼ï¼š" + i);
 		}
-		//call()·½·¨¿ÉÒÔÓÐ·µ»ØÖµ
+		//call()æ–¹æ³•å¯ä»¥æœ‰è¿”å›žå€¼
 		return i;
 	}
 } 
@@ -30,24 +30,24 @@ public class CallableTest
 {
 	public static void main(String[] args) 
 	{
-		//´´½¨Callable¶ÔÏó
+		//åˆ›å»ºCallableå¯¹è±¡
 		RtnThread rt = new RtnThread();
-		//Ê¹ÓÃFutureTaskÀ´°ü×°Callable¶ÔÏó
+		//ä½¿ç”¨FutureTaskæ¥åŒ…è£…Callableå¯¹è±¡
 		FutureTask<Integer> task = new FutureTask<Integer>(rt);
 		for (int i = 0 ; i < 100 ; i++)
 		{
 			System.out.println(Thread.currentThread().getName()
-				+ " µÄÑ­»·±äÁ¿iµÄÖµ£º" + i);
+				+ " çš„å¾ªçŽ¯å˜é‡içš„å€¼ï¼š" + i);
 			if (i == 20)
 			{
-				//ÊµÖÊ»¹ÊÇÒÔCallable¶ÔÏóÀ´´´½¨¡¢²¢Æô¶¯Ïß³Ì
-				new Thread(task , "ÓÐ·µ»ØÖµµÄÏß³Ì").start();
+				//å®žè´¨è¿˜æ˜¯ä»¥Callableå¯¹è±¡æ¥åˆ›å»ºã€å¹¶å¯åŠ¨çº¿ç¨‹
+				new Thread(task , "æœ‰è¿”å›žå€¼çš„çº¿ç¨‹").start();
 			}
 		}
 		try
 		{
-			//»ñÈ¡Ïß³Ì·µ»ØÖµ
-			System.out.println("×ÓÏß³ÌµÄ·µ»ØÖµ£º" + task.get());					
+			//èŽ·å–çº¿ç¨‹è¿”å›žå€¼
+			System.out.println("å­çº¿ç¨‹çš„è¿”å›žå€¼ï¼š" + task.get());					
 		}
 		catch (Exception ex)
 		{

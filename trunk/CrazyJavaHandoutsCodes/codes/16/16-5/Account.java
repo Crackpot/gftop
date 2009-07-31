@@ -11,11 +11,11 @@
  */
 public class Account
 {
-	//·â×°ÕË»§±àºÅ¡¢ÕË»§Óà¶îÁ½¸öÊôĞÔ
+	//å°è£…è´¦æˆ·ç¼–å·ã€è´¦æˆ·ä½™é¢ä¸¤ä¸ªå±æ€§
 	private String accountNo;
 	private double balance;
 	public Account(){}
-	//¹¹ÔìÆ÷
+	//æ„é€ å™¨
 	public Account(String accountNo , double balance)
 	{
 		this.accountNo = accountNo;
@@ -40,7 +40,7 @@ public class Account
 	}
 
 
-	//ÏÂÃæÁ½¸ö·½·¨¸ù¾İaccountNoÀ´¼ÆËãAccountµÄhashCodeºÍÅĞ¶Ïequals
+	//ä¸‹é¢ä¸¤ä¸ªæ–¹æ³•æ ¹æ®accountNoæ¥è®¡ç®—Accountçš„hashCodeå’Œåˆ¤æ–­equals
 	public int hashCode()
 	{
 		return accountNo.hashCode();

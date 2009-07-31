@@ -16,9 +16,9 @@ public class YeekuObjectFactory
 	{
 		try
 		{
-			//´´½¨Ö¸¶¨Àà¶ÔÓ¦µÄClass¶ÔÏó
+			//åˆ›å»ºæŒ‡å®šç±»å¯¹åº”çš„Classå¯¹è±¡
 			Class cls = Class.forName(clsName);
-			//·µ»ØÊ¹ÓÃ¸ÃClass¶ÔÏóËù´´½¨µÄÊµÀı
+			//è¿”å›ä½¿ç”¨è¯¥Classå¯¹è±¡æ‰€åˆ›å»ºçš„å®ä¾‹
 			return cls.newInstance();
 		}
 		catch(Exception e)
@@ -29,7 +29,7 @@ public class YeekuObjectFactory
 	}
 	public static void main(String[] args)
 	{
-		//»ñÈ¡ÊµÀıºóĞèÒªÇ¿ÖÆÀàĞÍ×ª»»
+		//è·å–å®ä¾‹åéœ€è¦å¼ºåˆ¶ç±»å‹è½¬æ¢
 		Date d = (Date)YeekuObjectFactory.getInstance("java.util.Date");
 		JFrame f = (JFrame)YeekuObjectFactory.getInstance("java.util.Date");
 	}

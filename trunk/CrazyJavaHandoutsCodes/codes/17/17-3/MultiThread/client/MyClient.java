@@ -16,16 +16,16 @@ public class MyClient
 		throws IOException 
     {
 		Socket s = s = new Socket("127.0.0.1" , 30000);
-		//客户端启动ClientThread线程不断读取来自服务器的数据
+		//瀹㈡埛绔惎鍔–lientThread绾跨▼涓嶆柇璇诲彇鏉ヨ嚜鏈嶅姟鍣ㄧ殑鏁版嵁
 		new Thread(new ClientThread(s)).start();
-		//获取该Socket对应的输出流
+		//鑾峰彇璇ocket瀵瑰簲鐨勮緭鍑烘祦
 		PrintStream ps = new PrintStream(s.getOutputStream());
 		String line = null;
-		//不断读取键盘输入
+		//涓嶆柇璇诲彇閿洏杈撳叆
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while ((line = br.readLine()) != null)
 		{
-			//将用户的键盘输入内容写入Socket对应的输出流
+			//灏嗙敤鎴风殑閿洏杈撳叆鍐呭鍐欏叆Socket瀵瑰簲鐨勮緭鍑烘祦
 			ps.println(line);
 		}
     }
