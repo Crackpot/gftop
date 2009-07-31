@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <p>
     <h3>字符串</h3>
 
@@ -195,8 +196,58 @@ echo "A banana is {$fruits[banana]}.";
     // Let's show all errors
     error_reporting(E_ALL);
     $great = 'fantastic';
-    echo "This is $great!<br/>";
-    echo "This is {$great}!<br/>";
-    echo "This is ${great}!<br/>";
-    echo "This square is {$square->width}00 centimeters broad.";
+    // 不行，输出为：This is { fantastic}
+    echo "This is { $great}<br/>";
+
+    // 可以，输出为：This is fantastic
+    echo "This is {$great}<br/>";
+    echo "This is ${great}<br/>";
+
+    // Works
+    echo "This square is {$square->width}00 centimeters broad.<br/>";
+
+    // Works
+    echo "This works: {$arr[4][3]}<br/>";
+    // This is wrong for the same reason as $foo[bar] is wrong outside a string.  In otherwords, it will still work but because PHP first looks for a constant named foo, it will throw an error of level E_NOTICE (undefined constant).
+    echo "This is wrong: {$arr[foo][3]}<br/>";
+    // Works.  When using multi-dimensional arrays, always use braces around arrays when inside of strings
+    echo "This works: {$arr['foo'][3]}<br/>";
+
+    // Works.
+    echo "This works: " . $arr['foo'][3];    
+    echo "You can even write {$obj->values[3]->name}<br/>";    
+    echo "This is the value of the var named $name: {${$name}}<br/>";
+?>
+<p >
+    <br/><strong>访问和修改字符串中的字符</strong><br/>
+    字符串中的字符可以通过在字符串之后用花括号指定所要字符从零开始的偏移量来访问和修改。<br/>
+
+    注: 为了向下兼容，仍然可以用方括号。不过此语法自 PHP 4 起已过时。 <br/>
+</p>
+<?php
+    // Get the first character of a string
+    $str = 'This is a test.';
+    echo $str,'<br/>';
+    echo '我爱我的祖国','<br/>';
+    $str = utf8_encode('我爱我的祖国');
+    echo $str,'<br/>';
+    $first = $str{0};
+    echo $first,'<br/>';
+    // Get the third character of a string
+    $third = $str{2};
+    echo $third,'<br/>';
+
+    // Get the last character of a string.
+    $str = 'This is still a test.';
+    $str = '这是另外一句。';
+    echo $str,'<br/>';
+    $last = $str{strlen($str)-1};
+    echo $last,'<br/>';
+
+    // Modify the last character of a string
+    $str = 'Look at the sea';
+    $str = '最后一句。';
+    echo $str,'<br/>';
+    echo $str{strlen($str)-1} = 'e';
+    
 ?>
