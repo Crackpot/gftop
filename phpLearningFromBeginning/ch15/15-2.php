@@ -11,20 +11,20 @@ for($i=0; $i<4; ++$i)
     $str = $arr_str[$i];
     if(eregi('P|h', $str))
     {
-        echo "'$str' º¬ÓĞP¡¢p¡¢H»òh<br/><br/>";
+        echo "'$str' å«æœ‰Pã€pã€Hæˆ–h<br/><br/>";
     }
     else
     {
-        echo "<b>'$str' ²»º¬ P¡¢p¡¢H»òh</b><br/><br/>";
+        echo "<b>'$str' ä¸å« Pã€pã€Hæˆ–h</b><br/><br/>";
     }
     
     if(ereg('P',$str))
     {
-        echo "ÔÚereg()ÖĞ '$str' Æ¥Åä'P'<br/><br/>";
+        echo "åœ¨ereg()ä¸­ '$str' åŒ¹é…'P'<br/><br/>";
     }
     else
     {
-        echo "<b>ÔÚereg()ÖĞ '$str' ²»Æ¥Åä'P'</b><br/><br/>";
+        echo "<b>åœ¨ereg()ä¸­ '$str' ä¸åŒ¹é…'P'</b><br/><br/>";
     }
 }
 ?> 

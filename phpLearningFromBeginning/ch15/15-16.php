@@ -17,16 +17,16 @@ $patt_email = "/^[_a-zA-Z0-9-]+@([0-9a-z][0-9a-z-]+\.)+[a-z]{2,4}$/";
 
 foreach ($str_arr as $str)
 {
-    echo "×Ö·û´®'$str'£ºÊÇ";
+    echo "å­—ç¬¦ä¸²'$str'ï¼šæ˜¯";
     if (preg_match($patt_email, $str))
     {
-        echo "<b>ºÏ·¨µÄEmail¸ñÊ½</b>";
+        echo "<b>åˆæ³•çš„Emailæ ¼å¼</b>";
         echo "<br>";
         echo "<br>";
     }
     else
     {
-        echo "²»ºÏ·¨µÄEmail¸ñÊ½";
+        echo "ä¸åˆæ³•çš„Emailæ ¼å¼";
         echo "<br>";
         echo "<br>";
     }

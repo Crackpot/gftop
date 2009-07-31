@@ -6,10 +6,10 @@ function makeImageWaterMark($image,$pos,$water_text,$font_size,$color)
     if(!empty($image) && file_exists($image))
     {
         $img_info = getimagesize($image);
-        $g_w    = $img_info[0];     //È¡µÃ±³¾°Í¼Æ¬µÄ¿í
-        $g_h    = $img_info[1];     //È¡µÃ±³¾°Í¼Æ¬µÄ¸ß
+        $g_w    = $img_info[0];     //å–å¾—èƒŒæ™¯å›¾ç‰‡çš„å®½
+        $g_h    = $img_info[1];     //å–å¾—èƒŒæ™¯å›¾ç‰‡çš„é«˜
 
-        switch($img_info[2])        //È¡µÃ±³¾°Í¼Æ¬µÄ¸ñÊ½
+        switch($img_info[2])        //å–å¾—èƒŒæ™¯å›¾ç‰‡çš„æ ¼å¼
         {
             case 1:
                 $img = imagecreatefromgif($image);
@@ -21,25 +21,25 @@ function makeImageWaterMark($image,$pos,$water_text,$font_size,$color)
                 $img = imagecreatefrompng($image);
                 break;
             default:
-                die("Í¼Æ¬¸ñÊ½´íÎó£¡");
+                die("å›¾ç‰‡æ ¼å¼é”™è¯¯ï¼");
         }
     }
     else
     {
-        die("ĞèÒª¼ÓË®Ó¡µÄÍ¼Æ¬²»´æÔÚ£¡");
+        die("éœ€è¦åŠ æ°´å°çš„å›¾ç‰‡ä¸å­˜åœ¨ï¼");
     }
     
-    //È¡µÃÊ¹ÓÃ TrueType ×ÖÌåµÄÎÄ±¾µÄ·¶Î§
+    //å–å¾—ä½¿ç”¨ TrueType å­—ä½“çš„æ–‡æœ¬çš„èŒƒå›´
     $temp = imagettfbbox(ceil($font_size*2.5),0,$font_type,$water_text);
     $w = $temp[2] - $temp[6];
     $h = $temp[3] - $temp[7];
     if(($g_w<$w) || ($g_h<$h))
     {
-        echo "ĞèÒª¼ÓË®Ó¡µÄÍ¼Æ¬µÄ´óĞ¡±ÈË®Ó¡ÎÄ×ÖÇøÓòĞ¡£¬ÎŞ·¨Éú³ÉË®Ó¡£¡";
+        echo "éœ€è¦åŠ æ°´å°çš„å›¾ç‰‡çš„å¤§å°æ¯”æ°´å°æ–‡å­—åŒºåŸŸå°ï¼Œæ— æ³•ç”Ÿæˆæ°´å°ï¼";
         return;
     }
     
-    //ÉèÖÃ4ÖÖË®Ó¡Ğ§¹ûÎ»ÖÃ£º0ºÍÄ¬ÈÏÊÇËæ»úÎ»ÖÃ£¬1Îª¶¥¶Ë¾Ó×ó£¬2ÎªÖĞ²¿¾ÓÖĞ£¬3Îªµ×¶Ë¾ÓÓÒ
+    //è®¾ç½®4ç§æ°´å°æ•ˆæœä½ç½®ï¼š0å’Œé»˜è®¤æ˜¯éšæœºä½ç½®ï¼Œ1ä¸ºé¡¶ç«¯å±…å·¦ï¼Œ2ä¸ºä¸­éƒ¨å±…ä¸­ï¼Œ3ä¸ºåº•ç«¯å±…å³
     switch($pos)
     {
         case 0:
@@ -64,7 +64,7 @@ function makeImageWaterMark($image,$pos,$water_text,$font_size,$color)
             break;
     }
     
-    imagealphablending($img, true);    //ÉèÖÃÍ¼Ïñ»ìÉ«Ä£Ê½
+    imagealphablending($img, true);    //è®¾ç½®å›¾åƒæ··è‰²æ¨¡å¼
     
     if(!empty($color) && (strlen($color)==7))
     {
@@ -74,12 +74,12 @@ function makeImageWaterMark($image,$pos,$water_text,$font_size,$color)
     }
     else
     {
-        die("Ë®Ó¡ÎÄ×ÖÑÕÉ«¸ñÊ½²»ÕıÈ·£¡");
+        die("æ°´å°æ–‡å­—é¢œè‰²æ ¼å¼ä¸æ­£ç¡®ï¼");
     }
     $text_color = imagecolorallocate($img, $R, $G, $B);
     
     imagettftext($img, $font_size, 0, $pos_x, $pos_y, $text_color, $font_type, $water_text);
-    switch($img_info[2])                      //È¡µÃ±³¾°Í¼Æ¬µÄ¸ñÊ½ 
+    switch($img_info[2])                      //å–å¾—èƒŒæ™¯å›¾ç‰‡çš„æ ¼å¼ 
     {
         case 1:
             imagegif($img,$image);
@@ -91,7 +91,7 @@ function makeImageWaterMark($image,$pos,$water_text,$font_size,$color)
             imagepng($img,$image);
             break;
         default:
-            die("²»±»Ö§³Ö¸ñÊ½µÄÍ¼Æ¬£¡");
+            die("ä¸è¢«æ”¯æŒæ ¼å¼çš„å›¾ç‰‡ï¼");
     }
     
     imagedestroy($img);
@@ -107,7 +107,7 @@ if(isset($_FILES) && !empty($_FILES['userfile']) && $_FILES['userfile']['size']>
     }
     else
     { 
-        echo "ÎÄ¼şÉÏ´«´íÎó£¡<br/>";
+        echo "æ–‡ä»¶ä¸Šä¼ é”™è¯¯ï¼<br/>";
     }
 }
 ?>
@@ -117,8 +117,8 @@ if(isset($_FILES) && !empty($_FILES['userfile']) && $_FILES['userfile']['size']>
 <body>
 
 <form enctype="multipart/form-data" method="POST">
-Ñ¡ÔñÉÏ´«Í¼Æ¬: <input name="userfile" type="file">
-<input type="submit" value="ÉÏ´«">
+é€‰æ‹©ä¸Šä¼ å›¾ç‰‡: <input name="userfile" type="file">
+<input type="submit" value="ä¸Šä¼ ">
 </form>
 
 </body>

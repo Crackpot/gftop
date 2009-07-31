@@ -37,7 +37,7 @@ if(isset($_POST['username']) && isset($_POST['passwd']))
 }
 ?>
 <html>
-<head><title>��̳�û�ע��</title>
+<head><title>论坛用户注册</title>
 <style type="text/css">
 <!--
 .STYLE2 {
@@ -52,21 +52,21 @@ if(isset($_POST['username']) && isset($_POST['passwd']))
 <form id="form" name="form" method="post" action="">
   <table width="329" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#F5A510">
     <tr>
-      <td height="30" colspan="2" bgcolor="#FEFBE0"><div align="center"><span class="STYLE2">�û���¼</span></div></td>
+      <td height="30" colspan="2" bgcolor="#FEFBE0"><div align="center"><span class="STYLE2">用户登录</span></div></td>
     </tr>
     <tr>
-      <td width="100" height="33" bgcolor="#F2F3F4"><div align="right" class="STYLE3">�û�����</div></td>
+      <td width="100" height="33" bgcolor="#F2F3F4"><div align="right" class="STYLE3">用户名：</div></td>
       <td width="213" bgcolor="#F2F3F4">&nbsp;<input type="text" name="username" /></td>
     </tr>
     <tr>
-      <td height="36" bgcolor="#F2F3F4"><div align="right" class="STYLE3">���룺</div></td>
+      <td height="36" bgcolor="#F2F3F4"><div align="right" class="STYLE3">密码：</div></td>
       <td bgcolor="#F2F3F4"><label>
         &nbsp;<input type="password" name="passwd" />
       </label></td>
     </tr>
     <tr>
       <td height="36" colspan="2" bgcolor="#F2F3F4"><label>
-        &nbsp;<input type="submit" name="Submit" value="��¼" />
+        &nbsp;<input type="submit" name="Submit" value="登录" />
       </label></td>
     </tr>
   </table>

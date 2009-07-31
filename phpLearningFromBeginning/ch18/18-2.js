@@ -1,6 +1,6 @@
 function sendRequest()
 {
-    //»ñÈ¡Ò³Ãæ±íµ¥µÄÎÄ±¾¿ònameµÄÖµ
+    //è·å–é¡µé¢è¡¨å•çš„æ–‡æœ¬æ¡†nameçš„å€¼
     var user_name = document.getElementById("name").value;
 
     if((user_name == null) || (user_name == ""))
@@ -9,16 +9,16 @@ function sendRequest()
     xmlHttp = GetXmlHttpRequest();
     if(xmlHttp == null)
     {
-        alert("ä¯ÀÀÆ÷²»Ö§³ÖXmlHttpRequest£¡");
+        alert("æµè§ˆå™¨ä¸æ”¯æŒXmlHttpRequestï¼");
         return;
     } 
 
-    var url = "getUserName.php";               //¹¹½¨ÇëÇóµÄURLµØÖ·
+    var url = "getUserName.php";               //æ„å»ºè¯·æ±‚çš„URLåœ°å€
     url = url + "?name=" + user_name;
     
-    xmlHttp.open("GET", url, true);            //Ê¹ÓÃGET·½·¨´ò¿ªÒ»¸öµ½urlµÄÁ¬½Ó£¬Îª·¢³öÇëÇó×ö×¼±¸
+    xmlHttp.open("GET", url, true);            //ä½¿ç”¨GETæ–¹æ³•æ‰“å¼€ä¸€ä¸ªåˆ°urlçš„è¿æ¥ï¼Œä¸ºå‘å‡ºè¯·æ±‚åšå‡†å¤‡
     
-    //ÉèÖÃÒ»¸öº¯Êı£¬µ±·şÎñÆ÷´¦ÀíÍêÇëÇóºóµ÷ÓÃ£¬¸Ãº¯ÊıÃûÎªupdatePage
+    //è®¾ç½®ä¸€ä¸ªå‡½æ•°ï¼Œå½“æœåŠ¡å™¨å¤„ç†å®Œè¯·æ±‚åè°ƒç”¨ï¼Œè¯¥å‡½æ•°åä¸ºupdatePage
     xmlHttp.onreadystatechange = updatePage;
-    xmlHttp.send(null);                        //·¢ËÍÇëÇó
+    xmlHttp.send(null);                        //å‘é€è¯·æ±‚
 }

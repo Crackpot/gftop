@@ -6,13 +6,13 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
+    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
 }
 mysql_select_db('test');
 
 $sql = 'select id,name,city from users';
 
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>²úÉúÎÊÌâµÄSQL£º".$sql);
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>äº§ç”Ÿé—®é¢˜çš„SQLï¼š".$sql);
 
 if($num = mysql_num_rows($result))
 {

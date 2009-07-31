@@ -1,14 +1,14 @@
 <?php
 require_once("xajax/xajax.inc.php");
 
-$xajax = new xajax();       //ÊµÀý»¯xajax¶ÔÏó
+$xajax = new xajax();       //å®žä¾‹åŒ–xajaxå¯¹è±¡
 
-//$xajax->debugOn();        //´ò¿ªajaxµ÷ÊÔ¹¦ÄÜ
+//$xajax->debugOn();        //æ‰“å¼€ajaxè°ƒè¯•åŠŸèƒ½
 
-//×¢²áÒ»¸öxajaxµ÷ÓÃµÄphpº¯ÊýÃû£¨ÓëjavascriptÖÐµÄº¯ÊýÃûxajax_showOutputÏà¶ÔÓ¦£©
+//æ³¨å†Œä¸€ä¸ªxajaxè°ƒç”¨çš„phpå‡½æ•°åï¼ˆä¸Žjavascriptä¸­çš„å‡½æ•°åxajax_showOutputç›¸å¯¹åº”ï¼‰
 $xajax->registerFunction("showOutput");
 
-//±àÐ´ÉÏÃæÒÑ¾­×¢²áµÄphpº¯Êý£¬ÔÚ´Ëº¯ÊýÖÐÓÃxajaxResponse¶ÔÏóÀ´·µ»ØXMLÖ¸Áî¼¯
+//ç¼–å†™ä¸Šé¢å·²ç»æ³¨å†Œçš„phpå‡½æ•°ï¼Œåœ¨æ­¤å‡½æ•°ä¸­ç”¨xajaxResponseå¯¹è±¡æ¥è¿”å›žXMLæŒ‡ä»¤é›†
 function showOutput()
 {
     $testResponse = new xajaxResponse();
@@ -21,13 +21,13 @@ function showOutput()
     
     $objResponse = new xajaxResponse();
     
-    //Ê¹ÓÃxajaxResponse¶ÔÏóµÄaddAssign·½·¨Ìí¼ÓXMLÖ¸Áî£¬
-    //¸ÃÖ¸Áî½«idÎªsubmittedDivµÄÔªËØµÄinnerHTMLÊôÐÔ¸üÐÂÎª$testResponseOutput
+    //ä½¿ç”¨xajaxResponseå¯¹è±¡çš„addAssignæ–¹æ³•æ·»åŠ XMLæŒ‡ä»¤ï¼Œ
+    //è¯¥æŒ‡ä»¤å°†idä¸ºsubmittedDivçš„å…ƒç´ çš„innerHTMLå±žæ€§æ›´æ–°ä¸º$testResponseOutput
     $objResponse->addAssign("submittedDiv", "innerHTML", $testResponseOutput);
     return $objResponse;
 }
 
-$xajax->processRequests();  //ÔÚ½Å±¾´«ËÍ³öÈÎºÎ¶«Î÷Ç°£¬xajax¶¼Òª´¦ÀíËùÓÐÇëÇó
+$xajax->processRequests();  //åœ¨è„šæœ¬ä¼ é€å‡ºä»»ä½•ä¸œè¥¿å‰ï¼Œxajaxéƒ½è¦å¤„ç†æ‰€æœ‰è¯·æ±‚
 ?>
 
 <html>
@@ -36,15 +36,15 @@ $xajax->processRequests();  //ÔÚ½Å±¾´«ËÍ³öÈÎºÎ¶«Î÷Ç°£¬xajax¶¼Òª´¦ÀíËùÓÐÇëÇó
 <title>18-6.php - xajaxResponse Test</title>
 <?php
 
-//Õâ´úÂëÊ¹xajax¶ÔÏó¿ÉÒÔÉú³ÉËù±ØÐèµÄJavaScript
+//è¿™ä»£ç ä½¿xajaxå¯¹è±¡å¯ä»¥ç”Ÿæˆæ‰€å¿…éœ€çš„JavaScript
 $xajax->printJavascript("xajax/")
 ?>
 </head>
 <body>
 
-<!-- ÔÚÕâÀïµ÷ÓÃ -->
-<p><div onclick="xajax_showOutput();"> µã»÷ÕâÀïÏÔÊ¾ÏìÓ¦XML </div></p>
-<div id="submittedDiv">ÕâÀï½«±»ÏìÓ¦µÄXMLÖ¸ÁîËùÌæ»»</div>
+<!-- åœ¨è¿™é‡Œè°ƒç”¨ -->
+<p><div onclick="xajax_showOutput();"> ç‚¹å‡»è¿™é‡Œæ˜¾ç¤ºå“åº”XML </div></p>
+<div id="submittedDiv">è¿™é‡Œå°†è¢«å“åº”çš„XMLæŒ‡ä»¤æ‰€æ›¿æ¢</div>
 
 </body>
 </html>

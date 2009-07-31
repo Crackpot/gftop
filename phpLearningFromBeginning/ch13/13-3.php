@@ -6,7 +6,7 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
+    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
 }
 mysql_select_db('test');
 
@@ -15,9 +15,9 @@ $result = mysql_query($sql);
 
 if($result)
 {
-    echo 'SQLÓï¾ä£º' . $sql . '<br/>ÒÑ¾­³É¹¦Ö´ĞĞ£¡';
-    $num = mysql_num_rows($result);    //µ÷ÓÃº¯Êımysql_num_row()»ñµÃSELECTÓï¾ä²éÑ¯½á¹ûµÄĞĞÊı
-    echo '<br/>¸ÃSQLÓï¾ä²éÑ¯µ½<b>'.$num.'</b>ĞĞÊı¾İ';
+    echo 'SQLè¯­å¥ï¼š' . $sql . '<br/>å·²ç»æˆåŠŸæ‰§è¡Œï¼';
+    $num = mysql_num_rows($result);    //è°ƒç”¨å‡½æ•°mysql_num_row()è·å¾—SELECTè¯­å¥æŸ¥è¯¢ç»“æœçš„è¡Œæ•°
+    echo '<br/>è¯¥SQLè¯­å¥æŸ¥è¯¢åˆ°<b>'.$num.'</b>è¡Œæ•°æ®';
 }
 
 mysql_close($conn);

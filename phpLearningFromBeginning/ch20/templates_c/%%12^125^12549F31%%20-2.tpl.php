@@ -8,9 +8,9 @@
 </head> 
 
 <body>
-´ó¼ÒºÃ£¬ÎÒÊÇ<?php echo $this->_tpl_vars['name']; ?>
-Ä£°åÒýÇæ, »¶Ó­´ó¼ÒÔÚPHP³ÌÐòÖÐÊ¹ÓÃ<?php echo $this->_tpl_vars['name']; ?>
-¡£ 
+å¤§å®¶å¥½ï¼Œæˆ‘æ˜¯<?php echo $this->_tpl_vars['name']; ?>
+æ¨¡æ¿å¼•æ“Ž, æ¬¢è¿Žå¤§å®¶åœ¨PHPç¨‹åºä¸­ä½¿ç”¨<?php echo $this->_tpl_vars['name']; ?>
+ã€‚ 
 </body>
 
 </html>

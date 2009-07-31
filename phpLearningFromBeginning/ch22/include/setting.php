@@ -1,43 +1,43 @@
 <?php
 /**
-ÉèÖÃÈ«¾Ö±äÁ¿
+è®¾ç½®å…¨å±€å˜é‡
 */
 
-//´íÎóĞÅÏ¢
+//é”™è¯¯ä¿¡æ¯
 $ERR = array();
-$ERR['NO_BOARD'] = "ÔİÎŞÂÛÌ³";
-$ERR['NO_TOPIC'] = "¸ÃÂÛÌ³ÔİÎŞÖ÷ÌâÌû";
-$ERR['BOARD_NOT_EXIST'] = "°å¿é²»´æÔÚ";
-$ERR['TOPIC_NOT_EXIST'] = "Ìû×Ó²»´æÔÚ";
-$ERR['NO_PARAM'] = "ÇëÇó²ÎÊıÓĞÎó";
-$ERR['INVALID_PAGE'] = "ÎŞĞ§Ò³Êı";
-$ERR['USER_NOT_EXIT'] = "ÓÃ»§²»´æÔÚ";
-$ERR['NOT_LOGIN'] = "ÇëµÇÂ¼ºóÖ´ĞĞ´Ë²Ù×÷";
-$ERR['INVALID_USER'] = "ÓÃ»§Ãû»òÃÜÂë´íÎó";
-$ERR['NONE_CONTENT'] = "·¢ÌùÄÚÈİ²»ÄÜÎª¿Õ";
-$ERR['OP_ILLEGAL'] = "·Ç·¨²Ù×÷";
+$ERR['NO_BOARD'] = "æš‚æ— è®ºå›";
+$ERR['NO_TOPIC'] = "è¯¥è®ºå›æš‚æ— ä¸»é¢˜å¸–";
+$ERR['BOARD_NOT_EXIST'] = "æ¿å—ä¸å­˜åœ¨";
+$ERR['TOPIC_NOT_EXIST'] = "å¸–å­ä¸å­˜åœ¨";
+$ERR['NO_PARAM'] = "è¯·æ±‚å‚æ•°æœ‰è¯¯";
+$ERR['INVALID_PAGE'] = "æ— æ•ˆé¡µæ•°";
+$ERR['USER_NOT_EXIT'] = "ç”¨æˆ·ä¸å­˜åœ¨";
+$ERR['NOT_LOGIN'] = "è¯·ç™»å½•åæ‰§è¡Œæ­¤æ“ä½œ";
+$ERR['INVALID_USER'] = "ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯";
+$ERR['NONE_CONTENT'] = "å‘è´´å†…å®¹ä¸èƒ½ä¸ºç©º";
+$ERR['OP_ILLEGAL'] = "éæ³•æ“ä½œ";
 
-//Ò³Ãæ±êÌâ
+//é¡µé¢æ ‡é¢˜
 $HTML_TITLE = array();
-$HTML_TITLE['board'] = "ÂÛÌ³ÁĞ±í";
-$HTML_TITLE['list'] = "Ìû×ÓÁĞ±í";
-$HTML_TITLE['view'] = "²é¿´¡¢»Ø¸´Ìû×Ó";
-$HTML_TITLE['userinfo'] = "ÓÃ»§ĞÅÏ¢";
-$HTML_TITLE['mod'] = "ĞŞ¸ÄÌû×Ó";
+$HTML_TITLE['board'] = "è®ºå›åˆ—è¡¨";
+$HTML_TITLE['list'] = "å¸–å­åˆ—è¡¨";
+$HTML_TITLE['view'] = "æŸ¥çœ‹ã€å›å¤å¸–å­";
+$HTML_TITLE['userinfo'] = "ç”¨æˆ·ä¿¡æ¯";
+$HTML_TITLE['mod'] = "ä¿®æ”¹å¸–å­";
 
-//¹¦ÄÜÑ¡Ïî
+//åŠŸèƒ½é€‰é¡¹
 $FUNC = array();
-$FUNC['reply'] = "»Ø¸´";
-$FUNC['modify'] = "ĞŞ¸Ä";
-$FUNC['delete'] = "É¾³ı";
-$FUNC['newpost'] = "<a href=\"#fatie\">·¢Ìù</a>";
-$FUNC['refresh'] = "Ë¢ĞÂ";
-$FUNC['notlogin'] = "Çë<a href=\"login.php\">µÇÂ¼</a>ºó·¢Ìù»ò»Ø¸´&nbsp;&nbsp;&nbsp;<a href=\"reg.html\">×¢²á</a>";
-$FUNC['login1'] = "µÇÂ¼";
-$FUNC['login2'] = "ÓÃ»§Ãû£º<input type=\"text\" name=\"username\" size=\"15\"> ÃÜÂë£º<input type=\"password\" name=\"passwd\" size=\"15\">";
-$FUNC['register'] = "×¢²á";
-$FUNC['user_name'] = "ÓÃ»§Ãû";
-$FUNC['header_link'] = "MyBBS ¼òÒ×ÂÛÌ³ÏµÍ³";
-$FUNC['footer_link'] = "°æÈ¨ËùÓĞ&nbsp;&copy;&nbsp;2007&nbsp;&nbsp;";
+$FUNC['reply'] = "å›å¤";
+$FUNC['modify'] = "ä¿®æ”¹";
+$FUNC['delete'] = "åˆ é™¤";
+$FUNC['newpost'] = "<a href=\"#fatie\">å‘è´´</a>";
+$FUNC['refresh'] = "åˆ·æ–°";
+$FUNC['notlogin'] = "è¯·<a href=\"login.php\">ç™»å½•</a>åå‘è´´æˆ–å›å¤&nbsp;&nbsp;&nbsp;<a href=\"reg.html\">æ³¨å†Œ</a>";
+$FUNC['login1'] = "ç™»å½•";
+$FUNC['login2'] = "ç”¨æˆ·åï¼š<input type=\"text\" name=\"username\" size=\"15\"> å¯†ç ï¼š<input type=\"password\" name=\"passwd\" size=\"15\">";
+$FUNC['register'] = "æ³¨å†Œ";
+$FUNC['user_name'] = "ç”¨æˆ·å";
+$FUNC['header_link'] = "MyBBS ç®€æ˜“è®ºå›ç³»ç»Ÿ";
+$FUNC['footer_link'] = "ç‰ˆæƒæ‰€æœ‰&nbsp;&copy;&nbsp;2007&nbsp;&nbsp;";
 ?>
 

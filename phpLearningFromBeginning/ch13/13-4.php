@@ -6,18 +6,18 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
+    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
 }
 mysql_select_db('test');
 
 $sql = 'select id,name,city,gender from users';
 
-//ÕâÀïÊ¹ÓÃmysql_error()»ñÈ¡SQLÓï¾äÖ´ĞĞ³ö´íÊ±µÄÏà¹ØĞÅÏ¢
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/><br/><br/>²úÉúÎÊÌâµÄSQL<br/>".$sql);
+//è¿™é‡Œä½¿ç”¨mysql_error()è·å–SQLè¯­å¥æ‰§è¡Œå‡ºé”™æ—¶çš„ç›¸å…³ä¿¡æ¯
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/><br/><br/>äº§ç”Ÿé—®é¢˜çš„SQL<br/>".$sql);
 
 if($result)
 {
-    echo 'SQLÓï¾ä£º' . $sql . '<br/>ÒÑ¾­³É¹¦Ö´ĞĞ£¡';
+    echo 'SQLè¯­å¥ï¼š' . $sql . '<br/>å·²ç»æˆåŠŸæ‰§è¡Œï¼';
 }
 
 mysql_close($conn);

@@ -1,11 +1,11 @@
 <?php
 $str = "K#V3050";
-echo "<b>Ô­×Ö·û´®£º</b><br/>$str";
+echo "<b>åŸå­—ç¬¦ä¸²ï¼š</b><br/>$str";
 echo "<br/>";
 echo "<br/>";
 
 $reg_str = sql_regcase ($str);
-echo "<b>Ê¹ÓÃº¯Êısql_regcase()Éú³ÉµÄÕıÔò±í´ïÊ½Îª£º</b>";
+echo "<b>ä½¿ç”¨å‡½æ•°sql_regcase()ç”Ÿæˆçš„æ­£åˆ™è¡¨è¾¾å¼ä¸ºï¼š</b>";
 echo "<br/>";
 echo $reg_str;
 ?>

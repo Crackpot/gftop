@@ -1,17 +1,17 @@
 <?php
 class Page
 {
-    public $title="ÒôÀÖ³ªÆ¬´óÈ«";
+    public $title="éŸ³ä¹å”±ç‰‡å¤§å…¨";
     public $content;//Page content.
-    public $keywords="MP3,ÒôÀÖ,³ªÆ¬,music";//Page keywords.
+    public $keywords="MP3,éŸ³ä¹,å”±ç‰‡,music";//Page keywords.
     
     //Page tabs navigation
     public $buttons= array(
-    'Ö÷Ò³'=>'#',
-    '²úÆ·'=>'#',
-    '·şÎñ'=>'#',
-    'ÁªÏµÎÒÃÇ'=>'#',
-    'ÍøÕ¾µØÍ¼'=>'#'
+    'ä¸»é¡µ'=>'#',
+    'äº§å“'=>'#',
+    'æœåŠ¡'=>'#',
+    'è”ç³»æˆ‘ä»¬'=>'#',
+    'ç½‘ç«™åœ°å›¾'=>'#'
     );
 
     public function DisplayTitle()
@@ -67,7 +67,7 @@ class Page
         echo "<tr>";
         echo "<td align =\"left\"><img src = \"apache.gif\" /></td>";
         echo "<td bgcolor=\"#FFFFFF\">";
-        echo "    <h1>ÒôÀÖ³ªÆ¬´óÈ«</h1>";
+        echo "    <h1>éŸ³ä¹å”±ç‰‡å¤§å…¨</h1>";
         echo "</td>";
         echo "<td align =\"right\"></td>";
         echo "</tr>";
@@ -125,7 +125,7 @@ class Page
         echo "<table width = \"100%\" bgcolor =\"black\" cellpadding =\"12\" border =\"0\">";
         echo "<tr>";
         echo "<td>";
-        echo "<p class=\"foot\">°æÈ¨ËùÓĞ &copy; 2008 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Powerd by Apache + PHP + MySQL</p>";
+        echo "<p class=\"foot\">ç‰ˆæƒæ‰€æœ‰ &copy; 2008 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Powerd by Apache + PHP + MySQL</p>";
         echo "</td>";
         echo "</tr>";
         echo "</table>";

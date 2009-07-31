@@ -2,27 +2,27 @@
 $host = 'localhost';
 $user_name = 'root';
 $password = 'admin';
-$arr_city = array('Beijing'=>'±±¾©','NewYork'=>'Å¦Ô¼','Paris'=>'°ÍÀè','London'=>'Â×¶Ø','Rome'=>'ÂŞÂí');
+$arr_city = array('Beijing'=>'åŒ—äº¬','NewYork'=>'çº½çº¦','Paris'=>'å·´é»','London'=>'ä¼¦æ•¦','Rome'=>'ç½—é©¬');
 
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
+    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
 }
 mysql_select_db('test');
 
 if(!isset($_GET['uid']))
 {
-    echo '²ÎÊı´íÎó£¡';
+    echo 'å‚æ•°é”™è¯¯ï¼';
     exit;
 }
 $id = $_GET['uid'];
 
 $sql = "select * from users where id=$id";
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQL£º".$sql);
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQLï¼š".$sql);
 if(!mysql_num_rows($result))
 {
-    echo 'ÓÃ»§ID´íÎó£¡';
+    echo 'ç”¨æˆ·IDé”™è¯¯ï¼';
     exit;
 }
 
@@ -33,10 +33,10 @@ $city = $_POST['city'];
 if(!empty($name) || trim($name)!='')
 {
     $sql = "update users set name='" . $name . "',city='" . $city . "' where id=$id";
-    mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQL£º".$sql);
+    mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQLï¼š".$sql);
     mysql_close($conn);
 
-    echo 'Êı¾İĞŞ¸Ä³É¹¦£¬´ò¿ª<a href="13-7.php">13-7.php</a>²é¿´Êı¾İ';
+    echo 'æ•°æ®ä¿®æ”¹æˆåŠŸï¼Œæ‰“å¼€<a href="13-7.php">13-7.php</a>æŸ¥çœ‹æ•°æ®';
     exit;
 }
 ?>
@@ -47,15 +47,15 @@ if(!empty($name) || trim($name)!='')
 </head>
 
 <body>
-<b>ĞŞ¸ÄÓÃ»§ĞÅÏ¢</b>
+<b>ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯</b>
 <form name="form" method="post" action="13-11.php?uid=<?php echo $id; ?>">
     <table width="75%" border="0" cellpadding="0" cellspacing="2">
         <tr> 
-            <td width="24%" height="29">ÓÃ»§Ãû£º</td>
+            <td width="24%" height="29">ç”¨æˆ·åï¼š</td>
             <td width="76%"><input name="user_name" type="text" id="user_name" size="20" value="<?php echo $row['name']; ?>"></td>
         </tr>
         <tr> 
-        <td height="25">À´×Ô³ÇÊĞ£º</td>
+        <td height="25">æ¥è‡ªåŸå¸‚ï¼š</td>
         <td>
         <select name="city">
         <?php
@@ -69,12 +69,12 @@ if(!empty($name) || trim($name)!='')
         </td>
         </tr>
         <tr>
-        <td>×¢²áÊ±¼ä£º</td>
+        <td>æ³¨å†Œæ—¶é—´ï¼š</td>
         <td><?php echo $row['created_time']; ?></td>
         </tr>
         <tr> 
             <td height="31">
-            <input type="submit" name="Submit" value="ĞŞ¸Ä"></td>
+            <input type="submit" name="Submit" value="ä¿®æ”¹"></td>
             <td>&nbsp;</td>
         </tr>
     </table>

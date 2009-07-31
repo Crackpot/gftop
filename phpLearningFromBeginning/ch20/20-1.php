@@ -5,8 +5,8 @@ $fs = fopen($template_file,"r");
 $content = fread($fs, filesize($template_file));
 fclose($fs);
 
-$content = print_page($content,"pagetitle","模板应用");
-$page = print_page($content,"greetings","你好，这个页面由模板生成");
+$content = print_page($content,"pagetitle","妯℃澘搴旂敤");
+$page = print_page($content,"greetings","浣犲ソ锛岃繖涓〉闈㈢敱妯℃澘鐢熸垚");
 echo $page;
 
 function print_page($temp_c,$temp_v,$str_c)

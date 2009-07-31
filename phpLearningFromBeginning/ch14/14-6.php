@@ -3,15 +3,15 @@ class Test
 {
     public function __get($prop_name)
     {
-        echo "»ñÈ¡ÊôĞÔ£º£¨ $prop_namen £©<br/>";
+        echo "è·å–å±æ€§ï¼šï¼ˆ $prop_namen ï¼‰<br/>";
     }
     public function __set($prop_name, $value)
     {
-        echo "ÉèÖÃÊôĞÔ $prop_name µÄÖµÎª '$value'";
+        echo "è®¾ç½®å±æ€§ $prop_name çš„å€¼ä¸º '$value'";
     }
 
 }
 $test = new Test();
 $test->Name;
-$test->Name = "²âÊÔÉèÖÃ";
+$test->Name = "æµ‹è¯•è®¾ç½®";
 ?>

@@ -1,20 +1,20 @@
 <?php
 class Exception
 {
-    protected $message = 'Unknown exception';   // Òì³£ÐÅÏ¢
-    protected $code = 0;                        // ÓÃ»§×Ô¶¨ÒåÒì³£´úÂë
-    protected $file;                            // ·¢ÉúÒì³£µÄÎÄ¼þÃû
-    protected $line;                            // ·¢ÉúÒì³£µÄ´úÂëÐÐºÅ
+    protected $message = 'Unknown exception';   // å¼‚å¸¸ä¿¡æ¯
+    protected $code = 0;                        // ç”¨æˆ·è‡ªå®šä¹‰å¼‚å¸¸ä»£ç 
+    protected $file;                            // å‘ç”Ÿå¼‚å¸¸çš„æ–‡ä»¶å
+    protected $line;                            // å‘ç”Ÿå¼‚å¸¸çš„ä»£ç è¡Œå·
 
     function __construct($message = null, $code = 0);
 
-    final function getMessage();                // ·µ»ØÒì³£ÐÅÏ¢
-    final function getCode();                   // ·µ»ØÒì³£´úÂë
-    final function getFile();                   // ·µ»Ø·¢ÉúÒì³£µÄÎÄ¼þÃû
-    final function getLine();                   // ·µ»Ø·¢ÉúÒì³£µÄ´úÂëÐÐºÅ
-    final function getTrace();                  // backtrace() Êý×é
-    final function getTraceAsString();          // ÒÑ¸ñ³É»¯³É×Ö·û´®µÄ getTrace() ÐÅÏ¢
+    final function getMessage();                // è¿”å›žå¼‚å¸¸ä¿¡æ¯
+    final function getCode();                   // è¿”å›žå¼‚å¸¸ä»£ç 
+    final function getFile();                   // è¿”å›žå‘ç”Ÿå¼‚å¸¸çš„æ–‡ä»¶å
+    final function getLine();                   // è¿”å›žå‘ç”Ÿå¼‚å¸¸çš„ä»£ç è¡Œå·
+    final function getTrace();                  // backtrace() æ•°ç»„
+    final function getTraceAsString();          // å·²æ ¼æˆåŒ–æˆå­—ç¬¦ä¸²çš„ getTrace() ä¿¡æ¯
 
-    function __toString();                      // ¿ÉÊä³öµÄ×Ö·û´®
+    function __toString();                      // å¯è¾“å‡ºçš„å­—ç¬¦ä¸²
 }
 ?>
