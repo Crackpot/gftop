@@ -1,10 +1,10 @@
 <?php
 $str_arr = array(
 "IAMEVERYSORRY",
-"å¿«ä¹ç¼–ç¨‹ï¼Œå¿«ä¹ç”Ÿæ´»",
-"PHPç¼–ç¨‹",
-"1997å¹´é¦™æ¸¯å›žå½’",
-"è‹±è¯­å­¦ä¹ ABC",
+"¿ìÀÖ±à³Ì£¬¿ìÀÖÉú»î",
+"PHP±à³Ì",
+"1997ÄêÏã¸Û»Ø¹é",
+"Ó¢ÓïÑ§Ï°ABC",
 "123456789"
 );
 
@@ -12,16 +12,16 @@ $patt_ch = chr(0xa1) . "-" . chr(0xff);
 
 foreach ($str_arr as $str)
 {
-    echo "å­—ç¬¦ä¸²'$str' æ˜¯";
+    echo "×Ö·û´®'$str' ÊÇ";
     if (preg_match("/^[$patt_ch]+$/", $str))
     {
-        echo "<b>å®Œå…¨ä¸­æ–‡</b>";
+        echo "<b>ÍêÈ«ÖÐÎÄ</b>";
         echo "<br>";
         echo "<br>";
     }
     else
     {
-        echo "éžå®Œå…¨ä¸­æ–‡";
+        echo "·ÇÍêÈ«ÖÐÎÄ";
         echo "<br>";
         echo "<br>";
     }

@@ -6,7 +6,7 @@ $conn = db_connect($h,$p,$u,$db);
 
 if(isset($_SESSION['user_id']) && $_SESSION['user_name'])
 {
-    $str_login = (empty($_SESSION['user_id'])) ? $FUNC['login2'] : "æ¬¢è¿ä½ ï¼Œ".$_SESSION['user_name']."ï¼ <a href=\"logout.php\">æ³¨é”€é€€å‡º</a>";
+    $str_login = (empty($_SESSION['user_id'])) ? $FUNC['login2'] : "»¶Ó­Äã£¬".$_SESSION['user_name']."£¡ <a href=\"logout.php\">×¢ÏúÍË³ö</a>";
     $str_notlogin = (empty($_SESSION['user_id'])) ? $FUNC['notlogin'] : "";
 }
 else
@@ -67,8 +67,8 @@ if($num = mysql_num_rows($result))
         else
         {
             $start = ($page-1)*$page_size;
-            $next = $page+1;//ä¸‹é¡µé¡µç 
-            $prev = $page-1;//ä¸Šé¡µé¡µç 
+            $next = $page+1;//ÏÂÒ³Ò³Âë
+            $prev = $page-1;//ÉÏÒ³Ò³Âë
         }
         $limit = " limit ".$start.",".$page_size;
         
@@ -87,7 +87,7 @@ if($num = mysql_num_rows($result))
                 $topic_list .= "&nbsp;&nbsp;&nbsp;<font class=\"post_time\">".$row['post_time']."</font>";
                 $str_mod = ($user_id == $row['user_id']) ? "<a href=\"mod_topic.php?bid=$bid&tid=$tid\">".$FUNC['modify']."</a>&nbsp;&nbsp;<a href=\"del_topic.php?bid=$bid&tid=$tid\">".$FUNC['delete']."</a>" : '';
                 $topic_list .= "<span style='position:absolute;left:50%;'><a href='view.php?bid=$bid&tid=$tid'>".$FUNC['reply']."</a> ".$str_mod."</span>";
-                $str_mdtime = ($row['edit_time'] != '0000-00-00 00:00') ? "(".$row['edit_time']."ç¼–è¾‘è¿‡)" : '';
+                $str_mdtime = ($row['edit_time'] != '0000-00-00 00:00') ? "(".$row['edit_time']."±à¼­¹ı)" : '';
                 $topic_list .= "<br/>&nbsp;&nbsp;&nbsp;&nbsp;".$row['content']." &nbsp;&nbsp;$str_mdtime</li>";
                 $topic_list .= getReplyPost($tid);
             }
@@ -98,37 +98,37 @@ if($num = mysql_num_rows($result))
                 if($page == 1)
                 {
                     $next = $page + 1;
-                    $turn_page = "é¦–é¡µ&nbsp;&nbsp;|&nbsp;&nbsp;ä¸Šé¡µ&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$next\">ä¸‹é¡µ</a>";
-                    $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$page_count\">æœ«é¡µ</a>";
+                    $turn_page = "Ê×Ò³&nbsp;&nbsp;|&nbsp;&nbsp;ÉÏÒ³&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$next\">ÏÂÒ³</a>";
+                    $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$page_count\">Ä©Ò³</a>";
                 }
                 elseif($page != $page_count)
                 {
-                    $turn_page = "<a href=\"?bid=$bid&page=1\">é¦–é¡µ</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$prev\">ä¸Šé¡µ</a>";
-                    $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$next\">ä¸‹é¡µ</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$page_count\">æœ«é¡µ</a>";
+                    $turn_page = "<a href=\"?bid=$bid&page=1\">Ê×Ò³</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$prev\">ÉÏÒ³</a>";
+                    $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$next\">ÏÂÒ³</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$page_count\">Ä©Ò³</a>";
                 }
                 else
                 {
-                    $turn_page = "<a href=\"?bid=$bid&page=1\">é¦–é¡µ</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$prev\">ä¸Šé¡µ</a>";
-                    $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;ä¸‹é¡µ&nbsp;&nbsp;|&nbsp;&nbsp;æœ«é¡µ";
+                    $turn_page = "<a href=\"?bid=$bid&page=1\">Ê×Ò³</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"?bid=$bid&page=$prev\">ÉÏÒ³</a>";
+                    $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;ÏÂÒ³&nbsp;&nbsp;|&nbsp;&nbsp;Ä©Ò³";
                 }
             }
             else
             {
-                $turn_page = "é¦–é¡µ&nbsp;&nbsp;|&nbsp;&nbsp;ä¸Šé¡µ&nbsp;&nbsp;|&nbsp;&nbsp;ä¸‹é¡µ&nbsp;&nbsp;|&nbsp;&nbsp;æœ«é¡µ";
+                $turn_page = "Ê×Ò³&nbsp;&nbsp;|&nbsp;&nbsp;ÉÏÒ³&nbsp;&nbsp;|&nbsp;&nbsp;ÏÂÒ³&nbsp;&nbsp;|&nbsp;&nbsp;Ä©Ò³";
             }
             $turn_page_tmp1 = "&nbsp;&nbsp;| <script language='javascript'>function pagejump()";
             $turn_page_tmp1 .= "{if (document.all.pagejmp.value == ''|| document.all.pagejmp.value < 0 ) ";
-            $turn_page_tmp1 .= "{document.all.pagejmp.focus();alert('è¯·è¾“å…¥æœ‰æ•ˆè·³è½¬é¡µç ï¼');return false;}";
+            $turn_page_tmp1 .= "{document.all.pagejmp.focus();alert('ÇëÊäÈëÓĞĞ§Ìø×ªÒ³Âë£¡');return false;}";
             $turn_page_tmp1 .= "else{this.location.href = '?bid=$bid'+'&page='+document.all.pagejmp1.value; target = '_self';}}</script> ";
-            $turn_page_tmp1 .= "&nbsp;&nbsp;&nbsp;è½¬åˆ°ç¬¬ <input name=pagejmp size=3 onkeydown='if(window.event.keyCode==13) pagejump();'> é¡µ <a href=\"#\" onclick='pagejump();'>GO</a>";
+            $turn_page_tmp1 .= "&nbsp;&nbsp;&nbsp;×ªµ½µÚ <input name=pagejmp size=3 onkeydown='if(window.event.keyCode==13) pagejump();'> Ò³ <a href=\"#\" onclick='pagejump();'>GO</a>";
             
             $turn_page_tmp2 = "&nbsp;&nbsp;| <script language='javascript'>function pagejump1()";
             $turn_page_tmp2 .= "{if (document.all.pagejmp1.value == ''|| document.all.pagejmp1.value < 0 ) ";
-            $turn_page_tmp2 .= "{document.all.pagejmp1.focus();alert('è¯·è¾“å…¥æœ‰æ•ˆè·³è½¬é¡µç ï¼');return false;}";
+            $turn_page_tmp2 .= "{document.all.pagejmp1.focus();alert('ÇëÊäÈëÓĞĞ§Ìø×ªÒ³Âë£¡');return false;}";
             $turn_page_tmp2 .= "else{this.location.href = '?bid=$bid'+'&page='+document.all.pagejmp1.value; target = '_self';}}</script> ";
-            $turn_page_tmp2 .= "&nbsp;&nbsp;&nbsp;è½¬åˆ°ç¬¬ <input name=pagejmp1 size=3 onkeydown='if(window.event.keyCode==13) pagejump1();'> é¡µ <a href=\"#\" onclick='pagejump1();'>GO</a>";
+            $turn_page_tmp2 .= "&nbsp;&nbsp;&nbsp;×ªµ½µÚ <input name=pagejmp1 size=3 onkeydown='if(window.event.keyCode==13) pagejump1();'> Ò³ <a href=\"#\" onclick='pagejump1();'>GO</a>";
             
-            $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;é¡µæ¬¡ï¼š".$page."/".$page_count."é¡µ";
+            $turn_page .= "&nbsp;&nbsp;|&nbsp;&nbsp;Ò³´Î£º".$page."/".$page_count."Ò³";
             
             $turn_page1 = $turn_page.$turn_page_tmp1;
             $turn_page2 = $turn_page.$turn_page_tmp2;

@@ -1,11 +1,11 @@
 <?php
 $str = 'PHP language programming in Web';
-echo "<b>åŸå­—ç¬¦ä¸²ï¼š</b><br>";
+echo "<b>Ô­×Ö·û´®£º</b><br>";
 echo $str;
 echo "<br/><br/>";
 
 $chars = preg_split('/ /', $str, -1, PREG_SPLIT_OFFSET_CAPTURE);
-echo "<b>è°ƒç”¨å‡½æ•°preg_split()åï¼š</b>";
+echo "<b>µ÷ÓÃº¯Êıpreg_split()ºó£º</b>";
 echo "<pre>";
 print_r($chars);
 ?>

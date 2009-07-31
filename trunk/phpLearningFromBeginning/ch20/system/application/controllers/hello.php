@@ -5,7 +5,7 @@ class Hello extends Controller
     {
         //echo 'Hello World!';
         $data['title'] = "New Title - Hello.php";
-        $data['heading'] = "å¤§å®¶å¥½ï¼Œæ¬¢è¿Žä½¿ç”¨CodeIgniteræ¡†æž¶ï¼";
+        $data['heading'] = "´ó¼ÒºÃ£¬»¶Ó­Ê¹ÓÃCodeIgniter¿ò¼Ü£¡";
         $this->load->view('helloview1',$data);
     }
     

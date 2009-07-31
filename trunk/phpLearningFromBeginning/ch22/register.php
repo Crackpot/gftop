@@ -12,14 +12,14 @@ $come_from = $_POST['from'];
 
 if(empty($user_name) || empty($passwd) || empty($passwd1) || empty($email) || empty($come_from))
 {
-    $err_info = 'æ³¨å†Œä¸­çš„æ¯ä¸€é¡¹éƒ½å¿…é¡»å¡«å†™æˆ–é€‰æ‹©ï¼';
+    $err_info = '×¢²áÖÐµÄÃ¿Ò»Ïî¶¼±ØÐëÌîÐ´»òÑ¡Ôñ£¡';
     showerrpage($err_info);
     exit;
 }
 
 if($passwd != $passwd1)
 {
-    $err_info = 'ä¸¤æ¬¡å¡«å†™çš„å¯†ç ä¸ä¸€è‡´ï¼';
+    $err_info = 'Á½´ÎÌîÐ´µÄÃÜÂë²»Ò»ÖÂ£¡';
     showerrpage($err_info);
     exit;
 }
@@ -29,7 +29,7 @@ $sql = "select user_id from users where user_name='".mysql_escape_string($user_n
 $result = mysql_query($sql) or die ('ERROR: '.mysql_error());
 if(mysql_num_rows($result)>0)
 {
-    $err_info = 'è¯¥ç”¨æˆ·åå·²ç»å­˜åœ¨ï¼Œè¯·æ›´æ¢ï¼';
+    $err_info = '¸ÃÓÃ»§ÃûÒÑ¾­´æÔÚ£¬Çë¸ü»»£¡';
     showerrpage($err_info);
     exit;
 }
@@ -41,5 +41,5 @@ mysql_query($sql) or die ('ERROR: '.mysql_error());
 mysql_free_result($result);
 mysql_close();
 
-header("location: index.php");    //æ³¨å†ŒæˆåŠŸå°†è·³è½¬åˆ°è®ºå›é¦–é¡µ
+header("location: index.php");    //×¢²á³É¹¦½«Ìø×ªµ½ÂÛÌ³Ê×Ò³
 ?>

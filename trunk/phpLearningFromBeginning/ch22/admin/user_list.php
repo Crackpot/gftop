@@ -3,28 +3,28 @@ if(isset($_GET['o']))
     $op = $_GET['o'];
 else
     $op = '';
-if($op=='r')                 //æŒ‰ç”¨æˆ·IDæ’åº
+if($op=='r')                 //°´ÓÃ»§IDÅÅĞò
 {
     $tmp_sql = "order by user_id desc";
 }
-elseif($op == 'l')           //æŒ‰ç™»å½•æ—¶é—´æ’åº
+elseif($op == 'l')           //°´µÇÂ¼Ê±¼äÅÅĞò
 {
     $tmp_sql = "order by login_time desc";
 }
 else
     $tmp_sql = "";
 
-$info = "<a href=\"user_list.php\" style=\"font-size: 13px;\">åˆ—å‡ºæ‰€æœ‰</a> ";
-$info .="<a href=\"?o=r\" style=\"font-size: 13px;\">æŒ‰æœ€æ–°æ³¨å†Œæ’åˆ—</a>    ";
-$info .= "<a href=\"?o=l\" style=\"font-size: 13px;\">æŒ‰æœ€è¿‘ç™»å½•æ’åˆ—</a><br/><br/>";
+$info = "<a href=\"user_list.php\" style=\"font-size: 13px;\">ÁĞ³öËùÓĞ</a> ";
+$info .="<a href=\"?o=r\" style=\"font-size: 13px;\">°´×îĞÂ×¢²áÅÅÁĞ</a>    ";
+$info .= "<a href=\"?o=l\" style=\"font-size: 13px;\">°´×î½üµÇÂ¼ÅÅÁĞ</a><br/><br/>";
 $info .= "<table border=1 style=\"font-size: 13px;\"><tr bgcolor=\"#abcdef\" align=\"center\">";
-$info .= "<td><b>ç”¨æˆ·ID</b></td><td><b>ç”¨æˆ·å</b></td><td><b>Email</b></td><td><b>æ³¨å†Œæ—¶é—´</b></td>";
-$info .= "<td><b>æ³¨å†ŒIP</b></td><td><b>ç™»å½•æ—¶é—´</b></td><td><b>ç™»å½•IP</b></td><td><b>æ“ä½œ</b></td></tr>";
+$info .= "<td><b>ÓÃ»§ID</b></td><td><b>ÓÃ»§Ãû</b></td><td><b>Email</b></td><td><b>×¢²áÊ±¼ä</b></td>";
+$info .= "<td><b>×¢²áIP</b></td><td><b>µÇÂ¼Ê±¼ä</b></td><td><b>µÇÂ¼IP</b></td><td><b>²Ù×÷</b></td></tr>";
 
 mysql_connect("localhost","root","admin");
 mysql_select_db("mybbs") or die("Can't select database");
 
-if(!empty($_GET['del']))     //åˆ é™¤ç”¨æˆ·çš„æ“ä½œ
+if(!empty($_GET['del']))     //É¾³ıÓÃ»§µÄ²Ù×÷
 {
     $user_id = $_GET['del'];
     $sql = "delete from users where user_id=".$user_id;
@@ -38,19 +38,19 @@ if(mysql_num_rows($result))
     while($row = mysql_fetch_array($result))
     {
         if(empty($row['email']))
-            $email = "æœªå¡«å†™";
+            $email = "Î´ÌîĞ´";
         else
             $email = $row['email'];
         $info .= "<tr><td>".$row['user_id']."</td><td>".$row['user_name']."</td><td>".$email;
         $info .= "</td><td>".$row['reg_time']."</td><td>".$row['reg_ip'];
         $info .= "</td><td>".$row['login_time']."</td><td>";
-        $info .= $row['login_ip']."</td><td><a href=\"?del=".$row['user_id']."\">åˆ é™¤</a></td><tr>";
+        $info .= $row['login_ip']."</td><td><a href=\"?del=".$row['user_id']."\">É¾³ı</a></td><tr>";
     }
     $info .= "</table>";
 }
 else
 {
-    $info = "æš‚æ— æ³¨å†Œç”¨æˆ·ä¿¡æ¯";
+    $info = "ÔİÎŞ×¢²áÓÃ»§ĞÅÏ¢";
 }
 echo $info;
 ?>

@@ -25,7 +25,7 @@ if(isset($_SESSION['user_id']))
     $user_id = $_SESSION['user_id'];
 else
     $user_id = '';
-if(empty($user_id))                  //åˆ¤æ–­ç”¨æˆ·æ˜¯å¦ç™»å½•
+if(empty($user_id))                  //ÅĞ¶ÏÓÃ»§ÊÇ·ñµÇÂ¼
 {
     $error = $ERR['NOT_LOGIN'];
     showerrpage($error);
@@ -39,7 +39,7 @@ if($num = mysql_num_rows($result))
     $row = mysql_fetch_array($result);
     $uid = $row['user_id'];
     
-    if($uid != $user_id)             //åˆ¤æ–­è¯¥ç™»å½•ç”¨æˆ·æ˜¯å¦æ˜¯è¯¥å¸–çš„å‘è¡¨ç”¨æˆ·
+    if($uid != $user_id)             //ÅĞ¶Ï¸ÃµÇÂ¼ÓÃ»§ÊÇ·ñÊÇ¸ÃÌûµÄ·¢±íÓÃ»§
     {
         $error = $ERR['OP_ILLEGAL'];
         showerrpage($error);

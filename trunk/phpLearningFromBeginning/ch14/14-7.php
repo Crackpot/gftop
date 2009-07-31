@@ -13,6 +13,6 @@ class Student
 	}
 }
 $stu = new Student(1, 'George Wesley');
-echo '<b>浠ヤ笅杈撳嚭瀵硅薄鏃讹紝瀹為檯璋冪敤浜嗘柟娉昣_toString()</b><br/><br/>';
+echo '<b>以下输出对象时，实际调用了方法__toString()</b><br/><br/>';
 echo $stu
 ?>

@@ -1,14 +1,14 @@
 <?php
 if(!isset($_GET['id']))
 {
-    echo 'å‚æ•°é”™è¯¯ï¼';
+    echo '²ÎÊı´íÎó£¡';
     exit;
 }
 
 $id = $_GET['id'];
 if(empty($id))
 {
-    echo 'ç”¨æˆ·IDä¸èƒ½ä¸ºç©ºï¼';
+    echo 'ÓÃ»§ID²»ÄÜÎª¿Õ£¡';
     exit;
 }
 
@@ -19,23 +19,23 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
+    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
 }
 mysql_select_db('test');
 
-//å…ˆåˆ¤æ–­æ˜¯å¦å­˜åœ¨è¯¥IDçš„ç”¨æˆ·
+//ÏÈÅĞ¶ÏÊÇ·ñ´æÔÚ¸ÃIDµÄÓÃ»§
 $sql = "select * from users where id=$id";
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQLï¼š".$sql);
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQL£º".$sql);
 if(!mysql_num_rows($result))
 {
-    echo 'ç”¨æˆ·IDé”™è¯¯ï¼';
+    echo 'ÓÃ»§ID´íÎó£¡';
     exit;
 }
 
-//åˆ é™¤ç”¨æˆ·æ•°æ®
+//É¾³ıÓÃ»§Êı¾İ
 $sql = "delete from users where id=$id";
-mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQLï¼š".$sql);
+mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQL£º".$sql);
 mysql_close($conn);
 
-echo 'æ•°æ®åˆ é™¤æˆåŠŸï¼Œè¿”å›<a href="13-12.php">13-12.php</a>æŸ¥çœ‹æ•°æ®';
+echo 'Êı¾İÉ¾³ı³É¹¦£¬·µ»Ø<a href="13-12.php">13-12.php</a>²é¿´Êı¾İ';
 ?>

@@ -1,6 +1,6 @@
 <?php
 $string = "The quick brown fox jumped over the lazy dog.";
-echo "åŸå­—ç¬¦ä¸²ï¼š<br/>";
+echo "Ô­×Ö·û´®£º<br/>";
 echo $string;
 echo "<br/><br/>";
 
@@ -13,7 +13,7 @@ $replacements[1] = "black";
 $replacements[0] = "slow";
 
 $str1 = preg_replace($patterns, $replacements, $string);
-echo "ä½¿ç”¨å‡½æ•°ksort()ä¹‹å‰å­—ç¬¦ä¸²æ›¿æ¢ä¸ºï¼š<br/>";
+echo "Ê¹ÓÃº¯Êıksort()Ö®Ç°×Ö·û´®Ìæ»»Îª£º<br/>";
 echo $str1;
 echo "<br/><br/>";
 
@@ -21,7 +21,7 @@ ksort($patterns);
 ksort($replacements);
 
 $str2 = preg_replace($patterns, $replacements, $string);
-echo "ä½¿ç”¨å‡½æ•°ksort()ä¹‹å‰å­—ç¬¦ä¸²æ›¿æ¢ä¸ºï¼š<br/>";
+echo "Ê¹ÓÃº¯Êıksort()Ö®Ç°×Ö·û´®Ìæ»»Îª£º<br/>";
 echo $str2;
 echo "<br/><br/>";
 ?> 

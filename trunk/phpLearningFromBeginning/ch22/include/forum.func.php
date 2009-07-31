@@ -1,6 +1,6 @@
 <?php
 /**
- * è®ºå›åŠŸèƒ½å‡½æ•°
+ * ÂÛÌ³¹¦ÄÜº¯Êı
  */
 function getReplyPost($tid)
 {
@@ -30,7 +30,7 @@ function getBoardList()
     $result = mysql_query($sql) or die("ERROR: ".mysql_error()." <br/>SQL=".$sql);
     if($num = mysql_num_rows($result))
     {
-        $board_name_list = "<div style=\"margin:3px;padding:3px;font-size:12px;text-align:left;\">è®ºå›åˆ—è¡¨</div>";
+        $board_name_list = "<div style=\"margin:3px;padding:3px;font-size:12px;text-align:left;\">ÂÛÌ³ÁĞ±í</div>";
         while($row = mysql_fetch_array($result))
         {
             $board_name_list .= "<div style=\"margin:5px;padding:3px;border-left:2px solid #434A56;background-color:#F2F3F4;\">";
@@ -50,7 +50,7 @@ function userRank($bid)
     $result = mysql_query($sql) or die("ERROR: ".mysql_error()." <br/>SQL=".$sql);
     if($num = mysql_num_rows($result))
     {
-        $user_rank_list = "<div style=\"margin:3px;padding:3px;font-size:12px;text-align:left;\">æœ¬ç‰ˆå‘è´´æ’è¡Œæ¦œ</div>";
+        $user_rank_list = "<div style=\"margin:3px;padding:3px;font-size:12px;text-align:left;\">±¾°æ·¢ÌùÅÅĞĞ°ñ</div>";
         while($row = mysql_fetch_array($result))
         {
             $user_rank_list .= "<div style=\"margin:5px;padding:3px;border-left:2px solid #434A56;background-color:#F2F3F4;\">";

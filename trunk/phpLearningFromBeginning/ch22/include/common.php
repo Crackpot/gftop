@@ -1,19 +1,19 @@
 <?php
 require_once("setting.php");
 require_once("forum.func.php");
-function showerrpage($info_str)     //閿欒鎻愮ず淇℃伅鍑芥暟
+function showerrpage($info_str)     //错误提示信息函数
 {
 	$html = "<html>";
-	$html .= "<head><title>鎻愮ず淇℃伅</title></head>";
+	$html .= "<head><title>提示信息</title></head>";
 	$html .= "<body>";
 
 	$html .= "<center>";
 
 	$html .= "<div style=\"border:1px solid #000;background:#F2F3F4;width:500px;font:13px;height:180px;line-height:100px;\">";
 
-	$html .= "<div style=\"border-bottom:1px solid #000;background:#434A56;width:500px;text-align:left;height:28px;line-height:28px;padding:0 0 0 8px;color:#D8DBFE\"><b>鎻愮ず淇℃伅</b></div>";
+	$html .= "<div style=\"border-bottom:1px solid #000;background:#434A56;width:500px;text-align:left;height:28px;line-height:28px;padding:0 0 0 8px;color:#D8DBFE\"><b>提示信息</b></div>";
 	$html .= $info_str."<br/>";
-	$html .= "<input type=\"button\" onclick=\"javascript:window.history.go(-1);\" value=\"杩斿洖\" /><br/>";
+	$html .= "<input type=\"button\" onclick=\"javascript:window.history.go(-1);\" value=\"返回\" /><br/>";
 	$html .= "</div>";
 
 	$html .= "<center>";
@@ -24,7 +24,7 @@ function showerrpage($info_str)     //閿欒鎻愮ず淇℃伅鍑芥暟
 	echo $html;
 }
 
-function delete_htm($scr)           //鍒犻櫎html鏍囪
+function delete_htm($scr)           //删除html标记
 {
 	$str="";
 	for($i=0;$i<strlen($scr);$i++)
@@ -39,7 +39,7 @@ function delete_htm($scr)           //鍒犻櫎html鏍囪
 return $str; 
 }
 
-function dhtmlspecialchars($string) //html鏍囪澶勭悊
+function dhtmlspecialchars($string) //html标记处理
 {
 	if(is_array($string))
 	{

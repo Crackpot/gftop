@@ -4,7 +4,7 @@ include_once("include/common.php");
 session_start();
 $conn = db_connect($h,$p,$u,$db);
 
-$str_login = (empty($_SESSION['user_id'])) ? $FUNC['login2'] : "æ¬¢è¿ä½ ï¼Œ".$_SESSION['user_name']."ï¼ <a href=\"logout.php\">æ³¨é”€é€€å‡º</a>";
+$str_login = (empty($_SESSION['user_id'])) ? $FUNC['login2'] : "»¶Ó­Äã£¬".$_SESSION['user_name']."£¡ <a href=\"logout.php\">×¢ÏúÍË³ö</a>";
 $str_notlogin = (empty($_SESSION['user_id'])) ? $FUNC['notlogin'] : "";
 
 $bid = $_GET['bid'];

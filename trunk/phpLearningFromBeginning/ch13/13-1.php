@@ -6,7 +6,7 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('鏁版嵁搴撹繛鎺ュけ璐ワ細<br/>'.mysql_error());
+    die('数据库连接失败：<br/>'.mysql_error());
 }
-echo '鏁版嵁搴撹繛鎺ユ垚鍔燂紒';
+echo '数据库连接成功！';
 ?>

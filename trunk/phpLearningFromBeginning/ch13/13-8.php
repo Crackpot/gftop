@@ -6,11 +6,11 @@ $password = 'admin';
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
+    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
 }
 mysql_select_db('test');
 
-if(isset($_GET['page']))     //ç”±GETæ–¹æ³•è·å¾—é¡µé¢ä¼ å…¥å½“å‰é¡µæ•°çš„å‚æ•°
+if(isset($_GET['page']))     //ÓÉGET·½·¨»ñµÃÒ³Ãæ´«Èëµ±Ç°Ò³ÊıµÄ²ÎÊı
 {
     $page = $_GET['page'];
 }
@@ -18,25 +18,25 @@ else
 {
     $page = 1;
 }
-$page_size = 2;              //æ¯é¡µæ˜¾ç¤ºä¸¤æ¡æ•°æ®
+$page_size = 2;              //Ã¿Ò³ÏÔÊ¾Á½ÌõÊı¾İ
 
-//è·å–æ•°æ®æ€»é‡
+//»ñÈ¡Êı¾İ×ÜÁ¿
 $sql = 'select * from users';
 $result = mysql_query($sql);
 $total = mysql_num_rows($result);
 
-//å¼€å§‹è®¡ç®—æ€»é¡µæ•°
+//¿ªÊ¼¼ÆËã×ÜÒ³Êı
 if($total)
 {
-    //å¦‚æœæ€»æ•°æ®é‡å°äº$page_sizeï¼Œé‚£ä¹ˆåªæœ‰ä¸€é¡µ
+    //Èç¹û×ÜÊı¾İÁ¿Ğ¡ÓÚ$page_size£¬ÄÇÃ´Ö»ÓĞÒ»Ò³
     if($total < $page_size)
         $page_count = 1;
-    //å¦‚æœæœ‰ä½™æ•°ï¼Œåˆ™æ€»é¡µæ•°ç­‰äºæ€»è®°å½•æ•°é™¤ä»¥é¡µæ•°çš„ç»“æœå–æ•´å†åŠ 1
+    //Èç¹ûÓĞÓàÊı£¬Ôò×ÜÒ³ÊıµÈÓÚ×Ü¼ÇÂ¼Êı³ıÒÔÒ³ÊıµÄ½á¹ûÈ¡ÕûÔÙ¼Ó1
     if($total % $page_size)
     {
         $page_count = (int)($total/$page_size) + 1;
     }
-    //å¦‚æœæ²¡æœ‰ä½™æ•°ï¼Œåˆ™é¡µæ•°ç­‰äºæ€»æ•°æ®é‡é™¤ä»¥æ¯é¡µæ•°çš„ç»“æœ
+    //Èç¹ûÃ»ÓĞÓàÊı£¬ÔòÒ³ÊıµÈÓÚ×ÜÊı¾İÁ¿³ıÒÔÃ¿Ò³ÊıµÄ½á¹û
     else
     {
         $page_count = $total/$page_size;
@@ -46,27 +46,27 @@ else
 {
     $page_count = 0;
 }
-//ç¿»é¡µé“¾æ¥
+//·­Ò³Á´½Ó
 $turn_page = '';
 if($page == 1)
 {
-    $turn_page .= 'é¦–é¡µ | ä¸Šä¸€é¡µ |';
+    $turn_page .= 'Ê×Ò³ | ÉÏÒ»Ò³ |';
 }
 else
 {
-    $turn_page .= '<a href=13-8.php?page=1> é¦–é¡µ</a> | <a href=13-8.php?page='.($page-1).'> ä¸Šä¸€é¡µ </a> |';
+    $turn_page .= '<a href=13-8.php?page=1> Ê×Ò³</a> | <a href=13-8.php?page='.($page-1).'> ÉÏÒ»Ò³ </a> |';
 }
 if($page == $page_count || $page_count == 0)
 {
-    $turn_page .= ' ä¸‹ä¸€é¡µ | å°¾é¡µ';
+    $turn_page .= ' ÏÂÒ»Ò³ | Î²Ò³';
 }
 else
 {
-    $turn_page .= '<a href=13-8.php?page='.($page+1).'> ä¸‹ä¸€é¡µ </a>|<a href=13-8.php?page='.$page_count.'> å°¾é¡µ </a>';
+    $turn_page .= '<a href=13-8.php?page='.($page+1).'> ÏÂÒ»Ò³ </a>|<a href=13-8.php?page='.$page_count.'> Î²Ò³ </a>';
 }
 
 $sql = 'select id,name,city,created_time from users limit '. ($page-1)*$page_size .', '.$page_size;
-$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>äº§ç”Ÿé—®é¢˜çš„SQLï¼š".$sql);
+$result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>²úÉúÎÊÌâµÄSQL£º".$sql);
 ?>
 <html>
 <head>
@@ -77,10 +77,10 @@ $result = mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>äº§
 <body>
 <table width="75%" border="0" cellpadding="0" cellspacing="1" bgcolor="#7B7B84">
     <tr bgcolor="#8BBCC7"> 
-        <td height="33"><div align="center"><strong>ç”¨æˆ·ID</strong></div></td>
-        <td><div align="center"><strong>ç”¨æˆ·åç§°</strong></div></td>
-        <td><div align="center"><strong>æ¥è‡ªåŸå¸‚</strong></div></td>
-        <td><div align="center"><strong>æ³¨å†Œæ—¶é—´</strong></div></td>
+        <td height="33"><div align="center"><strong>ÓÃ»§ID</strong></div></td>
+        <td><div align="center"><strong>ÓÃ»§Ãû³Æ</strong></div></td>
+        <td><div align="center"><strong>À´×Ô³ÇÊĞ</strong></div></td>
+        <td><div align="center"><strong>×¢²áÊ±¼ä</strong></div></td>
     </tr>
 
 <?php
