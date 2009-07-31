@@ -21,7 +21,7 @@ public class TransactionTest
 	Statement stmt;
 	public void initParam(String paramFile)throws Exception
 	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -33,22 +33,22 @@ public class TransactionTest
 	{
 		try
 		{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//¹Ø±Õ×Ô¶¯Ìá½»£¬¿ªÆôÊÂÎñ
+			//å…³é—­è‡ªåŠ¨æäº¤ï¼Œå¼€å¯äº‹åŠ¡
 			conn.setAutoCommit(false);
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öStatment¶ÔÏó
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªStatmentå¯¹è±¡
 			stmt = conn.createStatement();
 			for (String sql : sqls)
 			{
 				stmt.executeUpdate(sql);
 			}
-			//Ìá½»ÊÂÎñ
+			//æäº¤äº‹åŠ¡
 			conn.commit();
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally
 		{
 			if (stmt != null)
@@ -69,8 +69,8 @@ public class TransactionTest
 			"insert into student_table values(null , 'aaa' ,1)",
 			"insert into student_table values(null , 'bbb' ,1)",
 			"insert into student_table values(null , 'ccc' ,1)",
-			//ÏÂÃæÕâÌõSQLÓï¾ä½«»áÎ¥·´Íâ¼üÔ¼Êø£¬
-			//ÒòÎªteacher_tableÖĞÃ»ÓĞIDÎª5µÄ¼ÇÂ¼¡£
+			//ä¸‹é¢è¿™æ¡SQLè¯­å¥å°†ä¼šè¿åå¤–é”®çº¦æŸï¼Œ
+			//å› ä¸ºteacher_tableä¸­æ²¡æœ‰IDä¸º5çš„è®°å½•ã€‚
 			"insert into student_table values(null , 'ccc' ,5)"
 		};
 		tt.insertInTransaction(sqls);

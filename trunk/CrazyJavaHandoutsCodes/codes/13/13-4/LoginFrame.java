@@ -19,18 +19,18 @@ public class LoginFrame
 {
 	private final String PROP_FILE = "mysql.ini";
 
-	//driverÊÇÊı¾İ¿âÇı¶¯Àà,Í¨¹ı²éÇı¶¯ÎÄµµµÃµ½
+	//driveræ˜¯æ•°æ®åº“é©±åŠ¨ç±»,é€šè¿‡æŸ¥é©±åŠ¨æ–‡æ¡£å¾—åˆ°
 	private String driver;
-	//urlÊÇÊı¾İ¿âµÄ·şÎñµØÖ·
+	//urlæ˜¯æ•°æ®åº“çš„æœåŠ¡åœ°å€
 	private String url;
 	private String user;
 	private String pass;
-	//µÇÂ½½çÃæµÄGUI×é¼ş
-	private JFrame jf = new JFrame("µÇÂ½");
+	//ç™»é™†ç•Œé¢çš„GUIç»„ä»¶
+	private JFrame jf = new JFrame("ç™»é™†");
 	private JTextField userField = new JTextField(20);
 	private JTextField passField = new JTextField(20);
-	private JButton loginButton = new JButton("µÇÂ½");
-	//Ö´ĞĞJDBC²Ù×÷µÄ¶ÔÏó
+	private JButton loginButton = new JButton("ç™»é™†");
+	//æ‰§è¡ŒJDBCæ“ä½œçš„å¯¹è±¡
 	private Connection conn;
 	private	Statement stmt;
 	private	PreparedStatement pstmt;
@@ -44,20 +44,20 @@ public class LoginFrame
 		url = connProp.getProperty("url");
 		user = connProp.getProperty("user");
 		pass = connProp.getProperty("pass");
-		//ÎªµÇÂ½°´Å¥Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºç™»é™†æŒ‰é’®æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		loginButton.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				//µÇÂ½³É¹¦ÔòÏÔÊ¾"µÇÂ½³É¹¦"
+				//ç™»é™†æˆåŠŸåˆ™æ˜¾ç¤º"ç™»é™†æˆåŠŸ"
 				if (validate(userField.getText(), passField.getText()))
 				{
-					JOptionPane.showMessageDialog(jf, "µÇÂ½³É¹¦");
+					JOptionPane.showMessageDialog(jf, "ç™»é™†æˆåŠŸ");
 				}
-				//·ñÔòÏÔÊ¾"µÇÂ½Ê§°Ü"
+				//å¦åˆ™æ˜¾ç¤º"ç™»é™†å¤±è´¥"
 				else
 				{
-					JOptionPane.showMessageDialog(jf, "µÇÂ½Ê§°Ü");
+					JOptionPane.showMessageDialog(jf, "ç™»é™†å¤±è´¥");
 				}
 			}
 		});
@@ -79,7 +79,7 @@ public class LoginFrame
 //				+ "where jdbc_name='" + userName 
 //				+ "' and jdbc_desc='" + userPass + "'";
 //			System.out.println(sql);
-//			//Èç¹û²éÑ¯µÄResultSetÀïÓĞ³¬¹ıÒ»ÌõµÄ¼ÇÂ¼£¬ÔòµÇÂ½³É¹¦
+//			//å¦‚æœæŸ¥è¯¢çš„ResultSeté‡Œæœ‰è¶…è¿‡ä¸€æ¡çš„è®°å½•ï¼Œåˆ™ç™»é™†æˆåŠŸ
 //			if (stmt.executeQuery(sql).next())
 //			{
 //				return true;
@@ -124,7 +124,7 @@ public class LoginFrame
 				+ "where jdbc_name=? and jdbc_desc=?");
 			pstmt.setString(1, userName);
 			pstmt.setString(2, userPass);
-			//Èç¹û²éÑ¯µÄResultSetÀïÓĞ³¬¹ıÒ»ÌõµÄ¼ÇÂ¼£¬ÔòµÇÂ½³É¹¦
+			//å¦‚æœæŸ¥è¯¢çš„ResultSeté‡Œæœ‰è¶…è¿‡ä¸€æ¡çš„è®°å½•ï¼Œåˆ™ç™»é™†æˆåŠŸ
 			if (pstmt.executeQuery().next())
 			{
 				return true;

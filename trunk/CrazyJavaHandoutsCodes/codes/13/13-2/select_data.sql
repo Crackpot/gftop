@@ -1,20 +1,20 @@
 drop database if exists select_test;
 create database select_test;
 use select_test;
--- ÎªÁË±£Ö¤´Ó±í²ÎÕÕµÄÖ÷±í´æÔÚ£¬Í¨³£Ó¦¸ÃÏÈ½¨Ö÷±í¡£
+-- ä¸ºäº†ä¿è¯ä»è¡¨å‚ç…§çš„ä¸»è¡¨å­˜åœ¨ï¼Œé€šå¸¸åº”è¯¥å…ˆå»ºä¸»è¡¨ã€‚
 create table teacher_table
 (
-	-- auto_increment:Êµ¼ÊÉÏ´ú±íËùÓĞÊı¾İ¿âµÄ×Ô¶¯±àºÅ²ßÂÔ£¬Í¨³£ÓÃ×÷Êı¾İ±íµÄÂß¼­Ö÷¼ü¡£
+	-- auto_increment:å®é™…ä¸Šä»£è¡¨æ‰€æœ‰æ•°æ®åº“çš„è‡ªåŠ¨ç¼–å·ç­–ç•¥ï¼Œé€šå¸¸ç”¨ä½œæ•°æ®è¡¨çš„é€»è¾‘ä¸»é”®ã€‚
 	teacher_id int auto_increment,
 	teacher_name varchar(255),
 	primary key(teacher_id)
 );
 create table student_table
 (
-	-- Îª±¾±í½¨Á¢Ö÷¼üÔ¼Êø
+	-- ä¸ºæœ¬è¡¨å»ºç«‹ä¸»é”®çº¦æŸ
 	student_id int auto_increment primary key,
 	student_name varchar(255),
-	-- Ö¸¶¨java_teacher²ÎÕÕµ½teacher_tableµÄteacher_idÁĞ
+	-- æŒ‡å®šjava_teacherå‚ç…§åˆ°teacher_tableçš„teacher_idåˆ—
 	java_teacher int,
 	foreign key(java_teacher) references teacher_table(teacher_id)
 );
@@ -29,25 +29,25 @@ values
 (null , 'Martine');
 insert into student_table
 values
-(null , 'ÕÅÈı' , 1);
+(null , 'å¼ ä¸‰' , 1);
 insert into student_table
 values
-(null , 'ÕÅÈı' , 1);
+(null , 'å¼ ä¸‰' , 1);
 insert into student_table
 values
-(null , 'ÀîËÄ' , 1);
+(null , 'æå››' , 1);
 insert into student_table
 values
-(null , 'ÍõÎå' , 2);
+(null , 'ç‹äº”' , 2);
 insert into student_table
 values
-(null , '_ÍõÎå' , 2);
+(null , '_ç‹äº”' , 2);
 
 insert into student_table
 values
 (null , null , 2);
 insert into student_table
 values
-(null , 'ÕÔÁù' , null);
+(null , 'èµµå…­' , null);
 
 

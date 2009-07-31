@@ -22,7 +22,7 @@ public class CallableStatementTest
 
 	public void initParam(String paramFile)throws Exception
 	{
-		//Ê¹ÓÃPropertiesÀàÀ´¼ÓÔØÊôĞÔÎÄ¼ş
+		//ä½¿ç”¨Propertiesç±»æ¥åŠ è½½å±æ€§æ–‡ä»¶
 		Properties props = new Properties();
 		props.load(new FileInputStream(paramFile));
 		driver = props.getProperty("driver");
@@ -35,22 +35,22 @@ public class CallableStatementTest
 	{
 		try
 		{
-			//¼ÓÔØÇı¶¯
+			//åŠ è½½é©±åŠ¨
 			Class.forName(driver);
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url , user , pass);
-			//Ê¹ÓÃConnectionÀ´´´½¨Ò»¸öCallableStatment¶ÔÏó
+			//ä½¿ç”¨Connectionæ¥åˆ›å»ºä¸€ä¸ªCallableStatmentå¯¹è±¡
 			cstmt = conn.prepareCall("{call add_pro(?,?,?)}");
 			cstmt.setInt(1, 4);
 			cstmt.setInt(2, 5);
-			//×¢²áCallableStatementµÄµÚÈı¸ö²ÎÊıÊÇintÀàĞÍ
+			//æ³¨å†ŒCallableStatementçš„ç¬¬ä¸‰ä¸ªå‚æ•°æ˜¯intç±»å‹
 			cstmt.registerOutParameter(3, Types.INTEGER);
-			//Ö´ĞĞ´æ´¢¹ı³Ì
+			//æ‰§è¡Œå­˜å‚¨è¿‡ç¨‹
 			cstmt.execute();
-			//»ñÈ¡£¬²¢Êä³ö´æ´¢¹ı³Ì´«³ö²ÎÊıµÄÖµ¡£
-            System.out.println("Ö´ĞĞ½á¹ûÊÇ: " + cstmt.getInt(3));
+			//è·å–ï¼Œå¹¶è¾“å‡ºå­˜å‚¨è¿‡ç¨‹ä¼ å‡ºå‚æ•°çš„å€¼ã€‚
+            System.out.println("æ‰§è¡Œç»“æœæ˜¯: " + cstmt.getInt(3));
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±ÕÊı¾İ¿â×ÊÔ´
+		//ä½¿ç”¨finallyå—æ¥å…³é—­æ•°æ®åº“èµ„æº
 		finally
 		{
 			if (cstmt != null)
