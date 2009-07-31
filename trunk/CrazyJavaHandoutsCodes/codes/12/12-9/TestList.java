@@ -15,49 +15,49 @@ import javax.swing.border.*;
  */
 public class TestList
 {
-	private JFrame mainWin = new JFrame("²âÊÔÁĞ±í¿ò");
+	private JFrame mainWin = new JFrame("æµ‹è¯•åˆ—è¡¨æ¡†");
 	String[] books = new String[]
 	{
-		"Spring2.0±¦µä",
-		"ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½",
-		"»ùÓÚJ2EEµÄAjax±¦µä",
-		"Struts2È¨ÍşÖ¸ÄÏ",
-		"RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù"
+		"Spring2.0å®å…¸",
+		"è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜",
+		"åŸºäºJ2EEçš„Ajaxå®å…¸",
+		"Struts2æƒå¨æŒ‡å—",
+		"RORæ•æ·å¼€å‘æœ€ä½³å®è·µ"
 	};
 	JList bookList = new JList(books);
 	JComboBox bookSelector;
-	//¶¨Òå²¼¾ÖÑ¡Ôñ°´Å¥ËùÔÚµÄÃæ°å
+	//å®šä¹‰å¸ƒå±€é€‰æ‹©æŒ‰é’®æ‰€åœ¨çš„é¢æ¿
 	JPanel layoutPanel = new JPanel();
 	ButtonGroup layoutGroup = new ButtonGroup();
-	//¶¨ÒåÑ¡ÔñÄ£Ê½°´Å¥ËùÔÚµÄÃæ°å
+	//å®šä¹‰é€‰æ‹©æ¨¡å¼æŒ‰é’®æ‰€åœ¨çš„é¢æ¿
 	JPanel selectModePanel = new JPanel();
 	ButtonGroup selectModeGroup = new ButtonGroup();
 	JTextArea favoriate = new JTextArea(4 , 40);
 
 	public void init()
 	{
-		//JListµÄ¿ÉÊÓ¸ß¶È¿ÉÍ¬Ê±ÏÔÊ¾Èı¸öÁĞ±íÏî
+		//JListçš„å¯è§†é«˜åº¦å¯åŒæ—¶æ˜¾ç¤ºä¸‰ä¸ªåˆ—è¡¨é¡¹
 		bookList.setVisibleRowCount(3); 
-		//Ä¬ÈÏÑ¡ÖĞµÚÈıÏîµ½µÚÎåÏî£¨µÚÒ»ÏîµÄË÷ÒıÊÇ0£©
+		//é»˜è®¤é€‰ä¸­ç¬¬ä¸‰é¡¹åˆ°ç¬¬äº”é¡¹ï¼ˆç¬¬ä¸€é¡¹çš„ç´¢å¼•æ˜¯0ï¼‰
 		bookList.setSelectionInterval(2, 4);
-		addLayoutButton("×İÏò¹ö¶¯", JList.VERTICAL);
-		addLayoutButton("×İÏò»»ĞĞ", JList.VERTICAL_WRAP);
-		addLayoutButton("ºáÏò»»ĞĞ", JList.HORIZONTAL_WRAP);
-		addSelectModelButton("ÎŞÏŞÖÆ", ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		addSelectModelButton("µ¥Ñ¡", ListSelectionModel.SINGLE_SELECTION);
-		addSelectModelButton("µ¥·¶Î§", ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		addLayoutButton("çºµå‘æ»šåŠ¨", JList.VERTICAL);
+		addLayoutButton("çºµå‘æ¢è¡Œ", JList.VERTICAL_WRAP);
+		addLayoutButton("æ¨ªå‘æ¢è¡Œ", JList.HORIZONTAL_WRAP);
+		addSelectModelButton("æ— é™åˆ¶", ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		addSelectModelButton("å•é€‰", ListSelectionModel.SINGLE_SELECTION);
+		addSelectModelButton("å•èŒƒå›´", ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		Box listBox = new Box(BoxLayout.Y_AXIS);
-		//½«JList×é¼ş·ÅÔÚJScrollPaneÖĞ£¬ÔÙ½«¸ÃJScrollPaneÌí¼Óµ½listBoxÈİÆ÷ÖĞ
+		//å°†JListç»„ä»¶æ”¾åœ¨JScrollPaneä¸­ï¼Œå†å°†è¯¥JScrollPaneæ·»åŠ åˆ°listBoxå®¹å™¨ä¸­
 		listBox.add(new JScrollPane(bookList));
-		//Ìí¼Ó²¼¾ÖÑ¡Ôñ°´Å¥Ãæ°å¡¢Ñ¡ÔñÄ£Ê½°´Å¥Ãæ°å
+		//æ·»åŠ å¸ƒå±€é€‰æ‹©æŒ‰é’®é¢æ¿ã€é€‰æ‹©æ¨¡å¼æŒ‰é’®é¢æ¿
 		listBox.add(layoutPanel);
 		listBox.add(selectModePanel);
-		//ÎªJListÌí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºJListæ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		bookList.addListSelectionListener(new ListSelectionListener()
 		{
 			public void  valueChanged(ListSelectionEvent e)
 			{
-				//»ñÈ¡ÓÃ»§ËùÑ¡ÔñµÄËùÓĞÍ¼Êé
+				//è·å–ç”¨æˆ·æ‰€é€‰æ‹©çš„æ‰€æœ‰å›¾ä¹¦
 				Object[] books = bookList.getSelectedValues();
 				favoriate.setText("");
 				for (Object book : books )
@@ -68,27 +68,27 @@ public class TestList
 		});
 
 		Vector<String> bookCollection = new Vector<String>();
-		bookCollection.add("Spring2.0±¦µä");
-		bookCollection.add("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½");
-		bookCollection.add("»ùÓÚJ2EEµÄAjax±¦µä");
-		bookCollection.add("Struts2È¨ÍşÖ¸ÄÏ");
-		bookCollection.add("RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
-		//ÓÃÒ»¸öVector¶ÔÏóÀ´´´½¨Ò»¸öJComboBox¶ÔÏó
+		bookCollection.add("Spring2.0å®å…¸");
+		bookCollection.add("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜");
+		bookCollection.add("åŸºäºJ2EEçš„Ajaxå®å…¸");
+		bookCollection.add("Struts2æƒå¨æŒ‡å—");
+		bookCollection.add("RORæ•æ·å¼€å‘æœ€ä½³å®è·µ");
+		//ç”¨ä¸€ä¸ªVectorå¯¹è±¡æ¥åˆ›å»ºä¸€ä¸ªJComboBoxå¯¹è±¡
 		bookSelector = new JComboBox(bookCollection);
-		//ÎªJComboBoxÌí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºJComboBoxæ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		bookSelector.addItemListener(new ItemListener()
 		{
 			public void itemStateChanged(ItemEvent e) 
 			{
-				//»ñÈ¡JComboBoxËùÑ¡ÖĞµÄÏî
+				//è·å–JComboBoxæ‰€é€‰ä¸­çš„é¡¹
 				Object book = bookSelector.getSelectedItem();
 				favoriate.setText(book.toString());
 			}
 		});
 		
-		//ÉèÖÃ¿ÉÒÔÖ±½Ó±à¼­
+		//è®¾ç½®å¯ä»¥ç›´æ¥ç¼–è¾‘
 		bookSelector.setEditable(true);
-		//ÉèÖÃÏÂÀ­ÁĞ±í¿òµÄ¿ÉÊÓ¸ß¶È¿ÉÍ¬Ê±ÏÔÊ¾4¸öÁĞ±íÏî
+		//è®¾ç½®ä¸‹æ‹‰åˆ—è¡¨æ¡†çš„å¯è§†é«˜åº¦å¯åŒæ—¶æ˜¾ç¤º4ä¸ªåˆ—è¡¨é¡¹
 		bookSelector.setMaximumRowCount(4);
 
 
@@ -101,7 +101,7 @@ public class TestList
 		JPanel favoriatePanel = new JPanel();
 		favoriatePanel.setLayout(new BorderLayout());
 		favoriatePanel.add(new JScrollPane(favoriate));
-		favoriatePanel.add(new JLabel("ÄúÏ²»¶µÄÍ¼Êé£º") , BorderLayout.NORTH);
+		favoriatePanel.add(new JLabel("æ‚¨å–œæ¬¢çš„å›¾ä¹¦ï¼š") , BorderLayout.NORTH);
 		mainWin.add(favoriatePanel , BorderLayout.SOUTH);
 
 		
@@ -112,11 +112,11 @@ public class TestList
 
 	private void addLayoutButton(String label, final int orientation)
 	{
-		layoutPanel.setBorder(new TitledBorder(new EtchedBorder(), "È·¶¨Ñ¡Ïî²¼¾Ö"));
+		layoutPanel.setBorder(new TitledBorder(new EtchedBorder(), "ç¡®å®šé€‰é¡¹å¸ƒå±€"));
 		JRadioButton button = new JRadioButton(label);
-		//°Ñ¸Ãµ¥Ñ¡°´Å¥Ìí¼Óµ½layoutPanelÃæ°åÖĞ
+		//æŠŠè¯¥å•é€‰æŒ‰é’®æ·»åŠ åˆ°layoutPanelé¢æ¿ä¸­
 		layoutPanel.add(button);
-		//Ä¬ÈÏÑ¡ÖĞµÚÒ»¸ö°´Å¥
+		//é»˜è®¤é€‰ä¸­ç¬¬ä¸€ä¸ªæŒ‰é’®
 		if (layoutGroup.getButtonCount() == 0) 
 			button.setSelected(true);
 		layoutGroup.add(button);
@@ -124,18 +124,18 @@ public class TestList
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//¸Ä±äÁĞ±í¿òÀïÁĞ±íÏîµÄ²¼¾Ö·½Ïò
+				//æ”¹å˜åˆ—è¡¨æ¡†é‡Œåˆ—è¡¨é¡¹çš„å¸ƒå±€æ–¹å‘
 				bookList.setLayoutOrientation(orientation);
 			}
 		});
 	}
 	private void addSelectModelButton(String label, final int selectModel)
 	{
-		selectModePanel.setBorder(new TitledBorder(new EtchedBorder(), "È·¶¨Ñ¡ÔñÄ£Ê½"));
+		selectModePanel.setBorder(new TitledBorder(new EtchedBorder(), "ç¡®å®šé€‰æ‹©æ¨¡å¼"));
 		JRadioButton button = new JRadioButton(label);
-		//°Ñ¸Ãµ¥Ñ¡°´Å¥Ìí¼Óµ½selectModePanelÃæ°åÖĞ
+		//æŠŠè¯¥å•é€‰æŒ‰é’®æ·»åŠ åˆ°selectModePanelé¢æ¿ä¸­
 		selectModePanel.add(button);
-		//Ä¬ÈÏÑ¡ÖĞµÚÒ»¸ö°´Å¥
+		//é»˜è®¤é€‰ä¸­ç¬¬ä¸€ä¸ªæŒ‰é’®
 		if (selectModeGroup.getButtonCount() == 0) 
 			button.setSelected(true);
 		selectModeGroup.add(button);
@@ -143,7 +143,7 @@ public class TestList
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//¸Ä±äÁĞ±í¿òÀïµÄÑ¡ÔñÄ£Ê½
+				//æ”¹å˜åˆ—è¡¨æ¡†é‡Œçš„é€‰æ‹©æ¨¡å¼
 				bookList.setSelectionMode(selectModel);
 			}
 		});

@@ -18,10 +18,10 @@ import javax.swing.text.*;
  */
 public class TestJTextPane
 {
-	JFrame mainWin = new JFrame("²âÊÔJTextPane");
+	JFrame mainWin = new JFrame("æµ‹è¯•JTextPane");
 	JTextPane txt = new JTextPane();
 	StyledDocument doc = txt.getStyledDocument();
-	//¶¨ÒåÈı¸öÊôĞÔ
+	//å®šä¹‰ä¸‰ä¸ªå±æ€§
 	SimpleAttributeSet ror = new SimpleAttributeSet();
 	SimpleAttributeSet struts2 = new SimpleAttributeSet();
 	SimpleAttributeSet j2ee = new SimpleAttributeSet();
@@ -29,33 +29,33 @@ public class TestJTextPane
 
 	public void init()
 	{
-		//ÎªrorÊôĞÔ¼¯ÉèÖÃÑÕÉ«¡¢×ÖÌå´óĞ¡¡¢×ÖÌåºÍÏÂ»®Ïß
+		//ä¸ºrorå±æ€§é›†è®¾ç½®é¢œè‰²ã€å­—ä½“å¤§å°ã€å­—ä½“å’Œä¸‹åˆ’çº¿
         StyleConstants.setForeground(ror, Color.RED);
 		StyleConstants.setFontSize(ror, 24);
 		StyleConstants.setFontFamily(ror, "Dialog");
 		StyleConstants.setUnderline(ror, true);
 
-		//Îªstruts2ÊôĞÔ¼¯ÉèÖÃÑÕÉ«¡¢×ÖÌå´óĞ¡¡¢×ÖÌåºÍ´ÖÌå×Ö
+		//ä¸ºstruts2å±æ€§é›†è®¾ç½®é¢œè‰²ã€å­—ä½“å¤§å°ã€å­—ä½“å’Œç²—ä½“å­—
         StyleConstants.setForeground(struts2, Color.BLUE);
 		StyleConstants.setFontSize(struts2, 30);
 		StyleConstants.setFontFamily(struts2, "Arial Black");
 		StyleConstants.setBold(struts2, true);
 
 
-		//Îªj2eeÊôĞÔ¼¯ÉèÖÃÑÕÉ«¡¢×ÖÌå´óĞ¡¡¢Ğ±Ìå×Ö
+		//ä¸ºj2eeå±æ€§é›†è®¾ç½®é¢œè‰²ã€å­—ä½“å¤§å°ã€æ–œä½“å­—
 		StyleConstants.setForeground(j2ee, Color.GREEN);
 		StyleConstants.setFontSize(j2ee, 32);
 		StyleConstants.setItalic(j2ee, true);
 
 		 
-		//ÉèÖÃ²»ÔÊĞí±à¼­
+		//è®¾ç½®ä¸å…è®¸ç¼–è¾‘
 		txt.setEditable(false);
 	
-		txt.setText("RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù\n"
-			+ "Struts2È¨ÍşÖ¸ÄÏ\n"
-			+ "ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½\n");
+		txt.setText("RORæ•æ·å¼€å‘æœ€ä½³å®è·µ\n"
+			+ "Struts2æƒå¨æŒ‡å—\n"
+			+ "è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜\n");
 	
-		//·Ö±ğÎªÎÄµµÖĞÈı¶ÎÎÄ×ÖÉèÖÃ²»Í¬µÄÍâ¹ÛÑùÊ½
+		//åˆ†åˆ«ä¸ºæ–‡æ¡£ä¸­ä¸‰æ®µæ–‡å­—è®¾ç½®ä¸åŒçš„å¤–è§‚æ ·å¼
 		doc.setCharacterAttributes(0 , 12 , 
 			ror, true);
 		doc.setCharacterAttributes(12 , 12 , 
@@ -65,10 +65,10 @@ public class TestJTextPane
 
 		mainWin.add(new JScrollPane(txt), BorderLayout.CENTER);
 
-		//»ñÈ¡ÆÁÄ»³ß´ç
+		//è·å–å±å¹•å°ºå¯¸
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int inset = 100;
-		//ÉèÖÃÖ÷´°¿ÚµÄ´óĞ¡
+		//è®¾ç½®ä¸»çª—å£çš„å¤§å°
         mainWin.setBounds ( inset, inset, 
 			screenSize.width - inset * 2, screenSize.height - inset * 2 );
 		mainWin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

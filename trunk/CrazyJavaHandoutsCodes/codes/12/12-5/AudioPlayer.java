@@ -14,10 +14,10 @@ import javax.swing.event.*;
  */
 public class AudioPlayer extends JApplet
 {
-	//¶¨ÒåÒ»¸öÒôÆµ¶ÔÏó
+	//å®šä¹‰ä¸€ä¸ªéŸ³é¢‘å¯¹è±¡
 	AudioClip audioClip;
 	JList audioList;
-	//¶¨ÒåÈı¸ö°´Å¥
+	//å®šä¹‰ä¸‰ä¸ªæŒ‰é’®
 	JButton buttonPlay;
 	JButton buttonLoop;
 	JButton buttonStop;
@@ -26,7 +26,7 @@ public class AudioPlayer extends JApplet
 	{
 		java.util.ArrayList<String> musicList = new java.util.ArrayList<String>();
 		int i = 1;
-		//²ÉÓÃÑ­»·¼ÓÔØ¸ÃAppletµÄËùÓĞ²ÎÊı
+		//é‡‡ç”¨å¾ªç¯åŠ è½½è¯¥Appletçš„æ‰€æœ‰å‚æ•°
 		while(true)
 		{	
 			String musicName = getParameter(i++ + "");
@@ -42,12 +42,12 @@ public class AudioPlayer extends JApplet
 		String[] musicNames = new String[musicList.size()];
 		musicNames = musicList.toArray(musicNames);
 		audioList = new JList(musicNames);
-		//Ä¬ÈÏ¼ÓÔØµÚÒ»Ê×ÒôÀÖ
+		//é»˜è®¤åŠ è½½ç¬¬ä¸€é¦–éŸ³ä¹
 		audioClip = getAudioClip(getCodeBase() , "music/" + musicNames[0] + ".mid");
-		buttonPlay = new JButton("¿ªÊ¼²¥·Å");
-		buttonLoop = new JButton("Ñ­»·²¥·Å");
-		buttonStop = new JButton("Í£Ö¹²¥·Å");
-		//ÎªÈı¸ö°´Å¥ºÍaudioListÌí¼ÓÊÂ¼ş¼àÌıÆ÷
+		buttonPlay = new JButton("å¼€å§‹æ’­æ”¾");
+		buttonLoop = new JButton("å¾ªç¯æ’­æ”¾");
+		buttonStop = new JButton("åœæ­¢æ’­æ”¾");
+		//ä¸ºä¸‰ä¸ªæŒ‰é’®å’ŒaudioListæ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		buttonPlay.addActionListener(new PlayListener());
 		buttonLoop.addActionListener(new PlayListener());
 		buttonStop.addActionListener(new PlayListener());
@@ -60,12 +60,12 @@ public class AudioPlayer extends JApplet
 		jp.add(buttonStop);
 		add(jp , BorderLayout.SOUTH);
 	}
-	//¶¨ÒåÓÃÓÚÈı¸ö°´Å¥µÄ¼àÌıÆ÷
+	//å®šä¹‰ç”¨äºä¸‰ä¸ªæŒ‰é’®çš„ç›‘å¬å™¨
 	class PlayListener implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			//¸ù¾İ°´Å¥À´¾ö¶¨¶ÔÒôÆµÎÄ¼ş²¥·Å¡¢ÔİÍ£ºÍÑ­»·²¥·Å
+			//æ ¹æ®æŒ‰é’®æ¥å†³å®šå¯¹éŸ³é¢‘æ–‡ä»¶æ’­æ”¾ã€æš‚åœå’Œå¾ªç¯æ’­æ”¾
 			if (e.getSource() == buttonPlay)
 			{
 				if (audioClip != null)
@@ -90,7 +90,7 @@ public class AudioPlayer extends JApplet
 			}
 		}
 	}
-	//ÊµÏÖJListÉÏµÄÊó±ê¶¯×÷¼àÌıÆ÷
+	//å®ç°JListä¸Šçš„é¼ æ ‡åŠ¨ä½œç›‘å¬å™¨
 	class ChangeMusicListener extends MouseAdapter
 	{
 		public void mouseClicked(MouseEvent e)
@@ -106,11 +106,11 @@ public class AudioPlayer extends JApplet
 			}
 		}
 	}
-	//·µ»ØJListÖĞµ±Ç°Ñ¡ÖĞÏî¶ÔÓ¦µÄÒôÆµ¶ÔÏó
+	//è¿”å›JListä¸­å½“å‰é€‰ä¸­é¡¹å¯¹åº”çš„éŸ³é¢‘å¯¹è±¡
 	private AudioClip getSelectedAudioClip()
 	{
 		String selected = audioList.getSelectedValue().toString();
-		//·µ»ØÒÔµ±Ç°Ñ¡ÖĞÏî´´½¨µÄÒôÆµ¶ÔÏó
+		//è¿”å›ä»¥å½“å‰é€‰ä¸­é¡¹åˆ›å»ºçš„éŸ³é¢‘å¯¹è±¡
 		return getAudioClip(getCodeBase() , "music/"
 			+ selected + ".mid");
 	}

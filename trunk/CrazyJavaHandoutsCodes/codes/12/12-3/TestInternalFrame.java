@@ -23,45 +23,45 @@ public class TestInternalFrame
 	final int DESKTOP_HEIGHT = 360;
 	final int FRAME_DISTANCE = 30;
 
-	JFrame jf = new JFrame("MDI����");
-	//����һ����������
+	JFrame jf = new JFrame("MDI界面");
+	//定义一个虚拟桌面
 	private MyJDesktopPane desktop = new MyJDesktopPane();
-	//������һ���ڲ����ڵ������
+	//保存下一个内部窗口的座标点
 	private int nextFrameX;
 	private int nextFrameY;
-	//�����ڲ�����Ϊ���������1/2��С
+	//定义内部窗口为虚拟桌面的1/2大小
 	private int width = DESKTOP_WIDTH / 2;
 	private int height = DESKTOP_HEIGHT / 2;
-	//Ϊ�����ڶ���2���˵�
-	JMenu fileMenu = new JMenu("�ļ�");
-	JMenu windowMenu = new JMenu("����");
-	//����newAction���ڴ����˵��͹��߰�ť
-	Action newAction = new AbstractAction("�½�", new ImageIcon("ico/new.png"))
+	//为主窗口定义2个菜单
+	JMenu fileMenu = new JMenu("文件");
+	JMenu windowMenu = new JMenu("窗口");
+	//定义newAction用于创建菜单和工具按钮
+	Action newAction = new AbstractAction("新建", new ImageIcon("ico/new.png"))
 	{
 		public void actionPerformed(ActionEvent event)
 		{
-			//�����ڲ�����
-			final JInternalFrame iframe = new JInternalFrame("���ĵ�",
-				true, // �ɸı��С
-				true, // �ɹر�
-				true, // �����
-				true); // ����С��
+			//创建内部窗口
+			final JInternalFrame iframe = new JInternalFrame("新文档",
+				true, // 可改变大小
+				true, // 可关闭
+				true, // 可最大化
+				true); // 可最小化
 			iframe.add(new JScrollPane(new JTextArea(8, 40)));
-			//���ڲ��������ӵ�����������
+			//将内部窗口添加到虚拟桌面中
 			desktop.add(iframe);
-			//�����ڲ����ڵ�ԭʼλ�ã��ڲ�����Ĭ�ϴ�С��0X0������0,0λ�ã�
+			//设置内部窗口的原始位置（内部窗口默认大小是0X0，放在0,0位置）
 			iframe.reshape(nextFrameX, nextFrameY, width, height);
-			//ʹ�ô��ڿɼ���������ѡ����
+			//使该窗口可见，并尝试选中它
 			iframe.show();
-			//������һ���ڲ����ڵ�λ��
+			//计算下一个内部窗口的位置
 			nextFrameX += FRAME_DISTANCE;
 			nextFrameY += FRAME_DISTANCE;
 			if (nextFrameX + width > desktop.getWidth()) nextFrameX = 0;
 			if (nextFrameY + height > desktop.getHeight()) nextFrameY = 0;
 		}
 	};
-	//����exitAction���ڴ����˵��͹��߰�ť
-	Action exitAction = new AbstractAction("�˳�", new ImageIcon("ico/exit.png"))
+	//定义exitAction用于创建菜单和工具按钮
+	Action exitAction = new AbstractAction("退出", new ImageIcon("ico/exit.png"))
 	{
 		public void actionPerformed(ActionEvent event)
 		{
@@ -71,7 +71,7 @@ public class TestInternalFrame
 
 	public void init()
 	{
-		//Ϊ���ڰ�װ�˵����͹�����
+		//为窗口安装菜单条和工具条
 		JMenuBar menuBar = new JMenuBar();
 		JToolBar toolBar = new JToolBar();
 		jf.setJMenuBar(menuBar);
@@ -81,7 +81,7 @@ public class TestInternalFrame
 		toolBar.add(newAction);
 		toolBar.add(exitAction);
 		menuBar.add(windowMenu);
-		JMenuItem nextItem = new JMenuItem("��һ��");
+		JMenuItem nextItem = new JMenuItem("下一个");
 		nextItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
@@ -90,32 +90,32 @@ public class TestInternalFrame
 			}
 		});
 		windowMenu.add(nextItem);
-		JMenuItem cascadeItem = new JMenuItem("����");
+		JMenuItem cascadeItem = new JMenuItem("级联");
 		cascadeItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//������ʾ���ڣ��ڲ����ڵĴ�С���ⲿ���ڵ�0.75
+				//级联显示窗口，内部窗口的大小是外部窗口的0.75
 				desktop.cascadeWindows(FRAME_DISTANCE , 0.75);
 			}
 		});
 		windowMenu.add(cascadeItem);
-		JMenuItem tileItem = new JMenuItem("ƽ��");
+		JMenuItem tileItem = new JMenuItem("平铺");
 		tileItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//ƽ����ʾ�����ڲ�����
+				//平铺显示所有内部窗口
 				desktop.tileWindows();
 			}
 		});
 		windowMenu.add(tileItem);
-		final JCheckBoxMenuItem dragOutlineItem = new JCheckBoxMenuItem("����ʾ�϶����ڵ�����");
+		final JCheckBoxMenuItem dragOutlineItem = new JCheckBoxMenuItem("仅显示拖动窗口的轮廓");
 		dragOutlineItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//���ݸò˵����Ƿ�ѡ�����������������϶�ģʽ
+				//根据该菜单项是否选择来决定采用哪种拖动模式
 				desktop.setDragMode(dragOutlineItem.isSelected() 
 					? JDesktopPane.OUTLINE_DRAG_MODE
 					: JDesktopPane.LIVE_DRAG_MODE);
@@ -123,7 +123,7 @@ public class TestInternalFrame
 		});
 		windowMenu.add(dragOutlineItem);
 		desktop.setPreferredSize(new Dimension(480, 360));
-		//�������������ӵ�����JFrame������
+		//将虚拟桌面添加到顶级JFrame容器中
 		jf.add(desktop);
 		jf.add(toolBar , BorderLayout.NORTH);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -138,28 +138,28 @@ public class TestInternalFrame
 }
 class MyJDesktopPane extends JDesktopPane
 {
-	//�����д����Լ�����ʽ��ʾ,
-	//����offset���������ڵ�λ�ƾ���,scale���ڲ�������JDesktopPane�Ĵ�С����
+	//将所有窗口以级联方式显示,
+	//其中offset是两个窗口的位移距离,scale是内部窗口与JDesktopPane的大小比例
 	public void cascadeWindows(int offset , double scale)
 	{
-		//���弶����ʾ����ʱ�ڲ����ڵĴ�С
+		//定义级联显示窗口时内部窗口的大小
 		int width = (int)(getWidth() * scale);
 		int height = (int)(getHeight() * scale);
-		//���ڱ��漶������ʱÿ�����ڵ�λ��
+		//用于保存级联窗口时每个窗口的位置
 		int x = 0;
 		int y = 0;
 		for (JInternalFrame frame : getAllFrames())
 		{  
 			try
 			{  
-				//ȡ���ڲ����ڵ����,��С��
+				//取消内部窗口的最大化,最小化
 				frame.setMaximum(false);
 				frame.setIcon(false);
-				//�Ѵ������·�����ָ��λ��
+				//把窗口重新放置在指定位置
 				frame.reshape(x, y, width, height);
 				x += offset;
 				y += offset;
-				//���������������߽�
+				//如果到了虚拟桌面边界
 				if (x + width > getWidth()) x = 0;
 				if (y + height > getHeight()) y = 0;
 			}
@@ -167,43 +167,43 @@ class MyJDesktopPane extends JDesktopPane
 			{}
 		}
 	}
-	//�����д�����ƽ�̷�ʽ��ʾ
+	//将所有窗口以平铺方式显示
 	public void tileWindows()
 	{  
-		//ͳ�����д���
+		//统计所有窗口
 		int frameCount = 0;
 		for (JInternalFrame frame : getAllFrames())
 		{
 			frameCount++;
 		}
-		//������Ҫ�����С������вſ���ƽ�����д���
+		//计算需要多少行、多少列才可以平铺所有窗口
 		int rows = (int) Math.sqrt(frameCount);
 		int cols = frameCount / rows;
-		//��Ҫ�������ӵ��������еĴ���
+		//需要额外增加到其他列中的窗口
 		int extra = frameCount % rows;
-		//����ƽ��ʱ�ڲ����ڵĴ�С
+		//计算平铺时内部窗口的大小
 		int width = getWidth() / cols;
 		int height = getHeight() / rows;
-		//���ڱ���ƽ�̴���ʱÿ�������ں��������ϵ�����
+		//用于保存平铺窗口时每个窗口在横向、纵向上的索引
 		int x = 0;
 		int y = 0;
 		for (JInternalFrame frame : getAllFrames())
 		{  
 			try
 			{
-				//ȡ���ڲ����ڵ����,��С��
+				//取消内部窗口的最大化,最小化
 				frame.setMaximum(false);
 				frame.setIcon(false);
-				//�����ڷ���ָ��λ��
+				//将窗口放在指定位置
 				frame.reshape(x * width, y * height, width, height);
 				y++;
-				//ÿ����һ�д���
+				//每排完一列窗口
 				if (y == rows)
 				{
-					//��ʼ�ŷ���һ�д���
+					//开始排放下一列窗口
 					y = 0;
 					x++;
-					//����������Ĵ�����ʣ�µ�������ȣ�����������ж���Ҫ������һ������
+					//如果额外多出的窗口与剩下的列数相等，则后面所有列都需要多排列一个窗口
 					if (extra == cols - x)
 					{
 						rows++;
@@ -215,7 +215,7 @@ class MyJDesktopPane extends JDesktopPane
 			{}
 		}
 	}
-	//ѡ����һ����ͼ�괰��
+	//选中下一个非图标窗口
 	public void selectNextWindow()
 	{  
 		JInternalFrame[] frames = getAllFrames();
@@ -223,12 +223,12 @@ class MyJDesktopPane extends JDesktopPane
 		{  
 			if (frames[i].isSelected())
 			{  
-				// �ҳ���һ������С���Ĵ��ڣ�����ѡ������
-				//���ѡ��ʧ�ܣ����������ѡ����һ������
+				// 找出下一个非最小化的窗口，尝试选中它，
+				//如果选中失败，则继续尝试选中下一个窗口
 				int next = (i + 1) % frames.length;
 				while (next != i)
 				{
-					//����ô��ڲ��Ǵ�����С��״̬
+					//如果该窗口不是处于最小化状态
 					if (!frames[next].isIcon())
 					{
 						try

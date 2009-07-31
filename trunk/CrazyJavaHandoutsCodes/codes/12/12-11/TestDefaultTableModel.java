@@ -16,11 +16,11 @@ import javax.swing.table.*;
  */
 public class TestDefaultTableModel
 {
-	JFrame mainWin = new JFrame("¹ÜÀíÊı¾İĞĞ¡¢Êı¾İÁĞ");
+	JFrame mainWin = new JFrame("ç®¡ç†æ•°æ®è¡Œã€æ•°æ®åˆ—");
 	final int COLUMN_COUNT = 5;
 	DefaultTableModel model;
 	JTable table;
-	//ÓÃÓÚ±£´æ±»Òş²ØÁĞµÄList¼¯ºÏ
+	//ç”¨äºä¿å­˜è¢«éšè—åˆ—çš„Listé›†åˆ
 	ArrayList<TableColumn> hiddenColumns = new ArrayList<TableColumn>();
 	public void init()
 	{
@@ -29,7 +29,7 @@ public class TestDefaultTableModel
 		{
 			for (int j = 0; j < COLUMN_COUNT ; j++ )
 			{
-				model.setValueAt("ÀÏµ¥Ôª¸ñÖµ " + i + " " + j , i , j);
+				model.setValueAt("è€å•å…ƒæ ¼å€¼ " + i + " " + j , i , j);
 			}
 		}
 
@@ -37,58 +37,58 @@ public class TestDefaultTableModel
 
 		mainWin.add(new JScrollPane(table), BorderLayout.CENTER);
 
-		//Îª´°¿Ú°²×°²Ëµ¥
+		//ä¸ºçª—å£å®‰è£…èœå•
 		JMenuBar menuBar = new JMenuBar();
 		mainWin.setJMenuBar(menuBar);
-		JMenu tableMenu = new JMenu("¹ÜÀí");
+		JMenu tableMenu = new JMenu("ç®¡ç†");
 		menuBar.add(tableMenu);
 
-		JMenuItem hideColumnsItem = new JMenuItem("Òş²ØÑ¡ÖĞÁĞ");
+		JMenuItem hideColumnsItem = new JMenuItem("éšè—é€‰ä¸­åˆ—");
 		hideColumnsItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//»ñÈ¡ËùÓĞÑ¡ÖĞÁĞµÄË÷Òı
+				//è·å–æ‰€æœ‰é€‰ä¸­åˆ—çš„ç´¢å¼•
 				int[] selected = table.getSelectedColumns();
 				TableColumnModel columnModel = table.getColumnModel();
-				//ÒÀ´Î°ÑÃ¿Ò»¸öÑ¡ÖĞµÄÁĞÒş²ØÆğÀ´£¬²¢Ê¹ÓÃList°ÑÕâĞ©ÁĞ±£´æÆğÀ´
+				//ä¾æ¬¡æŠŠæ¯ä¸€ä¸ªé€‰ä¸­çš„åˆ—éšè—èµ·æ¥ï¼Œå¹¶ä½¿ç”¨ListæŠŠè¿™äº›åˆ—ä¿å­˜èµ·æ¥
 				for (int i = selected.length - 1; i >= 0; i--)
 				{
 					TableColumn column = columnModel.getColumn(selected[i]);
 					table.removeColumn(column);
-					//°ÑÒş²ØµÄÁĞ±£´æÆğÀ´£¬È·±£ÒÔºó¿ÉÒÔÏÔÊ¾³öÀ´
+					//æŠŠéšè—çš„åˆ—ä¿å­˜èµ·æ¥ï¼Œç¡®ä¿ä»¥åå¯ä»¥æ˜¾ç¤ºå‡ºæ¥
 					hiddenColumns.add(column);
 				}
 			}
 		});
 		tableMenu.add(hideColumnsItem);
 
-		JMenuItem showColumnsItem = new JMenuItem("ÏÔÊ¾Òş²ØÁĞ");
+		JMenuItem showColumnsItem = new JMenuItem("æ˜¾ç¤ºéšè—åˆ—");
 		showColumnsItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//°ÑËùÓĞÒş²ØÁĞÒÀ´ÎÏÔÊ¾³öÀ´
+				//æŠŠæ‰€æœ‰éšè—åˆ—ä¾æ¬¡æ˜¾ç¤ºå‡ºæ¥
 				for (TableColumn tc : hiddenColumns)
 				{
-					//ÒÀ´Î°ÑËùÓĞÒş²ØµÄÁĞÏÔÊ¾³öÀ´
+					//ä¾æ¬¡æŠŠæ‰€æœ‰éšè—çš„åˆ—æ˜¾ç¤ºå‡ºæ¥
 					table.addColumn(tc);
 				}
-				//Çå¿Õ±£´æÒş²ØÁĞµÄList¼¯ºÏ
+				//æ¸…ç©ºä¿å­˜éšè—åˆ—çš„Listé›†åˆ
 				hiddenColumns.clear();            
 			}
 		});
 		tableMenu.add(showColumnsItem);
 
-		JMenuItem addColumnItem = new JMenuItem("²åÈëÑ¡ÖĞÁĞ");
+		JMenuItem addColumnItem = new JMenuItem("æ’å…¥é€‰ä¸­åˆ—");
 		addColumnItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//»ñÈ¡ËùÓĞÑ¡ÖĞÁĞµÄË÷Òı
+				//è·å–æ‰€æœ‰é€‰ä¸­åˆ—çš„ç´¢å¼•
 				int[] selected = table.getSelectedColumns();
 				TableColumnModel columnModel = table.getColumnModel();
-				//ÒÀ´Î°ÑÑ¡ÖĞµÄÁĞÌí¼Óµ½JTableÖ®ºó
+				//ä¾æ¬¡æŠŠé€‰ä¸­çš„åˆ—æ·»åŠ åˆ°JTableä¹‹å
 				for (int i = selected.length - 1; i >= 0; i--)
 				{  
 					TableColumn column = columnModel.getColumn(selected[i]);
@@ -98,31 +98,31 @@ public class TestDefaultTableModel
 		});
 		tableMenu.add(addColumnItem);
 
-		JMenuItem addRowItem = new JMenuItem("Ôö¼ÓĞĞ");
+		JMenuItem addRowItem = new JMenuItem("å¢åŠ è¡Œ");
 		addRowItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//´´½¨Ò»¸öStringÊı×é×÷ÎªĞÂÔöĞĞµÄÄÚÈİ
+				//åˆ›å»ºä¸€ä¸ªStringæ•°ç»„ä½œä¸ºæ–°å¢è¡Œçš„å†…å®¹
 				String[] newCells = new String[COLUMN_COUNT];
 				for (int i = 0; i < newCells.length; i++)
 				{
-					newCells[i] = "ĞÂµ¥Ôª¸ñÖµ " + model.getRowCount() + " " + i;
+					newCells[i] = "æ–°å•å…ƒæ ¼å€¼ " + model.getRowCount() + " " + i;
 				}
-				//ÏòTableModelÖĞĞÂÔöÒ»ĞĞ¡£
+				//å‘TableModelä¸­æ–°å¢ä¸€è¡Œã€‚
 				model.addRow(newCells);
 			}
 		});
 		tableMenu.add(addRowItem);
 
-		JMenuItem removeRowsItem = new  JMenuItem("É¾³ıÑ¡ÖĞĞĞ");
+		JMenuItem removeRowsItem = new  JMenuItem("åˆ é™¤é€‰ä¸­è¡Œ");
 		removeRowsItem.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//»ñÈ¡ËùÓĞÑ¡ÖĞĞĞ
+				//è·å–æ‰€æœ‰é€‰ä¸­è¡Œ
 				int[] selected = table.getSelectedRows();
-				//ÒÀ´ÎÉ¾³ıËùÓĞÑ¡ÖĞĞĞ
+				//ä¾æ¬¡åˆ é™¤æ‰€æœ‰é€‰ä¸­è¡Œ
 				for (int i = selected.length - 1; i >= 0; i--)
 				{
 					model.removeRow(selected[i]);

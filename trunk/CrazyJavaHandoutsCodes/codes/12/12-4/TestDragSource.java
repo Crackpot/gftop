@@ -15,22 +15,22 @@ import javax.swing.*;
  */
 public class TestDragSource
 {
-	JFrame jf = new JFrame("SwingµÄÍÏ·ÅÖ§³Ö");
-	JLabel srcLabel = new JLabel("AWTµÄÍÏ·ÅÖ§³Ö.\n"
-		+"½«¸ÃÎÄ±¾ÓòµÄÄÚÈİÍÏÈëÆäËû³ÌĞò.\n");
+	JFrame jf = new JFrame("Swingçš„æ‹–æ”¾æ”¯æŒ");
+	JLabel srcLabel = new JLabel("AWTçš„æ‹–æ”¾æ”¯æŒ.\n"
+		+"å°†è¯¥æ–‡æœ¬åŸŸçš„å†…å®¹æ‹–å…¥å…¶ä»–ç¨‹åº.\n");
 	public void init()
 	{
 		DragSource dragSource = DragSource.getDefaultDragSource();
-		//½«srcLabel×ª»»³ÉÍÏ·ÅÔ´£¬ËüÄÜ½ÓÊÜ¸´ÖÆ¡¢ÒÆ¶¯Á½ÖÖ²Ù×÷
+		//å°†srcLabelè½¬æ¢æˆæ‹–æ”¾æºï¼Œå®ƒèƒ½æ¥å—å¤åˆ¶ã€ç§»åŠ¨ä¸¤ç§æ“ä½œ
 		dragSource.createDefaultDragGestureRecognizer(srcLabel,
 			DnDConstants.ACTION_COPY_OR_MOVE, new DragGestureListener()
 			{
 				public void dragGestureRecognized(DragGestureEvent event)
 				{  
-					//½«JLabelÀïµÄÎÄ±¾ĞÅÏ¢°ü×°³ÉTransferable¶ÔÏó
+					//å°†JLabelé‡Œçš„æ–‡æœ¬ä¿¡æ¯åŒ…è£…æˆTransferableå¯¹è±¡
 					String txt = srcLabel.getText();
 					Transferable transferable = new StringSelection(txt);
-					//¼ÌĞøÍÏ·Å²Ù×÷,ÍÏ·Å¹ı³ÌÖĞÊ¹ÓÃÊÖ×´¹â±ê
+					//ç»§ç»­æ‹–æ”¾æ“ä½œ,æ‹–æ”¾è¿‡ç¨‹ä¸­ä½¿ç”¨æ‰‹çŠ¶å…‰æ ‡
 					event.startDrag(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR), 
 						transferable);
 				}

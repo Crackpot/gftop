@@ -16,25 +16,25 @@ import javax.swing.event.*;
 public class TestSplitPane
 {
 	Book[] books = new Book[]{
-		new Book("Struts2È¨ÍşÖ¸ÄÏ" , new ImageIcon("ico/struts2.jpg") , 
-			"È«Ãæ½éÉÜStruts2µÄ¸÷·½\nÃæÖªÊ¶"),
-		new Book("ÇáÁ¿¼¶J2EEÆóÒµÓ¦ÓÃÊµÕ½" , new ImageIcon("ico/j2ee.jpg") ,
-			"½éÉÜStruts¡¢SpringºÍ\nHibernateÕûºÏ¿ª·¢µÄÖªÊ¶"),
-		new Book("»ùÓÚJ2EEµÄAjax±¦µä" , new ImageIcon("ico/ajax.jpg") , 
-			"È«Ãæ½éÉÜJ2EEÆ½Ì¨ÉÏAjax\n¿ª·¢µÄ¸÷·½ÃæÖªÊ¶")
+		new Book("Struts2æƒå¨æŒ‡å—" , new ImageIcon("ico/struts2.jpg") , 
+			"å…¨é¢ä»‹ç»Struts2çš„å„æ–¹\né¢çŸ¥è¯†"),
+		new Book("è½»é‡çº§J2EEä¼ä¸šåº”ç”¨å®æˆ˜" , new ImageIcon("ico/j2ee.jpg") ,
+			"ä»‹ç»Strutsã€Springå’Œ\nHibernateæ•´åˆå¼€å‘çš„çŸ¥è¯†"),
+		new Book("åŸºäºJ2EEçš„Ajaxå®å…¸" , new ImageIcon("ico/ajax.jpg") , 
+			"å…¨é¢ä»‹ç»J2EEå¹³å°ä¸ŠAjax\nå¼€å‘çš„å„æ–¹é¢çŸ¥è¯†")
 	};
-	JFrame jf = new JFrame("²âÊÔJSplitPane");
+	JFrame jf = new JFrame("æµ‹è¯•JSplitPane");
 	JList bookList = new JList(books);
 	JLabel bookCover = new JLabel();
 	JTextArea bookDesc = new JTextArea();
 
 	public void init()
 	{
-		//ÎªÈı¸ö×é¼şÉèÖÃ×î¼Ñ´óĞ¡
+		//ä¸ºä¸‰ä¸ªç»„ä»¶è®¾ç½®æœ€ä½³å¤§å°
 		bookList.setPreferredSize(new Dimension(150, 300));
 		bookCover.setPreferredSize(new Dimension(300, 150));
 		bookDesc.setPreferredSize(new Dimension(300, 150));
-		//ÎªÏÂÀ­ÁĞ±íÌí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//ä¸ºä¸‹æ‹‰åˆ—è¡¨æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		bookList.addListSelectionListener(new ListSelectionListener()
 		{
 			public void valueChanged(ListSelectionEvent event)
@@ -44,18 +44,18 @@ public class TestSplitPane
 				bookDesc.setText(book.getDesc());
 			}
          });
-		//´´½¨Ò»¸ö´¹Ö±µÄ·Ö¸îÃæ°å£¬
-		//½«bookCover·ÅÔÚÉÏÃæ£¬½«bookDesc·ÅÔÚÏÂÃæ , Ö§³ÖÁ¬Ğø²¼¾Ö
+		//åˆ›å»ºä¸€ä¸ªå‚ç›´çš„åˆ†å‰²é¢æ¿ï¼Œ
+		//å°†bookCoveræ”¾åœ¨ä¸Šé¢ï¼Œå°†bookDescæ”¾åœ¨ä¸‹é¢ , æ”¯æŒè¿ç»­å¸ƒå±€
 		JSplitPane left = new JSplitPane(JSplitPane.VERTICAL_SPLIT, true , 
 			bookCover, new JScrollPane(bookDesc));
-		//´ò¿ª¡°Ò»´¥¼´Õ¹¡±µÄÌØĞÔ
+		//æ‰“å¼€â€œä¸€è§¦å³å±•â€çš„ç‰¹æ€§
 		left.setOneTouchExpandable(true);
-		//ÏÂÃæ´úÂëÉèÖÃ·Ö¸îÌõµÄ´óĞ¡¡£
+		//ä¸‹é¢ä»£ç è®¾ç½®åˆ†å‰²æ¡çš„å¤§å°ã€‚
 		//left.setDividerSize(50); 
-		//ÉèÖÃ¸Ã·Ö¸îÃæ°å¸ù¾İËù°üº¬×é¼şµÄ×î¼Ñ´óĞ¡À´µ÷Õû²¼¾Ö 
+		//è®¾ç½®è¯¥åˆ†å‰²é¢æ¿æ ¹æ®æ‰€åŒ…å«ç»„ä»¶çš„æœ€ä½³å¤§å°æ¥è°ƒæ•´å¸ƒå±€ 
 		left.resetToPreferredSizes();
-		//´´½¨Ò»¸öË®Æ½µÄ·Ö¸îÃæ°å
-		//½«left×é¼ş·ÅÔÚ×ó±ß£¬½«bookList×é¼ş·ÅÔÚÓÒ±ß
+		//åˆ›å»ºä¸€ä¸ªæ°´å¹³çš„åˆ†å‰²é¢æ¿
+		//å°†leftç»„ä»¶æ”¾åœ¨å·¦è¾¹ï¼Œå°†bookListç»„ä»¶æ”¾åœ¨å³è¾¹
 		JSplitPane content = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
 			left, bookList);
 		jf.add(content);

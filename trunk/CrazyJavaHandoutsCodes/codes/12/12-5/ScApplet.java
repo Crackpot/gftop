@@ -17,8 +17,8 @@ import java.awt.event.*;
  */
 public class ScApplet extends Applet
 {
-	final String testStr = "JavaÕæºÃÍæ£¬Ñ§Ï°ºÜÓĞÈ¤£¡";
-	//ÓÃÓÚ±£´æ×Ö·û´®ÏÂÒ»´Î³öÏÖµÄ×ù±ê
+	final String testStr = "JavaçœŸå¥½ç©ï¼Œå­¦ä¹ å¾ˆæœ‰è¶£ï¼";
+	//ç”¨äºä¿å­˜å­—ç¬¦ä¸²ä¸‹ä¸€æ¬¡å‡ºç°çš„åº§æ ‡
 	private int nextX;
 	private int nextY;
 	private Color nextColor;
@@ -30,18 +30,18 @@ public class ScApplet extends Applet
 		{
 			public void actionPerformed(ActionEvent event)
 			{
-				//Ëæ»úÉú³ÉÏÂÒ»´Î×ù±ê¡¢ÑÕÉ«¡¢×ÖÌå´óĞ¡
+				//éšæœºç”Ÿæˆä¸‹ä¸€æ¬¡åº§æ ‡ã€é¢œè‰²ã€å­—ä½“å¤§å°
 				nextX = rand.nextInt(400);
 				nextY = rand.nextInt(300);
 				nextColor = new Color(rand.nextInt(255) , rand.nextInt(255) , rand.nextInt(255));
 				nextFont = new Font("Times" , Font.BOLD , rand.nextInt(60));
-				//Ç¿ÖÆÖØ»æ
+				//å¼ºåˆ¶é‡ç»˜
 				repaint();
 			}
 		});
 		timer.start();
 	}
-	//»æÖÆApplet½çÃæµÄ·½·¨
+	//ç»˜åˆ¶Appletç•Œé¢çš„æ–¹æ³•
 	public void paint(Graphics g)
 	{
 		g.setColor(nextColor);

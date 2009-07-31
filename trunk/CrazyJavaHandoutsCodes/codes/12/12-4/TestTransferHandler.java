@@ -13,10 +13,10 @@ import javax.swing.*;
  */
 public class TestTransferHandler
 {
-	private JFrame jf = new JFrame("测试TransferHandler");
+	private JFrame jf = new JFrame("娴嬭瘯TransferHandler");
 	JColorChooser chooser = new JColorChooser();
-	JTextArea txt = new JTextArea("测试TransferHandler\n" + 
-		"直接将上面颜色拖入以改变文本颜色");
+	JTextArea txt = new JTextArea("娴嬭瘯TransferHandler\n" + 
+		"鐩存帴灏嗕笂闈㈤鑹叉嫋鍏ヤ互鏀瑰彉鏂囨湰棰滆壊");
 	public void init()
 	{
 		chooser.setDragEnabled(true);

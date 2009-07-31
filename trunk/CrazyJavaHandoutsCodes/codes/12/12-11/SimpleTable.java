@@ -16,24 +16,24 @@ import javax.swing.table.*;
  */
 public class SimpleTable
 {
-	JFrame jf = new JFrame("¼òµ¥±í¸ñ");
+	JFrame jf = new JFrame("ç®€å•è¡¨æ ¼");
 	JTable table;
-	//¶¨Òå¶şÎ¬Êı×é×÷Îª±í¸ñÊı¾İ
+	//å®šä¹‰äºŒç»´æ•°ç»„ä½œä¸ºè¡¨æ ¼æ•°æ®
 	Object[][] tableData = 
 	{
-		new Object[]{"ÀîÇåÕÕ" , 29 , "Å®"},
-		new Object[]{"ËÕ¸ñÀ­µ×", 56 , "ÄĞ"},
-		new Object[]{"Àî°×", 35 , "ÄĞ"},
-		new Object[]{"ÅªÓñ", 18 , "Å®"},
-		new Object[]{"»¢Í·" , 2 , "ÄĞ"}
+		new Object[]{"ææ¸…ç…§" , 29 , "å¥³"},
+		new Object[]{"è‹æ ¼æ‹‰åº•", 56 , "ç”·"},
+		new Object[]{"æç™½", 35 , "ç”·"},
+		new Object[]{"å¼„ç‰", 18 , "å¥³"},
+		new Object[]{"è™å¤´" , 2 , "ç”·"}
 	};
-	//¶¨ÒåÒ»Î¬Êı¾İ×÷ÎªÁĞ±êÌâ
-	Object[] columnTitle = {"ĞÕÃû" , "ÄêÁä" , "ĞÔ±ğ"};
+	//å®šä¹‰ä¸€ç»´æ•°æ®ä½œä¸ºåˆ—æ ‡é¢˜
+	Object[] columnTitle = {"å§“å" , "å¹´é¾„" , "æ€§åˆ«"};
 	public void init()
 	{
-		//ÒÔ¶şÎ¬Êı×éºÍÒ»Î¬Êı×éÀ´´´½¨Ò»¸öJTable¶ÔÏó
+		//ä»¥äºŒç»´æ•°ç»„å’Œä¸€ç»´æ•°ç»„æ¥åˆ›å»ºä¸€ä¸ªJTableå¯¹è±¡
 		table = new JTable(tableData , columnTitle);
-		//½«JTable¶ÔÏó·ÅÔÚJScrollPaneÖĞ£¬²¢½«¸ÃJScrollPane·ÅÔÚ´°¿ÚÖĞÏÔÊ¾³öÀ´
+		//å°†JTableå¯¹è±¡æ”¾åœ¨JScrollPaneä¸­ï¼Œå¹¶å°†è¯¥JScrollPaneæ”¾åœ¨çª—å£ä¸­æ˜¾ç¤ºå‡ºæ¥
 		jf.add(new JScrollPane(table));
 		jf.pack();
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

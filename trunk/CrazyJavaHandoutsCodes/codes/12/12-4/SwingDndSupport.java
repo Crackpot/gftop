@@ -15,14 +15,14 @@ import javax.swing.*;
  */
 public class SwingDndSupport
 {
-	JFrame jf = new JFrame("SwingµÄÍÏ·ÅÖ§³Ö");
+	JFrame jf = new JFrame("Swingçš„æ‹–æ”¾æ”¯æŒ");
 	JTextArea srcTxt = new JTextArea(8 , 30);
 	JTextField jtf = new JTextField(34);
 	public void init()
 	{
-		srcTxt.append("AWTµÄÍÏ·ÅÖ§³Ö.\n");
-		srcTxt.append("½«¸ÃÎÄ±¾ÓòµÄÄÚÈİÍÏÈëÆäËû³ÌĞò.\n");
-		//Æô¶¯ÎÄ±¾ÓòºÍµ¥ĞĞÎÄ±¾¿òµÄÍÏ·ÅÖ§³Ö
+		srcTxt.append("AWTçš„æ‹–æ”¾æ”¯æŒ.\n");
+		srcTxt.append("å°†è¯¥æ–‡æœ¬åŸŸçš„å†…å®¹æ‹–å…¥å…¶ä»–ç¨‹åº.\n");
+		//å¯åŠ¨æ–‡æœ¬åŸŸå’Œå•è¡Œæ–‡æœ¬æ¡†çš„æ‹–æ”¾æ”¯æŒ
 		srcTxt.setDragEnabled(true);
 		jtf.setDragEnabled(true);
 		jf.add(new JScrollPane(srcTxt));

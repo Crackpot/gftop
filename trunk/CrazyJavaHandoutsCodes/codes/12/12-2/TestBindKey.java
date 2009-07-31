@@ -13,9 +13,9 @@ import javax.swing.*;
  */
 public class TestBindKey
 {
-	JFrame jf = new JFrame("²âÊÔ¼üÅÌ°ó¶¨");
+	JFrame jf = new JFrame("æµ‹è¯•é”®ç›˜ç»‘å®š");
 	JTextArea jta = new JTextArea(5, 30);
-	JButton jb = new JButton("·¢ËÍ");
+	JButton jb = new JButton("å‘é€");
 	JTextField jtf = new JTextField(15);
 	public void init()
 	{
@@ -24,7 +24,7 @@ public class TestBindKey
 		jp.add(jtf);
 		jp.add(jb);
 		jf.add(jp , BorderLayout.SOUTH);
-		//·¢ËÍÏûÏ¢Action,ActionÊÇActionListenerµÄ×Ó½Ó¿Ú
+		//å‘é€æ¶ˆæ¯Action,Actionæ˜¯ActionListenerçš„å­æ¥å£
 		Action sendMsg = new AbstractAction()
 		{
 			public void actionPerformed(ActionEvent e)
@@ -33,12 +33,12 @@ public class TestBindKey
 				jtf.setText("");
 			}
 		};
-		//Ìí¼ÓÊÂ¼ş¼àÌıÆ÷
+		//æ·»åŠ äº‹ä»¶ç›‘å¬å™¨
 		jb.addActionListener(sendMsg);
-		//½«Ctrl+Enter¼üºÍ"send"¹ØÁª
+		//å°†Ctrl+Enteré”®å’Œ"send"å…³è”
 		jtf.getInputMap().put(KeyStroke.getKeyStroke('\n', java.awt.event.InputEvent.CTRL_MASK) 
 			, "send");
-		//½«"send"ºÍsendMsg Action¹ØÁª
+		//å°†"send"å’ŒsendMsg Actionå…³è”
 		jtf.getActionMap().put("send", sendMsg);
 		jf.pack();
 		jf.setVisible(true);
