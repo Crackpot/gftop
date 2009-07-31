@@ -17,18 +17,18 @@ interface Person
 class MyInvokationHandler implements InvocationHandler
 {
 	/*
-		Ö´ĞĞ¶¯Ì¬´úÀí¶ÔÏóµÄËùÓĞ·½·¨Ê±£¬¶¼»á±»Ìæ»»³ÉÖ´ĞĞÈçÏÂµÄinvoke·½·¨
-		ÆäÖĞ£º
-		proxy£­´ú±í¶¯Ì¬´úÀí¶ÔÏó
-		method£­´ú±íÕıÔÚÖ´ĞĞµÄ·½·¨
-		args£­´ú±íÖ´ĞĞ´úÀí¶ÔÏó·½·¨Ê±´«ÈëµÄÊµ²Î¡£
+		æ‰§è¡ŒåŠ¨æ€ä»£ç†å¯¹è±¡çš„æ‰€æœ‰æ–¹æ³•æ—¶ï¼Œéƒ½ä¼šè¢«æ›¿æ¢æˆæ‰§è¡Œå¦‚ä¸‹çš„invokeæ–¹æ³•
+		å…¶ä¸­ï¼š
+		proxyï¼ä»£è¡¨åŠ¨æ€ä»£ç†å¯¹è±¡
+		methodï¼ä»£è¡¨æ­£åœ¨æ‰§è¡Œçš„æ–¹æ³•
+		argsï¼ä»£è¡¨æ‰§è¡Œä»£ç†å¯¹è±¡æ–¹æ³•æ—¶ä¼ å…¥çš„å®å‚ã€‚
 	*/
 	public Object invoke(Object proxy, Method method, Object[] args)
 	{
-		System.out.println("ÕıÔÚÖ´ĞĞµÄ·½·¨:" + method);
+		System.out.println("æ­£åœ¨æ‰§è¡Œçš„æ–¹æ³•:" + method);
 		if (args != null)
 		{
-			System.out.println("ÏÂÃæÊÇÖ´ĞĞ¸Ã·½·¨Ê±´«ÈëµÄÊµ²Î:");
+			System.out.println("ä¸‹é¢æ˜¯æ‰§è¡Œè¯¥æ–¹æ³•æ—¶ä¼ å…¥çš„å®å‚:");
 			for (Object val : args)
 			{
 				System.out.println(val);
@@ -36,7 +36,7 @@ class MyInvokationHandler implements InvocationHandler
 		}
 		else
 		{
-			System.out.println("µ÷ÓÃ¸Ã·½·¨ÎŞĞèÊµ²Î£¡");
+			System.out.println("è°ƒç”¨è¯¥æ–¹æ³•æ— éœ€å®å‚ï¼");
 		}
 		return null;
 	}
@@ -46,14 +46,14 @@ public class ProxyTest
 	public static void main(String[] args) 
 		throws Exception
 	{
-		//´´½¨Ò»¸öInvocationHandler¶ÔÏó
+		//åˆ›å»ºä¸€ä¸ªInvocationHandlerå¯¹è±¡
 		InvocationHandler handler = new MyInvokationHandler();
-		//Ê¹ÓÃÖ¸¶¨µÄInvocationHandlerÀ´Éú³ÉÒ»¸ö¶¯Ì¬´úÀí¶ÔÏó
+		//ä½¿ç”¨æŒ‡å®šçš„InvocationHandleræ¥ç”Ÿæˆä¸€ä¸ªåŠ¨æ€ä»£ç†å¯¹è±¡
 		Person p = (Person)Proxy.newProxyInstance(
 			Person.class.getClassLoader(),
 			new Class[]{Person.class}, handler);
-		//µ÷ÓÃ¶¯Ì¬´úÀí¶ÔÏóµÄwalk()ºÍsayHello()·½·¨
+		//è°ƒç”¨åŠ¨æ€ä»£ç†å¯¹è±¡çš„walk()å’ŒsayHello()æ–¹æ³•
 		p.walk();
-		p.sayHello("ËïÎò¿Õ");
+		p.sayHello("å­™æ‚Ÿç©º");
 	}
 }

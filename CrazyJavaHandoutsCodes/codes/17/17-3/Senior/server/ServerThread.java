@@ -15,7 +15,7 @@ public class ServerThread extends Thread
 	private Socket socket;
 	BufferedReader br = null;
 	PrintStream ps = null;
-	//¶¨ÒåÒ»¸ö¹¹ÔìÆ÷£¬ÓÃÓÚ½ÓÊÕÒ»¸öSocketÀ´´´½¨ServerThreadÏß³Ì
+	//å®šä¹‰ä¸€ä¸ªæ„é€ å™¨ï¼Œç”¨äºæ¥æ”¶ä¸€ä¸ªSocketæ¥åˆ›å»ºServerThreadçº¿ç¨‹
 	public ServerThread(Socket socket)
 	{
 		this.socket = socket;
@@ -24,68 +24,68 @@ public class ServerThread extends Thread
 	{
 		try
 		{
-			//»ñÈ¡¸ÃSocket¶ÔÓ¦µÄÊäÈëÁ÷
+			//è·å–è¯¥Socketå¯¹åº”çš„è¾“å…¥æµ
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			//»ñÈ¡¸ÃSocket¶ÔÓ¦µÄÊä³öÁ÷
+			//è·å–è¯¥Socketå¯¹åº”çš„è¾“å‡ºæµ
 			ps = new PrintStream(socket.getOutputStream());
 			String line = null;
 			while((line = br.readLine())!= null)
 			{
-				//Èç¹û¶Áµ½µÄĞĞÒÔMyProtocol.USER_ROUND¿ªÊ¼£¬²¢ÒÔÆä½áÊø£¬
-				//¿ÉÒÔÈ·¶¨¶Áµ½µÄÊÇÓÃ»§µÇÂ½µÄÓÃ»§Ãû
+				//å¦‚æœè¯»åˆ°çš„è¡Œä»¥MyProtocol.USER_ROUNDå¼€å§‹ï¼Œå¹¶ä»¥å…¶ç»“æŸï¼Œ
+				//å¯ä»¥ç¡®å®šè¯»åˆ°çš„æ˜¯ç”¨æˆ·ç™»é™†çš„ç”¨æˆ·å
 				if (line.startsWith(YeekuProtocol.USER_ROUND)
 					&& line.endsWith(YeekuProtocol.USER_ROUND))
 				{
-					//µÃµ½ÕæÊµÏûÏ¢
+					//å¾—åˆ°çœŸå®æ¶ˆæ¯
 					String userName = getRealMsg(line);
-					//Èç¹ûÓÃ»§ÃûÖØ¸´
+					//å¦‚æœç”¨æˆ·åé‡å¤
 					if (Server.clients.containsKey(userName))
 					{
-						System.out.println("ÖØ¸´");
+						System.out.println("é‡å¤");
 						ps.println(YeekuProtocol.NAME_REP);
 					}
 					else
 					{
-						System.out.println("³É¹¦");
+						System.out.println("æˆåŠŸ");
 						ps.println(YeekuProtocol.LOGIN_SUCCESS);
 						Server.clients.put(userName , ps);
 					}
 				}
-				//Èç¹û¶Áµ½µÄĞĞÒÔYeekuProtocol.PRIVATE_ROUND¿ªÊ¼£¬²¢ÒÔÆä½áÊø£¬
-				//¿ÉÒÔÈ·¶¨ÊÇË½ÁÄĞÅÏ¢£¬Ë½ÁÄĞÅÏ¢Ö»ÏòÌØ¶¨µÄÊä³öÁ÷·¢ËÍ
+				//å¦‚æœè¯»åˆ°çš„è¡Œä»¥YeekuProtocol.PRIVATE_ROUNDå¼€å§‹ï¼Œå¹¶ä»¥å…¶ç»“æŸï¼Œ
+				//å¯ä»¥ç¡®å®šæ˜¯ç§èŠä¿¡æ¯ï¼Œç§èŠä¿¡æ¯åªå‘ç‰¹å®šçš„è¾“å‡ºæµå‘é€
 				else if (line.startsWith(YeekuProtocol.PRIVATE_ROUND) 
 					&& line.endsWith(YeekuProtocol.PRIVATE_ROUND))
 				{
-					//µÃµ½ÕæÊµÏûÏ¢
+					//å¾—åˆ°çœŸå®æ¶ˆæ¯
 					String userAndMsg = getRealMsg(line);
-					//ÒÔSPLIT_SIGNÀ´·Ö¸î×Ö·û´®£¬Ç°Ãæ²¿·ÖÊÇË½ÁÄÓÃ»§£¬ºóÃæ²¿·ÖÊÇÁÄÌìĞÅÏ¢
+					//ä»¥SPLIT_SIGNæ¥åˆ†å‰²å­—ç¬¦ä¸²ï¼Œå‰é¢éƒ¨åˆ†æ˜¯ç§èŠç”¨æˆ·ï¼Œåé¢éƒ¨åˆ†æ˜¯èŠå¤©ä¿¡æ¯
 					String user = userAndMsg.split(YeekuProtocol.SPLIT_SIGN)[0];
 					String msg = userAndMsg.split(YeekuProtocol.SPLIT_SIGN)[1];
-					//»ñÈ¡Ë½ÁÄÓÃ»§¶ÔÓ¦µÄÊä³öÁ÷£¬²¢·¢ËÍË½ÁÄĞÅÏ¢
+					//è·å–ç§èŠç”¨æˆ·å¯¹åº”çš„è¾“å‡ºæµï¼Œå¹¶å‘é€ç§èŠä¿¡æ¯
 					Server.clients.get(user).println(
-						Server.clients.getKeyByValue(ps) + "ÇÄÇÄµØ¶ÔÄãËµ£º" + msg);
+						Server.clients.getKeyByValue(ps) + "æ‚„æ‚„åœ°å¯¹ä½ è¯´ï¼š" + msg);
 				}
-				//¹«ÁÄÒªÏòÃ¿¸öSocket·¢ËÍ
+				//å…¬èŠè¦å‘æ¯ä¸ªSocketå‘é€
 				else
 				{
-					//µÃµ½ÕæÊµÏûÏ¢
+					//å¾—åˆ°çœŸå®æ¶ˆæ¯
 					String msg = getRealMsg(line);
-					//±éÀúclientsÖĞµÄÃ¿¸öÊä³öÁ÷
+					//éå†clientsä¸­çš„æ¯ä¸ªè¾“å‡ºæµ
 					for (PrintStream clientPs : Server.clients.valueSet())
 					{
 						clientPs.println(Server.clients.getKeyByValue(ps)
-							+ "Ëµ£º" + msg);
+							+ "è¯´ï¼š" + msg);
 					}
 				}
 			}
 		}
-		//²¶×½µ½Òì³£ºó£¬±íÃ÷¸ÃSocket¶ÔÓ¦µÄ¿Í»§¶ËÒÑ¾­³öÏÖÁËÎÊÌâ
-		//ËùÒÔ³ÌĞò½«Æä¶ÔÓ¦µÄÊä³öÁ÷´ÓMapÖĞÉ¾³ı
+		//æ•æ‰åˆ°å¼‚å¸¸åï¼Œè¡¨æ˜è¯¥Socketå¯¹åº”çš„å®¢æˆ·ç«¯å·²ç»å‡ºç°äº†é—®é¢˜
+		//æ‰€ä»¥ç¨‹åºå°†å…¶å¯¹åº”çš„è¾“å‡ºæµä»Mapä¸­åˆ é™¤
 		catch (IOException e)
 		{
 			Server.clients.removeByValue(ps);
 			System.out.println(Server.clients.size());
-			//¹Ø±ÕÍøÂç¡¢IO×ÊÔ´
+			//å…³é—­ç½‘ç»œã€IOèµ„æº
 			try
 			{
 				if (br != null)
@@ -107,7 +107,7 @@ public class ServerThread extends Thread
 			}
 		}
 	}
-	//½«¶Áµ½µÄÄÚÈİÈ¥µôÇ°ºóµÄĞ­Òé×Ö·û£¬»Ö¸´³ÉÕæÊµÊı¾İ
+	//å°†è¯»åˆ°çš„å†…å®¹å»æ‰å‰åçš„åè®®å­—ç¬¦ï¼Œæ¢å¤æˆçœŸå®æ•°æ®
 	public String getRealMsg(String line)
 	{
 		return line.substring(YeekuProtocol.PROTOCOL_LEN

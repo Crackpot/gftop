@@ -16,15 +16,15 @@ public class ArrayTest1
 	{
 		try
 		{
-			//´´½¨Ò»¸öÔªËØÀàĞÍÎªString £¬³¤¶ÈÎª10µÄÊı×é
+			//åˆ›å»ºä¸€ä¸ªå…ƒç´ ç±»å‹ä¸ºString ï¼Œé•¿åº¦ä¸º10çš„æ•°ç»„
 			Object arr = Array.newInstance(String.class, 10);
-			//ÒÀ´ÎÎªarrÊı×éÖĞindexÎª5¡¢6µÄÔªËØ¸³Öµ
-			Array.set(arr, 5, "Struts2È¨ÍşÖ¸ÄÏ");
-			Array.set(arr, 6, "RORÃô½İ¿ª·¢×î¼ÑÊµ¼ù");
-			//ÒÀ´ÎÈ¡³öarrÊı×éÖĞindexÎª5¡¢6µÄÔªËØµÄÖµ
+			//ä¾æ¬¡ä¸ºarræ•°ç»„ä¸­indexä¸º5ã€6çš„å…ƒç´ èµ‹å€¼
+			Array.set(arr, 5, "Struts2æƒå¨æŒ‡å—");
+			Array.set(arr, 6, "RORæ•æ·å¼€å‘æœ€ä½³å®è·µ");
+			//ä¾æ¬¡å–å‡ºarræ•°ç»„ä¸­indexä¸º5ã€6çš„å…ƒç´ çš„å€¼
 			Object book1 = Array.get(arr , 5);
 			Object book2 = Array.get(arr , 6);
-			//Êä³öarrÊı×éÖĞindexÎª5¡¢6µÄÔªËØ
+			//è¾“å‡ºarræ•°ç»„ä¸­indexä¸º5ã€6çš„å…ƒç´ 
 			System.out.println(book1);
 			System.out.println(book2);
 		}

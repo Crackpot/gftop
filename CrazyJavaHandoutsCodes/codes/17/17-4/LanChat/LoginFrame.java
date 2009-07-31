@@ -13,22 +13,22 @@ import javax.swing.event.*;
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//µÇÂ½ÓÃµÄ¶Ô»°¿ò
+//ç™»é™†ç”¨çš„å¯¹è¯æ¡†
 public class LoginFrame extends JDialog
 {
 	public JLabel tip;
-	public JTextField userField = new JTextField("Àî¸Õ" , 20);
+	public JTextField userField = new JTextField("æåˆš" , 20);
 	public JComboBox iconList = new JComboBox(
 		new Integer[]{1, 2, 3, 4, 5 , 6, 7, 8 ,9 ,10});
-	private JButton loginBn = new JButton("µÇÂ½");
-	//ÁÄÌìµÄÖ÷½çÃæ
+	private JButton loginBn = new JButton("ç™»é™†");
+	//èŠå¤©çš„ä¸»ç•Œé¢
 	private LanChat chatFrame;	
-	//ÁÄÌìÍ¨ĞÅµÄ¹¤¾ßÊµÀı
+	//èŠå¤©é€šä¿¡çš„å·¥å…·å®ä¾‹
 	public static ComUtil comUtil;
-	//¹¹ÔìÆ÷£¬ÓÃÓÚ³õÊ¼»¯µÄµÇÂ½¶Ô»°¿ò
+	//æ„é€ å™¨ï¼Œç”¨äºåˆå§‹åŒ–çš„ç™»é™†å¯¹è¯æ¡†
 	public LoginFrame(LanChat parent , String msg)
 	{
-		super(parent , "ÊäÈëÃû×ÖºóµÇÂ½" , true);
+		super(parent , "è¾“å…¥åå­—åç™»é™†" , true);
 		this.chatFrame = parent;
 		setLayout(new GridLayout(5, 1));
 		JPanel jp = new JPanel();
@@ -36,9 +36,9 @@ public class LoginFrame extends JDialog
 		tip.setFont(new Font("Serif" , Font.BOLD , 16));
 		jp.add(tip); 
 		add(jp);
-		add(getPanel("ÓÃ»§Ãû" , userField));
+		add(getPanel("ç”¨æˆ·å" , userField));
 		iconList.setPreferredSize(new Dimension(224, 20));
-		add(getPanel("Í¼    ±ê" , iconList));
+		add(getPanel("å›¾    æ ‡" , iconList));
 		JPanel bp = new JPanel();
 		loginBn.addActionListener(new MyActionListener(this));
 		bp.add(loginBn); 
@@ -46,20 +46,20 @@ public class LoginFrame extends JDialog
 		pack();
 		setVisible(true);
 	}
-	//¹¤¾ß·½·¨£¬¸Ã·½·¨½«Ò»¸ö×Ö·û´®ºÍ×é¼ş×éºÏ³ÉJPanel¶ÔÏó
+	//å·¥å…·æ–¹æ³•ï¼Œè¯¥æ–¹æ³•å°†ä¸€ä¸ªå­—ç¬¦ä¸²å’Œç»„ä»¶ç»„åˆæˆJPanelå¯¹è±¡
 	private JPanel getPanel(String name , JComponent jf)
 	{
 		JPanel jp = new JPanel();
-		jp.add(new JLabel(name + "£º"));
+		jp.add(new JLabel(name + "ï¼š"));
 		jp.add(jf);
 		return jp;
 	}
-	//¸Ã·½·¨ÓÃÓÚ¸Ä±äµÇÂ½´°¿Ú×îÉÏÃæµÄÌáÊ¾ĞÅÏ¢
+	//è¯¥æ–¹æ³•ç”¨äºæ”¹å˜ç™»é™†çª—å£æœ€ä¸Šé¢çš„æç¤ºä¿¡æ¯
 	public void setTipMsg(String tip)
 	{
 		this.tip.setText(tip);
 	}
-	//¶¨ÒåÒ»¸öÊÂ¼ş¼àÌıÆ÷
+	//å®šä¹‰ä¸€ä¸ªäº‹ä»¶ç›‘å¬å™¨
 	class MyActionListener implements ActionListener
 	{
 		private LoginFrame loginFrame;
@@ -67,18 +67,18 @@ public class LoginFrame extends JDialog
 		{
 			this.loginFrame = loginFrame;
 		}
-		//µ±Êó±êµ¥»÷ÊÂ¼ş·¢ÉúÊ±
+		//å½“é¼ æ ‡å•å‡»äº‹ä»¶å‘ç”Ÿæ—¶
 		public void actionPerformed(ActionEvent evt)
 		{
 			try
 			{
-				//³õÊ¼»¯ÁÄÌìÍ¨ĞÅÀà
+				//åˆå§‹åŒ–èŠå¤©é€šä¿¡ç±»
 				comUtil = new ComUtil(chatFrame);
 				final String loginMsg = YeekuProtocol.PRESENCE + userField.getText() 
 					+ YeekuProtocol.SPLITTER + iconList.getSelectedObjects()[0]
 					+ YeekuProtocol.PRESENCE;
 				comUtil.broadCast(loginMsg);
-				//Æô¶¯¶¨Ê±Æ÷Ã¿20Ãë¹ã²¥Ò»´ÎÔÚÏßĞÅÏ¢
+				//å¯åŠ¨å®šæ—¶å™¨æ¯20ç§’å¹¿æ’­ä¸€æ¬¡åœ¨çº¿ä¿¡æ¯
 				javax.swing.Timer timer = new javax.swing.Timer(1000 * 10, 
 					new ActionListener()
 				{
@@ -93,7 +93,7 @@ public class LoginFrame extends JDialog
 			}
 			catch (Exception ex)
 			{
-				loginFrame.setTipMsg("È·ÈÏ30001¶Ë¿Ú¿ÕÏĞ£¬ÇÒÍøÂçÕı³££¡");
+				loginFrame.setTipMsg("ç¡®è®¤30001ç«¯å£ç©ºé—²ï¼Œä¸”ç½‘ç»œæ­£å¸¸ï¼");
 			}
 		}
 	}

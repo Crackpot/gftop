@@ -38,12 +38,12 @@ public class Account
 	}
 	public synchronized void draw(double drawAmount)
 	{
-		//ÕË»§Óà¶î´óÓÚÈ¡Ç®ÊıÄ¿
+		//è´¦æˆ·ä½™é¢å¤§äºå–é’±æ•°ç›®
 		if (balance >= drawAmount)
 		{
-			//ÍÂ³ö³®Æ±
+			//åå‡ºé’ç¥¨
 			System.out.println(Thread.currentThread().getName() + 
-				"È¡Ç®³É¹¦£¡ÍÂ³ö³®Æ±:" + drawAmount);
+				"å–é’±æˆåŠŸï¼åå‡ºé’ç¥¨:" + drawAmount);
 			try
 			{
 				Thread.sleep(1);			
@@ -52,14 +52,14 @@ public class Account
 			{
 				ex.printStackTrace();
 			}
-			//ĞŞ¸ÄÓà¶î
+			//ä¿®æ”¹ä½™é¢
 			balance -= drawAmount;
-			System.out.println("\tÓà¶îÎª: " + balance);
+			System.out.println("\tä½™é¢ä¸º: " + balance);
 		}
 		else
 		{
 			System.out.println(Thread.currentThread().getName() +
-				"È¡Ç®Ê§°Ü£¡Óà¶î²»×ã£¡");
+				"å–é’±å¤±è´¥ï¼ä½™é¢ä¸è¶³ï¼");
 		}
 	}
 

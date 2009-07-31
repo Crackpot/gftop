@@ -12,12 +12,12 @@ public class TestDraw
 {
     public static void main(String[] args) 
     {
-		//´´½¨Ò»¸öÕË»§
+		//åˆ›å»ºä¸€ä¸ªè´¦æˆ·
 		Account acct = new Account("1234567" , 0);
-		new DrawThread("È¡Ç®Õß" , acct , 800).start();
-		new DepositThread("´æÇ®Õß¼×" , acct , 800).start();
-		new DepositThread("´æÇ®ÕßÒÒ" , acct , 800).start();
-		new DepositThread("´æÇ®Õß±û" , acct , 800).start();
+		new DrawThread("å–é’±è€…" , acct , 800).start();
+		new DepositThread("å­˜é’±è€…ç”²" , acct , 800).start();
+		new DepositThread("å­˜é’±è€…ä¹™" , acct , 800).start();
+		new DepositThread("å­˜é’±è€…ä¸™" , acct , 800).start();
     }
 }
  

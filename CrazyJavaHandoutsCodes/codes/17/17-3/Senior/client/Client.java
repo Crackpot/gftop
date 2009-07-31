@@ -24,68 +24,68 @@ public class Client
 	{
 		try
 		{
-			//³õÊ¼»¯´ú±í¼üÅÌµÄÊäÈëÁ÷
+			//åˆå§‹åŒ–ä»£è¡¨é”®ç›˜çš„è¾“å…¥æµ
 			keyIn = new BufferedReader(
 				new InputStreamReader(System.in));
-			//Á¬½Óµ½·şÎñÆ÷
+			//è¿æ¥åˆ°æœåŠ¡å™¨
 			socket = new Socket("127.0.0.1", SERVER_PORT);
-			//»ñÈ¡¸ÃSocket¶ÔÓ¦µÄÊäÈëÁ÷ºÍÊä³öÁ÷
+			//è·å–è¯¥Socketå¯¹åº”çš„è¾“å…¥æµå’Œè¾“å‡ºæµ
 			ps = new PrintStream(socket.getOutputStream());
 			brServer = new BufferedReader(
 				new InputStreamReader(socket.getInputStream()));
 			String tip = "";
-			//²ÉÓÃÑ­»·²»¶ÏµØµ¯³ö¶Ô»°¿òÒªÇóÊäÈëÓÃ»§Ãû
+			//é‡‡ç”¨å¾ªç¯ä¸æ–­åœ°å¼¹å‡ºå¯¹è¯æ¡†è¦æ±‚è¾“å…¥ç”¨æˆ·å
 			while(true)
 			{
-				String userName = JOptionPane.showInputDialog(tip + "ÊäÈëÓÃ»§Ãû");
-				//½«ÓÃ»§ÊäÈëµÄÓÃ»§ÃûµÄÇ°ºóÔö¼ÓĞ­Òé×Ö·û´®ºó·¢ËÍ
+				String userName = JOptionPane.showInputDialog(tip + "è¾“å…¥ç”¨æˆ·å");
+				//å°†ç”¨æˆ·è¾“å…¥çš„ç”¨æˆ·åçš„å‰åå¢åŠ åè®®å­—ç¬¦ä¸²åå‘é€
 				ps.println(YeekuProtocol.USER_ROUND + userName
 					+ YeekuProtocol.USER_ROUND);
-				//¶ÁÈ¡·şÎñÆ÷µÄÏìÓ¦
+				//è¯»å–æœåŠ¡å™¨çš„å“åº”
 				String result = brServer.readLine();
-				//Èç¹ûÓÃ»§ÖØ¸´£¬¿ªÊ¼ÏÂ´ÎÑ­»·
+				//å¦‚æœç”¨æˆ·é‡å¤ï¼Œå¼€å§‹ä¸‹æ¬¡å¾ªç¯
 				if (result.equals(YeekuProtocol.NAME_REP))
 				{
-					tip = "ÓÃ»§ÃûÖØ¸´£¡ÇëÖØĞÂ";
+					tip = "ç”¨æˆ·åé‡å¤ï¼è¯·é‡æ–°";
 					continue;
 				}
-				//Èç¹û·şÎñÆ÷·µ»ØµÇÂ½³É¹¦£¬½áÊøÑ­»·
+				//å¦‚æœæœåŠ¡å™¨è¿”å›ç™»é™†æˆåŠŸï¼Œç»“æŸå¾ªç¯
 				if (result.equals(YeekuProtocol.LOGIN_SUCCESS))
 				{
 					break;
 				}
 			}
 		}
-		//²¶×½µ½Òì³££¬¹Ø±ÕÍøÂç×ÊÔ´£¬²¢ÍË³ö¸Ã³ÌĞò
+		//æ•æ‰åˆ°å¼‚å¸¸ï¼Œå…³é—­ç½‘ç»œèµ„æºï¼Œå¹¶é€€å‡ºè¯¥ç¨‹åº
 		catch (UnknownHostException ex)
 		{
-			System.out.println("ÕÒ²»µ½Ô¶³Ì·şÎñÆ÷£¬ÇëÈ·¶¨·şÎñÆ÷ÒÑ¾­Æô¶¯£¡");
+			System.out.println("æ‰¾ä¸åˆ°è¿œç¨‹æœåŠ¡å™¨ï¼Œè¯·ç¡®å®šæœåŠ¡å™¨å·²ç»å¯åŠ¨ï¼");
 			closeRs();
 			System.exit(1);
 		}
 		catch (IOException ex)
 		{
-			System.out.println("ÍøÂçÒì³££¡ÇëÖØĞÂµÇÂ½£¡");
+			System.out.println("ç½‘ç»œå¼‚å¸¸ï¼è¯·é‡æ–°ç™»é™†ï¼");
 			closeRs();
 			System.exit(1);
 		}
-		//ÒÔ¸ÃSocket¶ÔÓ¦µÄÊäÈëÁ÷Æô¶¯ClientThreadÏß³Ì
+		//ä»¥è¯¥Socketå¯¹åº”çš„è¾“å…¥æµå¯åŠ¨ClientThreadçº¿ç¨‹
 		new ClientThread(brServer).start();
 	}
-	//¶¨ÒåÒ»¸ö¶ÁÈ¡¼üÅÌÊä³ö£¬²¢ÏòÍøÂç·¢ËÍµÄ·½·¨
+	//å®šä¹‰ä¸€ä¸ªè¯»å–é”®ç›˜è¾“å‡ºï¼Œå¹¶å‘ç½‘ç»œå‘é€çš„æ–¹æ³•
 	private void readAndSend()
 	{
 		try
 		{
-			//²»¶Ï¶ÁÈ¡¼üÅÌÊäÈë
+			//ä¸æ–­è¯»å–é”®ç›˜è¾“å…¥
 			String line = null;
 			while((line = keyIn.readLine()) != null)
 			{
-				//Èç¹û·¢ËÍµÄĞÅÏ¢ÖĞÓĞÃ°ºÅ£¬ÇÒÒÔ//¿ªÍ·£¬ÔòÈÏÎªÏë·¢ËÍË½ÁÄĞÅÏ¢
+				//å¦‚æœå‘é€çš„ä¿¡æ¯ä¸­æœ‰å†’å·ï¼Œä¸”ä»¥//å¼€å¤´ï¼Œåˆ™è®¤ä¸ºæƒ³å‘é€ç§èŠä¿¡æ¯
 				if (line.indexOf(":") > 0 && line.startsWith("//"))
 				{
 					line = line.substring(2);
-					//Ã°ºÅÖ®Ç°µÄÊÇË½ÁÄÓÃ»§£¬Ã°ºÅÖ®ºóµÄÊÇÁÄÌìĞÅÏ¢
+					//å†’å·ä¹‹å‰çš„æ˜¯ç§èŠç”¨æˆ·ï¼Œå†’å·ä¹‹åçš„æ˜¯èŠå¤©ä¿¡æ¯
 					ps.println(YeekuProtocol.PRIVATE_ROUND + 
 						line.split(":")[0] + YeekuProtocol.SPLIT_SIGN + 
 						line.split(":")[1] + YeekuProtocol.PRIVATE_ROUND);
@@ -97,16 +97,16 @@ public class Client
 				}
 			}
 		}
-		//²¶×½µ½Òì³££¬¹Ø±ÕÍøÂç×ÊÔ´£¬²¢ÍË³ö¸Ã³ÌĞò
+		//æ•æ‰åˆ°å¼‚å¸¸ï¼Œå…³é—­ç½‘ç»œèµ„æºï¼Œå¹¶é€€å‡ºè¯¥ç¨‹åº
 		catch (IOException ex)
 		{
-			System.out.println("ÍøÂçÍ¨ĞÅÒì³££¡ÇëÖØĞÂµÇÂ½£¡");
+			System.out.println("ç½‘ç»œé€šä¿¡å¼‚å¸¸ï¼è¯·é‡æ–°ç™»é™†ï¼");
 			closeRs();
 			System.exit(1);
 		}
 	}
 
-	//¹Ø±ÕSocket¡¢ÊäÈëÁ÷¡¢Êä³öÁ÷µÄ·½·¨
+	//å…³é—­Socketã€è¾“å…¥æµã€è¾“å‡ºæµçš„æ–¹æ³•
 	private void closeRs()
 	{
 		try

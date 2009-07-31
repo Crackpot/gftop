@@ -25,22 +25,22 @@ public class FieldTest
 	public static void main(String[] args) 
 		throws Exception
 	{
-		//´´½¨Ò»¸öPerson¶ÔÏó
+		//åˆ›å»ºä¸€ä¸ªPersonå¯¹è±¡
 		Person p = new Person();
-		//»ñÈ¡PersonÀà¶ÔÓ¦µÄClass¶ÔÏó
+		//è·å–Personç±»å¯¹åº”çš„Classå¯¹è±¡
 		Class<Person> personClazz = Person.class;
-		//»ñÈ¡PersonÀàÃûÎªnameµÄÊôĞÔ
-		//Ê¹ÓÃgetDeclaredField£¬±íÃ÷¿É»ñÈ¡¸÷ÖÖ·ÃÎÊ¿ØÖÆ·ûµÄfield
+		//è·å–Personç±»åä¸ºnameçš„å±æ€§
+		//ä½¿ç”¨getDeclaredFieldï¼Œè¡¨æ˜å¯è·å–å„ç§è®¿é—®æ§åˆ¶ç¬¦çš„field
 		Field nameField = personClazz.getDeclaredField("name");
-		//ÉèÖÃÍ¨¹ı·´Éä·ÃÎÊ¸ÃFieldÊ±È¡Ïû·ÃÎÊÈ¨ÏŞ¼ì²é
+		//è®¾ç½®é€šè¿‡åå°„è®¿é—®è¯¥Fieldæ—¶å–æ¶ˆè®¿é—®æƒé™æ£€æŸ¥
 		nameField.setAccessible(true);
-		//µ÷ÓÃset·½·¨Îªp¶ÔÏóµÄÖ¸¶¨FieldÉèÖÃÖµ
+		//è°ƒç”¨setæ–¹æ³•ä¸ºpå¯¹è±¡çš„æŒ‡å®šFieldè®¾ç½®å€¼
 		nameField.set(p , "Yeeku.H.Lee");
-		//»ñÈ¡PersonÀàÃûÎªageµÄÊôĞÔ
+		//è·å–Personç±»åä¸ºageçš„å±æ€§
 		Field ageField = personClazz.getDeclaredField("age");
-		//ÉèÖÃÍ¨¹ı·´Éä·ÃÎÊ¸ÃFieldÊ±È¡Ïû·ÃÎÊÈ¨ÏŞ¼ì²é
+		//è®¾ç½®é€šè¿‡åå°„è®¿é—®è¯¥Fieldæ—¶å–æ¶ˆè®¿é—®æƒé™æ£€æŸ¥
 		ageField.setAccessible(true);
-		//µ÷ÓÃsetInt·½·¨Îªp¶ÔÏóµÄÖ¸¶¨FieldÉèÖÃÖµ
+		//è°ƒç”¨setIntæ–¹æ³•ä¸ºpå¯¹è±¡çš„æŒ‡å®šFieldè®¾ç½®å€¼
 		ageField.setInt(p , 30);
 		System.out.println(p);
 	}

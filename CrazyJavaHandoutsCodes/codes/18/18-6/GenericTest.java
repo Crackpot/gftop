@@ -18,30 +18,30 @@ public class GenericTest
 	{
 		Class<GenericTest> clazz = GenericTest.class;
 		Field f = clazz.getDeclaredField("score");
-		//Ö±½ÓÊ¹ÓÃgetType()È¡³öFieldÀàĞÍÖ»¶ÔÆÕÍ¨ÀàĞÍµÄFieldÓĞĞ§
+		//ç›´æ¥ä½¿ç”¨getType()å–å‡ºFieldç±»å‹åªå¯¹æ™®é€šç±»å‹çš„Fieldæœ‰æ•ˆ
 		Class<?> a = f.getType();
-		System.out.println("scoreµÄÀàĞÍÊÇ:" + a);
-		//»ñµÃFieldÊµÀıfµÄ·ºĞÍÀàĞÍ
+		System.out.println("scoreçš„ç±»å‹æ˜¯:" + a);
+		//è·å¾—Fieldå®ä¾‹fçš„æ³›å‹ç±»å‹
 		Type gType = f.getGenericType();
-		//Èç¹ûgTypeÀàĞÍÊÇParameterizedType¶ÔÏó
+		//å¦‚æœgTypeç±»å‹æ˜¯ParameterizedTypeå¯¹è±¡
 		if(gType instanceof ParameterizedType)
 		{
-			//Ç¿ÖÆÀàĞÍ×ª»»
+			//å¼ºåˆ¶ç±»å‹è½¬æ¢
 			ParameterizedType pType = (ParameterizedType)gType;
-			//»ñÈ¡Ô­À´ÀàĞÍ
+			//è·å–åŸæ¥ç±»å‹
 			Type rType = pType.getRawType();
-			System.out.println("Ô­Ê¼ÀàĞÍÊÇ£º" + rType);
-			//È¡µÃ·ºĞÍÀàĞÍµÄ·ºĞÍ²ÎÊı
+			System.out.println("åŸå§‹ç±»å‹æ˜¯ï¼š" + rType);
+			//å–å¾—æ³›å‹ç±»å‹çš„æ³›å‹å‚æ•°
 			Type[] tArgs = pType.getActualTypeArguments();
-			System.out.println("·ºĞÍÀàĞÍÊÇ:");
+			System.out.println("æ³›å‹ç±»å‹æ˜¯:");
 			for (int i = 0; i < tArgs.length; i++) 
 			{
-				System.out.println("µÚ" + i + "¸ö·ºĞÍÀàĞÍÊÇ£º" + tArgs[i]);
+				System.out.println("ç¬¬" + i + "ä¸ªæ³›å‹ç±»å‹æ˜¯ï¼š" + tArgs[i]);
 			}
 		}
 		else
 		{
-			System.out.println("»ñÈ¡·ºĞÍÀàĞÍ³ö´í£¡");
+			System.out.println("è·å–æ³›å‹ç±»å‹å‡ºé”™ï¼");
 		}
 	}
 }

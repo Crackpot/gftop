@@ -12,9 +12,9 @@
 
 public class DepositThread extends Thread
 {
-	//Ä£ÄâÓÃ»§ÕË»§
+	//æ¨¡æ‹Ÿç”¨æˆ·è´¦æˆ·
 	private Account account;
-	//µ±Ç°È¡Ç®Ïß³ÌËùÏ£ÍûÈ¡µÄÇ®Êı
+	//å½“å‰å–é’±çº¿ç¨‹æ‰€å¸Œæœ›å–çš„é’±æ•°
 	private double depositAmount;
 
 	public DepositThread(String name , Account account , 
@@ -25,7 +25,7 @@ public class DepositThread extends Thread
 		this.depositAmount = depositAmount;
 	}
 
-	//µ±¶àÌõÏß³ÌĞŞ¸ÄÍ¬Ò»¸ö¹²ÏíÊı¾İÊ±£¬½«Éæ¼°µ½Êı¾İ°²È«ÎÊÌâ¡£
+	//å½“å¤šæ¡çº¿ç¨‹ä¿®æ”¹åŒä¸€ä¸ªå…±äº«æ•°æ®æ—¶ï¼Œå°†æ¶‰åŠåˆ°æ•°æ®å®‰å…¨é—®é¢˜ã€‚
 	public void run()
 	{
 		for (int i = 0 ; i < 100 ; i++ )

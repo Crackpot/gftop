@@ -11,56 +11,56 @@ import java.util.*;
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//ÈÃ¸ÃÀàÊµÏÖRunnable½Ó¿Ú£¬¸ÃÀàµÄÊµÀı¿É×÷ÎªÏß³ÌµÄtarget
+//è®©è¯¥ç±»å®ç°Runnableæ¥å£ï¼Œè¯¥ç±»çš„å®ä¾‹å¯ä½œä¸ºçº¿ç¨‹çš„target
 public class MulticastSocketTest implements Runnable
 {
-	//Ê¹ÓÃ³£Á¿×÷Îª±¾³ÌĞòµÄ¶àµã¹ã²¥IPµØÖ·
+	//ä½¿ç”¨å¸¸é‡ä½œä¸ºæœ¬ç¨‹åºçš„å¤šç‚¹å¹¿æ’­IPåœ°å€
 	private static final String BROADCAST_IP
 		= "230.0.0.1";
-	//Ê¹ÓÃ³£Á¿×÷Îª±¾³ÌĞòµÄ¶àµã¹ã²¥Ä¿µÄµÄ¶Ë¿Ú
+	//ä½¿ç”¨å¸¸é‡ä½œä¸ºæœ¬ç¨‹åºçš„å¤šç‚¹å¹¿æ’­ç›®çš„çš„ç«¯å£
 	public static final int BROADCAST_PORT = 30000;
-	//¶¨ÒåÃ¿¸öÊı¾İ±¨µÄ×î´ó´óĞ¡Îª4K
+	//å®šä¹‰æ¯ä¸ªæ•°æ®æŠ¥çš„æœ€å¤§å¤§å°ä¸º4K
 	private static final int DATA_LEN = 4096;
 
 	
-	//¶¨Òå±¾³ÌĞòµÄMulticastSocketÊµÀı
+	//å®šä¹‰æœ¬ç¨‹åºçš„MulticastSocketå®ä¾‹
 	private MulticastSocket socket = null;
 	private InetAddress broadcastAddress = null;
 	private Scanner scan = null;
-	//¶¨Òå½ÓÊÕÍøÂçÊı¾İµÄ×Ö½ÚÊı×é
+	//å®šä¹‰æ¥æ”¶ç½‘ç»œæ•°æ®çš„å­—èŠ‚æ•°ç»„
 	byte[] inBuff = new byte[DATA_LEN];
-	//ÒÔÖ¸¶¨×Ö½ÚÊı×é´´½¨×¼±¸½ÓÊÜÊı¾İµÄDatagramPacket¶ÔÏó
+	//ä»¥æŒ‡å®šå­—èŠ‚æ•°ç»„åˆ›å»ºå‡†å¤‡æ¥å—æ•°æ®çš„DatagramPacketå¯¹è±¡
 	private DatagramPacket inPacket = 
 		new DatagramPacket(inBuff , inBuff.length);
-	//¶¨ÒåÒ»¸öÓÃÓÚ·¢ËÍµÄDatagramPacket¶ÔÏó
+	//å®šä¹‰ä¸€ä¸ªç”¨äºå‘é€çš„DatagramPacketå¯¹è±¡
 	private DatagramPacket outPacket = null;
 	public void init()throws IOException
 	{
 		try
 		{
-			//´´½¨ÓÃÓÚ·¢ËÍ¡¢½ÓÊÕÊı¾İµÄMulticastSocket¶ÔÏó
-			//ÒòÎª¸ÃMulticastSocket¶ÔÏóĞèÒª½ÓÊÕ£¬ËùÒÔÓĞÖ¸¶¨¶Ë¿Ú
+			//åˆ›å»ºç”¨äºå‘é€ã€æ¥æ”¶æ•°æ®çš„MulticastSocketå¯¹è±¡
+			//å› ä¸ºè¯¥MulticastSocketå¯¹è±¡éœ€è¦æ¥æ”¶ï¼Œæ‰€ä»¥æœ‰æŒ‡å®šç«¯å£
 			socket = new MulticastSocket(BROADCAST_PORT);
 			broadcastAddress = InetAddress.getByName(BROADCAST_IP);
-			//½«¸Ãsocket¼ÓÈëÖ¸¶¨µÄ¶àµã¹ã²¥µØÖ·
+			//å°†è¯¥socketåŠ å…¥æŒ‡å®šçš„å¤šç‚¹å¹¿æ’­åœ°å€
 			socket.joinGroup(broadcastAddress);
-			//ÉèÖÃ±¾MulticastSocket·¢ËÍµÄÊı¾İ±¨±»»ØËÍµ½×ÔÉí
+			//è®¾ç½®æœ¬MulticastSocketå‘é€çš„æ•°æ®æŠ¥è¢«å›é€åˆ°è‡ªèº«
 			socket.setLoopbackMode(false);
-			//³õÊ¼»¯·¢ËÍÓÃµÄDatagramSocket£¬Ëü°üº¬Ò»¸ö³¤¶ÈÎª0µÄ×Ö½ÚÊı×é
+			//åˆå§‹åŒ–å‘é€ç”¨çš„DatagramSocketï¼Œå®ƒåŒ…å«ä¸€ä¸ªé•¿åº¦ä¸º0çš„å­—èŠ‚æ•°ç»„
 			outPacket = new DatagramPacket(new byte[0] , 0 ,
 				broadcastAddress , BROADCAST_PORT);
-			//Æô¶¯ÒÔ±¾ÊµÀıµÄrun()·½·¨×÷ÎªÏß³ÌÌåµÄÏß³Ì
+			//å¯åŠ¨ä»¥æœ¬å®ä¾‹çš„run()æ–¹æ³•ä½œä¸ºçº¿ç¨‹ä½“çš„çº¿ç¨‹
 			new Thread(this).start();
-			//´´½¨¼üÅÌÊäÈëÁ÷
+			//åˆ›å»ºé”®ç›˜è¾“å…¥æµ
 			scan = new Scanner(System.in);
-			//²»¶Ï¶ÁÈ¡¼üÅÌÊäÈë
+			//ä¸æ–­è¯»å–é”®ç›˜è¾“å…¥
 			while(scan.hasNextLine())
 			{
-				//½«¼üÅÌÊäÈëµÄÒ»ĞĞ×Ö·û´®×ª»»×Ö½ÚÊı×é
+				//å°†é”®ç›˜è¾“å…¥çš„ä¸€è¡Œå­—ç¬¦ä¸²è½¬æ¢å­—èŠ‚æ•°ç»„
 				byte[] buff = scan.nextLine().getBytes();
-				//ÉèÖÃ·¢ËÍÓÃµÄDatagramPacketÀïµÄ×Ö½ÚÊı¾İ
+				//è®¾ç½®å‘é€ç”¨çš„DatagramPacketé‡Œçš„å­—èŠ‚æ•°æ®
 				outPacket.setData(buff);
-				//·¢ËÍÊı¾İ±¨
+				//å‘é€æ•°æ®æŠ¥
 				socket.send(outPacket);
 			}
 		}
@@ -76,14 +76,14 @@ public class MulticastSocketTest implements Runnable
 		{
 			while(true)
 			{
-				//¶ÁÈ¡SocketÖĞµÄÊı¾İ£¬¶Áµ½µÄÊı¾İ·ÅÔÚinPacketËù·â×°µÄ×Ö½ÚÊı×éÀï¡£
+				//è¯»å–Socketä¸­çš„æ•°æ®ï¼Œè¯»åˆ°çš„æ•°æ®æ”¾åœ¨inPacketæ‰€å°è£…çš„å­—èŠ‚æ•°ç»„é‡Œã€‚
 				socket.receive(inPacket);
-				//´òÓ¡Êä³ö´ÓsocketÖĞ¶ÁÈ¡µÄÄÚÈİ
-				System.out.println("ÁÄÌìĞÅÏ¢£º" + new String(inBuff , 0 , 
+				//æ‰“å°è¾“å‡ºä»socketä¸­è¯»å–çš„å†…å®¹
+				System.out.println("èŠå¤©ä¿¡æ¯ï¼š" + new String(inBuff , 0 , 
 					inPacket.getLength()));
 			}
 		}
-		//²¶×½Òì³£
+		//æ•æ‰å¼‚å¸¸
 		catch (IOException ex)
 		{
 			ex.printStackTrace();
@@ -91,9 +91,9 @@ public class MulticastSocketTest implements Runnable
 			{
 				if (socket != null)
 				{
-					//ÈÃ¸ÃSocketÀë¿ª¸Ã¶àµãIP¹ã²¥µØÖ·
+					//è®©è¯¥Socketç¦»å¼€è¯¥å¤šç‚¹IPå¹¿æ’­åœ°å€
 					socket.leaveGroup(broadcastAddress);
-					//¹Ø±Õ¸ÃSocket¶ÔÏó
+					//å…³é—­è¯¥Socketå¯¹è±¡
 					socket.close();
 				}
 				System.exit(1);	

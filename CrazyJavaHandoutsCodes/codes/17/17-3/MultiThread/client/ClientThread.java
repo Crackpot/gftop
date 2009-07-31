@@ -12,9 +12,9 @@ import java.util.*;
  */
 public class ClientThread implements Runnable
 {
-	//该线程负责处理的Socket
+	//璇ョ嚎绋嬭礋璐ｅ鐞嗙殑Socket
 	private Socket s;
-	//该现成所处理的Socket所对应的输入流
+	//璇ョ幇鎴愭墍澶勭悊鐨凷ocket鎵�瀵瑰簲鐨勮緭鍏ユ祦
 	BufferedReader br = null;
 	public ClientThread(Socket s)
 		throws IOException
@@ -28,7 +28,7 @@ public class ClientThread implements Runnable
 		try
 		{
 			String content = null;
-			//不断读取Socket输入流中的内容，并将这些内容打印输出
+			//涓嶆柇璇诲彇Socket杈撳叆娴佷腑鐨勫唴瀹癸紝骞跺皢杩欎簺鍐呭鎵撳嵃杈撳嚭
 			while ((content = br.readLine()) != null)
 			{
 				System.out.println(content);

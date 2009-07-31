@@ -10,25 +10,25 @@ import java.net.*;
  * @author  Yeeku.H.Lee kongyeeku@163.com
  * @version  1.0
  */
-//¶¨ÒåÏÂÔØ´Óstartµ½endµÄÄÚÈİµÄÏß³Ì
+//å®šä¹‰ä¸‹è½½ä»startåˆ°endçš„å†…å®¹çš„çº¿ç¨‹
 class DownThread extends Thread
 {
-	//¶¨Òå×Ö½ÚÊı×é£¨È¡Ë®µÄÖñÍ²£©µÄ³¤¶È
+	//å®šä¹‰å­—èŠ‚æ•°ç»„ï¼ˆå–æ°´çš„ç«¹ç­’ï¼‰çš„é•¿åº¦
 	private final int BUFF_LEN = 32;
-	//¶¨ÒåÏÂÔØµÄÆğÊ¼µã
+	//å®šä¹‰ä¸‹è½½çš„èµ·å§‹ç‚¹
 	private long start;
-	//¶¨ÒåÏÂÔØµÄ½áÊøµã
+	//å®šä¹‰ä¸‹è½½çš„ç»“æŸç‚¹
 	private long end;
-	//ÏÂÔØ×ÊÔ´¶ÔÓ¦µÄÊäÈëÁ÷
+	//ä¸‹è½½èµ„æºå¯¹åº”çš„è¾“å…¥æµ
 	private InputStream is;
-	//½«ÏÂÔØµ½µÄ×Ö½ÚÊä³öµ½rafÖĞ
+	//å°†ä¸‹è½½åˆ°çš„å­—èŠ‚è¾“å‡ºåˆ°rafä¸­
 	private RandomAccessFile raf ;
 
-	//¹¹ÔìÆ÷£¬´«ÈëÊäÈëÁ÷£¬Êä³öÁ÷ºÍÏÂÔØÆğÊ¼µã¡¢½áÊøµã
+	//æ„é€ å™¨ï¼Œä¼ å…¥è¾“å…¥æµï¼Œè¾“å‡ºæµå’Œä¸‹è½½èµ·å§‹ç‚¹ã€ç»“æŸç‚¹
 	public DownThread(long start , long end 
 		, InputStream is , RandomAccessFile raf)
 	{
-		//Êä³ö¸ÃÏß³Ì¸ºÔğÏÂÔØµÄ×Ö½ÚÎ»ÖÃ
+		//è¾“å‡ºè¯¥çº¿ç¨‹è´Ÿè´£ä¸‹è½½çš„å­—èŠ‚ä½ç½®
 		System.out.println(start + "---->"  + end);
 		this.start = start;
 		this.end = end;
@@ -41,18 +41,18 @@ class DownThread extends Thread
 		{
 			is.skip(start);
 			raf.seek(start); 
-			//¶¨Òå¶ÁÈ¡ÊäÈëÁ÷ÄÚÈİµÄµÄ»º´æÊı×é£¨ÖñÍ²£©
+			//å®šä¹‰è¯»å–è¾“å…¥æµå†…å®¹çš„çš„ç¼“å­˜æ•°ç»„ï¼ˆç«¹ç­’ï¼‰
 			byte[] buff = new byte[BUFF_LEN];
-			//±¾Ïß³Ì¸ºÔğÏÂÔØ×ÊÔ´µÄ´óĞ¡
+			//æœ¬çº¿ç¨‹è´Ÿè´£ä¸‹è½½èµ„æºçš„å¤§å°
 			long contentLen = end - start;
-			//¶¨Òå×î¶àĞèÒª¶ÁÈ¡¼¸´Î¾Í¿ÉÒÔÍê³É±¾Ïß³ÌµÄÏÂÔØ
+			//å®šä¹‰æœ€å¤šéœ€è¦è¯»å–å‡ æ¬¡å°±å¯ä»¥å®Œæˆæœ¬çº¿ç¨‹çš„ä¸‹è½½
 			long times = contentLen / BUFF_LEN + 4;
-			//Êµ¼Ê¶ÁÈ¡µÄ×Ö½ÚÊı
+			//å®é™…è¯»å–çš„å­—èŠ‚æ•°
 			int hasRead = 0;
 			for (int i = 0; i < times ; i++)
 			{
 				hasRead = is.read(buff);
-				//Èç¹û¶ÁÈ¡µÄ×Ö½ÚÊıĞ¡ÓÚ0£¬ÔòÍË³öÑ­»·£¡
+				//å¦‚æœè¯»å–çš„å­—èŠ‚æ•°å°äº0ï¼Œåˆ™é€€å‡ºå¾ªç¯ï¼
 				if (hasRead < 0)
 				{
 					break;
@@ -64,7 +64,7 @@ class DownThread extends Thread
 		{
 			ex.printStackTrace();
 		}
-		//Ê¹ÓÃfinally¿éÀ´¹Ø±Õµ±Ç°Ïß³ÌµÄÊäÈëÁ÷¡¢Êä³öÁ÷
+		//ä½¿ç”¨finallyå—æ¥å…³é—­å½“å‰çº¿ç¨‹çš„è¾“å…¥æµã€è¾“å‡ºæµ
 		finally
 		{
 			try
@@ -95,45 +95,45 @@ public class MutilDown
 		RandomAccessFile[] outArr = new RandomAccessFile[DOWN_THREAD_NUM];
 		try
 		{
-			//´´½¨Ò»¸öURL¶ÔÏó
+			//åˆ›å»ºä¸€ä¸ªURLå¯¹è±¡
 			URL url = new URL("http://images.china-pub.com/"
 				+ "ebook35001-40000/35850/shupi.jpg");
-			//ÒÔ´ËURL¶ÔÏó´ò¿ªµÚÒ»¸öÊäÈëÁ÷
+			//ä»¥æ­¤URLå¯¹è±¡æ‰“å¼€ç¬¬ä¸€ä¸ªè¾“å…¥æµ
 			isArr[0] = url.openStream();
 			long fileLen = getFileLength(url);
-			System.out.println("ÍøÂç×ÊÔ´µÄ´óĞ¡" + fileLen);
-			//ÒÔÊä³öÎÄ¼şÃû´´½¨µÚÒ»¸öRandomAccessFileÊä³öÁ÷
+			System.out.println("ç½‘ç»œèµ„æºçš„å¤§å°" + fileLen);
+			//ä»¥è¾“å‡ºæ–‡ä»¶ååˆ›å»ºç¬¬ä¸€ä¸ªRandomAccessFileè¾“å‡ºæµ
 			outArr[0] = new RandomAccessFile(OUT_FILE_NAME , "rw");
-			//´´½¨Ò»¸öÓëÏÂÔØ×ÊÔ´ÏàÍ¬´óĞ¡µÄ¿ÕÎÄ¼ş
+			//åˆ›å»ºä¸€ä¸ªä¸ä¸‹è½½èµ„æºç›¸åŒå¤§å°çš„ç©ºæ–‡ä»¶
 			for (int i = 0 ; i < fileLen ; i++ )
 			{
 				outArr[0].write(0);
 			}
-			//Ã¿Ïß³ÌÓ¦¸ÃÏÂÔØµÄ×Ö½ÚÊı
+			//æ¯çº¿ç¨‹åº”è¯¥ä¸‹è½½çš„å­—èŠ‚æ•°
 			long numPerThred = fileLen / DOWN_THREAD_NUM;
-			//Õû¸öÏÂÔØ×ÊÔ´Õû³ıºóÊ£ÏÂµÄÓàÊı
+			//æ•´ä¸ªä¸‹è½½èµ„æºæ•´é™¤åå‰©ä¸‹çš„ä½™æ•°
 			long left = fileLen % DOWN_THREAD_NUM;
 			for (int i = 0 ; i < DOWN_THREAD_NUM; i++)
 			{
-				//ÎªÃ¿¸öÏß³Ì´ò¿ªÒ»¸öÊäÈëÁ÷¡¢Ò»¸öRandomAccessFile¶ÔÏó£¬
-				//ÈÃÃ¿¸öÏß³Ì·Ö±ğ¸ºÔğÏÂÔØ×ÊÔ´µÄ²»Í¬²¿·Ö¡£
+				//ä¸ºæ¯ä¸ªçº¿ç¨‹æ‰“å¼€ä¸€ä¸ªè¾“å…¥æµã€ä¸€ä¸ªRandomAccessFileå¯¹è±¡ï¼Œ
+				//è®©æ¯ä¸ªçº¿ç¨‹åˆ†åˆ«è´Ÿè´£ä¸‹è½½èµ„æºçš„ä¸åŒéƒ¨åˆ†ã€‚
 				if (i != 0)
 				{
-					//ÒÔURL´ò¿ª¶à¸öÊäÈëÁ÷
+					//ä»¥URLæ‰“å¼€å¤šä¸ªè¾“å…¥æµ
 					isArr[i] = url.openStream();
-					//ÒÔÖ¸¶¨Êä³öÎÄ¼ş´´½¨¶à¸öRandomAccessFile¶ÔÏó
+					//ä»¥æŒ‡å®šè¾“å‡ºæ–‡ä»¶åˆ›å»ºå¤šä¸ªRandomAccessFileå¯¹è±¡
 					outArr[i] = new RandomAccessFile(OUT_FILE_NAME , "rw");
 				}
-				//·Ö±ğÆô¶¯¶à¸öÏß³ÌÀ´ÏÂÔØÍøÂç×ÊÔ´
+				//åˆ†åˆ«å¯åŠ¨å¤šä¸ªçº¿ç¨‹æ¥ä¸‹è½½ç½‘ç»œèµ„æº
 				if (i == DOWN_THREAD_NUM - 1 )
 				{
-					//×îºóÒ»¸öÏß³ÌÏÂÔØÖ¸¶¨numPerThred+left¸ö×Ö½Ú
+					//æœ€åä¸€ä¸ªçº¿ç¨‹ä¸‹è½½æŒ‡å®šnumPerThred+leftä¸ªå­—èŠ‚
 					new DownThread(i * numPerThred , (i + 1) * numPerThred + left
 						, isArr[i] , outArr[i]).start();
 				}
 				else
 				{
-					//Ã¿¸öÏß³Ì¸ºÔğÏÂÔØÒ»¶¨µÄnumPerThred¸ö×Ö½Ú
+					//æ¯ä¸ªçº¿ç¨‹è´Ÿè´£ä¸‹è½½ä¸€å®šçš„numPerThredä¸ªå­—èŠ‚
 					new DownThread(i * numPerThred , (i + 1) * numPerThred
 						, isArr[i] , outArr[i]).start();
 				}
@@ -144,13 +144,13 @@ public class MutilDown
 			ex.printStackTrace();
 		}
 	}
-	//¶¨Òå»ñÈ¡Ö¸¶¨ÍøÂç×ÊÔ´µÄ³¤¶ÈµÄ·½·¨
+	//å®šä¹‰è·å–æŒ‡å®šç½‘ç»œèµ„æºçš„é•¿åº¦çš„æ–¹æ³•
 	public static long getFileLength(URL url) throws Exception
 	{
 		long length = 0;
-		//´ò¿ª¸ÃURL¶ÔÓ¦µÄURLConnection¡£
+		//æ‰“å¼€è¯¥URLå¯¹åº”çš„URLConnectionã€‚
 		URLConnection con = url.openConnection();
-		//»ñÈ¡Á¬½ÓURL×ÊÔ´µÄ³¤¶È
+		//è·å–è¿æ¥URLèµ„æºçš„é•¿åº¦
 		long size = con.getContentLength();
 		length = size;
 		return length;

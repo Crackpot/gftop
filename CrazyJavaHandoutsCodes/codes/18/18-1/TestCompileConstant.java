@@ -13,12 +13,12 @@ class MyTest
 {
 	static
 	{
-		System.out.println("¾²Ì¬³õÊ¼»¯¿é...");
+		System.out.println("é™æ€åˆå§‹åŒ–å—...");
 	}
-	//Ê¹ÓÃÒ»¸ö×Ö·û´®Ö±½ÓÁ¿Îªstatic finalÊôĞÔ¸³Öµ
+	//ä½¿ç”¨ä¸€ä¸ªå­—ç¬¦ä¸²ç›´æ¥é‡ä¸ºstatic finalå±æ€§èµ‹å€¼
 	static final String comileConstant = 
-		"Struts2È¨ÍşÖ¸ÄÏ";
-//	//²ÉÓÃÏµÍ³µ±Ç°Ê±¼äÎªstatic finalÊôĞÔ¸³Öµ
+		"Struts2æƒå¨æŒ‡å—";
+//	//é‡‡ç”¨ç³»ç»Ÿå½“å‰æ—¶é—´ä¸ºstatic finalå±æ€§èµ‹å€¼
 //	static final String comileConstant = 
 //		System.currentTimeMillis() + "";
 
@@ -27,7 +27,7 @@ public class TestCompileConstant
 {
 	public static void main(String[] args) 
 	{
-		//·ÃÎÊ¡¢Êä³öMyTestÖĞµÄcomileConstantÊôĞÔ
+		//è®¿é—®ã€è¾“å‡ºMyTestä¸­çš„comileConstantå±æ€§
 		System.out.println(MyTest.comileConstant);
 	}
 }

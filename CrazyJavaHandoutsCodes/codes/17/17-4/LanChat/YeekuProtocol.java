@@ -11,7 +11,7 @@
  */
 public interface YeekuProtocol
 {
-	String PRESENCE = "¨S¨S";
-	String SPLITTER = "¨ˆ";
+	String PRESENCE = "âŠ¿âŠ¿";
+	String SPLITTER = "â–“";
 }
 

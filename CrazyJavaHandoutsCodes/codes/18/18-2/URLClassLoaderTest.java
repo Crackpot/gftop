@@ -14,25 +14,25 @@ import java.util.*;
 public class URLClassLoaderTest
 {
 	private static Connection conn;
-	//¶¨ÒåÒ»¸ö»ñÈ¡Êı¾İ¿âÁ¬½Ó·½·¨
+	//å®šä¹‰ä¸€ä¸ªè·å–æ•°æ®åº“è¿æ¥æ–¹æ³•
 	public static Connection getConn(String url , 
 		String user , String pass)throws Exception
 	{
 		if (conn == null)
 		{
-			//´´½¨Ò»¸öURLÊı×é
+			//åˆ›å»ºä¸€ä¸ªURLæ•°ç»„
 			URL[] urls = {new URL("file:mysql-connector-java-3.1.10-bin.jar")};
-			//ÒÔÄ¬ÈÏµÄClassLoader×÷Îª¸¸ClassLoader£¬´´½¨URLClassLoader
+			//ä»¥é»˜è®¤çš„ClassLoaderä½œä¸ºçˆ¶ClassLoaderï¼Œåˆ›å»ºURLClassLoader
 			URLClassLoader myClassLoader = new URLClassLoader(urls);
-			//¼ÓÔØMySQLµÄJDBCÇı¶¯£¬²¢´´½¨Ä¬ÈÏÊµÀı
+			//åŠ è½½MySQLçš„JDBCé©±åŠ¨ï¼Œå¹¶åˆ›å»ºé»˜è®¤å®ä¾‹
 			Driver driver = (Driver)myClassLoader.
 				loadClass("com.mysql.jdbc.Driver").newInstance();
-			//´´½¨Ò»¸öÉèÖÃJDBCÁ¬½ÓÊôĞÔµÄProperties¶ÔÏó
+			//åˆ›å»ºä¸€ä¸ªè®¾ç½®JDBCè¿æ¥å±æ€§çš„Propertieså¯¹è±¡
 			Properties props = new Properties();
-			//ÖÁÉÙĞèÒªÎª¸Ã¶ÔÏó´«ÈëuserºÍpasswordÁ½¸öÊôĞÔ
+			//è‡³å°‘éœ€è¦ä¸ºè¯¥å¯¹è±¡ä¼ å…¥userå’Œpasswordä¸¤ä¸ªå±æ€§
 			props.setProperty("user" , user);
 			props.setProperty("password" , pass);
-			//µ÷ÓÃDriver¶ÔÏóµÄconnect·½·¨À´È¡µÃÊı¾İ¿âÁ¬½Ó
+			//è°ƒç”¨Driverå¯¹è±¡çš„connectæ–¹æ³•æ¥å–å¾—æ•°æ®åº“è¿æ¥
 			conn = driver.connect("jdbc:mysql://localhost:3306/mysql" , props);
 		}
 		return conn;

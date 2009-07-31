@@ -13,8 +13,8 @@ class A
 {
     public synchronized void foo( B b )
 	{
-		System.out.println("µ±Ç°Ïß³ÌÃû: " + 
-			Thread.currentThread().getName() + " ½øÈëÁËAÊµÀıµÄfoo·½·¨" );
+		System.out.println("å½“å‰çº¿ç¨‹å: " + 
+			Thread.currentThread().getName() + " è¿›å…¥äº†Aå®ä¾‹çš„fooæ–¹æ³•" );
 		try
 		{
 			Thread.sleep(200);
@@ -23,14 +23,14 @@ class A
 		{
 			ex.printStackTrace();
 		}
-		System.out.println("µ±Ç°Ïß³ÌÃû: " + 
-		Thread.currentThread().getName() + " ÆóÍ¼µ÷ÓÃBÊµÀıµÄlast·½·¨");
+		System.out.println("å½“å‰çº¿ç¨‹å: " + 
+		Thread.currentThread().getName() + " ä¼å›¾è°ƒç”¨Bå®ä¾‹çš„lastæ–¹æ³•");
 		b.last();
 	}
 
 	public synchronized void last()
 	{
-		System.out.println("½øÈëÁËAÀàµÄlast·½·¨ÄÚ²¿");
+		System.out.println("è¿›å…¥äº†Aç±»çš„lastæ–¹æ³•å†…éƒ¨");
 	}
 }
 
@@ -38,8 +38,8 @@ class B
 {
 	public synchronized void bar( A a )
 	{
-		System.out.println("µ±Ç°Ïß³ÌÃû: "
-			+ Thread.currentThread().getName() + " ½øÈëÁËBÊµÀıµÄbar·½·¨" );
+		System.out.println("å½“å‰çº¿ç¨‹å: "
+			+ Thread.currentThread().getName() + " è¿›å…¥äº†Bå®ä¾‹çš„baræ–¹æ³•" );
 		try
 		{
 			Thread.sleep(200);
@@ -48,14 +48,14 @@ class B
 		{
 			ex.printStackTrace();
 		}
-		System.out.println("µ±Ç°Ïß³ÌÃû: " 
-		+ Thread.currentThread().getName() + " ÆóÍ¼µ÷ÓÃAÊµÀıµÄlast·½·¨");
+		System.out.println("å½“å‰çº¿ç¨‹å: " 
+		+ Thread.currentThread().getName() + " ä¼å›¾è°ƒç”¨Aå®ä¾‹çš„lastæ–¹æ³•");
 		a.last();
 	}
 
 	public synchronized void last()
 	{
-		System.out.println("½øÈëÁËBÀàµÄlast·½·¨ÄÚ²¿");
+		System.out.println("è¿›å…¥äº†Bç±»çš„lastæ–¹æ³•å†…éƒ¨");
 	}
 }
 
@@ -66,24 +66,24 @@ public class DeadLock implements Runnable
 
 	public void init()
 	{
-		Thread.currentThread().setName("Ö÷Ïß³Ì");
-		//µ÷ÓÃa¶ÔÏóµÄfoo·½·¨
+		Thread.currentThread().setName("ä¸»çº¿ç¨‹");
+		//è°ƒç”¨aå¯¹è±¡çš„fooæ–¹æ³•
 		a.foo(b);
-		System.out.println("½øÈëÁËÖ÷Ïß³ÌÖ®ºó");
+		System.out.println("è¿›å…¥äº†ä¸»çº¿ç¨‹ä¹‹å");
 	}
 	public void run()
 	{
-		Thread.currentThread().setName("¸±Ïß³Ì");
-		//µ÷ÓÃb¶ÔÏóµÄbar·½·¨
+		Thread.currentThread().setName("å‰¯çº¿ç¨‹");
+		//è°ƒç”¨bå¯¹è±¡çš„baræ–¹æ³•
 		b.bar(a);
-		System.out.println("½øÈëÁË¸±Ïß³ÌÖ®ºó");
+		System.out.println("è¿›å…¥äº†å‰¯çº¿ç¨‹ä¹‹å");
 	}
 	public static void main(String[] args)
 	{
 		DeadLock dl = new DeadLock();
-		//ÒÔdlÎªtargetÆô¶¯ĞÂÏß³Ì
+		//ä»¥dlä¸ºtargetå¯åŠ¨æ–°çº¿ç¨‹
 		new Thread(dl).start();
-		//Ö´ĞĞinit·½·¨×÷ÎªĞÂÏß³Ì
+		//æ‰§è¡Œinitæ–¹æ³•ä½œä¸ºæ–°çº¿ç¨‹
 		dl.init();
 	}
 }

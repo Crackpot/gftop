@@ -10,15 +10,15 @@ import java.net.*;
  */
 public class UserInfo
 {
-	//¸ÃÓÃ»§µÄÍ¼±ê
+	//è¯¥ç”¨æˆ·çš„å›¾æ ‡
 	private String icon;
-	//¸ÃÓÃ»§µÄÃû×Ö
+	//è¯¥ç”¨æˆ·çš„åå­—
 	private String name;
-	//¸ÃÓÃ»§µÄMulitcastSocketËùÔÚµÄIPºÍ¶Ë¿Ú
+	//è¯¥ç”¨æˆ·çš„MulitcastSocketæ‰€åœ¨çš„IPå’Œç«¯å£
 	private SocketAddress address;
-	//¸ÃÓÃ»§Ê§È¥ÁªÏµµÄ´ÎÊı
+	//è¯¥ç”¨æˆ·å¤±å»è”ç³»çš„æ¬¡æ•°
 	private int lost;
-	//¸ÃÓÃ»§¶ÔÓ¦µÄ½»Ì¸´°¿Ú
+	//è¯¥ç”¨æˆ·å¯¹åº”çš„äº¤è°ˆçª—å£
 	private ChatFrame chatFrame;
 	public UserInfo(){}
 
@@ -75,7 +75,7 @@ public class UserInfo
 		return this.chatFrame;
 	}
 
-	//Ê¹ÓÃaddress×÷Îª¸ÃÓÃ»§µÄ±êÊ¶
+	//ä½¿ç”¨addressä½œä¸ºè¯¥ç”¨æˆ·çš„æ ‡è¯†
 	public int hashCode()
 	{
 		return address.hashCode();

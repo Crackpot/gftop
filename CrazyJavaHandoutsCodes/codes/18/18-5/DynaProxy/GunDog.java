@@ -11,14 +11,14 @@
  */
 public class GunDog implements Dog
 {
-	//info·½·¨ÊµÏÖ£¬½ö½ö´òÓ¡Ò»¸ö×Ö·û´®
+	//infoæ–¹æ³•å®ç°ï¼Œä»…ä»…æ‰“å°ä¸€ä¸ªå­—ç¬¦ä¸²
 	public void info()
 	{
-		System.out.println("ÎÒÊÇÒ»Ö»ÁÔ¹·");
+		System.out.println("æˆ‘æ˜¯ä¸€åªçŒç‹—");
 	}
-	//run·½·¨ÊµÏÖ£¬½ö½ö´òÓ¡Ò»¸ö×Ö·û´®
+	//runæ–¹æ³•å®ç°ï¼Œä»…ä»…æ‰“å°ä¸€ä¸ªå­—ç¬¦ä¸²
 	public void run()
 	{
-		System.out.println("ÎÒ±¼ÅÜÑ¸ËÙ");
+		System.out.println("æˆ‘å¥”è·‘è¿…é€Ÿ");
 	}
 }
