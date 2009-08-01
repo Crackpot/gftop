@@ -1,11 +1,23 @@
 <html>
-<head><title>HTML 文档示例</title></head>
-<body>
-
-<form name="form_1" action="afile.php" method="post">
-用户名：<input type="text" name="user_name"><br/>
-<input type="submit" value="提交">
-</form>
-
-</body>
+    <head>
+        <title>HTML 文档示例</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form name="form_1" action="1-14.php" method="post">
+            <h3>测试表单1，使用POST方法接收数据</h3>
+            用户名：<input type="text" name="username"><br/>
+            <input type="submit" value="提交">
+        </form>
+        <form name="form_2" action="1-14.php" method="get">
+            <h3>测试表单2，使用GET方法接收数据</h3>
+            年龄：<input type="text" name="age"><br/>
+            <input type="submit" value="提交">
+        </form>
+        <form name="form_3" action="1-14.php" method="post">
+            <h3>测试表单3，使用REQUEST方法接收数据</h3>
+            血型：<input type="text" name="bloodtype"><br/>
+            <input type="submit" value="接收">
+        </form>
+    </body>
 </html>
