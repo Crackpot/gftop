@@ -1,31 +1,31 @@
 <html>
-<head>
-<title>1-25</title>
-</head>
-<body>
-
-<script language="JavaScript">
-var d=new Date()
-theTime=d.getHours()
-
-switch(theTime)
-{
-case 7:
-    alert("Good Morning!");
-    break;
-case 15:
-    alert("Good Afternoon!");
-    braek;
-case 19:
-    alert("Good Evening!");
-    break;
-case 23:
-    alert("It's time to go to sleep!");
-    break;
-default:
-    alert("Hello,My friend!");
-}
-</script>
-
-</body>
+    <head>
+        <title>1-25</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <script language="JavaScript">
+            var d=new Date()
+            <!--Date类型变量-->
+            theTime=d.getHours()
+            <!--取得时间函数-->
+            document.write("<h3>根据时间来问候</h3>");
+            switch(theTime){
+                case 7:
+                    alert("早上好！");
+                    break;
+                case 15:
+                    alert("Good Afternoon!");
+                    braek;
+                case 19:
+                    alert("晚上好！");
+                    break;
+                case 23:
+                    alert("晚安！");
+                    break;
+                default:
+                    alert("你好！");
+            }
+        </script>
+    </body>
 </html>

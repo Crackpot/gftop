@@ -1,15 +1,38 @@
 <html>
-<head>
-<title>1-31</title>
-</head>
-<body>
-
-<script language="JavaScript">
-var some_date = new Date()
-document.write(some_date.getDay()+"<br/>")
-document.write(some_date+"<br/>")
-document.write(some_date.toLocaleString())
-</script>
-
-</body>
+	<head>
+		<title>1-31</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<script language="JavaScript">
+			var some_date = new Date();
+            var xingqi = "";
+			document.write("getDay函数返回的值为：" + some_date.getDay()+"<br/>");
+            switch(some_date.getDay()){
+                case 1:
+                    xingqi = "一";
+                    break;
+                case 2:
+                    xingqi = "二";
+                    break;
+                case 3:
+                    xingqi = "三";
+                    break;
+                case 4:
+                    xingqi = "四";
+                    break;
+                case 5:
+                    xingqi = "五";
+                    break;
+                case 6:
+                    xingqi = "六";
+                    break;
+                default:
+                    xingqi = "不明";
+            }
+            document.write("利用switch来将返回的数字转换成汉字：<br/>今天是星期" + xingqi + "<br/>");
+			document.write(some_date+"<br/>");
+			document.write(some_date.toLocaleString());
+		</script>
+	</body>
 </html>
