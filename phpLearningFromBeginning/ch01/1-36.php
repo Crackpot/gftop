@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <?php
-    if($_POST["username"] && $_POST["hometown"])//两个信息都不为空
+    if($_POST["name"] && $_POST["hometown"])//两个信息都不为空
     {
         echo "大家好，我是", $_POST["name"] , "<br/>";   
         //echo $_POST["username"] + "<br/>";   
