@@ -1,0 +1,10 @@
+rm -rf mysite.db
+
+echo syncdb
+python manage.py syncdb --noinput
+
+echo init
+python manage.py init
+
+echo runserver
+python manage.py runserver

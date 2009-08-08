@@ -1,0 +1,57 @@
+#nav {
+    float: right;
+}
+
+input {
+    display: block;
+}
+
+input.required, .error {
+    border: 1px solid red;
+}
+
+
+.tag-cloud {
+    text-align: center;    
+    border: 1px solid #FFFF00;
+    padding: 5px;
+    background-color: #FFFFCC;
+}
+
+.tag-1 {
+    font-size: 12px;
+}
+
+.tag-2 {
+    font-size: 18px;
+}
+
+.tag-3 {
+    font-size: 24px;
+}
+
+.tag-4 {
+    font-size: 30px;
+}
+
+.tag-5 {
+    font-size: 36px;
+}
+
+.tag-6 {
+    font-size: 42px;
+}
+
+.tag-7 {
+    font-size: 48px;
+}
+
+.tag-8 {
+    font-size: 54px;
+}
+
+.comment {
+    margin: 1em;
+    padding: 5px;
+    border: 1px solid #000;
+}

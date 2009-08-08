@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Profile Details{% endblock %}
+{% block content %}
+Profile details:
+<ul>
+<li>Favourite Band: {{profile.favorite_band}}</li>
+<li>Favourite Cheese: {{profile.favorite_cheese}}</li>
+<li>Lucky Number: {{profile.lucky_number}}</li>
+</ul>
+{% endblock %}

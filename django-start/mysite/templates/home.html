@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+A list of the installed demo applications:
+<ul>
+    <li><a href="./admin">Admin</a>: The classical Django admin application</li>
+    <li><a href="./accounts/register">Register</a>: Register new user with e-mail and captcha check</li>
+    <li><a href="./profiles">Profiles</a>: Site profiles handlers</li>
+    <li><a href="./items">Items</a>: A small app using tags, comments and voting</li>
+</ul>
+<p>
+	<b>NOTE:</b>
+<ul>
+	<li>You can login with: username "dummy", password "dummy"</li>
+	<li>To register a new user remember to launch the development SMTP server located in "django-start/utils/smtp_server.py"</li>
+</ul>
+</p>
+{% endblock %}
