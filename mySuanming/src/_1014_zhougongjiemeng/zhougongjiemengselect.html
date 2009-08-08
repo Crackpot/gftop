@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>周公解梦选择</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="jquery-1.3.2.js"></script>
+    <style type="text/css">
+        .sub{display:none;}
+    </style>
+</head>
+<body>
+    <select id="sel1">
+        <option>动物篇</option>
+        <option>建筑篇</option>
+        <option>器物篇</option>
+        <option>情爱篇</option>
+        <option>人身篇</option>
+        <option>山地篇</option>
+        <option>神鬼篇</option>
+        <option>生活篇</option>
+        <option>天象篇</option>
+        <option>文化篇</option>
+        <option>植物篇</option>
+        <option>其它篇</option>
+    </select>
+    <select class="sub">        
+    	<option value="动物篇爱兽、爱禽">爱兽、爱禽</option>
+        <option value="动物篇斑马">斑马</option>
+        <option value="动物篇豹子">豹子</option>
+        <option value="动物篇豺狼">豺狼</option>
+        <option value="动物篇大象">大象</option>
+        <option value="动物篇鳄鱼">鳄鱼</option>
+        <option value="动物篇鸽子">鸽子</option>
+        <option value="动物篇狗">狗</option>
+        <option value="动物篇狗熊">狗熊</option>
+        <option value="动物篇海鱼">海鱼</option>
+        <option value="动物篇猴子">猴子</option>
+        <option value="动物篇蝴蝶">蝴蝶</option>
+        <option value="动物篇孔雀">孔雀</option>
+        <option value="动物篇狼">狼</option>
+        <option value="动物篇老虎">老虎</option>
+        <option value="动物篇老鼠">老鼠</option>
+        <option value="动物篇驴">驴</option>
+        <option value="动物篇鹿">鹿</option>
+        <option value="动物篇麻雀">麻雀</option>
+        <option value="动物篇蚂蚁">蚂蚁</option>
+        <option value="动物篇马">马</option>
+        <option value="动物篇蟒蛇">蟒蛇</option>
+        <option value="动物篇猫">猫</option>
+        <option value="动物篇猫头鹰">猫头鹰</option>
+        <option value="动物篇绵羊">绵羊</option>
+        <option value="动物篇奶牛">奶牛</option>
+        <option value="动物篇鸟">鸟</option>
+        <option value="动物篇青蛙">青蛙</option>
+        <option value="动物篇鲨鱼">鲨鱼</option>
+        <option value="动物篇蛇">蛇</option>
+        <option value="动物篇狮子">狮子</option>
+        <option value="动物篇松鼠">松鼠</option>
+        <option value="动物篇天鹅">天鹅</option>
+        <option value="动物篇兔子">兔子</option>
+        <option value="动物篇蚊子">蚊子</option>
+        <option value="动物篇蜗牛">蜗牛</option>
+        <option value="动物篇乌龟">乌龟</option>
+        <option value="动物篇乌鸦">乌鸦</option>
+        <option value="动物篇鹦鹉">鹦鹉</option>
+        <option value="动物篇鱼">鱼</option>
+        <option value="动物篇蜘蛛">蜘蛛</option>
+    </select>    
+    <select class="sub">
+        <option value="建筑篇道路">道路</option>
+        <option value="建筑篇断头台">断头台</option>
+        <option value="建筑篇港口">港口</option>
+        <option value="建筑篇宫殿">宫殿</option>
+        <option value="建筑篇皇后">皇后</option>
+        <option value="建筑篇剧院">剧院</option>
+        <option value="建筑篇陵墓">陵墓</option>
+        <option value="建筑篇庙宇">庙宇</option>
+        <option value="建筑篇墓地">墓地</option>
+        <option value="建筑篇寺庙">寺庙</option>
+        <option value="建筑篇塔">塔</option>
+        <option value="建筑篇铁路">铁路</option>
+        <option value="建筑篇庭院">庭院</option>
+        <option value="建筑篇贮水池">贮水池</option>
+    </select>
+    <select class="sub">
+        <option value="器物篇白糖">白糖</option>
+        <option value="器物篇宝藏">宝藏</option>
+        <option value="器物篇宝石">宝石</option>
+        <option value="器物篇被子">被子</option>
+        <option value="器物篇匕首">匕首</option>
+        <option value="器物篇笔">笔</option>
+        <option value="器物篇布娃娃">布娃娃</option>
+        <option value="器物篇茶">茶</option>
+        <option value="器物篇车辙">车辙</option>
+        <option value="器物篇衬衣">衬衣</option>
+        <option value="器物篇秤">秤</option>
+        <option value="器物篇床铺">床铺</option>
+        <option value="器物篇刺">刺</option>
+        <option value="器物篇打孔机">打孔机</option>
+        <option value="器物篇灯">灯</option>
+        <option value="器物篇地图">地图</option>
+        <option value="器物篇耳环">耳环</option>
+        <option value="器物篇飞机">飞机</option>
+        <option value="器物篇风筝">风筝</option>
+        <option value="器物篇钢琴">钢琴</option>
+        <option value="器物篇鼓">鼓</option>
+        <option value="器物篇拐杖">拐杖</option>
+        <option value="器物篇罐子">罐子</option>
+        <option value="器物篇黄金">黄金</option>
+        <option value="器物篇吉它">吉它</option>
+        <option value="器物篇家具">家具</option>
+        <option value="器物篇剪刀">剪刀</option>
+        <option value="器物篇剑">剑</option>
+        <option value="器物篇戒指">戒指</option>
+        <option value="器物篇镜子">镜子</option>
+        <option value="器物篇帽子">帽子</option>
+        <option value="器物篇旗帜">旗帜</option>
+        <option value="器物篇钱包">钱包</option>
+        <option value="器物篇肉">肉</option>
+        <option value="器物篇扇子">扇子</option>
+        <option value="器物篇绳索">绳索</option>
+        <option value="器物篇手风琴">手风琴</option>
+        <option value="器物篇手铐">手铐</option>
+        <option value="器物篇手枪">手枪</option>
+        <option value="器物篇首饰">首饰</option>
+        <option value="器物篇丝绸">丝绸</option>
+        <option value="器物篇梯子">梯子</option>
+        <option value="器物篇剃刀">剃刀</option>
+        <option value="器物篇铁">铁</option>
+        <option value="器物篇拖鞋">拖鞋</option>
+        <option value="器物篇袜子">袜子</option>
+        <option value="器物篇网球">网球</option>
+        <option value="器物篇香水">香水</option>
+        <option value="器物篇项链">项链</option>
+        <option value="器物篇鞋">鞋</option>
+        <option value="器物篇行李">行李</option>
+        <option value="器物篇烟斗">烟斗</option>
+        <option value="器物篇阳伞">阳伞</option>
+        <option value="器物篇钥匙">钥匙</option>
+        <option value="器物篇衣服">衣服</option>
+        <option value="器物篇浴盆">浴盆</option>
+        <option value="器物篇珍珠">珍珠</option>
+        <option value="器物篇针">针</option>
+        <option value="器物篇纸">纸</option>
+        <option value="器物篇钻石">钻石</option>
+    </select>
+    <select class="sub">
+        <option value="情爱篇爱情">爱情</option>
+        <option value="情爱篇发誓">发誓</option>
+        <option value="情爱篇接吻">接吻</option>
+        <option value="情爱篇离弃">离弃</option>
+        <option value="情爱篇抛弃">抛弃</option>
+        <option value="情爱篇妻子">妻子</option>
+        <option value="情爱篇少女">少女</option>
+        <option value="情爱篇私奔">私奔</option>
+        <option value="情爱篇提议">提议</option>
+    </select>
+    <select class="sub">
+        <option value="人身篇鼻">鼻</option>
+        <option value="人身篇苍白">苍白</option>
+        <option value="人身篇肚子">肚子</option>
+        <option value="人身篇耳朵">耳朵</option>
+        <option value="人身篇胳膊">胳膊</option>
+        <option value="人身篇脚">脚</option>
+        <option value="人身篇脸">脸</option>
+        <option value="人身篇裸体">裸体</option>
+        <option value="人身篇脉博">脉博</option>
+        <option value="人身篇身体">身体</option>
+        <option value="人身篇手">手</option>
+        <option value="人身篇手指">手指</option>
+        <option value="人身篇瘫痪">瘫痪</option>
+        <option value="人身篇疼痛">疼痛</option>
+        <option value="人身篇头">头</option>
+        <option value="人身篇头发">头发</option>
+        <option value="人身篇心脏">心脏</option>
+        <option value="人身篇牙齿">牙齿</option>
+        <option value="人身篇咽喉">咽喉</option>
+        <option value="人身篇眼睛">眼睛</option>
+        <option value="人身篇眼泪">眼泪</option>
+        <option value="人身篇指甲">指甲</option>
+        <option value="人身篇嘴">嘴</option>
+        <option value="人身篇嘴唇">嘴唇</option>
+    </select>
+    <select class="sub">
+        <option value="山地篇地带">地带</option>
+        <option value="山地篇地道">地道</option>
+        <option value="山地篇地球">地球</option>
+        <option value="山地篇海洋">海洋</option>
+        <option value="山地篇河流">河流</option>
+        <option value="山地篇湖泊">湖泊</option>
+        <option value="山地篇火">火</option>
+        <option value="山地篇火山">火山</option>
+        <option value="山地篇泉水">泉水</option>
+        <option value="山地篇沙子">沙子</option>
+        <option value="山地篇石头">石头</option>
+        <option value="山地篇水库">水库</option>
+        <option value="山地篇水灾">水灾</option>
+        <option value="山地篇田地">田地</option>
+        <option value="山地篇土地">土地</option>
+        <option value="山地篇悬崖">悬崖</option>
+    </select>
+	<select class="sub">
+        <option value="神鬼篇忏悔">忏悔</option>
+        <option value="神鬼篇朝圣">朝圣</option>      
+        <option value="神鬼篇供品">供品</option>
+        <option value="神鬼篇女神">女神</option>
+        <option value="神鬼篇祈祷">祈祷</option>
+        <option value="神鬼篇神">神</option>
+        <option value="神鬼篇死人">死人</option>
+        <option value="神鬼篇天使">天使</option>
+        <option value="神鬼篇仙女">仙女</option>
+        <option value="神鬼篇献身">献身</option>
+    </select>
+	<select class="sub">
+        <option value="生活篇挨打">挨打</option>
+        <option value="生活篇唱歌">唱歌</option>
+        <option value="生活篇吃饭">吃饭</option>
+        <option value="生活篇冲突">冲突</option>
+        <option value="生活篇打鼾">打鼾</option>
+        <option value="生活篇弹琴">弹琴</option>
+        <option value="生活篇调动">调动</option>
+        <option value="生活篇读书">读书</option>
+        <option value="生活篇赌博">赌博</option>
+        <option value="生活篇扼死">扼死</option>
+        <option value="生活篇发疯">发疯</option>
+        <option value="生活篇发怒">发怒</option>
+        <option value="生活篇发烧">发烧</option>
+        <option value="生活篇纺织">纺织</option>
+        <option value="生活篇划船">划船</option>
+        <option value="生活篇滑倒">滑倒</option>
+        <option value="生活篇降落">降落</option>
+        <option value="生活篇结婚">结婚</option>
+        <option value="生活篇流产">流产</option>
+        <option value="生活篇旅行">旅行</option>
+        <option value="生活篇欧打">欧打</option>
+        <option value="生活篇呕吐">呕吐</option>
+        <option value="生活篇乞讨">乞讨</option>
+        <option value="生活篇驱逐">驱逐</option>
+        <option value="生活篇辱骂">辱骂</option>
+        <option value="生活篇伤心">伤心</option>
+        <option value="生活篇睡醒">睡醒</option>
+        <option value="生活篇跳舞">跳舞</option>
+        <option value="生活篇痛饮">痛饮</option>
+        <option value="生活篇投票">投票</option>
+        <option value="生活篇脱衣服">脱衣服</option>
+        <option value="生活篇玩笑">玩笑</option>
+        <option value="生活篇消化不良">消化不良</option>
+        <option value="生活篇宴请">宴请</option>
+        <option value="生活篇野餐">野餐</option>
+        <option value="生活篇游泳">游泳</option>
+        <option value="生活篇原谅">原谅</option>
+        <option value="生活篇运动">运动</option>
+        <option value="生活篇争吵">争吵</option>
+        <option value="生活篇自杀">自杀</option>
+    </select>
+	<select class="sub">
+        <option value="天象篇暴风雨">暴风雨</option>
+        <option value="天象篇彩虹">彩虹</option>
+        <option value="天象篇风">风</option>
+        <option value="天象篇风、空气">风、空气</option>
+        <option value="天象篇雷声">雷声</option>
+        <option value="天象篇龙卷风">龙卷风</option>
+        <option value="天象篇去彩">去彩</option>
+        <option value="天象篇闪电">闪电</option>
+        <option value="天象篇太阳">太阳</option>
+        <option value="天象篇星星">星星</option>
+        <option value="天象篇雪">雪</option>
+        <option value="天象篇夜晚">夜晚</option>
+        <option value="天象篇雨">雨</option>
+        <option value="天象篇月亮">月亮</option>
+        <option value="天象篇月食、日食">月食、日食</option>
+    </select>
+	<select class="sub">
+        <option value="文化篇报纸">报纸</option>
+        <option value="文化篇比赛">比赛</option>
+        <option value="文化篇表扬">表扬</option>
+        <option value="文化篇财富">财富</option>
+        <option value="文化篇惩罚">惩罚</option>
+        <option value="文化篇导游">导游</option>
+        <option value="文化篇地狱">地狱</option>
+        <option value="文化篇法律">法律</option>
+        <option value="文化篇犯罪">犯罪</option>
+        <option value="文化篇航海">航海</option>
+        <option value="文化篇画">画</option>
+        <option value="文化篇绘画">绘画</option>
+        <option value="文化篇监狱">监狱</option>
+        <option value="文化篇解救">解救</option>
+        <option value="文化篇谜语">谜语</option>
+        <option value="文化篇强盗">强盗</option>
+        <option value="文化篇强奸">强奸</option>
+        <option value="文化篇青春">青春</option>
+        <option value="文化篇诗歌">诗歌</option>
+        <option value="文化篇释放">释放</option>
+        <option value="文化篇天堂">天堂</option>
+        <option value="文化篇图书馆">图书馆</option>
+        <option value="文化篇侮辱">侮辱</option>
+        <option value="文化篇写作">写作</option>
+        <option value="文化篇学校">学校</option>
+        <option value="文化篇哑剧">哑剧</option>
+        <option value="文化篇演说">演说</option>
+        <option value="文化篇音乐">音乐</option>
+        <option value="文化篇游行">游行</option>
+        <option value="文化篇赞扬">赞扬</option>
+        <option value="文化篇战争">战争</option>
+    </select>
+    <select class="sub">
+        <option value="植物篇槟榔">槟榔</option>
+        <option value="植物篇大米">大米</option>
+        <option value="植物篇橄榄">橄榄</option>
+        <option value="植物篇荷花">荷花</option>
+        <option value="植物篇桔子">桔子</option>
+        <option value="植物篇梨">梨</option>
+        <option value="植物篇荔枝">荔枝</option>
+        <option value="植物篇莲花">莲花</option>
+        <option value="植物篇萝卜">萝卜</option>
+        <option value="植物篇玫瑰花">玫瑰花</option>
+        <option value="植物篇苹果">苹果</option>
+        <option value="植物篇葡萄树">葡萄树</option>
+        <option value="植物篇树苗">树苗</option>
+        <option value="植物篇豌豆">豌豆</option>
+        <option value="植物篇西瓜">西瓜</option>
+        <option value="植物篇鲜花">鲜花</option>
+        <option value="植物篇棕树">棕树</option>
+    </select>
+	<select class="sub">
+        <option value="其它篇冰">冰</option>
+        <option value="其它篇丑闻">丑闻</option>
+        <option value="其它篇出国">出国</option>
+        <option value="其它篇大门">大门</option>
+        <option value="其它篇雕像">雕像</option>
+        <option value="其它篇毒药">毒药</option>
+        <option value="其它篇队伍">队伍</option>
+        <option value="其它篇飞翔">飞翔</option>
+        <option value="其它篇疯子">疯子</option>
+        <option value="其它篇官吏">官吏</option>
+        <option value="其它篇官员">官员</option>
+        <option value="其它篇护士">护士</option>
+        <option value="其它篇火箭">火箭</option>
+        <option value="其它篇姐妹">姐妹</option>
+        <option value="其它篇军队">军队</option>
+        <option value="其它篇垃圾">垃圾</option>
+        <option value="其它篇烈士">烈士</option>
+        <option value="其它篇轮船">轮船</option>
+        <option value="其它篇男孩">男孩</option>
+        <option value="其它篇尼姑">尼姑</option>
+        <option value="其它篇清道夫">清道夫</option>
+        <option value="其它篇请求">请求</option>
+        <option value="其它篇缺点">缺点</option>
+        <option value="其它篇缺乏">缺乏</option>
+        <option value="其它篇缺席">缺席</option>
+        <option value="其它篇人群">人群</option>
+        <option value="其它篇森林">森林</option>
+        <option value="﻿其它篇杀害">杀害</option>
+        <option value="其它篇生锈">生锈</option>
+        <option value="其它篇士兵">士兵</option>
+        <option value="其它篇守财奴">守财奴</option>
+        <option value="其它篇死亡">死亡</option>
+        <option value="其它篇统治">统治</option>
+        <option value="其它篇污泥">污泥</option>
+        <option value="其它篇小贩">小贩</option>
+        <option value="其它篇学位">学位</option>
+        <option value="其它篇鸦片">鸦片</option>
+        <option value="其它篇烟">烟</option>
+        <option value="其它篇野蛮人">野蛮人</option>
+        <option value="其它篇医生">医生</option>
+        <option value="其它篇英雄">英雄</option>
+        <option value="其它篇游船">游船</option>
+        <option value="其它篇战争">战争</option>
+    </select>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#sel1").change(function(){
+                $("#sel1 option").each(function(i,o){
+                    if($(this).attr("selected"))
+                    {
+                        $(".sub").hide();
+                        $(".sub").eq(i).show();
+                    }
+                });
+            });
+            $("#sel1").change();
+        });
+    </script>
+</body>
+</html>
