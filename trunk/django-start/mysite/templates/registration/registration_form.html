@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+
+{% if form.errors %}
+    <p class="error">Please correct the errors below:</p>
+{% endif %}
+    
+<form method="post" action="">
+    {{ form }}
+    <tr><td><input type="submit" value="Register"/></td></tr>
+</form>
+{% endblock %}

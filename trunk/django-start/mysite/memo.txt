@@ -1,0 +1,16 @@
+Run the server:
+    python manage.py runserver
+
+Create new application:
+    python manage.py startapp app_name
+    
+Database:
+    python manage.py sql app_name
+    python manage.py syncdb
+    
+Shell:
+    python manage.py shell
+
+Maintenance:
+    python manage.py init
+    python manage.py cron

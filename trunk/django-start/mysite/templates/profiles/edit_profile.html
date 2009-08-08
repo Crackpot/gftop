@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+{% block content %}
+Edit your profile:
+<form action="." method="POST">
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+{% endblock %}

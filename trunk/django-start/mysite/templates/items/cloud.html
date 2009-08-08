@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Tags Cloud{% endblock %}
+{% block content %}
+<p><a href="/items/">Item List</a></p>
+<h1>Tag Cloud:</h1>
+<div class="tag-cloud">
+{% for tag in tags %}
+    <span class="tag-{{tag.font_size}}"><a href="/items/tags/{{tag.name|slugify}}/">{{tag.name}}</a></span>
+{% endfor %}
+</div>
+
+{% if user.is_authenticated %}
+<br>
+<form action='.' method='post'>
+    <label for="item">Create a new Item:</label>
+    <input type="text" name="item" value="" id="item">
+    <input type="submit" value="Create" />
+</form>
+{% endif %}
+{% endblock %}
