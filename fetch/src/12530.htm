@@ -1,0 +1,293 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="EXPIRES" CONTENT="Tue, 28 Apr 2009 00:00:00 GMT">
+<title>12530中国移动手机彩铃下载,铃声下载-移动彩铃网</title>
+<meta name="keywords" content="12530,中国移动,彩铃,移动彩铃,彩铃下载,铃声下载,手机音乐,彩铃网" />
+<meta name="description" content="12530中国移动官方彩铃网站,彩铃下载,铃声下载,手机彩铃,搞笑彩铃,畅销铃声,免费彩铃,免费铃声,提供开通彩铃,彩铃管理,设置默认彩铃等服务" />
+<script src="/newchannel/tpl/orderTone/js/orderTone23.js" type="text/javascript"></script>
+
+<link href="/newchannel/tpl/orderTone/dingzhi_css/dingzhi6.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onbeforeunload="recodeStayTime();">
+<div class="header">
+   <label><!-- 订制二步曲： --></label>
+  <span><!-- 1.输手机号 2.输入验证码 --></span> </div>
+<div class="player">
+  <label id="player">
+  	<object id="MediaPlayer1" width="390" height="65" classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" 
+codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112"
+align="baseline" border="0" standby="Loading Microsoft Windows Media Player components..." 
+type="application/x-oleobject">
+          <param name="URL" value="http://content.12530.com/newcmsdata/batchmusic/20090208/rCIpItOd.mp3" />
+          <param name="autoStart" value="false" />
+          <param name="invokeURLs" value="true" />
+          <param name="playCount" value="100" />
+          <param name="defaultFrame" value="datawindow" />
+          <param name="loop" value="1" />
+          <embed src="http://content.12530.com/newcmsdata/batchmusic/20090208/rCIpItOd.mp3" width="390" height="65" autostart="false" align="baseline" border="0"
+			type="application/x-mplayer2"
+			pluginspage="" showcontrols="1" showpositioncontrols="0"
+			showaudiocontrols="1" showtracker="1" showdisplay="0"
+			showstatusbar="1"
+			autosize="0"
+			showgotobar="0" showcaptioning="0" autorewind="0"
+			animationatstart="0" transparentatstart="0" allowscan="1"
+			enablecontextmenu="1" clicktoplay="0" 
+			defaultframe="datawindow" invokeurls="false" playcount="100"></embed>
+        </object>
+  </label>
+  <!-- 
+  <span><a href="#null"><input type="image" src="/newchannel/tpl/orderTone/dingzhi_images/btn_1.jpg" onclick="changePlayer('1','http://content.12530.com/newcmsdata/batchmusic/20090208/rCIpItOd.mp3');" style="margin:5px 0;"/></a><br/>
+  <a href="#null"><input type="image" src="/newchannel/tpl/orderTone/dingzhi_images/btn_2.jpg" onclick="changePlayer('2','http://content.12530.com/upload//rings2/20090211/600510005253600902000006283840/000047326844_000019.mp3');" /></a></span>
+   -->
+</div>
+
+<div class="dingzi_info">
+<label>彩铃:2.0元/首,有效期至:2011-01-12</label>
+<span>铃声:2.0元/首,(永久有效)</span>
+
+  <!-- <label>彩铃价格：2.0元&nbsp;&nbsp;有效期至：2009-06-30</label>
+  <span>铃声：2.0元(永久有效)</span>  --></div>
+
+<div class="content_area">
+
+	<div id="songTitle" class="mp3_title" style="display:block;"> <img src="/newchannel/tpl/orderTone/dingzhi_images/icon_1.gif" />小沈阳教训人 <font color="#777676">-  小沈阳</font> </div>
+	<!--订制页1开始-->
+	  <div id="imput_mobile" class="num_error" style="display:block;">
+	    <div class="num_error_1"> 输入您的手机号：</div>
+	    <div class="num_error_2">
+	      <input type="text" class="input_1" id="input_mob" maxlength="11" onkeyup="showValidateCode();" />
+	    </div>
+	    <div class="num_error_4" id="mob_num_txt" style="display:block;"> 中国移动手机号(必填) </div>
+	    <div class="num_error_3" id="mob_num_err_icon" style="display:none;"> <img src="/newchannel/tpl/orderTone/dingzhi_images/icon_3.gif" alt="输入错误" /> </div>
+	    <div class="num_error_4_1" id="mob_num_err_txt" style="display:none;"> (11位中国移动手机号) </div>
+	    <div class="num_error_3" id="mob_num_ok_icon" style="display:none;"> <img src="/newchannel/tpl/orderTone/dingzhi_images/icon_2.gif" alt="输入正确" /> </div>
+	    <div class="num_error_4_2" id="mob_num_ok_txt" style="display:none;"> 号码正确 </div>
+	  </div>
+	  <!--订制页1结束-->
+		
+  
+  <!--验证码开始-->
+  <div class="input_r_font" id="input_r_txt" style="display:none;">
+    <div class="num_error_1"> 输入右侧字符：</div>
+    <div class="input_r_font_2">
+      <input id="validateNum" type="text" maxlength="4" onkeyup="checkImgValidate();" class="input_2" />
+    </div>
+    <div class="input_r_font_3"> <img id="imgValidate" src="/newchannel/tpl/orderTone/dingzhi_images/icon_4.gif" /> </div>
+    <div class="input_r_font_4"> <a href="#">看不清</a> </div>
+  </div>
+  <!--验证码结束-->
+  <!--发送铃声下载地址开始-->
+  <div id="sendRing" class="setdd" style="display:none;">系统正在处理中……<br/>
+    正在将铃声下载地址发送到你的手机，请稍后注意查收！</div>
+  <!--发送铃声下载地址结束-->
+  <div id="checkOkImg" class="input_right" style="display:none;">请选择下载彩铃或铃声。</div>
+  <div id="checkerrImg" class="input_err" style="display:none;">输错啦!请重新输入!</div>
+  
+  <div class="set_sound" id="set_sound_btn" style="display:block;">
+    
+    <h2 id="set_cl"><input alt="朋友拨打你电话时听到的音乐或声音" type="image" onclick="orderColoring();" src="/newchannel/tpl/orderTone/dingzhi_images/btn_3.jpg" /></h2>
+    
+    <h3 id="set_ls"><input alt="你的手机有电话时播放的音乐或声音" type="image" onclick="orderRing('2');" src="/newchannel/tpl/orderTone/dingzhi_images/btn_4.jpg" /></h3>
+    
+  </div>
+  
+  <!--发送订购彩铃验证码开始-->
+  <div id="sendColoring" class="login_txt" style="display:none;">正在发送订购彩铃用的验证码，请注意查收短信。<br/>
+    如果您不是彩铃用户，将收到开通彩铃用的注册验证码。 </div>	
+  <!--发送订购彩铃验证码开结束-->
+  <!--输入验证码开始-->
+  <div id="showMobile" class="num_error" style="display:none;">
+    <div class="num_error_1"> 您的手机号：</div>
+    <div class="num_error_2_2"> 12344569587 </div>
+  </div>
+  <div id="check_inpu" class="input_r_font_5" style="display:none;">
+    <div class="num_error_5"> 输入验证码：</div>
+    <div class="input_r_font_2">
+      <input id="telValidate" maxlength="6" type="text" class="input_2"/>
+    </div>
+  </div>
+  <div id="setColoringBut" style="display:none;"><input onclick="setColoring();" type="image" src="/newchannel/tpl/orderTone/dingzhi_images/btn_6.jpg" style="margin:6px 0 -12px 0;"/></div>
+  <div id="setColoringTip" class="validate_txt" style="display:none;">请输入您手机收到的6位验证码。<br/>
+    30秒内没收到短信，点这里<a href="#null" onclick="getTelValidate();">重新获取</a>，也可以直接<a href="#">下载到手机</a></div>
+	<!--输入验证码结束-->
+	<!--恭喜!订购成功开始-->
+  <div id="orderSuccess" class="dinggou_win" style="display:none;">
+    <dl>
+    <!-- 
+      <dt><img src="dingzhi_images/icon_1.gif" />恭喜！《青花瓷》订购成功！</dt>
+      <dd id="pack">
+        <h1>您还可以：</h1>
+        <h2>挑一个神秘彩铃盒，免费彩铃在里面！</h2>
+        <h3><a href="#"><img src="dingzhi_images/icon_5.jpg" /></a>　<a href="#"><img src="dingzhi_images/icon_5.jpg" /></a>　<a href="#"><img src="dingzhi_images/icon_5.jpg" /></a>　<a href="#"><img src="dingzhi_images/icon_5.jpg" /></a>　<a href="#"><img src="dingzhi_images/icon_5.jpg" /></a></h3>
+        <h4>管理“我的彩铃库”，把刚订制的彩铃设为默认铃音</h4>
+        <h4>返回12530网站，更多好歌等着你</h4>
+      </dd>
+     -->
+    </dl>
+  </div>
+  <!--恭喜!订购成功结束-->
+  <!--该铃音已经过期与匹配开始-->
+   
+  <div id="order_err" class="alert_pay" style="display:none;">
+    <dl>
+   
+      <!--<dt>对不起，该铃音已经过期，请换一首吧！</dt>-->
+      <!--<dt>对不起，该铃音暂时无法匹配，搜一下试试吧！</dt>-->
+      <!--<dt>您已经订购过这首彩铃了，不如换一首吧！</dt>-->
+      <!-- 
+	  <dt>对不起，系统忙，请您稍后再试或用手机上网订制。</dt>
+      <dd>
+        <label>
+        <input type="text" class="input_3" />
+        </label>
+        <span><a href="#"><img src="dingzhi_images/btn_7.jpg" /></a></span> </dd>
+      <dd>
+        <h1> <a href="#">返回12530，更多精彩等着您！</a></h1>
+      </dd>
+       -->
+    </dl>
+  </div>
+  <!--该铃音已经过期与匹配结束-->
+  <!--恭喜和更多好听开始-->
+  <div id="ToneSuccess" class="down_win" style="display:none;"> 1、恭喜！铃声《左边》的下载地址已通过免费短信发<br />
+    &nbsp;送给您。<br />
+    2、手机直接点击进入下载页面，下载不成功不收费。<br />
+    3、如果没有收到短信，刷新本页面重新下载。 </div>
+  <!--恭喜和更多好听结束-->
+  <a href="#null" id="ToneSuccessButtn" style="display:none;"><input type="image" src="/newchannel/tpl/orderTone/dingzhi_images/btn_8.jpg" alt="更多好听"/></a> </div>
+
+
+<div class="tag" id="bottomInfo">
+ <span id="span_banner">
+  <h1>你可能会喜欢:
+	  <a href="#null" onclick="goNewOrder('600902000006272711','1');">永远在身边</a>
+	  <a href="#null" onclick="goNewOrder('600902000004251523','1');">我们都一样</a>
+	  <a href="#null" onclick="goNewOrder('600902000003301987','1');">姑娘我爱你</a>
+	  <!-- <a href="#null" onclick="goNewOrder('600902000005695566','1');">海角七号</a> -->
+	  
+  </h1>
+  <h2>别人正在搜:
+	  <a href="#null" onclick="goURL('http://my.12530.com/newchannel/c/m/searchKeyWorld/%E5%B0%8F%E6%B2%88%E9%98%B3/1/1/search.htm');">小沈阳</a>
+	  <a href="#null" onclick="goURL('http://my.12530.com/newchannel/c/m/searchKeyWorld/_/_/_/search_list.htm?pnid=188410');">网络流行</a>
+	  <a href="#null" onclick="goNewOrder('600902000001128017','1')">丢手机</a>
+	  <a href="#null" onclick="goURL('http://my.12530.com/newchannel/c/m/searchKeyWorld/_/_/_/search_list.htm?pnid=191832');">强悍宝宝</a>
+  </h2>
+  </span>
+  <label><a href="#null" onclick="goURL('http://channel.support.12530.com/newchannel/tpl/m/help_message/help_message.jsp');"><img src="/newchannel/tpl/orderTone/dingzhi_images/btn_5.jpg" alt="帮助与投诉"/></a></label>
+</div>
+<!-- 
+<div class="tag_0407">
+  <label><img src="/newchannel/tpl/orderTone/dingzhi_images/bg_1.jpg" /></label>
+  <div class="tag_0407_content">
+  <h1 style="display:none;"></h1>
+  <span style="display:none;">
+  	您的森分您<a href="#" title="的森分您的">的森分您的</a>森分您的森分
+  </span>
+  <span style="display:none;">
+  	<ul>
+  		<li>阿萨德解开了法师了的风景</li>
+  		<li>阿萨德解开了法师了的风景</li>
+  		<li>阿萨德解开了法师<a href="#" title="看无法">了的</a>风景</li>
+  		<li>阿萨德解开了法师了的风景</li>
+  	</ul>
+  </span>
+  
+  	<div class="icon0407"></div>
+  	<div class="info0407">阿萨德解开了法师了的风景阿萨德解开了法师了的风景阿萨德解开了法师了的风景</div>
+  
+  <h3 style="display:none;"><a href="#"><img src="/newchannel/tpl/orderTone/dingzhi_images/btn_5.jpg" /></a></h3>
+  </div>
+  <label><img src="/newchannel/tpl/orderTone/dingzhi_images/bg_2.jpg" /></label>
+</div>
+ -->
+<div class="dingzhi_footer"></div>
+<div style="display:none;">
+<input type="hidden" name="colorRingId" id="colorRingId" value="600902000006283837" /><!-- 彩铃18位id -->
+<input type="hidden" name="freeMdmcid1" id="freeMdmcid1" value="" /><!-- 免费彩铃1 -->
+<input type="hidden" name="freeMdmcid2" id="freeMdmcid2" value="" /><!-- 免费彩铃2 -->
+<input type="hidden" name="freeSongName1" id="freeSongName1" value="" /><!-- 免费彩铃名称1 -->
+<input type="hidden" name="freeSongName2" id="freeSongName2" value="" /><!-- 免费彩铃名称2 -->
+<input type="hidden" name="freeSingerName1" id="freeSingerName1" value="" /><!-- 免费彩铃歌手名1 -->
+<input type="hidden" name="freeSingerName2" id="freeSingerName2" value="" /><!-- 免费彩铃歌手名2 -->
+
+
+<input type="hidden" name="crCpId" id="crCpId" value="" /><!-- 彩铃产品id -->
+<input type="hidden" name="toneRingId" id="toneRingId" value="600902000006283838" /><!-- 振铃18位id -->
+<input type="hidden" name="type" id="type" value="1" /><!-- 请求类型 -->
+<input type="hidden" name="songName" id="songName" value="小沈阳教训人" /><!-- 歌曲名 -->
+<input type="hidden" name="singerName" id="singerName" value="小沈阳" /><!-- 歌手名 -->
+<input type="hidden" name="crprice" id="crprice" value="200" /><!-- 彩铃价格 -->
+<input type="hidden" name="trprice" id="trprice" value="200" /><!-- 振铃价格 -->
+<input type="hidden" name="contentid" id="contentid" value="0" /><!-- contentid -->
+<input type="hidden" name="uid" id="uid" value="2703" /><!-- uid -->
+<input type="hidden" name="uuid" id="uuid" value="2703_zlss" /><!-- uuid -->
+<input type="hidden" name="validate" id="validate" value="2011-01-12" /><!-- 彩铃有效期 -->
+<input type="hidden" name="cityCode" id="cityCode" value="" /><!-- cityCode -->
+<input type="hidden" id="requestURL" name="requestURL" value=""/><!-- 请求地址 -->
+<input type="hidden" id="msgid" name="msgid" value=""/><!--  -->
+<input type="hidden" id="enterTime" name="enterTime" value="2009-04-27 10:39:51"/>
+<input type="hidden" id="convert" name="convert" value=""/>
+<input type="hidden" id="placeid" name="placeid" value="-"/>
+<input type="hidden" id="validates" name="validates" value=""/>
+<input type="hidden" id="try" name="try" value="http://content.12530.com/newcmsdata/batchmusic/20090208/rCIpItOd.mp3" />
+<input type="hidden" name="isMatch" id="isMatch" value="false" /><!-- 是否匹配 -->
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	//applicationPath = "/newchannel/tpl/channel/";
+	hasCL = true;
+	hasZL = true;
+	tryPath = "http://content.12530.com/newcmsdata/batchmusic/20090208/rCIpItOd.mp3";
+	
+	if(navigator.userAgent.toLowerCase().indexOf("msie")!=-1) {
+		var top = window.screenTop;
+		//var height = 368 + parseInt(top);
+		var height = 410 + parseInt(top);
+		window.resizeTo(410,height);
+	} else {
+		//window.resizeTo(445,605);
+		window.resizeTo(445,620);
+	}
+	
+	init();
+	
+</script>
