@@ -1,17 +1,17 @@
-#coding=utf-8
+#coding = utf-8
 # Django settings for mysite project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    # ('Crackpot', 'gaofeitop@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = '/home/workspace/gftop/mysite/mysite.db'             # Or path to database file if using sqlite3.
+DATABASE_NAME = './mysite.db'             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -77,7 +77,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/workspace/gftop/mysite/templates',
+    './templates',
 )
 
 INSTALLED_APPS = (
@@ -88,12 +88,3 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'mysite.books',
 )
-
-
-
-#邮件服务器设置
-EMAIL_HOST="localhost"
-EMAIL_HOST_PASSWORD='15263748'
-EMAIL_HOST_USER='crackpot'
-EMAIL_PORT='25'
-EMAIL_SUBJECT_PREFIX='[Django]'
