@@ -1,0 +1,12 @@
+1	在admin页面中注册app:
+	#coding=utf-8
+	from djangobooks.books.models import Book ,Author,Publisher
+	from django.contrib import admin
+	class BookAdmin(admin.ModelAdmin):
+	    list_display=('title','publisher','publication_date')
+	    list_filter=('publisher','publication_date')
+	    ordering=('-publication_date',)
+	    search_fields=('title','publisher__name',)
+	    
+	admin.site.register(Author)
+	admin.site.register(Book,BookAdmin)
