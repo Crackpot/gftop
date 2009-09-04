@@ -1,4 +1,5 @@
 <title>多行C语法</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <?php
     /*
      * Title:My PHP program

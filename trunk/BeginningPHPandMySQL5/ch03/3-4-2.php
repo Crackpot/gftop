@@ -1,3 +1,5 @@
+<title>复合数据类型</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <h3>1.数组</h3>
 <?php
     echo "<h5>a.数字索引</h4>";

@@ -1,8 +1,7 @@
 <html>
     <head>
-        <title>
-            <?php echo "欢迎访问我的站点！";?>
-        <title>
+        <title><?php echo "欢迎访问我的站点！";?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <?php

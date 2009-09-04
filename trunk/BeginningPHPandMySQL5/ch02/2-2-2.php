@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <?
     echo "使用短开放标(? ?)记输出内容"."<br/>";
 ?>
