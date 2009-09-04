@@ -1,0 +1,3 @@
+姓名|职务|喜好颜色
+Nino Sanzi|Professional Golfer|red
+Crackpot|Programmer|green

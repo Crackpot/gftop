@@ -1,3 +1,5 @@
+<title>标量数据类型</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <h3>1.布尔型</h3>
 <?php
     $alive = false; # $alive is false. 不显示
