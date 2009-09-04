@@ -97,7 +97,7 @@ map <leader>e :e! ~/vim_local/vimrc<cr>
 "When .vimrc is edited, reload it
 "autocmd! bufwritepost vimrc source ~/vim_local/vimrc
 
-set fileencodings=utf-8,GB2312
+set fileencodings=utf-8,GB2312,GBK,BIG5
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
