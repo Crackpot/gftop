@@ -1,0 +1,21 @@
+┏━public static void main(String[] args)
+┃     DECLARE an int variable to hold the number of user guesses,named numOfGuesses,set it ro 0
+┃     MAKE a new SimpleDotCom instance
+┃     COMPUTE a random number between 0 and 4 that will be the starting location cell position
+┃     MAKE an int array with 3 ints using the randomly-generated number,that number incremented by 1,and that number incremented by 2
+┃     INVOKE the setLocationCells() method on the SimpleDotCom instance
+┃     DECLARE a boolean variable representing the state of the game, named isAlive. SET it to true
+┃
+┃     ┏━WHILE the dot com is still alive (isAlive == true)
+┃     ┃     GET user input from the command line
+┃     ┃     // 检查用户的猜测
+┃     ┃     INVOKE the checkYourself() method on the SimpleDotCom instance
+┃     ┃     INCREMENT numOfGuesses variable
+┃     ┃     // 判断是否击沉
+┃     ┃
+┃     ┃     ┏━IF result is "kill"
+┃     ┃     ┃     SET isAlive to false(which means we won't enter the loop again)
+┃     ┃     ┃     PRINT the number of user guess
+┃     ┃     ┗━END IF
+┃     ┗━END WHILE
+┗━END METHOD

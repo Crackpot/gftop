@@ -1,0 +1,181 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+AddThing	ch04/AddThing.java	/^class AddThing {$/;"	c
+AddThingTestDrive	ch04/AddThingTestDrive.java	/^class AddThingTestDrive {$/;"	c
+Area	ch04/Area.java	/^class Area {$/;"	c
+AreaTestDrive	ch04/AreaTestDrive.java	/^class AreaTestDrive {$/;"	c
+BeerSong	ch01/BeerSong.java	/^public class BeerSong {$/;"	c
+Books	ch03/Books.java	/^class Books {$/;"	c
+BooksTestDrive	ch03/BooksTestDrive.java	/^class BooksTestDrive {$/;"	c
+Clock	ch04/Clock.java	/^class Clock {$/;"	c
+ClockTestDrive	ch04/ClockTestDrive.java	/^class ClockTestDrive {$/;"	c
+DVDPlayer	ch02/exercises/DVDPlayer.java	/^class DVDPlayer {$/;"	c
+DVDPlayerTestDrive	ch02/exercises/DVDPlayerTestDrive.java	/^class DVDPlayerTestDrive {$/;"	c
+Dog	ch02/dog/Dog.java	/^class Dog {$/;"	c
+Dog	ch03/Dog.java	/^class Dog {$/;"	c
+Dog	ch04/Dog.java	/^class Dog {$/;"	c
+DogTestDrive	ch02/dog/DogTestDrive.java	/^class DogTestDrive {$/;"	c
+DogTestDrive	ch04/DogTestDrive.java	/^class DogTestDrive {$/;"	c
+DrumKit	ch02/exercises/DrumKit.java	/^class DrumKit {$/;"	c
+DrumKitTestDrive	ch02/exercises/DrumKitTestDrive.java	/^class DrumKitTestDrive {$/;"	c
+Echo	ch02/exercises/Echo.java	/^class Echo {$/;"	c
+EchoTestDrive	ch02/exercises/EchoTestDrive.java	/^public class EchoTestDrive {$/;"	c
+ElectricGuitar	ch04/ElectricGuitar.java	/^class ElectricGuitar {$/;"	c
+ElectricGuitarTestDrive	ch04/ElectricGuitarTestDrive.java	/^class ElectricGuitarTestDrive {$/;"	c
+Exercise1b	ch01/exercises/Exercise1b.java	/^class Exercise1b {$/;"	c
+Foo	ch04/Foo.java	/^class Foo {$/;"	c
+FooTestDrive	ch04/FooTestDrive.java	/^class FooTestDrive {$/;"	c
+GameLauncher	ch02/game/GameLauncher.java	/^public class GameLauncher {$/;"	c
+GoodDog	ch04/GoodDog.java	/^class GoodDog {$/;"	c
+GoodDogTestDrive	ch04/GoodDogTestDrive.java	/^class GoodDogTestDrive {$/;"	c
+GuessGame	ch02/game/GuessGame.java	/^public class GuessGame {$/;"	c
+HeapQuiz	ch03/HeapQuiz.java	/^class HeapQuiz {$/;"	c
+Hobbits	ch03/Hobbits.java	/^class Hobbits {$/;"	c
+Horse	ch04/Horse.java	/^class Horse {$/;"	c
+HorseTestDrive	ch04/HorseTestDrive.java	/^class HorseTestDrive {$/;"	c
+IfTest	ch01/IfTest.java	/^class IfTest {$/;"	c
+IfTest2	ch01/IfTest2.java	/^class IfTest2 {$/;"	c
+Loopy	ch01/Loopy.java	/^public class Loopy{$/;"	c
+Mix4	ch04/Mix4.java	/^public class Mix4 {$/;"	c
+Movie	ch02/movie/Movie.java	/^class Movie {$/;"	c
+MovieTestDrive	ch02/movie/MovieTestDrive.java	/^public class MovieTestDrive {$/;"	c
+MyFirstApp	ch01/MyFirstApp.java	/^public class MyFirstApp{$/;"	c
+PhraseOMatic	ch01/PhraseOMatic.java	/^public class PhraseOMatic {$/;"	c
+Player	ch02/game/Player.java	/^public class Player {$/;"	c
+PoolPuzzleOne	ch01/exercises/PoolPuzzleOne.java	/^class PoolPuzzleOne {$/;"	c
+PoorDog	ch04/PoorDog.java	/^class PoorDog {$/;"	c
+PoorDogTestDrive	ch04/PoorDogTestDrive.java	/^public class PoorDogTestDrive {$/;"	c
+Puzzle4	ch04/Puzzle4.java	/^public class Puzzle4 {$/;"	c
+Puzzle4b	ch04/Puzzle4.java	/^class Puzzle4b{$/;"	c
+Shuffle1	ch01/exercises/Shuffle1.java	/^class Shuffle1 {$/;"	c
+SimpleDotCom	ch05/game/SimpleDotCom.java	/^public class SimpleDotCom {$/;"	c
+SimpleDotComGame	ch05/game/SimpleDotComGame.java	/^public class SimpleDotComGame {$/;"	c
+SimpleDotComTestDrive	ch05/game/SimpleDotComTestDrive.java	/^public class SimpleDotComTestDrive {$/;"	c
+SimpleGui1	ch12/SimpleGui1.java	/^public class SimpleGui1 {$/;"	c
+TapeDeck	ch02/exercises/TapeDeck.java	/^class TapeDeck {$/;"	c
+TapeDeckTestDrive	ch02/exercises/TapeDeckTestDrive.java	/^class TapeDeckTestDrive {$/;"	c
+Test	ch01/exercises/Test.java	/^class Test {$/;"	c
+TestArrays	ch03/TestArrays.java	/^class TestArrays {$/;"	c
+Triangle	ch03/Triangle.java	/^class Triangle {$/;"	c
+XCopy	ch04/XCopy.java	/^class XCopy {$/;"	c
+a	ch04/AddThing.java	/^    int a;$/;"	f	class:AddThing
+add	ch04/AddThing.java	/^    public int add() {$/;"	m	class:AddThing
+area	ch03/Triangle.java	/^    double area;$/;"	f	class:Triangle
+author	ch03/Books.java	/^    String author;$/;"	f	class:Books
+b	ch04/AddThing.java	/^    int b = 12;$/;"	f	class:AddThing
+bark	ch02/dog/Dog.java	/^    void bark() {$/;"	m	class:Dog
+bark	ch03/Dog.java	/^    public void bark() {$/;"	m	class:Dog
+bark	ch04/Dog.java	/^    void bark() {$/;"	m	class:Dog
+bark	ch04/GoodDog.java	/^    void bark() {$/;"	m	class:GoodDog
+brand	ch04/ElectricGuitar.java	/^    String brand;$/;"	f	class:ElectricGuitar
+breed	ch02/dog/Dog.java	/^    String breed;\/\/ 品种$/;"	f	class:Dog
+breed	ch04/Horse.java	/^    private String breed;$/;"	f	class:Horse	file:
+calcArea	ch04/Area.java	/^    int calcArea(int height, int width) {$/;"	m	class:Area
+canRecord	ch02/exercises/DVDPlayer.java	/^    boolean canRecord = false;$/;"	f	class:DVDPlayer
+canRecord	ch02/exercises/TapeDeck.java	/^    boolean canRecord = false;$/;"	f	class:TapeDeck
+checkYourself	ch05/game/SimpleDotCom.java	/^    public String checkYourself(String stringGuess) {\/\/ 取得玩家的猜测$/;"	m	class:SimpleDotCom
+count	ch02/exercises/Echo.java	/^    int count = 0;$/;"	f	class:Echo
+counter	ch04/Mix4.java	/^    int counter = 0;$/;"	f	class:Mix4
+doStuff	ch04/Puzzle4.java	/^    public int doStuff(int factor) {$/;"	m	class:Puzzle4b
+genre	ch02/movie/Movie.java	/^    String genre;\/\/ 类型，流派$/;"	f	class:Movie
+getBrand	ch04/ElectricGuitar.java	/^    String getBrand() {$/;"	m	class:ElectricGuitar
+getBreed	ch04/Horse.java	/^    public String getBreed() {$/;"	m	class:Horse
+getHeight	ch04/Horse.java	/^    public double getHeight() {$/;"	m	class:Horse
+getName	ch04/PoorDog.java	/^    public String getName() {$/;"	m	class:PoorDog
+getNumOfPickups	ch04/ElectricGuitar.java	/^    int getNumOfPickups() {$/;"	m	class:ElectricGuitar
+getRockStarUsesIt	ch04/ElectricGuitar.java	/^    boolean getRockStarUsesIt() {$/;"	m	class:ElectricGuitar
+getSize	ch04/GoodDog.java	/^    public int getSize() {$/;"	m	class:GoodDog
+getSize	ch04/PoorDog.java	/^    public int getSize() {$/;"	m	class:PoorDog
+getTime	ch04/Clock.java	/^    String getTime() {\/\/ getter()方法必定有其返回值，故在声明时不能忘记其类型$/;"	m	class:Clock
+go	ch04/Foo.java	/^    public int go() {$/;"	m	class:Foo
+go	ch04/XCopy.java	/^    int go(int arg) {\/\/ arg来自类的实例变量orig，初始值为42$/;"	m	class:XCopy
+guess	ch02/game/Player.java	/^    public void guess() {$/;"	m	class:Player
+height	ch03/Triangle.java	/^    int height;$/;"	f	class:Triangle
+height	ch04/Horse.java	/^    private double height = 15.2;$/;"	f	class:Horse	file:
+hello	ch02/exercises/Echo.java	/^    void hello() {$/;"	m	class:Echo
+id	ch03/HeapQuiz.java	/^    int id = 0;$/;"	f	class:HeapQuiz
+ivar	ch04/Puzzle4.java	/^    int ivar;$/;"	f	class:Puzzle4b
+length	ch03/Triangle.java	/^    int length;$/;"	f	class:Triangle
+locationCells	ch05/game/SimpleDotCom.java	/^    int[] locationCells;$/;"	f	class:SimpleDotCom
+main	ch01/BeerSong.java	/^    public static void main (String[] args) {$/;"	m	class:BeerSong
+main	ch01/IfTest.java	/^    public static void main (String[] args) {$/;"	m	class:IfTest
+main	ch01/IfTest2.java	/^    public static void main (String[] args) {$/;"	m	class:IfTest2
+main	ch01/Loopy.java	/^    public static void main(String[] args) {$/;"	m	class:Loopy
+main	ch01/MyFirstApp.java	/^    public static void main(String[] args){$/;"	m	class:MyFirstApp
+main	ch01/PhraseOMatic.java	/^    public static void main (String[] args) {$/;"	m	class:PhraseOMatic
+main	ch01/exercises/Exercise1b.java	/^    public static void main(String[] args) {$/;"	m	class:Exercise1b
+main	ch01/exercises/PoolPuzzleOne.java	/^    public static void main(String[] args) {$/;"	m	class:PoolPuzzleOne
+main	ch01/exercises/Shuffle1.java	/^    public static void main(String[] args) {$/;"	m	class:Shuffle1
+main	ch01/exercises/Test.java	/^    public static void main(String[] args) {$/;"	m	class:Test
+main	ch02/dog/DogTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:DogTestDrive
+main	ch02/exercises/DVDPlayerTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:DVDPlayerTestDrive
+main	ch02/exercises/DrumKitTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:DrumKitTestDrive
+main	ch02/exercises/EchoTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:EchoTestDrive
+main	ch02/exercises/TapeDeckTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:TapeDeckTestDrive
+main	ch02/game/GameLauncher.java	/^    public static void main(String[] args) {$/;"	m	class:GameLauncher
+main	ch02/movie/MovieTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:MovieTestDrive
+main	ch03/BooksTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:BooksTestDrive
+main	ch03/Dog.java	/^    public static void main(String[] args){$/;"	m	class:Dog
+main	ch03/HeapQuiz.java	/^    public static void main(String[] args) {$/;"	m	class:HeapQuiz
+main	ch03/Hobbits.java	/^    public static void main(String[] args) {$/;"	m	class:Hobbits
+main	ch03/TestArrays.java	/^    public static void main(String[] args) {$/;"	m	class:TestArrays
+main	ch03/Triangle.java	/^    public static void main(String[] args) {$/;"	m	class:Triangle
+main	ch04/AddThingTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:AddThingTestDrive
+main	ch04/AreaTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:AreaTestDrive
+main	ch04/ClockTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:ClockTestDrive
+main	ch04/DogTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:DogTestDrive
+main	ch04/ElectricGuitarTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:ElectricGuitarTestDrive
+main	ch04/FooTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:FooTestDrive
+main	ch04/GoodDogTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:GoodDogTestDrive
+main	ch04/HorseTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:HorseTestDrive
+main	ch04/Mix4.java	/^    public static void main(String[] args) {$/;"	m	class:Mix4
+main	ch04/PoorDogTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:PoorDogTestDrive
+main	ch04/Puzzle4.java	/^    public static void main(String[] args) {$/;"	m	class:Puzzle4
+main	ch04/XCopy.java	/^    public static void main(String[] args) {$/;"	m	class:XCopy
+main	ch05/game/SimpleDotComGame.java	/^    public static void main(String[] args){$/;"	m	class:SimpleDotComGame
+main	ch05/game/SimpleDotComTestDrive.java	/^    public static void main(String[] args) {$/;"	m	class:SimpleDotComTestDrive
+main	ch12/SimpleGui1.java	/^    public static void main(String[] args) {$/;"	m	class:SimpleGui1
+maybenew	ch04/Mix4.java	/^    public int maybenew(int index) {$/;"	m	class:Mix4
+name	ch02/dog/Dog.java	/^    String name;$/;"	f	class:Dog
+name	ch03/Dog.java	/^    String name;$/;"	f	class:Dog
+name	ch03/Hobbits.java	/^    String name;$/;"	f	class:Hobbits
+name	ch04/Dog.java	/^    String name;$/;"	f	class:Dog
+name	ch04/PoorDog.java	/^    private String name;$/;"	f	class:PoorDog	file:
+numOfHits	ch05/game/SimpleDotCom.java	/^    int numOfHits = 0;$/;"	f	class:SimpleDotCom
+numOfPickups	ch04/ElectricGuitar.java	/^    int numOfPickups;$/;"	f	class:ElectricGuitar
+number	ch02/game/Player.java	/^    int number = 0;\/\/ 要猜的数字$/;"	f	class:Player
+p1	ch02/game/GuessGame.java	/^    Player p1;$/;"	f	class:GuessGame
+p2	ch02/game/GuessGame.java	/^    Player p2;$/;"	f	class:GuessGame
+p3	ch02/game/GuessGame.java	/^    Player p3;$/;"	f	class:GuessGame
+playDVD	ch02/exercises/DVDPlayer.java	/^    void playDVD() {$/;"	m	class:DVDPlayer
+playIt	ch02/movie/Movie.java	/^    void playIt() {$/;"	m	class:Movie
+playSnare	ch02/exercises/DrumKit.java	/^    void playSnare() {$/;"	m	class:DrumKit
+playTape	ch02/exercises/TapeDeck.java	/^    void playTape() {$/;"	m	class:TapeDeck
+playTopHat	ch02/exercises/DrumKit.java	/^    void playTopHat () {$/;"	m	class:DrumKit
+rating	ch02/movie/Movie.java	/^    int rating;\/\/ 等级$/;"	f	class:Movie
+recordDVD	ch02/exercises/DVDPlayer.java	/^    void recordDVD() {$/;"	m	class:DVDPlayer
+recordTape	ch02/exercises/TapeDeck.java	/^    void recordTape() {$/;"	m	class:TapeDeck
+rockStarUsesIt	ch04/ElectricGuitar.java	/^    boolean rockStarUsesIt;$/;"	f	class:ElectricGuitar
+setArea	ch03/Triangle.java	/^    void setArea() {$/;"	m	class:Triangle
+setBrand	ch04/ElectricGuitar.java	/^    void setBrand(String aBrand) {$/;"	m	class:ElectricGuitar
+setBreed	ch04/Horse.java	/^    public void setBreed (String abreed) {$/;"	m	class:Horse
+setHeight	ch04/Horse.java	/^    public void setHeight(double aheight) {$/;"	m	class:Horse
+setLocationCells	ch05/game/SimpleDotCom.java	/^    public void setLocationCells(int[] locs) {$/;"	m	class:SimpleDotCom
+setNumOfPickups	ch04/ElectricGuitar.java	/^    void setNumOfPickups(int num) {$/;"	m	class:ElectricGuitar
+setRockStarUsesIt	ch04/ElectricGuitar.java	/^    void setRockStarUsesIt(boolean yesOrNo) {$/;"	m	class:ElectricGuitar
+setSize	ch04/GoodDog.java	/^    public void setSize(int s) {$/;"	m	class:GoodDog
+setTime	ch04/Clock.java	/^    void setTime(String t) {$/;"	m	class:Clock
+size	ch02/dog/Dog.java	/^    int size;$/;"	f	class:Dog
+size	ch04/Dog.java	/^    int size;$/;"	f	class:Dog
+size	ch04/GoodDog.java	/^    private int size;$/;"	f	class:GoodDog	file:
+size	ch04/PoorDog.java	/^    private int size;$/;"	f	class:PoorDog	file:
+snare	ch02/exercises/DrumKit.java	/^    boolean snare = true;$/;"	f	class:DrumKit
+startGame	ch02/game/GuessGame.java	/^    public void startGame() {$/;"	m	class:GuessGame
+time	ch04/Clock.java	/^    String time;$/;"	f	class:Clock
+title	ch02/movie/Movie.java	/^    String title;\/\/ 名称$/;"	f	class:Movie
+title	ch03/Books.java	/^    String title;$/;"	f	class:Books
+topHat	ch02/exercises/DrumKit.java	/^    boolean topHat = true;$/;"	f	class:DrumKit
