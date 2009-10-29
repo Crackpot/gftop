@@ -1,14 +1,14 @@
 <?php
-$var = "some text";
+    $var = "some text";
+    echo '这是函数外的变量$var：'.$var."<br/>";
 
-function test()
-{
-    $var = "some text in function";
-    echo '这是局部变量$var：'.$var;
-}
+    function test()
+    {
+        $var = "some text in function";
+        echo '这是函数内的局部变量$var：'.$var."<br/>";
+    }
 
-echo '这是全局变量$var：'.$var;
-echo '<br/>';
-echo '<br/>';
-test();
+    echo '这是全局变量$var：'.$var."<br/>";
+    echo '<br/>';
+    test();
 ?>

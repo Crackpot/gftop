@@ -20,19 +20,19 @@
         <?=$topic_list;?>
         
         <div id="func_show">
-            �����ظ�
+            发表回复
         </div>
         
         <div>
             <form name="newpost" action="post.php" method="POST">
             <div style="margin:4px;"><?=$str_notlogin;?></div>
             <div style="margin:4px;"><?=$str_login;?></div>
-            <div style="margin:4px;">�ظ����ݣ�</div>
+            <div style="margin:4px;">回复内容：</div>
             <textarea name="content" cols="50" rows="10"></textarea><br/>
             <input type="hidden" name="bid" value="<?=$bid;?>">
             <input type="hidden" name="tid" value="<?=$tid;?>">
             <input type="hidden" name="actions" value="rpl">
-            <input type="submit" name="sbt" value="�ύ">
+            <input type="submit" name="sbt" value="提交">
             </form>
         </div>
         

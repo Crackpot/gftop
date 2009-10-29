@@ -41,7 +41,7 @@ $post_data['CONTENT'] = $content_array[2];
 
 <div id="container">
 	<div id="header">
-		<h1>我的BLOG</h1>
+            <h1><a href=".">我的BLOG</a></h1>
 	</div>
 	<div id="title">
 		----i have dream....

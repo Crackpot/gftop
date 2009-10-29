@@ -1,18 +1,22 @@
 <?php
-$planet = array(
-'Earth',
-'Venus',
-'Mars',
-'Jupiter',
-'Saturn'
-);
+    $planet = array(
+        'Earth',
+        'Venus',
+        'Mars',
+        'Jupiter',
+        'Saturn'
+    );
 
-rsort($planet);
+    echo "<pre>";
+    print_r($planet);
+    echo "<br/>";
+    echo "</pre>";
 
-foreach($planet as $key => $value)
-{
-    echo 'planet['.$key.']='.$value;
-    echo '<br/>';
-    echo '<br/>';
-}
+    rsort($planet);
+
+    foreach($planet as $key => $value)
+    {
+        echo 'planet['.$key.']='.$value."<br/>";
+        echo '<br/>';
+    }
 ?>
