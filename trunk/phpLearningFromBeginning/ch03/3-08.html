@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>3-8.html 用户登录</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            .tbl{
+            font-size:10pt;
+            width:30%;
+            text-align:right;
+            background-color:#abcdef;
+            }
+        </style>
+        <script language="JavaScript">
+            function check_name(){
+                if(login.user_name.value==""){
+                    alert("请输入用户名！");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="login" action="3-10.php" method="POST" onsubmit="return check_name()">
+        <!--提交表单时候会调用检查用户名的JavaScript函数-->
+            <table border="0" width="200px" align="center">
+                <tr>
+                    <td colspan="2" align="center" nowrap="true">
+                        <b>用户登录演示</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tbl" nowrap="true">
+                        用户名：
+                    </td>
+                    <td>
+                        <input type="text" name="user_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" nowrap="true">
+                        <input type="submit" value="登入系统">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" nowrap="true">
+                        <a href=".">返回</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
