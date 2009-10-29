@@ -1,0 +1,11 @@
+Widgets                         Event methods
+
+check box
+text field                      keyPressed(KeyEvent e)
+                                keyReleased(KeyEvent e)
+                                keyTyped(KeyEvent e)
+scrolling list
+button
+dialog box
+radio button
+menu item
