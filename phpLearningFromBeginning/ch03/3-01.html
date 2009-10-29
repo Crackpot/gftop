@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>3-1简单表单</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form name="form1" method="POST" action="3-02.php">
+            输入姓名：<input name="user_name" type="text">
+            <br/><br/>
+            性别：<input name="gender" type="radio" value="男">男  <input name="gender" type="radio" value="女">女
+            <br/><br/>
+            兴趣与爱好：<input name="hobby[]" type="checkbox" value="reading">阅读 <input name="hobby[]" type="checkbox" value="travel">旅游 <input name="hobby[]" type="checkbox" value="sport">运动 <input name="hobby[]" type="checkbox" value="internet">上网
+            <br/><br/>
+            职业：<select name="occup">
+                <option value="engineer">工程师</option>
+                <option value="teache">教师</option>
+                <option value="doctor">医生</option>
+                <option value="other">其他</option>
+            </select>
+            <br/><br/>
+            <input type="submit" value="提交数据">
+        </form>
+    </body>
+</html>

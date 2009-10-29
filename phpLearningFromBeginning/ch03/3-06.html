@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>3-6 支持文件上传的表单</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <!-- 表单的enctype属性必须指定为multipart/form-data -->
+        <form enctype="multipart/form-data" action="3-07.php" method="POST">
+            只支持英文文件名<br/>
+            上传此文件: <input name="myfile" type="file" />
+            <input type="submit" value="提交上传" />
+        </form>
+        <a href=".">返回目录</a>
+    </body>
+</html>
