@@ -97,7 +97,7 @@ map <leader>e :e! ~/vim_local/vimrc<cr>
 "When .vimrc is edited, reload it
 "autocmd! bufwritepost vimrc source ~/vim_local/vimrc
 
-set fileencodings=utf-8,GB2312,GBK,BIG5
+set fileencodings=utf-8,GB2312,GBK,GB18030,CP936,BIG5
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
@@ -121,7 +121,9 @@ endif
 
 if has("gui_running")
   "set guioptions-=T
+  "set guioptions=gmrLtT "m:菜单 T:工具栏
   set mousemodel=popup
+  "set linespace=4
   "let psc_style='cool'
   colorscheme torte
 else
@@ -302,20 +304,19 @@ map <leader>cd :cd %:p:h<cr>
 " Parenthesis/bracket expanding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-")
 vnoremap $2 <esc>`>a]<esc>`<i[<esc>
 vnoremap $3 <esc>`>a}<esc>`<i{<esc>
 vnoremap $$ <esc>`>a"<esc>`<i"<esc>
-vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $w <esc>`>a"<esc>`<i"<esc>
+"vnoremap $q <esc>`>a'<esc>`<i'<esc>
+"vnoremap $w <esc>`>a"<esc>`<i"<esc>
 
 "Map auto complete of (, ", ', [
 inoremap $1 ()<esc>:let leavechar=")"<cr>i
 inoremap $2 []<esc>:let leavechar="]"<cr>i
 inoremap $4 {<esc>o}<esc>:let leavechar="}"<cr>O
 inoremap $3 {}<esc>:let leavechar="}"<cr>i
-inoremap $q ''<esc>:let leavechar="'"<cr>i
-inoremap $w ""<esc>:let leavechar='"'<cr>i
+"inoremap $q ''<esc>:let leavechar="'"<cr>i
+"inoremap $w ""<esc>:let leavechar='"'<cr>i
 au BufNewFile,BufRead *.\(vim\)\@! inoremap " ""<esc>:let leavechar='"'<cr>i
 au BufNewFile,BufRead *.\(txt\)\@! inoremap ' ''<esc>:let leavechar="'"<cr>i
 
@@ -472,10 +473,12 @@ set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
-au FileType html,python,vim,javascript setl shiftwidth=2
-au FileType html,python,vim,javascript setl tabstop=4
-au FileType java setl shiftwidth=4
-au FileType java setl tabstop=4
+au FileType html,php,css setl shiftwidth=2
+au FileType html,php,css setl tabstop=2
+au FileType c,cpp,python,vim,java,javascript,sql setl shiftwidth=4
+au FileType c,cpp,python,vim,java,javascript,sql setl tabstop=4
+"au FileType java setl shiftwidth=4
+"au FileType java setl tabstop=4
 
 set smarttab
 set lbr
