@@ -1,21 +1,15 @@
 <?php
-$a = 2;
-$b = 3;
+    $a = 2;
+    $b = 3;
+    echo '$a = '.$a."<br/>";
+    echo '$b = '.$b."<br/>";
 
-if($a<$b)
-{
-    echo '$a = '.$a;
-    echo "<br/>";
-    echo "<br/>";
-    
-    echo '$b = '.$b;
-    echo "<br/>";
-    echo "<br/>";
-    
-    echo '$a 小于 $b';
-}
-else
-{
-    echo "$a 和 $b 比较";
-    echo '$a 大于等于 $b';
-}
+    if($a<$b)
+    {
+        echo '$a 小于 $b';
+    }
+    else
+    {
+        echo '$a 大于等于 $b';
+    }
+?>

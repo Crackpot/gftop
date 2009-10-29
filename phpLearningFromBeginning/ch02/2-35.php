@@ -1,15 +1,14 @@
 <?php
-$i = 100;
+    $i = 100;
 
-function func(&$n)
-{
-    $n = $n+100;
-}
+    function func(&$n)#传递参数的地址
+    {
+        $n = $n + 100;
+    }
 
-echo "调用函数func前：\$i=$i";
-echo "<br/>";
-echo "<br/>";
+    echo "调用函数func前：\$i=$i"."<br/>";
+    echo "<br/>";
 
-func($i);
-echo "调用函数func后：\$i=$i";
+    func($i);#调用函数
+    echo "调用函数func后：\$i=$i"."<br/>";
 ?>

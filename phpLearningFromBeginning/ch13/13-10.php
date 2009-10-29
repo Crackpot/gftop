@@ -8,20 +8,20 @@ $city = $_POST['city'];
 
 if(empty($name) || trim($name)=='')
 {
-    echo 'ÇëÌîĞ´ÓÃ»§Ãû£¡<a href="13-9.html">·µ»Ø</a>';
+    echo 'è¯·å¡«å†™ç”¨æˆ·åï¼<a href="13-9.html">è¿”å›</a>';
     exit;
 }
 
 $conn = mysql_connect($host,$user_name,$password);
 if(!$conn)
 {
-    die('Êı¾İ¿âÁ¬½ÓÊ§°Ü£º'.mysql_error());
+    die('æ•°æ®åº“è¿æ¥å¤±è´¥ï¼š'.mysql_error());
 }
 mysql_select_db('test');
 
 $sql = "insert into users set id=7,name='" . $name . "',city='" . $city . "',created_time=NOW()";
-mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQL£º".$sql);
+mysql_query($sql) OR die("<br/>ERROR: <b>".mysql_error()."</b><br/>SQLï¼š".$sql);
 mysql_close($conn);
 
-echo 'Êı¾İ²åÈë³É¹¦£¬´ò¿ª<a href="13-7.php">13-7.php</a>²é¿´Êı¾İ';
+echo 'æ•°æ®æ’å…¥æˆåŠŸï¼Œæ‰“å¼€<a href="13-7.php">13-7.php</a>æŸ¥çœ‹æ•°æ®';
 ?>

@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_WARNING | E_ERROR);    //ÏÔÊ¾¾¯¸æºÍ´íÎóÐÅÏ¢
-echo $undefinedVar;                        //ÕâÀï²úÉú×¢ÒâÐÅÏ¢£¬µ«²»»áÏÔÊ¾³öÀ´
-callUndefFunc();                            //ÕâÀï²úÉúÒ»¸öÖÂÃü´íÎó£¬²¢ÇÒ»áÏÔÊ¾³öÀ´
+error_reporting(E_WARNING | E_ERROR);    //æ˜¾ç¤ºè­¦å‘Šå’Œé”™è¯¯ä¿¡æ¯
+echo $undefinedVar;                        //è¿™é‡Œäº§ç”Ÿæ³¨æ„ä¿¡æ¯ï¼Œä½†ä¸ä¼šæ˜¾ç¤ºå‡ºæ¥
+callUndefFunc();                            //è¿™é‡Œäº§ç”Ÿä¸€ä¸ªè‡´å‘½é”™è¯¯ï¼Œå¹¶ä¸”ä¼šæ˜¾ç¤ºå‡ºæ¥
 ?>

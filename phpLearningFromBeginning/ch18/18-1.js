@@ -3,13 +3,13 @@ function GetXmlHttpRequest()
     var xmlHttp=null;
     try
     {
-        xmlHttp = new XMLHttpRequest();                      //¶ÔÓÚFirefoxµÈä¯ÀÀÆ÷
+        xmlHttp = new XMLHttpRequest();                      //å¯¹äºFirefoxç­‰æµè§ˆå™¨
     }
     catch(e)
     {
         try
         {
-            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");   //¶ÔÓÚIEä¯ÀÀÆ÷
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");   //å¯¹äºIEæµè§ˆå™¨
         }
         catch (e)
         {

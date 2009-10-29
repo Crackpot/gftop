@@ -1,19 +1,17 @@
 <?php
-$a = 1997;
-$b = 1998;
+    $a = 1997;
+    $b = 1998;
 
-function sum()
-{
-    global $a,$b;
-    $b = $a + $b;
-}
+    function sum()
+    {
+        global $a,$b;
+        $b = $a + $b;
+    }
 
-echo '$a='.$a;
-echo '<br/>';
-echo '$b='.$b;
-echo '<br/>';
-echo '<br/>';
+    echo '$a='.$a."<br/>";
+    echo '$b='.$b."<br/>";
+    echo '<br/>';
 
-sum();
-echo '$a + $b = '.$b;
+    sum();
+    echo '$a + $b = '.$b;
 ?>

@@ -1,14 +1,13 @@
 <?php
-define(PI,3.14);
+    define(PI,3.14);
 
-for($r=1;$r<=10;$r++)
-{
-    $area = PI * $r * $r;
-    if($area>100)
-        break;
+    for($r = 1; $r <= 10; $r ++)
+    {
+        $area = PI * $r * $r;
+        if($area > 150)
+            break;
 
-    echo "r=$r, area=$area";
-    echo "<br/>";
-    echo "<br/>";
-}
+        echo "r = $r , area = $area"."<br/>";
+        echo "<br/>";
+    }
 ?>

@@ -1,10 +1,9 @@
 <?php
-$a = 0;
+    $a = 0;
 
-while($a<=20)
-{
-    echo "$a";
-    echo "<br/>";
-    $a = $a+5;
-}
+    while($a <= 20)
+    {
+        echo "$a"."<br/>";
+        $a = $a + 5;
+    }
 ?>

@@ -1,25 +1,25 @@
 <?php
 $city_arr = array(
-"ah"=>"ºÏ·Ê",
-"fj"=>"¸£ÖÝ",
-"gs"=>"À¼ÖÝ",
-"gd"=>"¹ãÖÝ",
-"gx"=>"ÄÏÄþ",
-"gz"=>"¹óÑô",
-"hn"=>"º£¿Ú",
-"hb"=>"Ê¯¼Ò×¯",
-"hh"=>"Ö£ÖÝ",
-"hl"=>"¹þ¶û±õ"
+"ah"=>"åˆè‚¥",
+"fj"=>"ç¦å·ž",
+"gs"=>"å…°å·ž",
+"gd"=>"å¹¿å·ž",
+"gx"=>"å—å®",
+"gz"=>"è´µé˜³",
+"hn"=>"æµ·å£",
+"hb"=>"çŸ³å®¶åº„",
+"hh"=>"éƒ‘å·ž",
+"hl"=>"å“ˆå°”æ»¨"
 );
 
 if(empty($_GET['prov']))
 {
-    echo iconv("GB2312","UTF-8",'<font color="red">ÄúÃ»ÓÐÑ¡ÔñÊ¡£¨×ÔÖÎÇø£©</font>');
+    echo iconv("GB2312","UTF-8",'<font color="red">æ‚¨æ²¡æœ‰é€‰æ‹©çœï¼ˆè‡ªæ²»åŒºï¼‰</font>');
 }
 else
 {
     $prov = $_GET['prov'];
     $city = $city_arr[$prov];
-    echo iconv("GB2312","UTF-8",'ËùÑ¡Ê¡£¨×ÔÖÎÇø£©Ê¡»á£¨Ê×¸®£©Îª£º'.$city);
+    echo iconv("GB2312","UTF-8",'æ‰€é€‰çœï¼ˆè‡ªæ²»åŒºï¼‰çœä¼šï¼ˆé¦–åºœï¼‰ä¸ºï¼š'.$city);
 }
 ?>
