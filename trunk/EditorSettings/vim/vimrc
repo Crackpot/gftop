@@ -853,3 +853,6 @@ function! SmartTOHtml()
    exe ":bd"
 endfunction
 
+
+let g:winManagerWindowLayout='FileExplorer|TagList'
+nmap wm :WMToggle<cr>
