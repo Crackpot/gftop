@@ -64,4 +64,3 @@ echo '<TITLE>冶金商务酒店※冶金宾馆连锁 - ' . $page_title . '</TITL
        </TD>
      </TR>
    </TABLE>
-  
