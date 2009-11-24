@@ -6,7 +6,7 @@ require_once('include/header.php');
 require_once('include/config.php');
 
 // 连接数据库
-$dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die('数据库连接错误，请检查参数设置！');
+$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die('数据库连接错误，请检查参数设置！');
 
 if (isset($_POST['submit'])) {// 提交表单
   $username = mysqli_real_escape_string($dbc, trim($_POST['username']));
