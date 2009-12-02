@@ -116,7 +116,7 @@ if MySys() == "mac"
   set nomacatsui
   set termencoding=macroman
 elseif MySys() == "linux"
-  set gfn=Monospace\ 11
+  set gfn=Andale\ Mono\ 14
 endif
 
 if has("gui_running")
@@ -473,10 +473,10 @@ set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
-au FileType html,php,css setl shiftwidth=2
-au FileType html,php,css setl tabstop=2
-au FileType c,cpp,python,vim,java,javascript,sql setl shiftwidth=4
-au FileType c,cpp,python,vim,java,javascript,sql setl tabstop=4
+au FileType html,php,css,javaScript setl shiftwidth=2
+au FileType html,php,css,javaScript setl tabstop=2
+au FileType c,cpp,python,vim,java,sql setl shiftwidth=4
+au FileType c,cpp,python,vim,java,sql setl tabstop=4
 "au FileType java setl shiftwidth=4
 "au FileType java setl tabstop=4
 
