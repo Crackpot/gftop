@@ -1,3 +1,12 @@
-#Sat May 16 20:29:07 CST 2009
+#Fri Dec 04 01:52:40 CST 2009
 eclipse.preferences.version=1
+encoding//src/0_hanzibihua/convertDb.py=utf-8
 encoding//src/0_hanzibihua/hanzichuli.py=GBK
+encoding//src/_1000_chenggu_Bsddb_f/chenggu.py=utf-8
+encoding//src/_1000_chenggu_Bsddb_f/isLeapYear.py=utf-8
+encoding//src/_1000_chenggu_Bsddb_f/lunar.py=utf-8
+encoding//src/_1001_liangrenpeidui_f/1001_liangrenpeidui_UseBsddb.py=utf-8
+encoding//src/_1001_liangrenpeidui_f/_1001_BsddbGetResourceDict.py=utf-8
+encoding//src/_1001_liangrenpeidui_f/echoCode.py=utf-8
+encoding//src/_1001_liangrenpeidui_f/liangrenpeidui.py=utf-8
+encoding//src/_1002_mobile_num_jixiong_f/_1002_BsddbGetResourceDict.py=utf-8

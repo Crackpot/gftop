@@ -4,7 +4,7 @@ import csv,codecs,random,bsddb
     高飞    于2009年5月11日
 """
 
-dbName='/home/crackpot/workspace/mySuanming/src/suanmingBsddb.db'
+dbName='/home/workspace/gftop/mySuanming/src/bsddb/suanmingBsddb.db'
 
 #suanmingBsddb=bsddb.btopen(dbName)
 #suanmingBsddb=bsddb.btopen(dbName,'r')

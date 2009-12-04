@@ -1,6 +1,6 @@
 #coding=utf-8
 import bsddb,os,csv
-dbName='/home/crackpot/workspace/mySuanming/src/suanmingBsddb.db'
+dbName='/home/workspace/gftop/mySuanming/src/suanmingBsddb.db'
 
 #suanmingBsddb=bsddb.btopen(dbName)
 #suanmingBsddb=bsddb.btopen(dbName,'r')
