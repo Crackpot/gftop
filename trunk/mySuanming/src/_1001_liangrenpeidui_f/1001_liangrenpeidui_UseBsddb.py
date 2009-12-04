@@ -2,9 +2,9 @@
 """
     高飞    于2009年5月16日
 """
-import csv,bsddb
-hanzibihuaBsddbName='/home/workspace/suanming/bsddb/hanzibihuaBsddb.db'
-suanmingBsddbName='/home/workspace/suanming/bsddb/suanmingBsddb.db'
+import bsddb
+hanzibihuaBsddbName='/home/workspace/gftop/mySuanming/src/bsddb/hanzibihuaBsddb.db'
+suanmingBsddbName='/home/workspace/gftop/mySuanming/src/bsddb/suanmingBsddb.db'
 
 
 def checkDb():
