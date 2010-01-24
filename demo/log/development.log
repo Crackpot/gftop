@@ -1,0 +1,487 @@
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-08 15:30:28) [GET]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 27ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/rails/info/properties]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-08 15:31:55) [GET]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 28ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 15:35:58) [GET]
+
+ActionController::RoutingError (No route matches "/say" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 15:36:07) [GET]
+
+ActionController::RoutingError (No route matches "/Say" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-08 15:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/say/hello" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:39:04) [GET]
+
+ActionView::MissingTemplate (Missing template say/hello.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-08 15:39:18) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 31ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/rails/info/properties]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:39:27) [GET]
+
+ActionView::MissingTemplate (Missing template say/hello.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:39:27) [GET]
+
+ActionView::MissingTemplate (Missing template say/hello.erb in view path app/views):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:40:57) [GET]
+Rendering say/hello
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:41:38) [GET]
+Rendering say/hello
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:43:45) [GET]
+Rendering say/hello
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:48:43) [GET]
+Rendering say/hello
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:49:30) [GET]
+Rendering say/hello
+Completed in 87ms (View: 82, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:49:56) [GET]
+Rendering say/hello
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:52:10) [GET]
+Rendering say/hello
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:54:19) [GET]
+Rendering say/hello
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:30) [GET]
+Rendering say/hello
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:32) [GET]
+Rendering say/hello
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:32) [GET]
+Rendering say/hello
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:32) [GET]
+Rendering say/hello
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:33) [GET]
+Rendering say/hello
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:33) [GET]
+Rendering say/hello
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:55:33) [GET]
+Rendering say/hello
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:56:29) [GET]
+Rendering say/hello
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#index (for 127.0.0.1 at 2010-01-08 15:56:52) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: hello):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SayController#index (for 127.0.0.1 at 2010-01-08 15:56:57) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: hello):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SayController#index (for 127.0.0.1 at 2010-01-08 15:57:05) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: hello):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-08 15:57:10) [GET]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 22ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 15:57:34) [GET]
+Rendering say/hello
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:00:12) [GET]
+Rendering say/hello
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:01:56) [GET]
+Rendering say/hello
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:04:01) [GET]
+Rendering say/hello
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:04:18) [GET]
+Rendering say/hello
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:04:18) [GET]
+Rendering say/hello
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:04:19) [GET]
+Rendering say/hello
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:06:20) [GET]
+Rendering say/hello
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:06:35) [GET]
+Rendering say/hello
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:06:59) [GET]
+Rendering say/hello
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:10:00) [GET]
+Rendering say/goodbye
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:11:14) [GET]
+Rendering say/goodbye
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:11:18) [GET]
+Rendering say/hello
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:11:59) [GET]
+Rendering say/hello
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:01) [GET]
+Rendering say/goodbye
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:12:03) [GET]
+Rendering say/hello
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:05) [GET]
+Rendering say/goodbye
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:12:06) [GET]
+Rendering say/hello
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:08) [GET]
+Rendering say/goodbye
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:24) [GET]
+Rendering say/goodbye
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:39) [GET]
+Rendering say/goodbye
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:40) [GET]
+Rendering say/goodbye
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:40) [GET]
+Rendering say/goodbye
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:41) [GET]
+Rendering say/goodbye
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:41) [GET]
+Rendering say/goodbye
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:42) [GET]
+Rendering say/goodbye
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:42) [GET]
+Rendering say/goodbye
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:42) [GET]
+Rendering say/goodbye
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:42) [GET]
+Rendering say/goodbye
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:12:46) [GET]
+Rendering say/hello
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:12:48) [GET]
+Rendering say/goodbye
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:12:50) [GET]
+Rendering say/hello
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:13:07) [GET]
+Rendering say/goodbye
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:13:09) [GET]
+Rendering say/hello
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:15:33) [GET]
+Rendering say/hello
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:15:37) [GET]
+Rendering say/goodbye
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:15:41) [GET]
+Rendering say/hello
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:17:41) [GET]
+Rendering say/hello
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:17:45) [GET]
+Rendering say/goodbye
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#Hello (for 127.0.0.1 at 2010-01-08 16:17:49) [GET]
+
+ActionController::UnknownAction (No action responded to Hello. Actions: goodbye and hello):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SayController#goodbye (for 127.0.0.1 at 2010-01-08 16:18:03) [GET]
+Rendering say/goodbye
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/say/goodbye]
+
+
+Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:18:04) [GET]
+Rendering say/hello
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
