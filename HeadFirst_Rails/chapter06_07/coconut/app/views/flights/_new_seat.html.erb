@@ -1,0 +1,25 @@
+<h1>New seat</h1>
+
+<!-- 提交表单后只刷新座位分片，其他地方不动 -->
+<% remote_form_for(seat, :update=>'seats') do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :flight_id %>
+
+  <!-- 
+  <p>
+    <%= f.label :flight_id %><br />
+    <%= f.text_field :flight_id %>
+  </p>
+  -->
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :baggage %><br />
+    <%= f.text_field :baggage %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
