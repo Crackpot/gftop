@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>Hello, Rails!</TITLE>
+ </HEAD>
+ <BODY>
+     <H1>Hello from Rails!</H1>
+     <P>
+     It is now <%= Time.now %><BR>
+     <!--
+     It is now <%= @Time %>
+     -->
+     </P>
+     <UL>
+       <LI>Addition : <%= 1 + 2 %></LI>
+       <LI>Concatenation : <%= "cow" + "boy" %></LI>
+       <LI>Time in one hour : <%= 1.hour.from_now %></LI>
+     </UL>
+     <HR>
+     <% 3.times do %>
+         Ho!<BR>
+     <% end %>
+     Merry Christams!
+     <HR>
+     <!--添加减号将去掉之前的空行-->
+     <% 3.times do -%>
+         Ho!<BR>
+     <% end -%>
+     Merry Christams!
+     <HR>
+     <% 3.downto(1) do |count| -%>
+         <%= count %>
+         Crackpot<BR>
+     <% end -%>
+     Lift off!
+     <HR>
+     Email : <%= h("Crackpot <gaofeitop@gmail.com>") %>
+     <HR>
+     Say <A HREF="/say/goodbye">Goodbye</A>!
+     <HR>
+     <P>
+     Time to say <%= link_to "GoodBye!", :action => "goodbye" %>
+     </P>
+ </BODY>
+</HTML>
