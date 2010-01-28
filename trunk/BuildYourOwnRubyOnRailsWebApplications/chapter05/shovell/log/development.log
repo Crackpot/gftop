@@ -282,3 +282,18 @@ The error occurred while evaluating nil.each) on line #15 of app/views/story/ind
 Rendered rescues/_trace (151.3ms)
 Rendered rescues/_request_and_response (0.5ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 11:08:27) [GET]
+
+ActionController::RoutingError (No route matches "/storis" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2010-01-25 11:08:31) [GET]
+  [4;36;1mStory Load (1.6ms)[0m   [0;1mSELECT * FROM "stories" [0m
+Rendering template within layouts/stories
+Rendering stories/index
+Completed in 252ms (View: 242, DB: 2) | 200 OK [http://0.0.0.0/stories]
