@@ -1,9 +1,0 @@
-[default]
-projectname = python,
-
-[acp]
-.mko = html.acp,makohtml.acp,
-
-[highlight]
-.mko = makotmp
-
