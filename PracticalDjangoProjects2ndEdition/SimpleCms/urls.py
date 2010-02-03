@@ -18,6 +18,6 @@ urlpatterns = patterns('',
     (r'^search$','SimpleCms.search.views.search'), # 去掉斜杠
     (r'^$','SimpleCms.views.index'),
     (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve',
-        { 'document_root': '/home/workspace/gftop/PracticalDjangoProjects2ndEdition/new/SimpleCms/javascripts/tinymce/jscripts/tiny_mce' }),
+        { 'document_root': '/home/workspace/gftop/PracticalDjangoProjects2ndEdition/SimpleCms/javascripts/tinymce/jscripts/tiny_mce' }),
     (r'', include('django.contrib.flatpages.urls')),
 )
