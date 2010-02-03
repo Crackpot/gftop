@@ -1,0 +1,97 @@
+<!-- version 1
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <TITLE>Search</TITLE>
+ </HEAD>
+ <BODY>
+   <P>You searched for "{{ query }}"; the results are listed below.</P>
+   <UL>
+     {% for page in results %}
+     <LI><A HREF="{{ page.get_absolute_url }}">{{ page.title }}</A></LI>
+     {% endfor %}
+   </UL>
+ </BODY>
+</HTML>
+-->
+
+
+<!-- version 2
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <TITLE>Search</TITLE>
+ </HEAD>
+ <BODY>
+   <FORM METHOD="get" ACTION="/search">
+     <P>
+       <LABEL FOR="id_q">Search:</LABEL>
+       <INPUT TYPE="TEXT" NAME="q" ID="id_q" VALUE="{{ query }}" SIZE="20"/>
+       <INPUT TYPE="SUBMIT" VALUE="Submit">
+     </P>
+   </FORM>
+   {% if results %}
+     <P>You searched for "{{ query }}"; the results are listed below.</P>
+     <UL>
+       {% for page in results %}
+         <LI><A HREF="{{ page.get_absolute_url }}">{{ page.title }}</A></LI>
+       {% endfor %}
+     </UL>
+   {% else %}
+     {% if query %}
+       <P>No results found.</P>
+     {% else %}
+       <P>Type a search query into the box above, and press "Submit" to search.</P>
+     {% endif %}
+   {% endif %}
+ </BODY>
+</HTML>
+-->
+
+
+<!-- version 3 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <TITLE>Search</TITLE>
+ </HEAD>
+ <BODY>
+   <FORM METHOD="get" ACTION="/search">
+     <P>
+       <LABEL FOR="id_q">Search:</LABEL>
+       <INPUT TYPE="TEXT" NAME="q" ID="id_q" VALUE="{{ query }}" SIZE="20"/>
+       <INPUT TYPE="SUBMIT" VALUE="Submit">
+     </P>
+   </FORM>
+   {% if keyword_results or results %}
+     <P>You searched for "{{ query }}".</P>
+     {% if keyword_results %}
+       <P>Recommended pages:</P>
+       <UL>
+         {% for page in keyword_results %}
+           <LI><A HREF="{{ page.get_absolute_url }}">{{ page.title }}</A></LI>
+         {% endfor %}
+       </UL>
+     {% endif %}
+     {% if results %}
+       <P>Search results:</P>
+       <UL>
+         {% for page in results %}
+           <LI><A HREF="{{ page.get_absolute_url }}">{{ page.title }}</A></LI>
+         {% endfor %}
+       </UL>
+     {% endif %}
+   {% endif %}
+   {% if query and not keyword_results and not results %}
+     <P>No results found.</P>
+   {% else %}
+     <P>Type a search query into the box above, and press "Submit" to search.</P>
+   {% endif %}
+ </BODY>
+</HTML>
