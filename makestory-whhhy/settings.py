@@ -91,4 +91,3 @@ INSTALLED_APPS = (
     'static',
     'feedback',
 )
-
