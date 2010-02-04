@@ -1,16 +1,23 @@
+# coding=utf8
 # Django settings for SimpleCms project.
+import os
+PATH = os.getcwd()
+
+if PATH[-1] == '/':
+    PATH = PATH[:-1]
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
+    ('Crackpot', 'gaofeitop@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = './SimpleCms.db'             # Or path to database file if using sqlite3.
+DATABASE_NAME = PATH + 'SimpleCms.db'             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -21,11 +28,12 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Aisa/China'
+TIME_ZONE = 'Aisa/Shanghai'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'zh-CN'
+DEFAULT_CHARSET = 'UTF-8'
 
 SITE_ID = 1
 
@@ -69,7 +77,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    './templates',
+    PATH + '/templates',
 )
 
 INSTALLED_APPS = (
@@ -80,5 +88,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.admin',
     'SimpleCms.search',
+    'tagging',
     'coltrane',
 )
