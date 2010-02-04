@@ -89,6 +89,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.admin',
     'SimpleCms.search',
-    'tagging',
     'coltrane',
+    'tagging', # 引入tagging，否则无法创建相关数据表
 )

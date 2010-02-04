@@ -16,9 +16,12 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-    (r'^search$','SimpleCms.search.views.search'), # 去掉斜杠
+    (r'^search$','SimpleCms.search.views.search'), # 去掉斜杠，直接为query?q=foo
     (r'^$','SimpleCms.views.index'),
     (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve',
-        { 'document_root': '/home/workspace/gftop/PracticalDjangoProjects2ndEdition/SimpleCms/javascripts/tinymce/jscripts/tiny_mce' }),
+        { 'document_root':
+            settings.MEDIA_ROOT + '/javascripts/tinymce/jscripts/tiny_mce'}),
+
+    (r'^weblog/$', 'coltrane.views.entries_index'),
     (r'', include('django.contrib.flatpages.urls')),
 )

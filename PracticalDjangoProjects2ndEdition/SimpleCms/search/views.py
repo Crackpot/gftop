@@ -66,6 +66,7 @@ from django.http import HttpResponseRedirect
 def search(request):
     query = request.GET.get('q', '')
     keyword_results = []
+
     if query:
         keyword_results = FlatPage.objects.filter(searchkeyword__keyword__in = query.split()).distinct() # 将简单页面中的字符串分割
         if keyword_results.count() == 1: # 有单独结果
