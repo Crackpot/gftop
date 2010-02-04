@@ -1,4 +1,5 @@
 # coding=utf8
+import settings
 from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
