@@ -1,13 +1,11 @@
 # coding=utf8
-# Django settings for ecomstore project.
-import os
+# Django settings for mysite project.
 
-# 获取当前路径
-PATH = os.getcwd()
-if PATH[-1] == '/':
-    PATH = PATH[:-1]
+import os
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
+#DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -18,7 +16,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = PATH + '/ecomstore.db'             # Or path to database file if using sqlite3.
+DATABASE_NAME = os.path.join(PROJECT_ROOT, 'mysite.db')             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -43,12 +41,12 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = PATH + '/static/'
+MEDIA_ROOT = ''
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/static/'
+MEDIA_URL = ''
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -56,7 +54,7 @@ MEDIA_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'f70-^8a()0r7&q#i@^qqtl9%8pvl_4$1(5jpn+v%!(^9^=z_+5'
+SECRET_KEY = '8gcyypfsb#jkidqc6!ds+av%=#uwkp+u$*yi5srvt*wy47679n'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -69,15 +67,15 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'djangodblog.DBLogMiddleware',
 )
 
-ROOT_URLCONF = 'ecomstore.urls'
+ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'data/templates/')
 )
 
 INSTALLED_APPS = (
@@ -86,4 +84,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    #'django.contrib.admindocs',
+    'mysite.polls',
 )

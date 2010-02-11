@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
+ <HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <TITLE>My weblog {% block title %}{{ object.title }}{% endblock %}</TITLE>
+ </HEAD>
+ <BODY CLASS="{% block bodyclass %}{% endblock %}">
+   <DIV ID="header">
+     <H1 ID="branding">My weblog</H1>
+   </DIV>
+   <DIV ID="content">
+     {% block content %}
+     {% endblock %}
+   </DIV>
+   <DIV ID="sidebar">
+     <H2>Navigation</H2>
+     <UL ID="main-nav">
+       <LI ID="main-nav-entries">
+         <A HREF="{% url coltrane_entry_archive_index %}">Entries</A></LI>
+       <LI ID="main-nav-links">
+         <A HREF="{% url coltrane_link_archive_index %}">Links</A></LI>
+        <!-- 
+        <LI ID="main-nav-categories">
+        -->
+       <A HREF="{% url coltrane_category_list %}">Categories</A></LI>
+         <A HREF="">Categories</A></LI>
+       <LI ID="main-nav-tags">
+         <A HREF="">Tags</A></LI>
+     </UL>
+   </DIV>
+ </BODY>
+</HTML>

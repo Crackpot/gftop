@@ -37,9 +37,19 @@ class Category(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return '/categories/%s/' % self.slug
+        return "/categories/%s/" % self.slug
+
+    def live_entry_set(self):
+        from coltrane.models import Entry
+        return self.entry_set.filter(status=Entry.LIVE_STATUS)
+
+class LiveEntryManager(models.Manager):
+    def get_query_set(self):
+        return super(LiveEntryManager, self).get_query_set().filter(status=self.model.LIVE_STATUS)
 
 class Entry(models.Model):
+    live = LiveEntryManager()
+    objects = models.Manager()
     LIVE_STATUS = 1
     DRAFT_STATUS = 2
     HIDDEN_STATUS = 3
