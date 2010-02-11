@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans '欢迎访问我的站点！ 标题，修改的是base_site.html' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans '我的站点<BR/>页眉，修改的是base_site.html' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
