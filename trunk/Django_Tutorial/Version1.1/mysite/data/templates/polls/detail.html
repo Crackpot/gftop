@@ -1,0 +1,16 @@
+<H1>{{ poll.question }}</H1>
+
+{% if error_message %}
+  <P><STRONG>{{ error_message }}</STRONG></P>
+{% endif %}
+
+<FORM ACTION="/polls/{{ poll.id }}/vote/" METHOD="post">
+  <!-- 
+    {#% csrf_token %}
+  -->
+  {% for choice in poll.choice_set.all %}
+    <INPUT TYPE="RADIO" NAME="choice" ID="choice{{ forloop.counter }}" VALUE="{{ choice.id }}"/>
+    <LABEL FOR="choice{{ forloop.counter }}">{{ choice.choice }}</LABEL><BR/>
+  {% endfor %}
+  <INPUT TYPE="SUBMIT" VALUE="Vote">
+</FORM>
