@@ -3,7 +3,7 @@
  *
  *       Filename:  3-6.c
  *
- *    Description:  向字符串变量赋予整数
+ *    Description:  向字符串变量赋予整数 P50
  *
  *        Version:  1.0
  *        Created:  2009年09月25日 05时40分12秒

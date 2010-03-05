@@ -3,7 +3,7 @@
  *
  *       Filename:  3-5.c
  *
- *    Description:  转义字符的使用
+ *    Description:  转义字符的使用 P48
  *
  *        Version:  1.0
  *        Created:  2009年09月25日 05时38分17秒
