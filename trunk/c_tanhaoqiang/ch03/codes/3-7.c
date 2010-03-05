@@ -3,7 +3,7 @@
  *
  *       Filename:  3-7.c
  *
- *    Description:  大小写字母的转换
+ *    Description:  大小写字母的转换 P51
  *
  *        Version:  1.0
  *        Created:  2009年09月25日 05时43分32秒

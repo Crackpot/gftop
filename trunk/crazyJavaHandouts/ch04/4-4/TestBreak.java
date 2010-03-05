@@ -3,8 +3,8 @@
  * 使用break结束循环
  */
 public class TestBreak{
-    public static void main(String[] args){
-        //一个简单的for循环
+	public static void main(String[] args){
+		//一个简单的for循环
         for (int n = 0 ; n < 10 ; n ++){
             System.out.println("n的值为：" + n);
             if (n == 7){
@@ -25,6 +25,6 @@ public class TestBreak{
             }
             System.out.println("这句不会被执行");
         }
-            System.out.println("break语句执行，跳出outer标签所标识的循环");
+        System.out.println("break语句执行，跳出outer标签所标识的循环");
     }
 }
