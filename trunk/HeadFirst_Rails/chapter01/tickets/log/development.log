@@ -1867,3 +1867,70 @@ Processing EventsController#index (for 127.0.0.1 at 2010-01-11 22:24:02) [GET]
 Rendering template within layouts/events
 Rendering events/index
 Completed in 150ms (View: 140, DB: 2) | 200 OK [http://0.0.0.0/events]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 21:40:31) [GET]
+
+ActionController::RoutingError (No route matches "/haha" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-03-17 21:40:41) [GET]
+  [4;36;1mTicket Load (1.5ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 124ms (View: 116, DB: 1) | 200 OK [http://0.0.0.0/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-03-17 21:40:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTicket Load (0.9ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 2) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/tickets/2]
+
+
+Processing TicketsController#edit (for 127.0.0.1 at 2010-03-17 21:41:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTicket Load (0.7ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 2) [0m
+Rendering template within layouts/tickets
+Rendering tickets/edit
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/tickets/2/edit]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-03-17 21:41:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTicket Load (0.8ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 2) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/tickets/2]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-03-17 21:41:10) [GET]
+  [4;36;1mTicket Load (1.3ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-03-17 21:41:12) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/tickets/new]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-03-17 21:41:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.8ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-03-17 21:41:39) [GET]
+  [4;36;1mTicket Load (1.1ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/tickets]

@@ -485,3 +485,35 @@ Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/say/goodbye]
 Processing SayController#hello (for 127.0.0.1 at 2010-01-08 16:18:04) [GET]
 Rendering say/hello
 Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/say/hello]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 21:29:36) [GET]
+
+ActionController::RoutingError (No route matches "/helloword" with {:method=>:get}):
+  /server:3
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 21:30:28) [GET]
+
+ActionController::RoutingError (No route matches "/haha" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SayController#index (for 127.0.0.1 at 2010-03-17 21:31:47) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: goodbye and hello):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-03-17 21:33:12) [GET]
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 140ms (View: 45, DB: 1) | 200 OK [http://0.0.0.0/rails/info/properties]

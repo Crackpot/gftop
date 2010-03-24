@@ -3,7 +3,7 @@
     高飞    于2009年5月16日
 """
 import bsddb
-suanmingBsddbName='/home/workspace/suanming/bsddb/suanmingBsddb.db'
+suanmingBsddbName='/home/workspace/gftop/mySuanming/src/bsddb/suanmingBsddb.db'
 
 def checkDb():
     suanmingBsddb=bsddb.btopen(suanmingBsddbName,'r')

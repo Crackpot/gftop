@@ -3186,3 +3186,75 @@ Processing AdsController#show (for 127.0.0.1 at 2010-01-12 23:52:42) [GET]
 Rendering template within layouts/ads
 Rendering ads/show
 Completed in 13ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/ads/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 21:42:20) [GET]
+
+ActionController::RoutingError (No route matches "/meby" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 21:42:28) [GET]
+
+ActionController::RoutingError (No route matches "/mebay" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 21:43:04) [GET]
+
+ActionController::RoutingError (No route matches "/ad" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-17 21:43:48) [GET]
+  [4;36;1mAd Load (1.2ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 117ms (View: 99, DB: 1) | 200 OK [http://0.0.0.0/ads]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2010-03-17 21:43:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.9ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 58ms (View: 47, DB: 1) | 200 OK [http://0.0.0.0/ads/1]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-17 21:43:58) [GET]
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/ads
+Rendering ads/index
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/ads/]
+
+
+Processing AdsController#show (for 127.0.0.1 at 2010-03-17 21:44:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAd Load (0.9ms)[0m   [0mSELECT * FROM "ads" WHERE ("ads"."id" = 1) [0m
+Rendering template within layouts/ads
+Rendering ads/show
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/ads/1]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2010-03-17 21:44:04) [GET]
+  Parameters: {"id"=>"1"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 2ms (View: 1, DB: 0) | 401 Unauthorized [http://0.0.0.0/ads/1/edit]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2010-03-17 21:44:14) [GET]
+  Parameters: {"id"=>"1"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 2ms (View: 1, DB: 0) | 401 Unauthorized [http://0.0.0.0/ads/1/edit]
+
+
+Processing AdsController#edit (for 127.0.0.1 at 2010-03-17 21:44:21) [GET]
+  Parameters: {"id"=>"1"}
+Filter chain halted as [:check_logged_in] rendered_or_redirected.
+Completed in 2ms (View: 1, DB: 0) | 401 Unauthorized [http://0.0.0.0/ads/1/edit]
