@@ -1,7 +1,10 @@
-#Fri Dec 04 01:52:40 CST 2009
+#Wed Mar 17 22:38:49 CST 2010
 eclipse.preferences.version=1
 encoding//src/0_hanzibihua/convertDb.py=utf-8
 encoding//src/0_hanzibihua/hanzichuli.py=GBK
+encoding//src/0_hanzibihua/hanzizhuanpinyin/GenerateHanziDB.py=utf8
+encoding//src/_1000_chenggu_Bsddb_f/1000_chenggu_UseBsddb.py=utf-8
+encoding//src/_1000_chenggu_Bsddb_f/_1000_BsddbHandler.py=utf-8
 encoding//src/_1000_chenggu_Bsddb_f/chenggu.py=utf-8
 encoding//src/_1000_chenggu_Bsddb_f/isLeapYear.py=utf-8
 encoding//src/_1000_chenggu_Bsddb_f/lunar.py=utf-8
