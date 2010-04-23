@@ -1934,3 +1934,30 @@ Processing TicketsController#index (for 127.0.0.1 at 2010-03-17 21:41:39) [GET]
 Rendering template within layouts/tickets
 Rendering tickets/index
 Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/tickets]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2010-04-08 02:54:03) [GET]
+  [4;36;1mEvent Load (9.0ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/events
+Rendering events/index
+Completed in 199ms (View: 178, DB: 9) | 200 OK [http://0.0.0.0/events]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-08 02:54:30) [GET]
+  [4;35;1mTicket Load (7.3ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 84ms (View: 57, DB: 7) | 200 OK [http://0.0.0.0/tickets]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-04-08 02:55:35) [GET]
+  [4;36;1mTicket Load (1.1ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-04-08 02:55:37) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 64ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/tickets/new]
