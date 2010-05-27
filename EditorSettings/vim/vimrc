@@ -86,6 +86,9 @@ set autoread
 let mapleader = ","
 let g:mapleader = ","
 
+let g:winManagerWindowLayout='FileExplorer|TagList'
+nmap wm :WMToggle<cr>
+
 "Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>f :find<cr>
@@ -97,7 +100,7 @@ map <leader>e :e! ~/vim_local/vimrc<cr>
 "When .vimrc is edited, reload it
 "autocmd! bufwritepost vimrc source ~/vim_local/vimrc
 
-set fileencodings=utf-8,GB2312,GBK,GB18030,CP936,BIG5
+set fileencodings=CP936,utf-8,GB2312,GBK,GB18030,BIG5
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
@@ -116,7 +119,7 @@ if MySys() == "mac"
   set nomacatsui
   set termencoding=macroman
 elseif MySys() == "linux"
-  set gfn=Andale\ Mono\ 14
+  set gfn=Andale\ Mono\ 9
 endif
 
 if has("gui_running")
@@ -143,7 +146,8 @@ autocmd BufEnter * :syntax sync fromstart
 
 "Highlight current
 if has("gui_running")
-  set cursorline
+  set cursorline  " 添加光标行
+  set cursorcolumn  " 添加光标列，方便编写html文件检查标记对齐
   hi cursorline guibg=#333333
   hi CursorColumn guibg=#333333
 endif
@@ -473,10 +477,10 @@ set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
-au FileType html,php,css,javaScript setl shiftwidth=2
-au FileType html,php,css,javaScript setl tabstop=2
-au FileType c,cpp,python,vim,java,sql setl shiftwidth=4
-au FileType c,cpp,python,vim,java,sql setl tabstop=4
+au FileType html,php,javaScript,erb,ruby setl shiftwidth=2
+au FileType html,php,javaScript,erb,ruby setl tabstop=2
+au FileType c,cpp,python,vim,java,sql,css setl shiftwidth=4
+au FileType c,cpp,python,vim,java,sql,css setl tabstop=4
 "au FileType java setl shiftwidth=4
 "au FileType java setl tabstop=4
 
@@ -503,10 +507,12 @@ set tw=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+   "set spell=off  " 添加拼写检查功能 
+   set spelllang=en  " 拼写检查功能为英语
+   map <leader>sn ]s
+   map <leader>sp [s
+   map <leader>sa zg
+   map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
