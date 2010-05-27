@@ -1,0 +1,15 @@
+{% extends "base_book.html" %}
+{% block content %}
+{% for book in books %}
+<h2>{{ book.title }}</h2>
+<p>
+    {{ book.title }}
+</p>
+<p>
+    {{ book.genre }}
+</p>
+<p>
+    {{ book.num_pages }}
+</p>
+{% endfor %}
+{% endblock %}
