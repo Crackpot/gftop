@@ -97,4 +97,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    #不增加如下语句将无法自动从自己的templates目录下找模板
+    'mysite.Time',
 )
