@@ -74,6 +74,7 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -99,4 +100,5 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     #不增加如下语句将无法自动从自己的templates目录下找模板
     'mysite.Time',
+    'mysite.books',
 )
