@@ -1,0 +1,32 @@
+{% extends "base_books.html" %}
+{% block title %}查看出版社{% endblock %}
+{% block css %}
+<style type="text/css">
+    .publisher {
+        display: block;
+        width: 600px;
+        background: #B1B1B1;
+    }
+    
+    .books {
+        width: 600px;
+        background: #9C9D9D;
+    }
+</style>
+{% endblock %}
+{% block content %}<h2>查看出版社</h2>
+<ul>
+    {% for publisher in object_list %}
+    <li class="publisher">
+        <a href="{{ publisher.get_absolute_url }}">{{ publisher.name }}</a>
+        <p class="books">
+            {% for book in publisher.get_books %}<a href="{{ book.get_absolute_url }}">{{ book }}</a>&nbsp;
+            作者:{{ book.get_authors }}&nbsp;页数:{{book.num_pages}}&nbsp;出版日期:{{book.publication_date}}
+            <br/>
+            {% endfor %}
+        </p>
+    </li>
+    {% endfor %}
+{{book_list}}
+</ul>
+{% endblock %}

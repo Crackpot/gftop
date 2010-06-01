@@ -1,0 +1,15 @@
+{% extends "base_books.html" %}
+{% block title %}查看图书{% endblock %}
+{% block css %}
+{% endblock %}
+{% block content %}
+<h1>查看图书</h1>
+<p>
+<label for="book_title"><strong>书名</strong></label> {{ book.title }}<br/>
+<label for="book_authors"><strong>作者</strong></label> {{ authors }}<br/>
+<label for="book_publisher"><strong>出版商</strong></label> {{ book.publisher }}<br/>
+<label for="book_publication_date"><strong>出版日期</strong></label> {{ book.publication_date }}<br/>
+<label for="book_num_pages"><strong>页数</strong></label>
+{% if  book.num_pages == 0 %}未填写信息{% else %}{{ book.num_pages }}{% endif %}<br/>
+</p>
+{% endblock %}

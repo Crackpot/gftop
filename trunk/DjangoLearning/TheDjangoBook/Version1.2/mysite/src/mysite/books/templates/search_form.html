@@ -1,6 +1,6 @@
 {% extends "base_books.html" %}
-{% block title %}search{% endblock %}
-{% block content %}
+{% block title %}搜索图书{% endblock %}
+{% block content %}<h1>搜索图书</h1>
 {% if errors %}
 <ul>
     {% for error in errors %}
@@ -13,5 +13,5 @@
 </p>
 {% endif %}<!-- action=""意味着表单将提交给当前页面相同的URL -->
 <form action="" method="get">
-    <input type="text" name="q" value="" size="20"><input type="submit" value="Submit">
+    <input type="text" name="q" value="" size="20"><input type="submit" value="搜索">
 </form>{% endblock %}
