@@ -1,6 +1,7 @@
+#coding=utf8
 from django.conf.urls.defaults import *
-from mysite.Time.views import current_datetime, hours_ahead
+from mysite.Time import  views 
 urlpatterns = patterns('',
-    (r'^$', current_datetime),
-    (r'^plus/(\d{1,2})/$', hours_ahead),
+    (r'^$', views.current_datetime),
+    (r'^plus/(\d{1,2})/$', views.hours_ahead),
 )

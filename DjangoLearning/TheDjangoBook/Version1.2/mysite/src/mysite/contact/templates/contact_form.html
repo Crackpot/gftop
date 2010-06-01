@@ -1,0 +1,35 @@
+{% extends "base_contact.html" %}
+{% block title %}Contact Form{% endblock %}
+{% block css %}
+<style type="text/css">
+    ul.errorlist {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .errorlist li {
+        background-color: red;
+        color: white;
+        display: block;
+        font-size: 12px;
+        margin: 0 0 3px;
+        padding: 4px 5px;
+    }
+</style>
+{% endblock %}
+{% block content %}<h1>Contact Form</h1>
+{% if form.errors %}
+<p style="color:red;">
+    <!--
+    Please correct the error [[form.errors|pluralize]] below.
+    -->
+	<strong>请检查下面的错误！</strong>
+</p>
+{% endif %}
+<form action="" method="post">
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="提交">
+</form>
+{% endblock %}

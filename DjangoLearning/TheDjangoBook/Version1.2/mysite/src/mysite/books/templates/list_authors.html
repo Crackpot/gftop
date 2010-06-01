@@ -1,0 +1,15 @@
+{% extends "base_books.html" %}
+{% block title %}查看作者{% endblock %}
+{% block css %}
+<style type="text/css">
+</style>
+{% endblock %}
+{% block content %}<h1>查看作者</h1>
+<ul>
+    {% for author in object_list %}
+    <li>
+    <a href="{{ author.get_absolute_url }}">{{ author }}</a><!-- 模型当中分姓、名两个字段，通过unicode方法返回值来获取姓名 -->
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

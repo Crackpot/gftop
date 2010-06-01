@@ -1,0 +1,15 @@
+{% extends "base_books.html" %}
+{% block title %}查看出版商{% endblock %}
+{% block css %}
+{% endblock %}
+{% block content %}
+<h1>查看出版商</h1>
+<p>
+<label for="publisher_name"><strong>名称</strong></label> {{ publisher.name }}<br/>
+<label for="publisher_country"><strong>国家</strong></label> {{ publisher.country }}<br/>
+<label for="publisher_state_province"><strong>省份</strong></label> {{ publisher.state_province }}<br/>
+<label for="publisher_city"><strong>城市</strong></label> {{ publisher.city }}<br/>
+<label for="publisher_address"><strong>地址</strong></label> {{ publisher.address }}<br/>
+<label for="publisher_website"><strong>网站</strong></label> {{ publisher.website }}<br/>
+</p>
+{% endblock %}

@@ -1,19 +1,19 @@
 {% extends "base_books.html" %}
-
-{% block title %}Search results{% endblock %}
-
-{% block content %}
+{% block title %}搜索结果{% endblock %}
+{% block content %}<h1>搜索结果</h1>
 <p>
-    You searched for: <strong>{{ query }}</strong>
+    搜索关键词为: <strong>{{ query }}</strong>
 </p>
 {% if books %}
 <p>
-    Found {{ books|length }} book{{ books|pluralize }}.
+    找到 {{ books|length }} 本书<!--
+    [[ books|pluralize ]].
+    -->
 </p>
 <ul>
     {% for book in books %}
     <li>
-        {{ book.title }}
+        {{ book.title }} - {{ book.publisher }} - {{ book.publication_date }}
     </li>
     {% endfor %}
 </ul>
@@ -22,5 +22,4 @@
     No books matched your search criteria.
 </p>
 {% endif %}
-
 {% endblock %}

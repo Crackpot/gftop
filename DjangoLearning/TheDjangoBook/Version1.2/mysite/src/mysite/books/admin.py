@@ -6,11 +6,14 @@ class PublisherAdmin(admin.ModelAdmin):
     list_display = ('name', 'address', 'city', 'state_province', 'country', 'website')
 
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('first_name','last_name', 'email')
-    search_fields = ('first_name', 'last_name', 'email')
+    list_display = ('name', 'email')
+    search_fields = ('name', 'email')
     
+def authors(Book):
+    return str(Book.authors.all())
+
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'publisher', 'publication_date')
+    list_display = ('title', authors , 'publisher', 'num_pages' , 'publication_date')
     list_filter = ('publication_date', 'publisher')
     # 搜索域
     search_fields = ('title', 'publisher__name') # 通过外键找到Publisher的name
@@ -19,7 +22,7 @@ class BookAdmin(admin.ModelAdmin):
     # 必须是元组，记得加逗号
     ordering = ('-publication_date',)
     # 创建与修改图书信息需要填写的字段，按照以下的顺序显示
-    fields = ('title', 'authors', 'publisher', 'publication_date') # 可以去掉publication_date，防止被编辑
+    fields = ('title', 'authors', 'publisher', 'num_pages', 'publication_date') # 可以去掉publication_date，防止被编辑
     # 列表选择框
     filter_horizontal = ('authors',) # 水平选择框，占用位置较小
     #filter_vertical = ('authors',) # 竖直选择框，占用位置较大

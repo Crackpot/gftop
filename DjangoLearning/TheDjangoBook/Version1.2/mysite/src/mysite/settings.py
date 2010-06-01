@@ -1,12 +1,41 @@
 #coding=utf8
 # Django settings for mysite project.
 import os
+import socket
+
+# URL前缀
+url_prefix = '/mysite'
+
+if socket.gethostname == 'linux-Crackpot':
+    DEBUG = TEMPLATE_DEBUG = False
+    print '在我的笔记本上'
+else:
+    DEBUG = TEMPLATE_DEBUG = True
+
+# 获取当前路径
 PATH = os.getcwd()
 if PATH[-1] == '/':
     PATH = PATH[:-1]
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+# 注册
+ACCOUNT_ACTIVATION_DAYS = 7
+
+# CMS
+gettext = lambda s: s
+CMS_TEMPLATES = (
+    ('base.html', gettext('default')),
+    ('2col.html', gettext('2 Column')),
+    ('3col.html', gettext('3 Column')),
+    ('extra.html', gettext('Some extra fancy template')),
+)
+LANGUAGES = (
+        ('en', gettext('English')),
+        ('zh_CN', gettext('中文简体')),
+        ('fr', gettext('French')),
+        ('de', gettext('German')),
+)
 
 ADMINS = (
     ('高飞', 'gaofeitop@gmail.com'),
@@ -17,11 +46,11 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'TheDjangoBook_mysite_V12',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '15263748',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'TheDjangoBook_mysite_V12', # Or path to database file if using sqlite3.
+        'USER': 'root', # Not used with sqlite3.
+        'PASSWORD': '15263748', # Not used with sqlite3.
+        'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '', # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -74,11 +103,16 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
+    #'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfMiddleware', # 不添加将无法使用csrf token 
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    # 第三方中间件
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.multilingual.MultilingualURLMiddleware',
 )
 
 ROOT_URLCONF = 'mysite.urls'
@@ -88,7 +122,17 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     PATH + '/templates',
+    '/home/workspace/gftop/DjangoLearning/TheDjangoBook/Version1.2/mysite/src/mysite/templates',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.request",
+    "django.core.context_processors.media",
+    "cms.context_processors.media",
+)
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -98,7 +142,19 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    #不增加如下语句将无法自动从自己的templates目录下找模板
+    # 第三方应用
+    'registration',
+    'mptt',
+    'cms',
+    'cms.plugins.text',
+    'cms.plugins.picture',
+    'cms.plugins.link',
+    'cms.plugins.file',
+    'cms.plugins.snippet',
+    'cms.plugins.googlemap',
+
+    #不增加如下语句将无法自动找到urls.py及从自己的templates目录下找模板
     'mysite.Time',
     'mysite.books',
+    'mysite.contact',
 )
