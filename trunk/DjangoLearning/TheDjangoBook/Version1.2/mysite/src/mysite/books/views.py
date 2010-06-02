@@ -5,7 +5,7 @@ from mysite.books import forms
 from mysite.books.models import Book, Publisher, Author
 
 def index(request):
-    return render_to_response("index_books.html")
+    return render_to_response("books/index.html")
 
 def book_detail(request, id):
     book = Book.objects.get(id = id)
@@ -13,13 +13,13 @@ def book_detail(request, id):
     print book
     print authors
     return render_to_response(
-        'detail_book.html',
+        'books/detail_book.html',
         {'book': book, 'authors':authors}
     )
 def publisher_detail(request, id):
     publisher = Publisher.objects.get(id = id)
     return render_to_response(
-        'detail_publisher.html',
+        'books/detail_publisher.html',
         {'publisher': publisher,}
     )
     
@@ -34,7 +34,7 @@ def bookEdit(request, id): # 传来的参数id在Url中已经定义了类型
         # 未提交表单
         form = forms.BookForm(instance = book)
         return render_to_response(
-            'form_book.html',
+            'books/form_book.html',
             {'form': form},
         )
     return HttpResponseRedirect('/books/books/%s/' % id) # 返回之前的图书详情页面
@@ -49,7 +49,7 @@ def publisherEdit(request, id):
         # 未提交表单
         form = forms.PublisherForm(instance = publisher)
         return render_to_response(
-            'form_publisher.html',
+            'books/form_publisher.html',
             {'form': form},
         )
 def search(request):
@@ -71,10 +71,10 @@ def search(request):
             # q非空
             books = Book.objects.filter(title__icontains = q) # 标题中包含有q
             return render_to_response(
-                'search_results.html',
+                'books/search_results.html',
                 {'books': books, 'query': q}
             )
     return render_to_response(
-        'search_form.html',
+        'books/search_form.html',
         {'errors': errors}
     )

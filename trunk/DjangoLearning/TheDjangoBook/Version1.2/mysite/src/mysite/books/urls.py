@@ -3,9 +3,9 @@ from django.conf.urls.defaults import *
 from mysite.books import views
 urlpatterns = patterns('',
     (r'^$', views.index),
-    (r'^books/(\d+)/$', views.book_detail),
     (r'^publishers/(\d+)/$', views.publisher_detail),
     (r'^publishers/(\d+)/edit/$', views.publisherEdit),
+    (r'^books/(\d+)/$', views.book_detail),
     (r'^books/(\d+)/edit/$', views.bookEdit),
     (r'^search/$', views.search),
     #(r'^(?P<id>\d*)/$', views.BookEdit),
@@ -17,18 +17,18 @@ from mysite.books.models import Author, Book, Publisher
 
 author_info = {
     'queryset': Author.objects.all(),
-    'template_name': 'list_authors.html'
+    'template_name': 'books/list_authors.html'
 }
 
 book_info = {
     #'queryset': Book.objects.all(), # 获取全部图书
     'queryset': Book.objects.order_by('-publication_date'), # 按照出版日期排序，最近的排在最前
-    'template_name': 'list_books.html',
+    'template_name': 'books/list_books.html',
 }
 
 publisher_info = {
     'queryset': Publisher.objects.all(),
-    'template_name': 'list_publishers.html',
+    'template_name': 'books/list_publishers.html',
     #'template_object_name': 'publisher',
     
     # 此函数后面并没有括号，说明是一个函数的引用，并没有真正调用它，只是在渲染的时候调用
