@@ -6,7 +6,7 @@ import datetime
 def current_datetime(request):
     # 模板中使用了It is now {{ current_date }}.，在此我们可以定义同样的变量名直接通过Python的内建函数locals()来渲染页面
     current_date = datetime.datetime.now()
-    return render_to_response('current_datetime.html', locals())
+    return render_to_response('time/current_datetime.html', locals())
 
 def hours_ahead(request, offset):
     try:
@@ -23,4 +23,4 @@ def hours_ahead(request, offset):
     #return HttpResponse(html)
     #return render_to_response('hours_ahead.html', {'offset': offset, 'dt': dt})
     # 模板中使用了In {{ offset }} hour(s), it will be {{ dt }}.，直接使用locals()来渲染
-    return render_to_response('hours_ahead.html', locals())
+    return render_to_response('time/hours_ahead.html', locals())
