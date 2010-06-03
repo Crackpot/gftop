@@ -1,0 +1,18 @@
+{% extends "books/base.html" %}
+{% block title %}编辑出版社{% endblock %}
+{% block css %}
+<style type="text/css">
+</style>
+{% endblock %}
+{% block content %}<h1>编辑出版社</h1>
+{% if form.errors %}
+<p style="color:red;">
+    <strong>请检查下面的错误！</strong>
+</p>
+{% endif %}
+<form action="" method="post">
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="提交">
+</form>{% endblock %}

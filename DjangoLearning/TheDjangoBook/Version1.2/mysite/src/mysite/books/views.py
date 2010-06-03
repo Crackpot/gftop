@@ -8,7 +8,7 @@ def index(request):
     return render_to_response("books/index.html")
 
 def book_detail(request, id):
-    book = Book.objects.get(id = id)
+    book = Book.objects.get(id=id)
     authors = Book.get_authors(book)
     print book
     print authors
@@ -16,42 +16,61 @@ def book_detail(request, id):
         'books/detail_book.html',
         {'book': book, 'authors':authors}
     )
+    
 def publisher_detail(request, id):
-    publisher = Publisher.objects.get(id = id)
+    publisher = Publisher.objects.get(id=id)
     return render_to_response(
         'books/detail_publisher.html',
-        {'publisher': publisher,}
+        {'publisher': publisher, }
     )
     
-def bookEdit(request, id): # 传来的参数id在Url中已经定义了类型
-    book = Book.objects.get(id = id)
+def bookCreate(request):
     if request.method == 'POST':
         # 已经提交表单
-        form = forms.BookForm(request.POST, instance = book)
+        form = forms.BookCreateForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            form.save()
+            return HttpResponseRedirect('/books/books/%s/' % id)
+    else:
+        # 未提交表单
+        form = forms.BookCreateForm()
+        return render_to_response(
+            'books/form_book.html',
+            {'form':form}
+        )
+def bookEdit(request, id): # 传来的参数id在Url中已经定义了类型
+    book = Book.objects.get(id=id)
+    if request.method == 'POST':
+        # 已经提交表单
+        form = forms.BookForm(request.POST, instance=book)
         if form.is_valid():
             form.save()
     else:
         # 未提交表单
-        form = forms.BookForm(instance = book)
+        form = forms.BookForm(instance=book)
         return render_to_response(
             'books/form_book.html',
             {'form': form},
         )
     return HttpResponseRedirect('/books/books/%s/' % id) # 返回之前的图书详情页面
+
 def publisherEdit(request, id):
-    publisher = Publisher.objects.get(id = id)
+    publisher = Publisher.objects.get(id=id)
     if request.method == 'POST':
         #已经提交表单
-        form = forms.PublisherForm(request.POST, instance = publisher)
+        form = forms.PublisherForm(request.POST, instance=publisher)
         if form.is_valid():
             form.save()
+            return HttpResponseRedirect('/books/publishers/%s' % id)
     else:
         # 未提交表单
-        form = forms.PublisherForm(instance = publisher)
+        form = forms.PublisherForm(instance=publisher)
         return render_to_response(
             'books/form_publisher.html',
             {'form': form},
         )
+        
 def search(request):
     # 一个视图方法渲染不同页面的实例
     errors = []
@@ -69,7 +88,7 @@ def search(request):
             errors.append('Please enter at most 20 characters.')
         else:
             # q非空
-            books = Book.objects.filter(title__icontains = q) # 标题中包含有q
+            books = Book.objects.filter(title__icontains=q) # 标题中包含有q
             return render_to_response(
                 'books/search_results.html',
                 {'books': books, 'query': q}
