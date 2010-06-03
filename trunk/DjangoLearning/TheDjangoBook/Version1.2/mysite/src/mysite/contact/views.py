@@ -32,12 +32,12 @@ def contact(request):
             }
         )
     return render_to_response(
-        'contact_form.html',
+        'contact/contact_form.html',
         {'form': form}
     )
 
 def thanks(request):
-    return render_to_response('contact_thanks.html')
+    return render_to_response('contact/thanks.html')
 
 # 原始的自己编写的表单
 def contact_original(request):

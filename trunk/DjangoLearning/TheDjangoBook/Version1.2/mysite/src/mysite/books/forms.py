@@ -1,11 +1,15 @@
 #coding=utf8
-from django.forms import ModelForm
+from django import forms
 from mysite.books.models import Book, Publisher
 
-class BookForm(ModelForm):
+class BookForm(forms.ModelForm):
     class Meta:
         model = Book
 
-class PublisherForm(ModelForm):
+class BookCreateForm(forms.ModelForm):
     class Meta:
-        model = Publisher    
+        model = Book
+        
+class PublisherForm(forms.ModelForm):
+    class Meta:
+        model = Publisher

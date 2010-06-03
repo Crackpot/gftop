@@ -3,10 +3,11 @@ from django.conf.urls.defaults import *
 from mysite.books import views
 urlpatterns = patterns('',
     (r'^$', views.index),
+    (r'^books/(\d+)/$', views.book_detail),
+    (r'^books/create/$', views.bookCreate),
+    (r'^books/(\d+)/edit/$', views.bookEdit),
     (r'^publishers/(\d+)/$', views.publisher_detail),
     (r'^publishers/(\d+)/edit/$', views.publisherEdit),
-    (r'^books/(\d+)/$', views.book_detail),
-    (r'^books/(\d+)/edit/$', views.bookEdit),
     (r'^search/$', views.search),
     #(r'^(?P<id>\d*)/$', views.BookEdit),
 )
