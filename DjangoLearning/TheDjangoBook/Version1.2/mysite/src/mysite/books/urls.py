@@ -23,7 +23,7 @@ author_info = {
 
 book_info = {
     #'queryset': Book.objects.all(), # 获取全部图书
-    'queryset': Book.objects.order_by('-publication_date'), # 按照出版日期排序，最近的排在最前
+    'queryset': Book.objects.all(), #.order_by('-id'), # 按照出版日期排序，最近的排在最前
     'template_name': 'books/list_books.html',
 }
 

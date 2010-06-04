@@ -1,6 +1,8 @@
 {% extends "books/base.html" %}
 {% block title %}图书列表{% endblock %}
 {% block content %}<h2>图书列表</h2>
+{% load pagination_tags %}
+{% autopaginate object_list 2 %}
 <ul>
     {% for book in object_list %}
     <li>
@@ -8,4 +10,5 @@
     </li>
     {% endfor %}
 </ul>
+{% paginate %}
 {% endblock %}

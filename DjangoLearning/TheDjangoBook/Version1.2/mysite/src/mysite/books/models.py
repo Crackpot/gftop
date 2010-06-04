@@ -56,7 +56,7 @@ class Book(models.Model):
     class Meta:
         verbose_name = '图书'
         verbose_name_plural = '图书'
-        ordering = ['id', 'title', 'publisher']
+        ordering = ['-id', 'title', 'publisher']
     def __unicode__(self):
         return self.title
     def get_absolute_url(self):
