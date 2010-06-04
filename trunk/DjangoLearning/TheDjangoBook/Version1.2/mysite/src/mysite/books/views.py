@@ -28,13 +28,18 @@ def bookCreate(request):
         form = forms.BookCreateForm(request.POST)
         try:
             if form.is_valid():
-                cd = form.cleaned_data
                 form.save()
         except:
                 print '出现重名对象'
-        books = Book.objects.order_by('-pk')
-        latest_book = books[0]
-        return HttpResponseRedirect('/books/books/%s/' % latest_book.id)
+                
+        """
+        优化后的找到最新的图书的功能
+            SELECT `books_book`.`id`, `books_book`.`title`, `books_book`.`publisher_id`, `books_book`.`publication_date`, `books_book`.`num_pages`
+            FROM `books_book`
+            ORDER BY `books_book`.`id` DESC LIMIT 1
+        """
+        latest_book = Book.objects.order_by('-pk')[0]
+        return HttpResponseRedirect('/books/books/%s/' % latest_book.id) # 跳转到最新图书详情页面
     else:
         # 未提交表单
         form = forms.BookCreateForm()

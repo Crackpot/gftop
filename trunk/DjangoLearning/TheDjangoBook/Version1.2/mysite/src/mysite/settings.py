@@ -101,6 +101,8 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+INTERNAL_IPS = ('127.0.0.1',)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.locale.LocaleMiddleware',
@@ -110,6 +112,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # 第三方中间件
+    'pagination.middleware.PaginationMiddleware', # 分页
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
@@ -122,11 +126,13 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     PATH + '/templates',
+    '/usr/lib/python2.6/site-packages/debug_toolbar/templates',
     '/home/workspace/gftop/DjangoLearning/TheDjangoBook/Version1.2/mysite/src/mysite/templates',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.request",
     "django.core.context_processors.media",
@@ -143,7 +149,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # 第三方应用
-    'registration',
+    'registration', # 用户注册模块
+    'pagination', # 分页模块
+    'debug_toolbar',
     'mptt',
     'cms',
     'cms.plugins.text',
