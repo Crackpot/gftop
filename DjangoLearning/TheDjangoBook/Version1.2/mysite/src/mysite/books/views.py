@@ -10,8 +10,6 @@ def index(request):
 def book_detail(request, id):
     book = Book.objects.get(id=id)
     authors = Book.get_authors(book)
-    print book
-    print authors
     return render_to_response(
         'books/detail_book.html',
         {'book': book, 'authors':authors}
@@ -28,10 +26,15 @@ def bookCreate(request):
     if request.method == 'POST':
         # 已经提交表单
         form = forms.BookCreateForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            form.save()
-            return HttpResponseRedirect('/books/books/%s/' % id)
+        try:
+            if form.is_valid():
+                cd = form.cleaned_data
+                form.save()
+        except:
+                print '出现重名对象'
+        books = Book.objects.order_by('-pk')
+        latest_book = books[0]
+        return HttpResponseRedirect('/books/books/%s/' % latest_book.id)
     else:
         # 未提交表单
         form = forms.BookCreateForm()
@@ -39,6 +42,7 @@ def bookCreate(request):
             'books/form_book.html',
             {'form':form}
         )
+        
 def bookEdit(request, id): # 传来的参数id在Url中已经定义了类型
     book = Book.objects.get(id=id)
     if request.method == 'POST':

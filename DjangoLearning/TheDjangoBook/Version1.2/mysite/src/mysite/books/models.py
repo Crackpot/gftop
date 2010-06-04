@@ -42,7 +42,7 @@ class BookManager(models.Manager):
 
 
 class Book(models.Model):
-    title = models.CharField('书名', max_length=100)
+    title = models.CharField('书名', unique = True , max_length=100)
     authors = models.ManyToManyField(Author) # 多对多关系
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField('出版日期', default=datetime.datetime.date(datetime.datetime.today())) # 默认值为今天日期
@@ -56,7 +56,7 @@ class Book(models.Model):
     class Meta:
         verbose_name = '图书'
         verbose_name_plural = '图书'
-        ordering = ['title', 'publisher']
+        ordering = ['id', 'title', 'publisher']
     def __unicode__(self):
         return self.title
     def get_absolute_url(self):
