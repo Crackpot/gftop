@@ -34,7 +34,7 @@ urlpatterns += patterns('',
 
 urlpatterns += patterns('',
     # 使用通用视图
-    (r'^about/$', direct_to_template, {'template':'about.html'}),
+    (r'^about/$', direct_to_template, {'template':'about/index.html'}),
     (r'^about/(\w+)/$', views.about_pages),
 )
 
