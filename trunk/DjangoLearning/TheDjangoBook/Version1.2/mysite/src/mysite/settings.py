@@ -7,7 +7,7 @@ import socket
 url_prefix = '/mysite'
 
 if socket.gethostname == 'linux-Crackpot':
-    DEBUG = TEMPLATE_DEBUG = False
+    DEBUG = TEMPLATE_DEBUG = True
     print '在我的笔记本上'
 else:
     DEBUG = TEMPLATE_DEBUG = True
@@ -101,7 +101,6 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
-INTERNAL_IPS = ('127.0.0.1',)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -113,7 +112,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # 第三方中间件
     'pagination.middleware.PaginationMiddleware', # 分页
-    #'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
@@ -165,4 +164,18 @@ INSTALLED_APPS = (
     'mysite.Time',
     'mysite.books',
     'mysite.contact',
+)
+
+INTERNAL_IPS = ('127.0.0.1',)
+DEBUG_TOOLBAR_PANELS = (
+    'debug_toolbar.panels.version.VersionDebugPanel',
+    'debug_toolbar.panels.timer.TimerDebugPanel',
+    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+    'debug_toolbar.panels.headers.HeaderDebugPanel',
+    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+    'debug_toolbar.panels.template.TemplateDebugPanel',
+    'debug_toolbar.panels.sql.SQLDebugPanel',
+    #'debug_panels.sql_unique.SQLUniqueDebugPanel',
+    'debug_toolbar.panels.logger.LoggingPanel',
+    'debug_toolbar.panels.cache.CacheDebugPanel',
 )
