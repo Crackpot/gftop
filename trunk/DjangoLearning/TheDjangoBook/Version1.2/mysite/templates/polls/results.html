@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %}
+{% block title %}Polls result{% endblock %}
+{% block css %}{% endblock %}
+{% block js %}{% endblock %}
+{% block content %}
+<h1>{{ object.question }}</h1>
+<!-- 使用通用视图，父对象为object -->
+<ul>
+    {% for choice in object.choice_set.all %}
+    <li>
+        {{ choice.choice }} -- {{ choice.votes }}vote{{ choice.votes|pluralize }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

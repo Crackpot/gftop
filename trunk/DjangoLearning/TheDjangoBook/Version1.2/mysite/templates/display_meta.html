@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}显示元信息{% endblock %}
+{% block css %}
+<style type="text/css">
+    body {
+        margin: 0, 0;
+        padding: 0;
+        background: #E4ECEC;
+    }
+    
+    .meta_informations {
+        width: 80%;
+    }
+    
+    .key {
+        background: #909090;
+    }
+    
+    .value {
+        background: #EA8382;
+    }
+</style>
+{% endblock %}
+{% block content %}<h1>显示元信息</h1>
+<table class="meta_informations">
+    {% for key, value in values %}
+    <tr>
+        <td class="key">
+            {{ key }}
+        </td>
+        <td class="value">
+            {{ value }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="../">return</a>
+{% endblock %}

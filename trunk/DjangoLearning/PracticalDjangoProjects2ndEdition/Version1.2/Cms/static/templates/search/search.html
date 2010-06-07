@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}搜索{% endblock %}
+{% block content %}
+
+<form method="get" action="/search/">
+    <p>
+        <label for="id_q">
+            Search:
+        </label>
+        <input type="text" name="q" id="id_q" value="{{ query }}" /><input type="submit" value="Submit" />
+    </p>
+</form>
+
+{% if results %}
+<!-- 检索有果 -->
+<p>
+    You searched for "{{ query }}"; the results are listed below.
+</p>
+<ul>
+    {% for page in results %}
+    <!-- 遍历结果 -->
+    <li>
+        <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<!-- 检索无果 -->
+{% if query %}
+<!-- 查询了东西 -->
+<p>
+    No results found.
+</p>
+{% else %}
+<!-- 没查询东西 -->
+<p>
+    Type a search query into the box above, and press "Submit"
+    to search.
+</p>
+{% endif %}
+{% endif %}
+</body>
+{% endblock %}

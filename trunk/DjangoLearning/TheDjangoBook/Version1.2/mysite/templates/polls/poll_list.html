@@ -1,0 +1,12 @@
+{% extends "books/base.html" %}
+{% block title %}Polls{% endblock %}
+{% block content %}
+<h1>Polls</h1>
+<ul>
+    {% for poll in object_list %}
+    <li>
+        <a href="{{ poll.get_absolute_url }}">{{ poll.question }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
