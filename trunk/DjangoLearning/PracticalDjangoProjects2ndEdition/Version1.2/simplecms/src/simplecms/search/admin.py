@@ -13,5 +13,6 @@ class FlatPageAdminWithKeywords(FlatPageAdmin):
     
 class SearchKeywordAdmin(admin.ModelAdmin):
     pass
+
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdminWithKeywords)
