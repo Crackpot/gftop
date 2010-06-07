@@ -1,49 +1,43 @@
 {% extends "base.html" %}
 {% block title %}搜索{% endblock %}
 {% block content %}
-<form method="get" action="/search/">
-    <p>
-        <label for="id_q">
-            搜索关键词:
-        </label>
-        <input type="text" name="q" id="id_q" value="{{ query }}" /><input type="submit" value="搜索" />
-    </p>
-</form>{% if keyword_results or results %}<!-- 有keyword_results或者results存在 -->
-<p>
-    您搜索的关键词为: "{{ query }}";
-</p>
-{% if keyword_results %}<!-- 有keyword_results存在 -->
-<p>
-    建议页面:
-</p>
-<ul>
-    {% for page in keyword_results %}<!-- 遍历keyword_results搜索结果 -->
-    <li>
-        <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}<!-- endof有keyword_results存在 -->{% if results %}<!-- 有results存在 -->
-<p>
-    搜索结果:
-</p>
-<ul>
-    {% for page in results %}<!-- 遍历results -->
-    <li>
-        <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-    </li>
-    {% endfor %}<!-- endof遍历results -->
-</ul>
-{% endif %}<!-- endof有results存在 -->
-{% endif %}<!-- endof有keyword_results或者results存在 -->
-{% if query and not keyword_results and not results %}<!-- 有搜索关键词但是找不到结果 -->
-<p>
-    没有找到符合条件的结果
-</p>
-{% else %}<!-- 没有关键词 -->
-<p>
-    请输入一个关键词再搜索
-</p>
-{% endif %}<!-- endof有搜索关键词但是找不到结果 -->
-</body>
+
+    <form method="get" action="/search/">
+        <p>
+            <label for="id_q">
+                搜索关键词:
+            </label>
+            <input type="text" name="q" id="id_q" value="{{ query }}" /><input type="submit" value="搜索" />
+        </p>
+    </form>
+
+    {% if keyword_results or results %}<!-- 有keyword_results或者results存在 -->
+        <p>您搜索的关键词为: "{{ query }}";</p>
+
+        {% if keyword_results %}<!-- 有keyword_results存在 -->
+            <p>建议页面:</p>
+            <ul>
+                {% for page in keyword_results %}<!-- 遍历keyword_results搜索结果 -->
+                    <li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}<!-- endof有keyword_results存在 -->
+
+        {% if results %}<!-- 有results存在 -->
+            <p>搜索结果:</p>
+            <ul>
+                {% for page in results %}<!-- 遍历results -->
+                    <li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+                {% endfor %}<!-- endof遍历results -->
+            </ul>
+        {% endif %}<!-- endof有results存在 -->
+
+    {% endif %}<!-- endof有keyword_results或者results存在 -->
+
+    {% if query and not keyword_results and not results %}<!-- 有搜索关键词但是找不到结果 -->
+        <p>没有找到符合条件的结果</p>
+    {% else %}<!-- 没有关键词 -->
+        <p>请输入一个关键词再搜索</p>
+    {% endif %}<!-- endof有搜索关键词但是找不到结果 -->
+
 {% endblock %}
