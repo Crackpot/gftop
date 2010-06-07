@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ch01/1-4"/>
+	<classpathentry kind="src" path="ch01/1-5"/>
+	<classpathentry excluding="package/" kind="src" path="ch03/3-1"/>
+	<classpathentry kind="src" path="ch03/3-1/package"/>
+	<classpathentry kind="src" path="ch03/3-4"/>
+	<classpathentry kind="src" path="ch03/3-5"/>
+	<classpathentry kind="src" path="ch03/3-7"/>
+	<classpathentry kind="src" path="ch03/exercises"/>
+	<classpathentry kind="src" path="ch04/4-2"/>
+	<classpathentry kind="src" path="ch04/4-3"/>
+	<classpathentry kind="src" path="ch04/4-4"/>
+	<classpathentry kind="src" path="ch04/4-5"/>
+	<classpathentry kind="src" path="ch11/11-2"/>
+	<classpathentry kind="src" path="ch11/11-3"/>
+	<classpathentry kind="src" path="somthingElse/CityTest"/>
+	<classpathentry kind="src" path="somthingElse/Loop"/>
+	<classpathentry kind="src" path="somthingElse/PicDrug"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="somthingElse/PicDrug"/>
+</classpath>
