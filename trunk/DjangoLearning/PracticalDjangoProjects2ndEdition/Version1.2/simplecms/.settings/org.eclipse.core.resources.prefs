@@ -1,5 +1,5 @@
-#Mon Jun 07 16:39:39 CST 2010
+#Mon Jun 07 17:22:02 CST 2010
 eclipse.preferences.version=1
-encoding//search/admin.py=utf8
-encoding//search/models.py=utf8
-encoding/settings.py=utf8
+encoding//src/simplecms/search/admin.py=utf8
+encoding//src/simplecms/search/models.py=utf8
+encoding//src/simplecms/settings.py=utf8
