@@ -1,15 +1,15 @@
 #coding=utf8
 import settings
 from django.conf.urls.defaults import *
-from Cms import views
-from Cms.search import views as sv
+from simplecms import views
+from simplecms.search import views as sv
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Example:
-    # (r'^Cms/', include('Cms.foo.urls')),
+    # (r'^simplecms/', include('simplecms.foo.urls')),
     (r'^$',views.index ),
     (r'^search/$',sv.search ),
 
