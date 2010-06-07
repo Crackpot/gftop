@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}计算器{% endblock %}
+{% block content %}
+<form action="/add/" method="post">
+    <input type="text" name="a" value="{{a}}" size="20"/>
+    <select name="operators">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="text" name="b" value="{{b}}" size="20"/>
+    <input type="submit" value="="/>
+    <input type="text" name="c" value="{{c}}" size="20">
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "polls/base.html" %}
+{% block title %}Polls result{% endblock %}
+{% block css %}{% endblock %}
+{% block js %}{% endblock %}
+{% block content %}
+<h1>{{ poll.question }}</h1>
+<ul>
+    {% for choice in poll.choice_set.all %}
+    <li>
+        {{ choice.choice }} -- {{ choice.votes }}vote{{ choice.votes|pluralize }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

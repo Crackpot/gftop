@@ -11,7 +11,7 @@ def getDicts():
     dictExplanation={}
     global  dictAnalysis
     dictAnalysis={}
-    
+
     for row in reader:
         #print row        #无法显示中文
         #print type(row)    #row的类型是列表
@@ -36,11 +36,11 @@ def getDicts():
 #    for k,v in dictAnalysis.items():
 #        print k,v
     myfile.close()
-        
+
 def getRemainder():
     #telNum=int(raw_input('请输入您的手机号码：'))
-    #telNum=15979122400
-    telNum=random.randrange(10000000000,20000000000)
+    telNum=15803516966
+    #telNum=random.randrange(10000000000,20000000000)
     remainder=telNum%80
     print '您输入的手机号码是',telNum#,'余数是：',remainder
     shiweishu=remainder/10
@@ -58,9 +58,9 @@ def getRemainder():
 def getResults(factOfExplanation,factOfAnalysis):
     print '详解：%s'%dictExplanation[str(factOfExplanation)]
     print '分析：%s'%dictAnalysis[str(factOfAnalysis)]
-    
-    
-    
+
+
+
 getDicts()
 getRemainder()
 getResults(factOfExplanation, factOfAnalysis)

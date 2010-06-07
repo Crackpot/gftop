@@ -1,10 +1,3 @@
-#Sat May 29 00:27:25 CST 2010
+#Mon Jun 07 03:05:37 CST 2010
 eclipse.preferences.version=1
-encoding//src/mysite/Time/views.py=utf8
-encoding//src/mysite/books/admin.py=utf8
-encoding//src/mysite/books/models.py=utf8
-encoding//src/mysite/books/urls.py=utf8
-encoding//src/mysite/books/views.py=utf8
-encoding//src/mysite/settings.py=utf8
-encoding//src/mysite/urls.py=utf8
-encoding//src/mysite/views.py=utf8
+encoding//books/views.py=utf8

@@ -1,0 +1,22 @@
+{% extends "polls/base.html" %}
+{% block title %}Polls{% endblock %}
+{% block css %}{% endblock %}
+{% block js %}{% endblock %}
+{% block content %}
+<h1>Polls</h1>
+<p>
+    {% if latest_poll_list %}
+    <ul>
+        {% for poll in latest_poll_list %}
+        <li>
+            {{ poll.question }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+        No polls are available.
+    </p>
+    {% endif %}
+</p>
+{% endblock %}
