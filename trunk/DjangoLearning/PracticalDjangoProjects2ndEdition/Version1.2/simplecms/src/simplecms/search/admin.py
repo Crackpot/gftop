@@ -9,10 +9,11 @@ class SearchKeywordInline(admin.StackedInline):
     model = SearchKeyword
     
 class FlatPageAdminWithKeywords(FlatPageAdmin):
+    # 内联
     inlines = [SearchKeywordInline]
     
 class SearchKeywordAdmin(admin.ModelAdmin):
     pass
 
-admin.site.unregister(FlatPage)
-admin.site.register(FlatPage, FlatPageAdminWithKeywords)
+admin.site.unregister(FlatPage) # 反注册此模块
+admin.site.register(FlatPage, FlatPageAdminWithKeywords) # 重新注册该模块及管理类
