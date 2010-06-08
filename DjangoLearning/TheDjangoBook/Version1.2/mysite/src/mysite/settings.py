@@ -112,7 +112,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # 第三方中间件
     'pagination.middleware.PaginationMiddleware', # 分页
-    #'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
@@ -176,7 +176,6 @@ DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
     'debug_toolbar.panels.template.TemplateDebugPanel',
     'debug_toolbar.panels.sql.SQLDebugPanel',
-    #'debug_panels.sql_unique.SQLUniqueDebugPanel',
     'debug_toolbar.panels.logger.LoggingPanel',
     'debug_toolbar.panels.cache.CacheDebugPanel',
 )
