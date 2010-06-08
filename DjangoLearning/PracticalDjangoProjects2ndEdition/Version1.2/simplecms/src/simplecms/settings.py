@@ -120,4 +120,5 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'debug_toolbar',
     'simplecms.search',
+    'simplecms.coltrane',
 )
