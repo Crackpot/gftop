@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     # (r'^simplecms/', include('simplecms.foo.urls')),
     (r'^$',views.index ),
     (r'^search/$',sv.search ),
+    (r'^weblog', include('simplecms.coltrane.urls')),
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': settings.MEDIA_ROOT }),
@@ -26,5 +27,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
     # flatpages相关
-    (r'', include('django.contrib.flatpages.urls')),
+    #(r'', include('django.contrib.flatpages.urls')),
 )

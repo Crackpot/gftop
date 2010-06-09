@@ -121,4 +121,5 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'simplecms.search',
     'simplecms.coltrane',
+    'tagging',
 )
