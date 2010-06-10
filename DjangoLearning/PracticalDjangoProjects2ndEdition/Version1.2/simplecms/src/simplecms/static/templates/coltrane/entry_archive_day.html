@@ -1,3 +1,25 @@
 {% extends "coltrane/base.html" %}
+
+{% block title %}
+发表于{{ day|date:"Y年Fj日" }}的条目
+{% endblock %}
+
 {% block content %}
+    <h1>
+    发表于{{ day|date:"Y年Fj日" }}的条目
+    </h1>
+    {% for entry in object_list %}
+        <h2>{{ entry.title }}</h2>
+        <p>
+            发表于{{ day|date:"Y年Fj日" }}
+        </p>
+        {% if entry.excerpt_html %}
+            <!-- 如果有摘录就显示摘录 -->
+            {{ entry.excerpt_html|safe }}
+        {% else %}
+            <!-- 没有摘录就显示正文的一部分 -->
+            {{ entry.body_html|truncatewords_html:"50"|safe }}
+        {% endif %}
+        <p><a href="{{ entry.get_absolute_url }}">阅读全文</a></p>
+    {% endfor %}
 {% endblock %}

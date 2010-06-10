@@ -1,17 +1,25 @@
 {% extends "coltrane/base.html" %}
-{% block title %}条目索引{% endblock %}
+
+{% block title %}
+条目
+{% endblock %}
+
 {% block content %}
-    <h1>条目索引</h1>
+    <h1>
+        条目
+    </h1>
     {% for entry in latest %}
         <h2>{{ entry.title }}</h2>
-        <p>Published on {{ entry.pub_date|date:"F j, Y" }}</p>
+        <p>
+            发表于{{ entry.pub_date|date:"Y年Fj日" }}
+        </p>
         {% if entry.excerpt_html %}
-            <!-- 有摘要就显示全部摘要 -->
+            <!-- 如果有摘录就显示摘录 -->
             {{ entry.excerpt_html|safe }}
         {% else %}
-            <!-- 没有摘要就显示正文的一部分 -->
-            {{ entry.body_html|truncatewords_html:"50"|safe}}
+            <!-- 没有摘录就显示正文的一部分 -->
+            {{ entry.body_html|truncatewords_html:"50"|safe }}
         {% endif %}
-        <p><a href="{{ entry.get_absolute_url }}">Read full entry</a></p>
+        <p><a href="{{ entry.get_absolute_url }}">阅读全文</a></p>
     {% endfor %}
 {% endblock %}
