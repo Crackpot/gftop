@@ -71,7 +71,14 @@ class Entry(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return "/weblog/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug)
+        #return "/weblog/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug)
+        return ('coltrane_entry_detail', (), {
+            'year': self.pub_date.strftime("%Y"),
+            'month': self.pub_date.strftime("%b").lower(),
+            'day': self.pub_date.strftime("%d"),
+            'slug': self.slug})
+    # 基于项目现有的URL设置，permalink装饰器将会找到/weblog/前缀，并且跟随到coltrane.urls中的include()。它会找到名叫coltrane_entry_detail的模式并且用正确的值来填充那个正则表达式。
+    get_absolute_url = models.permalink(get_absolute_url)
 
     # 重写此model的save方法
     def save(self, force_insert = False, force_update = False):
