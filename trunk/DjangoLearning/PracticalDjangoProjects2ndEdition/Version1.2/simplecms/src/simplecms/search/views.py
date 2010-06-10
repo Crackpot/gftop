@@ -5,7 +5,8 @@ from django.shortcuts import render_to_response
 
 def search(request):
     query = request.GET.get('q', '') # 取得提交的查询关键词
-    keyword_results = results = []
+    keyword_results = []
+    results = []
     if query:
         # 查询了东西
         keyword_results = FlatPage.objects.filter(searchkeyword__keyword__in = query.split()).distinct() # 将简单页面中的字符串分割
