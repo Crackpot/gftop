@@ -11,11 +11,20 @@ entry_info_dict = {
 
 
 urlpatterns = patterns('',
-    (r'^/$', 'django.views.generic.date_based.archive_index',entry_info_dict),
-
-    (r'^/$', views.entries_index),
-    (r'^/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$','django.views.generic.date_based.object_detail', entry_info_dict),
-
-    (r'^/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', object_detail, entry_info_dict),
-    (r'^/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$', views.entry_detail),
+    #(r'^/$', views.entries_index),
+    (r'^/$',
+        'django.views.generic.date_based.archive_index',
+        entry_info_dict),
+    (r'^/(?P<year>\d{4})/$',
+        'django.views.generic.date_based.archive_year',
+        entry_info_dict),
+    (r'^/(?P<year>\d{4})/(?P<month>\w{3})/$',
+        'django.views.generic.date_based.archive_month',
+        entry_info_dict),
+    (r'^/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/$',
+        'django.views.generic.date_based.archive_day',
+        entry_info_dict),
+    (r'^/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{2})/(?P<slug>[-\w]+)/$',
+        'django.views.generic.date_based.object_detail',
+        entry_info_dict),
 )

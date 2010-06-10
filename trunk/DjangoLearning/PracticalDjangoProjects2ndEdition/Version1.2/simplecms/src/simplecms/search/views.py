@@ -14,6 +14,6 @@ def search(request):
             return HttpResponseRedirect(keyword_results[0].get_absolute_url()) # 跳转到唯一结果页面
         results = FlatPage.objects.filter(content__icontains = query)
     return render_to_response('search/search.html',
-                              { 'query': query,
-                               'keyword_results': keyword_results,
-                               'results': results })
+            { 'query': query,
+                'keyword_results': keyword_results,
+                'results': results })
