@@ -1,3 +1,19 @@
 {% extends "coltrane/base.html" %}
-{% block content %}
+
+{% block title %}
+发表于{{ year }}的条目
 {% endblock %}
+
+{% block content %}
+    <h1>
+    发表于{{ year }}的条目
+    </h1>
+    <ul>
+      {% for month in date_list %}
+          <li>
+              <a href="/weblog/{{ year }}/{{ month|date:"b" }}/">{{ month|date:"F" }}</a>
+          </li>
+      {% endfor %}
+    </ul>
+{% endblock %}
+
