@@ -1,7 +1,8 @@
 {% extends "coltrane/base.html" %}
 {% block content %}
 {% if object %}
-<h2>有条目</h2>
+<h2>{{ object.title }}</h2>
+{{ object.body_html }}
 {% else %}
 <h2>无条目</h2>
 {% endif %}
