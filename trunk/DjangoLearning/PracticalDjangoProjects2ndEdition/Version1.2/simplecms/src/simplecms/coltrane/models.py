@@ -74,7 +74,8 @@ class Entry(models.Model):
         #return "/weblog/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug)
         return ('coltrane_entry_detail', (), {
             'year': self.pub_date.strftime("%Y"),
-            'month': self.pub_date.strftime("%b").lower(),
+            #'month': self.pub_date.strftime("%b").lower(),
+            'month': self.pub_date.strftime("%m"),
             'day': self.pub_date.strftime("%d"),
             'slug': self.slug})
     # 基于项目现有的URL设置，permalink装饰器将会找到/weblog/前缀，并且跟随到coltrane.urls中的include()。它会找到名叫coltrane_entry_detail的模式并且用正确的值来填充那个正则表达式。
@@ -84,5 +85,39 @@ class Entry(models.Model):
     def save(self, force_insert = False, force_update = False):
         self.body_html = markdown(self.body)
         if self.excerpt:
+            # 填写了摘录
             self.excerpt_html = markdown(self.excerpt)
+        else:
+            # 没有填写摘录
+            if self.excerpt_html:
+                # 原来有摘录的话清除现有摘录
+                self.excerpt_html = ''
         super(Entry, self).save(force_insert, force_update)
+
+class Link(models.Model):
+    # 元数据
+    title = models.CharField('标题', max_length = 250)
+    description = models.TextField('描述', blank = True)
+    description_html = models.TextField('描述html', blank = True)
+    url = models.URLField(unique = True)
+    posted_by = models.ForeignKey(User)
+    pub_date = models.DateTimeField('发布日期', default = datetime.datetime.now)
+    slug = models.SlugField(unique_for_date = 'pub_date')
+    tags = TagField()
+    enable_comments = models.BooleanField(default = True)
+    post_elsewhere = models.BooleanField('发布到Delicious', default = True)
+    via_name = models.CharField('通过', max_length = 250, blank = True,
+            help_text = 'The name of the person whose site you spotted the link on. Optional.')
+    via_url = models.URLField('Via URL', blank = True,
+            help_text = 'The URl of the site where you spotted the link. Optional.')
+
+    class Meta:
+        ordering = ['-pub_date']
+        
+    def __unicode__(self):
+        return self.title
+    
+    def save(self):
+        if self.description:
+            self.description_html = markdown(self.description)
+        super(Link, self).save()

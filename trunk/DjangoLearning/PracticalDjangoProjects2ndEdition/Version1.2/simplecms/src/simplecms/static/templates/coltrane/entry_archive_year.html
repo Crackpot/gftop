@@ -11,7 +11,7 @@
     <ul>
       {% for month in date_list %}
           <li>
-              <a href="/weblog/{{ year }}/{{ month|date:"b" }}/">{{ month|date:"F" }}</a>
+              <a href="/weblog/{{ year }}/{{ month|date:"m" }}/">{{ month|date:"m" }}</a>
           </li>
       {% endfor %}
     </ul>
