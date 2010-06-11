@@ -11,7 +11,7 @@
     {% for entry in object_list %}
         <h2>{{ entry.title }}</h2>
         <p>
-          发表于{{ month|date:"Y年Fj日" }}
+          发表于{{ entry.pub_date|date:"Y年Fj日" }}
         </p>
         {% if entry.excerpt_html %}
             {{ entry.excerpt_html|safe }}
