@@ -6,15 +6,24 @@
 {% block content %}
 {% endblock %}
 
-{% block css %}
+{% block basecss %}
     <style type="text/css">
     	body {
     		background: #D4D2D3;
     	}    
+		.body_html, .excerpt_html {
+			width: 80%;
+		}
     </style>
 {% endblock %}
 
-{% block js %}
+{% block css %}
+{% endblock %}
+
+{% block basejs %}
     <script type="text/javascript">
     </script>
+{% endblock %}
+
+{% block js %}
 {% endblock %}

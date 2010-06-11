@@ -16,6 +16,8 @@ urlpatterns = patterns('',
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': settings.MEDIA_ROOT }),
+    (r'^css/(?P<path>.*)$', 'django.views.static.serve',
+        { 'document_root': settings.MEDIA_ROOT + '/css'}),
     # tiny_mce.js
     (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': settings.MEDIA_ROOT + '/javascripts/tinymce/jscripts/tiny_mce'}),

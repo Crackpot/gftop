@@ -7,7 +7,12 @@
 {% block content %}
     <h1>{{ object.title }}</h1>
     <p>
-      发表于{{ object.pub_date|date:"F j, Y" }}
+      发表于{{ object.pub_date|date:"Y年Fj日" }}
     </p>
-    {{ object.body_html|safe }}
+	<div class="body_html">
+		{{ object.body_html|safe }}
+	</div>
+{% endblock %}
+
+{% block css %}
 {% endblock %}
