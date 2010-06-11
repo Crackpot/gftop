@@ -15,10 +15,14 @@
         </p>
         {% if entry.excerpt_html %}
             <!-- 如果有摘录就显示摘录 -->
-            {{ entry.excerpt_html|safe }}
+	    <div class="excerpt_html">
+                {{ entry.excerpt_html|safe }}
+            </div>
         {% else %}
             <!-- 没有摘录就显示正文的一部分 -->
-            {{ entry.body_html|truncatewords_html:"50"|safe }}
+	    <div class="body_html">
+                {{ entry.body_html|truncatewords_html:"50"|safe }}
+            </div>
         {% endif %}
         <p><a href="{{ entry.get_absolute_url }}">阅读全文</a></p>
     {% endfor %}
