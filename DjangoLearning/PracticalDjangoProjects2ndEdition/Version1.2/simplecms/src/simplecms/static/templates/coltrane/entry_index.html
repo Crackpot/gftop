@@ -4,7 +4,7 @@
     <h1>条目索引</h1>
     {% for entry in entry_list %}
         <h2>{{ entry.title }}</h2>
-        <p>Published on {{ entry.pub_date|date:"F j, Y" }}</p>
+        <p>Published on {{ entry.pub_date|date:"Y年Fj日" }}</p>
         {% if entry.excerpt_html %}
             <!-- 有摘要就显示全部摘要 -->
             {{ entry.excerpt_html|safe }}
