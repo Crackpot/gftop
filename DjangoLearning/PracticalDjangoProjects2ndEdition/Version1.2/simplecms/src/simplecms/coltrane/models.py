@@ -1,6 +1,7 @@
 #coding=utf8
 import datetime
 
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -72,6 +73,7 @@ class Entry(models.Model):
 
     def get_absolute_url(self):
         #return "/weblog/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug)
+        # 对应coltrane_entry_detail通用视图
         return ('coltrane_entry_detail', (), {
             'year': self.pub_date.strftime("%Y"),
             'month': self.pub_date.strftime("%b").lower(), # 月份缩写
@@ -96,28 +98,48 @@ class Entry(models.Model):
 
 class Link(models.Model):
     # 元数据
-    title = models.CharField('标题', max_length = 250)
-    description = models.TextField('描述', blank = True)
-    description_html = models.TextField('描述html', blank = True)
-    url = models.URLField(unique = True)
+    enable_comments = models.BooleanField(default = True)
+    post_elsewhere = models.BooleanField('发布到Delicious', default = True,
+            help_text = '如果选中，此链接将会发布到weblog和Delicious帐户中。')
     posted_by = models.ForeignKey(User)
     pub_date = models.DateTimeField('发布日期', default = datetime.datetime.now)
-    slug = models.SlugField(unique_for_date = 'pub_date')
-    tags = TagField()
-    enable_comments = models.BooleanField(default = True)
-    post_elsewhere = models.BooleanField('发布到Delicious', default = True)
+    slug = models.SlugField(unique_for_date = 'pub_date',
+            help_text = "Must be unique for the publication date.")
+    title = models.CharField('标题', max_length = 250)
+
+    # The actual link bits.
+    description = models.TextField('描述', blank = True)
+    description_html = models.TextField('描述html', blank = True)
     via_name = models.CharField('通过', max_length = 250, blank = True,
             help_text = 'The name of the person whose site you spotted the link on. Optional.')
     via_url = models.URLField('Via URL', blank = True,
             help_text = 'The URl of the site where you spotted the link. Optional.')
+    tags = TagField()
+    url = models.URLField(unique = True)
 
     class Meta:
         ordering = ['-pub_date']
-        
+
     def __unicode__(self):
         return self.title
-    
+
     def save(self):
         if self.description:
             self.description_html = markdown(self.description)
+        if not self.id and self.post_elsewhere:
+            import pydelicious
+            from django.utils.encoding import smart_str
+            pydelicious.add(
+                settings.DELICIOUS_USER,
+                settings.DELICIOUS_PASSWORD,
+                smart_str(self.url),
+                smart_str(self.title),
+                smart_str(self.tags))
         super(Link, self).save()
+        
+    def get_absolute_url(self):
+        return ('coltrane_link_detail',(),{
+            'year': self.pub_date.strftime('%Y'),
+            'month': self.pub_date.strftime('%b').lower(),
+        })
+    get_absolute_url  = models.permalink(get_absolute_url)
