@@ -74,8 +74,8 @@ class Entry(models.Model):
         #return "/weblog/%s/%s/" % (self.pub_date.strftime("%Y/%b/%d").lower(), self.slug)
         return ('coltrane_entry_detail', (), {
             'year': self.pub_date.strftime("%Y"),
-            #'month': self.pub_date.strftime("%b").lower(),
-            'month': self.pub_date.strftime("%m"),
+            'month': self.pub_date.strftime("%b").lower(), # 月份缩写
+            #'month': self.pub_date.strftime("%m"), # 月份数字
             'day': self.pub_date.strftime("%d"),
             'slug': self.slug})
     # 基于项目现有的URL设置，permalink装饰器将会找到/weblog/前缀，并且跟随到coltrane.urls中的include()。它会找到名叫coltrane_entry_detail的模式并且用正确的值来填充那个正则表达式。

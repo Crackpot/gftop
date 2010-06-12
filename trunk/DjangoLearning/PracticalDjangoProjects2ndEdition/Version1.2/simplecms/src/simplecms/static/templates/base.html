@@ -3,13 +3,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>{% block title %}{% endblock %}</title>
+        {% block basecss %}{% endblock %}
+        {% block css %}{% endblock %}
+        {% block basejs %}{% endblock %}
+        {% block js %}{% endblock %}
     </head>
     <body>
         {% block content %}
         {% endblock %}
     </body>
-	{% block basecss %}{% endblock %}
-    {% block css %}{% endblock %}
-	{% block basejs %}{% endblock %}
-    {% block js %}{% endblock %}
 </html>
