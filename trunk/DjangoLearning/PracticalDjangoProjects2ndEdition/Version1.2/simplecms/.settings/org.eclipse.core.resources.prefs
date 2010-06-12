@@ -1,7 +1,10 @@
-#Tue Jun 08 17:04:53 CST 2010
+#Sat Jun 12 18:21:33 CST 2010
 eclipse.preferences.version=1
 encoding//src/simplecms/coltrane/admin.py=utf8
 encoding//src/simplecms/coltrane/models.py=utf8
+encoding//src/simplecms/coltrane/urls/__init__.py=utf8
+encoding//src/simplecms/coltrane/urls/entries.py=utf8
+encoding//src/simplecms/coltrane/views.py=utf8
 encoding//src/simplecms/search/admin.py=utf8
 encoding//src/simplecms/search/models.py=utf8
 encoding//src/simplecms/search/views.py=utf8
