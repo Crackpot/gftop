@@ -14,6 +14,9 @@ ADMINS = (
     ('高飞', 'gaofeitop@gmail.com'),
 )
 
+DELICIOUS_USER = 'gf_top'
+DELICIOUS_PASSWORD = 'hacker15263748'
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -81,7 +84,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # 第三方中间件
-    'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
+    #'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
 )
 
 # debug_toolbar ip设置
@@ -122,5 +125,5 @@ INSTALLED_APPS = (
     'simplecms.search',
     'simplecms.coltrane',
     'tagging',
-    'south', # migration
+    #'south', # migration
 )
