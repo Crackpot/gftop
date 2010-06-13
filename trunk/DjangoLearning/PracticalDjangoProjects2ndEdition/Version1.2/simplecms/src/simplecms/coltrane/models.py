@@ -116,7 +116,7 @@ class Link(models.Model):
     via_url = models.URLField('Via URL', blank=True,
             help_text='The URL of the site where you spotted the link. Optional.')
     tags = TagField('标签')
-    url = models.URLField(unique=True, verify_exists = False)
+    url = models.URLField(unique=True, verify_exists = False) # 去除验证有效性
 
     class Meta:
         ordering = ['-pub_date']
@@ -129,8 +129,6 @@ class Link(models.Model):
     def save(self, force_insert=False, force_update=False):
         if self.description:
             self.description_html = markdown(self.description)
-        super(Link, self).save()
-        pass
         if not self.id and self.post_elsewhere:
             import pydelicious
             from django.utils.encoding import smart_str
@@ -138,7 +136,8 @@ class Link(models.Model):
                     settings.DELICIOUS_PASSWORD,
                     smart_str(self.url), smart_str(self.title),
                     smart_str(self.tags))
-
+        super(Link, self).save()
+        
     def get_absolute_url(self):
         return ('coltrane_link_detail', (),
                 { 'year': self.pub_date.strftime('%Y'),
