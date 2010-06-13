@@ -1,1 +1,12 @@
 {% extends "coltrane/base.html" %}
+
+{% block title %}
+链接
+{% endblock %}
+
+{% block content %}
+    <h1>链接</h1>
+    {% for link in latest %}
+        {{ link }}
+    {% endfor %}
+{% endblock %}
