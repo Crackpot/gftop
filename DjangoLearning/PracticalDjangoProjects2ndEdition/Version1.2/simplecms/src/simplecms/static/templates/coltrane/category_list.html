@@ -7,6 +7,13 @@
 {% block content %}
     <h1>分类列表</h1>
     {% for category in object_list %}
-        {{ category.title }}
+        <h2>
+            {{ category }}
+            <!-- 此处返回category.title -->
+        </h2>
+        <p>
+            <a href="{{ category }}">{{ category.title }}</a>
+            <!-- 此处直接用category来在现有的URL之后跟上category.title -->
+        </p>
     {% endfor %}
 {% endblock %}
