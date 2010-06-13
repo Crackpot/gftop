@@ -7,9 +7,9 @@ link_info_dict = {
     'date_field': 'pub_date',
 }
 
-urlpatterns = patterns('',
+urlpatterns = patterns('django.views.generic.date_based',
     (r'^/$',
-     'archive_index',
-     link_info_dict,
-     'coltrane_link_archive_index')
+        'archive_index',
+        link_info_dict,
+        'coltrane_link_archive_index'), # coltrane/link_archive.html
 )
