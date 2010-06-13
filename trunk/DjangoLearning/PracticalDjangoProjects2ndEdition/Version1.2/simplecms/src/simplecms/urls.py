@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     (r'^$',views.index ),
     (r'^search/$',sv.search ),
     (r'^weblog', include('simplecms.coltrane.urls.entries')),
+    (r'^weblog/links', include('simplecms.coltrane.urls.links')),
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': settings.MEDIA_ROOT }),
