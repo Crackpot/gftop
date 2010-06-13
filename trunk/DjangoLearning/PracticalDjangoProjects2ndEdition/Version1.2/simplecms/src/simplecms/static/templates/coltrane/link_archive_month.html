@@ -5,22 +5,22 @@
 {% endblock %}
 
 {% block content %}
-  <h1>
-    发布于{{ month|date:"Y年F" }}的链接
-  </h1>
-  {% for link in object_list %}
-    <h2>{{ link.title }}</h2>
-    <p>
-      发布于{{ link.pub_date|date:"Y年Fj日" }}
-    </p>
-    {% if link.description_html %}
-      <!-- 如果有描述就显示描述 -->
-      <div>
-        {{ link.description_html|safe }}
-      </div>
-    {% endif %}
-    <p>
-      <a href="{{ link.get_absolute_url }}">阅读全文</a>
-    </p>
-  {% endfor %}
+    <h1>
+        发布于{{ month|date:"Y年F" }}的链接
+    </h1>
+    {% for link in object_list %}
+        <h2>{{ link.title }}</h2>
+        <p>
+            发布于{{ link.pub_date|date:"Y年Fj日" }}
+        </p>
+        {% if link.description_html %}
+            <!-- 如果有描述就显示描述 -->
+            <div>
+                {{ link.description_html|safe }}
+            </div>
+        {% endif %}
+        <p>
+            <a href="{{ link.get_absolute_url }}">阅读全文</a>
+        </p>
+    {% endfor %}
 {% endblock %}
