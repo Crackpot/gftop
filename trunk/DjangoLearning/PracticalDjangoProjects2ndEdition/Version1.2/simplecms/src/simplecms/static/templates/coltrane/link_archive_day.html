@@ -11,5 +11,11 @@
     <p>
       发布于{{ day|date:"Y年Fj日" }}
     </p>
+    {% if link.description_html %}
+      <!-- 如果有描述就显示描述 -->
+      <div>
+        {{ description_html|safe }}
+      </div>
+    {% endif %}
   {% endfor %}
 {% endblock %}
