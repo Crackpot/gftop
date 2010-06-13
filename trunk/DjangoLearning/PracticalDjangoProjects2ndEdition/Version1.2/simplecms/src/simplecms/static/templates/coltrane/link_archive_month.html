@@ -1,0 +1,14 @@
+{% extends "coltrane/base.html" %}
+
+{% block title %}
+发布于{{ month|date:"Y年F" }}的链接
+{% endblock %}
+
+{% block content %}
+  <h1>
+    发布于{{ month|date:"Y年F" }}的链接
+  </h1>
+  {% for link in object_list %}
+    <h2>{{ link.title }}</h2>
+  {% endfor %}
+{% endblock %}
