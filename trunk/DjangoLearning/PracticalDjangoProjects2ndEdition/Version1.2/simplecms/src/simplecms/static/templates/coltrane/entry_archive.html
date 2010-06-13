@@ -20,7 +20,7 @@
             </div>
         {% else %}
             <!-- 没有摘录就显示正文的一部分 -->
-	    <div class="body_html">
+	        <div class="body_html">
                 {{ entry.body_html|truncatewords_html:"50"|safe }}
             </div>
         {% endif %}
