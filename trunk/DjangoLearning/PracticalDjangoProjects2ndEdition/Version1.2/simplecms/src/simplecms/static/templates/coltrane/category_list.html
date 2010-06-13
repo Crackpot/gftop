@@ -1,0 +1,12 @@
+{% extends "coltrane/base.html" %}
+
+{% block title %}
+分类列表
+{% endblock %}
+
+{% block content %}
+    <h1>分类列表</h1>
+    {% for category in object_list %}
+        {{ category.title }}
+    {% endfor %}
+{% endblock %}
