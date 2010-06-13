@@ -110,7 +110,7 @@ class Link(models.Model):
 
     # The actual link bits.
     description = models.TextField('描述', blank = True)
-    description_html = models.TextField('描述html', blank = True)
+    description_html = models.TextField('描述html', editable = False, blank = True)
     via_name = models.CharField('Via', max_length = 250, blank = True,
             help_text = 'The name of the person whose site you spotted the link on. Optional.')
     via_url = models.URLField('Via URL', blank=True,
@@ -127,8 +127,6 @@ class Link(models.Model):
         return self.title
 
     def save(self, force_insert=False, force_update=False):
-        if self.description:
-            self.description_html = markdown(self.description)
         if not self.id and self.post_elsewhere:
             import pydelicious
             from django.utils.encoding import smart_str
@@ -136,8 +134,15 @@ class Link(models.Model):
                     settings.DELICIOUS_PASSWORD,
                     smart_str(self.url), smart_str(self.title),
                     smart_str(self.tags))
+        if self.description:
+            # 如果有描述文本，就增加描述html
+            self.description_html = markdown(self.description)
+        else:
+            if self.description_html:
+                # 没有描述文本，但是有描述html
+                self.description_html = ''
         super(Link, self).save()
-        
+
     def get_absolute_url(self):
         return ('coltrane_link_detail', (),
                 { 'year': self.pub_date.strftime('%Y'),
