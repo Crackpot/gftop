@@ -122,4 +122,5 @@ INSTALLED_APPS = (
     'simplecms.search',
     'simplecms.coltrane',
     'tagging',
+    'south', # migration
 )
