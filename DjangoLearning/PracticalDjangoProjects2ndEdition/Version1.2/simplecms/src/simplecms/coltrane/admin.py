@@ -11,6 +11,7 @@ class EntryAdmin(admin.ModelAdmin):
     pass
 
 class LinkAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ['title']}
     pass
 
 admin.site.register(Category, CategoryAdmin)

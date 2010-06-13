@@ -84,7 +84,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # 第三方中间件
-    #'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # debug_toolbar
 )
 
 # debug_toolbar ip设置
