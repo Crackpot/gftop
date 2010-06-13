@@ -7,6 +7,8 @@ from simplecms.coltrane.models import Entry, Category
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug = slug)
     queryset = category.entry_set.all()
+    # 在entry模型总，categories = models.ManyToManyField(Category)
+    # 渲染category_list.html
     return object_list(request,
             queryset,
             extra_context = {'category': category,
