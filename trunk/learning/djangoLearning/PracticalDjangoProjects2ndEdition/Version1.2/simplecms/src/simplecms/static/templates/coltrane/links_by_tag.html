@@ -1,0 +1,28 @@
+{% extends "coltrane/base.html" %}
+
+{% block title %}
+    {% if not object_list %}
+        没有标签为"{{ tag }}"的链接
+    {% else %}
+        标签为"{{ tag }}"的链接
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if not object_list %}
+        <h1>
+            没有标签为"{{ tag }}"的链接
+        </h1>
+    {% else %}
+        <h1>
+            标签为"{{ tag }}"的链接
+        </h1>
+        <ul>
+            {% for link in object_list %}
+                <li>
+                  <a href="{{ link.get_absolute_url }}">{{ link }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

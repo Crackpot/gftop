@@ -126,7 +126,8 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     PATH + '/templates',
     '/usr/lib/python2.6/site-packages/debug_toolbar/templates',
-    '/home/workspace/gftop/DjangoLearning/TheDjangoBook/Version1.2/mysite/src/mysite/templates',
+    # 下面这个是项目模板位置，部署的时候需要用到。修改设置之后记得修改
+    '/home/workspace/gftop/learning/djangoLearning/TheDjangoBook/Version1.2/mysite/src/mysite/templates',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
