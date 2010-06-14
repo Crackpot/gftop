@@ -1,0 +1,34 @@
+{% extends "tagging/base.html" %}
+
+{% block title %}
+    {% if not object_list %}
+        标签为空
+    {% else %}
+        标签列表
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if not object_list %}
+        <h1>标签为空</h1>
+    {% else %}
+        <h1>标签列表</h1>
+        <ul>
+            {% for tag in object_list %}
+                <li>
+                    <strong>
+                        {{ tag }}
+                    </strong>
+                    <ul>
+                        <li>
+                            <a href="entries/{{ tag }}">条目</a>
+                        </li>
+                        <li>
+                            <a href="links/{{ tag }}">链接</a>
+                        </li>
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
