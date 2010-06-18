@@ -27,6 +27,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return "/weblog/categories/%s/" % self.slug
+    
     def live_entry_set(self):
         from simplecms.coltrane.models import Entry
         return self.entry_set.filter(status = Entry.LIVE_STATUS)
@@ -71,8 +72,8 @@ class Entry(models.Model):
     categories = models.ManyToManyField(Category)
     tags = TagField('标签', help_text="Separate tags with spaces.")
 
-    live = LiveEntryManager()
-    objects = models.Manager()
+    #live = LiveEntryManager()
+    objects = models.Manager() # 模板中的变量所需
 
     class Meta:
         ordering = ['-pub_date', 'title']
