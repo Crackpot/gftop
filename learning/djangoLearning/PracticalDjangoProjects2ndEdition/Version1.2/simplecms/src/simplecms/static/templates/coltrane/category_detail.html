@@ -1,7 +1,8 @@
 {% extends "coltrane/base.html" %}
 
 {% block title %}
-    {{ block.super }}{# 在此来继承父元素 #}
+    {{ block.super }}
+    {# 在此来继承父元素 #}
     {% if object_list %}
         {# 有对象 #}
         分类为{{ slug }}的条目

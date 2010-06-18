@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-    {{ block.super }}
-    条目:
+    {{ block.super }}条目:
 {% endblock %}
 
 {% block header %}
-    <h1 id="branding">
-        My weblog
-    </h1>
+    <h1 id="branding">我的博客</h1>
 {% endblock %}
 
 {% block sidebar %}
@@ -21,7 +18,7 @@
             <a href="{% url coltrane_link_archive_index %}">链接</a>
         </li>
         <li id="main-nav-categories">
-            <a href="/weblog/categories/">链接</a>
+            <a href="/weblog/categories/">分类</a>
             {% comment %}
                 <a href="{% url coltrane_category_list %}">分类</a>
             {% endcomment %}
@@ -33,6 +30,11 @@
             {% endcomment %}
         </li>
     </ul>
+
+    <h2>这是什么？</h2>
+    {% block whatis %}
+    {% endblock %}
+
 {% endblock %}
 
 {% block basecss %}

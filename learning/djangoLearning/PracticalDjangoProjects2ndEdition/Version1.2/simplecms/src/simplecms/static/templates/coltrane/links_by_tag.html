@@ -1,6 +1,7 @@
-{% extends "coltrane/base.html" %}
+{% extends "coltrane/base_links.html" %}
 
-{% block title %}
+{% block title %}    {{ block.super }}
+
     {% if not object_list %}
         没有标签为"{{ tag }}"的链接
     {% else %}

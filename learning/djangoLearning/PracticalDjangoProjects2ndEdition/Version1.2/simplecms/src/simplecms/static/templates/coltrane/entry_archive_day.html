@@ -1,7 +1,8 @@
-{% extends "coltrane/base.html" %}
+{% extends "coltrane/base_entries.html" %}
 
 {% block title %}
-发表于{{ day|date:"Y年Fj日" }}的条目
+    {{ block.super }}
+    发表于{{ day|date:"Y年Fj日" }}的条目
 {% endblock %}
 
 {% block content %}
