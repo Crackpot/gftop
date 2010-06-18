@@ -1,6 +1,7 @@
-{% extends "coltrane/base.html" %}
+{% extends "coltrane/base_entries.html" %}
 
-{% block title %}
+{% block title %}    {{ block.super }}
+
     {% if not object_list %}
         没有分类为{{ slug }}的条目
     {% else %}
