@@ -4,6 +4,12 @@ from django.views.generic.list_detail import object_list
 from simplecms.coltrane.models import Entry, Category
 
 def category_detail(request, slug):
+    category = get_object_or_404(Category, slug = slug)
+    return render_to_response('coltrane/category_detail.html',
+                              {'object_list': category.live_entry_set(),
+                               'slug': slug })
+"""
+def category_detail(request, slug):
     category = get_object_or_404(Category, slug=slug)
     queryset = category.entry_set.all()
     # 在entry模型总，categories = models.ManyToManyField(Category)
@@ -12,6 +18,7 @@ def category_detail(request, slug):
                        queryset,
                        extra_context={'category': category,
                                         'slug': slug, })
+"""
     
 # 下面的两个方法都被通用视图所替代
 def entries_index(request):
