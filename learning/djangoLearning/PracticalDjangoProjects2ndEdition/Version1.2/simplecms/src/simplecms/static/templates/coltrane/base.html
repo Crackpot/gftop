@@ -1,9 +1,38 @@
 {% extends "base.html" %}
 
 {% block title %}
+    {{ block.super }}
+    条目:
 {% endblock %}
 
-{% block content %}
+{% block header %}
+    <h1 id="branding">
+        My weblog
+    </h1>
+{% endblock %}
+
+{% block sidebar %}
+    <h2>导航</h2>
+    <ul id="main-nav">
+        <li id="main-nav-entries">
+            <a href="{% url coltrane_entry_archive_index %}">条目</a>
+        </li>
+        <li id="main-nav-links">
+            <a href="{% url coltrane_link_archive_index %}">链接</a>
+        </li>
+        <li id="main-nav-categories">
+            <a href="/weblog/categories/">链接</a>
+            {% comment %}
+                <a href="{% url coltrane_category_list %}">分类</a>
+            {% endcomment %}
+        </li>
+        <li id="main-nav-tags">
+            <a href="/weblog/tags/">标签</a>
+            {% comment %}
+                <a href="{% url coltrane_tag_list %}">标签</a>
+            {% endcomment %}
+        </li>
+    </ul>
 {% endblock %}
 
 {% block basecss %}
