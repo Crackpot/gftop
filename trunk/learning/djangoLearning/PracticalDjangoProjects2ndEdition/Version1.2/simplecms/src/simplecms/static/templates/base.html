@@ -2,14 +2,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>{% block title %}{% endblock %}</title>
+        <title>
+            {% block title %}
+                我的站点--
+            {% endblock %}
+        </title>
         {% block basecss %}{% endblock %}
         {% block css %}{% endblock %}
         {% block basejs %}{% endblock %}
         {% block js %}{% endblock %}
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
+        <div id="header" >
+            {% block header %}
+            {% endblock %}
+        </div>
+        <div id="sidebar" >
+            {% block sidebar %}
+            {% endblock %}
+        </div>
+        <div id="content" >
+            {% block content %}
+            {% endblock %}
+        </div>
     </body>
 </html>
