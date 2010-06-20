@@ -21,7 +21,7 @@ propel:
     email:        { type: varchar(255), required: true }
     expires_at:   { type: timestamp, required: true }
     created_at:   ~
-    updated_at:   ~ 
+    updated_at:   ~
 
   jobeet_affiliate:
     id:           ~
