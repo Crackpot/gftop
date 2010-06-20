@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>Entries Published in {{ year }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body>
+   <h1>Entries Published in {{ year }}</h1>
+   <ul>
+     {% for month in date_list %}
+     <li><a href="/weblog/{{ year }}/{{ month|date:"m" }}/">{{ month|date:"F" }}</a></li>
+     {% endfor %}
+   </ul>
+ </body>
+</html>

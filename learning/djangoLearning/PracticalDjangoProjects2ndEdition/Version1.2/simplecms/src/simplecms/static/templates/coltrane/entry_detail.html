@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>{{ object.title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body>
+   <h1>{{ object.title }}</h1>
+   <p>Published on {{ object.pub_date|date:"Y年Fj日" }}</p>
+   {{ object.body_html|safe }}
+ </body>
+</html>
