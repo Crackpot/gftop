@@ -1,5 +1,10 @@
 {% extends "coltrane/base_links.html" %}
 
+{% block title %}
+  {{ block.super }}
+  | {{ object.title }}
+{% endblock %}
+
 {% block content %}
   {{ object.description_html|safe }}
   <p><a href="{{ object.url }}">Visit site</a></p>
