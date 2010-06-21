@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>Links by tag "{{ tag }}"</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body>
+   <h1>Links by tag "{{ tag }}"</h1>
+   {% for link in object_list %}
+     <h2>{{ link.title }}</h2>
+     <p>Published on {{ link.pub_date|date:"Y年Fj日" }}</p>
+     {% if link.description_html %}
+       {{ link.description_html|safe }}
+     {% endif %}
+     <p><a href="{{ link.get_absolute_url }}">Read full link</a></p>
+   {% endfor %}
+ </body>
+</html>
