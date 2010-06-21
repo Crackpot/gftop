@@ -1,5 +1,10 @@
 {% extends "coltrane/base_entries.html" %}
 
+{% block title %}
+  {{ block.super }}
+  | {{ object.title }}
+{% endblock %}
+
 {% block content %}
   {{ object.body_html|safe }}
 {% endblock content %}
