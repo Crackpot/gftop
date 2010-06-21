@@ -1,27 +1,55 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>
-            我的站点 {% block title %}{% endblock %}
-        </title>
-        {% block basecss %}{% endblock %}
-        {% block css %}{% endblock %}
-        {% block basejs %}{% endblock %}
-        {% block js %}{% endblock %}
-    </head>
-    <body class="{% block bodyclass %}{% endblock %}">
-        <div id="header" >
-            {% block header %}
-            {% endblock %}
-        </div>
-        <div id="sidebar" >
-            {% block sidebar %}
-            {% endblock %}
-        </div>
-        <div id="content" >
-            {% block content %}
-            {% endblock %}
-        </div>
-    </body>
+ <head>
+  <title>My weblog {% block title %}{% endblock %}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body class="{% block bodyclass %}{% endblock %}">
+   <div id="header">
+     <h1 id="branding">My weblog</h1>
+   </div>
+
+   <div id="content">
+     {% block content %}
+     {% endblock %}
+   </div>
+
+   <div id="sidebar">
+     <h2>Navigation</h2>
+     <ul id="main-nav">
+       <li id="main-nav-entries">
+         <a href="{% url coltrane_entry_archive_index %}">Entries</a>
+         {% comment %}
+           <a href="/weblog/">Entries</a>
+         {% endcomment %}
+       </li>
+
+       <li id="main-nav-links">
+         <a href="{% url coltrane_link_archive_index %}">Links</a>
+         {% comment %}
+         <a href="/weblog/links/">Links</a>
+         {% endcomment %}
+       </li>
+
+       <li id="main-nav-categories">
+         <a href="/weblog/categories/">Categories</a>
+         {% comment %}
+         <a href="{% url coltrane_category_list %}">Categories</a>
+         {% endcomment %}
+       </li>
+
+       <li id="main-nav-tags">
+         <a href="/weblog/tags/">Tags</a>
+         {% comment %}
+         <a href="{% url coltrane_tag_list %}">Tags</a>
+         {% endcomment %}
+       </li>
+     </ul>
+
+     <h2>What is this?</h2>
+     {% block whatis %}
+     {% endblock %}
+   </div>
+ </body>
 </html>
