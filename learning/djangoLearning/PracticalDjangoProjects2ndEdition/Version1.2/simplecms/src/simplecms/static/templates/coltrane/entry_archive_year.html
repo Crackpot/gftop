@@ -2,14 +2,26 @@
 
 {% block title %}
   {{ block.super }}
-  | Entries Published in {{ year }}
+  | {{ year }}
 {% endblock %}
 
 {% block content %}
-   <h1>Entries Published in {{ year }}</h1>
-   <ul>
-     {% for month in date_list %}
-     <li><a href="/weblog/{{ year }}/{{ month|date:"m" }}/">{{ month|date:"F" }}</a></li>
-     {% endfor %}
-   </ul>
+  {% comment %}
+  <h1>Entries Published in {{ year }}</h1>
+  {% endcomment %}
+  <ul>
+    {% for month in date_list %}
+    <li>
+      {% comment %}
+      <a href="/weblog/{{ year }}/{{ month|date:"m" }}/">{{ month|date:"F" }}</a>
+      下面用数字来显示当年存在的月份
+      {% endcomment %}
+      <a href="{% url coltrane_entry_archive_month year,month|date:"m" %}">{{ month|date:"F" }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block whatis %}
+  <p>This is a list of months in {{ year }} in which I published entries in my blog.</p>
 {% endblock %}
