@@ -1,11 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
- "http://www.w3.org/TR/html4/loose.dtd">
-<html>
- <head>
-  <title>Entries for {{ slug }}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- </head>
- <body>
+{% extends "coltrane/base_categories.html" %}
+
+{% block title %}
+  {{ block.super }}
+  | Entries for {{ slug }}
+{% endblock %}
+
+{% block content %}
    <h1>Entries for {{ slug }}</h1>
    {% for entry in object_list %}
      <h2>{{ entry.title }}</h2>
@@ -17,5 +17,4 @@
      {% endif %}
      <p><a href="{{ entry.get_absolute_url }}">Read full entry</a></p>
    {% endfor %}
- </body>
-</html>
+{% endblock %}
