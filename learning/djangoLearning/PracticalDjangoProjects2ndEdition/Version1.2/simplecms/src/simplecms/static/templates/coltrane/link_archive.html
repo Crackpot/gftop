@@ -1,11 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
- "http://www.w3.org/TR/html4/loose.dtd">
-<html>
- <head>
-  <title>Links</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- </head>
- <body>
+{% extends "coltrane/base_links.html" %}
+
+{% block content %}
    <h1>Links</h1>
    {% for link in latest %}
      <h2>{{ link.title }}</h2>
@@ -17,5 +12,4 @@
      {% endif %}
      <p><a href="{{ link.get_absolute_url }}">Read full link</a></p>
    {% endfor %}
- </body>
-</html>
+{% endblock %}
