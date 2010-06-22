@@ -41,4 +41,20 @@
   {% else %}
     <p>This entry isn't part of any categories.</p>
   {% endif %}
+
+  {# 下面关于标签 #}
+  {% if object.tags %}
+    <p>This entry is tagged with
+      {% for tag in object.tags.split %}
+        <a href="/weblog/tags/entries/{{ tag }}/">{{ tag.title }}</a>
+        {% if forloop.last %}
+        {% else %}
+          {% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
+        {% endif %}
+      {% endfor %}
+      .
+    </p>
+  {% else %}
+    <p>This link does't have any tags.</p>
+  {% endif %}
 {% endblock %}
