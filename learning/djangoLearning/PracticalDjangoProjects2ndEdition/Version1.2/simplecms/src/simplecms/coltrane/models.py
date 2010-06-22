@@ -72,7 +72,7 @@ class Entry(models.Model):
     categories = models.ManyToManyField(Category)
     tags = TagField('标签', help_text="Separate tags with spaces.")
 
-    #live = LiveEntryManager() # 添加此句之后无法在admin中显示非发布的条目
+    live = LiveEntryManager() # 添加此句之后无法在admin中显示非发布的条目
     objects = models.Manager() # 模板中的变量所需
 
     class Meta:

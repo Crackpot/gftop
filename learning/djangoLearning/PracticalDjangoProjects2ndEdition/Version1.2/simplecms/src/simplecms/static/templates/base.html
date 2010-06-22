@@ -50,6 +50,21 @@
      <h2>What is this?</h2>
      {% block whatis %}
      {% endblock %}
+
+     {% comment %}
+       {% load coltrane_tags %}标签告诉django你想加载一个名为coltrane_tags的自定义标签库。当django看到这个，它就在所有安装的应用中寻找coltrane_tags.py存在的templatetags目录。
+     {% endcomment %}
+     {% load coltrane_tags %}
+     <h2>Latest entries in the weblog</h2>
+     <ul>
+       {% get_latest_entries %}
+       {% for entry in latest_entries %}
+         <li>
+           <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>,posted {{ entry.pub_date|timesince }} ago.
+         </li>
+       {% endfor %}
+     </ul>
+
    </div>
  </body>
 </html>
