@@ -51,16 +51,39 @@
      {% block whatis %}
      {% endblock %}
 
-     {% comment %}
-       {% load coltrane_tags %}标签告诉django你想加载一个名为coltrane_tags的自定义标签库。当django看到这个，它就在所有安装的应用中寻找coltrane_tags.py存在的templatetags目录。
-     {% endcomment %}
+     {# load coltrane_tags 标签告诉django你想加载一个名为coltrane_tags的自定义标签库。当django看到这个，它就在所有安装的应用中寻找coltrane_tags.py存在的templatetags目录。#}
      {% load coltrane_tags %}
+     {% comment %}
      <h2>Latest entries in the weblog</h2>
      <ul>
+
+       {# 只要tag库被加载，就可以调用get_latest_entries标签，它就会创建新的包含5条最新entry的latest_entries的模板变量 #}
        {% get_latest_entries %}
        {% for entry in latest_entries %}
          <li>
            <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>,posted {{ entry.pub_date|timesince }} ago.
+         </li>
+       {% endfor %}
+     </ul>
+     {% endcomment %}
+
+     {# 改进之后的模板标签 #}
+     <h2>Latest entries in the weblog</h2>
+     <ul>
+       {% get_latest_content coltrane.entry 5 as latest_entries %}
+       {% for entry in latest_entries %}
+         <li>
+           <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a>, posted {{ entry.pub_date|timesince }} ago.
+         </li>
+       {% endfor %}
+     </ul>
+
+     <h2>Latest links in the weblog</h2>
+     <ul>
+       {% get_latest_content coltrane.link 5 as latest_links %}
+       {% for link in latest_links %}
+         <li>
+           <a href="{{ link.get_absolute_url }}">{{ link.title }}</a>, posted {{ link.pub_date|timesince }} ago.
          </li>
        {% endfor %}
      </ul>
