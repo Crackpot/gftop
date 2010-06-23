@@ -17,6 +17,8 @@ urlpatterns = patterns('',
     (r'^weblog/links/', include('simplecms.coltrane.urls.links')),
     (r'^weblog/tags/', include('simplecms.coltrane.urls.tags')),
     (r'^weblog/', include('simplecms.coltrane.urls.entries')),
+    
+    (r'^comments/', include('django.contrib.comments.urls')),
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': settings.MEDIA_ROOT }),
