@@ -14,8 +14,8 @@ ADMINS = (
     ('高飞', 'gaofeitop@gmail.com'),
 )
 
-DELICIOUS_USER = 'gf_top'
-DELICIOUS_PASSWORD = 'hacker15263748'
+DELICIOUS_USER = ''
+DELICIOUS_PASSWORD = ''
 
 MANAGERS = ADMINS
 

@@ -10,10 +10,10 @@ from tagging.fields import TagField
 
 
 class Category(models.Model):
-    title = models.CharField('标题', max_length=250,
-            help_text='Maximum 250 characters.')
-    slug = models.SlugField(unique=True,
-            help_text="Suggested value automatically generated from title. Must be unique.")
+    title = models.CharField('标题', max_length = 250,
+            help_text = 'Maximum 250 characters.')
+    slug = models.SlugField(unique = True,
+            help_text = "Suggested value automatically generated from title. Must be unique.")
     description = models.TextField('描述')
 
     class Meta:
@@ -27,11 +27,11 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return "/weblog/categories/%s/" % self.slug
-    
+
     def live_entry_set(self):
         from simplecms.coltrane.models import Entry
         return self.entry_set.filter(status = Entry.LIVE_STATUS)
-    
+
 class LiveEntryManager(models.Manager):
     def get_query_set(self):
         return super(LiveEntryManager, self).get_query_set().filter(status = self.model.LIVE_STATUS)
@@ -48,29 +48,29 @@ class Entry(models.Model):
     )
 
     # 关键字段
-    title = models.CharField('标题', max_length=250,
-            help_text="Maximun 250 charcters.")
-    excerpt = models.TextField('摘录', blank=True,
-            help_text="A short summary of the entry. Optional.")
+    title = models.CharField('标题', max_length = 250,
+            help_text = "Maximun 250 charcters.")
+    excerpt = models.TextField('摘录', blank = True,
+            help_text = "A short summary of the entry. Optional.")
     body = models.TextField('正文')
-    pub_date = models.DateTimeField('发布日期', default=datetime.datetime.now)
+    pub_date = models.DateTimeField('发布日期', default = datetime.datetime.now)
 
     # markdown生成html代码
-    excerpt_html = models.TextField('摘录html', editable=False, blank=True) # editable为假时不在页面上显示
-    body_html = models.TextField('正文html', editable=False, blank=True)
+    excerpt_html = models.TextField('摘录html', editable = False, blank = True) # editable为假时不在页面上显示
+    body_html = models.TextField('正文html', editable = False, blank = True)
 
     # 元数据
     author = models.ForeignKey(User)
-    enable_comments = models.BooleanField('允许评论', default=True)
-    featured = models.BooleanField(default=True)
-    slug = models.SlugField(unique_for_date='pub_date',
-            help_text="Suggested value automatically generated form title. Must be unque.")
-    status = models.IntegerField('状态', choices=STATUS_CHOICES, default=LIVE_STATUS,
-            help_text="Only entries with live status will be publicly displayed.")
+    enable_comments = models.BooleanField('允许评论', default = True)
+    featured = models.BooleanField(default = True)
+    slug = models.SlugField(unique_for_date = 'pub_date',
+            help_text = "Suggested value automatically generated form title. Must be unque.")
+    status = models.IntegerField('状态', choices = STATUS_CHOICES, default = LIVE_STATUS,
+            help_text = "Only entries with live status will be publicly displayed.")
 
     # 分类
     categories = models.ManyToManyField(Category)
-    tags = TagField('标签', help_text="Separate tags with spaces.")
+    tags = TagField('标签', help_text = "Separate tags with spaces.")
 
     live = LiveEntryManager() # 添加此句之后无法在admin中显示非发布的条目
     objects = models.Manager() # 模板中的变量所需
@@ -84,7 +84,7 @@ class Entry(models.Model):
         return self.title
 
     # 重写此model的save方法
-    def save(self, force_insert=False, force_update=False):
+    def save(self, force_insert = False, force_update = False):
         self.body_html = markdown(self.body)
         if self.excerpt:
             # 填写了摘录
@@ -110,25 +110,25 @@ class Entry(models.Model):
 
 class Link(models.Model):
     # 元数据
-    enable_comments = models.BooleanField('允许评论', default=True)
+    enable_comments = models.BooleanField('允许评论', default = True)
     post_elsewhere = models.BooleanField('发布到Delicious',
-            default=True,
-            help_text='如果选中,此链接将会发布到weblog和delcious帐户中。')
+            default = False,
+            help_text = '如果选中,此链接将会发布到weblog和delcious帐户中。')
     posted_by = models.ForeignKey(User)
-    pub_date = models.DateTimeField('发布时间', default=datetime.datetime.now)
-    slug = models.SlugField(unique_for_date='pub_date',
+    pub_date = models.DateTimeField('发布时间', default = datetime.datetime.now)
+    slug = models.SlugField(unique_for_date = 'pub_date',
             help_text='Must be unique for the publication date.')
-    title = models.CharField('标题', max_length=250)
+    title = models.CharField('标题', max_length = 250)
 
     # The actual link bits.
-    description = models.TextField('描述', blank=True)
-    description_html = models.TextField('描述html', editable=False, blank=True)
-    via_name = models.CharField('Via', max_length=250, blank=True,
-            help_text='The name of the person whose site you spotted the link on. Optional.')
-    via_url = models.URLField('Via URL', blank=True,
-            help_text='The URL of the site where you spotted the link. Optional.')
+    description = models.TextField('描述', blank = True)
+    description_html = models.TextField('描述html', editable = False, blank = True)
+    via_name = models.CharField('Via', max_length = 250, blank = True,
+            help_text = 'The name of the person whose site you spotted the link on. Optional.')
+    via_url = models.URLField('Via URL', blank = True,
+            help_text = 'The URL of the site where you spotted the link. Optional.')
     tags = TagField('标签')
-    url = models.URLField(unique=True, verify_exists=False) # 去除验证有效性
+    url = models.URLField(unique = True, verify_exists = False) # 去除验证有效性
 
     class Meta:
         ordering = ['-pub_date']
@@ -138,7 +138,7 @@ class Link(models.Model):
     def __unicode__(self):
         return self.title
 
-    def save(self, force_insert=False, force_update=False):
+    def save(self, force_insert = False, force_update = False):
         if not self.id and self.post_elsewhere:
             import pydelicious
             from django.utils.encoding import smart_str
