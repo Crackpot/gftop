@@ -2,6 +2,8 @@
 # Django settings for simplecms project.
 import os
 
+AKISMET_API_KEY = 'b8ce6230a51f'
+
 # 获取项目路径
 PATH = os.getcwd()
 if PATH[-1] == '/':
