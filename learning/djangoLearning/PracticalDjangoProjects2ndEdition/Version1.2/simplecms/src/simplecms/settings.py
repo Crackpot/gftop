@@ -125,7 +125,7 @@ INSTALLED_APPS = (
     'simplecms.search',
     'simplecms.coltrane',
     'tagging',
-    'django.contrib.comments',
+    'django.contrib.comments', # 评论，创建表
     'django.contrib.markup',
     #'south', # migration
 )

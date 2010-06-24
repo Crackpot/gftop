@@ -1,7 +1,8 @@
 #coding=utf8
 from django import template
 from django.db.models import get_model
-from simplecms.coltrane.models import Entry
+
+#from simplecms.coltrane.models import Entry
 
 """
 # 原先写的简单标签
