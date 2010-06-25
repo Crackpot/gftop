@@ -3,13 +3,21 @@ import settings
 from django.conf.urls.defaults import *
 from simplecms import views
 from simplecms.search import views as sv
+from simplecms.coltrane.feeds import LatestEntriesFeed
 
 from django.contrib import admin
 admin.autodiscover()
 
+feeds = { 'entries': LatestEntriesFeed }
+
 urlpatterns = patterns('',
     # Example:
     # (r'^simplecms/', include('simplecms.foo.urls')),
+    
+    (r'^feeds/(?P<url>.*)/$',
+     'django.contrib.syndication.views.feed',
+     { 'feed_dict': feeds }),
+     
     (r'^$', views.index),
     (r'^search/$', sv.search),
     
