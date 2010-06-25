@@ -27,7 +27,7 @@ def do_latest_content(parser, token):
         raise template.TemplateSyntaxError("First argument to 'get_latest_content' must be an 'application name'.'model name' string")
     model = get_model(*model_args)
     # 看看传递过来的参数包含什么内容
-    print 'parser => %s\n token => %s\n bits => %s\n model_args => %s\n model => %s\n' %(parser, token, bits, model_args, model)
+    # print 'parser => %s\n token => %s\n bits => %s\n model_args => %s\n model => %s\n' %(parser, token, bits, model_args, model)
     if model is None:
         raise template.TemplateSyntaxError("'get_latest_content' tag got an invalid model: %s" % bits[1])
     return LatestContentNode(model, bits[2], bits[4])

@@ -22,7 +22,7 @@
 
   {% get_comment_list for object as comment_list %}{# 评论列表 #}
 
-  {% for comment in comment_list %} {# 遍历评论列表 #}
+  {% for comment in comment_list reversed %} {# 逆序遍历公开评论列表 #}
     <p>On {{ comment.submit_date|date:"Y年Fj日" }},
     {{ comment.name }} said:</p>
 
