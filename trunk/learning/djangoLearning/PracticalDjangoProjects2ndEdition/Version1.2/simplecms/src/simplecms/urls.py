@@ -3,12 +3,13 @@ import settings
 from django.conf.urls.defaults import *
 from simplecms import views
 from simplecms.search import views as sv
-from simplecms.coltrane.feeds import LatestEntriesFeed
+from simplecms.coltrane.feeds import CategoryFeed, LatestEntriesFeed 
 
 from django.contrib import admin
 admin.autodiscover()
 
-feeds = { 'entries': LatestEntriesFeed }
+feeds = {'entries': LatestEntriesFeed,
+         'categories': CategoryFeed}
 
 urlpatterns = patterns('',
     # Example:
