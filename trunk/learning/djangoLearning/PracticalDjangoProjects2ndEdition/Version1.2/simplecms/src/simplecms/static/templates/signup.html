@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>Sign up for an account</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body>
+   <h1>Sign up for an account</h1>
+   <p>
+     Use the form below to register for your new account; all fields are required.
+   </p>
+   <form method="post" action="">
+     <p>
+       {% if form.non_field_errors %}
+         <span class="error">{{ form.non_field_errors|join:", " }}</span>
+       {% endif %}
+     </p>
+
+     {# username #}
+     <p>
+       {% if form.username.errors %}
+         <span class="error">{{ form.username.errors|join:", " }}</span>
+       {% endif %}
+     </p>
+     <p>
+       <label for="id_useranme">Username:</label>
+       {{ form.username }}
+     </p>
+
+     {# email #}
+     <p>
+       {% if form.email.errors %}
+         <span class="error">{{ form.email.errors|join:", " }}</span>
+       {% endif %}
+     </p>
+     <p>
+       <label for="id_email">Your e-mail address:</label>
+       {{ form.email }}
+     </p>
+
+     {# password1 #}
+     <p>
+       {% if form.password1.errors %}
+         <span class="error">{{ form.password1.errors|join:", " }}</span>
+       {% endif %}
+     </p>
+     <p>
+       <label for="id_password1">Password:</label>
+       {{ form.password1 }}
+     </p>
+
+     {# password2 #}
+     <p>
+       {% if form.password2.errors %}
+         <span class="error">{{ form.password2.errors|join:", " }}</span>
+       {% endif %}
+     </p>
+     <p>
+       <label for="id_password2">Password (again, to catch typos):</label>
+       {{ form.password2 }}
+     </p>
+
+     {# submit #}
+     <p>
+       <input type="submit" value="Submit">
+     </p>
+   </form>
+ </body>
+</html>

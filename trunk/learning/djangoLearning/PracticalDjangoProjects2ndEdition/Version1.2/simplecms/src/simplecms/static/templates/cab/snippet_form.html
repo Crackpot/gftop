@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>
+    {% if add %}
+      Add a
+    {% else %}
+      Edit your
+    {% endif %}
+    snippet
+  </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body>
+   <h1>
+     {% if add %}
+       Add a
+     {% else %}
+       Edit your
+     {% endif %}
+     snippet
+   </h1>
+   <p>
+     Use the form below to 
+     {% if add %}
+       Add a
+     {% else %}
+       Edit your
+     {% endif %}
+     snippet; all fields are required.
+   </p>
+   <form method="post" action="">
+     {% comment %}
+     {{ form.as_table }}
+     {{ form.as_ul }}
+     {% endcomment %}
+     {{ form.as_p }}
+     <p>
+       <input type="submit" value="Submit">
+     </p>
+   </form>
+ </body>
+</html>
