@@ -27,6 +27,13 @@ urlpatterns = patterns('',
     (r'^weblog/tags/', include('simplecms.coltrane.urls.tags')),
     (r'^weblog/', include('simplecms.coltrane.urls.entries')),
     
+    (r'^snippets/', include('simplecms.cab.urls.snippets')),
+    (r'^languages/', include('simplecms.cab.urls.languages')),
+    (r'^popular/', include('simplecms.cab.urls.popular')),
+    
+    (r'^signup/', 'simplecms.views.signup'),
+
+    
     (r'^comments/', include('django.contrib.comments.urls')),
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
