@@ -1,12 +1,16 @@
 {% extends "cab/base_cab.html" %}
 
 {% block title %}
-  Snippets
+  {{ block.super }}
+  | Languages
 {% endblock %}
 
-{% block content %}
+{% block bodyclass %}language{% endblock %}
 
+{% block content %}
+  <h1>Snippets in language "{{ language }}"</h1>
   {% if object_list %}
+    {# 检索到结果 #}
     {% for snippet in object_list %}
       <h2>{{ snippet.title }}</h2>
       <p>
@@ -14,27 +18,21 @@
         {{ snippet.author }}<br/>
 
         <b>Published on</b>
-        {{ snippet.pub_date|date:"Y年Fj日" }}<br>
+        {{ snippet.pub_date|date:"Y年Fj日" }}<br/>
 
         <b>Updated on</b>
         {{ snippet.updated_date|date:"Y年Fj日" }}<br/>
 
         <b>Description:</b>
-        {{ snippet.description_html|safe }}<br/>
+        {{ snippet.description_html|safe }}
 
         <a href="{{ snippet.get_absolute_url }}">Read full snippet</a>
       </p>
     {% endfor %}
+  {% else %}
+    {# 未检索到结果 #}
+    <p>
+      There is no any snippet in language "{{ language }}"
+    </p>
   {% endif %}
-
-  <p>
-    {% if has_previous %}
-      <a href="?page={{ previous }}">第{{ previous }}页</a>
-    {% endif %}
-    第{{ page }}页
-    {% if has_next %}
-      <a href="?page={{ next }}">第{{ next }}页</a>
-    {% endif %}
-  </p>
-
 {% endblock %}

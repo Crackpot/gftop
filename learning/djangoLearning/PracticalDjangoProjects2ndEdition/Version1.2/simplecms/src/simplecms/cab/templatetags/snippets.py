@@ -32,5 +32,6 @@ class IfBookmarkedNode(template.Node):
             return self.nodelist_true.render(context)
         else:
             return self.nodelist_false.render(context)
+        
 register = template.Library()
 register.tag('if_bookmarked', do_if_bookmarked)

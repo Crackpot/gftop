@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>
+    {% block title %}
+      Snippets
+    {% endblock %}
+  </title>
+
+  {% block css %}
+  {% endblock %}
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ </head>
+ <body class="{% block bodyclass %}{% endblock %}">
+
+   <div id="header">
+     <h1 id="branding">Snippets</h1>
+   </div>
+
+   <div id="content">
+     {% block content %}
+     {% endblock %}
+   </div>
+
+   {% comment %}
+   <div id="sidebar">
+     <h2>Navigation</h2>
+     <ul id="main-nav">
+       <li id="main-nav-entries">
+         <a href="{% url coltrane_entry_archive_index %}">Entries</a>
+       </li>
+       <li id="main-nav-snippets">
+       </li>
+     </ul>
+   </div>
+   {% endcomment %}
+
+ </body>
+</html>

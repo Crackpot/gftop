@@ -3,7 +3,10 @@ from django.conf.urls.defaults import *
 from simplecms.cab.views import bookmarks
 
 urlpatterns = patterns('',
-    url(r'^$', bookmarks.user_bookmarks, name = 'cab_user_bookmarks'),
+    url(r'^$',
+        bookmarks.user_bookmarks,
+        name = 'cab_user_bookmarks'),
+        
     url(r'^add/(?P<snippet_id>\d+)/$',
         bookmarks.add_bookmark,
         name = 'cab_bookmark_add'),

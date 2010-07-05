@@ -1,6 +1,6 @@
 #coding=utf8
 from django.http import HttpResponseForbidden, HttpResponseRedirect
-from django.forms import ModelForm
+from django.forms import ModelForm, Textarea
 from django.shortcuts import get_object_or_404, render_to_response
 from django.contrib.auth.decorators import login_required
 from simplecms.cab.models import Snippet
@@ -9,6 +9,8 @@ class SnippetForm(ModelForm):
     class Meta:
         model = Snippet
         exclude = ['author']
+        widgets = {'code': Textarea(attrs={'cols': 80, 'rows': 10})}
+
         
 def add_snippet(request):
     if request.method == 'POST':
@@ -23,6 +25,7 @@ def add_snippet(request):
     return render_to_response('cab/snippet_form.html',
                               {'form': form, 'add': True})
 add_snippet = login_required(add_snippet)
+
 
 def edit_snippet(request, snippet_id):
     snippet = get_object_or_404(Snippet, pk = snippet_id)

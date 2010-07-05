@@ -18,6 +18,14 @@
    <div id="sidebar">
      <h2>Navigation</h2>
      <ul id="main-nav">
+
+       <li id="main-nav-snippets">
+         <a href="{% url cab_snippet_list %}">Snippets</a>
+         {% comment %}
+           <a href="/weblog/">Entries</a>
+         {% endcomment %}
+       </li>
+
        <li id="main-nav-entries">
          <a href="{% url coltrane_entry_archive_index %}">Entries</a>
          {% comment %}
