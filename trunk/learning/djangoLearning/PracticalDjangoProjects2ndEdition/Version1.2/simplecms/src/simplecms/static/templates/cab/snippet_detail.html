@@ -1,0 +1,45 @@
+{% extends "cab/base_cab.html" %}
+
+{% block title %}
+  {{ block.super }}
+  | {{ object.title }}
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" type="text/css" href="/css/cab/pygments/pygments_colorful.css">
+{% endblock %}
+
+{% block content %}
+  <h2>{{ object.title }}</h2>
+  <p>
+    <b>Language:</b>
+    {{ object.language }}<br/>
+
+    <b>Author:</b>
+    {{ object.author }}<br/>
+
+    <b>Published on:</b>
+    {{ object.pub_date|date:"Y年Fj日" }}<br/>
+
+    <b>Updated on:</b>
+    {{ object.updated_date|date:"Y年Fj日" }}<br/>
+
+    <b>Description:</b>
+    {{ object.description_html|safe }}<br/>
+
+    <b>Code:</b>
+    {{ object.highlighted_code|safe }}<br/>
+  </p>
+
+  {# 下面关于标签 #}
+  {% if object.tags %}
+    <p>
+      This snippet is tagged with
+      {% for tag in object.tags.split %}
+        <a href="/snippets/tags/{{ tag }}/">{{ tag.title|lower }}</a>
+      {% endfor %}
+    </p>
+  {% endif %}
+{% endblock %}
+
+

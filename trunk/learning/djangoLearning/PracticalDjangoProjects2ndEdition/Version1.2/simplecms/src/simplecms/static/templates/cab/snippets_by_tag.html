@@ -1,0 +1,28 @@
+{% extends "cab/base_tags.html" %}
+
+{% block title %}
+  {{ block.super }}
+  | Snippets by tag {{ tag }}
+{% endblock %}
+
+{% block content %}
+  <h1>Snippets by tag {{ tag }}</h1>
+  {% for snippet in object_list %}
+    <h2>{{ snippet.title }}</h2>
+    <p>
+      <b>Author:</b>
+      {{ snippet.author }}<br/>
+
+      <b>Published on</b>
+      {{ snippet.pub_date|date:"Y年Fj日" }}<br/>
+
+      <b>Updated on</b>
+      {{ snippet.updated_date|date:"Y年Fj日" }}<br/>
+
+      <b>Description:</b>
+      {{ snippet.description_html|safe }}
+
+      <a href="{{ snippet.get_absolute_url }}">Read full snippet</a>
+    </p>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "cab/base_cab.html" %}
+
+{% block title %}
+  {{ block.super }}
+  | Languages
+{% endblock %}
+
+{% block bodyclass %}languages{% endblock %}
+
+{% block content %}
+  <h1>Languages</h1>
+  {% if object_list %}
+    {% for language in object_list %}
+      <h2>{{ language.name }}</h2>
+      <p>
+        <b>Language code:</b>
+        {{ language.language_code }}<br>
+
+        <b>Mime type:</b>
+        {{ language.mime_type }}<br>
+      </p>
+      <a href="{{language.get_absolute_url}}">Read language details</a>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

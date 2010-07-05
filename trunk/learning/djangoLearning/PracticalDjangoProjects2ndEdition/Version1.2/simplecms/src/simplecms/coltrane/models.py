@@ -24,6 +24,11 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.title
+    
+    def clean(self):
+        self.title = self.title.strip()
+        self.slug = self.slug.strip()
+        self.description = self.description.strip()
 
     def get_absolute_url(self):
         return "/weblog/categories/%s/" % self.slug
@@ -82,6 +87,13 @@ class Entry(models.Model):
 
     def __unicode__(self):
         return self.title
+    
+    def clean(self):
+        self.title = self.title.strip()
+        self.excerpt = self.excerpt.strip()
+        self.body = self.body.strip()
+        self.slug = self.slug.strip()
+        self.tags = self.tags.strip()
 
     # 重写此model的save方法
     def save(self, force_insert = False, force_update = False):
@@ -137,6 +149,15 @@ class Link(models.Model):
 
     def __unicode__(self):
         return self.title
+    
+    def clean(self):
+        self.title = self.title.strip()
+        self.tags = self.tags.strip()
+        self.slug = self.slug.strip()
+        self.description = self.description.strip()
+        self.via_name = self.via_name.strip()
+        self.via_url = self.via_url.strip()
+        self.url = self.url.strip()
 
     def save(self, force_insert = False, force_update = False):
         if not self.id and self.post_elsewhere:

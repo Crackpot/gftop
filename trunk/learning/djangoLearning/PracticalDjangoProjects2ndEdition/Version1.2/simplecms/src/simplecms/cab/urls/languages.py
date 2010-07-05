@@ -12,6 +12,7 @@ urlpatterns = patterns('',
         object_list,
         language_info,
         name = 'cab_language_list'),
+
     url(r'^(?P<slug>[-\w]+)/$',
         language_detail,
         name = 'cab_language_detail'),
