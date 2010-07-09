@@ -1,6 +1,21 @@
-#Wed Jun 23 17:04:59 CST 2010
+#Sun Jul 04 20:45:55 CST 2010
 eclipse.preferences.version=1
+encoding//src/simplecms/accounts/forms.py=utf8
+encoding//src/simplecms/cab/admin.py=utf8
+encoding//src/simplecms/cab/managers.py=utf8
+encoding//src/simplecms/cab/models.py=utf8
+encoding//src/simplecms/cab/templatetags/snippets.py=utf8
+encoding//src/simplecms/cab/urls/bookmarks.py=utf8
+encoding//src/simplecms/cab/urls/languages.py=utf8
+encoding//src/simplecms/cab/urls/popular.py=utf8
+encoding//src/simplecms/cab/urls/snippets.py=utf8
+encoding//src/simplecms/cab/urls/tags.py=utf8
+encoding//src/simplecms/cab/views/bookmarks.py=utf8
+encoding//src/simplecms/cab/views/languages.py=utf8
+encoding//src/simplecms/cab/views/popular.py=utf8
+encoding//src/simplecms/cab/views/snippets.py=utf8
 encoding//src/simplecms/coltrane/admin.py=utf8
+encoding//src/simplecms/coltrane/feeds.py=utf8
 encoding//src/simplecms/coltrane/models.py=utf8
 encoding//src/simplecms/coltrane/templatetags/coltrane_tags.py=utf8
 encoding//src/simplecms/coltrane/urls/__init__.py=utf8
@@ -13,4 +28,6 @@ encoding//src/simplecms/search/admin.py=utf8
 encoding//src/simplecms/search/models.py=utf8
 encoding//src/simplecms/search/views.py=utf8
 encoding//src/simplecms/settings.py=utf8
+encoding//src/simplecms/static/css/cab/pygments/generatePygmentsCss.py=utf8
 encoding//src/simplecms/urls.py=utf8
+encoding//src/simplecms/views.py=utf8

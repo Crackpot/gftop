@@ -37,9 +37,17 @@
       This snippet is tagged with
       {% for tag in object.tags.split %}
         <a href="/snippets/tags/{{ tag }}/">{{ tag.title|lower }}</a>
-      {% endfor %}
+        {% if forloop.last %}
+        {% else %}
+          {% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
+        {% endif %}
+      {% endfor %}.
     </p>
   {% endif %}
+
+  <p>This snippet is written in <a href="{{ object.language.get_absolute_url }}">{{ object.language }}</a>.</p>
 {% endblock %}
+
+
 
 

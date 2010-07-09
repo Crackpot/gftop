@@ -1,0 +1,131 @@
+{% load i18n themes%}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+	<title> {% block title %}title{% endblock %} - {{SITE_NAME}}</title>
+	{% block meta %}
+	<meta http-equiv="content-type" content="{% block meta.content-type %}text/html;charset=UTF-8{% endblock meta.content-type %}" />
+	<meta name="description" content="{% block meta.description %}{{ SITE_NAME }}{% endblock meta.description %}" />
+	<meta name="keywords" content="{% block meta.keywords %}DDTCMS{% endblock meta.keywords %}" />
+	<meta name="robots" content="{% block meta.robots %}index,follow{% endblock meta.robots %}" />
+	<meta name="generator" content="django" />
+	<meta name="copyright" content="http://www.{{SITE_NAME}}/" />	
+	{% endblock meta %}
+
+	{% block css %}
+	{% block css.shared %}<link href="{{ MEDIA_URL }}css/default.css" rel="stylesheet" media="screen" type="text/css" />{% endblock css.shared %}
+	{% block css.custom %}<link href="{{ MEDIA_URL }}css/forum.css" rel="stylesheet" media="screen" type="text/css" />{% endblock css.custom %}
+	{% endblock css%}
+
+	{% block js %}
+	{% block js.shared %}{% endblock js.shared %}
+	{% block js.custom %}{% endblock js.custom %}
+	{% endblock js%}
+</head>
+<body{% block bodyonload %}{% endblock bodyonload %}>
+    <div id="wrapper">
+	<div id="topwrapper">
+	  <div id="mininav">
+        <div>    
+            <div id="notice">
+                ggg
+            </div>
+            
+            <div id="tool">
+                ★{{SITE_NAME}}
+	            	 
+	            {% if user.is_authenticated %}
+	            	<a href="{% url profile_overview %}">{{user.username}}'s {% trans "Profile" %}</a> | <a href="{% url logout %}">{% trans "Logout" %}</a>
+	            	{% else %}
+			        <span class="highlight">
+			        	<a href="{% url profile_overview %}" title="{% trans "Forums" %}">{% trans "Login" %}</a> 
+			        	<a href="{% url signup %}" title="{% trans "Welcome to join us" %}">{% trans "Register" %}</a></span>
+						<a href="{% url password_reset %}" title="请和管理员联系" style="cursor:help;">{% trans "Forget Password" %}</a>
+	            	{% endif %} 	
+	           
+            
+	        </div>
+	    </div>
+	</div>
+  
+
+		<div id="header">
+		    
+		    <div id=''> 
+	            <a href="/"  target=_parent>
+                <img src="{{MEDIA_URL}}images/logo.gif"></a>
+                <p><a href="/" title="首页"></a> <strong>论坛</strong> | <span><em>互动交流,信息共享大型综合性社区</em></span></p>
+		    </div>
+		    <div class="clear"></div>
+				
+            
+		
+		
+
+    		<!-- begin: main navigation #nav -->
+    		<div id="nav"  class="top-menu">
+    
+    			<ul class="navbar-one">
+    			{% if user.is_authenticated %}
+                	<li><a href="{% url profile_overview %}">{{user.username}}'s {% trans "Profile" %}</a></li>  
+                	<li><a href="{% url logout %}">{% trans "Logout" %}</a></li>
+    	        {% else %}
+    	        	<li><a href="{% url profile_overview %}" title="{% trans "Forums" %}">{% trans "Login" %}</a> </li>
+    	        	<li><a href="{% url signup %}" title="{% trans "Welcome to join us" %}">{% trans "Register" %}</a></li>
+    	        	<li><a href="{% url profile_overview %}" title="{% trans "Members" %}">{% trans "Member" %}</a></li> 
+    	        	<li><a href="{% url profile_overview %}" title="{% trans "Seach Forum" %}">{% trans "Search" %}</a></li> 
+            	    <li><a href="/faq/" style="cursor:help;">{% trans "help" %}</a></li>
+            	
+    	        {% endif %} 
+    					
+    			</ul>
+    
+    		</div><!-- end: main navigation #nav -->
+		</div>
+		
+		
+		<div id="breadcrumbs">
+		    <span style='float: right;'>欢迎您的光临！</span> 
+		    您的足迹: <a id="forumlist" href="{% url forum_index %}" class="dropmenu" onmouseover="showMenu(this.id)">{% trans "Forums" %}</a> {% block breadcrumbs %}{% endblock %}
+		</div>
+		
+	</div><!--end:topwrapper-->
+	
+	<div id='midwrapper'><!--begin:midwrapper-->
+	    
+	    <div id="pagebody"><!--begin:pagebody-->
+	    {% block pagebody %}
+
+        	
+        	<div id="forumbody" class="pagewrapper"><!--begin:forumbody-->
+                <div class="box-top"><h1>{% block maintitle %}大标题{% endblock %}</h1></div>
+                    <div class="box">
+                    {% block content %} {% endblock content%}
+                    </div>                
+                <div class="box-bot"><span></span></div>        	   
+        	</div><!--end:forumbody-->
+        	
+        	
+	    {% endblock pagebody %}
+	    </div><!--end:pagebody-->
+	    
+	    <div id="extended_content"  class="pagewrapper">
+
+			  {% block extended_content %}
+			  {% endblock extended_content%}
+
+		</div>
+		
+		{% block extended_page %}
+	    {% endblock extended_page %}
+
+	</div><!--end:midwrapper-->
+	
+	<div id='botmwrapper'><!--begin:botmwrapper-->
+	    <!-- begin: #footer -->
+		{% block footer %}{% include "footer.html" %}{% endblock footer%}
+		<!-- end: #footer -->
+	</div><!--end:botmwrapper-->
+    </div>
+</body>
+</html>
