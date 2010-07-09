@@ -1,0 +1,118 @@
+﻿{% load i18n %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+	<title> {% block title %}title{% endblock %} - {{SITE_NAME}}</title>
+	{% block meta %}
+	<meta http-equiv="content-type" content="{% block meta.content-type %}text/html;charset=UTF-8{% endblock meta.content-type %}" />
+	<meta name="description" content="{% block meta.description %}{{ SITE_NAME }}{% endblock meta.description %}" />
+	<meta name="keywords" content="{% block meta.keywords %}{{ SITE_NAME }} {% endblock meta.keywords %}" />
+	<meta name="robots" content="{% block meta.robots %}index,follow{% endblock meta.robots %}" />
+	<meta name="generator" content="django" />
+	<meta name="copyright" content="http://www.{{SITE_NAME}}/" />	
+	<link rel="shortcut icon" href="http://localhost/favicon.ico" />
+	{% endblock meta %}
+
+	{% block css %}
+	{% block css.shared %}	
+	<link href="{{ MEDIA_URL }}css/default.css" rel="stylesheet" media="screen" type="text/css" />
+	
+	{% endblock css.shared %}
+	{% block css.custom %}	{% endblock css.custom %}
+	{% endblock css%}
+
+	{% block js %}
+	{% block js.shared %}
+	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.2.6.min.js"></script>
+	
+	{% endblock js.shared %}
+	{% block js.custom %}{% endblock js.custom %}
+	{% endblock js%}
+	
+	{% block rss %}
+	{% block rss.shared %}	{% endblock rss.shared%}	
+	{% block rss.custom %}	{% endblock rss.custom%}
+	{% endblock rss%}
+	
+	{% block head.extra %}{% endblock head.extra%}
+</head>
+<body{% block bodyonload %}{% endblock bodyonload %}>
+    <div id="wrapper">
+	<div id="topwrapper">
+	{% block header %}{% include "header.html" %}{% endblock header%}
+	</div><!--end:topwrapper-->
+	
+	<div id='midwrapper'><!--begin:midwrapper-->
+	    
+	    <div id="reserved_banner"><!--begin:reserved_banner-->
+
+                <img src="{{ MEDIA_URL }}images/banner/banner-12.jpg">
+
+        </div><!--end:reserved_banner-->
+	    
+	    
+	    <div id="pagebody"><!--begin:pagebody-->
+	    {% block pagebody %}
+        	<div id="sidebar"><!--begin:sidebar-->
+        	    <div class="box-top"><h1>{% trans "SideBar" %}</h1></div>
+                    <div class="box">
+            	    {% block sidebar %} {% endblock sidebar%}
+        	        </div>
+                <div class="box-bot"><span></span></div>
+                
+                <div class="box-top"><h1>{% trans "SideBar" %}</h1></div>
+                    <div class="box">
+            	               <div>
+                                    <div class="box-top1"><span></span></div>
+                                    <div class="box1">
+                                        <h2>{% trans "Support" %}</h2>
+                                        <ul>
+                                            <li><a href="http://www.python.org"><img src="{{ MEDIA_URL }}images/support/python-powered.png" alt="python"/></a></li>
+                                            <li><a href="http://www.djangoproject.com"><img src='{{ MEDIA_URL }}images/support/a-DJANGO-site.gif' alt='Site based on Django Web Framework'/></a></li>
+                                            <li><a href="http://code.google.com/p/ddtcms/"><img src='{{ MEDIA_URL }}images/support/ddtcms-powered.jpg' alt='Site powered by DDTCMS'/></a></li>
+                                            <li><a href="http://blog.csdn.net/huyoo/"><img src='{{ MEDIA_URL }}images/support/csdn-huyoo.jpg' alt="Huyoo353's Technical Blog for Support"/></a></li>
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="box-bot"><span></span></div>
+                                </div>
+                                <div class="clear"></div> 
+        	        </div>
+                <div class="box-bot"><span></span></div>
+                
+        	</div><!--end:sidebar-->
+        	
+        	<div id="mainbody"><!--begin:mainbody-->
+                <div class="box-top"><h1>{% block maintitle %}大标题{% endblock %}</h1></div>
+                    <div class="box">
+                    {% block content %} {% endblock content%}
+                    </div>                
+                <div class="box-bot"><span></span></div>        	   
+        	</div><!--end:mainbody-->
+        	
+        	{% block extended_content %}
+	        {% endblock extended_content%}
+	
+	    {% endblock pagebody %}
+	    </div><!--end:pagebody-->
+	    
+	    {% block extended_page %}
+	    {% endblock extended_page %}
+	    
+
+	</div><!--end:midwrapper-->
+	
+	<div id='botmwrapper'><!--begin:botmwrapper-->
+	{% block footer %}{% include "footer.html" %}{% endblock footer%}
+	</div><!--end:botmwrapper-->
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

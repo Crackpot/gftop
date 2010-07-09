@@ -20,14 +20,14 @@ def delete_bookmark(request, snippet_id):
     if request.method == 'POST':
         snippet = get_object_or_404(Snippet, pk = snippet_id)
         Bookmark.objects.filter(user__pk = request.user.id,
-                                snippet__pk = snippet.id).delete()
+                snippet__pk = snippet.id).delete()
         return HttpResponseRedirect(snippet.get_absolute_url())
     else:
         return render_to_response('cab/confirm_bookmark_delete.html',
-                                  {'snippet': snippet})
+                {'snippet': snippet})
 delete_bookmark = login_required(delete_bookmark)
 
 def user_bookmarks(request):
     return object_list(queryset = Bookmark.objects.filter(user__pk = request.user.id),
-                       template_name = 'cab/user_bookmarks.html',
-                       paginate_by = 20)
+            template_name = 'cab/user_bookmarks.html',
+            paginate_by = 20)

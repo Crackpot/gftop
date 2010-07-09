@@ -13,7 +13,7 @@ def authors(Book):
     return str(Book.authors.all())
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', authors , 'publisher', 'num_pages' , 'publication_date')
+    list_display = ('title', 'get_authors' , 'publisher', 'num_pages' , 'publication_date')
     list_filter = ('publication_date', 'publisher')
     # 搜索域
     search_fields = ('title', 'publisher__name') # 通过外键找到Publisher的name
