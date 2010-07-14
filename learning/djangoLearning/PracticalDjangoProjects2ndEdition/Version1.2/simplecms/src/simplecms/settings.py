@@ -1,13 +1,12 @@
 #coding=utf8
 # Django settings for simplecms project.
 import os
+from datetime import datetime
 
 AKISMET_API_KEY = 'b8ce6230a51f'
 
 # 获取项目路径
-PATH = os.getcwd()
-if PATH[-1] == '/':
-    PATH = PATH[:-1]
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -57,12 +56,22 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = PATH + '/static'
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
+
+STATIC_CSS = os.path.join(MEDIA_ROOT, 'css')
+STATIC_JS = os.path.join(MEDIA_ROOT, 'js')
+STATIC_IMAGE = os.path.join(MEDIA_ROOT, 'images')
+STATIC_THEMES = os.path.join(MEDIA_ROOT, 'themes')
+STATIC_UPLOAD = os.path.join(MEDIA_ROOT, 'upload')
+STATIC_EDITOR = os.path.join(MEDIA_ROOT, 'editor')
+
+PHOTOLOGUE_DIR = os.path.join(MEDIA_ROOT, 'upload', 'photos', '%s' % datetime.now().strftime("%Y/%m/%d"))
+ATTACHMENT_DIR = os.path.join(MEDIA_ROOT, 'upload', 'attachments', '%s' % datetime.now().strftime("%Y/%m/%d"))
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -112,7 +121,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    MEDIA_ROOT + '/templates',
+    os.path.join(PROJECT_DIR, 'templates'),
 )
 
 INSTALLED_APPS = (
