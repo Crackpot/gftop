@@ -1,4 +1,4 @@
-#Sun Jul 04 20:45:55 CST 2010
+#Wed Jul 14 22:42:20 CST 2010
 eclipse.preferences.version=1
 encoding//src/simplecms/accounts/forms.py=utf8
 encoding//src/simplecms/cab/admin.py=utf8
@@ -28,6 +28,5 @@ encoding//src/simplecms/search/admin.py=utf8
 encoding//src/simplecms/search/models.py=utf8
 encoding//src/simplecms/search/views.py=utf8
 encoding//src/simplecms/settings.py=utf8
-encoding//src/simplecms/static/css/cab/pygments/generatePygmentsCss.py=utf8
 encoding//src/simplecms/urls.py=utf8
 encoding//src/simplecms/views.py=utf8
