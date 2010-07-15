@@ -37,13 +37,30 @@ urlpatterns = patterns('',
 
     (r'^comments/', include('django.contrib.comments.urls')),
 
-    (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-        { 'document_root': settings.MEDIA_ROOT }),
-    (r'^css/(?P<path>.*)$', 'django.views.static.serve',
-        { 'document_root': settings.MEDIA_ROOT + '/css'}),
+    # serve static medias
+    (r'^media/(?P<path>.*)$',
+        'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT}),
+
+    (r'^images/(?P<path>.*)$',
+        'django.views.static.serve',
+        {'document_root': settings.STATIC_IMAGE}),
+
+    (r'^css/(?P<path>.*)$',
+        'django.views.static.serve',
+        {'document_root': settings.STATIC_CSS}),
+
+    (r'^js/(?P<path>.*)$',
+        'django.views.static.serve',
+        {'document_root': settings.STATIC_JS}),
+
+    (r'^upload/(?P<path>.*)$',
+        'django.views.static.serve',
+        {'document_root': settings.STATIC_UPLOAD}),
+
     # tiny_mce.js
     (r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve',
-        { 'document_root': settings.MEDIA_ROOT + '/javascripts/tinymce/jscripts/tiny_mce'}),
+        { 'document_root': settings.STATIC_JS + '/tinymce/jscripts/tiny_mce'}),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
