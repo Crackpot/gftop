@@ -5,7 +5,6 @@ Created on 2010-6-13
 @author: fangshi
 """
 
-
 from __future__ import division
 import time
 
