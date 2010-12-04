@@ -12,7 +12,7 @@ public class PhraseOMatic {
 				"leveraged", "aligned", "targeted", "shared", "cooperative",
 				"accelerated" };
 		String[] wordListThree = { "process", "tipping-point", "solution",
-				"architecture", "core competency", "strategy", "mindshare",
+				"architecture", "core copetency", "strategy", "mindshare",
 				"portal", "space", "vision", "paradigm", "mission" };
 
 		// 计算每一组有多少个名词术语
@@ -30,6 +30,6 @@ public class PhraseOMatic {
 				+ wordListThree[rand3];
 
 		// 输出
-		System.out.println(phrase);
+		System.out.println("What we need is a " + phrase);
 	}
 }
