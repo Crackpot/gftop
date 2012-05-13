@@ -1,9 +1,0 @@
-<H1>All Ads</H1>
-<UL>
-    <% for ad in @ads %>
-        <LI>
-        <A HREF="/ads/<%= ad.id %>"><%= ad.name %></A>
-        <A HREF="/ads/<%= ad.id %>/delete">(Delete)</A>
-        </LI>
-    <% end %>
-</UL>
