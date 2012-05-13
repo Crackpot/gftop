@@ -1,0 +1,29 @@
+<h1>Listing stories</h1>
+
+<P>
+<%= Time.now %>
+</P>
+
+<table border="1">
+  <tr bgcolor="green">
+    <th>Story id</th>
+    <th>Name</th>
+    <th>Link</th>
+    <th colspan="3">Operations</th>
+  </tr>
+
+<% @stories.each do |story| %>
+  <tr>
+    <td><%=h story.id %></td>
+    <td><%=h story.name %></td>
+    <td><%=h story.link %></td>
+    <td><%= link_to 'Show', story %></td>
+    <td><%= link_to 'Edit', edit_story_path(story) %></td>
+    <td><%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New story', new_story_path %>

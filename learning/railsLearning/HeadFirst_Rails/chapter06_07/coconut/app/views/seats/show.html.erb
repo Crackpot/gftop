@@ -1,0 +1,24 @@
+<H1>Seat information</H1>
+<p>
+  <b>Seat id:</b>
+  <%=h @seat.id %>
+</p>
+
+<p>
+  <b>Flight:</b>
+  <%=h @seat.flight_id %>
+  <%= link_to 'Flight information', flight_path(@seat.flight_id) %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @seat.name %>
+</p>
+
+<p>
+  <b>Baggage:</b>
+  <%=h @seat.baggage %>
+</p>
+
+<%= link_to 'Edit', edit_seat_path(@seat) %> |
+<%= link_to 'Back', seats_path %>
