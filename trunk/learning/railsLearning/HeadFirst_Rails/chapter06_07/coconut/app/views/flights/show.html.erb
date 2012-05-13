@@ -1,0 +1,61 @@
+<H1>Flight information</H1>
+<p>
+  <b>Flight id:</b>
+  <%=h @flight.id %>
+</p>
+
+<p>
+  <b>Departure:</b>
+  <%=h @flight.departure %>
+</p>
+
+<p>
+  <b>Arrival:</b>
+  <%=h @flight.arrival %>
+</p>
+
+<p>
+  <b>Destination:</b>
+  <%=h @flight.destination %>
+</p>
+
+<p>
+  <b>Baggage allowance:</b>
+  <%=h @flight.baggage_allowance %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%=h @flight.capacity %>
+</p>
+
+
+<DIV ID="seats">
+    <!-- 插入分片，当前航班已预定座位 -->
+    <%= render :partial=>"seat_list", :locals=>{:seats=>@flight.seats}%>
+</DIV>
+
+<!-- Ajax刷新链接 -->
+<%=
+    link_to_remote(
+        "Refresh seats",
+        :url=>"/flights/#{@flight.id}/seats",
+        :method=>"get",
+            :update=>"seats"
+    )
+%>
+<!-- 20秒自动刷新 -->
+<%= 
+    periodically_call_remote(
+        :url=>"/flights/#{@flight.id}/seats",
+        :method=>"get",
+            :update=>"seats",
+            :frequency=>"20"
+    )
+%>
+
+<!-- 插入分片，预定当前航班座位 -->
+<%= render :partial=>"new_seat", :locals=>{:seat=>Seat.new(:flight_id=>@flight.id)}%>
+
+<%= link_to 'Edit', edit_flight_path(@flight) %> |
+<%= link_to 'Back', flights_path %>

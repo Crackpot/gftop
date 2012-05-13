@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+     <TITLE>Ads:<%= controller.action_name %></TITLE>
+     <%= stylesheet_link_tag 'default.css' %>
+ </HEAD>
+ <BODY>
+     <!--wrapper开始-->
+     <DIV ID="wrapper">
+         <!--header开始-->
+         <DIV ID="header">
+             <DIV>
+                 <H1>MeBay</H1>
+                 <UL ID="nav">
+                     <LI><A HREF="/ads/">All Ads</A></LI>
+                 </UL>
+             </DIV>
+         </DIV>
+         <!--header结束-->
+
+         <!--content开始-->
+         <DIV ID="content">
+             <%= yield%>
+         </DIV>
+         <!--content结束-->
+
+         <!--clearfooter开始-->
+         <DIV ID="clearfooter">
+         </DIV>
+         <!--clearfooter结束-->
+
+     </DIV>
+     <!--wrapper结束-->
+
+     <!--footer开始-->
+     <DIV ID="footer">
+     </DIV>
+     <!--footer结束-->
+ </BODY>
+</HTML>

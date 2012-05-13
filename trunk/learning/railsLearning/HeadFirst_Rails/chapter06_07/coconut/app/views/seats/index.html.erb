@@ -1,0 +1,50 @@
+<DIV ID="seats">
+
+<h1>Listing seats</h1>
+
+<table border="1">
+  <tr bgcolor="green">
+    <th>Seat id</th>
+    <th>Flight</th>
+    <th>Name</th>
+    <th>Baggage</th>
+    <th colspan="3">Operations</th>
+  </tr>
+
+<% @seats.each do |seat| %>
+  <tr>
+    <td><%=h seat.id %></td>
+    <td><%=h seat.flight_id %></td>
+    <td><%=h seat.name %></td>
+    <td><%=h seat.baggage %></td>
+    <td><%= link_to 'Show', seat %></td>
+    <td><%= link_to 'Edit', edit_seat_path(seat) %></td>
+    <td><%= link_to 'Destroy', seat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<!-- Ajax刷新链接 -->
+<%=
+    link_to_remote(
+        "Refresh seats",
+        :url=>"/seats/",
+        :method=>"get",
+            :update=>"seats"
+    )
+%>
+<!-- 20秒自动刷新 -->
+<%= 
+    periodically_call_remote(
+        :url=>"/seats/",
+        :method=>"get",
+        :update=>"seates",
+        :frequency=>"20"
+    )
+%>
+
+<br />
+
+<%= link_to 'New seat', new_seat_path %>
+<%= link_to 'Flights', flights_path %>
+</DIV>
