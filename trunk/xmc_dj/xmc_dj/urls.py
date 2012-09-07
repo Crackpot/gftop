@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'xmc_dj.views.home', name='home'),
+    url(r'^$', 'xmc_dj.views.home', name='home'),
     # url(r'^xmc_dj/', include('xmc_dj.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -15,4 +15,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    #url(r'^media/upload/frontcover/(\d{1,2})', include(admin.site.urls)),
+    (r'^ckeditor/', include('ckeditor.urls')),
 )

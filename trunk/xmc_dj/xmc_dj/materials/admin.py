@@ -10,6 +10,13 @@ class MaterialAdmin(admin.ModelAdmin):
     search_fields = ['name', 'number', 'factory', 'utilizing']
     #时间条
     date_hierarchy = 'archived_time'
+#    class Media:
+#        js = [
+#              '/static/jscripts/tiny_mce/tiny_mce.js',
+#              '/media/editor/tiny_mce/tiny_mce_src.js',
+#              '/media/editor/tiny_mce/tiny_mce_config.js',
+#        ]
+
 
     
 class LendingAdmin(admin.ModelAdmin):
