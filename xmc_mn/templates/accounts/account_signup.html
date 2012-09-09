@@ -1,0 +1,10 @@
+{% extends "accounts/account_form.html" %}
+{% load i18n %}
+
+{% block main %}
+{{ block.super }}
+{% if settings.ACCOUNTS_VERIFICATION_REQUIRED %}
+<p>{% trans "注册后,您将收到一封包含一个特定链接的邮件以便能够激活您的账户。" %}</p>
+{% endif %}
+{% endblock %}
+

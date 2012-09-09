@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load i18n mezzanine_tags blog_tags keyword_tags disqus_tags %}
+
+{% block meta_title %}{% if page %}{{ page.richtextpage.title }}{% else %}{% trans "博客" %}{% endif %}{% endblock %}
+
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+    {% if not forloop.first %}, {% endif %}
+    {{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+
+{% block title %}
+{% if page %}
+{% editable page.title %}{{ page.title }}{% endeditable %}
+{% else %}
+{% trans "博客" %}
+{% endif %}
+{% endblock %}
+
+{% block breadcrumb_menu %}
+{{ block.super }}
+{% if tag or category or year or month or author %}
+<li>{% spaceless %}
+{% if tag %}
+    {% trans "标签:" %} {{ tag }}
+{% else %}{% if category %}
+    {% trans "分类:" %} {{ category }}
+{% else %}{% if year or month %}
+    {% if month %}{{ month }}, {% endif %}{{ year }}
+{% else %}{% if author %}
+    {% trans "作者:" %} {{ author.get_full_name|default:author.username }}
+{% endif %}{% endif %}{% endif %}{% endif %}
+{% endspaceless %}
+</li>
+{% endif %}
+{% endblock %}
+
+{% block main %}
+
+{% if tag or category or year or month or author %}
+    <p>
+        {% if tag %}
+            {% trans '察看标签为 "' %} {{ tag }} {% trans '" 的文章' %}
+        {% else %}
+
+            {% if category %}
+                {% trans '察看分类为 "' %} {{ category }}{% trans '" 的文章' %}
+            {% else %}
+
+                {% if year or month %}
+                    {% trans "察看" %} {% if month %}{{ month }}, {% endif %}{{ year }}{% trans "的文章" %}
+                {% else %}
+
+                    {% if author %}
+                        {% trans "察看" %}
+                        {{ author.last_name|default:author.username }}
+                        {{ author.first_name|default:author.username }}
+                        {% trans "发布的文章" %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    </p>
+{% else %}
+    {% if page %}
+    {% editable page.richtextpage.content %}
+    {{ page.richtextpage.content|safe }}
+    {% endeditable %}
+    {% endif %}
+{% endif %}
+
+{% for blog_post in blog_posts.object_list %}
+    {% editable blog_post.title blog_post.publish_date %}
+    <h2>
+        <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
+    </h2>
+    <h6>
+        {% with blog_post.user as author %}
+        <a href="{% url blog_post_list_author author %}">{{ author.last_name|default:author.username }}
+        {{ author.first_name|default:author.username }}</a>
+        {% endwith %}
+        {% trans "于" %}
+        {{ blog_post.publish_date|timesince }} {% trans "之前" %}
+        {% if blog_post.category_list %}
+        {% trans "发布在" %}:
+            {% for category in blog_post.category_list %}
+                <a href="{% url blog_post_list_category category.slug %}">{{ category }}</a>
+            {% endfor %}
+        {% endif %}
+    </h6>
+    {% endeditable %}
+
+{% if blog_post.featured_image %}
+<img class="featured-thumb" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}">
+{% endif %}
+
+{% editable blog_post.content %}
+{{ blog_post.description_from_content|safe }}
+{% endeditable %}
+
+<p class="blog-list-detail">
+    {% if blog_post.keyword_list %}
+    {% trans "标签" %}:
+    {% spaceless %}
+    {% for tag in blog_post.keyword_list %}
+    <a href="{% url blog_post_list_tag tag.slug %}" class="tag">{{ tag }}</a>
+    {% endfor %}
+    {% endspaceless %}
+    <br>
+    {% endif %}
+    <a href="{{ blog_post.get_absolute_url }}">{% trans "更多" %}</a>
+    /
+    {% if settings.COMMENTS_DISQUS_SHORTNAME %}
+    <a href="{{ blog_post.get_absolute_url }}#disqus_thread"
+        data-disqus-identifier="{% disqus_id_for blog_post %}">
+        {% trans "评论" %}
+    </a>
+    {% else %}
+    <a href="{{ blog_post.get_absolute_url }}#comments">
+        {% blocktrans count blog_post.comments_count as comments_count %}1 comment{% plural %}{{ comments_count }} 条评论{% endblocktrans %}
+    </a>
+    {% endif %}
+</p>
+{% endfor %}
+
+{% pagination_for blog_posts %}
+
+{% if settings.COMMENTS_DISQUS_SHORTNAME %}
+{% include "generic/includes/disqus_counts.html" %}
+{% endif %}
+
+{% endblock %}
+
+{% block right_panel %}
+{% include "blog/includes/filter_panel.html" %}
+{% endblock %}
