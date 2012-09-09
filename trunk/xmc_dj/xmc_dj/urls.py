@@ -1,8 +1,10 @@
 #coding=utf8
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, include, url, static
+from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from xmc_dj import settings
 
 # Uncomment the next two lines to enable the admin:
-from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,6 +17,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    #url(r'^media/upload/frontcover/(\d{1,2})', include(admin.site.urls)),
     (r'^ckeditor/', include('ckeditor.urls')),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    #(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 )
+
+urlpatterns += staticfiles_urlpatterns()
