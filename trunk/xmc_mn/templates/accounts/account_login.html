@@ -1,0 +1,15 @@
+{% extends "accounts/account_form.html" %}
+{% load i18n %}
+
+{% block main %}
+
+{{ block.super }}
+
+{% url signup as signup_url %}
+<p>{% blocktrans with request.GET.next as next %}如果您没有账户，可以 <a href="{{ signup_url }}?next={{ next }}">注册</a> 以便登陆。{% endblocktrans %}</p>
+{% url mezzanine_password_reset as password_reset_url %}
+{% url profile_update as profile_update_url %}
+{% blocktrans %}<p>如果您忘记了密码可以 <a href="{{ password_reset_url }}?next={{ profile_update_url }}">重置密码</a> 。</p>{% endblocktrans %}</p>
+
+{% endblock %}
+
