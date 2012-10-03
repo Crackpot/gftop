@@ -2,7 +2,7 @@
 from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils import timezone
-from xmc_dj.settings import MEDIA_ROOT
+from xmc_mn.settings import MEDIA_ROOT
 
 class Material(models.Model):
     number = models.CharField('序号', max_length=40, blank=False) #序号
