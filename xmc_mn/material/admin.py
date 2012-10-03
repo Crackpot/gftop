@@ -1,6 +1,8 @@
 #coding=utf8
 from django.contrib import admin
-from xmc_mn.material.models import Material, Lending
+from xmc_mn.material.models import Dimension,  Material, Lending
+class DimensionAdmin(admin.ModelAdmin):
+    list_display = ('name', 'dimension')
 
 class MaterialAdmin(admin.ModelAdmin):
     #列表显示
@@ -10,6 +12,7 @@ class MaterialAdmin(admin.ModelAdmin):
     search_fields = ['name', 'number', 'factory', 'utilizing']
     #时间条
     date_hierarchy = 'archived_time'
+    list_filter = ['factory', 'utilizing']
 #    class Media:
 #        js = [
 #              '/static/jscripts/tiny_mce/tiny_mce.js',
@@ -32,6 +35,8 @@ class LendingAdmin(admin.ModelAdmin):
     search_fields = ['material', 'borrower', 'lender']
     #时间条
     date_hierarchy = 'borrowed_time'
+
     
+admin.site.register(Dimension, DimensionAdmin)
 admin.site.register(Material, MaterialAdmin)
 admin.site.register(Lending, LendingAdmin)
