@@ -1,6 +1,8 @@
 eclipse.preferences.version=1
-encoding//materials/admin.py=utf8
-encoding//materials/models.py=utf8
+encoding//gangwei/models.py=utf8
+encoding//material/admin.py=utf8
+encoding//material/models.py=utf8
+encoding//staff/models.py=utf8
 encoding/settings.py=utf8
 encoding/urls.py=utf8
 encoding/views.py=utf8

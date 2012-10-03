@@ -264,7 +264,7 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     "mezzanine.mobile",
     #'mezzanine_themes.mezzanine_default',
-    "xmc_mn.materials",
+    "xmc_mn.material",
 )
 
 # List of processors used by RequestContext to populate the context.

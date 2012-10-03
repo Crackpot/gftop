@@ -1,6 +1,6 @@
 #coding=utf8
 from django.contrib import admin
-from xmc_mn.materials.models import Material, Lending
+from xmc_mn.material.models import Material, Lending
 
 class MaterialAdmin(admin.ModelAdmin):
     #列表显示

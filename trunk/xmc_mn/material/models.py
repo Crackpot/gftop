@@ -1,5 +1,5 @@
 #coding=utf8
-from ckeditor.fields import RichTextField
+#from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils import timezone
 from xmc_mn.settings import MEDIA_ROOT
@@ -12,8 +12,8 @@ class Material(models.Model):
     dimension = models.CharField('幅面', max_length=20) #幅面
     archived_time = models.DateTimeField('存档时间', blank=False) #存档时间
     utilizing = models.CharField('使用地点', max_length=20) #使用地点
-    remark = RichTextField('备注', blank=True, null=True) #备注
-    front_cover = models.ImageField('封面', upload_to='upload/frontcover/%Y/%m/%d', blank=True, null=True)
+    remark = models.TextField('备注', blank=True, null=True) #备注
+    front_cover = models.ImageField('封面', upload_to='uploads/frontcover/%Y/%m/%d', blank=True, null=True)
     
     def __unicode__(self):
         return self.name
