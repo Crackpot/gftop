@@ -265,7 +265,7 @@ INSTALLED_APPS = (
     "mezzanine.mobile",
     #'mezzanine_themes.mezzanine_default',
     "xmc_mn.material",
-    "xmc_mn.staff",
+#    "xmc_mn.staff",
     "xmc_mn.department",
     "xmc_mn.equipment",
 )
