@@ -4,11 +4,13 @@ from xmc_mn.department.models import Department, GroupCategory, Group, Staff
 
 #class DepartmentAdmin(admin.ModelAdmin):
 class GroupAdmin(admin.ModelAdmin):
+    fields = ('name', ('category', 'adscription', 'employeeno'))
     list_display = ('name', 'category', 'adscription', 'staffs')
-    list_filter = ['category', 'adscription']
+    #list_filter = ['category', 'adscription']
     
 class StaffAdmin(admin.ModelAdmin): 
-    list_display = ('name', 'age')
+    fields = (('name', 'age', 'id_no'), ('department', 'group'))
+    list_display = ('name', 'age', 'department')
 
 admin.site.register(Staff, StaffAdmin)
 

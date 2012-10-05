@@ -21,7 +21,7 @@ class Group(models.Model):
     category = models.ForeignKey(GroupCategory  , verbose_name='类型')
     adscription = models.ForeignKey(Department, verbose_name='归属')
     #staffs = models.ManyToManyField(Staff, verbose_name ='职员')
-    employeeno = models.IntegerField(verbose_name = '员工数目')
+    employeeno = models.IntegerField(verbose_name='员工数目')
 
     def __unicode__(self):
         return self.adscription.name + self.name  
@@ -32,10 +32,10 @@ class Group(models.Model):
     
 class Staff(models.Model):
     staff = models.ForeignKey(User, blank=False, null=False)
-    name = models.CharField(max_length=40, blank=False)
-    age = models.IntegerField()
-    id_no = models.CharField(max_length=18, blank=True)
-    department = models.ForeignKey(Department, blank=False, null=False)
+    name = models.CharField('姓名', max_length=40, blank=False)
+    age = models.IntegerField('年龄')
+    id_no = models.CharField('身份证号', max_length=18, blank=True)
+    department = models.ForeignKey(Department, blank=False, null=False, verbose_name='部门')
     #group = models.ForeignKey(Group, verbose_name='班组', related_name="staffs")
     group = models.ForeignKey(Group, verbose_name='班组')
     
