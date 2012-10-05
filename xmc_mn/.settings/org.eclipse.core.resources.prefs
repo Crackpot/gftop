@@ -5,4 +5,5 @@ encoding//equipment/admin.py=utf8
 encoding//equipment/models.py=utf8
 encoding//material/admin.py=utf8
 encoding//material/models.py=utf8
+encoding/settings.py=utf8
 encoding/views.py=utf8
