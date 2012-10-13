@@ -1,0 +1,25 @@
+{% extends "pages/page.html" %}
+
+
+{% load i18n %}
+
+{% block meta_title %}{% trans "Poll" %}{% endblock %}
+{% block title %}{% trans "Poll" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+
+<h1>{{ poll.question }}</h1>
+
+<ul>
+{% for choice in poll.choice_set.all %}
+    <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="/polls/{{ poll.id }}/">Vote again?</a>
+
+{% endblock %}
