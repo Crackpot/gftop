@@ -134,6 +134,7 @@ DEBUG = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SITE_ID = 1
+SITE_TITLE = '二矿选煤厂'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -237,6 +238,8 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 
 
+COMPRESS_URL = r'%s/static/' % os.path.abspath(os.path.dirname(__file__))
+
 ################
 # APPLICATIONS #
 ################
@@ -261,6 +264,8 @@ INSTALLED_APPS = (
     #"mezzanine.twitter",
     "mezzanine.accounts",
     "mezzanine.mobile",
+    'author',
+    'polls',
 )
 
 # List of processors used by RequestContext to populate the context.

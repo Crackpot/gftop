@@ -1,0 +1,23 @@
+{% extends "pages/page.html" %}
+
+
+{% load i18n %}
+
+{% block meta_title %}{% trans "Poll" %}{% endblock %}
+{% block title %}{% trans "Poll" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+{% if latest_poll_list %}
+    <ul>
+    {% for poll in latest_poll_list %}
+        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}
