@@ -1,0 +1,29 @@
+
+{% extends "pages/page.html" %}
+
+
+{% load i18n %}
+
+{% block meta_title %}{% trans "Books" %}{% endblock %}
+{% block title %}{% trans "Books" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if books %}
+    <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+    <ul>
+        {% for book in books %}
+        <li>{{ book.title }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No books matched your search criteria.</p>
+{% endif %}
+
+{% endblock %}

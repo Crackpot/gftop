@@ -1,0 +1,31 @@
+
+{% extends "pages/page.html" %}
+
+
+{% load i18n %}
+
+{% block meta_title %}{% trans "Books" %}{% endblock %}
+{% block title %}{% trans "Books" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <!--
+    <form action="/books/search/" method="get">
+         -->
+    <form action="" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+{% endblock %}
