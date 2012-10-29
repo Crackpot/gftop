@@ -1,0 +1,1221 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-29 18:53:38 +0800
+Connecting to database specified by database.yml
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1062564957__call__419202162__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.3ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.9ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-10-29 18:53:40 +0800
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1062564957__call__419202162__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-29 18:58:11 +0800
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1062564957__call__419202162__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-10-29 18:58:12 +0800
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1062564957__call__419202162__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-29 18:58:21 +0800
+Connecting to database specified by database.yml
+
+TypeError (can't convert Fixnum into String):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__801252352__call__546159158__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.7ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-10-29 18:58:23 +0800
+
+TypeError (can't convert Fixnum into String):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__801252352__call__546159158__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-29 19:00:36 +0800
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (65ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-10-29 19:00:38 +0800
+Processing by Rails::InfoController#properties as HTML
+  Rendered inline template (2.3ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say" for 127.0.0.1 at 2012-10-29 19:19:50 +0800
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/say"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/say/" for 127.0.0.1 at 2012-10-29 19:19:55 +0800
+
+ActionController::RoutingError (No route matches [GET] "/say"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 19:19:59 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.5ms)
+Compiled say.css  (87ms)  (pid 5329)
+Compiled application.css  (117ms)  (pid 5329)
+Compiled jquery.js  (10ms)  (pid 5329)
+Compiled jquery_ujs.js  (0ms)  (pid 5329)
+Compiled say.js  (818ms)  (pid 5329)
+Compiled application.js  (901ms)  (pid 5329)
+Completed 200 OK in 1057ms (Views: 1056.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 19:20:00 +0800
+Served asset /application.css - 200 OK (31ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 19:20:00 +0800
+Served asset /say.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 19:20:00 +0800
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 19:20:00 +0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 19:20:00 +0800
+Served asset /say.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 19:20:00 +0800
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Served asset /say.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 19:22:23 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Served asset /say.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:20 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 19:23:57 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 19:24:20 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-29 23:32:53 +0800
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (274ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-10-29 23:32:54 +0800
+Processing by Rails::InfoController#properties as HTML
+  Rendered inline template (2.4ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 23:33:15 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 142ms (Views: 141.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:33:15 +0800
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:33:15 +0800
+Served asset /say.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:16 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (120ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:16 +0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:16 +0800
+Served asset /say.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:16 +0800
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 96ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:23 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:33:58 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:01 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:36:03 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Served asset /say.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:13 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Served asset /say.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:15 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Served asset /say.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:16 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:17 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:37:18 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (286.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (413.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (2.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateProducts (20121029154117)
+  [1m[35m (268.4ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `image_url` varchar(255), `price` decimal(8,2), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (188.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121029154117')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/products" for 127.0.0.1 at 2012-10-29 23:52:35 +0800
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products` [0m
+  Rendered products/index.html.erb within layouts/application (1.2ms)
+Compiled products.css  (10ms)  (pid 4233)
+Compiled scaffolds.css  (13ms)  (pid 4233)
+Compiled application.css  (35ms)  (pid 4233)
+Compiled products.js  (700ms)  (pid 4233)
+Compiled application.js  (709ms)  (pid 4233)
+Completed 200 OK in 925ms (Views: 784.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /say.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /products.css - 200 OK (28ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /products.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:36 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (99.5ms)
+  Rendered products/new.html.erb within layouts/application (123.3ms)
+Completed 200 OK in 138ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /products.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:52:38 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2012-10-29 23:53:12 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUspZc7efkX6hcHjKgOjGJcLXS9VkPXn7W2wcIaKRE4=", "product"=>{"title"=>"ceshi", "description"=>"ceshi", "image_url"=>"ceshi", "price"=>"4.3"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `products` (`created_at`, `description`, `image_url`, `price`, `title`, `updated_at`) VALUES ('2012-10-29 15:53:12', 'ceshi', 'ceshi', 4.3, 'ceshi', '2012-10-29 15:53:12')[0m
+  [1m[35m (162.4ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/products/1
+Completed 302 Found in 218ms (ActiveRecord: 162.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /products.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:13 +0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  Rendered products/_form.html.erb (3.2ms)
+  Rendered products/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /products.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:53:23 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  Rendered products/_form.html.erb (4.3ms)
+  Rendered products/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /products.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:54:27 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/products/1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUspZc7efkX6hcHjKgOjGJcLXS9VkPXn7W2wcIaKRE4=", "product"=>{"title"=>"openSUSE", "description"=>"openSUSE 最新版，世界上最强大最灵活的 Linux 发行版通过 Linux 3.4 的快速存储层和 glibc 与 qt 中的加速函数为您带来了全线加速，如雨丝般平滑的桌面，风驰电掣般的响应速度！基础架构的进化带来了新的成熟技术如 GRUB2 和 Plymouth，并向改进和简化的 UNIX 文件系统结构迈出了第一步。用户还会为无处不在的已有特性打磨带来的感觉所惊艳。新兴的 Btrfs 文件系统带来了改进的错误处理和恢复工具;飞速发展的 GNOME 3.4 带来了所有程序的平滑滚动和重制的系统设置与联系人管理;XFCE 带来了增强的应用程序查找器。", "image_url"=>"openSUSE", "price"=>"4.3"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `products` SET `title` = 'openSUSE', `description` = 'openSUSE 最新版，世界上最强大最灵活的 Linux 发行版通过 Linux 3.4 的快速存储层和 glibc 与 qt 中的加速函数为您带来了全线加速，如雨丝般平滑的桌面，风驰电掣般的响应速度！基础架构的进化带来了新的成熟技术如 GRUB2 和 Plymouth，并向改进和简化的 UNIX 文件系统结构迈出了第一步。用户还会为无处不在的已有特性打磨带来的感觉所惊艳。新兴的 Btrfs 文件系统带来了改进的错误处理和恢复工具;飞速发展的 GNOME 3.4 带来了所有程序的平滑滚动和重制的系统设置与联系人管理;XFCE 带来了增强的应用程序查找器。', `image_url` = 'openSUSE', `updated_at` = '2012-10-29 15:56:31' WHERE `products`.`id` = 1
+  [1m[36m (183.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/products/1
+Completed 302 Found in 214ms (ActiveRecord: 184.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /say.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /products.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:56:31 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-10-29 23:59:10 +0800
+Connecting to database specified by database.yml
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products` [0m
+  Rendered products/index.html.erb within layouts/application (27.0ms)
+Compiled products.css  (7ms)  (pid 4938)
+Compiled say.css  (1ms)  (pid 4938)
+Compiled scaffolds.css  (13ms)  (pid 4938)
+Compiled application.css  (39ms)  (pid 4938)
+Compiled jquery.js  (7ms)  (pid 4938)
+Compiled jquery_ujs.js  (0ms)  (pid 4938)
+Compiled products.js  (293ms)  (pid 4938)
+Compiled say.js  (257ms)  (pid 4938)
+Compiled application.js  (624ms)  (pid 4938)
+Completed 200 OK in 926ms (Views: 851.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /say.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /products.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /products.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /say.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-29 23:59:12 +0800
+Served asset /application.js - 304 Not Modified (7ms)
