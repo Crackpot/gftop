@@ -1,0 +1,22 @@
+(using layout)
+<%= yield :layout %>
+<H1><%= @message %></H1>
+<P>
+    This is a greeting from app./views/hello/index.html.erb
+</P>
+
+<% for i in 1..@count %>
+<P>
+    <%= @bonus %>
+</P>
+<% end %>
+
+<% content_for(:list) do %>
+<ol>
+    <% for i in 1..@count %>
+    <li>
+        <%= @bonus %>
+    </li>
+    <% end %>
+</ol>
+<% end %>
