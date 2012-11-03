@@ -1,6 +1,11 @@
 XmcRails::Application.routes.draw do
+  resources :people
+
+  get "entries" => "entries#sign_in"
+  get "entries/sign_in"
+
   get "hello" => "hello#index" #更改默认
-  #get "hello/index"
+  get "hello/index"
 
   resources :products
 
@@ -8,6 +13,9 @@ XmcRails::Application.routes.draw do
 
   get "say/goodbye"
 
+  match ':controller/:action/:id'
+  match ':controller/:action/:id.:format'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -64,5 +72,5 @@ XmcRails::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end

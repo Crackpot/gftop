@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hello</title>
-        <%= stylesheet_link_tag    "application", :media => "all" %>
-        <%= javascript_include_tag "application" %>
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
+	<head>
+		<title>Hello</title>
+		<%= stylesheet_link_tag    "hello", :media => "all" %>
+		<%= javascript_include_tag "hello" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<p>
+			(using hello layout)
+		</p>
 
-        <%= yield :list %>
+		<%= yield :list %>
 
-        <%= yield :layout %>
+		<%= yield :layout %>
 
-    </body>
+	</body>
 </html>
