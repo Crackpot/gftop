@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029154117) do
+ActiveRecord::Schema.define(:version => 20121103055553) do
+
+  create_table "entries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "people", :force => true do |t|
+    t.string   "name"
+    t.string   "secret"
+    t.string   "country"
+    t.string   "email"
+    t.text     "description"
+    t.boolean  "can_send_email"
+    t.integer  "graduation_year"
+    t.float    "body_temperature"
+    t.decimal  "price",            :precision => 10, :scale => 0
+    t.date     "birthday"
+    t.time     "favorite_time"
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
+    t.string   "extension"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "title"

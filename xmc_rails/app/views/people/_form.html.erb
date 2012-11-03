@@ -1,0 +1,122 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, '姓名'%><br />
+    <%= f.text_field :name, :size => '10' %>
+  </div>
+  <div class="field">
+    <%= f.label :secret, '密钥'%><br />
+    <%= f.password_field :secret %>
+  </div>
+  
+  <!--
+  <div class="field">
+    <%= f.label :country, '国家' %><br />
+    <%= f.text_field :country %>
+  </div>
+  	-->
+  	
+  	
+  	
+  <!--
+  	通过对散列表进行排序，生成单选按钮
+  <% nations = { 'United States of America' => 'USA', 'Canada' => 'Canada',
+        'Mexico' => 'Mexico', 'United Kingdom' => 'UK' }%>
+  <fieldset>
+	<legend>
+		Country
+	</legend>
+	<% list = nations.sort
+	  list.each {|x| %>
+	  	<%= f.radio_button :country, x[1] %>
+	<label for="<%= ("person_country_" + x[1].downcase) %>"> <%= x[0] %></label>
+	<br />
+	<% } %>
+  </fieldset>
+  	-->
+	
+	
+
+  <!--
+  	由字符串二维数组创建的选择列表
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.select :country, [ ['Canada', 'Canada'],
+    	['Mexico', 'Mexico'],
+    	['United Kingdom', 'UK'],
+    	['United States of America', 'USA'] ]%>
+  </div>
+  	-->
+  	
+  <!--使用辅助方法-->
+  <div class="field">
+  	<%= f.label :country, '使用辅助方法选择国家' %><br />
+	<% nations = { 'United States of America' => 'USA', 'Canada' => 'Canada',
+    'Mexico' => 'Mexico', 'United Kingdom' => 'UK' }%>
+    <%= button_select(:person, :country, nations) %>
+  </div>
+  	
+  	
+  <!--基于散列表创建一个排序过的选择列表-->
+  <!--
+  <div class="field">
+  	<% nations = { 'United States of America' => 'USA', 'Canada' => 'Canada', 'Mexico' => 'Mexico', 'United Kingdom' => 'UK' }%>
+  	<p>
+  		<%= f.label :country %><br />
+  		<% list = nations.sort %>
+  		<%= f.select :country, list, :include_blank => true  %>
+  	</p>
+  </div>
+  	-->
+  
+  <div class="field">
+    <%= f.label :email, '邮件地址' %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :description, '描述' %><br />
+    <%= f.text_area :description, :cols => 30, :rows => 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :can_send_email, '可以发送邮件' %><br />
+    <%= f.check_box :can_send_email %>
+  </div>
+  <div class="field">
+    <%= f.label :graduation_year %><br />
+    <%= f.number_field :graduation_year %>
+  </div>
+  <div class="field">
+    <%= f.label :body_temperature %><br />
+    <%= f.text_field :body_temperature %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday,'生日' %><br />
+    <%= f.date_select :birthday, :start_year => 1950, :use_month_numbers => true, :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :favorite_time ,'最爱时间'%><br />
+    <%= f.datetime_select :favorite_time, :start_year => 1950, :use_month_numbers => true, :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :photo , '照片'%><br />
+    <%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
