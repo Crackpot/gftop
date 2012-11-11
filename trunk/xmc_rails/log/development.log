@@ -21268,3 +21268,416 @@ Served asset /say.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-03 14:31:58 +0800
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-11 00:19:14 +0800
+Connecting to database specified by database.yml
+
+Mysql2::Error (Unknown database 'xmc_rails_development'):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.8) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:309:in `new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:319:in `checkout_new_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:241:in `block (2 levels) in checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `loop'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:236:in `block in checkout'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:233:in `checkout'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:96:in `block in connection'
+  /usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:404:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:170:in `retrieve_connection'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_specification.rb:144:in `connection'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__516303458__call__787251012__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-11 00:19:48 +0800
+Processing by HelloController#index as HTML
+  Rendered hello/index.html.erb within layouts/hello (0.7ms)
+Compiled hello.css  (56ms)  (pid 22541)
+Compiled hello.js  (546ms)  (pid 22541)
+Completed 200 OK in 648ms (Views: 647.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2012-11-11 00:19:49 +0800
+Served asset /hello.js - 200 OK (2ms)
+
+
+Started GET "/assets/hello.css?body=1" for 127.0.0.1 at 2012-11-11 00:19:49 +0800
+Served asset /hello.css - 200 OK (1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2012-11-11 00:19:59 +0800
+Processing by PeopleController#index as HTML
+Mysql2::Error: Table 'xmc_rails_development.people' doesn't exist: SHOW FULL FIELDS FROM `people`
+Completed 500 Internal Server Error in 158ms
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'xmc_rails_development.people' doesn't exist: SHOW FULL FIELDS FROM `people`):
+  app/controllers/people_controller.rb:5:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+Connecting to database specified by database.yml
+  [1m[36m (320.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (302.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (2.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateProducts (20121029154117)
+  [1m[35m (241.1ms)[0m  CREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `image_url` varchar(255), `price` decimal(8,2), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (66.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121029154117')[0m
+Migrating to CreateEntries (20121031131732)
+  [1m[35m (278.1ms)[0m  CREATE TABLE `entries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (65.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121031131732')[0m
+Migrating to CreatePeople (20121031163035)
+  [1m[35m (256.9ms)[0m  CREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `secret` varchar(255), `country` varchar(255), `email` varchar(255), `description` text, `can_send_email` tinyint(1), `graduation_year` int(11), `body_temperature` float, `price` decimal, `birthday` date, `favorite_time` time, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (66.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121031163035')[0m
+Migrating to AddPhotoExtensionToPerson (20121103055553)
+  [1m[35m (457.1ms)[0m  ALTER TABLE `people` ADD `extension` varchar(255)
+  [1m[36m (54.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20121103055553')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/people" for 127.0.0.1 at 2012-11-11 00:23:50 +0800
+Connecting to database specified by database.yml
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT `people`.* FROM `people` [0m
+  Rendered people/index.html.erb within layouts/people (7.2ms)
+Compiled entries.css  (34ms)  (pid 22597)
+Compiled people.css  (1ms)  (pid 22597)
+Compiled products.css  (18ms)  (pid 22597)
+Compiled say.css  (1ms)  (pid 22597)
+Compiled scaffolds.css  (13ms)  (pid 22597)
+Compiled application.css  (103ms)  (pid 22597)
+Compiled jquery.js  (5ms)  (pid 22597)
+Compiled jquery_ujs.js  (0ms)  (pid 22597)
+Compiled entries.js  (154ms)  (pid 22597)
+Compiled people.js  (150ms)  (pid 22597)
+Compiled products.js  (155ms)  (pid 22597)
+Compiled say.js  (182ms)  (pid 22597)
+Compiled application.js  (770ms)  (pid 22597)
+Completed 200 OK in 1133ms (Views: 1083.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /application.css - 200 OK (51ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /entries.css - 200 OK (10ms)
+
+
+Started GET "/assets/hello.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /hello.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /people.css - 200 OK (3ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /products.css - 200 OK (3ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /say.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /entries.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /hello.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /people.js - 200 OK (5ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /products.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:52 +0800
+Served asset /say.js - 200 OK (2ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (31.5ms)
+  Rendered people/new.html.erb within layouts/people (64.1ms)
+Completed 200 OK in 92ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hello.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /hello.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /entries.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /hello.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-11 00:23:54 +0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fisBAxDhFwnW00n7Y2b4iQ4PHgpjQY6Hj5qyidDKRk0=", "person"=>{"name"=>"高飞", "secret"=>"123456", "country"=>"Mexico", "email"=>"gaofeitop@gmail.com", "description"=>"测试", "can_send_email"=>"1", "graduation_year"=>"2009", "body_temperature"=>"120", "price"=>"2", "birthday(1i)"=>"1987", "birthday(2i)"=>"7", "birthday(3i)"=>"9", "favorite_time(1i)"=>"2012", "favorite_time(2i)"=>"12", "favorite_time(3i)"=>"20", "favorite_time(4i)"=>"19", "favorite_time(5i)"=>"18"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `people` WHERE (`people`.`email` = 'gaofeitop@gmail.com' AND `people`.`name` = '高飞' AND `people`.`secret` = '123456') LIMIT 1[0m
+  [1m[35mSQL (5.8ms)[0m  INSERT INTO `people` (`birthday`, `body_temperature`, `can_send_email`, `country`, `created_at`, `description`, `email`, `extension`, `favorite_time`, `graduation_year`, `name`, `price`, `secret`, `updated_at`) VALUES ('1987-07-09', 120.0, 1, 'Mexico', '2012-11-10 16:25:07', '测试', 'gaofeitop@gmail.com', NULL, '2012-12-20 19:18:00', 2009, '高飞', 2, '123456', '2012-11-10 16:25:07')
+  [1m[36m (70.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/people/1
+Completed 302 Found in 133ms (ActiveRecord: 76.5ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.8ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1
+  Rendered people/show.html.erb within layouts/people (4.4ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hello.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /hello.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /people.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /products.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /hello.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:07 +0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT `people`.* FROM `people` [0m
+  Rendered people/index.html.erb within layouts/people (3.2ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/entries.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /entries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hello.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /hello.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /people.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /say.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/entries.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /entries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /hello.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /people.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/say.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /say.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-11 00:25:09 +0800
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-11 21:11:56 +0800
+Connecting to database specified by database.yml
+Processing by HelloController#index as HTML
+  Rendered hello/index.html.erb within layouts/hello (14.2ms)
+Completed 200 OK in 141ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hello.css?body=1" for 127.0.0.1 at 2012-11-11 21:11:58 +0800
+Served asset /hello.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hello.js?body=1" for 127.0.0.1 at 2012-11-11 21:11:58 +0800
+Served asset /hello.js - 304 Not Modified (1ms)
