@@ -1,7 +1,13 @@
 #coding=utf8
 from django.db import models
-from danwei.models import Danwei
+#from danwei.models import Danwei
 
+class Danwei(models.Model):
+    title = models.CharField('单位', max_length = 20)
+    
+    def __unicode__(self):
+        return self.title
+    
 class Xingbie(models.Model):
     title = models.CharField(max_length=2)
     
