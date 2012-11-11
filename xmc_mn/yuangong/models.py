@@ -1,40 +1,78 @@
 #coding=utf8
 from django.db import models
-#from danwei.models import Danwei
 
 class Danwei(models.Model):
-    title = models.CharField('单位', max_length = 20)
-    
+    title = models.CharField('单位', max_length=20)
+
     def __unicode__(self):
         return self.title
-    
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '单位'
+        verbose_name_plural = '单位'
+        db_table = 'yuangong_danwei'
+
 class Xingbie(models.Model):
     title = models.CharField(max_length=2)
-    
+
     def __unicode__(self):
         return self.title
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '性别'
+        verbose_name_plural = '性别'
+        db_table = 'yuangong_xingbie'
 
 class Wenhuachengdu(models.Model):
     title = models.CharField(max_length=10)
-    
+
     def __unicode__(self):
         return self.title
-    
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '文化程度'
+        verbose_name_plural = '文化程度'
+        db_table = 'yuangong_wenhuachengdu'
+
 class Zhengzhimianmao(models.Model):
     title = models.CharField(max_length=6)
     def __unicode__(self):
         return self.title
-    
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '政治面貌'
+        verbose_name_plural = '政治面貌'
+        db_table = 'yuangong_zhengzhimianmao'
+
+
 class Gongbie(models.Model):
     title = models.CharField(max_length=10)
     def __unicode__(self):
         return self.title
-    
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '工别'
+        verbose_name_plural = '工别'
+        db_table = 'yuangong_gongbie'
+
+
 class Gongzhong(models.Model):
     title = models.CharField(max_length=10)
     def __unicode__(self):
         return self.title
-    
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '工种'
+        verbose_name_plural = '工种'
+        db_table = 'yuangong_gongzhong'
+
+
 class Yuangong(models.Model):
     #基本资料
     xingming = models.CharField('姓名', max_length=20)
@@ -46,12 +84,12 @@ class Yuangong(models.Model):
     jiguan = models.CharField('籍贯', max_length=15)
     zhuzhi = models.CharField('住址', max_length=50)
     lianxidianhua = models.CharField('联系电话', max_length=30)
-    
+
     #工作信息
     cangongshijian = models.DateField('参工时间')
     baoxianhao = models.CharField('保险号', max_length=10)
     renshikahao = models.CharField('人事卡号', max_length=10)
-    
+
     #文化
     wenhuachengdu = models.ForeignKey(Wenhuachengdu, verbose_name='文化程度')
     diyixueli_yuanxiao = models.CharField('第一学历毕业院校', max_length=30)
@@ -60,12 +98,12 @@ class Yuangong(models.Model):
     houxuxueli_yuanxiao = models.CharField('后续学历毕业院校', max_length=30, blank=True)
     houxuxueli_zhuanye = models.CharField('后续学历专业', max_length=20, blank=True)
     houxuxueli_shangxueshijian = models.DateField('后续学历上学时间', blank=True, null=True)
-    
-    
+
+
     danwei = models.ForeignKey(Danwei, verbose_name='单位')
     gongbie = models.ForeignKey(Gongbie, verbose_name='工别')
     gongzhong = models.ForeignKey(Gongzhong, verbose_name='工种')
-    
+
     jiatingchengyuan_guanxi1 = models.CharField('家庭成员关系1', max_length=10)
     jiatingchengyuan_xingming1 = models.CharField('家庭成员姓名1', max_length=10)
     jiatingchengyuan_chushengnianyue1 = models.DateField('家庭成员出生年月1')
@@ -76,4 +114,9 @@ class Yuangong(models.Model):
 
     def __unicode__(self):
         return self.xingming
-    
+
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '员工'
+        verbose_name_plural = '员工'
+        db_table = 'yuangong_yuangong'

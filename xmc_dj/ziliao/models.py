@@ -17,9 +17,9 @@ class Ziliao(models.Model):
         return self.mingcheng
     
     class Meta:
-        app_label = u"资料"
         verbose_name = '资料'
         verbose_name_plural = '资料'
+        app_label = u"资料"
         db_table = 'ziliao_ziliao'
 
 class Jieyue(models.Model):
@@ -45,7 +45,6 @@ class Jieyue(models.Model):
         return self.ziliao.mingcheng
     
     class Meta:
-        app_label = u"资料"
         verbose_name = '借阅'
         verbose_name_plural = '借阅'
         app_label = u"资料"

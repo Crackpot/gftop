@@ -267,7 +267,7 @@ INSTALLED_APPS = (
     'author',
     'polls',
     'books',
-    #'danwei',
+    'ziliao',
     'yuangong',
 )
 
