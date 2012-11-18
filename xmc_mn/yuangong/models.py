@@ -1,76 +1,66 @@
 #coding=utf8
 from django.db import models
-
-class Danwei(models.Model):
-    title = models.CharField('单位', max_length=20)
-
-    def __unicode__(self):
-        return self.title
-
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '单位'
-        verbose_name_plural = '单位'
-        db_table = 'yuangong_danwei'
+from danwei.models import Danwei
 
 class Xingbie(models.Model):
-    title = models.CharField(max_length=2)
+    xingbie = models.CharField(max_length=2, primary_key=True)
 
     def __unicode__(self):
-        return self.title
+        return self.xingbie
 
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '性别'
-        verbose_name_plural = '性别'
-        db_table = 'yuangong_xingbie'
+#    class Meta:
+#        abstract = False
+#        app_label = u"员工"
+#        verbose_name = '性别'
+#        verbose_name_plural = '性别'
+#        db_table = 'yuangong_xingbie'
 
 class Wenhuachengdu(models.Model):
-    title = models.CharField(max_length=10)
+    wenhuachengdu = models.CharField(max_length=10)
 
     def __unicode__(self):
-        return self.title
+        return self.wenhuachengdu
 
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '文化程度'
-        verbose_name_plural = '文化程度'
-        db_table = 'yuangong_wenhuachengdu'
+#    class Meta:
+#        app_label = u"员工"
+#        verbose_name = '文化程度'
+#        verbose_name_plural = '文化程度'
+#        db_table = 'yuangong_wenhuachengdu'
 
 class Zhengzhimianmao(models.Model):
-    title = models.CharField(max_length=6)
+    zhengzhimianmao = models.CharField(max_length=6)
     def __unicode__(self):
-        return self.title
+        return self.zhengzhimianmao
 
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '政治面貌'
-        verbose_name_plural = '政治面貌'
-        db_table = 'yuangong_zhengzhimianmao'
+#    class Meta:
+#        app_label = u"员工"
+#        verbose_name = '政治面貌'
+#        verbose_name_plural = '政治面貌'
+#        db_table = 'yuangong_zhengzhimianmao'
 
 
 class Gongbie(models.Model):
-    title = models.CharField(max_length=10)
+    gongbie = models.CharField(max_length=10)
     def __unicode__(self):
-        return self.title
+        return self.gongbie
 
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '工别'
-        verbose_name_plural = '工别'
-        db_table = 'yuangong_gongbie'
+#    class Meta:
+#        app_label = u"员工"
+#        verbose_name = '工别'
+#        verbose_name_plural = '工别'
+#        db_table = 'yuangong_gongbie'
 
 
 class Gongzhong(models.Model):
-    title = models.CharField(max_length=10)
+    gongzhong = models.CharField(max_length=10)
     def __unicode__(self):
-        return self.title
+        return self.gongzhong
 
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '工种'
-        verbose_name_plural = '工种'
-        db_table = 'yuangong_gongzhong'
+#    class Meta:
+#        app_label = u"员工"
+#        verbose_name = '工种'
+#        verbose_name_plural = '工种'
+#        db_table = 'yuangong_gongzhong'
 
 
 class Yuangong(models.Model):
@@ -115,8 +105,9 @@ class Yuangong(models.Model):
     def __unicode__(self):
         return self.xingming
 
-    class Meta:
-        app_label = u"员工"
-        verbose_name = '员工'
-        verbose_name_plural = '员工'
-        db_table = 'yuangong_yuangong'
+#    class Meta:
+#        app_label = u"员工"
+#        verbose_name = '员工'
+#        verbose_name_plural = '员工'
+#        db_table = 'yuangong_yuangong'
+#        unique_together = (("xingming", "shenfenzhenghao"),)
