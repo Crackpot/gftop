@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.db import models
 from django.forms import TextInput, Textarea
 from models import Xingbie, Wenhuachengdu, Zhengzhimianmao, Gongbie, \
-    Gongzhong, Yuangong
+    Gongzhong, Yuangong, Zhiwu
     
 class YuangongAdmin(admin.ModelAdmin):
     search_fields = ('xingming',)
@@ -28,4 +28,5 @@ admin.site.register(Wenhuachengdu)
 admin.site.register(Zhengzhimianmao)
 admin.site.register(Gongbie)
 admin.site.register(Gongzhong)
+admin.site.register(Zhiwu)
 admin.site.register(Yuangong, YuangongAdmin)

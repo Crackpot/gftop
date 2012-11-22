@@ -62,6 +62,16 @@ class Gongzhong(models.Model):
 #        verbose_name_plural = '工种'
 #        db_table = 'yuangong_gongzhong'
 
+class Zhiwu(models.Model):
+    zhiwu = models.CharField(max_length=10)
+    def __unicode__(self):
+        return self.zhiwu
+
+#    class Meta:
+#        app_label = u"职务"
+#        verbose_name = '职务'
+#        verbose_name_plural = '职务'
+#        db_table = 'yuangong_zhiwu'
 
 class Yuangong(models.Model):
     #基本资料
@@ -82,26 +92,37 @@ class Yuangong(models.Model):
 
     #文化
     wenhuachengdu = models.ForeignKey(Wenhuachengdu, verbose_name='文化程度')
-    diyixueli_yuanxiao = models.CharField('第一学历毕业院校', max_length=30)
-    diyixueli_zhuanye = models.CharField('专业', max_length=20)
-    diyixueli_shangxueshijian = models.DateField('上学时间')
-    houxuxueli_yuanxiao = models.CharField('后续学历毕业院校', max_length=30, blank=True)
-    houxuxueli_zhuanye = models.CharField('后续学历专业', max_length=20, blank=True)
-    houxuxueli_shangxueshijian = models.DateField('后续学历上学时间', blank=True, null=True)
+    dyxl_yuanxiao = models.CharField('第一学历毕业院校', max_length=30)
+    dyxl_zhuanye = models.CharField('专业', max_length=20)
+    dyxl_shangxueshijian = models.DateField('上学时间')
+    hxxl_yuanxiao = models.CharField('后续学历毕业院校', max_length=30, blank=True)
+    hxxl_zhuanye = models.CharField('后续学历专业', max_length=20, blank=True)
+    hxxl_shangxueshijian = models.DateField('后续学历上学时间', blank=True, null=True)
 
 
     danwei = models.ForeignKey(Danwei, verbose_name='单位')
     gongbie = models.ForeignKey(Gongbie, verbose_name='工别')
-    gongzhong = models.ForeignKey(Gongzhong, verbose_name='工种')
+    gongzhong = models.ForeignKey(Gongzhong, verbose_name='工种',blank=True, null=True)
+    zhiwu = models.ForeignKey(Zhiwu, verbose_name='职务')
 
-    jiatingchengyuan_guanxi1 = models.CharField('家庭成员关系1', max_length=10)
-    jiatingchengyuan_xingming1 = models.CharField('家庭成员姓名1', max_length=10)
-    jiatingchengyuan_chushengnianyue1 = models.DateField('家庭成员出生年月1')
-    jiatingchengyuan_lianxidianhua1 = models.CharField('家庭成员联系电话1', max_length=30)
-    jiatingchengyuan_danwei1 = models.CharField('家庭成员单位1', max_length=10)
-#"家庭成员
-#出生年月"    联系电话    工作单位
+    jtcy_guanxi1 = models.CharField('家庭成员关系1', max_length=10, blank=True, null=True)
+    jtcy_xingming1 = models.CharField('家庭成员姓名1', max_length=10, blank=True, null=True)
+    jtcy_chushengnianyue1 = models.DateField('家庭成员出生年月1', blank=True, null=True)
+    jtcy_lianxidianhua1 = models.CharField('家庭成员联系电话1', max_length=30, blank=True, null=True)
+    jtcy_danwei1 = models.CharField('家庭成员单位1', max_length=10, blank=True, null=True)
+    
+    jtcy_guanxi2 = models.CharField('家庭成员关系2', max_length=10, blank=True, null=True)
+    jtcy_xingming2 = models.CharField('家庭成员姓名2', max_length=10, blank=True, null=True)
+    jtcy_chushengnianyue2 = models.DateField('家庭成员出生年月2', blank=True, null=True)
+    jtcy_lianxidianhua2 = models.CharField('家庭成员联系电话2', max_length=30, blank=True, null=True)
+    jtcy_danwei2 = models.CharField('家庭成员单位2', max_length=10, blank=True, null=True)
 
+    jtcy_guanxi3 = models.CharField('家庭成员关系3', max_length=10, blank=True, null=True)
+    jtcy_xingming3 = models.CharField('家庭成员姓名3', max_length=10, blank=True, null=True)
+    jtcy_chushengnianyue3 = models.DateField('家庭成员出生年月3', blank=True, null=True)
+    jtcy_lianxidianhua3 = models.CharField('家庭成员联系电话3', max_length=30, blank=True, null=True)
+    jtcy_danwei3 = models.CharField('家庭成员单位3', max_length=10, blank=True, null=True)
+    
     def __unicode__(self):
         return self.xingming
 
