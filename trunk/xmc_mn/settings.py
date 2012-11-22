@@ -271,6 +271,7 @@ INSTALLED_APPS = (
     'yuangong',
     'shebei',
     'danwei',
+    'wenjian',
 )
 
 # List of processors used by RequestContext to populate the context.
