@@ -1,5 +1,7 @@
 #coding=utf8
 from django.db import models
+from mezzanine.conf import settings
+
 
 class Publisher(models.Model):
     name = models.CharField(max_length=30)

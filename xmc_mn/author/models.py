@@ -10,7 +10,17 @@ from mezzanine.pages.models import Page
 
 class Author(Page):
     dob = models.DateField("Date of birth")
+    class Meta:
+        app_label = u"1图书"
+        verbose_name = '作者'
+        verbose_name_plural = '作者'
+        db_table = 'author_author'
 
 class Book(models.Model):
     author = models.ForeignKey("Author")
-    cover = models.ImageField(upload_to="authors")
+    cover = models.ImageField(upload_to="uploads/authors")
+    class Meta:
+        app_label = u"1图书"
+        verbose_name = '图书'
+        verbose_name_plural = '图书'
+        db_table = 'author_book'
