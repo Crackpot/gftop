@@ -18,12 +18,11 @@ class Publisher(models.Model):
         ordering = ['name']
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=40)
+    name = models.CharField(max_length=30)
     email = models.EmailField('e-mail', blank=True)    
     
     def __unicode__(self):
-        return u'%s %s' % (self.last_name, self.first_name)
+        return self.name
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
