@@ -8,12 +8,19 @@ class Leixing(models.Model):
     def __unicode__(self):
         return self.leixing
     
+class Canshu(models.Model):
+    canshu = models.CharField('参数', max_length = 100)
+        
+#    class Meta:
+#        abstract = True
+    
 class Shebei(models.Model):
     xuhao = models.CharField('序号', max_length=20, unique=True, help_text='设备序号')
     mingcheng = models.CharField('名称', max_length=20, unique=True)
     bianhao = models.CharField('编号', max_length=20, unique=True)
     leixing = models.ForeignKey(Leixing, verbose_name='设备类型')
     suoshu = models.ForeignKey(Danwei, verbose_name='设备所属')
+    #canshu = models.ManyToManyField(Canshu, verbose_name = '参数')
     
     def __unicode__(self):
         return self.mingcheng + self.leixing.leixing

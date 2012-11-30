@@ -11,10 +11,10 @@
 {% endblock %}
 
 {% block main %}
-{% if latest_ziliao_list %}
+{% if ziliao_list %}
     <ul>
-    {% for ziliao in latest_ziliao_list %}
-        <li><a href="/ziliao/{{ ziliao.id }}/">{{ ziliao.zl_mingcheng }}</a></li>
+    {% for ziliao in ziliao_list %}
+        <li><a href="{{ ziliao.get_absolute_url }}/">{{ ziliao.zl_mingcheng }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
