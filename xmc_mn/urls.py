@@ -1,8 +1,8 @@
-
+#coding=utf8
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
-
 from mezzanine.core.views import direct_to_template
+
 
 
 admin.autodiscover()
@@ -13,9 +13,11 @@ admin.autodiscover()
 
 urlpatterns = patterns("",
 
+    url(r'^products/', include('products.urls')),
     url(r'^polls/', include('polls.urls')),
     url(r'^books/', include('books.urls')),
     url(r'^ziliao/', include('ziliao.urls')),
+    url(r'^orders/', include('orders.urls')),
     
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.

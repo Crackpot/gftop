@@ -10,7 +10,7 @@ class Ziliao(models.Model):
     zl_changjia = models.CharField('厂家', max_length=128, blank=False) #厂家
     zl_shuliang = models.IntegerField('数量', blank=False) #数量
     zl_fumian = models.CharField('幅面', max_length=20) #幅面
-    zl_cundangshijian = models.DateTimeField('存档时间',auto_now_add=True, blank=False) #存档时间
+    zl_cundangshijian = models.DateTimeField('存档时间', auto_now_add=True, blank=False) #存档时间
     zl_shiyongdidian = models.ForeignKey(Danwei, verbose_name='使用地点')
     zl_duiyingshebei = models.ForeignKey(Shebei, verbose_name='对应设备')
     zl_beizhu = models.TextField('备注', blank=True, null=True) #备注
@@ -18,6 +18,10 @@ class Ziliao(models.Model):
     
     def __unicode__(self):
         return self.zl_mingcheng
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('item_detail', None, {'object_id':self.id})
     
 #    class Meta:
 #        app_label = u"资料"
@@ -36,7 +40,7 @@ class Jieyue(models.Model):
     
     #判断是否已归还
     def yihuan(self):
-        if self.jy_guihuanshijian!= None:
+        if self.jy_guihuanshijian != None:
             return self.jy_guihuanshijian >= timezone.now()
         else:
             return False
