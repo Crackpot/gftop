@@ -1,0 +1,15 @@
+[
+{"pk": 1, "model": "yuangong.zhiwu", "fields": {"zhiwu": "厂长"}},
+{"pk": 2, "model": "yuangong.zhiwu", "fields": {"zhiwu": "队长"}},
+{"pk": 3, "model": "yuangong.zhiwu", "fields": {"zhiwu": "副队长"}},
+{"pk": 4, "model": "yuangong.zhiwu", "fields": {"zhiwu": "干部"}},
+{"pk": 5, "model": "yuangong.zhiwu", "fields": {"zhiwu": "干事"}},
+{"pk": 6, "model": "yuangong.zhiwu", "fields": {"zhiwu": "工会干事"}},
+{"pk": 7, "model": "yuangong.zhiwu", "fields": {"zhiwu": "科员"}},
+{"pk": 8, "model": "yuangong.zhiwu", "fields": {"zhiwu": "女工干事"}},
+{"pk": 9, "model": "yuangong.zhiwu", "fields": {"zhiwu": "书记"}},
+{"pk": 10, "model": "yuangong.zhiwu", "fields": {"zhiwu": "团总支书记"}},
+{"pk": 11, "model": "yuangong.zhiwu", "fields": {"zhiwu": "站长"}},
+{"pk": 12, "model": "yuangong.zhiwu", "fields": {"zhiwu": "职教干事"}},
+{"pk": 13, "model": "yuangong.zhiwu", "fields": {"zhiwu": "组长"}}
+]

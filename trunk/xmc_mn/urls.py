@@ -17,7 +17,6 @@ urlpatterns = patterns("",
     url(r'^polls/', include('polls.urls')),
     url(r'^books/', include('books.urls')),
     url(r'^ziliao/', include('ziliao.urls')),
-    url(r'^orders/', include('orders.urls')),
     
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.

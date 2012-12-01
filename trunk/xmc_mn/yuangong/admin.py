@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.db import models
 from django.forms import TextInput, Textarea
-from models import  Yuangong
+from models import  Yuangong, Zhiwu, Gongzhong
 
 class YuangongAdmin(admin.ModelAdmin):
     search_fields = ('xingming',)
@@ -22,4 +22,6 @@ class YuangongAdmin(admin.ModelAdmin):
 ##        ('Date information', {'fields': ['chushengnianyue']}),
 #    ]
 
+admin.site.register(Gongzhong)
+admin.site.register(Zhiwu)
 admin.site.register(Yuangong, YuangongAdmin)
