@@ -264,15 +264,17 @@ INSTALLED_APPS = (
     #"mezzanine.twitter",
     "mezzanine.accounts",
     "mezzanine.mobile",
+    'south',
     'author',
     'polls',
     'books',
     'ziliao',
     'yuangong',
     'shebei',
-    'wenjian',
+    #'wenjian',
     'products',
     'customers',
+    'danwei',
 )
 
 # List of processors used by RequestContext to populate the context.

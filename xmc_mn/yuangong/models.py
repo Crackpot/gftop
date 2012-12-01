@@ -1,5 +1,32 @@
 #coding=utf8
 from django.db import models
+from danwei.models import Danwei
+    
+class Gongzhong(models.Model):
+    gongzhong = models.CharField('工种', max_length = 20, unique=True)
+    
+    def __unicode__(self):
+        return self.gongzhong
+    
+    class Meta:
+        ordering = ['id']
+        app_label = u"员工"
+        verbose_name = '工种'
+        verbose_name_plural = '工种'
+        db_table = 'yuangong_gongzhong'
+
+class Zhiwu(models.Model):
+    zhiwu = models.CharField('职务', max_length = 20, unique=True)
+    
+    def __unicode__(self):
+        return self.zhiwu
+    
+    class Meta:
+        ordering = ['id']
+        app_label = u"员工"
+        verbose_name = '职务'
+        verbose_name_plural = '职务'
+        db_table = 'yuangong_zhiwu'
 
 class Yuangong(models.Model):
     #基本资料
@@ -28,28 +55,30 @@ class Yuangong(models.Model):
     hxxl_shangxueshijian = models.DateField('后续学历上学时间', blank=True, null=True)
 
 
-    #danwei = models.ForeignKey(Danwei, verbose_name='单位')
-    danwei = models.CharField('单位', choices=(
-            (u'调度', '调度'), (u'服务', '服务'), (u'机电队', '机电队'), (u'技检', '技检'), (u'售煤', '售煤'), 
-            (u'跳汰队', '跳汰队'), (u'洗水队', '洗水队'), (u'原煤队', '原煤队'), (u'职能', '职能'), (u'重介队', '重介队'),
-            (u'装运队', '装运队'), 
-    ), max_length=5)
+    danwei = models.ForeignKey(Danwei, verbose_name='单位')
+#    danwei = models.CharField('单位', choices=(
+#            (u'调度', '调度'), (u'服务', '服务'), (u'机电队', '机电队'), (u'技检', '技检'), (u'售煤', '售煤'), 
+#            (u'跳汰队', '跳汰队'), (u'洗水队', '洗水队'), (u'原煤队', '原煤队'), (u'职能', '职能'), (u'重介队', '重介队'),
+#            (u'装运队', '装运队'), 
+#    ), max_length=5)
     
     gongbie = models.CharField('工别', choices=(
             (u'固定工', '固定工'), (u'劳务工', '劳务工'), (u'全合工', '全合工')
     ), max_length=5)
 
-    zhiwu = models.CharField('职务', choices=(
-           (u'安监员', '安监员'), (u'安装工', '安装工'), (u'办事员', '办事员'), (u'采样', '采样'), (u'茶炉工', '茶炉工'),
-           (u'厂长', '厂长'), (u'成本员', '成本员'), (u'电工', '电工'), (u'电焊工', '电焊工'), (u'调度员', '调度员'),
-           (u'动力工', '动力工'), (u'队长', '队长'), (u'副队长', '副队长'), (u'干部', '干部'), (u'干事', '干事'),
-           (u'工会干事', '工会干事'), (u'化验', '化验'), (u'机电安装工', '机电安装工'), (u'集控', '集控'), (u'技术员', '技术员'),
-           (u'科员', '科员'), (u'库管员', '库管员'), (u'煤质采样', '煤质采样'), (u'门卫', '门卫'), (u'木工', '木工'),
-           (u'女工干事', '女工干事'), (u'配电工', '配电工'), (u'皮带工', '皮带工'), (u'钳工', '钳工'), (u'售煤', '售煤'),
-           (u'书记', '书记'), (u'司机', '司机'), (u'跳汰司机', '跳汰司机'), (u'铁工', '铁工'), (u'团总支书记', '团总支书记'),
-           (u'推土机司机', '推土机司机'), (u'维护工', '维护工'), (u'武保', '武保'), (u'压风机司机', '压风机司机'), (u'杂工', '杂工'),
-           (u'站长', '站长'), (u'职教干事', '职教干事'), (u'装车工', '装车工'), (u'总支干事', '总支干事'), (u'组长', '组长'), 
-    ), max_length=6)
+    gongzhong = models.ForeignKey(Gongzhong, verbose_name = '工种')
+    zhiwu = models.ForeignKey(Zhiwu, verbose_name = '职务')
+#    zhiwu = models.CharField('职务', choices=(
+#           (u'安监员', '安监员'), (u'安装工', '安装工'), (u'办事员', '办事员'), (u'采样', '采样'), (u'茶炉工', '茶炉工'),
+#           (u'厂长', '厂长'), (u'成本员', '成本员'), (u'电工', '电工'), (u'电焊工', '电焊工'), (u'调度员', '调度员'),
+#           (u'动力工', '动力工'), (u'队长', '队长'), (u'副队长', '副队长'), (u'干部', '干部'), (u'干事', '干事'),
+#           (u'工会干事', '工会干事'), (u'化验', '化验'), (u'机电安装工', '机电安装工'), (u'集控', '集控'), (u'技术员', '技术员'),
+#           (u'科员', '科员'), (u'库管员', '库管员'), (u'煤质采样', '煤质采样'), (u'门卫', '门卫'), (u'木工', '木工'),
+#           (u'女工干事', '女工干事'), (u'配电工', '配电工'), (u'皮带工', '皮带工'), (u'钳工', '钳工'), (u'售煤', '售煤'),
+#           (u'书记', '书记'), (u'司机', '司机'), (u'跳汰司机', '跳汰司机'), (u'铁工', '铁工'), (u'团总支书记', '团总支书记'),
+#           (u'推土机司机', '推土机司机'), (u'维护工', '维护工'), (u'武保', '武保'), (u'压风机司机', '压风机司机'), (u'杂工', '杂工'),
+#           (u'站长', '站长'), (u'职教干事', '职教干事'), (u'装车工', '装车工'), (u'总支干事', '总支干事'), (u'组长', '组长'), 
+#    ), max_length=6)
     
 
     jtcy_guanxi1 = models.CharField('家庭成员关系1', max_length=10, blank=True, null=True)
@@ -73,9 +102,9 @@ class Yuangong(models.Model):
     def __unicode__(self):
         return self.xingming
 
-#    class Meta:
-#        app_label = u"员工"
-#        verbose_name = '员工'
-#        verbose_name_plural = '员工'
-#        db_table = 'yuangong_yuangong'
-#        unique_together = (("xingming", "shenfenzhenghao"),)
+    class Meta:
+        app_label = u"员工"
+        verbose_name = '员工'
+        verbose_name_plural = '员工'
+        db_table = 'yuangong_yuangong'
+        unique_together = (("xingming", "shenfenzhenghao"),)
