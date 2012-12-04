@@ -1,11 +1,7 @@
 $(function() {
     var close = 'img';
-    var expose = {color: '#333', loadSpeed: 0, closeSpeed: 0, opacity: 0.9};
-    var overlay = {
-        expose: expose,
-        close: close,
-        onLoad: function() {$('.image-overlay').expose(expose);}
-    }
+    var expose = {color: '#333', loadSpeed: 200, opacity: 0.9};
+    var overlay = {expose: expose, close: close};
     $('.gallery a[rel]').overlay(overlay).click(function() {
         location = $(this).attr('rel') + '-show';
     });
