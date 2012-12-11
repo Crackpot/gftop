@@ -95,12 +95,15 @@ textarea {
 	box-sizing: border-box;
 }
 body {
+/*
+	background: url("../images/bg_page.jpg") no-repeat scroll 100% 0 transparent;
+ */
+	background: none repeat scroll 0 0 #2A64A7;
 	margin: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 13px;
-	line-height: 18px;
+	font-size: 18px;
+	line-height: 20px;
 	color: #333333;
-	background-color: #ffffff;
 }
 a {
 	color: #0088cc;
@@ -111,7 +114,6 @@ a:hover {
 	text-decoration: underline;
 }
 .row {
-	margin-left: -20px;
 	*zoom: 1;
 }
 .row:before, .row:after {
@@ -2183,9 +2185,14 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	margin-top: 5px;
 }
 #header {
-	background: url("../images/header-bg-top.jpg") no-repeat scroll 50% 0 transparent;
-	height: 150px;
+	background: url("../images/header-bg-photo.jpg") no-repeat scroll 50% 0 transparent;
+	height: 317px;
 	overflow: hidden;
+}
+
+#header .logo {
+	margin-left: 10px;
+	margin-top: 20px;
 }
 .rss {
 	background: url("../images/rss.jpg") no-repeat scroll 100% 0 transparent;
@@ -2199,11 +2206,13 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	top: 30px;
 }
 #header .nav {
-	margin-left: 0;
-	margin-bottom: 18px;
-	list-style: none;
-	position: absolute;
-	top: 112px;
+	    background: url("../images/header-nav-bg.jpg") repeat scroll 0 0 transparent;
+    list-style: none outside none;
+    margin-bottom: 18px;
+    margin-left: 0;
+    position: absolute;
+    top: 280px;
+    width: 940px;
 }
 
 #header .nav li {
@@ -2213,8 +2222,8 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 #header .nav .divider-vertical {
-    height: 36px;
-    width: 1px;
+	height: 36px;
+	width: 1px;
 }
 
 #header .nav > li > a {
@@ -2267,6 +2276,64 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 #header .nav li+ .nav-header {
 	margin-top: 9px;
 }
+
+/* 安全主题 */
+.extra-nav > span {
+	color: red;
+	font-size: 15px;
+	margin: 20px;
+}
+
+#content {
+    overflow: hidden;
+	background: none repeat scroll 0 0 white;
+	margin: 0 auto;
+	position: relative;
+	width: 940px;
+}
+
+#row > #left {
+    background: none repeat scroll 0 0 red;
+    height: 400px;
+    width: 300px;
+}
+
+/*左边第一个框*/
+#left > #lb1 {
+    background: none repeat scroll 0 0 gray;
+    height: 250px;
+}
+
+/*===== footer =====*/
+#footer {
+	color: #fff;
+	padding: 13px 0 24px 44px;
+}
+#footer a {
+	color: #62a9fb;
+	text-decoration: none;
+}
+#footer a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+#footer .nav {
+	margin: 0 0 0 -6px;
+}
+#footer .nav li {
+	display: inline;
+	color: #62a9fb;
+}
+#footer .nav li a {
+	color: #62a9fb;
+	text-decoration: none;
+	padding: 0 9px 0 6px;
+}
+#footer .nav li a:hover, #footer .nav li a.active {
+	color: #fff;
+	text-decoration: underline;
+}
+
 /* 额外导航，可以放字 */
 .extra-nav {
 	left: 0;
@@ -2282,16 +2349,6 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 .extra-nav li.last {
 	background: none;
-}
-
-/* 横幅搜索框 */
-.banner #search-form {
-    color: #FFFFFF;
-    font-size: 13px;
-    position: absolute;
-    right: 200px;
-    text-shadow: 1px 1px 0 #052EB2;
-    top: 285px;
 }
 
 .nav-list {
