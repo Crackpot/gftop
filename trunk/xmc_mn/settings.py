@@ -1,4 +1,6 @@
 #coding=utf8
+from django.conf.global_settings import DATE_FORMAT
+import os
 
 ######################
 # MEZZANINE SETTINGS #
@@ -101,6 +103,7 @@ USE_SOUTH = True
 # MAIN DJANGO SETTINGS #
 ########################
 
+DATE_FORMAT = '%Y-%m-%d'
 # People who get code error notifications.
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
@@ -191,7 +194,6 @@ DATABASES = {
 # PATHS #
 #########
 
-import os
 
 # Full filesystem path to the project.
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -275,6 +277,7 @@ INSTALLED_APPS = (
     'products',
     'customers',
     'danwei',
+    'tongzhi',
     'export', #django-export 0.0.4
     'csvimport', #django-csvimport
     'data_exporter', #django-data-exporter 0.1.4
