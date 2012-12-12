@@ -4,11 +4,17 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template.context import RequestContext
 from polls.models import Poll, Choice
+from tongzhi.models import Tongzhi
 
 
 def index(request):
     latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
-    return render_to_response('polls/index.html', {'latest_poll_list': latest_poll_list})
+    latest_tongzhi_list = Tongzhi.objects.all()[:5]
+    return render_to_response('index.html',
+        {
+         'latest_poll_list': latest_poll_list,
+         'latest_tongzhi_list': latest_tongzhi_list,
+         })
 
 def detail(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)

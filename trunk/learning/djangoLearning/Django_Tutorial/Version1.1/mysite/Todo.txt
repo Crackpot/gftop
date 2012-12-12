@@ -1,4 +1,0 @@
-已经写在这里：
-http://localhost/Documents/django_doc/intro/tutorial04.html#intro-tutorial04
-需要解决的问题是：
-Invalid block tag: 'csrf_token'

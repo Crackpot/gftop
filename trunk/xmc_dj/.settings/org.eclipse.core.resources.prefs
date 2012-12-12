@@ -1,6 +1,11 @@
 eclipse.preferences.version=1
 encoding//polls/views.py=utf8
+encoding//tongzhi/admin.py=utf8
+encoding//tongzhi/models.py=utf8
+encoding//tongzhi/views.py=utf8
 encoding//xmc_dj/settings.py=utf8
+encoding//xmc_dj/urls.py=utf8
+encoding//xmc_dj/views.py=utf8
 encoding//xmc_dj/wsgi.py=utf8
 encoding//ziliao/admin.py=utf8
 encoding//ziliao/models.py=utf8
