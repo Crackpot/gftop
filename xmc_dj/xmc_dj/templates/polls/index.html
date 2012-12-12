@@ -1,9 +1,31 @@
+{% extends "base.html" %}
+
+{% block main %}
 {% if latest_poll_list %}
-    <ul>
-    {% for poll in latest_poll_list %}
-        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
-    {% endfor %}
-    </ul>
+<ul>
+	{% for poll in latest_poll_list %}
+	<li>
+		<a href="/polls/{{ poll.id }}/">{{ poll.question }}</a>
+	</li>
+	{% endfor %}
+</ul>
 {% else %}
-    <p>No polls are available.</p>
+<p>
+	No polls are available.
+</p>
 {% endif %}
+
+{% if latest_tongzhi_list %}
+<ul>
+	{% for tongzhi in latest_tongzhi_list %}
+	<li>
+		<a href="javascript://" class="STYLE12" onClick="window.open('tongzhi/{{ tongzhi.id }}','','resizable=no,menubar=no,status=no,scrollbars=no,location=no,top=80,left=150,toolbar=no,width=390,height=180')">{{ tongzhi.zhuti }}</a>
+	</li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>
+	没有通知信息！
+</p>
+{% endif %}
+{% endblock %}
