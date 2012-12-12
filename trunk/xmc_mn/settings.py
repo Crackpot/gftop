@@ -278,9 +278,9 @@ INSTALLED_APPS = (
     'customers',
     'danwei',
     'tongzhi',
-    'export', #django-export 0.0.4
-    'csvimport', #django-csvimport
-    'data_exporter', #django-data-exporter 0.1.4
+    #'export', #django-export 0.0.4
+    #'csvimport', #django-csvimport
+    #'data_exporter', #django-data-exporter 0.1.4
 )
 
 # List of processors used by RequestContext to populate the context.
