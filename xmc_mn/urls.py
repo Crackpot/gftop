@@ -2,9 +2,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 from mezzanine.core.views import direct_to_template
-from polls.models import Poll
-from tongzhi.models import Tongzhi
-import home.views
 
 
 
@@ -16,7 +13,7 @@ admin.autodiscover()
 
 urlpatterns = patterns("",
 
-    url("^$", "home.views.index", name="home"),
+    url("^$", "views.index", name="home"),
     url(r'^products/', include('products.urls')),
     url(r'^polls/', include('polls.urls')),
     url(r'^books/', include('books.urls')),

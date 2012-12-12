@@ -2185,7 +2185,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	margin-top: 5px;
 }
 #header {
-	background: url("../images/header-bg-photo.jpg") no-repeat scroll 50% 0 transparent;
+	background: url("../images/header-bg-down.jpg") no-repeat scroll 50% 0 transparent;
 	height: 317px;
 	overflow: hidden;
 }
@@ -2199,14 +2199,16 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	color: #000000;
 	display: block;
 	font-size: 13px;
-	margin-right: 200px;
+	margin-right: 220px;
 	padding: 9px 43px 0 0;
 	position: absolute;
 	right: 0;
 	top: 30px;
 }
 #header .nav {
-	    background: url("../images/header-nav-bg.jpg") repeat scroll 0 0 transparent;
+/*
+	background: url("../images/header-nav-bg.jpg") repeat scroll 0 0 transparent;
+ */
     list-style: none outside none;
     margin-bottom: 18px;
     margin-left: 0;
@@ -2227,7 +2229,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 #header .nav > li > a {
-	background: url("../images/nav-bg1-up.png") no-repeat scroll 0 0 transparent;
+	background: url("../images/nav-bg1.jpg") no-repeat scroll 0 0 transparent;
 	border-radius: 5px 5px 0 0;
 	color: #353535;
 	float: left;
@@ -2243,12 +2245,12 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 /* 当前页面 */
 #header .nav > li > a.active {
-	background: url("../images/nav-bg2-up.png") no-repeat scroll 0 0 transparent;
+	background: url("../images/nav-bg2.jpg") no-repeat scroll 0 0 transparent;
 }
 /* 移动上去变蓝色 */
 
 #header .nav > li > a:hover {
-	background: url(../images/nav-bg2.gif) repeat 0 0;
+	background: url(../images/nav-bg2.jpg) repeat 0 0;
 	color: #fff;
 	text-shadow: 1px 1px 0 #185cb6;
 	text-decoration: none;

@@ -11,6 +11,7 @@
 		<div id="left">
 			<div id="lb1">
 				通知栏
+				
 				{% if latest_tongzhi_list %}
 				<ul>
 					{% for tongzhi in latest_tongzhi_list %}
@@ -24,6 +25,7 @@
 					没有通知信息！
 				</p>
 				{% endif %}
+				
 				<hr>
 				{% if latest_poll_list %}
 				<ul>
@@ -36,6 +38,21 @@
 				{% else %}
 				<p>
 					No polls are available.
+				</p>
+				{% endif %}
+				
+				<hr>
+				{% if latest_blog_list %}
+				<ul>
+					{% for blog in latest_blog_list %}
+					<li>
+						<a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>
+					No blogs are available.
 				</p>
 				{% endif %}
 			</div>

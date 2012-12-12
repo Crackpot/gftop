@@ -10,10 +10,10 @@
 		<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
 		<!--
 		<link rel="shortcut icon" href="/static/img/favicon.ico">
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
 		-->
 		<link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
 
-		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
 		<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" type="text/css" />
 
 		<!--
